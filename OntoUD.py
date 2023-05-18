@@ -1,7 +1,7 @@
-from Query_Builder import *
-from rdflib import Graph, URIRef, Literal
 from collections import defaultdict
 from SPARQLWrapper import SPARQLWrapper2
+from rdflib import Graph
+from Query_Builder import *
 
 
 class OntoUD:
@@ -25,73 +25,72 @@ class OntoUD:
         :param order_by:
         :return:
         """
-        thisnod, subnods, edge = [], [], ''
+        this_node, sub_nodes, edge = [], [], ''
         for s, p, o in graph.triples((root_node, None, None)):
             # print(f"{s}\t{p}\t{o}")
             if p == transverse_by:
-                subnods.append(
+                sub_nodes.append(
                     self.list_subgraph(graph=graph, root_node=o, transverse_by=transverse_by, order_by=order_by))
             elif p == self.id_uri:
-                thisnod.insert(0, o.toPython())
+                this_node.insert(0, o.toPython())
             elif p == self.edge_uri:
                 edge = o.toPython()
-            elif p == self.word_uri:  # informação a recolher no nodo
-                thisnod.append(o.toPython())
-        if thisnod:
-            subnods.append(thisnod)
-        subnods.sort()
-        # por questões de ordenação adicionamos neste nível o id_uri ao início da lista, por isso retiramo-lo
-        # dos subnods recebidos do nível anterior
-        if not thisnod:
-            thisnod = [0]
-        # return [thisnod[0], [x for _,x in subnods]]
-        # return [thisnod[0], *subnods]
-        return [thisnod[0], edge, *subnods]
+            elif p == self.word_uri:  # Information to keep on the node
+                this_node.append(o.toPython())
+        if this_node:
+            sub_nodes.append(this_node)
+        sub_nodes.sort()
+        # Due to ordering we append the id_uri at the start of the list, therefore we take it out of the sub_nodes
+        # previously appended
+        if not this_node:
+            this_node = [0]
+        # return [this_node[0], [x for _,x in sub_nodes]]
+        # return [this_node[0], *sub_nodes]
+        return [this_node[0], edge, *sub_nodes]
 
-    def word_to_dependencies(self, graph: Graph = None, root_node: URIRef = None, trasverse_by: URIRef = None,
+    def word_to_dependencies(self, graph: Graph = None, root_node: URIRef = None, transverse_by: URIRef = None,
                              order_by: URIRef = None) -> list:
         """
 
         :param graph:
         :param root_node:
-        :param trasverse_by:
+        :param transverse_by:
         :param order_by:
         :return:
         """
-        thisnod, subnods, edge = defaultdict(), [], ''
+        this_node, sub_nodes, edge = defaultdict(), [], ''
         for s, p, o in graph.triples((root_node, None, None)):
             # print(f"{s}\t{p}\t{o}")
-            if p == trasverse_by:
-                subnods.append(
-                    self.word_to_dependencies(graph=graph, root_node=o, trasverse_by=trasverse_by, order_by=order_by))
+            if p == transverse_by:
+                sub_nodes.append(
+                    self.word_to_dependencies(graph=graph, root_node=o, transverse_by=transverse_by, order_by=order_by))
             else:
-                labl = re.search(r".*#(\w+)", p.toPython())
-                thisnod[labl.group(1)] = o.toPython()
-        return [thisnod, *subnods]
+                label = re.search(r".*#(\w+)", p.toPython())
+                this_node[label.group(1)] = o.toPython()
+        return [this_node, *sub_nodes]
 
-    def find_word_node(self, graph: Graph = None, root_node: URIRef = None, trasverse_by: URIRef = None,
+    def find_word_node(self, graph: Graph = None, root_node: URIRef = None, transverse_by: URIRef = None,
                        order_by: URIRef = None, stop_word: str = None, result: list = []) -> list:
         """
 
         :param graph:
         :param root_node:
-        :param trasverse_by:
+        :param transverse_by:
         :param order_by:
         :param stop_word:
         :param result:
         :return:
         """
-        thisnod, subnods, edge = defaultdict(), [], ''
+        this_node, sub_nodes, edge = defaultdict(), [], ''
         for s, p, o in graph.triples((root_node, None, None)):
-            if p == trasverse_by:
-                subnods.append(
-                    self.find_word_node(graph=graph, root_node=o, trasverse_by=trasverse_by, order_by=order_by,
-                                   stop_word=stop_word,
-                                   result=result))
+            if p == transverse_by:
+                sub_nodes.append(
+                    self.find_word_node(graph=graph, root_node=o, transverse_by=transverse_by, order_by=order_by,
+                                        stop_word=stop_word, result=result))
             elif p == self.word_uri:
                 if o.toPython() == stop_word:
                     result.append(s)
-        return subnods
+        return sub_nodes
 
     def fetch_path(self, dependencies: list) -> list:
         """
@@ -116,8 +115,9 @@ class OntoUD:
         """
         self.sparql.setQuery(query)
         for result in self.sparql.query().bindings:
-            g.add(map(lambda x: URIRef(x.value) if x.type == 'uri' else
-            (Literal(int(x.value)) if x.type == 'typed-literal' else Literal(x.value)), result.values()))
+            g.add(map(lambda x: URIRef(x.value) if x.type == 'uri' else (Literal(int(x.value))
+                                                                         if x.type == 'typed-literal'
+                                                                         else Literal(x.value)), result.values()))
         return g
 
     def fetch_id_by_sentence(self, query: str, connection: str):

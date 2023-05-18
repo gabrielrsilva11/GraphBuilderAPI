@@ -1,6 +1,6 @@
+import re
 from multipledispatch import dispatch
 from rdflib import URIRef, Literal
-import re
 
 class QueryBuilder:
     def __init__(self, self_uri_dict, graph_name):
@@ -14,7 +14,7 @@ class QueryBuilder:
         self.uri_dict.update(self_uri_dict)
         self.graph_name = graph_name
 
-    def build_query_by_sentence_start(self, start_string:str) -> str:
+    def build_query_by_sentence_start(self, start_string: str) -> str:
         """
 
         :param start_string:
@@ -24,13 +24,13 @@ class QueryBuilder:
             select ?s ?st
             where {
             ?s <http://ieeta.pt/ontoud#senttext> ?st.
-            FILTER(strstarts(?st, '"""+start_string+"""')) .
+            FILTER(strstarts(?st, '""" + start_string + """')) .
             }
             LIMIT 1000 
         """
         return query
 
-    def build_query_by_and_sentence_list(self, string_list:list) -> str:
+    def build_query_by_and_sentence_list(self, string_list: list) -> str:
         """
 
         :param string_list:
@@ -50,7 +50,7 @@ class QueryBuilder:
                 LIMIT 1000"""
         return query
 
-    def build_query_by_or_sentence_list(self, string_list:list) -> str:
+    def build_query_by_or_sentence_list(self, string_list: list) -> str:
         """
 
         :param string_list:
@@ -126,13 +126,12 @@ class QueryBuilder:
         for item in [s, p, o]:
             uri_comps = re.search("(.*[#/])([^/]+)", item)
             prefix_var = self.uri_dict[uri_comps.group(1)]
-            prefix_set.add("PREFIX " + prefix_var+":<"+uri_comps.group(1)+">")
-            triple.append(prefix_var+":"+uri_comps.group(2))
+            prefix_set.add("PREFIX " + prefix_var + ":<" + uri_comps.group(1) + ">")
+            triple.append(prefix_var + ":" + uri_comps.group(2))
 
-        query = "\n".join(prefix_set) + "\nINSERT DATA {GRAPH <"+self.graph_name+"> {" + " ".join(triple)+"}}"
-        #print(query)
+        query = "\n".join(prefix_set) + "\nINSERT DATA {GRAPH <" + self.graph_name + "> {" + " ".join(triple) + "}}"
+        # print(query)
         return query
-
 
     @dispatch(str, URIRef, str)
     def build_insert_query(self, s, p, o) -> str:
@@ -148,11 +147,11 @@ class QueryBuilder:
         for item in [s, p, o]:
             uri_comps = re.search("(.*[#/])([^/]+)", item)
             prefix_var = self.uri_dict[uri_comps.group(1)]
-            prefix_set.add("PREFIX " + prefix_var+":<"+uri_comps.group(1)+">")
-            triple.append(prefix_var+":"+uri_comps.group(2))
+            prefix_set.add("PREFIX " + prefix_var + ":<" + uri_comps.group(1) + ">")
+            triple.append(prefix_var + ":" + uri_comps.group(2))
 
-        query = "\n".join(prefix_set) + "\nINSERT DATA {GRAPH <"+self.graph_name+"> {" + " ".join(triple)+"}}"
-        #print(query)
+        query = "\n".join(prefix_set) + "\nINSERT DATA {GRAPH <" + self.graph_name + "> {" + " ".join(triple) + "}}"
+        # print(query)
         return query
 
     @dispatch(str, str, Literal)
@@ -169,11 +168,11 @@ class QueryBuilder:
         for item in [s, p]:
             uri_comps = re.search("(.*[#/])([^/]+)", item)
             prefix_var = self.uri_dict[uri_comps.group(1)]
-            prefix_set.add("PREFIX " + prefix_var+":<"+uri_comps.group(1)+">")
-            triple.append(prefix_var+":"+uri_comps.group(2))
-        triple.append("'"+repr(o.toPython()).replace('\'', '') + "'")
-        query = "\n".join(prefix_set) + "\nINSERT DATA {GRAPH <"+self.graph_name+"> {" + " ".join(triple)+"}}"
-        #print(query)
+            prefix_set.add("PREFIX " + prefix_var + ":<" + uri_comps.group(1) + ">")
+            triple.append(prefix_var + ":" + uri_comps.group(2))
+        triple.append("'" + repr(o.toPython()).replace('\'', '') + "'")
+        query = "\n".join(prefix_set) + "\nINSERT DATA {GRAPH <" + self.graph_name + "> {" + " ".join(triple) + "}}"
+        # print(query)
         return query
 
     def build_insert_wikimapper_query(self, s, p, o) -> str:
@@ -189,8 +188,8 @@ class QueryBuilder:
         for item in [s, p]:
             uri_comps = re.search("(.*[#/])([^/]+)", item)
             prefix_var = self.uri_dict[uri_comps.group(1)]
-            prefix_set.add("PREFIX " + prefix_var+":<"+uri_comps.group(1)+">")
-            triple.append(prefix_var+":"+uri_comps.group(2))
-        triple.append("'"+repr(o.toPython()).replace('\'', '') + "'")
-        query = "\n".join(prefix_set) + "\nINSERT DATA {GRAPH <"+self.graph_name+"> {" + " ".join(triple)+"}}"
+            prefix_set.add("PREFIX " + prefix_var + ":<" + uri_comps.group(1) + ">")
+            triple.append(prefix_var + ":" + uri_comps.group(2))
+        triple.append("'" + repr(o.toPython()).replace('\'', '') + "'")
+        query = "\n".join(prefix_set) + "\nINSERT DATA {GRAPH <" + self.graph_name + "> {" + " ".join(triple) + "}}"
         return query

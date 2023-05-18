@@ -1,10 +1,9 @@
-from Helpers import *
-from rdflib import Graph, URIRef
-from rdflib.namespace import RDFS, RDF, DOAP, FOAF, ORG, OWL, SKOS, XSD
-from Query_Builder import *
-from InsertData import CreateGraph
 import pprint
 import string
+from rdflib import Graph
+from Helpers import *
+from InsertData import CreateGraph
+from Query_Builder import *
 
 sentence_uri = URIRef("http://ieeta.pt/ontoud#Sentence")
 head_uri = URIRef("http://ieeta.pt/ontoud#head")
@@ -43,21 +42,20 @@ for i in range(0, 9999):
     root_nodes = check_for_edges(g, edges)
     for s in root_nodes:
         text = []
-        find_edge_node(graph=g, root_node=s, trasverse_by=depgraph_uri, order_by=id_uri, result=text)
-        joint_info = [text[x:x+2] for x in range(0, len(text), 2)]
+        find_edge_node(graph=g, root_node=s, transverse_by=depgraph_uri, order_by=id_uri, result=text)
+        joint_info = [text[x:x + 2] for x in range(0, len(text), 2)]
         joint_info.sort(key=lambda x: int(x[0]))
         final_text_with_punct = [x[1] for x in joint_info]
-        final_text = [''.join(char for char in item
-                            if char not in string.punctuation)
-                    for item in final_text_with_punct]
-        #print("Final text:", final_text)
+        final_text = [''.join(char for char in item if char not in string.punctuation)
+                      for item in final_text_with_punct]
+        # print("Final text:", final_text)
         for word in final_text:
-            id, titles = fetch_wiki_data(word)
-            if id:
+            wiki_id, titles = fetch_wiki_data(word)
+            if wiki_id:
                 create_graph.insert_wikimapper_data(i, titles)
-        #print(' '.join(final_text))
-        id, titles = fetch_wiki_data(' '.join(final_text))
-        if id:
+        # print(' '.join(final_text))
+        wiki_id, titles = fetch_wiki_data(' '.join(final_text))
+        if wiki_id:
             create_graph.insert_wikimapper_data(i, titles)
 
 # words = "desde meados de"
@@ -70,10 +68,12 @@ for i in range(0, 9999):
 #         results_list = []
 #         for word in words:
 #             text = []
-#             find_word_node(graph = g, root_node = s, trasverse_by = depgraph_uri, order_by = id_uri, stop_word = word, result = text)
+#             find_word_node(graph = g, root_node = s, transverse_by = depgraph_uri, order_by = id_uri,
+#                               stop_word = word, result = text)
 #             #print(text)
 #             if text:
-#                 dependencies = word_to_dependencies(graph = g, root_node = text[0], trasverse_by = head_uri, order_by = id_uri)
+#                 dependencies = word_to_dependencies(graph = g, root_node = text[0],
+#                                                       transverse_by = head_uri, order_by = id_uri)
 #                 pp.pprint(dependencies)
 #                 results_list.append(filter_dependencies(dependencies, 'word', filter_root=True))
 #         if results_list:
@@ -87,7 +87,7 @@ for i in range(0, 9999):
 #                         create_graph.insert_wikimapper_data(i, id)
 #                 print(' '.join(results))
 #                 print(fetch_wiki_data(' '.join(results)))
-        #print(set.intersection(*[set(x) for x in results]))
+# print(set.intersection(*[set(x) for x in results]))
 
 # aa = qb.build_query_by_and_sentence_list(['Portugal', 'Algarve', 'Europa'])
 #
