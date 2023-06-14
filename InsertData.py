@@ -11,20 +11,21 @@ from Query_Builder import QueryBuilder
 
 class CreateGraph:
     """
-    Main class used to create and manipulate the knowledge graphs
+    Main class used to create and manipulate the knowledge graphs.
+    Initially giv
 
     """
 
     def __init__(self, doc, graph_name="wikiner_subset_v3", relations_uri={'http://ieeta.pt/ontoud#': 'ieeta'},
                  main_uri='http://ieeta.pt/ontoud#', connection_string='http://localhost:8890/sparql', language="en"):
         """
-
-        :param doc:
-        :param graph_name:
+        Instantiates a CreateGraph class.
+        :param doc: path to the document or folder of documents to process.
+        :param graph_name: name to give the knowledge graph.
         :param relations_uri:
         :param main_uri:
-        :param connection_string:
-        :param language:
+        :param connection_string: the connection string that is used to connect to a triple storage
+        :param language: language in which the text is in.
         """
         warnings.filterwarnings("ignore", category=UserWarning)
         self.file_name = doc
@@ -42,24 +43,23 @@ class CreateGraph:
         self.sparql = SPARQLWrapper(self.connection)
         self.sparql.setMethod(POST)
         self.queries = QueryBuilder(self.relations_uri_dict, self.graph_name)
-        # ONTOLOGY URIS
-        self.o_contains_sentence = self.main_uri + "containsSentence"
-        self.o_from_sentence_uri = self.main_uri + "fromSentence"
 
-        # Text, Sentence, Word classes
+        # Document navigation -> Text, Sentence, Word classes
         self.c_text_uri = self.main_uri + "Text"
         self.c_sentence_uri = self.main_uri + "Sentence"
         self.c_word_uri = self.main_uri + "Word"
 
-        # HEAD, nextSentence, nextWord, previousWord object properties
-        self.o_head_uri = self.main_uri + "head"
+        # General properties -> text/conll properties to be created as object properties in the graph
         self.o_depgraph_uri = self.main_uri + "depGraph"
         self.o_nextsentence_uri = self.main_uri + "nextSentence"
         self.o_nextword_uri = self.main_uri + "nextWord"
         self.o_previousword_uri = self.main_uri + "previousWord"
         self.o_mapper_uri = self.main_uri + "wikidataId"
+        self.o_contains_sentence = self.main_uri + "containsSentence"
+        self.o_from_sentence_uri = self.main_uri + "fromSentence"
 
-        # EDGE, FEATS, ID, LEMMA, POS, POS_COARSE, WORD como data property
+        # CoNLL properties -> EDGE, FEATS, ID, LEMMA, POS, POS_COARSE, WORD as a data property
+        self.o_head_uri = self.main_uri + "head"
         self.d_sentence_text = self.main_uri + "senttext"
         self.d_edge_uri = self.main_uri + "edge"
         self.d_feats_uri = self.main_uri + "feats"
@@ -71,7 +71,7 @@ class CreateGraph:
 
     def insert_relationship_data(self):
         """
-
+        Creates and adds to the graph the CoNLL relationship properties.
         :return:
         """
         # class
@@ -101,11 +101,12 @@ class CreateGraph:
 
     def insert_data(self, s, p, o, wrapper):
         """
+        Inserts a triple into a triple-storage and a knowledge graph.
 
-        :param s:
-        :param p:
-        :param o:
-        :param wrapper:
+        :param s: subject of the triple
+        :param p: predicate of the triple
+        :param o: object of the triple
+        :param wrapper: connection to the triple storage
         :return:
         """
         query = self.queries.build_insert_query(s, p, o)
@@ -115,10 +116,10 @@ class CreateGraph:
 
     def insert_script(self, lines, sentence_id):
         """
-
-        :param lines:
-        :param sentence_id:
-        :return:
+        Main script to insert CoNLL data into a triple-storage.
+        :param lines: the text to insert
+        :param sentence_id: last known sentence_id for identification purposes.
+        :return: the last used sentence_id.
         """
         doc = self.nlp(lines)
         conll = doc._.pandas
@@ -174,9 +175,9 @@ class CreateGraph:
 
     def insert_wikimapper_data(self, sentence_id, wiki_id):
         """
-
-        :param sentence_id:
-        :param wiki_id:
+        Builds and inserts a query to insert a triple with wikimapper data into the graph.
+        :param sentence_id: id of the sentence that contains the named entity.
+        :param wiki_id: wikidata id of the named entity.
         :return:
         """
         sentence_uri = self.c_sentence_uri + "_" + str(sentence_id)
@@ -184,10 +185,10 @@ class CreateGraph:
         self.sparql.setQuery(query)
         results = self.sparql.query()
 
-    def create_graph(self):
+    def create_graph(self, in_memory = False):
         """
 
-        :return:
+        :param in_memory: Boolean which indicates whether we want to create the graph in-memory or upload to a storage.
         """
         sentence_id = 0
         i = 0
@@ -206,15 +207,7 @@ class CreateGraph:
                     i += 1
                 if lines:
                     sentence_id = self.insert_script(lines, sentence_id)
-        #     for line in self.file:
-        #         lines = lines + line
-        #         if i == 1000:
-        #             i = 0
-        #             sentence_id = self.insert_script(lines, sentence_id)
-        #             lines = ''
-        #         i += 1
-        #
-        # sentence_id = self.insert_script(lines, sentence_id)
+
 
 # relations_uri = {"http://ieeta.pt/ontoud#" : "ieeta"}
 # connection = 'http://localhost:8890/sparql'

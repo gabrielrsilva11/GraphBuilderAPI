@@ -7,8 +7,8 @@ from Query_Builder import *
 class OntoUD:
     def __init__(self, connection: str):
         """
-
-        :param connection:
+        Class of helper functions to build different subgraphs based on the user needs.
+        :param connection: Connection to a triple-storage database to fetch the data
         """
         self.edge_uri = URIRef("http://ieeta.pt/ontoud#edge")
         self.id_uri = URIRef("http://ieeta.pt/ontoud#id")
@@ -18,11 +18,11 @@ class OntoUD:
     def list_subgraph(self, graph: Graph = None, root_node: URIRef = None, transverse_by: URIRef = None,
                       order_by: URIRef = None) -> list:
         """
-
-        :param graph:
-        :param root_node:
-        :param transverse_by:
-        :param order_by:
+        Expands a node and builds a subgraph of all its related nodes.
+        :param graph: knowledge graph from which to build the subnode.
+        :param root_node: node from which to start expanding and building the subgraph.
+        :param transverse_by: URI that we want to expand from. Ex: head_uri
+        :param order_by: ordering purposes for returning the subgraph.
         :return:
         """
         this_node, sub_nodes, edge = [], [], ''
@@ -44,18 +44,17 @@ class OntoUD:
         # previously appended
         if not this_node:
             this_node = [0]
-        # return [this_node[0], [x for _,x in sub_nodes]]
-        # return [this_node[0], *sub_nodes]
+
         return [this_node[0], edge, *sub_nodes]
 
     def word_to_dependencies(self, graph: Graph = None, root_node: URIRef = None, transverse_by: URIRef = None,
                              order_by: URIRef = None) -> list:
         """
 
-        :param graph:
-        :param root_node:
-        :param transverse_by:
-        :param order_by:
+        :param graph: knowledge graph from which to build the subnode.
+        :param root_node: node from which to start expanding and building the subgraph.
+        :param transverse_by: URI that we want to expand from. Ex: head_uri
+        :param order_by: ordering purposes for returning the subgraph.
         :return:
         """
         this_node, sub_nodes, edge = defaultdict(), [], ''
@@ -73,11 +72,11 @@ class OntoUD:
                        order_by: URIRef = None, stop_word: str = None, result: list = []) -> list:
         """
 
-        :param graph:
-        :param root_node:
-        :param transverse_by:
-        :param order_by:
-        :param stop_word:
+        :param graph: knowledge graph from which to build the subnode.
+        :param root_node: node from which to start expanding and building the subgraph.
+        :param transverse_by: URI that we want to expand from. Ex: head_uri
+        :param order_by: ordering purposes for returning the subgraph.
+        :param stop_word: word to find in the subgraph
         :param result:
         :return:
         """
@@ -95,8 +94,8 @@ class OntoUD:
     def fetch_path(self, dependencies: list) -> list:
         """
 
-        :param dependencies:
-        :return:
+        :param dependencies: a list of dependencies outputted from the list_subgraph function
+        :return: the path in the existing graph.
         """
         path = []
         if len(dependencies) == 2:
@@ -108,10 +107,10 @@ class OntoUD:
 
     def build_subgraph(self, g: Graph, query: str):
         """
-
-        :param g:
-        :param query:
-        :return:
+        Builds a subgraph from a sparql query. This subgraph can then be used in the other functions.
+        :param g: graph object used to append the subgraph.
+        :param query: query from which to build the subgraph.
+        :return: a graph object with a built subgraph
         """
         self.sparql.setQuery(query)
         for result in self.sparql.query().bindings:
@@ -130,3 +129,14 @@ class OntoUD:
         self.sparql.setQuery(query)
         for result in self.sparql.query().bindings:
             yield result['s'].value
+
+    def fetch_wiki_data(self, text: str):
+        """
+
+        :param text:
+        :return:
+        """
+        mapper = WikiMapper("data/index_ptwiki-latest.db")
+        wiki_id = mapper.title_to_id(text)
+        titles = mapper.id_to_titles(wiki_id)
+        return wiki_id, titles

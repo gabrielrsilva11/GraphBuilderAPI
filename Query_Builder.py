@@ -6,8 +6,8 @@ class QueryBuilder:
     def __init__(self, self_uri_dict, graph_name):
         """
 
-        :param self_uri_dict:
-        :param graph_name:
+        :param self_uri_dict: uris used on the graph
+        :param graph_name: name of the graph to query
         """
         self.uri_dict = {'http://www.w3.org/1999/02/22-rdf-syntax-ns#': 'rdf',
                          'http://www.w3.org/2002/07/owl#': 'owl'}
@@ -16,9 +16,9 @@ class QueryBuilder:
 
     def build_query_by_sentence_start(self, start_string: str) -> str:
         """
-
-        :param start_string:
-        :return:
+        Builds a SPARQL query which will look for nodes that start with a given string
+        :param start_string: String to look for in the nodes.
+        :return: A SPARQL query String.
         """
         query = """
             select ?s ?st
@@ -32,9 +32,10 @@ class QueryBuilder:
 
     def build_query_by_and_sentence_list(self, string_list: list) -> str:
         """
-
-        :param string_list:
-        :return:
+        Builds a SPARQL query to look for sentences that are present in a given list. This query will look for a
+        sentences that contain ALL the strings in the list (AND query).
+        :param string_list: list of strings to look for.
+        :return: A SPARQL query String.
         """
         query = """
                 select ?s ?st
@@ -52,9 +53,10 @@ class QueryBuilder:
 
     def build_query_by_or_sentence_list(self, string_list: list) -> str:
         """
-
-        :param string_list:
-        :return:
+        Builds a SPARQL query to look for sentences that are present in a given list. This query will look for a
+        sentences that contain at least one of the strings in the list (OR query).
+        :param string_list: list of strings to look for.
+        :return: A SPARQL query String.
         """
         query = """
                 select ?s ?st
@@ -73,9 +75,9 @@ class QueryBuilder:
     @dispatch(str)
     def build_query_by_sentence_id(self, str_id: str) -> str:
         """
-
-        :param str_id:
-        :return:
+        Builds a SPARQL query to look for sentences by a given id.
+        :param str_id: (string) id of the sentence to look for.
+        :return: A SPARQL query String.
         """
         query = """
         PREFIX dbp:  <http://dbpedia.org/resource/>
@@ -94,9 +96,9 @@ class QueryBuilder:
     @dispatch(int)
     def build_query_by_sentence_id(self, str_id: int) -> str:
         """
-
-        :param str_id:
-        :return:
+        Builds a SPARQL query to look for sentences by a given id.
+        :param str_id: (int) id of the sentence to look for.
+        :return: A SPARQL query String.
         """
         query = """
         PREFIX dbp:  <http://dbpedia.org/resource/>
@@ -115,11 +117,11 @@ class QueryBuilder:
     @dispatch(str, str, str)
     def build_insert_query(self, s, p, o) -> str:
         """
-
-        :param s:
-        :param p:
-        :param o:
-        :return:
+        Builds a SPARQL query to insert a triple into a graph.
+        :param s: (string) subject of the triple
+        :param p: (string) predicate of the triple
+        :param o: (string) object of the triple
+        :return: A SPARQL query String.
         """
         triple = []
         prefix_set = set()
@@ -136,11 +138,11 @@ class QueryBuilder:
     @dispatch(str, URIRef, str)
     def build_insert_query(self, s, p, o) -> str:
         """
-
-        :param s:
-        :param p:
-        :param o:
-        :return:
+        Builds a SPARQL query to insert a triple into a graph.
+        :param s: (string) subject of the triple
+        :param p: (URIRef) predicate of the triple
+        :param o: (string) object of the triple
+        :return: A SPARQL query String.
         """
         triple = []
         prefix_set = set()
@@ -157,11 +159,11 @@ class QueryBuilder:
     @dispatch(str, str, Literal)
     def build_insert_query(self, s, p, o) -> str:
         """
-
-        :param s:
-        :param p:
-        :param o:
-        :return:
+        Builds a SPARQL query to insert a triple into a graph.
+        :param s: (string) subject of the triple
+        :param p: (string) predicate of the triple
+        :param o: (Literal) object of the triple
+        :return: A SPARQL query String.
         """
         triple = []
         prefix_set = set()
@@ -177,7 +179,7 @@ class QueryBuilder:
 
     def build_insert_wikimapper_query(self, s, p, o) -> str:
         """
-
+        REVER ESTA AQUI QUE PODE SER SUBSTITUIDA POR UM INSERT_QUERY NORMAL.
         :param s:
         :param p:
         :param o:
