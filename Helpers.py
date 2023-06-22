@@ -5,15 +5,18 @@ from rdflib import Graph, URIRef, Literal
 from wikimapper import WikiMapper
 
 
-def list_subgraph(graph: Graph = None, root_node: URIRef = None, transverse_by: URIRef = None,
+def list_conll_subgraph(graph: Graph = None, root_node: URIRef = None, transverse_by: URIRef = None,
                   order_by: URIRef = None) -> list:
     """
+    Creates a "subgraph" in the form of a list. This subgraph starts on a given root node and is transversed by a given
+    URI until no more are found. The ID, Word and Edge information are returned along.
 
-    :param graph:
-    :param root_node:
-    :param transverse_by:
-    :param order_by:
+    :param graph: Graph that will be transversed
+    :param root_node: Where to start searching the graph
+    :param transverse_by: The URI used to search deeper within the graph
+    :param order_by: What to order by the final list
     :return:
+    List containing the nodes related to the root node as well as the edge, id and word of these nodes.
     """
     this_node, sub_nodes, edge = [], [], ''
     edge_uri = URIRef("http://ieeta.pt/ontoud#edge")
@@ -24,7 +27,7 @@ def list_subgraph(graph: Graph = None, root_node: URIRef = None, transverse_by: 
         # print(f"{s}\t{p}\t{o}")
         if p == transverse_by:
             sub_nodes.append(
-                list_subgraph(graph=graph, root_node=o, transverse_by=transverse_by, order_by=order_by))
+                list_conll_subgraph(graph=graph, root_node=o, transverse_by=transverse_by, order_by=order_by))
         elif p == id_uri:
             this_node.insert(0, o.toPython())
         elif p == edge_uri:
@@ -43,22 +46,62 @@ def list_subgraph(graph: Graph = None, root_node: URIRef = None, transverse_by: 
     return [this_node[0], edge, *sub_nodes]
 
 
-def word_to_dependencies(graph: Graph = None, root_node: URIRef = None, transverse_by: URIRef = None,
+def list_subgraph(nodes_list: list, graph: Graph = None, root_node: URIRef = None, transverse_by: URIRef = None,
+                  order_by: URIRef = None) -> list:
+    """
+    Creates a "subgraph" in the form of a list. This subgraph starts on a given root node and is transversed by a given
+    URI until no more are found. The information saved in this graph is related to the URIs seen in nodes_list.
+
+    :param nodes_list: List of URIs whose information should be saved in the final list.
+    :param graph: Graph that will be transversed
+    :param root_node: Where to start searching the graph
+    :param transverse_by: The URI used to search deeper within the graph
+    :param order_by: What to order by the final list
+    :return:
+    List containing the nodes related to the root node as well as the information extracted from the URIs in the nodes_list.
+    """
+    this_node, sub_nodes, edge = [], [], ''
+    # print("Root: ", root_node)
+    for s, p, o in graph.triples((root_node, None, None)):
+        # print(f"{s}\t{p}\t{o}")
+        if p == transverse_by:
+            sub_nodes.append(
+                list_subgraph(nodes_list = nodes_list, graph=graph, root_node=o, transverse_by=transverse_by, order_by=order_by))
+        elif p in nodes_list:
+            this_node.insert(0, o.toPython())
+    if this_node:
+        sub_nodes.append(this_node)
+    sub_nodes.sort()
+    # Due to ordering we append the id_uri at the start of the list, therefore we take it out of the sub_nodes
+    # previously appended
+    if not this_node:
+        this_node = [0]
+    # return [this_node[0], [x for _,x in sub_nodes]]
+    # return [this_node[0], *sub_nodes]
+    return [this_node[0],  *sub_nodes]
+
+def node_to_dependencies(graph: Graph = None, root_node: URIRef = None, transverse_by: URIRef = None,
                          order_by: URIRef = None) -> list:
     """
+    Starts on a root node and will return a list of the given dependencies for that node. These dependencies are related
+    to what the user wants to transverse the graph by.
 
-    :param graph:
-    :param root_node:
-    :param transverse_by:
-    :param order_by:
+    For example, in CoNLL, transversing by a Head URI will let the user know the path from the given node to the root
+    of the sentence.
+
+    :param graph: Graph that will be transversed
+    :param root_node: Where to start searching the graph
+    :param transverse_by: The URI used to search deeper within the graph
+    :param order_by: What to order by the final list
     :return:
+    List that starts on the given root node and finishes on the last node related to it by a given URI.
     """
     this_node, sub_nodes, edge = defaultdict(), [], ''
     for s, p, o in graph.triples((root_node, None, None)):
         # print(f"{s}\t{p}\t{o}")
         if p == transverse_by:
             sub_nodes.append(
-                word_to_dependencies(graph=graph, root_node=o, transverse_by=transverse_by, order_by=order_by))
+                node_to_dependencies(graph=graph, root_node=o, transverse_by=transverse_by, order_by=order_by))
         else:
             label = re.search(r".*#(\w+)", p.toPython())
             this_node[label.group(1)] = o.toPython()
@@ -66,18 +109,18 @@ def word_to_dependencies(graph: Graph = None, root_node: URIRef = None, transver
 
 
 def find_word_node(graph: Graph = None, root_node: URIRef = None, transverse_by: URIRef = None,
-                   order_by: URIRef = None, stop_word: str = None, result: list = []) -> list:
+                   order_by: URIRef = None, stop_word: str = None, result: list = [], word_uri: URIRef = None) -> list:
     """
 
-    :param graph:
-    :param root_node:
-    :param transverse_by:
-    :param order_by:
-    :param stop_word:
-    :param result:
+    :param graph: Graph that will be transversed
+    :param root_node: Where to start searching the graph
+    :param transverse_by: The URI used to search deeper within the graph
+    :param order_by: What to order by the final list
+    :param stop_word: Word to find and stop transversing the graph
+    :param result: Appends the node where the stop word was found
     :return:
+    The result of this function is put inside the "result" list which is passed as a parameter.
     """
-    word_uri = URIRef("http://ieeta.pt/ontoud#word")
     this_node, sub_nodes, edge = defaultdict(), [], ''
     for s, p, o in graph.triples((root_node, None, None)):
         if p == transverse_by:
@@ -91,14 +134,16 @@ def find_word_node(graph: Graph = None, root_node: URIRef = None, transverse_by:
     return sub_nodes
 
 
-def check_for_edges(g: Graph = None, edges: list = []):
+def check_for_edges(g: Graph = None, edges: list = [], edge_uri: URIRef = None):
     """
+    Extracts all the roots containing specific types of edges in a given graph.
 
-    :param g:
-    :param edges:
+    :param g: Graph in which to look for.
+    :param edges: list of the edges to check.
+    :param edge_uri: The URI of the edge variable.
     :return:
+    Returns the nodes that contain the given edge relations.
     """
-    edge_uri = URIRef("http://ieeta.pt/ontoud#edge")
     root_nodes = []
     for s, p, o in g.triples((None, edge_uri, None)):
         for edge in edges:
@@ -111,12 +156,14 @@ def find_edge_node(graph: Graph = None, root_node: URIRef = None, transverse_by:
                    order_by: URIRef = None, stop_node: str = None, result: list = []) -> list:
     """
 
-    :param graph:
-    :param root_node:
-    :param transverse_by:
-    :param order_by:
-    :param stop_node:
-    :param result:
+    :param graph: Graph that will be transversed
+    :param root_node: Where to start searching the graph
+    :param transverse_by: The URI used to search deeper within the graph
+    :param order_by: What to order by the final list
+    :param stop_node: Word to find and stop transversing the graph
+    :param result: Appends the node where the stop word was found. Appends the word and the id of the word into the list.
+    :return:
+    The result of this function is put inside the "result" list which is passed as a parameter.
     :return:
     """
     this_node, sub_nodes, edge = defaultdict(), [], ''

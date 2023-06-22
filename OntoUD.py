@@ -1,18 +1,20 @@
 from collections import defaultdict
 from SPARQLWrapper import SPARQLWrapper2
 from rdflib import Graph
+from wikimapper import WikiMapper
+
 from Query_Builder import *
 
 
 class OntoUD:
-    def __init__(self, connection: str):
+    def __init__(self, connection: str, base_uri: str):
         """
         Class of helper functions to build different subgraphs based on the user needs.
         :param connection: Connection to a triple-storage database to fetch the data
         """
-        self.edge_uri = URIRef("http://ieeta.pt/ontoud#edge")
-        self.id_uri = URIRef("http://ieeta.pt/ontoud#id")
-        self.word_uri = URIRef("http://ieeta.pt/ontoud#word")
+        self.edge_uri = URIRef(base_uri + "#edge")
+        self.id_uri = URIRef(base_uri + "#id")
+        self.word_uri = URIRef(base_uri + "#word")
         self.sparql = SPARQLWrapper2(connection)
 
     def list_subgraph(self, graph: Graph = None, root_node: URIRef = None, transverse_by: URIRef = None,

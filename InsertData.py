@@ -1,13 +1,13 @@
 import os
 import warnings
 from SPARQLWrapper import SPARQLWrapper, POST
-from rdflib import Literal
-from rdflib.namespace import RDF, OWL
+
 from spacy_conll import init_parser
 from tqdm import tqdm
 from unidecode import unidecode
 from Query_Builder import QueryBuilder
-
+from rdflib import Graph, URIRef, Literal
+from rdflib.namespace import RDFS, RDF, DOAP, FOAF, ORG, OWL, SKOS, XSD
 
 class CreateGraph:
     """
@@ -16,7 +16,7 @@ class CreateGraph:
 
     """
 
-    def __init__(self, doc, graph_name="wikiner_subset_v3", relations_uri={'http://ieeta.pt/ontoud#': 'ieeta'},
+    def __init__(self, folder, graph_name="wikiner_subset_v3", relations_uri={'http://ieeta.pt/ontoud#': 'ieeta'},
                  main_uri='http://ieeta.pt/ontoud#', connection_string='http://localhost:8890/sparql', language="en"):
         """
         Instantiates a CreateGraph class.
@@ -28,8 +28,7 @@ class CreateGraph:
         :param language: language in which the text is in.
         """
         warnings.filterwarnings("ignore", category=UserWarning)
-        self.file_name = doc
-        self.file = open(doc, 'r')
+        self.folder_name = folder
         self.graph_name = graph_name
         self.relations_uri_dict = relations_uri
         self.main_uri = main_uri
@@ -56,6 +55,7 @@ class CreateGraph:
         self.o_previousword_uri = self.main_uri + "previousWord"
         self.o_mapper_uri = self.main_uri + "wikidataId"
         self.o_contains_sentence = self.main_uri + "containsSentence"
+        self.o_contains_text = self.main_uri + "containsText"
         self.o_from_sentence_uri = self.main_uri + "fromSentence"
 
         # CoNLL properties -> EDGE, FEATS, ID, LEMMA, POS, POS_COARSE, WORD as a data property
@@ -69,7 +69,7 @@ class CreateGraph:
         self.d_poscoarse_uri = self.main_uri + "poscoarse"
         self.d_word_uri = self.main_uri + "word"
 
-    def insert_relationship_data(self):
+    def insert_db_relationship_data(self):
         """
         Creates and adds to the graph the CoNLL relationship properties.
         :return:
@@ -84,6 +84,7 @@ class CreateGraph:
         self.insert_data(self.o_depgraph_uri, RDF.type, OWL.ObjectProperty, self.sparql)
         self.insert_data(self.o_nextsentence_uri, RDF.type, OWL.ObjectProperty, self.sparql)
         self.insert_data(self.o_nextword_uri, RDF.type, OWL.ObjectProperty, self.sparql)
+        self.insert_data(self.o_contains_text, RDF.type, OWL.ObjectProperty, self.sparql)
         self.insert_data(self.o_contains_sentence, RDF.type, OWL.ObjectProperty, self.sparql)
         self.insert_data(self.o_previousword_uri, RDF.type, OWL.ObjectProperty, self.sparql)
         self.insert_data(self.o_from_sentence_uri, RDF.type, OWL.ObjectProperty, self.sparql)
@@ -98,6 +99,46 @@ class CreateGraph:
         self.insert_data(self.d_pos_uri, RDF.type, OWL.DatatypeProperty, self.sparql)
         self.insert_data(self.d_poscoarse_uri, RDF.type, OWL.DatatypeProperty, self.sparql)
         self.insert_data(self.d_word_uri, RDF.type, OWL.DatatypeProperty, self.sparql)
+
+    def insert_memory_relationship_data(self, g):
+        """
+        Creates and adds to the graph the CoNLL relationship properties.
+        :return:
+        """
+        g.bind("rdfs", RDFS)
+        g.bind("rdf", RDF)
+        g.bind("doap", DOAP)
+        g.bind("org", ORG)
+        g.bind("owl", OWL)
+        g.bind("skos", SKOS)
+        g.bind("xsd", XSD)
+        g.bind("foaf", FOAF)
+
+        # class
+        g.add((URIRef(self.c_text_uri), RDF.type, OWL.Class))
+        g.add((URIRef(self.c_sentence_uri), RDF.type, OWL.Class))
+        g.add((URIRef(self.c_word_uri), RDF.type, OWL.Class))
+
+        # object properties
+        g.add((URIRef(self.o_head_uri), RDF.type, OWL.ObjectProperty))
+        g.add((URIRef(self.o_depgraph_uri), RDF.type, OWL.ObjectProperty))
+        g.add((URIRef(self.o_nextsentence_uri), RDF.type, OWL.ObjectProperty))
+        g.add((URIRef(self.o_nextword_uri), RDF.type, OWL.ObjectProperty))
+        g.add((URIRef(self.o_contains_text), RDF.type, OWL.ObjectProperty))
+        g.add((URIRef(self.o_contains_sentence), RDF.type, OWL.ObjectProperty))
+        g.add((URIRef(self.o_previousword_uri), RDF.type, OWL.ObjectProperty))
+        g.add((URIRef(self.o_from_sentence_uri), RDF.type, OWL.ObjectProperty))
+        g.add((URIRef(self.o_mapper_uri), RDF.type, OWL.ObjectProperty))
+
+        # data properties
+        g.add((URIRef(self.d_sentence_text), RDF.type, OWL.DatatypeProperty))
+        g.add((URIRef(self.d_edge_uri), RDF.type, OWL.DatatypeProperty))
+        g.add((URIRef(self.d_feats_uri), RDF.type, OWL.DatatypeProperty))
+        g.add((URIRef(self.d_id_uri), RDF.type, OWL.DatatypeProperty))
+        g.add((URIRef(self.d_lemma_uri), RDF.type, OWL.DatatypeProperty))
+        g.add((URIRef(self.d_pos_uri), RDF.type, OWL.DatatypeProperty))
+        g.add((URIRef(self.d_poscoarse_uri), RDF.type, OWL.DatatypeProperty))
+        g.add((URIRef(self.d_word_uri), RDF.type, OWL.DatatypeProperty))
 
     def insert_data(self, s, p, o, wrapper):
         """
@@ -114,7 +155,7 @@ class CreateGraph:
         # wrapper.method = 'POST'
         results = wrapper.query()
 
-    def insert_script(self, lines, sentence_id):
+    def insert_db_script(self, lines, sentence_id, doc_id):
         """
         Main script to insert CoNLL data into a triple-storage.
         :param lines: the text to insert
@@ -124,30 +165,32 @@ class CreateGraph:
         doc = self.nlp(lines)
         conll = doc._.pandas
         sentence = []
+        textid_uri = self.c_text_uri + "_" + str(doc_id)
+        self.insert_data(textid_uri, RDF.type, self.c_text_uri, self.sparql)
         for index, row in conll.iterrows():
             word = row['form'].replace("'", "").replace("\"", "")
             lemma = row['lemma'].replace("'", "").replace("\"", "")
             word_id = row['id']
             sentence.append(unidecode(word))
             if row['id'] == 1:
-                sentenceid_uri = self.c_sentence_uri + "_" + str(sentence_id)
+                sentenceid_uri = self.c_sentence_uri + "_" + str(doc_id) + "_" + str(sentence_id)
                 if sentence_id > 0:
                     new_sentence = sentence[:-1]
                     self.insert_data(sentenceid_uri, self.d_sentence_text, Literal(' '.join(new_sentence)), self.sparql)
                     sentence = [sentence[-1]]
-                    self.insert_data(self.c_text_uri, self.o_contains_sentence, sentenceid_uri, self.sparql)
+                    self.insert_data(textid_uri, self.o_contains_sentence, sentenceid_uri, self.sparql)
                 sentence_id += 1
-                sentenceid_uri = self.c_sentence_uri + "_" + str(sentence_id)
-                wordid_uri = self.d_word_uri + "_" + str(sentence_id) + "_" + str(word_id)
+                sentenceid_uri = self.c_sentence_uri + "_" + str(doc_id) + "_" + str(sentence_id)
+                wordid_uri = self.d_word_uri + "_" + str(doc_id) + "_" + str(sentence_id) + "_" + str(word_id)
                 self.insert_data(sentenceid_uri, RDF.type, self.c_sentence_uri, self.sparql)
-                self.insert_data(self.c_text_uri, self.o_contains_sentence, sentenceid_uri, self.sparql)
+                self.insert_data(textid_uri, self.o_contains_sentence, sentenceid_uri, self.sparql)
                 if sentence_id != 1:
-                    self.insert_data(self.c_sentence_uri + "_" + str(sentence_id - 1), self.o_nextsentence_uri,
+                    self.insert_data(self.c_sentence_uri + "_" + str(doc_id) + "_" + str(sentence_id - 1), self.o_nextsentence_uri,
                                      sentenceid_uri, self.sparql)
             else:
                 word_id = row['id']
                 previous_uri = wordid_uri
-                wordid_uri = self.d_word_uri + "_" + str(sentence_id) + "_" + str(word_id)
+                wordid_uri = self.d_word_uri + "_" + str(doc_id) + "_" + str(sentence_id) + "_" + str(word_id)
                 self.insert_data(wordid_uri, self.o_previousword_uri, previous_uri, self.sparql)
 
             self.insert_data(wordid_uri, RDF.type, self.c_word_uri, self.sparql)
@@ -166,11 +209,72 @@ class CreateGraph:
                 self.insert_data(sentenceid_uri, self.o_depgraph_uri, wordid_uri, self.sparql)
             else:
                 self.insert_data(wordid_uri, self.o_head_uri,
-                                 self.d_word_uri + "_" + str(sentence_id) + "_" + str(row['head']), self.sparql)
-                self.insert_data(self.d_word_uri + "_" + str(sentence_id) + "_" + str(row['head']), self.o_depgraph_uri,
+                                 self.d_word_uri + "_" + str(doc_id) +"_" + str(sentence_id) + "_" + str(row['head']), self.sparql)
+                self.insert_data(self.d_word_uri + "_" + str(doc_id) +"_" + str(sentence_id) + "_" + str(row['head']), self.o_depgraph_uri,
                                  wordid_uri, self.sparql)
         self.insert_data(sentenceid_uri, self.d_sentence_text, Literal(' '.join(sentence)), self.sparql)
-        self.insert_data(self.c_text_uri, self.o_contains_sentence, sentenceid_uri, self.sparql)
+        self.insert_data(textid_uri, self.o_contains_sentence, sentenceid_uri, self.sparql)
+        return sentence_id
+
+    def insert_memory_script(self, lines, sentence_id, doc_id, g):
+        """
+        Main script to insert CoNLL data into a triple-storage.
+        :param lines: the text to insert
+        :param sentence_id: last known sentence_id for identification purposes.
+        :return: the last used sentence_id.
+        """
+        doc = self.nlp(lines)
+        conll = doc._.pandas
+        sentence = []
+        textid_uri = URIRef(self.c_text_uri + "_" + str(doc_id))
+        g.add((textid_uri, RDF.type, URIRef(self.c_text_uri)))
+        for index, row in conll.iterrows():
+            word = row['form'].replace("'", "").replace("\"", "")
+            lemma = row['lemma'].replace("'", "").replace("\"", "")
+            word_id = row['id']
+            sentence.append(unidecode(word))
+            if row['id'] == 1:
+                sentenceid_uri = URIRef(self.c_sentence_uri + "_" + str(doc_id) + "_" + str(sentence_id))
+                if sentence_id > 0:
+                    new_sentence = sentence[:-1]
+                    g.add((sentenceid_uri, URIRef(self.d_sentence_text), Literal(' '.join(new_sentence))))
+                    sentence = [sentence[-1]]
+                    g.add((textid_uri, URIRef(self.o_contains_sentence), sentenceid_uri))
+                sentence_id += 1
+                sentenceid_uri = URIRef(self.c_sentence_uri + "_" + str(doc_id) + "_" + str(sentence_id))
+                wordid_uri = URIRef(self.d_word_uri + "_" + str(doc_id) + "_" + str(sentence_id) + "_" + str(word_id))
+                g.add((sentenceid_uri, RDF.type, URIRef(self.c_sentence_uri)))
+                g.add((textid_uri, URIRef(self.o_contains_sentence), sentenceid_uri))
+                if sentence_id != 1:
+                    g.add((URIRef(self.c_sentence_uri + "_" + str(doc_id) + "_" + str(sentence_id - 1)), URIRef(self.o_nextsentence_uri),
+                                     sentenceid_uri))
+            else:
+                word_id = row['id']
+                previous_uri = wordid_uri
+                wordid_uri = URIRef(self.d_word_uri + "_" + str(doc_id) + "_" + str(sentence_id) + "_" + str(word_id))
+                g.add((wordid_uri, URIRef(self.o_previousword_uri), previous_uri))
+
+            g.add((wordid_uri, RDF.type, URIRef(self.c_word_uri)))
+            g.add((wordid_uri, URIRef(self.d_id_uri), Literal(row['id'])))
+            g.add((wordid_uri, URIRef(self.d_word_uri), Literal(word)))
+            g.add((wordid_uri, URIRef(self.d_edge_uri), Literal(row['deprel'])))
+            g.add((wordid_uri, URIRef(self.d_feats_uri), Literal(row['feats'])))
+            g.add((wordid_uri, URIRef(self.d_id_uri), Literal(row['id'])))
+            g.add((wordid_uri, URIRef(self.d_lemma_uri), Literal(lemma)))
+            g.add((wordid_uri, URIRef(self.d_pos_uri), Literal(row['upostag'])))
+            g.add((wordid_uri, URIRef(self.d_poscoarse_uri), Literal(row['xpostag'])))
+
+            if row['head'] == 0:
+                # print(sentence)
+                g.add((wordid_uri, URIRef(self.o_from_sentence_uri), sentenceid_uri))
+                g.add((sentenceid_uri, URIRef(self.o_depgraph_uri), wordid_uri))
+            else:
+                g.add((wordid_uri, URIRef(self.o_head_uri),
+                                 URIRef(self.d_word_uri + "_" + str(doc_id) + "_" + str(sentence_id) + "_" + str(row['head']))))
+                g.add((URIRef(self.d_word_uri + "_" + str(doc_id) + "_" + str(sentence_id) + "_" + str(row['head'])), URIRef(self.o_depgraph_uri),
+                                 wordid_uri))
+        g.add((sentenceid_uri, URIRef(self.d_sentence_text), Literal(' '.join(sentence))))
+        g.add((textid_uri, URIRef(self.o_contains_sentence), sentenceid_uri))
         return sentence_id
 
     def insert_wikimapper_data(self, sentence_id, wiki_id):
@@ -185,29 +289,49 @@ class CreateGraph:
         self.sparql.setQuery(query)
         results = self.sparql.query()
 
-    def create_graph(self, in_memory = False):
+    def create_graph(self, in_memory=False, save_file = "Serialized"):
         """
 
         :param in_memory: Boolean which indicates whether we want to create the graph in-memory or upload to a storage.
         """
-        sentence_id = 0
+        doc_id = 0
         i = 0
         lines = ''
-        with tqdm(total=os.path.getsize(self.file_name)) as pbar:
-            with open(self.file_name) as file:
-                for line in file:
-                    lines = lines + line
-                    if i == 10:
-                        pbar.update(len(lines.encode('utf-8')))
-                        # pbar.display()
-                        i = 0
-                        sentence_id = self.insert_script(lines, sentence_id)
-                        sentence_id = sentence_id + 1
-                        lines = ''
-                    i += 1
-                if lines:
-                    sentence_id = self.insert_script(lines, sentence_id)
+        files = [f for f in os.listdir(self.folder_name) if os.path.isfile(os.path.join(self.folder_name, f))]
+        if in_memory:
+            g = Graph()
+            self.insert_memory_relationship_data(g)
+        else:
+            self.insert_db_relationship_data()
 
+        for file_name in files:
+            if not file_name.startswith("."):
+                sentence_id = 0
+                file_path = os.getcwd()+"/"+self.folder_name+"/"+file_name
+                print(f"--- Processing file {doc_id} : {file_name} ---")
+                with tqdm(total=os.path.getsize(file_path)) as pbar:
+                    with open(file_path) as file:
+                        for line in file:
+                            lines = lines + line
+                            if i == 5:
+                                pbar.update(len(lines.encode('utf-8')))
+                                # pbar.display()
+                                i = 0
+                                if in_memory:
+                                    sentence_id = self.insert_memory_script(lines, sentence_id, doc_id, g)
+                                else:
+                                    sentence_id = self.insert_db_script(lines, sentence_id, doc_id)
+                                sentence_id = sentence_id + 1
+                                lines = ''
+                            i += 1
+                        if lines:
+                            if in_memory:
+                                sentence_id = self.insert_memory_script(lines, sentence_id, doc_id, g)
+                            else:
+                                sentence_id = self.insert_db_script(lines, sentence_id, doc_id)
+            doc_id += 1
+        if in_memory:
+            g.serialize(destination=save_file+".owl", format="xml")
 
 # relations_uri = {"http://ieeta.pt/ontoud#" : "ieeta"}
 # connection = 'http://localhost:8890/sparql'
