@@ -1,3 +1,7 @@
 /data/index_ptwiki-latest.db
 /data/ptwiki-latest-page.db
 /data/ptwiki-latest-page.sql
+.DS_Store
+wikimapper_data/index_ptwiki-latest.db
+wikimapper_data/ptwiki-latest-page.db
+wikimapper_data/ptwiki-latest-page.sql

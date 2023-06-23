@@ -1,12 +1,14 @@
 import re
 from collections import defaultdict
+
+import rdflib.term
 from SPARQLWrapper import SPARQLWrapper2
 from rdflib import Graph, URIRef, Literal
 from wikimapper import WikiMapper
 
 
-def list_conll_subgraph(graph: Graph = None, root_node: URIRef = None, transverse_by: URIRef = None,
-                  order_by: URIRef = None) -> list:
+def list_conll_subgraph(graph: Graph, root_node: rdflib.term.Node, transverse_by: URIRef,
+                        order_by: URIRef = None) -> list:
     """
     Creates a "subgraph" in the form of a list. This subgraph starts on a given root node and is transversed by a given
     URI until no more are found. The ID, Word and Edge information are returned along.
@@ -24,16 +26,16 @@ def list_conll_subgraph(graph: Graph = None, root_node: URIRef = None, transvers
     word_uri = URIRef("http://ieeta.pt/ontoud#word")
     # print("Root: ", root_node)
     for s, p, o in graph.triples((root_node, None, None)):
-        # print(f"{s}\t{p}\t{o}")
+        #print(f"{s}\t{p}\t{o}")
         if p == transverse_by:
             sub_nodes.append(
                 list_conll_subgraph(graph=graph, root_node=o, transverse_by=transverse_by, order_by=order_by))
         elif p == id_uri:
-            this_node.insert(0, o.toPython())
+            this_node.insert(0, o.__str__())
         elif p == edge_uri:
-            edge = o.toPython()
+            edge = o.__str__()
         elif p == word_uri:  # Information to collection on the node.
-            this_node.append(o.toPython())
+            this_node.append(o.__str__())
     if this_node:
         sub_nodes.append(this_node)
     sub_nodes.sort()
@@ -46,7 +48,7 @@ def list_conll_subgraph(graph: Graph = None, root_node: URIRef = None, transvers
     return [this_node[0], edge, *sub_nodes]
 
 
-def list_subgraph(nodes_list: list, graph: Graph = None, root_node: URIRef = None, transverse_by: URIRef = None,
+def list_subgraph(nodes_list: list, graph: Graph, root_node: rdflib.term.Node, transverse_by: URIRef,
                   order_by: URIRef = None) -> list:
     """
     Creates a "subgraph" in the form of a list. This subgraph starts on a given root node and is transversed by a given
@@ -58,7 +60,8 @@ def list_subgraph(nodes_list: list, graph: Graph = None, root_node: URIRef = Non
     :param transverse_by: The URI used to search deeper within the graph
     :param order_by: What to order by the final list
     :return:
-    List containing the nodes related to the root node as well as the information extracted from the URIs in the nodes_list.
+    List containing the nodes related to the root node as well as the information extracted from the URIs in the
+    nodes_list.
     """
     this_node, sub_nodes, edge = [], [], ''
     # print("Root: ", root_node)
@@ -66,9 +69,10 @@ def list_subgraph(nodes_list: list, graph: Graph = None, root_node: URIRef = Non
         # print(f"{s}\t{p}\t{o}")
         if p == transverse_by:
             sub_nodes.append(
-                list_subgraph(nodes_list = nodes_list, graph=graph, root_node=o, transverse_by=transverse_by, order_by=order_by))
+                list_subgraph(nodes_list=nodes_list, graph=graph, root_node=o, transverse_by=transverse_by,
+                              order_by=order_by))
         elif p in nodes_list:
-            this_node.insert(0, o.toPython())
+            this_node.insert(0, o.__str__())
     if this_node:
         sub_nodes.append(this_node)
     sub_nodes.sort()
@@ -80,7 +84,8 @@ def list_subgraph(nodes_list: list, graph: Graph = None, root_node: URIRef = Non
     # return [this_node[0], *sub_nodes]
     return [this_node[0],  *sub_nodes]
 
-def node_to_dependencies(graph: Graph = None, root_node: URIRef = None, transverse_by: URIRef = None,
+
+def node_to_dependencies(graph: Graph, root_node: rdflib.term.Node, transverse_by: URIRef,
                          order_by: URIRef = None) -> list:
     """
     Starts on a root node and will return a list of the given dependencies for that node. These dependencies are related
@@ -103,13 +108,13 @@ def node_to_dependencies(graph: Graph = None, root_node: URIRef = None, transver
             sub_nodes.append(
                 node_to_dependencies(graph=graph, root_node=o, transverse_by=transverse_by, order_by=order_by))
         else:
-            label = re.search(r".*#(\w+)", p.toPython())
-            this_node[label.group(1)] = o.toPython()
+            label = re.search(r".*#(\w+)", p.__str__())
+            this_node[label.group(1)] = o.__str__()
     return [this_node, *sub_nodes]
 
 
-def find_word_node(graph: Graph = None, root_node: URIRef = None, transverse_by: URIRef = None,
-                   order_by: URIRef = None, stop_word: str = None, result: list = [], word_uri: URIRef = None) -> list:
+def find_word_node(graph: Graph, root_node: rdflib.term.Node, transverse_by: URIRef, stop_word: str,
+                   order_by: URIRef = None, result: list = None, word_uri: URIRef = None) -> list:
     """
 
     :param graph: Graph that will be transversed
@@ -117,6 +122,7 @@ def find_word_node(graph: Graph = None, root_node: URIRef = None, transverse_by:
     :param transverse_by: The URI used to search deeper within the graph
     :param order_by: What to order by the final list
     :param stop_word: Word to find and stop transversing the graph
+    :param word_uri:
     :param result: Appends the node where the stop word was found
     :return:
     The result of this function is put inside the "result" list which is passed as a parameter.
@@ -128,13 +134,13 @@ def find_word_node(graph: Graph = None, root_node: URIRef = None, transverse_by:
                 find_word_node(graph=graph, root_node=o, transverse_by=transverse_by,
                                order_by=order_by, stop_word=stop_word, result=result))
         elif p == word_uri:
-            if o.toPython() == stop_word:
+            if o.__str__() == stop_word:
                 # if word == stop_word:
                 result.append(s)
     return sub_nodes
 
 
-def check_for_edges(g: Graph = None, edges: list = [], edge_uri: URIRef = None):
+def check_for_edges(g: Graph, edges: list = None, edge_uri: URIRef = None) -> list:
     """
     Extracts all the roots containing specific types of edges in a given graph.
 
@@ -147,13 +153,13 @@ def check_for_edges(g: Graph = None, edges: list = [], edge_uri: URIRef = None):
     root_nodes = []
     for s, p, o in g.triples((None, edge_uri, None)):
         for edge in edges:
-            if o.toPython() == edge:
+            if o.__str__() == edge:
                 root_nodes.append(s)
     return root_nodes
 
 
-def find_edge_node(graph: Graph = None, root_node: URIRef = None, transverse_by: URIRef = None,
-                   order_by: URIRef = None, stop_node: str = None, result: list = []) -> list:
+def find_edge_node(graph: Graph, root_node: rdflib.term.Node, transverse_by: URIRef, stop_node: str,
+                   order_by: URIRef = None, result: list = None) -> list:
     """
 
     :param graph: Graph that will be transversed
@@ -161,7 +167,7 @@ def find_edge_node(graph: Graph = None, root_node: URIRef = None, transverse_by:
     :param transverse_by: The URI used to search deeper within the graph
     :param order_by: What to order by the final list
     :param stop_node: Word to find and stop transversing the graph
-    :param result: Appends the node where the stop word was found. Appends the word and the id of the word into the list.
+    :param result: Appends the node where the stop word was found. Appends the word and the id of the word into the list
     :return:
     The result of this function is put inside the "result" list which is passed as a parameter.
     :return:
@@ -171,15 +177,15 @@ def find_edge_node(graph: Graph = None, root_node: URIRef = None, transverse_by:
     id_uri = URIRef("http://ieeta.pt/ontoud#id")
     for s, p, o in graph.triples((root_node, None, None)):
         if p == word_uri:
-            result.append(o.toPython())
+            result.append(o.__str__())
         elif p == id_uri:
-            result.append(o.toPython())
+            result.append(o.__str__())
         elif p == transverse_by:
             sub_nodes.append(
                 find_edge_node(graph=graph, root_node=o, transverse_by=transverse_by,
                                order_by=order_by, stop_node=stop_node, result=result))
         # elif p == edge_uri:
-        #     if o.toPython() == stop_node:
+        #     if o.__str__() == stop_node:
         #         # if word == stop_word:
         #         result.append(s)
     return sub_nodes
@@ -216,9 +222,10 @@ def build_subgraph(g: Graph, query: str, connection: str):
     # print(query)
     sparql.setQuery(query)
     for result in sparql.query().bindings:
-        g.add(map(lambda x: URIRef(x.value) if x.type == 'uri' else (Literal(int(x.value))
-                                                                     if x.type == 'typed-literal'
-                                                                     else Literal(x.value)), result.values()))
+        triple = list(map(lambda x: URIRef(x.value) if x.type == 'uri' else (Literal(int(x.value))
+                                                                             if x.type == 'typed-literal'
+                                                                             else Literal(x.value)), result.values()))
+        g.add((triple[0], triple[1], triple[2]))
     return g
 
 
@@ -242,7 +249,7 @@ def fetch_wiki_data(text: str):
     :param text:
     :return:
     """
-    mapper = WikiMapper("data/index_ptwiki-latest.db")
+    mapper = WikiMapper("wikimapper_data/index_ptwiki-latest.db")
     wiki_id = mapper.title_to_id(text)
     titles = mapper.id_to_titles(wiki_id)
     return wiki_id, titles

@@ -55,6 +55,7 @@ class CreateGraph:
         self.o_previousword_uri = self.main_uri + "previousWord"
         self.o_mapper_uri = self.main_uri + "wikidataId"
         self.o_contains_sentence = self.main_uri + "containsSentence"
+        self.o_from_text = self.main_uri + "fromText"
         self.o_contains_text = self.main_uri + "containsText"
         self.o_from_sentence_uri = self.main_uri + "fromSentence"
 
@@ -86,6 +87,7 @@ class CreateGraph:
         self.insert_data(self.o_nextword_uri, RDF.type, OWL.ObjectProperty, self.sparql)
         self.insert_data(self.o_contains_text, RDF.type, OWL.ObjectProperty, self.sparql)
         self.insert_data(self.o_contains_sentence, RDF.type, OWL.ObjectProperty, self.sparql)
+        self.insert_data(self.o_from_text, RDF.type, OWL.ObjectProperty, self.sparql)
         self.insert_data(self.o_previousword_uri, RDF.type, OWL.ObjectProperty, self.sparql)
         self.insert_data(self.o_from_sentence_uri, RDF.type, OWL.ObjectProperty, self.sparql)
         self.insert_data(self.o_mapper_uri, RDF.type, OWL.ObjectProperty, self.sparql)
@@ -126,6 +128,7 @@ class CreateGraph:
         g.add((URIRef(self.o_nextword_uri), RDF.type, OWL.ObjectProperty))
         g.add((URIRef(self.o_contains_text), RDF.type, OWL.ObjectProperty))
         g.add((URIRef(self.o_contains_sentence), RDF.type, OWL.ObjectProperty))
+        g.add((URIRef(self.o_from_text), RDF.type, OWL.ObjectProperty))
         g.add((URIRef(self.o_previousword_uri), RDF.type, OWL.ObjectProperty))
         g.add((URIRef(self.o_from_sentence_uri), RDF.type, OWL.ObjectProperty))
         g.add((URIRef(self.o_mapper_uri), RDF.type, OWL.ObjectProperty))
@@ -179,11 +182,13 @@ class CreateGraph:
                     self.insert_data(sentenceid_uri, self.d_sentence_text, Literal(' '.join(new_sentence)), self.sparql)
                     sentence = [sentence[-1]]
                     self.insert_data(textid_uri, self.o_contains_sentence, sentenceid_uri, self.sparql)
+                    self.insert_data(sentenceid_uri, self.o_from_text, textid_uri, self.sparql)
                 sentence_id += 1
                 sentenceid_uri = self.c_sentence_uri + "_" + str(doc_id) + "_" + str(sentence_id)
                 wordid_uri = self.d_word_uri + "_" + str(doc_id) + "_" + str(sentence_id) + "_" + str(word_id)
                 self.insert_data(sentenceid_uri, RDF.type, self.c_sentence_uri, self.sparql)
                 self.insert_data(textid_uri, self.o_contains_sentence, sentenceid_uri, self.sparql)
+                self.insert_data(sentenceid_uri, self.o_from_text, textid_uri, self.sparql)
                 if sentence_id != 1:
                     self.insert_data(self.c_sentence_uri + "_" + str(doc_id) + "_" + str(sentence_id - 1), self.o_nextsentence_uri,
                                      sentenceid_uri, self.sparql)
@@ -214,6 +219,7 @@ class CreateGraph:
                                  wordid_uri, self.sparql)
         self.insert_data(sentenceid_uri, self.d_sentence_text, Literal(' '.join(sentence)), self.sparql)
         self.insert_data(textid_uri, self.o_contains_sentence, sentenceid_uri, self.sparql)
+        self.insert_data(sentenceid_uri, self.o_from_text, textid_uri, self.sparql)
         return sentence_id
 
     def insert_memory_script(self, lines, sentence_id, doc_id, g):
@@ -240,11 +246,13 @@ class CreateGraph:
                     g.add((sentenceid_uri, URIRef(self.d_sentence_text), Literal(' '.join(new_sentence))))
                     sentence = [sentence[-1]]
                     g.add((textid_uri, URIRef(self.o_contains_sentence), sentenceid_uri))
+                    g.add((sentenceid_uri, URIRef(self.o_from_text), textid_uri))
                 sentence_id += 1
                 sentenceid_uri = URIRef(self.c_sentence_uri + "_" + str(doc_id) + "_" + str(sentence_id))
                 wordid_uri = URIRef(self.d_word_uri + "_" + str(doc_id) + "_" + str(sentence_id) + "_" + str(word_id))
                 g.add((sentenceid_uri, RDF.type, URIRef(self.c_sentence_uri)))
                 g.add((textid_uri, URIRef(self.o_contains_sentence), sentenceid_uri))
+                g.add((sentenceid_uri, URIRef(self.o_from_text), textid_uri))
                 if sentence_id != 1:
                     g.add((URIRef(self.c_sentence_uri + "_" + str(doc_id) + "_" + str(sentence_id - 1)), URIRef(self.o_nextsentence_uri),
                                      sentenceid_uri))
@@ -275,6 +283,7 @@ class CreateGraph:
                                  wordid_uri))
         g.add((sentenceid_uri, URIRef(self.d_sentence_text), Literal(' '.join(sentence))))
         g.add((textid_uri, URIRef(self.o_contains_sentence), sentenceid_uri))
+        g.add((sentenceid_uri, URIRef(self.o_from_text), textid_uri))
         return sentence_id
 
     def insert_wikimapper_data(self, sentence_id, wiki_id):

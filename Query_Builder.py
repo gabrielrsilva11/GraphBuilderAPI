@@ -3,7 +3,7 @@ from multipledispatch import dispatch
 from rdflib import URIRef, Literal
 
 class QueryBuilder:
-    def __init__(self, self_uri_dict, graph_name):
+    def __init__(self, main_uri: str, graph_name=""):
         """
 
         :param self_uri_dict: uris used on the graph
@@ -11,7 +11,7 @@ class QueryBuilder:
         """
         self.uri_dict = {'http://www.w3.org/1999/02/22-rdf-syntax-ns#': 'rdf',
                          'http://www.w3.org/2002/07/owl#': 'owl'}
-        self.uri_dict.update(self_uri_dict)
+        self.main_uri = main_uri
         self.graph_name = graph_name
 
     def build_query_by_sentence_start(self, start_string: str) -> str:
@@ -23,7 +23,7 @@ class QueryBuilder:
         query = """
             select ?s ?st
             where {
-            ?s <http://ieeta.pt/ontoud#senttext> ?st.
+            ?s <""" + self.main_uri + """senttext> ?st.
             FILTER(strstarts(?st, '""" + start_string + """')) .
             }
             LIMIT 1000 
@@ -37,10 +37,11 @@ class QueryBuilder:
         :param string_list: list of strings to look for.
         :return: A SPARQL query String.
         """
+
         query = """
                 select ?s ?st
                 where {
-                ?s <http://ieeta.pt/ontoud#senttext> ?st. 
+                ?s <""" + self.main_uri + """senttext> ?st. 
                 FILTER(contains(?st, '""" + string_list[0] + "')"
 
         for word in string_list[1:]:
@@ -61,7 +62,7 @@ class QueryBuilder:
         query = """
                 select ?s ?st
                 where {
-                ?s <http://ieeta.pt/ontoud#senttext> ?st. 
+                ?s <""" + self.main_uri + """senttext> ?st.  
                 FILTER(contains(?st, '""" + string_list[0] + "')"
 
         for word in string_list[1:]:
@@ -83,11 +84,10 @@ class QueryBuilder:
         PREFIX dbp:  <http://dbpedia.org/resource/>
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
         PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-        PREFIX ietud: <http://ieeta.pt/ontoud#>
     
         SELECT ?s ?p ?o
         WHERE {
-            <""" + str_id + """> ietud:depgraph* ?s . 
+            <""" + str_id + """> <"""+self.main_uri+"""depGraph>* ?s . 
             ?s ?p ?o .
         }
         """
@@ -104,11 +104,10 @@ class QueryBuilder:
         PREFIX dbp:  <http://dbpedia.org/resource/>
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
         PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-        PREFIX ietud: <http://ieeta.pt/ontoud#>
     
         SELECT ?s ?p ?o
         WHERE {
-            <http://ieeta.pt/ontoud#Sentence_""" + str(str_id) + """> ietud:depGraph* ?s . 
+            <http://ieeta.pt/ontoud#Sentence_""" + str(str_id) + """> <""" + self.main_uri + """depGraph>* ?s . 
             ?s ?p ?o .
         }
         """
