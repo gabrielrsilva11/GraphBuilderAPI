@@ -10,7 +10,9 @@ class QueryBuilder:
         :param graph_name: name of the graph to query
         """
         self.uri_dict = {'http://www.w3.org/1999/02/22-rdf-syntax-ns#': 'rdf',
-                         'http://www.w3.org/2002/07/owl#': 'owl'}
+                         'http://www.w3.org/2002/07/owl#': 'owl'
+                         }
+        self.uri_dict.update({main_uri : 'main'})
         self.main_uri = main_uri
         self.graph_name = graph_name
 

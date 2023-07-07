@@ -1,7 +1,6 @@
 import os
 import warnings
 from SPARQLWrapper import SPARQLWrapper, POST
-
 from spacy_conll import init_parser
 from tqdm import tqdm
 from unidecode import unidecode
@@ -341,9 +340,3 @@ class CreateGraph:
             doc_id += 1
         if in_memory:
             g.serialize(destination=save_file+".owl", format="xml")
-
-# relations_uri = {"http://ieeta.pt/ontoud#" : "ieeta"}
-# connection = 'http://localhost:8890/sparql'
-# graph = CreateGraph(doc="data/wikiner_subset.txt", relations_uri=relations_uri,
-#                   connection_string=connection, language='pt')
-# graph.create_graph()

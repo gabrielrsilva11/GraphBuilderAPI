@@ -7,7 +7,7 @@ from rdflib import Graph, URIRef, Literal
 from wikimapper import WikiMapper
 
 
-def list_conll_subgraph(graph: Graph, root_node: rdflib.term.Node, transverse_by: URIRef,
+def list_conll_subgraph(graph: Graph, root_node: rdflib.term.Node, transverse_by: URIRef, main_uri: str,
                         order_by: URIRef = None) -> list:
     """
     Creates a "subgraph" in the form of a list. This subgraph starts on a given root node and is transversed by a given
@@ -21,15 +21,15 @@ def list_conll_subgraph(graph: Graph, root_node: rdflib.term.Node, transverse_by
     List containing the nodes related to the root node as well as the edge, id and word of these nodes.
     """
     this_node, sub_nodes, edge = [], [], ''
-    edge_uri = URIRef("http://ieeta.pt/ontoud#edge")
-    id_uri = URIRef("http://ieeta.pt/ontoud#id")
-    word_uri = URIRef("http://ieeta.pt/ontoud#word")
+    edge_uri = URIRef(main_uri + "edge")
+    id_uri = URIRef(main_uri + "id")
+    word_uri = URIRef(main_uri + "word")
     # print("Root: ", root_node)
     for s, p, o in graph.triples((root_node, None, None)):
         #print(f"{s}\t{p}\t{o}")
         if p == transverse_by:
             sub_nodes.append(
-                list_conll_subgraph(graph=graph, root_node=o, transverse_by=transverse_by, order_by=order_by))
+                list_conll_subgraph(graph=graph, root_node=o, transverse_by=transverse_by, order_by=order_by, main_uri=main_uri))
         elif p == id_uri:
             this_node.insert(0, o.__str__())
         elif p == edge_uri:
