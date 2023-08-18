@@ -28,29 +28,29 @@ g = Graph()
 
 relations_uri = {"http://ieeta.pt/ontoud#" : "ieeta"}
 connection = 'http://localhost:8890/sparql'
-graph = CreateGraph(folder="DemoData", relations_uri=relations_uri,
-                  connection_string=connection, language='pt')
-
-# create_graph = CreateGraph(folder="DemoData")
-pp = pprint.PrettyPrinter(indent=4)
-#g = build_subgraph(g, qb.build_query_by_sentence_id(500), conection_string)
-info_list = []
-
-
-senttext_uri = URIRef("http://ieeta.pt/ontoud#senttext")
-aa = qb.build_query_by_and_sentence_list(['Portugal', 'Algarve', 'Europa'])
-print(aa)
-
-for sent_id in fetch_id_by_sentence(aa, conection_string):
-    g = build_subgraph(g, qb.build_query_by_sentence_id(sent_id), conection_string)
-
-for s, p, o in g.triples((None, senttext_uri, None)):
-    print(s, p, o)
-nodes_list = [edge_uri, id_uri, word_uri, lemma_uri]
-for s, p, o in g.triples((None, RDF.type, sentence_uri)):
-    print(s,p,o)
-    grafo = list_subgraph(nodes_list = nodes_list, graph=g, root_node=s, transverse_by=depgraph_uri, order_by=id_uri)
-    pp.pprint(grafo)
+# graph = CreateGraph(folder="DemoData", relations_uri=relations_uri,
+#                   connection_string=connection, language='pt')
+#
+# # create_graph = CreateGraph(folder="DemoData")
+# pp = pprint.PrettyPrinter(indent=4)
+# #g = build_subgraph(g, qb.build_query_by_sentence_id(500), conection_string)
+# info_list = []
+#
+#
+# senttext_uri = URIRef("http://ieeta.pt/ontoud#senttext")
+# aa = qb.build_query_by_and_sentence_list(['Portugal', 'Algarve', 'Europa'])
+# print(aa)
+#
+# for sent_id in fetch_id_by_sentence(aa, conection_string):
+#     g = build_subgraph(g, qb.build_query_by_sentence_id(sent_id), conection_string)
+#
+# for s, p, o in g.triples((None, senttext_uri, None)):
+#     print(s, p, o)
+# nodes_list = [edge_uri, id_uri, word_uri, lemma_uri]
+# for s, p, o in g.triples((None, RDF.type, sentence_uri)):
+#     print(s,p,o)
+#     grafo = list_subgraph(nodes_list = nodes_list, graph=g, root_node=s, transverse_by=depgraph_uri, order_by=id_uri)
+#     pp.pprint(grafo)
 
 # for sent_id in fetch_id_by_sentence(qb.build_query_by_sentence_start("A Espanha"), conection_string):
 #     g = build_subgraph(g, qb.build_query_by_sentence_id(sent_id), conection_string)
@@ -82,7 +82,7 @@ for s, p, o in g.triples((None, RDF.type, sentence_uri)):
 # words = "desde meados de"
 # words = words.split(" ")
 # #
-# for i in range(0, 100):
+# for i in range(0, 999):
 #     g = Graph()
 #     g = build_subgraph(g, qb.build_query_by_sentence_id(i), conection_string)
 #     for s, p, o in g.triples((None, RDF.type, sentence_uri)):
@@ -114,3 +114,4 @@ for s, p, o in g.triples((None, RDF.type, sentence_uri)):
 # for s, p, o in g.triples((None, RDF.type, sentence_uri)):
 #     grafo = list_subgraph(nodes_list = nodes_list, graph=g, root_node=s, transverse_by=depgraph_uri, order_by=id_uri)
 #     pp.pprint(grafo)
+
