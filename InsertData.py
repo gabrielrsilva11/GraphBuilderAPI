@@ -1,5 +1,5 @@
 import os
-import time
+from time import sleep
 import warnings
 from SPARQLWrapper import SPARQLWrapper, POST
 from spacy_conll import init_parser
@@ -159,12 +159,17 @@ class CreateGraph:
         for i in range(0,10):
             try:
                 results = wrapper.query()
+                str_error = None
             except:
-                print(wrapper)
-                print("Exception occurred")
-                print("Attempt number: ", i)
-                print("Trying again.")
+                str_error = "Error"
+                pass
 
+            if str_error:
+                print("Error occurred. Attempting to upload triple again.")
+                print("Attempt number: ", i)
+                sleep(1)  # wait for 2 seconds before trying to fetch the data again
+            else:
+                break
 
     def insert_db_script(self, lines, sentence_id, doc_id):
         """
