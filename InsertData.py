@@ -1,4 +1,5 @@
 import os
+import time
 import warnings
 from SPARQLWrapper import SPARQLWrapper, POST
 from spacy_conll import init_parser
@@ -155,7 +156,15 @@ class CreateGraph:
         query = self.queries.build_insert_query(s, p, o)
         wrapper.setQuery(query)
         # wrapper.method = 'POST'
-        results = wrapper.query()
+        for i in range(0,10):
+            try:
+                results = wrapper.query()
+            except:
+                print(wrapper)
+                print("Exception occurred")
+                print("Attempt number: ", i)
+                print("Trying again.")
+
 
     def insert_db_script(self, lines, sentence_id, doc_id):
         """
@@ -321,7 +330,7 @@ class CreateGraph:
                     with open(file_path) as file:
                         for line in file:
                             lines = lines + line
-                            if i == 5:
+                            if i == 50:
                                 pbar.update(len(lines.encode('utf-8')))
                                 # pbar.display()
                                 i = 0
