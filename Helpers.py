@@ -1,11 +1,11 @@
 import re
 from collections import defaultdict
-
+from time import sleep
 import rdflib.term
 from SPARQLWrapper import SPARQLWrapper2
 from rdflib import Graph, URIRef, Literal
 from wikimapper import WikiMapper
-
+from Query_Builder import QueryBuilder
 
 def list_conll_subgraph(graph: Graph, root_node: rdflib.term.Node, transverse_by: URIRef, main_uri: str,
                         order_by: URIRef = None) -> list:
@@ -253,3 +253,34 @@ def fetch_wiki_data(text: str):
     wiki_id = mapper.title_to_id(text)
     titles = mapper.id_to_titles(wiki_id)
     return wiki_id, titles
+
+
+def insert_data(s, p, o, uri, graph_name, connection_string):
+    """
+    Inserts a triple into a triple-storage and a knowledge graph.
+
+    :param s: subject of the triple
+    :param p: predicate of the triple
+    :param o: object of the triple
+    :param connection_string: connection to the triple storage
+    :return:
+    """
+    queries = QueryBuilder(main_uri=uri, graph_name=graph_name)
+    wrapper = SPARQLWrapper2(connection_string)
+    query = queries.build_insert_query(s, p, o)
+    wrapper.setQuery(query)
+    wrapper.method = 'POST'
+    for i in range(0, 10):
+        try:
+            results = wrapper.query()
+            str_error = None
+        except:
+            str_error = "Error"
+            pass
+
+        if str_error:
+            print("Error occurred. Attempting to upload triple again.")
+            print("Attempt number: ", i)
+            sleep(2*i)  # wait for 2*attempt number seconds before trying to fetch the data again
+        else:
+            break

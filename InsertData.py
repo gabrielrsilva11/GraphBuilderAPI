@@ -156,7 +156,7 @@ class CreateGraph:
         query = self.queries.build_insert_query(s, p, o)
         wrapper.setQuery(query)
         # wrapper.method = 'POST'
-        for i in range(0,10):
+        for i in range(0, 10):
             try:
                 results = wrapper.query()
                 str_error = None
@@ -167,7 +167,7 @@ class CreateGraph:
             if str_error:
                 print("Error occurred. Attempting to upload triple again.")
                 print("Attempt number: ", i)
-                sleep(1)  # wait for 2 seconds before trying to fetch the data again
+                sleep(2*i)  # wait for 2*attempt number seconds before trying to fetch the data again
             else:
                 break
 

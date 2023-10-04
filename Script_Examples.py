@@ -6,22 +6,23 @@ from Helpers import *
 from InsertData import CreateGraph
 from Query_Builder import *
 
-sentence_uri = URIRef("http://ieeta.pt/ontoud#Sentence")
-head_uri = URIRef("http://ieeta.pt/ontoud#head")
-word_uri = URIRef("http://ieeta.pt/ontoud#word")
-senttext_uri = URIRef("http://ieeta.pt/ontoud#senttext")
-edge_uri = URIRef("http://ieeta.pt/ontoud#edge")
-pos_uri = URIRef("http://ieeta.pt/ontoud#pos")
-feats_uri = URIRef("http://ieeta.pt/ontoud#feats")
-id_uri = URIRef("http://ieeta.pt/ontoud#id")
-lemma_uri = URIRef("http://ieeta.pt/ontoud#lemma")
-poscoarse_uri = URIRef("http://ieeta.pt/ontoud#poscoarse")
-depgraph_uri = URIRef("http://ieeta.pt/ontoud#depGraph")
+base_uri = "http://ieeta-bit.pt/ontoud#"
+sentence_uri = URIRef(base_uri + "Sentence")
+head_uri = URIRef(base_uri + "head")
+word_uri = URIRef(base_uri + "word")
+senttext_uri = URIRef(base_uri + "senttext")
+edge_uri = URIRef(base_uri + "edge")
+pos_uri = URIRef(base_uri + "pos")
+feats_uri = URIRef(base_uri + "feats")
+id_uri = URIRef(base_uri + "id")
+lemma_uri = URIRef(base_uri + "lemma")
+poscoarse_uri = URIRef(base_uri + "poscoarse")
+depgraph_uri = URIRef(base_uri + "depGraph")
 
 
-uri_dict = {"http://ieeta.pt/ontoud#": "ontoud"}
-graph_name = "ieetapt_attempt6"
-qb = QueryBuilder(uri_dict, graph_name)
+uri_dict = {"http://ieeta-bit.pt/ontoud#": "ontoud"}
+graph_name = "WikiNER"
+qb = QueryBuilder(base_uri, graph_name)
 conection_string = 'http://localhost:8890/sparql'
 
 g = Graph()
@@ -32,7 +33,7 @@ connection = 'http://localhost:8890/sparql'
 #                   connection_string=connection, language='pt')
 #
 # # create_graph = CreateGraph(folder="DemoData")
-# pp = pprint.PrettyPrinter(indent=4)
+pp = pprint.PrettyPrinter(indent=4)
 # #g = build_subgraph(g, qb.build_query_by_sentence_id(500), conection_string)
 # info_list = []
 #
@@ -40,20 +41,22 @@ connection = 'http://localhost:8890/sparql'
 # senttext_uri = URIRef("http://ieeta.pt/ontoud#senttext")
 # aa = qb.build_query_by_and_sentence_list(['Portugal', 'Algarve', 'Europa'])
 # print(aa)
-#
+# #
 # for sent_id in fetch_id_by_sentence(aa, conection_string):
 #     g = build_subgraph(g, qb.build_query_by_sentence_id(sent_id), conection_string)
 #
 # for s, p, o in g.triples((None, senttext_uri, None)):
 #     print(s, p, o)
+#
 # nodes_list = [edge_uri, id_uri, word_uri, lemma_uri]
 # for s, p, o in g.triples((None, RDF.type, sentence_uri)):
 #     print(s,p,o)
 #     grafo = list_subgraph(nodes_list = nodes_list, graph=g, root_node=s, transverse_by=depgraph_uri, order_by=id_uri)
 #     pp.pprint(grafo)
 
-# for sent_id in fetch_id_by_sentence(qb.build_query_by_sentence_start("A Espanha"), conection_string):
-#     g = build_subgraph(g, qb.build_query_by_sentence_id(sent_id), conection_string)
+for sent_id in fetch_id_by_sentence(qb.build_query_by_sentence_start("A Biblia contem um numero de "), conection_string):
+    print(sent_id)
+    g = build_subgraph(g, qb.build_query_by_sentence_id(sent_id), conection_string)
 
 # edges = ["obj", "nsubj"]
 # for i in range(0, 9999):

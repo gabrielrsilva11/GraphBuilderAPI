@@ -157,7 +157,7 @@ class QueryBuilder:
         # print(query)
         return query
 
-    @dispatch(str, str, Literal)
+    @dispatch(str, URIRef, Literal)
     def build_insert_query(self, s, p, o) -> str:
         """
         Builds a SPARQL query to insert a triple into a graph.
