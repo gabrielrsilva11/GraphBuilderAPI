@@ -238,9 +238,15 @@ def fetch_id_by_sentence(query: str, connection: str):
     """
     sparql = SPARQLWrapper2(connection)
     sparql.setQuery(query)
-    for result in sparql.query().bindings:
-        # print(result['s'].value, result['st'].value)
-        yield result['s'].value
+    try:
+        for result in sparql.query().bindings:
+            # print(result['s'].value, result['st'].value)
+            yield result['s'].value
+    except:
+        print("------- Error on Query --------")
+        print(query)
+        print("Ignoring this query and proceeding.")
+        yield False
 
 
 def fetch_wiki_data(text: str):
