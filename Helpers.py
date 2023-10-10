@@ -132,7 +132,7 @@ def find_word_node(graph: Graph, root_node: rdflib.term.Node, transverse_by: URI
         if p == transverse_by:
             sub_nodes.append(
                 find_word_node(graph=graph, root_node=o, transverse_by=transverse_by,
-                               order_by=order_by, stop_word=stop_word, result=result))
+                               order_by=order_by, stop_word=stop_word, result=result, word_uri=word_uri))
         elif p == word_uri:
             if o.__str__() == stop_word:
                 # if word == stop_word:
@@ -191,7 +191,7 @@ def find_edge_node(graph: Graph, root_node: rdflib.term.Node, transverse_by: URI
     return sub_nodes
 
 
-def filter_dependencies(dependencies: list, attribute: str, filter_root: bool) -> list:
+def filter_dependencies(dependencies: list, attribute: str, filter_root: bool, filter_id: bool) -> list:
     """
 
     :param dependencies:
@@ -201,12 +201,19 @@ def filter_dependencies(dependencies: list, attribute: str, filter_root: bool) -
     """
     path = []
     if len(dependencies) == 2:
-        path = filter_dependencies(dependencies[1], attribute, filter_root)
+        path = filter_dependencies(dependencies[1], attribute, filter_root, filter_id)
     if filter_root:
-        if dependencies[0]['edge'] != 'root':
-            path.append([dependencies[0][attribute], dependencies[0]['id']])
+        if filter_id:
+            if dependencies[0]['edge'] != 'root':
+                path.append(dependencies[0][attribute])
+        else:
+            if dependencies[0]['edge'] != 'root':
+                path.append([dependencies[0][attribute], dependencies[0]['id']])
     else:
-        path.append([dependencies[0][attribute], dependencies[0]['id']])
+        if filter_id:
+            path.append(dependencies[0][attribute])
+        else:
+            path.append([dependencies[0][attribute], dependencies[0]['id']])
     return path
 
 

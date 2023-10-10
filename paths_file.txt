@@ -1,0 +1,6 @@
+['root', 'nsubj']:3
+['root', 'obj', 'nmod', 'nmod', 'nmod']:2
+['root', 'obj', 'conj', 'acl:relcl', 'conj', 'xcomp', 'advcl', 'obj']:1
+['root', 'obj', 'conj', 'acl:relcl', 'conj', 'xcomp', 'advcl', 'obj', 'flat:name']:1
+['root', 'nsubj', 'flat:name']:1
+['root', 'xcomp', 'obj', 'nmod']:1

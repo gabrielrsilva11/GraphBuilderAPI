@@ -3,10 +3,10 @@ from Query_Builder import *
 import pprint
 
 conection_string = 'http://localhost:8890/sparql'
-senttext_uri = URIRef("http://demo-ieeta.pt/ontoud#senttext")
-depgraph_uri = URIRef("http://demo-ieeta.pt/ontoud#depGraph")
-id_uri = URIRef("http://demo-ieeta.pt/ontoud#id")
-main_uri = "http://demo-ieeta.pt/ontoud#"
+senttext_uri = URIRef("http://ieeta-bit.pt/ontoud#senttext")
+depgraph_uri = URIRef("http://ieeta-bit.pt/ontoud#depGraph")
+id_uri = URIRef("http://ieeta-bit.pt/ontoud#id")
+main_uri = "http://ieeta-bit.pt/ontoud#"
 qb = QueryBuilder(main_uri)
 g = Graph()
 

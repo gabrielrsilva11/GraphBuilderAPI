@@ -353,4 +353,4 @@ class CreateGraph:
                                 sentence_id = self.insert_db_script(lines, sentence_id, doc_id)
             doc_id += 1
         if in_memory:
-            g.serialize(destination=save_file+".owl", format="xml")
+            g.serialize(destination=save_file+".ttl", format="turtle")
