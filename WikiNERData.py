@@ -113,8 +113,8 @@ def get_ner_ud_path_v2():
     sparql_query = """
     select ?s ?entity ?word where{
         graph <WikiNER> {
-            ?s <http://ieeta-bit.pt/ontoud#wikinerEntity> ?entity .
-            ?s <http://ieeta-bit.pt/ontoud#word> ?word .
+            ?s <http://ieeta-bit.pt/wikiner#wikinerEntity> ?entity .
+            ?s <http://ieeta-bit.pt/wikiner#word> ?word .
         }
     }
     """
