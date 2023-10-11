@@ -16,6 +16,7 @@ class QueryBuilder:
         self.main_uri = main_uri
         self.graph_name = graph_name
 
+
     def build_query_by_sentence_start(self, start_string: str) -> str:
         """
         Builds a SPARQL query which will look for nodes that start with a given string
@@ -82,6 +83,7 @@ class QueryBuilder:
         :param str_id: (string) id of the sentence to look for.
         :return: A SPARQL query String.
         """
+
         query = """
         PREFIX dbp:  <http://dbpedia.org/resource/>
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>

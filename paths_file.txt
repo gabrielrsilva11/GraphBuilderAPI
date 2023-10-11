@@ -1,6 +1,301 @@
-['root', 'nsubj']:3
-['root', 'obj', 'nmod', 'nmod', 'nmod']:2
-['root', 'obj', 'conj', 'acl:relcl', 'conj', 'xcomp', 'advcl', 'obj']:1
-['root', 'obj', 'conj', 'acl:relcl', 'conj', 'xcomp', 'advcl', 'obj', 'flat:name']:1
+['root', 'nsubj']:372
+['root', 'xcomp', 'obj', 'nmod']:3
+['root', 'nsubj:pass', 'nmod', 'acl:relcl', 'obj']:1
+['root', 'xcomp', 'obj']:8
+['root', 'conj', 'advmod', 'obl']:2
+['root', 'nmod', 'nmod', 'nmod', 'advmod', 'obl']:1
+['root', 'obj', 'nmod', 'nmod']:7
+['root', 'obl', 'nmod']:50
+['root', 'advcl', 'obj', 'nmod', 'nmod']:1
+['root', 'obl']:99
+['root', 'acl:relcl', 'xcomp', 'conj', 'xcomp', 'obj']:1
+['root', 'obj', 'appos']:3
+['root', 'csubj', 'advcl', 'advcl', 'obl']:1
+['root', 'obj', 'nmod', 'appos']:2
+['root', 'nsubj', 'nmod']:91
+['root', 'advcl', 'obj', 'nmod']:2
+['root', 'appos', 'acl:relcl', 'obj', 'acl:relcl', 'obj', 'nmod', 'nmod']:1
+['root', 'xcomp', 'obj', 'amod', 'obl', 'nmod', 'nmod', 'nmod']:1
+['root', 'obj', 'conj', 'acl', 'obj', 'conj', 'acl', 'obl:agent', 'conj', 'nmod']:1
+['root', 'obl', 'appos']:4
+['root', 'xcomp', 'obl', 'acl', 'obl']:1
+['root', 'nmod', 'nmod', 'acl:relcl', 'obl']:1
+['root', 'advcl', 'nsubj', 'nmod']:2
+['root', 'obj', 'nmod', 'nmod', 'acl', 'obl']:1
+['root', 'conj', 'nmod', 'acl:relcl', 'obl']:1
+['root', 'advcl', 'obj', 'acl:relcl', 'nsubj:pass']:1
+['root', 'advcl', 'obj', 'nmod', 'case']:2
+['root', 'xcomp', 'obl', 'appos', 'appos']:1
+['root', 'conj', 'advcl', 'obj']:1
+['root', 'ccomp', 'obl', 'nmod', 'nmod', 'nmod']:1
+['root', 'nsubj', 'nmod', 'case']:2
+['root', 'xcomp', 'obl']:11
+['root', 'obj', 'acl:relcl', 'obj']:2
+['root', 'obj']:35
+['root']:42
+['root', 'ccomp', 'advcl', 'acl', 'obl', 'flat:foreign']:1
+['root', 'xcomp', 'xcomp', 'obj', 'nmod', 'nmod']:1
+['root', 'advcl', 'obj', 'advmod', 'obl']:1
+['root', 'iobj']:6
+['root', 'obj', 'amod', 'obl']:2
+['root', 'advcl', 'obl']:12
+['root', 'conj', 'obj', 'conj', 'nmod', 'nmod']:1
+['root', 'nsubj', 'appos', 'nmod']:1
+['root', 'ccomp', 'obl']:1
+['root', 'conj', 'obl', 'nmod', 'nmod']:1
+['root', 'ccomp', 'xcomp', 'obl', 'amod', 'obl', 'nmod']:1
+['root', 'xcomp', 'ccomp', 'obl', 'nmod', 'nmod', 'nmod', 'nmod']:1
+['root', 'obl', 'nmod', 'acl', 'obl']:1
+['root', 'parataxis', 'obj', 'nmod', 'acl:relcl', 'nsubj:pass', 'nmod', 'nmod']:1
+['root', 'obj', 'nmod']:32
+['root', 'appos', 'acl:relcl', 'xcomp', 'acl', 'nsubj', 'nmod']:1
+['root', 'conj', 'acl', 'ccomp', 'obl']:1
+['root', 'xcomp', 'conj', 'obl', 'nmod']:1
+['root', 'obj', 'nmod', 'acl', 'obl']:1
+['root', 'acl:relcl', 'xcomp', 'obj', 'nmod', 'advmod', 'obl']:1
+['root', 'amod', 'obl', 'nmod']:1
+['root', 'obj', 'acl:relcl', 'obj', 'nmod']:1
+['root', 'obl', 'nmod', 'case']:3
+['root', 'nsubj:pass']:36
+['root', 'xcomp', 'obl', 'nmod']:6
+['root', 'obl', 'acl:relcl', 'xcomp']:1
+['root', 'conj', 'nmod', 'conj', 'appos', 'nmod']:1
+['root', 'advcl', 'obj']:10
+['root', 'det']:1
+['root', 'obl', 'nmod', 'appos']:6
+['root', 'advcl', 'obj', 'conj', 'nmod']:1
+['root', 'nmod', 'nmod']:12
+['root', 'obl', 'nmod', 'nmod', 'acl', 'obl']:1
+['root', 'xcomp', 'nmod']:4
+['root', 'nsubj:pass', 'nmod']:25
+['root', 'nmod']:33
+['root', 'nsubj', 'nmod', 'acl:relcl', 'obl']:1
+['root', 'nsubj', 'acl:relcl', 'obl']:2
+['root', 'obl:agent']:12
+['root', 'obj', 'nmod', 'acl:relcl', 'obl']:1
+['root', 'nsubj', 'nmod', 'nmod']:21
+['root', 'xcomp', 'xcomp']:1
+['root', 'nsubj', 'acl', 'obl', 'nmod']:2
+['root', 'conj', 'obl:agent']:3
+['root', 'xcomp', 'obl:agent']:1
+['root', 'xcomp', 'conj', 'obl', 'nmod', 'nmod']:1
+['root', 'nsubj', 'appos', 'flat:name']:1
+['root', 'nsubj', 'acl', 'obj', 'nmod']:1
+['root', 'obl', 'appos', 'acl:relcl', 'obj']:2
+['root', 'obj', 'acl:relcl', 'obj', 'nmod', 'nmod']:3
+['root', 'obl', 'nmod', 'acl:relcl', 'obj', 'nmod']:1
+['root', 'obl', 'nmod', 'nmod']:13
+['root', 'conj', 'nmod']:3
+['root', 'obl', 'nmod', 'conj']:2
+['root', 'obj', 'acl', 'xcomp', 'obj']:1
+['root', 'conj', 'obj']:5
+['root', 'obl', 'acl:relcl', 'obj', 'nmod']:2
+['root', 'obl:agent', 'conj', 'nmod', 'nmod']:2
+['root', 'xcomp', 'advcl', 'obj', 'nmod']:2
+['root', 'conj', 'nsubj']:8
+['root', 'nsubj', 'acl', 'obl']:7
+['root', 'nmod', 'acl', 'obj', 'nmod']:1
+['root', 'obj', 'nmod', 'acl:relcl', 'obj']:1
+['root', 'nsubj:pass', 'nmod', 'nmod']:2
+['root', 'conj', 'obl']:10
+['root', 'nsubj:pass', 'nmod', 'acl', 'obl']:1
+['root', 'acl', 'obl']:1
+['root', 'nsubj:pass', 'conj', 'acl:relcl', 'obl', 'nmod']:1
+['root', 'nsubj', 'appos']:28
+['root', 'obl:agent', 'nmod']:6
+['root', 'nsubj', 'nmod', 'conj']:4
+['root', 'advmod', 'obl']:2
+['root', 'nmod', 'nmod', 'nmod', 'appos']:1
+['root', 'conj', 'obj', 'nmod', 'nmod']:1
+['root', 'xcomp', 'obl', 'nmod', 'nmod']:1
+['root', 'obj', 'conj', 'nmod', 'nmod']:1
+['root', 'obl', 'case']:1
+['root', 'acl:relcl', 'xcomp', 'obl', 'acl', 'obl:agent', 'acl:relcl', 'xcomp', 'obj']:1
+['root', 'conj', 'advcl', 'obl']:1
+['root', 'nsubj:pass', 'nmod', 'appos']:1
+['root', 'obj', 'nmod', 'nmod', 'nmod', 'nmod', 'nmod']:1
+['root', 'nsubj', 'nmod', 'nmod', 'appos']:2
+['root', 'nsubj:pass', 'conj', 'nmod']:1
+['root', 'nsubj', 'acl:relcl', 'obj']:3
+['root', 'obl', 'acl', 'obl']:3
+['root', 'nsubj', 'conj', 'nmod']:4
+['root', 'nsubj:pass', 'amod', 'advmod', 'obl', 'nmod', 'nmod']:1
+['root', 'xcomp', 'conj', 'obl', 'nmod', 'nmod', 'nmod', 'appos']:1
+['root', 'advcl', 'nsubj:pass']:4
+['root', 'conj', 'obl', 'nmod']:1
+['root', 'nsubj:pass', 'appos']:5
+['root', 'advcl', 'acl', 'obl']:1
+['root', 'appos']:5
+['root', 'conj', 'obj', 'appos']:1
+['root', 'obl:agent', 'acl:relcl', 'ccomp', 'obl', 'appos', 'acl:relcl', 'obl', 'nmod']:1
+['root', 'obl', 'acl:relcl', 'nsubj']:2
+['root', 'obl', 'acl', 'xcomp']:1
+['root', 'obj', 'nmod', 'conj']:1
+['root', 'conj', 'xcomp', 'obl']:2
+['root', 'advcl', 'ccomp', 'nsubj']:1
+['root', 'nsubj', 'conj']:1
+['root', 'advcl', 'nsubj']:8
+['root', 'obl', 'nmod', 'acl:relcl', 'obl']:1
+['root', 'advmod', 'obl', 'nmod', 'acl:relcl', 'obl']:1
+['root', 'csubj', 'obl']:1
+['root', 'advcl', 'obl', 'nmod', 'nmod']:1
+['root', 'obl', 'nmod', 'nmod', 'nmod']:3
+['root', 'advcl', 'advcl', 'obl']:1
+['root', 'obj', 'nmod', 'acl:relcl', 'iobj', 'appos']:1
+['root', 'advcl', 'csubj', 'nsubj']:1
+['root', 'conj']:3
+['root', 'obj', 'appos', 'nmod', 'nmod', 'conj']:1
+['root', 'csubj', 'conj', 'obl:agent', 'nmod', 'nmod', 'nmod', 'nmod']:1
+['root', 'obl', 'acl:relcl', 'obj']:1
+['root', 'conj', 'obj', 'nmod', 'conj', 'nmod']:1
+['root', 'obj', 'appos', 'nmod']:1
+['root', 'obl:agent', 'conj']:1
+['root', 'advmod', 'obl', 'nmod']:8
+['root', 'xcomp', 'advcl', 'obj']:1
+['root', 'conj', 'acl:relcl', 'obl']:1
+['root', 'nsubj:pass', 'nmod', 'acl:relcl', 'nsubj']:1
+['root', 'xcomp', 'conj']:2
+['root', 'conj', 'obj', 'acl:relcl', 'obj']:1
+['root', 'csubj', 'nsubj']:2
+['root', 'appos', 'nmod']:2
+['root', 'nsubj', 'nmod', 'acl', 'obl']:2
+['root', 'appos', 'acl:relcl', 'iobj']:2
+['root', 'acl', 'xcomp', 'advcl', 'nmod']:1
+['root', 'nmod', 'acl', 'obl']:1
+['root', 'advcl', 'obl', 'nmod']:2
+['root', 'ccomp', 'nsubj:pass']:2
+['root', 'nsubj', 'nmod', 'appos']:2
+['root', 'ccomp', 'nsubj']:4
+['root', 'obl', 'acl:relcl', 'obl']:2
+['root', 'xcomp', 'obl', 'acl:relcl', 'obl']:1
+['root', 'obj', 'nmod', 'nmod', 'nmod', 'nmod']:1
+['root', 'appos', 'nmod', 'acl:relcl', 'xcomp', 'obl']:1
+['root', 'nsubj', 'amod', 'obl', 'nmod']:1
+['root', 'obl', 'nmod', 'conj', 'nmod']:1
+['root', 'obj', 'acl:relcl', 'nsubj:pass']:1
+['root', 'obl', 'acl', 'nsubj']:2
+['root', 'nsubj', 'acl', 'obl:agent', 'nmod']:1
+['root', 'nsubj:pass', 'acl', 'nsubj']:1
+['root', 'nsubj', 'amod', 'obl']:1
+['root', 'conj', 'acl', 'obl:agent', 'nmod']:1
+['root', 'nsubj', 'acl', 'obl', 'appos']:1
+['root', 'obl', 'acl', 'obj']:1
+['root', 'nsubj:pass', 'nmod', 'nmod', 'appos']:1
+['root', 'advcl']:1
+['root', 'advmod', 'obl', 'nmod', 'acl', 'obl']:1
+['root', 'advmod', 'obl', 'nmod', 'appos']:1
+['root', 'nsubj', 'advmod', 'obl']:1
+['root', 'obj', 'acl:relcl', 'nmod']:1
+['root', 'nsubj:pass', 'acl:relcl', 'nsubj:pass']:2
+['root', 'nmod', 'acl', 'obl', 'nmod']:1
+['root', 'ccomp', 'xcomp', 'xcomp']:1
+['root', 'advcl', 'nsubj', 'nmod', 'case']:1
+['root', 'nsubj', 'amod']:1
+['root', 'xcomp', 'ccomp', 'obl']:1
+['root', 'xcomp', 'ccomp', 'nsubj']:1
+['root', 'nsubj', 'appos', 'conj', 'acl', 'obl']:1
+['root', 'conj', 'nsubj', 'nmod', 'conj']:1
+['root', 'nsubj', 'conj', 'nmod', 'nmod', 'nmod']:1
+['root', 'conj', 'nmod', 'nmod']:2
+['root', 'obj', 'nmod', 'nmod', 'nmod', 'acl', 'obl:agent', 'nmod']:1
+['root', 'nsubj', 'nmod', 'nmod', 'nmod']:1
+['root', 'nsubj', 'acl:relcl', 'nsubj']:3
+['root', 'obj', 'acl', 'nsubj']:1
+['root', 'advcl', 'obl', 'acl', 'obj', 'nmod']:1
+['root', 'conj', 'obj', 'nmod']:1
+['root', 'advcl', 'advcl', 'xcomp', 'obl:agent']:1
+['root', 'xcomp', 'obl', 'appos', 'acl:relcl', 'obl:agent']:1
+['root', 'xcomp', 'nmod', 'nmod']:3
+['root', 'ccomp', 'obl', 'nmod', 'nmod']:1
+['root', 'advcl', 'obl:agent']:2
+['root', 'ccomp', 'obl', 'nmod', 'nmod', 'appos']:1
+['root', 'nsubj', 'nmod', 'acl:relcl', 'obj', 'nmod']:1
+['root', 'conj', 'xcomp', 'acl', 'obj']:1
+['root', 'conj', 'xcomp', 'obj', 'nmod']:1
+['root', 'advcl', 'advcl', 'nsubj']:1
+['root', 'conj', 'iobj', 'acl:relcl', 'conj', 'obj', 'appos']:1
+['root', 'obj', 'acl', 'obj']:1
+['root', 'xcomp', 'obj', 'nmod', 'nmod', 'appos']:1
+['root', 'xcomp', 'xcomp', 'obl', 'conj', 'nmod']:1
+['root', 'parataxis', 'nsubj']:1
+['root', 'nsubj', 'nmod', 'conj', 'flat:name']:1
+['root', 'acl:relcl', 'nsubj']:2
+['root', 'obl', 'conj', 'nmod']:2
+['root', 'advcl', 'obj', 'acl:relcl', 'obj', 'nmod']:1
+['root', 'parataxis', 'nmod']:1
+['root', 'conj', 'advcl', 'obj', 'nmod', 'acl:relcl', 'advmod', 'obl', 'nmod']:1
+['root', 'appos', 'acl:relcl', 'obj']:1
+['root', 'obj', 'acl', 'obl']:1
+['root', 'ccomp', 'acl', 'obl:agent', 'nmod']:1
+['root', 'xcomp', 'conj', 'obl']:1
+['root', 'xcomp', 'nmod', 'acl:relcl', 'obl', 'nmod']:1
+['root', 'advcl', 'obj', 'acl', 'obl:agent']:1
+['root', 'obl', 'acl', 'xcomp', 'obj', 'appos']:1
+['root', 'obl:agent', 'nmod', 'acl:relcl', 'advcl', 'nmod']:1
+['root', 'advcl', 'obj', 'appos']:2
+['root', 'conj', 'xcomp', 'advcl', 'nsubj', 'acl', 'obl:agent']:1
+['root', 'nsubj', 'acl', 'obl:agent']:5
+['root', 'nmod', 'appos']:1
+['root', 'csubj', 'ccomp', 'nsubj']:1
+['root', 'obl:agent', 'appos']:2
+['root', 'obl', 'nmod', 'acl', 'obl:agent', 'appos']:1
+['root', 'advmod', 'obl', 'appos', 'nmod']:1
+['root', 'advcl', 'obl', 'acl:relcl', 'nsubj']:1
+['root', 'obl', 'acl:relcl', 'nsubj', 'nmod']:1
+['root', 'csubj', 'nsubj', 'nmod']:1
+['root', 'obl', 'acl:relcl', 'advcl', 'xcomp', 'ccomp', 'obj', 'nmod', 'parataxis', 'nmod', 'nmod']:1
+['root', 'xcomp', 'obl', 'appos', 'acl:relcl', 'nsubj']:1
+['root', 'obj', 'nmod', 'acl:relcl', 'nsubj']:1
+['root', 'obl', 'nmod', 'acl:relcl', 'obj']:1
+['root', 'ccomp', 'conj', 'nsubj', 'nmod']:1
+['root', 'ccomp', 'xcomp', 'ccomp', 'nsubj:pass', 'nmod']:1
+['root', 'conj', 'obl', 'acl', 'obl:agent', 'appos']:1
+['root', 'xcomp', 'obl', 'appos']:1
+['root', 'conj', 'nsubj', 'nmod', 'nmod', 'appos']:1
+['root', 'acl', 'nsubj:pass', 'nmod']:1
+['root', 'advmod', 'obl', 'acl', 'obl:agent']:1
+['root', 'csubj', 'advcl', 'nsubj', 'nmod']:1
+['root', 'acl:relcl', 'nsubj', 'nmod']:1
+['root', 'obl', 'acl', 'obl:agent']:1
+['root', 'obl', 'nmod', 'acl', 'obl:agent']:1
+['root', 'advmod', 'obl', 'appos']:2
+['root', 'obl', 'acl:relcl', 'obl', 'nmod', 'nmod']:1
+['root', 'nmod', 'nmod', 'appos']:1
+['root', 'iobj', 'conj', 'acl', 'obl', 'nmod']:1
+['root', 'obj', 'nmod', 'nmod', 'nmod']:1
+['root', 'xcomp', 'obl', 'acl:relcl', 'nsubj', 'appos']:1
+['root', 'obl', 'acl:relcl', 'advcl', 'obj', 'nmod', 'nmod']:1
+['root', 'advcl', 'nsubj', 'flat:name']:1
+['root', 'advcl', 'obl:agent', 'nmod']:1
+['root', 'advcl', 'nsubj', 'nmod', 'flat:name']:1
+['root', 'obl', 'conj']:1
+['root', 'obj', 'amod']:1
+['root', 'nmod', 'nmod', 'nmod']:4
+['root', 'conj', 'acl', 'ccomp', 'obj', 'nmod']:1
+['root', 'xcomp', 'nmod', 'acl:relcl', 'obl']:1
+['root', 'obl', 'appos', 'nmod']:1
+['root', 'xcomp', 'conj', 'nsubj']:1
+['root', 'nmod', 'nmod', 'conj']:1
+['root', 'obl', 'conj', 'amod', 'obl']:1
+['root', 'advcl', 'conj', 'obj', 'nmod']:1
+['root', 'obj', 'amod', 'advcl', 'obl']:1
+['root', 'iobj', 'nmod', 'appos']:1
+['root', 'conj', 'nsubj', 'nmod']:1
+['root', 'nsubj:pass', 'nmod', 'conj', 'nmod', 'nmod']:2
+['root', 'nsubj', 'acl', 'conj', 'obj', 'appos', 'nmod']:1
+['root', 'csubj', 'obj', 'nmod']:1
+['root', 'conj', 'obl:agent', 'nmod', 'nmod']:1
+['root', 'advcl', 'nsubj', 'appos']:1
+['root', 'conj', 'advmod', 'obl', 'nmod']:1
+['root', 'obl', 'nmod', 'acl', 'obl', 'acl', 'obl:agent']:1
+['root', 'obj', 'acl', 'obl:agent']:1
+['root', 'conj', 'obl', 'acl', 'xcomp']:1
+['root', 'ccomp', 'acl', 'obl']:1
+['root', 'obj', 'acl', 'obl', 'nmod']:3
+['root', 'parataxis', 'obl', 'nmod']:1
+['root', 'conj', 'conj', 'obl', 'acl:relcl', 'obj', 'det']:1
+['root', 'conj', 'nsubj', 'nmod', 'conj', 'nmod', 'flat:name']:1
+['root', 'conj', 'obl', 'nmod', 'nmod', 'nmod']:1
+['root', 'obl', 'appos', 'acl:relcl', 'nsubj', 'nmod']:1
+['root', 'ccomp', 'nsubj', 'nmod']:1
 ['root', 'nsubj', 'flat:name']:1
-['root', 'xcomp', 'obj', 'nmod']:1

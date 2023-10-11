@@ -109,6 +109,51 @@ def get_ner_ud_path(nlp):
     path_file.close()
 
 
+def get_ner_ud_path_v2():
+    sparql_query = """
+    select ?s ?entity ?word where{
+        graph <WikiNER> {
+            ?s <http://ieeta-bit.pt/ontoud#wikinerEntity> ?entity .
+            ?s <http://ieeta-bit.pt/ontoud#word> ?word .
+        }
+    }
+    """
+
+    path_dict = defaultdict()
+    path_counter = defaultdict()
+    path_counter_int = 1
+    previous_id = ''
+    for result in perform_query(sparql_query, connection_string):
+        g = Graph()
+        word_id_split = result['s'].value.split("_")
+        sentence_id = sentence_uri + "_" + word_id_split[1] + "_" + word_id_split[2]
+        if sentence_id != previous_id:
+            g = build_subgraph(g, qb.build_query_by_sentence_id(sentence_id.strip()), connection_string)
+
+        for s, p, o in g.triples((None, RDF.type, sentence_uri)):
+            text = []
+            find_word_node(graph=g, root_node=s, transverse_by=depgraph_uri, order_by=id_uri,
+                           stop_word=result['word'].value, result=text, word_uri=word_uri)
+            if text:
+                dependencies = node_to_dependencies(graph=g, root_node=text[0],
+                                                    transverse_by=head_uri, order_by=id_uri)
+                dependency_list = filter_dependencies(dependencies, 'edge', filter_root=False,
+                                                      filter_id=True)
+                if dependency_list in path_dict.values():
+                    value = {j for j in path_dict if path_dict[j] == dependency_list}
+                    for k in value:
+                        path_counter[k] += 1
+                else:
+                    path_dict[path_counter_int] = dependency_list
+                    path_counter[path_counter_int] = 1
+                    path_counter_int += 1
+        previous_id = sentence_id
+    path_file = open("paths_file.txt", "w")
+    for key in path_counter:
+        file_writing = str(path_dict[key]) + ":" + str(path_counter[key]) + "\n"
+        path_file.write(file_writing)
+    path_file.close()
+
 base_uri = "http://ieeta-bit.pt/wikiner#"
 uri_dict = {"http://ieeta-bit.pt/wikiner#": "ontoud"}
 graph_name = "WikiNER"
@@ -135,4 +180,4 @@ nlp = init_parser("pt",
                   parser_opts={"use_gpu": True, "verbose": False},
                   include_headers=True)
 
-get_ner_ud_path(nlp)
+get_ner_ud_path_v2()
