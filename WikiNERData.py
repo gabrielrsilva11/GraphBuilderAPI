@@ -180,4 +180,17 @@ nlp = init_parser("pt",
                   parser_opts={"use_gpu": True, "verbose": False},
                   include_headers=True)
 
-get_ner_ud_path_v2()
+#get_ner_ud_path_v2()
+
+path_file = open("paths_file.txt", "r")
+counter_list = []
+for line in path_file:
+    line_split = line.rsplit(":", 1)
+    counter_list.append([line_split[0], int(line_split[1].replace("\n",""))])
+
+counter_list.sort(reverse=True, key=lambda x: x[1])
+print(counter_list)
+sorted_file = open("sorted_paths.txt", "w")
+for path in counter_list:
+    file_writing = path[0] + ":" + str(path[1]) + "\n"
+    sorted_file.write(file_writing)

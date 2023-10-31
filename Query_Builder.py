@@ -95,10 +95,11 @@ class QueryBuilder:
             ?s ?p ?o .
         }
         """
+
         return query
 
-    @dispatch(int)
-    def build_query_by_sentence_id(self, str_id: int) -> str:
+    @dispatch(int, int)
+    def build_query_by_sentence_id(self, doc_id:int, sentence_id: int) -> str:
         """
         Builds a SPARQL query to look for sentences by a given id.
         :param str_id: (int) id of the sentence to look for.
@@ -111,7 +112,7 @@ class QueryBuilder:
     
         SELECT ?s ?p ?o
         WHERE {
-            <http://ieeta.pt/ontoud#Sentence_""" + str(str_id) + """> <""" + self.main_uri + """depGraph>* ?s . 
+            <""" + self.main_uri + """Sentence_""" + str(doc_id) + """_""" + str(sentence_id) + """> <""" + self.main_uri + """depGraph>* ?s . 
             ?s ?p ?o .
         }
         """
