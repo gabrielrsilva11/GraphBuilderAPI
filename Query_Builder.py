@@ -55,6 +55,28 @@ class QueryBuilder:
                 LIMIT 1000"""
         return query
 
+    def query_count_entities(self):
+        query = """
+            select ?entity (count(?entity) as ?count) 
+            where{
+                graph <""" + self.graph_name + """> {
+                    ?s <""" + self.main_uri + """wikinerEntity> ?entity .
+                }
+            }
+        """
+        return query
+
+    def query_words_with_entities(self):
+        query = """
+            select ?s ?entity 
+            where{
+                graph <""" + self.graph_name + """> {
+                    ?s <""" + self.main_uri + """wikinerEntity> ?entity .
+                }
+            }
+        """
+        return query
+
     def build_query_by_or_sentence_list(self, string_list: list) -> str:
         """
         Builds a SPARQL query to look for sentences that are present in a given list. This query will look for a
