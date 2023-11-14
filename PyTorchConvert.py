@@ -1,24 +1,20 @@
 from GraphConverterNetworkX import BuildNetworkx
 from rdflib.namespace import RDF
 from rdflib import URIRef, Literal, Graph
-from rdflib.extras.external_graph_libs import rdflib_to_networkx_digraph
 import torch
 from sklearn import preprocessing
-from torch_geometric.utils.convert import from_networkx
-from torch_geometric.datasets import Planetoid
 from torch_geometric.data import HeteroData
-from torch_geometric.datasets import OGB_MAG
+import pandas as pd
 
-
-def load_dataset_wikiner(start, stop, random_list):
+def fetch_graph(random_list):
     print("--- LOADING DATASET ---")
     base_uri = "http://ieeta-bit.pt/wikiner#"
     graph_name = "WikiNER"
     conection_string = 'http://estga-fiware.ua.pt:8890/sparql'
     ntx = BuildNetworkx(base_uri, graph_name, conection_string)
     graph = ntx.fetch_graph(random_list)
-    add = 0
     number_of_words = 0
+    le = preprocessing.LabelEncoder()
     for s, p, o in graph.triples((None, RDF.type, URIRef("http://ieeta-bit.pt/wikiner#Word"))):
         number_of_words += 1
         entity = ''
@@ -30,73 +26,56 @@ def load_dataset_wikiner(start, stop, random_list):
             graph.remove((s2, p2, o2))
             graph.add((URIRef(s), URIRef("http://ieeta-bit.pt/wikiner#wikinerEntity"), Literal(entity_correct[1])))
         else:
-            add += 1
-            if add == 20:
-                graph.add((URIRef(s), URIRef("http://ieeta-bit.pt/wikiner#wikinerEntity"), Literal("No")))
-                add = 0
+            graph.add((URIRef(s), URIRef("http://ieeta-bit.pt/wikiner#wikinerEntity"), Literal("No")))
 
-    g_ntx = rdflib_to_networkx_digraph(graph)
-    pyg = from_networkx(g_ntx)
-    print(pyg)
+    return graph
 
-def load_wikiner_dataset_pytorch(random_list):
-    print("--- LOADING DATASET ---")
-    base_uri = "http://ieeta-bit.pt/wikiner#"
-    wikinerentity_uri = base_uri + "wikinerEntity"
-    head_uri = base_uri + "head"
-    depgraph_uri = base_uri + "depGraph"
-    nextsentence_uri = base_uri + "nextSentence"
-    previousword_uri = base_uri + "previousWord"
-    graph_name = "WikiNER"
-    conection_string = 'http://estga-fiware.ua.pt:8890/sparql'
-    ntx = BuildNetworkx(base_uri, graph_name, conection_string)
-    graph = ntx.fetch_graph(random_list)
-    label_encoder_list = []
-    features_list = []
-    targets_list = []
-    nodes_list = []
-    adj = []
-    for s, p, o in graph.triples((None, None, None)):
-        #print(s, p, o)
-        #print("\n")
-
-        #Get all the nodes
-        if s not in nodes_list:
-            nodes_list.append(s.__str__())
-
-        #Get all the unique nodes for a label encoder later.
-        if s not in label_encoder_list:
-            label_encoder_list.append(s.__str__())
-        if p not in label_encoder_list:
-            label_encoder_list.append(p.__str__())
-        if o not in label_encoder_list:
-            label_encoder_list.append(o.__str__())
-
-        if p.__str__() == wikinerentity_uri:
-            targets_list.append([s.__str__(), o.__str__()])
-        elif p.__str__() == head_uri or p.__str__() == nextsentence_uri or p.__str__() == previousword_uri or p.__str__() == depgraph_uri:
-            adj.append([s.__str__(), o.__str__()])
-        else:
-            features_list.append(o.__str__())
-
-    le = preprocessing.LabelEncoder()
-    enconded_list = le.fit_transform(label_encoder_list)
-    nodes = le.transform(nodes_list)
-
-    targets = []
-    for target in targets_list:
-        transformed_target = le.transform(target)
-        targets.append([transformed_target[0], transformed_target[1]])
-
-    edge_index_list = []
-    for edge in adj:
-        edges_transformed = le.transform(edge)
-        edge_index_list.append([edges_transformed[0], edges_transformed[1]])
-    print(targets)
-    print(edge_index_list)
+def fetch_graph_info(graph, nodes_uri, edges_uri):
+    node_df = pd.DataFrame()
+    edge_df = pd.DataFrame()
+    index_list = []
+    for s, p, o in graph.triples((None, RDF.type, URIRef(nodes_uri))):
+        print(s, p, o)
+        node_df.index = s.__str__()
+        index_list.append(s.__str__())
+        for s2, p2, o2 in graph.triples((URIRef(s), None, None)):
+            if p2.__str__() in edges_uri:
+                print("YO I AM EDGE")
+                print(s2, p2, o2)
+            else:
+                node_feat_split = p2.__str__().split("#")
+                feat_name = node_feat_split[-1]
+                print("I AM NODE FEATURE")
+                print(feat_name)
+                node_df[feat_name] = [o2.__str__()]
+    return node_df
 
 
-#load_wikiner_dataset_pytorch([1,3,5,7])
-dataset = OGB_MAG(root='./data', preprocess='metapath2vec')
-data = dataset[0]
-print(data)
+words_uri = "http://ieeta-bit.pt/wikiner#Word"
+sentence_uri = "http://ieeta-bit.pt/wikiner#Sentence"
+
+depgraph_uri = "http://ieeta-bit.pt/wikiner#depGraph"
+head_uri = "http://ieeta-bit.pt/wikiner#head"
+previous_uri = "http://ieeta-bit.pt/wikiner#previousWord"
+fromsentence_uri = "http://ieeta-bit.pt/wikiner#fromSentence"
+fromtext_uri = "http://ieeta-bit.pt/wikiner#fromText"
+
+graph = fetch_graph([1])
+nodes = fetch_graph_info(graph, words_uri, [depgraph_uri, head_uri, previous_uri, fromsentence_uri])
+print(nodes)
+
+
+# data = HeteroData()
+# --- NODES ---
+# data['word']
+# data['sentence']
+
+# --- EDGES ---
+# --- word edges ---
+# data['word', 'depgraph', 'word']
+# data['word', 'head', 'word']
+# data['word', 'previousWord', 'word]
+# data['word', 'fromSentence', 'sentence']
+
+# --- sentence edges ---
+# data['sentence', '']
