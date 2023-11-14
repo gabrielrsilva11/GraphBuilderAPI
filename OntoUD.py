@@ -2,7 +2,6 @@ from collections import defaultdict
 from SPARQLWrapper import SPARQLWrapper2
 from rdflib import Graph
 from wikimapper import WikiMapper
-
 from Query_Builder import *
 
 
