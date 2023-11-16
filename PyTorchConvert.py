@@ -6,9 +6,10 @@ from sklearn import preprocessing
 from torch_geometric.data import HeteroData
 import pandas as pd
 import torch_geometric.transforms as T
-from torch_geometric.nn import SAGEConv, to_hetero
+from torch_geometric.nn import GATConv, Linear, to_hetero
 import torch.nn.functional as F
-from torch_geometric.loader import NeighborLoader
+import tqdm
+
 
 def fetch_graph(random_list):
     print("--- LOADING DATASET ---")
@@ -33,6 +34,19 @@ def fetch_graph(random_list):
             graph.add((URIRef(s), URIRef("http://ieeta-bit.pt/wikiner#wikinerEntity"), Literal("No")))
 
     return graph
+
+
+def build_node_relationships(uniqueIds, nodeList):
+    original_df = pd.DataFrame(data=nodeList, columns=["source", "target"])
+    source_df = pd.merge(original_df['source'], uniqueIds,
+                                  left_on='source', right_on='originalId', how='left')
+    source = torch.from_numpy(source_df['mappedId'].values)
+    target_df = pd.merge(original_df['target'], uniqueIds,
+                                  left_on='target', right_on='originalId', how='left')
+    target = torch.from_numpy((target_df['mappedId'].values))
+    node_tensor = torch.stack([source, target], dim=0)
+    return node_tensor
+
 
 def fetch_graph_info(graph, nodes_uri, edges_uri):
     edge_df = pd.DataFrame()
@@ -69,37 +83,10 @@ def fetch_graph_info(graph, nodes_uri, edges_uri):
         'mappedId': pd.RangeIndex(len(index_list))
     })
 
-    #AUTOMATIZAR ISTO E FAZER UMA FUNCAO PARA NAO ESTAR TAO GRANDE.
     #Build the previousWord relationship: word - previousWord - word
-    original_depgraph_df = pd.DataFrame(data=prev_list, columns=["source", "target"])
-    source_depgraph_df = pd.merge(original_depgraph_df['source'], unique_ids_df,
-                                  left_on='source', right_on='originalId', how='left')
-    source_depgraph = torch.from_numpy(source_depgraph_df['mappedId'].values)
-    target_depgraph_df = pd.merge(original_depgraph_df['target'], unique_ids_df,
-                                  left_on='target', right_on='originalId', how='left')
-    target_depgraph = torch.from_numpy((target_depgraph_df['mappedId'].values))
-    prev_depgraph = torch.stack([source_depgraph, target_depgraph], dim=0)
-
-
-    #Build the head relationships: word - head - word
-    original_depgraph_df = pd.DataFrame(data=head_list, columns=["source", "target"])
-    source_depgraph_df = pd.merge(original_depgraph_df['source'], unique_ids_df,
-                                  left_on='source', right_on='originalId', how='left')
-    source_depgraph = torch.from_numpy(source_depgraph_df['mappedId'].values)
-    target_depgraph_df = pd.merge(original_depgraph_df['target'], unique_ids_df,
-                                  left_on='target', right_on='originalId', how='left')
-    target_depgraph = torch.from_numpy((target_depgraph_df['mappedId'].values))
-    head_depgraph = torch.stack([source_depgraph, target_depgraph], dim=0)
-
-    #Build the depgraph relationship: word - depgraph - word
-    original_depgraph_df = pd.DataFrame(data=depgraph_list, columns=["source", "target"])
-    source_depgraph_df = pd.merge(original_depgraph_df['source'], unique_ids_df,
-                            left_on='source', right_on='originalId', how='left')
-    source_depgraph = torch.from_numpy(source_depgraph_df['mappedId'].values)
-    target_depgraph_df = pd.merge(original_depgraph_df['target'], unique_ids_df,
-                            left_on='target', right_on='originalId', how='left')
-    target_depgraph = torch.from_numpy((target_depgraph_df['mappedId'].values))
-    edge_depgraph = torch.stack([source_depgraph, target_depgraph], dim=0)
+    previous_graph = build_node_relationships(unique_ids_df, prev_list)
+    head_graph = build_node_relationships(unique_ids_df, head_list)
+    depgraph_graph = build_node_relationships(unique_ids_df, depgraph_list)
 
     #Build dataframe with wordId -> features of each word
     nodes_df = pd.DataFrame.from_records(nodes_list, index=unique_ids_df['mappedId'])
@@ -125,18 +112,33 @@ def fetch_graph_info(graph, nodes_uri, edges_uri):
     targets = torch.from_numpy(targets_df['mappedId'].values)
     nodes_df = nodes_df.drop(['wikinerEntity'], axis=1)
     nodes_tensor = torch.from_numpy(nodes_df.values).to(torch.float)
-    return nodes_tensor, edge_depgraph, head_depgraph, prev_depgraph, targets, unique_ids_df, unique_targets_df
+    return nodes_tensor, depgraph_graph, head_graph, previous_graph, targets, unique_ids_df, unique_targets_df
 
-class GNN(torch.nn.Module):
+
+class GAT(torch.nn.Module):
     def __init__(self, hidden_channels, out_channels):
         super().__init__()
-        self.conv1 = SAGEConv((-1, -1), hidden_channels)
-        self.conv2 = SAGEConv((-1, -1), out_channels)
+        self.conv1 = GATConv((-1, -1), hidden_channels, add_self_loops=False)
+        self.lin1 = Linear(-1, hidden_channels)
+        self.conv2 = GATConv((-1, -1), out_channels, add_self_loops=False)
+        self.lin2 = Linear(-1, out_channels)
 
     def forward(self, x, edge_index):
-        x = self.conv1(x, edge_index).relu()
-        x = self.conv2(x, edge_index)
+        x = self.conv1(x, edge_index) + self.lin1(x)
+        x = x.relu()
+        x = self.conv2(x, edge_index) + self.lin2(x)
         return x
+
+
+def train():
+    model.train()
+    optimizer.zero_grad()
+    out = model(data_split.x_dict, data_split.edge_index_dict)
+    mask = data_split['word'].train_mask
+    loss = F.cross_entropy(out['word'][mask], data_split['word'].y[mask])
+    loss.backward()
+    optimizer.step()
+    return float(loss)
 
 
 words_uri = "http://ieeta-bit.pt/wikiner#Word"
@@ -150,7 +152,7 @@ fromtext_uri = "http://ieeta-bit.pt/wikiner#fromText"
 
 
 #graph = fetch_graph([*range(1, 300, 1)])
-graph = fetch_graph([1,2,3])
+graph = fetch_graph([*range(1, 300, 1)])
 nodes, edged_graphs, head_graphs, prev_graphs, targets, mapped_ids, target_ids = fetch_graph_info(graph, words_uri, [depgraph_uri, head_uri, previous_uri, fromsentence_uri])
 
 
@@ -166,43 +168,38 @@ data.num_classes = len(target_ids)
 data['word', 'depgraph', 'word'].edge_index = edged_graphs
 data['word', 'head', 'word'].edge_index = head_graphs
 data['word', 'previousWord', 'word'].edge_index = prev_graphs
-print(data)
 # data['word', 'fromSentence', 'sentence']
 
 # --- sentence edges ---
 # data['sentence', '']
 
-#Dataset Split
-# train_loader = NeighborLoader(
-#     data,
-#     # Sample 15 neighbors for each node and each edge type for 2 iterations:
-#     num_neighbors=[15] * 2,
-#     # Use a batch size of 128 for sampling training nodes of type "paper":
-#     batch_size=128,
-#     input_nodes=('word', data['word'].x),
-# )
 
-assert data["word"].num_nodes == 81
-assert data["word"].num_features == 24
-assert data["word", "depgraph", "word"].num_edges == 78
-assert data["word", "head", "word"].num_edges == 78
-assert data["word", "previousWord", "word"].num_edges == 78
+#CREATING THE TRAIN, TEST AND VAL MASKS
+print(data)
+split  = T.RandomNodeSplit(num_val=0.1, num_test=0.2)
+data_split = split(data)
+print(data_split)
 
-#Model Creation
-model = GNN(hidden_channels=64, out_channels=data.num_classes)
+model = GAT(hidden_channels=64, out_channels=data.num_classes)
 model = to_hetero(model, data.metadata(), aggr='sum')
 optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
 
+#Pass data onto GPU
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+print(f"Device: '{device}'")
+model = model.to(device)
+data_split = data_split.to(device)
 
-def train():
-    model.train()
-    optimizer.zero_grad()
-    out = model(data.x_dict, data.edge_index_dict)
-    mask = data['word'].x
-    loss = F.cross_entropy(out['word'][mask], data['word'].y[mask])
-    loss.backward()
-    optimizer.step()
-    return float(loss)
+for epoch in range(1, 50):
+    print("---- Epoch ", epoch, "----")
+    loss_final = train()
+    print(loss_final)
+    print("Loss: ", loss_final)
 
-
-loss_final = train()
+# out = model(data_split.x_dict, data_split.edge_index_dict)
+# results = out["word"][data_split["word"].test_mask]
+# truth = data_split['word'].y[data_split['word'].test_mask]
+# print(results)
+# print(truth)
+print(data_split["word"].train_mask)
+print(data_split["word"].val_mask)

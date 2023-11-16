@@ -253,6 +253,7 @@ def fetch_id_by_sentence(query: str, connection: str):
         print("------- Error on Query --------")
         print(query)
         print("Ignoring this query and proceeding.")
+        print(result)
         yield False
 
 

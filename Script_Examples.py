@@ -6,7 +6,7 @@ from Helpers import *
 from InsertData import CreateGraph
 from Query_Builder import *
 
-base_uri = "http://ieeta-bit.pt/ontoud#"
+base_uri = "http://ieeta-bit.pt/wikiner#"
 sentence_uri = URIRef(base_uri + "Sentence")
 head_uri = URIRef(base_uri + "head")
 word_uri = URIRef(base_uri + "word")
@@ -20,15 +20,15 @@ poscoarse_uri = URIRef(base_uri + "poscoarse")
 depgraph_uri = URIRef(base_uri + "depGraph")
 
 
-uri_dict = {"http://ieeta-bit.pt/ontoud#": "ontoud"}
+uri_dict = {"http://ieeta-bit.pt/wikiner#": "ontoud"}
 graph_name = "WikiNER"
 qb = QueryBuilder(base_uri, graph_name)
 conection_string = 'http://localhost:8890/sparql'
 
 g = Graph()
 
-relations_uri = {"http://ieeta.pt/ontoud#" : "ieeta"}
-connection = 'http://localhost:8890/sparql'
+relations_uri = {"http://ieeta-bit.pt/wikiner#" : "ieeta"}
+connection = 'http://estga-fiware.ua.pt:8890/sparql'
 # graph = CreateGraph(folder="DemoData", relations_uri=relations_uri,
 #                   connection_string=connection, language='pt')
 #
