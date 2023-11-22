@@ -1,0 +1,25 @@
+enable_wandb:
+  - value: False
+nodes:
+  - name: word
+    uri: http://ieeta-bit.pt/wikiner#Word
+    edges_source: [word, word, word, word]
+    edges: [depGraph, head, previousWord, fromSentence]
+    edges_target: [word, word, word, sentence]
+    edges_uri: [http://ieeta-bit.pt/wikiner#depGraph, http://ieeta-bit.pt/wikiner#head, http://ieeta-bit.pt/wikiner#previousWord, http://ieeta-bit.pt/wikiner#fromSentence]
+  - name: sentence
+    uri: http://ieeta-bit.pt/wikiner#Sentence
+    edges_source: [sentence, sentence, sentence]
+    edges: [fromText, nextSentence, depGraph]
+    edges_target: [text, sentence, word]
+    edges_uri: [http://ieeta-bit.pt/wikiner#fromText, http://ieeta-bit.pt/wikiner#nextSentence ,http://ieeta-bit.pt/wikiner#depGraph]
+  - name: text
+    uri: http://ieeta-bit.pt/wikiner#Text
+    edges_source: [text]
+    edges: [containsSentence]
+    edges_target: [sentence]
+    edges_uri: [http://ieeta-bit.pt/wikiner#containsSentence]
+target:
+  - node: word
+    name: [wikinerEntity]
+    uri: [http://ieeta-bit.pt/wikiner#wikinerEntity]

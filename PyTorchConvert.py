@@ -9,7 +9,7 @@ import torch_geometric.transforms as T
 from torch_geometric.nn import GATConv, Linear, to_hetero
 import torch.nn.functional as F
 import tqdm
-
+import yaml
 
 def fetch_graph(random_list, nodes_uri, edges_uri):
     print("--- LOADING DATASET ---")
@@ -230,7 +230,7 @@ split = T.RandomNodeSplit(num_val=0.1, num_test=0.2)
 data_split = split(data)
 print(data_split)
 
-model = GAT(hidden_channels=64, out_channels=data.num_classes)
+model = GAT(hidden_channels=16, out_channels=data.num_classes)
 model = to_hetero(model, data.metadata(), aggr='sum')
 optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
 
@@ -256,7 +256,8 @@ print(data_split["word"].val_mask)
 preds = []
 out = model(data_split.x_dict, data_split.edge_index_dict)
 mask = data_split['word'].test_mask
-probabilities = torch.nn.functional.softmax(out['word'][mask], dim=0)
+#probabilities = torch.nn.functional.softmax(out['word'][mask], dim=0)
+probabilities = out['word']['mask'].argmax(dim=1)
 truth = data_split['word'].y[mask]
 print(probabilities)
 print(truth)
