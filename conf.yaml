@@ -1,5 +1,5 @@
 enable_wandb:
-  - value: False
+  True
 nodes:
   - name: word
     uri: http://ieeta-bit.pt/wikiner#Word
@@ -7,18 +7,14 @@ nodes:
     edges: [depGraph, head, previousWord, fromSentence]
     edges_target: [word, word, word, sentence]
     edges_uri: [http://ieeta-bit.pt/wikiner#depGraph, http://ieeta-bit.pt/wikiner#head, http://ieeta-bit.pt/wikiner#previousWord, http://ieeta-bit.pt/wikiner#fromSentence]
+    attributes: [edge, feats, lemma, pos, poscoarse, word]
   - name: sentence
     uri: http://ieeta-bit.pt/wikiner#Sentence
-    edges_source: [sentence, sentence, sentence]
-    edges: [fromText, nextSentence, depGraph]
-    edges_target: [text, sentence, word]
-    edges_uri: [http://ieeta-bit.pt/wikiner#fromText, http://ieeta-bit.pt/wikiner#nextSentence ,http://ieeta-bit.pt/wikiner#depGraph]
-  - name: text
-    uri: http://ieeta-bit.pt/wikiner#Text
-    edges_source: [text]
-    edges: [containsSentence]
+    edges_source: [sentence]
+    edges: [nextSentence]
     edges_target: [sentence]
-    edges_uri: [http://ieeta-bit.pt/wikiner#containsSentence]
+    edges_uri: [http://ieeta-bit.pt/wikiner#nextSentence ,http://ieeta-bit.pt/wikiner#depGraph]
+    attributes: [senttext]
 target:
   - node: word
     name: [wikinerEntity]
