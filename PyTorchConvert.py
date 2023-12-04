@@ -12,7 +12,6 @@ import tqdm
 from torch_geometric.loader import NeighborLoader, ImbalancedSampler
 import yaml
 from GraphBuildWithConfig import get_graph
-from torchsampler import ImbalancedDatasetSampler
 
 class GAT(torch.nn.Module):
     def __init__(self, hidden_channels, out_channels):
@@ -114,22 +113,19 @@ enable_wandb = config_data['enable_wandb']
 if enable_wandb:
     import wandb
 
-#data = get_graph([*range(1, 30, 1)], config_data)
-data = torch.load("data/GraphData/1_to_100.pt")
-
+data = get_graph([*range(1, 3000, 1)], config_data)
+#print(data)
 # CREATING THE TRAIN, TEST AND VAL MASKS
 split = T.RandomNodeSplit(num_val=0.1, num_test=0.2)
 data_split = split(data)
 print(data_split)
 
-sampler = ImbalancedSampler(data_split['word'].y)
 train_loader = NeighborLoader(
-    data,
+    data_split,
     # Sample 15 neighbors for each node and each edge type for 2 iterations:
-    num_neighbors=[15] * 2,
+    num_neighbors=[10] * 2,
     # Use a batch size of 128 for sampling training nodes of type "paper":
-    sampler=sampler,
-    batch_size=16,
+    batch_size=128,
     input_nodes=('word', data_split['word'].train_mask),
 )
 
@@ -151,12 +147,11 @@ print(f"Device: '{device}'")
 model = model.to(device)
 data_split = data_split.to(device)
 
-for epoch in range(1, 200):
+for epoch in range(1, 100):
     print("---- Epoch ", epoch, "----")
     loss_final = train_2()
     if enable_wandb:
         wandb.log({"gat/loss": loss_final})
-    print(loss_final)
     print("Loss: ", loss_final)
 
 test_acc = test()

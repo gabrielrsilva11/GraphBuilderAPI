@@ -19,3 +19,4 @@ target:
   - node: word
     name: [wikinerEntity]
     uri: [http://ieeta-bit.pt/wikiner#wikinerEntity]
+    balancing: True
