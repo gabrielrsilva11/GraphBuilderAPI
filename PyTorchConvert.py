@@ -41,7 +41,7 @@ class GNN(torch.nn.Module):
         x = self.conv3(x, edge_index)
         return x
 
-def train_2():
+def train_batch():
     model.train()
     total_examples = total_loss = 0
     for batch in train_loader:
@@ -113,7 +113,8 @@ enable_wandb = config_data['enable_wandb']
 if enable_wandb:
     import wandb
 
-data = get_graph([*range(1, 3000, 1)], config_data)
+#data = get_graph([*range(1, 3000, 1)], config_data)
+data = torch.load("data/GraphData/1_to_3000.pt")
 #print(data)
 # CREATING THE TRAIN, TEST AND VAL MASKS
 split = T.RandomNodeSplit(num_val=0.1, num_test=0.2)
@@ -122,9 +123,7 @@ print(data_split)
 
 train_loader = NeighborLoader(
     data_split,
-    # Sample 15 neighbors for each node and each edge type for 2 iterations:
-    num_neighbors=[10] * 2,
-    # Use a batch size of 128 for sampling training nodes of type "paper":
+    num_neighbors=[15] * 2,
     batch_size=128,
     input_nodes=('word', data_split['word'].train_mask),
 )
@@ -149,7 +148,7 @@ data_split = data_split.to(device)
 
 for epoch in range(1, 100):
     print("---- Epoch ", epoch, "----")
-    loss_final = train_2()
+    loss_final = train_batch()
     if enable_wandb:
         wandb.log({"gat/loss": loss_final})
     print("Loss: ", loss_final)

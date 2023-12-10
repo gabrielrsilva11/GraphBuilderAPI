@@ -126,7 +126,6 @@ def build_graph(nodes, edges, mapped_ids, config_data):
         for edge_idx in range(0, len(layer['edges'])):
             print(layer['edges'][edge_idx])
             graph_data[layer['edges_source'][edge_idx], layer['edges'][edge_idx], layer['edges_target'][edge_idx]].edge_index = build_node_relationships(mapped_ids, edges[layer['edges'][edge_idx]], layer['edges_source'][edge_idx], layer['edges_target'][edge_idx], config_data['target'][0]['balancing'])
-
     return graph_data
 
 
