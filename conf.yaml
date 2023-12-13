@@ -1,3 +1,7 @@
+connection:
+  - connection_uri: http://estga-fiware.ua.pt:8890/sparql
+    graph_name: WikiNER
+    base_uri: http://ieeta-bit.pt/wikiner#
 enable_wandb:
   True
 nodes:

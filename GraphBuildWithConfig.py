@@ -1,4 +1,4 @@
-import yaml
+from tqdm import tqdm
 from GraphConverterNetworkX import BuildNetworkx
 from rdflib.namespace import RDF
 from rdflib import URIRef
@@ -8,9 +8,9 @@ from torch_geometric.data import HeteroData
 
 def fetch_graph(ids_to_fetch, config_data):
     print("--- LOADING DATASET ---")
-    base_uri = "http://ieeta-bit.pt/wikiner#"
-    graph_name = "WikiNER"
-    conection_string = 'http://estga-fiware.ua.pt:8890/sparql'
+    base_uri = config_data['connection'][0]['base_uri']
+    graph_name = config_data['connection'][0]['graph_name']
+    conection_string = config_data['connection'][0]['connection_uri']
     ntx = BuildNetworkx(base_uri, graph_name, conection_string)
     edges = {}
     nodes = {}
@@ -18,7 +18,9 @@ def fetch_graph(ids_to_fetch, config_data):
     i = 0
     balance = config_data['target'][0]['node']
     wikidata_id = False
-    for idx in ids_to_fetch:
+    for i in tqdm(range(len(ids_to_fetch)), desc="Loading Dataset"):
+        #for idx in ids_to_fetch:
+        idx = ids_to_fetch[i]
         graph = ntx.fetch_graph([idx])
         for layer in config_data['nodes']:
             #Go through all the desirable nodes
@@ -45,7 +47,7 @@ def fetch_graph(ids_to_fetch, config_data):
 
                         if wikidata_id:
                             edges[uri_type].append([s2.__str__(), o2.__str__()])
-                        elif balance and not wikidata_id and i == 20:
+                        elif balance and not wikidata_id and i > 20:
                             edges[uri_type].append([s2.__str__(), o2.__str__()])
                     #Node Attribute
                     else:
@@ -54,7 +56,7 @@ def fetch_graph(ids_to_fetch, config_data):
                     node_features["wikinerEntity"] = "No"
 
                 #Balance every 1 in 20 nodes
-                if balance and not wikidata_id and i == 20:
+                if balance and not wikidata_id and i > 20:
                     if s.__str__() not in indexes[layer['name']]:
                         indexes[layer['name']].append(s.__str__())
                     nodes[layer['name']].append(node_features)
@@ -104,8 +106,9 @@ def build_targets(nodes_df, config_data):
     })
     targets_df = pd.merge(nodes_df['wikinerEntity'], unique_targets_df,
                           left_on='wikinerEntity', right_on='originalId', how='left')
+    print(targets_df['wikinerEntity'].value_counts())
     targets = torch.from_numpy(targets_df['mappedId'].values)
-    return targets, len(unique_targets_df)
+    return targets, unique_targets_df, len(unique_targets_df)
 
 def build_graph(nodes, edges, mapped_ids, config_data):
     graph_data = HeteroData()
@@ -117,7 +120,10 @@ def build_graph(nodes, edges, mapped_ids, config_data):
             column_list.append(attributes)
             nodes_df[attributes] = nodes_df[attributes].astype('category').cat.codes
         if layer['name'] == config_data['target'][0]['node']:
-            targets, size_targets = build_targets(nodes_df, config_data)
+            nodes_df[config_data['target'][0]['name'][0]] = nodes_df[config_data['target'][0]['name'][0]].replace(r'\n',
+                                                                                                                  '',
+                                                                                                                  regex=True)
+            targets, unique_targets, size_targets = build_targets(nodes_df, config_data)
             graph_data[layer['name']].y = targets
             graph_data.num_classes = size_targets
         nodes_appropriate = nodes_df[column_list]
@@ -126,7 +132,7 @@ def build_graph(nodes, edges, mapped_ids, config_data):
         for edge_idx in range(0, len(layer['edges'])):
             print(layer['edges'][edge_idx])
             graph_data[layer['edges_source'][edge_idx], layer['edges'][edge_idx], layer['edges_target'][edge_idx]].edge_index = build_node_relationships(mapped_ids, edges[layer['edges'][edge_idx]], layer['edges_source'][edge_idx], layer['edges_target'][edge_idx], config_data['target'][0]['balancing'])
-    return graph_data
+    return graph_data, unique_targets
 
 
 def get_graph(list_to_get, config_data):
@@ -136,5 +142,7 @@ def get_graph(list_to_get, config_data):
     #This is due to a sentence referencing a non-existant next sentence.
     #This will not happen with complete texts and should be removed.
     edges['nextSentence'].pop()
-    graph = build_graph(nodes, edges, mapped_uris, config_data)
-    return graph
+    graph, unique_targets = build_graph(nodes, edges, mapped_uris, config_data)
+    print(unique_targets)
+    print("--- DATASET LOADED AND TRANSFORMED ---")
+    return graph, unique_targets
