@@ -9,34 +9,8 @@ from tqdm import tqdm
 from torch_geometric.loader import NeighborLoader, ImbalancedSampler
 import yaml
 from GraphBuildWithConfig import get_graph
+from Model import GAT, GNN, Spline
 
-
-class GAT(torch.nn.Module):
-    def __init__(self, hidden_channels, out_channels):
-        super().__init__()
-        self.conv1 = GATConv((-1, -1), hidden_channels, add_self_loops=False, dropout=0.5)
-        self.lin1 = Linear(-1, hidden_channels)
-        self.conv2 = GATConv((-1, -1), out_channels, add_self_loops=False, dropout=0.5)
-        self.lin2 = Linear(-1, out_channels)
-
-    def forward(self, x, edge_index):
-        x = self.conv1(x, edge_index) + self.lin1(x)
-        x = x.relu()
-        x = self.conv2(x, edge_index) + self.lin2(x)
-        return x
-
-class GNN(torch.nn.Module):
-    def __init__(self, hidden_channels, out_channels):
-        super().__init__()
-        self.conv1 = SAGEConv((-1, -1), hidden_channels)
-        self.conv2 = SAGEConv((-1, -1), hidden_channels)
-        self.conv3 = SAGEConv((-1, -1), out_channels)
-
-    def forward(self, x, edge_index):
-        x = self.conv1(x, edge_index).relu()
-        x = self.conv2(x, edge_index).relu()
-        x = self.conv3(x, edge_index)
-        return x
 
 def train_batch():
     model.train()
@@ -104,50 +78,56 @@ def wandb_data(dataset, data):
 
 
 config_file = open('conf.yaml', 'r')
+training_config = open('training.yaml', 'r')
+
 config_data = yaml.load(config_file, Loader=yaml.FullLoader)
+training_config = yaml.load(training_config, Loader=yaml.FullLoader)
 enable_wandb = config_data['enable_wandb']
+
 
 if enable_wandb:
     import wandb
 
-data, targets = get_graph([*range(1, 3000, 1)], config_data)
-# data = torch.load("data/GraphData/1_to_3000.pt")
-# targets = pd.read_pickle("data/targets.pkl")
+# data, targets = get_graph([*range(1, 3000, 1)], config_data)
+data = torch.load(training_config['data_file'])
+targets = pd.read_pickle(training_config['targets_file'])
+# model = torch.load(training_config['model_file'])
 
-# model = torch.load("models/gnn.pt")
-# print(data)
+
 # CREATING THE TRAIN, TEST AND VAL MASKS
-split = T.RandomNodeSplit(num_val=0.15, num_test=0.2)
+split = T.RandomNodeSplit(num_val=training_config['validation_split'], num_test=training_config['test_split'])
 data_split = split(data)
 print(data_split)
 
 train_loader = NeighborLoader(
     data_split,
-    num_neighbors=[10] * 2,
-    batch_size=256,
+    num_neighbors=training_config['neighbors'],
+    batch_size=training_config['batch_size'],
     input_nodes=('word', data_split['word'].train_mask),
 )
 
 #Creating the model
-model = GAT(hidden_channels=64, out_channels=data.num_classes)
+model = Spline(out_channels=data.num_classes)
+#model = GAT(hidden_channels=64, out_channels=data.num_classes)
 model = to_hetero(model, data.metadata(), aggr='sum')
 optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
 # optimizer = torch.optim.Adam(model.parameters(), lr=0.001, weight_decay=5e-4)
 
-# with torch.no_grad():  # Initialize lazy modules.
-#     out = model(data.x_dict, data.edge_index_dict)
-
-if enable_wandb:
-    wandb_data(data, data_split)
-    #wandb.watch(model)
-
-# Pass data onto GPU
+# Pass data and module onto GPU
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 print(f"Device: '{device}'")
 model = model.to(device)
 data_split = data_split.to(device)
 
-epochs = 500
+with torch.no_grad():  # Initialize lazy modules.
+    out = model(data.x_dict, data.edge_index_dict)
+
+if enable_wandb:
+    wandb_data(data, data_split)
+    wandb.watch(model)
+
+
+epochs = training_config['epochs']
 
 pbar = tqdm(range(epochs), desc="Training Model")
 best_loss = 9999999
