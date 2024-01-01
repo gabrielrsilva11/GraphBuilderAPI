@@ -106,7 +106,6 @@ def build_targets(nodes_df, config_data):
     })
     targets_df = pd.merge(nodes_df['wikinerEntity'], unique_targets_df,
                           left_on='wikinerEntity', right_on='originalId', how='left')
-    print(targets_df['wikinerEntity'].value_counts())
     targets = torch.from_numpy(targets_df['mappedId'].values)
     return targets, unique_targets_df, len(unique_targets_df)
 
@@ -133,7 +132,6 @@ def build_graph(nodes, edges, mapped_ids, config_data):
             print(layer['edges'][edge_idx])
             graph_data[layer['edges_source'][edge_idx], layer['edges'][edge_idx], layer['edges_target'][edge_idx]].edge_index = build_node_relationships(mapped_ids, edges[layer['edges'][edge_idx]], layer['edges_source'][edge_idx], layer['edges_target'][edge_idx], config_data['target'][0]['balancing'])
     return graph_data, unique_targets
-
 
 def get_graph(list_to_get, config_data):
     edges, nodes, indexes = fetch_graph(list_to_get, config_data)

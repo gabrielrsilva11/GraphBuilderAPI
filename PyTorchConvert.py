@@ -78,7 +78,7 @@ def wandb_data(dataset, data):
 
 
 config_file = open('conf.yaml', 'r')
-training_config = open('training.yaml', 'r')
+training_config = open('training_conf.yaml', 'r')
 
 config_data = yaml.load(config_file, Loader=yaml.FullLoader)
 training_config = yaml.load(training_config, Loader=yaml.FullLoader)
@@ -88,9 +88,9 @@ enable_wandb = config_data['enable_wandb']
 if enable_wandb:
     import wandb
 
-# data, targets = get_graph([*range(1, 3000, 1)], config_data)
-data = torch.load(training_config['data_file'])
-targets = pd.read_pickle(training_config['targets_file'])
+data, targets = get_graph([*range(1, 300, 1)], config_data)
+# data = torch.load(training_config['data_file'])
+# targets = pd.read_pickle(training_config['targets_file'])
 # model = torch.load(training_config['model_file'])
 
 
@@ -101,7 +101,7 @@ print(data_split)
 
 train_loader = NeighborLoader(
     data_split,
-    num_neighbors=training_config['neighbors'],
+    num_neighbors=[10] * 2,
     batch_size=training_config['batch_size'],
     input_nodes=('word', data_split['word'].train_mask),
 )
@@ -158,6 +158,6 @@ if enable_wandb:
     wandb.log({"gat/pr": wandb.plot.pr_curve(ground_truth, predict_percents, labels=targets['originalId'])})
 
 # torch.save(model, "models/gnn.pt")
-torch.save(data, "data/GraphData/1_to_3000.pt")
-targets.to_pickle("data/targets.pkl")
+#torch.save(data, "data/GraphData/1_to_3000.pt")
+#targets.to_pickle("data/targets.pkl")
 

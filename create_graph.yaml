@@ -1,0 +1,6 @@
+uri: http://ieeta-bit.pt/wikinerv2#
+language: pt
+graph_name: WikiNER_v2
+connection: http://localhost:8890/sparql
+extra_connections:
+  connections: [WikinerGrammar, WikinerEntity, EntityPresent]
