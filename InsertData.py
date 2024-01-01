@@ -154,7 +154,7 @@ class CreateGraph:
         #Insert the extras
         if self.extra_object_properties:
             for extra_object in self.extra_object_properties:
-                g.add((URIRef(extra_object), RDF.type, OWL.ObjectProperty))
+                g.add((URIRef(extra_object), RDF.type, OWL.DatatypeProperty))
 
         # data properties
         g.add((URIRef(self.d_sentence_text), RDF.type, OWL.DatatypeProperty))
@@ -199,59 +199,80 @@ class CreateGraph:
         Main script to insert CoNLL data into a triple-storage.
         :param lines: the text to insert
         :param sentence_id: last known sentence_id for identification purposes.
+        :param doc_id: the id of the document we are currently processing
         :return: the last used sentence_id.
         """
-        doc = self.nlp(lines)
+        if self.preprocessing:
+            processed_lines = self.preprocessing(lines)
+            sentence = ""
+            for line in processed_lines:
+                sentence += line[0] + " "
+        else:
+            sentence = lines
+
+        sentence = sentence.replace(".", "").strip()
+        doc = self.nlp(sentence.lower())
         conll = doc._.pandas
         sentence = []
-        textid_uri = self.c_text_uri + "_" + str(doc_id)
+        textid_uri = URIRef(self.c_text_uri + "_" + str(doc_id))
         self.insert_data(textid_uri, RDF.type, self.c_text_uri, self.sparql)
+        indexes_used = []
         for index, row in conll.iterrows():
-            word = row['form'].replace("'", "").replace("\"", "")
-            lemma = row['lemma'].replace("'", "").replace("\"", "")
-            word_id = row['id']
+            word = row['FORM'].replace("'", "").replace("\"", "")
+            lemma = row['LEMMA'].replace("'", "").replace("\"", "")
+            word_id = row['ID']
             sentence.append(unidecode(word))
-            if row['id'] == 1:
+            if row['ID'] == 1:
                 sentenceid_uri = self.c_sentence_uri + "_" + str(doc_id) + "_" + str(sentence_id)
                 if sentence_id > 0:
-                    new_sentence = sentence[:-1]
-                    self.insert_data(sentenceid_uri, self.d_sentence_text, Literal(' '.join(new_sentence)), self.sparql)
                     sentence = [sentence[-1]]
                     self.insert_data(textid_uri, self.o_contains_sentence, sentenceid_uri, self.sparql)
                     self.insert_data(sentenceid_uri, self.o_from_text, textid_uri, self.sparql)
-                sentence_id += 1
-                sentenceid_uri = self.c_sentence_uri + "_" + str(doc_id) + "_" + str(sentence_id)
                 wordid_uri = self.d_word_uri + "_" + str(doc_id) + "_" + str(sentence_id) + "_" + str(word_id)
                 self.insert_data(sentenceid_uri, RDF.type, self.c_sentence_uri, self.sparql)
                 self.insert_data(textid_uri, self.o_contains_sentence, sentenceid_uri, self.sparql)
                 self.insert_data(sentenceid_uri, self.o_from_text, textid_uri, self.sparql)
                 if sentence_id != 1:
+                    #Previous sentence
+                    self.insert_data(sentenceid_uri, self.o_nextsentence_uri,
+                                     self.c_sentence_uri + "_" + str(doc_id) + "_" + str(sentence_id - 1), self.sparql)
+                    #Next sentence
                     self.insert_data(self.c_sentence_uri + "_" + str(doc_id) + "_" + str(sentence_id - 1), self.o_nextsentence_uri,
                                      sentenceid_uri, self.sparql)
             else:
-                word_id = row['id']
+                word_id = row['ID']
                 previous_uri = wordid_uri
                 wordid_uri = self.d_word_uri + "_" + str(doc_id) + "_" + str(sentence_id) + "_" + str(word_id)
                 self.insert_data(wordid_uri, self.o_previousword_uri, previous_uri, self.sparql)
+                self.insert_data(previous_uri, self.o_nextword_uri, wordid_uri, self.sparql)
 
             self.insert_data(wordid_uri, RDF.type, self.c_word_uri, self.sparql)
-            self.insert_data(wordid_uri, self.d_id_uri, Literal(row['id']), self.sparql)
+            self.insert_data(wordid_uri, self.d_id_uri, Literal(row['ID']), self.sparql)
             self.insert_data(wordid_uri, self.d_word_uri, Literal(word), self.sparql)
-            self.insert_data(wordid_uri, self.d_edge_uri, Literal(row['deprel']), self.sparql)
-            self.insert_data(wordid_uri, self.d_feats_uri, Literal(row['feats']), self.sparql)
-            self.insert_data(wordid_uri, self.d_id_uri, Literal(row['id']), self.sparql)
+            self.insert_data(wordid_uri, self.d_edge_uri, Literal(row['DEPREL']), self.sparql)
+            self.insert_data(wordid_uri, self.d_feats_uri, Literal(row['FEATS']), self.sparql)
+            self.insert_data(wordid_uri, self.d_id_uri, Literal(row['ID']), self.sparql)
             self.insert_data(wordid_uri, self.d_lemma_uri, Literal(lemma), self.sparql)
-            self.insert_data(wordid_uri, self.d_pos_uri, Literal(row['upostag']), self.sparql)
-            self.insert_data(wordid_uri, self.d_poscoarse_uri, Literal(row['xpostag']), self.sparql)
-
-            if row['head'] == 0:
+            self.insert_data(wordid_uri, self.d_pos_uri, Literal(row['UPOS']), self.sparql)
+            self.insert_data(wordid_uri, self.d_poscoarse_uri, Literal(row['XPOS']), self.sparql)
+            if self.preprocessing:
+                for o in range(0, len(processed_lines)):
+                    word_to_check = processed_lines[o][0].replace(".", "").strip().lower()
+                    if word == word_to_check and o <= index and o not in indexes_used:
+                        indexes_used.append(o)
+                        for k in range(0, len(self.extra_object_properties)):
+                            if processed_lines[o][k + 1] != '':
+                                self.insert_data(wordid_uri, URIRef(self.extra_object_properties[k]),
+                                       Literal(processed_lines[o][k + 1]), self.sparql)
+                        break
+            if row['HEAD'] == 0:
                 # print(sentence)
                 self.insert_data(wordid_uri, self.o_from_sentence_uri, sentenceid_uri, self.sparql)
                 self.insert_data(sentenceid_uri, self.o_depgraph_uri, wordid_uri, self.sparql)
             else:
                 self.insert_data(wordid_uri, self.o_head_uri,
-                                 self.d_word_uri + "_" + str(doc_id) +"_" + str(sentence_id) + "_" + str(row['head']), self.sparql)
-                self.insert_data(self.d_word_uri + "_" + str(doc_id) +"_" + str(sentence_id) + "_" + str(row['head']), self.o_depgraph_uri,
+                                 self.d_word_uri + "_" + str(doc_id) +"_" + str(sentence_id) + "_" + str(row['HEAD']), self.sparql)
+                self.insert_data(self.d_word_uri + "_" + str(doc_id) +"_" + str(sentence_id) + "_" + str(row['HEAD']), self.o_depgraph_uri,
                                  wordid_uri, self.sparql)
         self.insert_data(sentenceid_uri, self.d_sentence_text, Literal(' '.join(sentence)), self.sparql)
         self.insert_data(textid_uri, self.o_contains_sentence, sentenceid_uri, self.sparql)
@@ -267,74 +288,76 @@ class CreateGraph:
         """
         if self.preprocessing:
             processed_lines = self.preprocessing(lines)
-            print(processed_lines)
             sentence = ""
             for line in processed_lines:
                 sentence += line[0] + " "
         else:
             sentence = lines
 
-        doc = self.nlp(sentence)
+        sentence = sentence.replace(".", "").strip()
+        doc = self.nlp(sentence.lower())
         conll = doc._.pandas
-        print(conll)
         sentence = []
         textid_uri = URIRef(self.c_text_uri + "_" + str(doc_id))
         g.add((textid_uri, RDF.type, URIRef(self.c_text_uri)))
+        indexes_used = []
         for index, row in conll.iterrows():
-            word = row['form'].replace("'", "").replace("\"", "")
-            lemma = row['lemma'].replace("'", "").replace("\"", "")
-            word_id = row['id']
+            word = row['FORM'].replace("'", "").replace("\"", "")
+            lemma = row['LEMMA'].replace("'", "").replace("\"", "")
+            word_id = row['ID']
             sentence.append(unidecode(word))
-            if row['id'] == 1:
+            if row['ID'] == 1:
                 sentenceid_uri = URIRef(self.c_sentence_uri + "_" + str(doc_id) + "_" + str(sentence_id))
                 if sentence_id > 0:
-                    new_sentence = sentence[:-1]
-                    g.add((sentenceid_uri, URIRef(self.d_sentence_text), Literal(' '.join(new_sentence))))
                     sentence = [sentence[-1]]
                     g.add((textid_uri, URIRef(self.o_contains_sentence), sentenceid_uri))
                     g.add((sentenceid_uri, URIRef(self.o_from_text), textid_uri))
-                sentence_id += 1
-                sentenceid_uri = URIRef(self.c_sentence_uri + "_" + str(doc_id) + "_" + str(sentence_id))
+                #sentence_id += 1
                 wordid_uri = URIRef(self.d_word_uri + "_" + str(doc_id) + "_" + str(sentence_id) + "_" + str(word_id))
                 g.add((sentenceid_uri, RDF.type, URIRef(self.c_sentence_uri)))
                 g.add((textid_uri, URIRef(self.o_contains_sentence), sentenceid_uri))
                 g.add((sentenceid_uri, URIRef(self.o_from_text), textid_uri))
-                g.add((URIRef(self.c_sentence_uri + "_" + str(doc_id) + "_" + str(sentence_id - 1)),
-                       URIRef(self.o_nextsentence_uri), sentenceid_uri))
                 if sentence_id != 1:
-                    g.add((URIRef(self.c_sentence_uri + "_" + str(doc_id) + "_" + str(sentence_id)), URIRef(self.o_previoussentence_uri),
+                    #Previous Sentence
+                    g.add((URIRef(sentenceid_uri), URIRef(self.o_previoussentence_uri),
                                      URIRef(self.c_sentence_uri + "_" + str(doc_id) + "_" + str(sentence_id-1))))
+                    # #Next sentence
+                    g.add((URIRef(self.c_sentence_uri + "_" + str(doc_id) + "_" + str(sentence_id - 1)),
+                           URIRef(self.o_nextsentence_uri), sentenceid_uri))
             else:
-                word_id = row['id']
+                word_id = row['ID']
                 previous_uri = wordid_uri
                 wordid_uri = URIRef(self.d_word_uri + "_" + str(doc_id) + "_" + str(sentence_id) + "_" + str(word_id))
                 g.add((wordid_uri, URIRef(self.o_previousword_uri), previous_uri))
+                g.add((previous_uri, URIRef(self.o_nextword_uri), wordid_uri))
 
             g.add((wordid_uri, RDF.type, URIRef(self.c_word_uri)))
-            g.add((wordid_uri, URIRef(self.d_id_uri), Literal(row['id'])))
+            g.add((wordid_uri, URIRef(self.d_id_uri), Literal(row['ID'])))
             g.add((wordid_uri, URIRef(self.d_word_uri), Literal(word)))
-            g.add((wordid_uri, URIRef(self.d_edge_uri), Literal(row['deprel'])))
-            g.add((wordid_uri, URIRef(self.d_feats_uri), Literal(row['feats'])))
-            g.add((wordid_uri, URIRef(self.d_id_uri), Literal(row['id'])))
+            g.add((wordid_uri, URIRef(self.d_edge_uri), Literal(row['DEPREL'])))
+            g.add((wordid_uri, URIRef(self.d_feats_uri), Literal(row['FEATS'])))
+            g.add((wordid_uri, URIRef(self.d_id_uri), Literal(row['ID'])))
             g.add((wordid_uri, URIRef(self.d_lemma_uri), Literal(lemma)))
-            g.add((wordid_uri, URIRef(self.d_pos_uri), Literal(row['upostag'])))
-            g.add((wordid_uri, URIRef(self.d_poscoarse_uri), Literal(row['xpostag'])))
-            print(index)
+            g.add((wordid_uri, URIRef(self.d_pos_uri), Literal(row['UPOS'])))
+            g.add((wordid_uri, URIRef(self.d_poscoarse_uri), Literal(row['XPOS'])))
             if self.preprocessing:
-                print(word)
-                print(processed_lines[index][0])
-                # for k in range(0, len(self.extra_object_properties)):
-                    # if processed_lines[index][k+1] != '':
-                    #     g.add((wordid_uri, URIRef(self.extra_object_properties[k]), Literal(processed_lines[index][k+1])))
+                for o in range(0, len(processed_lines)):
+                    word_to_check = processed_lines[o][0].replace(".", "").strip().lower()
+                    if word == word_to_check and o <= index and o not in indexes_used:
+                        indexes_used.append(o)
+                        for k in range(0, len(self.extra_object_properties)):
+                            if processed_lines[o][k + 1] != '':
+                                g.add((wordid_uri, URIRef(self.extra_object_properties[k]),
+                                       Literal(processed_lines[o][k + 1])))
+                        break
 
-            if row['head'] == 0:
-                # print(sentence)
+            if row['HEAD'] == 0:
                 g.add((wordid_uri, URIRef(self.o_from_sentence_uri), sentenceid_uri))
                 g.add((sentenceid_uri, URIRef(self.o_depgraph_uri), wordid_uri))
             else:
                 g.add((wordid_uri, URIRef(self.o_head_uri),
-                                 URIRef(self.d_word_uri + "_" + str(doc_id) + "_" + str(sentence_id) + "_" + str(row['head']))))
-                g.add((URIRef(self.d_word_uri + "_" + str(doc_id) + "_" + str(sentence_id) + "_" + str(row['head'])), URIRef(self.o_depgraph_uri),
+                                 URIRef(self.d_word_uri + "_" + str(doc_id) + "_" + str(sentence_id) + "_" + str(row['HEAD']))))
+                g.add((URIRef(self.d_word_uri + "_" + str(doc_id) + "_" + str(sentence_id) + "_" + str(row['HEAD'])), URIRef(self.o_depgraph_uri),
                                  wordid_uri))
         g.add((sentenceid_uri, URIRef(self.d_sentence_text), Literal(' '.join(sentence))))
         g.add((textid_uri, URIRef(self.o_contains_sentence), sentenceid_uri))
@@ -371,7 +394,7 @@ class CreateGraph:
 
         for file_name in files:
             if not file_name.startswith("."):
-                sentence_id = 0
+                sentence_id = 1
                 file_path = os.getcwd()+"/"+self.folder_name+"/"+file_name
                 print(f"--- Processing file {doc_id} : {file_name} ---")
                 with tqdm(total=os.path.getsize(file_path)) as pbar:

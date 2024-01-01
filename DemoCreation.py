@@ -24,7 +24,7 @@ def preprocess_sentence(sentence):
 config_file = open("create_graph.yaml", 'r')
 config_data = yaml.load(config_file, Loader=yaml.FullLoader)
 
-graph = CreateGraph(folder="WikiNER_Subsample", graph_name=config_data['graph_name'], extra_connetions=config_data['extra_connections']['connections'],
+graph = CreateGraph(folder="WikiNER_BiggerSample", graph_name=config_data['graph_name'], extra_connetions=config_data['extra_connections']['connections'],
                     connection_string=config_data['connection'], main_uri=config_data['uri'], language=config_data['language'], preprocessing=preprocess_sentence)
 
 graph.create_graph(in_memory=True, save_file="WikiNERv2")
