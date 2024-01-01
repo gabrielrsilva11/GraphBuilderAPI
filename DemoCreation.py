@@ -1,7 +1,6 @@
 from InsertData import CreateGraph
 import yaml
 
-
 #Function to pre-process a sentence. The output should be:
 # The full sentence and a list of any extra info to be added.
 # This list should be blank if there are no extra annotations and you want the default graph.
@@ -27,4 +26,4 @@ config_data = yaml.load(config_file, Loader=yaml.FullLoader)
 graph = CreateGraph(folder="WikiNER_BiggerSample", graph_name=config_data['graph_name'], extra_connetions=config_data['extra_connections']['connections'],
                     connection_string=config_data['connection'], main_uri=config_data['uri'], language=config_data['language'], preprocessing=preprocess_sentence)
 
-graph.create_graph(in_memory=True, save_file="WikiNERv2")
+graph.create_graph(in_memory=False, save_file="WikiNERv2")

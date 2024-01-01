@@ -1,6 +1,6 @@
-uri: http://ieeta-bit.pt/wikinerv2#
+uri: http://ieeta-bit.pt/bigger_sample_v2#
 language: pt
-graph_name: WikiNER_v2
+graph_name: WikiNER_biggersamplev2
 connection: http://localhost:8890/sparql
 extra_connections:
   connections: [wikinerGrammar, wikinerEntity, entityPresent]

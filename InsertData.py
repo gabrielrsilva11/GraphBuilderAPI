@@ -218,11 +218,11 @@ class CreateGraph:
         self.insert_data(textid_uri, RDF.type, self.c_text_uri, self.sparql)
         indexes_used = []
         for index, row in conll.iterrows():
-            word = row['FORM'].replace("'", "").replace("\"", "")
-            lemma = row['LEMMA'].replace("'", "").replace("\"", "")
-            word_id = row['ID']
+            word = row['form'].replace("'", "").replace("\"", "")
+            lemma = row['lemma'].replace("'", "").replace("\"", "")
+            word_id = row['id']
             sentence.append(unidecode(word))
-            if row['ID'] == 1:
+            if row['id'] == 1:
                 sentenceid_uri = self.c_sentence_uri + "_" + str(doc_id) + "_" + str(sentence_id)
                 if sentence_id > 0:
                     sentence = [sentence[-1]]
@@ -240,21 +240,21 @@ class CreateGraph:
                     self.insert_data(self.c_sentence_uri + "_" + str(doc_id) + "_" + str(sentence_id - 1), self.o_nextsentence_uri,
                                      sentenceid_uri, self.sparql)
             else:
-                word_id = row['ID']
+                word_id = row['id']
                 previous_uri = wordid_uri
                 wordid_uri = self.d_word_uri + "_" + str(doc_id) + "_" + str(sentence_id) + "_" + str(word_id)
                 self.insert_data(wordid_uri, self.o_previousword_uri, previous_uri, self.sparql)
                 self.insert_data(previous_uri, self.o_nextword_uri, wordid_uri, self.sparql)
 
             self.insert_data(wordid_uri, RDF.type, self.c_word_uri, self.sparql)
-            self.insert_data(wordid_uri, self.d_id_uri, Literal(row['ID']), self.sparql)
+            self.insert_data(wordid_uri, self.d_id_uri, Literal(row['id']), self.sparql)
             self.insert_data(wordid_uri, self.d_word_uri, Literal(word), self.sparql)
-            self.insert_data(wordid_uri, self.d_edge_uri, Literal(row['DEPREL']), self.sparql)
-            self.insert_data(wordid_uri, self.d_feats_uri, Literal(row['FEATS']), self.sparql)
-            self.insert_data(wordid_uri, self.d_id_uri, Literal(row['ID']), self.sparql)
+            self.insert_data(wordid_uri, self.d_edge_uri, Literal(row['deprel']), self.sparql)
+            self.insert_data(wordid_uri, self.d_feats_uri, Literal(row['feats']), self.sparql)
+            self.insert_data(wordid_uri, self.d_id_uri, Literal(row['id']), self.sparql)
             self.insert_data(wordid_uri, self.d_lemma_uri, Literal(lemma), self.sparql)
-            self.insert_data(wordid_uri, self.d_pos_uri, Literal(row['UPOS']), self.sparql)
-            self.insert_data(wordid_uri, self.d_poscoarse_uri, Literal(row['XPOS']), self.sparql)
+            self.insert_data(wordid_uri, self.d_pos_uri, Literal(row['upostag']), self.sparql)
+            self.insert_data(wordid_uri, self.d_poscoarse_uri, Literal(row['xpostag']), self.sparql)
             if self.preprocessing:
                 for o in range(0, len(processed_lines)):
                     word_to_check = processed_lines[o][0].replace(".", "").strip().lower()
@@ -265,14 +265,14 @@ class CreateGraph:
                                 self.insert_data(wordid_uri, URIRef(self.extra_object_properties[k]),
                                        Literal(processed_lines[o][k + 1]), self.sparql)
                         break
-            if row['HEAD'] == 0:
+            if row['head'] == 0:
                 # print(sentence)
                 self.insert_data(wordid_uri, self.o_from_sentence_uri, sentenceid_uri, self.sparql)
                 self.insert_data(sentenceid_uri, self.o_depgraph_uri, wordid_uri, self.sparql)
             else:
                 self.insert_data(wordid_uri, self.o_head_uri,
-                                 self.d_word_uri + "_" + str(doc_id) +"_" + str(sentence_id) + "_" + str(row['HEAD']), self.sparql)
-                self.insert_data(self.d_word_uri + "_" + str(doc_id) +"_" + str(sentence_id) + "_" + str(row['HEAD']), self.o_depgraph_uri,
+                                 self.d_word_uri + "_" + str(doc_id) +"_" + str(sentence_id) + "_" + str(row['head']), self.sparql)
+                self.insert_data(self.d_word_uri + "_" + str(doc_id) +"_" + str(sentence_id) + "_" + str(row['head']), self.o_depgraph_uri,
                                  wordid_uri, self.sparql)
         self.insert_data(sentenceid_uri, self.d_sentence_text, Literal(' '.join(sentence)), self.sparql)
         self.insert_data(textid_uri, self.o_contains_sentence, sentenceid_uri, self.sparql)
@@ -302,11 +302,11 @@ class CreateGraph:
         g.add((textid_uri, RDF.type, URIRef(self.c_text_uri)))
         indexes_used = []
         for index, row in conll.iterrows():
-            word = row['FORM'].replace("'", "").replace("\"", "")
-            lemma = row['LEMMA'].replace("'", "").replace("\"", "")
-            word_id = row['ID']
+            word = row['form'].replace("'", "").replace("\"", "")
+            lemma = row['lemma'].replace("'", "").replace("\"", "")
+            word_id = row['id']
             sentence.append(unidecode(word))
-            if row['ID'] == 1:
+            if row['id'] == 1:
                 sentenceid_uri = URIRef(self.c_sentence_uri + "_" + str(doc_id) + "_" + str(sentence_id))
                 if sentence_id > 0:
                     sentence = [sentence[-1]]
@@ -325,21 +325,21 @@ class CreateGraph:
                     g.add((URIRef(self.c_sentence_uri + "_" + str(doc_id) + "_" + str(sentence_id - 1)),
                            URIRef(self.o_nextsentence_uri), sentenceid_uri))
             else:
-                word_id = row['ID']
+                word_id = row['id']
                 previous_uri = wordid_uri
                 wordid_uri = URIRef(self.d_word_uri + "_" + str(doc_id) + "_" + str(sentence_id) + "_" + str(word_id))
                 g.add((wordid_uri, URIRef(self.o_previousword_uri), previous_uri))
                 g.add((previous_uri, URIRef(self.o_nextword_uri), wordid_uri))
 
             g.add((wordid_uri, RDF.type, URIRef(self.c_word_uri)))
-            g.add((wordid_uri, URIRef(self.d_id_uri), Literal(row['ID'])))
+            g.add((wordid_uri, URIRef(self.d_id_uri), Literal(row['id'])))
             g.add((wordid_uri, URIRef(self.d_word_uri), Literal(word)))
-            g.add((wordid_uri, URIRef(self.d_edge_uri), Literal(row['DEPREL'])))
-            g.add((wordid_uri, URIRef(self.d_feats_uri), Literal(row['FEATS'])))
-            g.add((wordid_uri, URIRef(self.d_id_uri), Literal(row['ID'])))
+            g.add((wordid_uri, URIRef(self.d_edge_uri), Literal(row['deprel'])))
+            g.add((wordid_uri, URIRef(self.d_feats_uri), Literal(row['feats'])))
+            g.add((wordid_uri, URIRef(self.d_id_uri), Literal(row['id'])))
             g.add((wordid_uri, URIRef(self.d_lemma_uri), Literal(lemma)))
-            g.add((wordid_uri, URIRef(self.d_pos_uri), Literal(row['UPOS'])))
-            g.add((wordid_uri, URIRef(self.d_poscoarse_uri), Literal(row['XPOS'])))
+            g.add((wordid_uri, URIRef(self.d_pos_uri), Literal(row['upostag'])))
+            g.add((wordid_uri, URIRef(self.d_poscoarse_uri), Literal(row['xpostag'])))
             if self.preprocessing:
                 for o in range(0, len(processed_lines)):
                     word_to_check = processed_lines[o][0].replace(".", "").strip().lower()
@@ -351,13 +351,13 @@ class CreateGraph:
                                        Literal(processed_lines[o][k + 1])))
                         break
 
-            if row['HEAD'] == 0:
+            if row['head'] == 0:
                 g.add((wordid_uri, URIRef(self.o_from_sentence_uri), sentenceid_uri))
                 g.add((sentenceid_uri, URIRef(self.o_depgraph_uri), wordid_uri))
             else:
                 g.add((wordid_uri, URIRef(self.o_head_uri),
-                                 URIRef(self.d_word_uri + "_" + str(doc_id) + "_" + str(sentence_id) + "_" + str(row['HEAD']))))
-                g.add((URIRef(self.d_word_uri + "_" + str(doc_id) + "_" + str(sentence_id) + "_" + str(row['HEAD'])), URIRef(self.o_depgraph_uri),
+                                 URIRef(self.d_word_uri + "_" + str(doc_id) + "_" + str(sentence_id) + "_" + str(row['head']))))
+                g.add((URIRef(self.d_word_uri + "_" + str(doc_id) + "_" + str(sentence_id) + "_" + str(row['head'])), URIRef(self.o_depgraph_uri),
                                  wordid_uri))
         g.add((sentenceid_uri, URIRef(self.d_sentence_text), Literal(' '.join(sentence))))
         g.add((textid_uri, URIRef(self.o_contains_sentence), sentenceid_uri))
