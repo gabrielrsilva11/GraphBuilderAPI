@@ -1,6 +1,6 @@
 uri: http://www.ieeta-bit.pt/WikiNER_PT_DataProp#
 language: pt_core_news_sm
 graph_name: http://www.ieeta-bit.pt/WikiNER_PT_DataProp#
-connection: http://localhost:8890/sparql
+connection: http://estga-fiware.ua.pt:8890/sparql
 extra_connections:
   connections: [wikinerGrammarFeats, wikinerEntity, entityPresent]

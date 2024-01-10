@@ -161,6 +161,27 @@ class QueryBuilder:
         # print(query)
         return query
 
+    @dispatch(str, str, Literal)
+    def build_insert_query(self, s, p, o) -> str:
+        """
+        Builds a SPARQL query to insert a triple into a graph.
+        :param s: (string) subject of the triple
+        :param p: (string) predicate of the triple
+        :param o: (string) object of the triple
+        :return: A SPARQL query String.
+        """
+        triple = []
+        prefix_set = set()
+        for item in [s, p]:
+            uri_comps = re.search("(.*[#/])([^/]+)", item)
+            prefix_var = self.uri_dict[uri_comps.group(1)]
+            prefix_set.add("PREFIX " + prefix_var + ":<" + uri_comps.group(1) + ">")
+            triple.append(prefix_var + ":" + uri_comps.group(2))
+        triple.append("'" + repr(o.toPython()).replace('\'', '') + "'")
+        query = "\n".join(prefix_set) + "\nINSERT DATA {GRAPH <" + self.graph_name + "> {" + " ".join(triple) + "}}"
+        # print(query)
+        return query
+
     @dispatch(str, URIRef, str)
     def build_insert_query(self, s, p, o) -> str:
         """
@@ -182,7 +203,7 @@ class QueryBuilder:
         # print(query)
         return query
 
-    @dispatch(str, URIRef, str)
+    @dispatch(str, URIRef, Literal)
     def build_insert_query(self, s, p, o) -> str:
         """
         Builds a SPARQL query to insert a triple into a graph.
