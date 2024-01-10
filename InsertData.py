@@ -16,7 +16,7 @@ class CreateGraph:
     """
 
     def __init__(self, folder, graph_name, extra_connetions = [], main_uri='http://ieeta.pt/ontoud#',
-                    connection_string='http://localhost:8890/sparql', language="en", preprocessing = None):
+                    connection_string='http://localhost:8890/sparql', language="pt_core_news_sm", preprocessing = None, in_memory = False):
         """
         Instantiates a CreateGraph class.
         :param doc: path to the document or folder of documents to process.
@@ -30,11 +30,13 @@ class CreateGraph:
         self.folder_name = folder
         self.graph_name = graph_name
         self.main_uri = main_uri
+        self.in_memory = in_memory
         self.preprocessing = preprocessing
         self.nlp = init_parser(language,
-                               "stanza",
+                               "spacy",
                                ext_names={"conll_pd": "pandas"},
-                               parser_opts={"use_gpu": True, "verbose": False},
+                               disable_sbd=True,
+                               #parser_opts={"use_gpu": True, "verbose": False},
                                include_headers=True)
         self.connection = connection_string
         self.sparql = SPARQLWrapper(self.connection)
@@ -65,13 +67,14 @@ class CreateGraph:
         self.o_head_uri = self.main_uri + "head"
         self.d_sentence_text = self.main_uri + "senttext"
         self.d_edge_uri = self.main_uri + "edge"
-        self.d_feats_uri = self.main_uri + "feats"
+        #self.d_feats_uri = self.main_uri + "feats"
         self.d_id_uri = self.main_uri + "id"
         self.d_lemma_uri = self.main_uri + "lemma"
         self.d_pos_uri = self.main_uri + "pos"
         self.d_poscoarse_uri = self.main_uri + "poscoarse"
         self.d_word_uri = self.main_uri + "word"
-
+        #dict to keep track of the already inserted feats
+        self.d_feats_list = []
     def fetch_extra_properties(self, extra_connetions):
         connections_list = []
         for name in extra_connetions:
@@ -111,7 +114,7 @@ class CreateGraph:
         # data properties
         self.insert_data(self.d_sentence_text, RDF.type, OWL.DatatypeProperty, self.sparql)
         self.insert_data(self.d_edge_uri, RDF.type, OWL.DatatypeProperty, self.sparql)
-        self.insert_data(self.d_feats_uri, RDF.type, OWL.DatatypeProperty, self.sparql)
+        #self.insert_data(self.d_feats_uri, RDF.type, OWL.DatatypeProperty, self.sparql)
         self.insert_data(self.d_id_uri, RDF.type, OWL.DatatypeProperty, self.sparql)
         self.insert_data(self.d_lemma_uri, RDF.type, OWL.DatatypeProperty, self.sparql)
         self.insert_data(self.d_pos_uri, RDF.type, OWL.DatatypeProperty, self.sparql)
@@ -159,7 +162,7 @@ class CreateGraph:
         # data properties
         g.add((URIRef(self.d_sentence_text), RDF.type, OWL.DatatypeProperty))
         g.add((URIRef(self.d_edge_uri), RDF.type, OWL.DatatypeProperty))
-        g.add((URIRef(self.d_feats_uri), RDF.type, OWL.DatatypeProperty))
+        #g.add((URIRef(self.d_feats_uri), RDF.type, OWL.DatatypeProperty))
         g.add((URIRef(self.d_id_uri), RDF.type, OWL.DatatypeProperty))
         g.add((URIRef(self.d_lemma_uri), RDF.type, OWL.DatatypeProperty))
         g.add((URIRef(self.d_pos_uri), RDF.type, OWL.DatatypeProperty))
@@ -210,8 +213,8 @@ class CreateGraph:
         else:
             sentence = lines
 
-        sentence = sentence.replace(".", "").strip()
-        doc = self.nlp(sentence.lower())
+        sentence = sentence.strip()
+        doc = self.nlp(sentence)
         conll = doc._.pandas
         sentence = []
         textid_uri = URIRef(self.c_text_uri + "_" + str(doc_id))
@@ -250,15 +253,16 @@ class CreateGraph:
             self.insert_data(wordid_uri, self.d_id_uri, Literal(row['id']), self.sparql)
             self.insert_data(wordid_uri, self.d_word_uri, Literal(word), self.sparql)
             self.insert_data(wordid_uri, self.d_edge_uri, Literal(row['deprel']), self.sparql)
-            self.insert_data(wordid_uri, self.d_feats_uri, Literal(row['feats']), self.sparql)
+            self.process_feats(wordid_uri, row['feats'])
+            #self.insert_data(wordid_uri, self.d_feats_uri, Literal(row['feats']), self.sparql)
             self.insert_data(wordid_uri, self.d_id_uri, Literal(row['id']), self.sparql)
             self.insert_data(wordid_uri, self.d_lemma_uri, Literal(lemma), self.sparql)
             self.insert_data(wordid_uri, self.d_pos_uri, Literal(row['upostag']), self.sparql)
             self.insert_data(wordid_uri, self.d_poscoarse_uri, Literal(row['xpostag']), self.sparql)
             if self.preprocessing:
                 for o in range(0, len(processed_lines)):
-                    word_to_check = processed_lines[o][0].replace(".", "").strip().lower()
-                    if word == word_to_check and o <= index and o not in indexes_used:
+                    word_to_check = processed_lines[o][0].strip().lower()
+                    if word.lower() in word_to_check and o <= index and o not in indexes_used:
                         indexes_used.append(o)
                         for k in range(0, len(self.extra_object_properties)):
                             if processed_lines[o][k + 1] != '':
@@ -279,6 +283,27 @@ class CreateGraph:
         self.insert_data(sentenceid_uri, self.o_from_text, textid_uri, self.sparql)
         return sentence_id
 
+    def process_feats(self, wordid_uri, feats, g = None):
+        split_feats = feats.split("|")
+        if split_feats[0] != "_":
+            for feat in split_feats:
+                feat = feat.split("=")
+                if feat[0] in self.d_feats_list:
+                    if self.in_memory:
+                        g.add((wordid_uri, URIRef(self.main_uri+feat[0].lower()), Literal(feat[1])))
+                    else:
+                        self.insert_data(wordid_uri, self.main_uri+feat[0].lower(), Literal(feat[1]), self.sparql)
+                else:
+                    if self.in_memory:
+                        self.d_feats_list.append(feat[0])
+                        g.add((URIRef(self.main_uri+feat[0].lower()), RDF.type, OWL.DatatypeProperty))
+                        g.add((wordid_uri, URIRef(self.main_uri+feat[0].lower()), Literal(feat[1])))
+                    else:
+                        self.d_feats_list.append(feat[0])
+                        self.insert_data(self.main_uri+feat[0].lower(), RDF.type, OWL.DatatypeProperty, self.sparql)
+                        self.insert_data(wordid_uri, self.main_uri+feat[0].lower(), Literal(feat[1]), self.sparql)
+
+
     def insert_memory_script(self, lines, sentence_id, doc_id, g):
         """
         Main script to insert CoNLL data into a triple-storage.
@@ -294,8 +319,8 @@ class CreateGraph:
         else:
             sentence = lines
 
-        sentence = sentence.replace(".", "").strip()
-        doc = self.nlp(sentence.lower())
+        sentence = sentence.strip()
+        doc = self.nlp(sentence)
         conll = doc._.pandas
         sentence = []
         textid_uri = URIRef(self.c_text_uri + "_" + str(doc_id))
@@ -335,15 +360,16 @@ class CreateGraph:
             g.add((wordid_uri, URIRef(self.d_id_uri), Literal(row['id'])))
             g.add((wordid_uri, URIRef(self.d_word_uri), Literal(word)))
             g.add((wordid_uri, URIRef(self.d_edge_uri), Literal(row['deprel'])))
-            g.add((wordid_uri, URIRef(self.d_feats_uri), Literal(row['feats'])))
+            self.process_feats(wordid_uri, row['feats'], g)
+            #g.add((wordid_uri, URIRef(self.d_feats_uri), Literal(row['feats'])))
             g.add((wordid_uri, URIRef(self.d_id_uri), Literal(row['id'])))
             g.add((wordid_uri, URIRef(self.d_lemma_uri), Literal(lemma)))
             g.add((wordid_uri, URIRef(self.d_pos_uri), Literal(row['upostag'])))
             g.add((wordid_uri, URIRef(self.d_poscoarse_uri), Literal(row['xpostag'])))
             if self.preprocessing:
                 for o in range(0, len(processed_lines)):
-                    word_to_check = processed_lines[o][0].replace(".", "").strip().lower()
-                    if word == word_to_check and o <= index and o not in indexes_used:
+                    word_to_check = processed_lines[o][0].strip().lower()
+                    if word.lower() in word_to_check and o <= index and o not in indexes_used:
                         indexes_used.append(o)
                         for k in range(0, len(self.extra_object_properties)):
                             if processed_lines[o][k + 1] != '':
@@ -351,13 +377,13 @@ class CreateGraph:
                                        Literal(processed_lines[o][k + 1])))
                         break
 
-            if row['head'] == 0:
+            if row['HEAD'] == 0:
                 g.add((wordid_uri, URIRef(self.o_from_sentence_uri), sentenceid_uri))
                 g.add((sentenceid_uri, URIRef(self.o_depgraph_uri), wordid_uri))
             else:
                 g.add((wordid_uri, URIRef(self.o_head_uri),
-                                 URIRef(self.d_word_uri + "_" + str(doc_id) + "_" + str(sentence_id) + "_" + str(row['head']))))
-                g.add((URIRef(self.d_word_uri + "_" + str(doc_id) + "_" + str(sentence_id) + "_" + str(row['head'])), URIRef(self.o_depgraph_uri),
+                                 URIRef(self.d_word_uri + "_" + str(doc_id) + "_" + str(sentence_id) + "_" + str(row['HEAD']))))
+                g.add((URIRef(self.d_word_uri + "_" + str(doc_id) + "_" + str(sentence_id) + "_" + str(row['HEAD'])), URIRef(self.o_depgraph_uri),
                                  wordid_uri))
         g.add((sentenceid_uri, URIRef(self.d_sentence_text), Literal(' '.join(sentence))))
         g.add((textid_uri, URIRef(self.o_contains_sentence), sentenceid_uri))
@@ -376,7 +402,7 @@ class CreateGraph:
         self.sparql.setQuery(query)
         results = self.sparql.query()
 
-    def create_graph(self, in_memory=False, save_file = "Serialized"):
+    def create_graph(self, save_file = "Serialized"):
         """
 
         :param in_memory: Boolean which indicates whether we want to create the graph in-memory or upload to a storage.
@@ -386,7 +412,7 @@ class CreateGraph:
         i = 0
         lines = ''
         files = [f for f in os.listdir(self.folder_name) if os.path.isfile(os.path.join(self.folder_name, f))]
-        if in_memory:
+        if self.in_memory:
             g = Graph()
             self.insert_memory_relationship_data(g)
         else:
@@ -403,7 +429,7 @@ class CreateGraph:
                             #print(repr(line))
                             if line != "\n":
                                 lines = lines + line
-                                if in_memory:
+                                if self.in_memory:
                                     sentence_id = self.insert_memory_script(line, sentence_id, doc_id, g)
                                 else:
                                     sentence_id = self.insert_db_script(line, sentence_id, doc_id)
@@ -421,5 +447,5 @@ class CreateGraph:
                             #     else:
                             #         sentence_id = self.insert_db_script(lines, sentence_id, doc_id)
             doc_id += 1
-        if in_memory:
+        if self.in_memory:
             g.serialize(destination=save_file+".ttl", format="turtle")
