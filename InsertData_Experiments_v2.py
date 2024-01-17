@@ -80,9 +80,10 @@ class CreateGraph:
         #dict to keep track of the already inserted feats
         self.d_feats_list = []
         self.feats_specific_list = []
-        self.edges_list = []
-        self.pos_list = []
-        self.poscoarse_list = []
+        self.objectDict = {"edge": [], "pos": [], "poscoarse": []}
+        # self.edges_list = []
+        # self.pos_list = []
+        # self.poscoarse_list = []
 
     def fetch_extra_properties(self, extra_connetions):
         connections_list = []
@@ -100,7 +101,12 @@ class CreateGraph:
         self.insert_data(self.c_text_uri, RDF.type, OWL.Class, self.sparql)
         self.insert_data(self.c_sentence_uri, RDF.type, OWL.Class, self.sparql)
         self.insert_data(self.c_word_uri, RDF.type, OWL.Class, self.sparql)
+        self.insert_data(self.c_attributes_uri, RDF.type, OWL.Class, self.sparql)
 
+        self.insert_data(self.o_pos_uri, RDFS.subClassOf, self.c_attributes_uri, self.sparql)
+        self.insert_data(self.o_poscoarse_uri, RDFS.subClassOf, self.c_attributes_uri, self.sparql)
+        self.insert_data(self.o_edge_uri, RDFS.subClassOf, self.c_attributes_uri, self.sparql)
+        self.insert_data(self.o_feats_uri, RDFS.subClassOf, self.c_attributes_uri, self.sparql)
 
         # object properties
         self.insert_data(self.o_head_uri, RDF.type, OWL.ObjectProperty, self.sparql)
@@ -115,10 +121,6 @@ class CreateGraph:
         self.insert_data(self.o_previousword_uri, RDF.type, OWL.ObjectProperty, self.sparql)
         self.insert_data(self.o_from_sentence_uri, RDF.type, OWL.ObjectProperty, self.sparql)
         self.insert_data(self.o_mapper_uri, RDF.type, OWL.ObjectProperty, self.sparql)
-        self.insert_data(self.o_pos_uri, RDFS.type, OWL.ObjectProperty, self.sparql)
-        self.insert_data(self.o_poscoarse_uri, RDFS.type, OWL.ObjectProperty, self.sparql)
-        self.insert_data(self.o_edge_uri, RDFS.type, OWL.ObjectProperty, self.sparql)
-        self.insert_data(self.o_feats_uri, RDF.type, OWL.ObjectProperty, self.sparql)
 
         #Insert the extras
         if self.extra_object_properties:
@@ -308,59 +310,68 @@ class CreateGraph:
                         if self.in_memory:
                             g.add((wordid_uri, URIRef(self.main_uri +"feat_"+ feat[0].lower()), URIRef(self.main_uri+feat[1].lower())))
                         else:
-                            self.insert_data(wordid_uri, self.main_uri+"feat_"+feat[0].lower(), Literal(feat[1]), self.sparql)
+                            self.insert_data(wordid_uri, self.main_uri+"feat_"+feat[0].lower(), self.main_uri+feat[1].lower(), self.sparql)
                     else:
                         self.feats_specific_list.append(feat[1])
                         if self.in_memory:
                             g.add((URIRef(self.main_uri + feat[1].lower()), RDF.type, URIRef(self.main_uri + "feat_" + feat[0].lower())))
                             g.add((wordid_uri, URIRef(self.main_uri +"feat_"+ feat[0].lower()), URIRef(self.main_uri+feat[1].lower())))
                         else:
-                            self.insert_data(wordid_uri, self.main_uri+"feat_"+feat[0].lower(), Literal(feat[1]), self.sparql)
+                            self.insert_data(self.main_uri + feat[1].lower(), RDF.type, self.main_uri + "feat_" + feat[0].lower(), self.sparql)
+                            self.insert_data(wordid_uri, self.main_uri+"feat_"+feat[0].lower(), self.main_uri+feat[1].lower(), self.sparql)
                 else:
+                    self.d_feats_list.append(feat[0])
+                    self.feats_specific_list.append(feat[1])
                     if self.in_memory:
-                        self.d_feats_list.append(feat[0])
-                        self.feats_specific_list.append(feat[1])
                         g.add((URIRef(self.main_uri + "feat_" + feat[0].lower()), RDFS.subClassOf,
                                URIRef(self.o_feats_uri)))
                         g.add((URIRef(self.main_uri+"feat_"+feat[0].lower()), RDF.type, OWL.ObjectProperty))
                         g.add((URIRef(self.main_uri + feat[1].lower()), RDF.type, URIRef(self.main_uri+"feat_"+feat[0].lower())))
                         g.add((wordid_uri, URIRef(self.main_uri +"feat_"+ feat[0].lower()), URIRef(self.main_uri +feat[1].lower())))
                     else:
-                        self.d_feats_list.append(feat[0])
-                        self.insert_data(self.main_uri+feat[0].lower(), RDF.type, OWL.DatatypeProperty, self.sparql)
-                        self.insert_data(wordid_uri, self.main_uri+feat[0].lower(), Literal(feat[1]), self.sparql)
+
+                        self.insert_data(self.main_uri+feat[0].lower(), RDFS.subClassOf, self.o_feats_uri, self.sparql)
+                        self.insert_data(self.main_uri+"feat_"+feat[0].lower(), RDF.type, OWL.ObjectProperty, self.sparql)
+                        self.insert_data(self.main_uri + feat[1].lower(), RDF.Type, self.main_uri+"feat_"+feat[0].lower(), self.sparql)
+                        self.insert_data(wordid_uri, self.main_uri +"feat_"+ feat[0].lower(), self.main_uri +feat[1].lower(), self.sparql)
 
     def process_conll_as_objects(self, prop_type, word, uri, to_add, graph = None):
         to_add_uri = self.main_uri + to_add
-        if prop_type == "edge":
-            if to_add not in self.edges_list:
-                self.edges_list.append(to_add)
-                if self.in_memory:
-                    graph.add((URIRef(uri), RDF.type, OWL.ObjectProperty))
-                    graph.add((URIRef(to_add_uri), RDF.type, URIRef(uri)))
-                else:
-                    self.insert_data(to_add_uri, RDFS.subClassOf, uri, self.sparql)
-        elif prop_type == "pos":
-            if to_add not in self.pos_list:
-                self.pos_list.append(to_add)
-                if self.in_memory:
-                    graph.add((URIRef(uri), RDF.type, OWL.ObjectProperty))
-                    graph.add((URIRef(to_add_uri), RDF.type, URIRef(uri)))
-                else:
-                    self.insert_data(to_add_uri, RDFS.subClassOf, uri, self.sparql)
-        elif prop_type == "poscoarse":
-            if to_add not in self.poscoarse_list:
-                self.poscoarse_list.append(to_add)
-                if self.in_memory:
-                    graph.add((URIRef(uri), RDF.type, OWL.ObjectProperty))
-                    graph.add((URIRef(to_add_uri), RDF.type, URIRef(uri)))
-                else:
-                    self.insert_data(to_add_uri, RDFS.subClassOf, uri, self.sparql)
+        added = True
+        if to_add not in self.objectDict[prop_type]:
+            self.objectDict[prop_type].append(to_add)
+            added = True
+        else:
+            added = False
+        # if prop_type == "edge":
+        #     if to_add not in self.edges_list:
+        #         self.edges_list.append(to_add)
+        #         added = True
+        #     else:
+        #         added = False
+        # elif prop_type == "pos":
+        #     if to_add not in self.pos_list:
+        #         self.pos_list.append(to_add)
+        #         added = True
+        #     else:
+        #         added = False
+        # elif prop_type == "poscoarse":
+        #     if to_add not in self.poscoarse_list:
+        #         self.poscoarse_list.append(to_add)
+        #         added = True
+        #     else:
+        #         added = False
 
         if self.in_memory:
+            if added:
+                graph.add((URIRef(uri), RDF.type, OWL.ObjectProperty))
+                graph.add((URIRef(to_add_uri), RDF.type, URIRef(uri)))
             graph.add((word, URIRef(uri), URIRef(to_add_uri)))
         else:
-            self.insert_data(word, RDFS.type, to_add_uri, self.sparql)
+            if added:
+                self.insert_data(uri, RDF.type, OWL.ObjectProperty)
+                self.insert_data(to_add_uri, RDFS.type, uri, self.sparql)
+            self.insert_data(word, uri, to_add_uri, self.sparql)
 
     def insert_memory_script(self, lines, sentence_id, doc_id, g):
         """
@@ -385,7 +396,6 @@ class CreateGraph:
         g.add((textid_uri, RDF.type, URIRef(self.c_text_uri)))
         indexes_used = []
         for index, row in conll.iterrows():
-            print(row)
             word = row['FORM'].replace("'", "").replace("\"", "")
             lemma = row['LEMMA'].replace("'", "").replace("\"", "")
             word_id = row['ID']

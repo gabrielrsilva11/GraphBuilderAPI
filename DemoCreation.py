@@ -35,6 +35,6 @@ config_file = open("create_graph.yaml", 'r')
 config_data = yaml.load(config_file, Loader=yaml.FullLoader)
 
 graph = CreateGraph(folder="WikiNER_Subsample", graph_name=config_data['graph_name'], extra_connetions=config_data['extra_connections']['connections'],
-                    connection_string=config_data['connection'], main_uri=config_data['uri'], language=config_data['language'], preprocessing=preprocess_sentence, in_memory=False)
+                    connection_string=config_data['connection'], main_uri=config_data['uri'], language=config_data['language'], preprocessing=preprocess_sentence, in_memory=True)
 
-graph.create_graph(save_file="WikiNERv4")
+graph.create_graph(save_file="WikiNERv5")
