@@ -10,7 +10,8 @@ class QueryBuilder:
         :param graph_name: name of the graph to query
         """
         self.uri_dict = {'http://www.w3.org/1999/02/22-rdf-syntax-ns#': 'rdf',
-                         'http://www.w3.org/2002/07/owl#': 'owl'
+                         'http://www.w3.org/2002/07/owl#': 'owl',
+                        'http://www.w3.org/2000/01/rdf-schema#': 'rdfs'
                          }
         self.uri_dict.update({main_uri : 'main'})
         self.main_uri = main_uri
@@ -225,6 +226,27 @@ class QueryBuilder:
         return query
 
     @dispatch(str, URIRef, Literal)
+    def build_insert_query(self, s, p, o) -> str:
+        """
+        Builds a SPARQL query to insert a triple into a graph.
+        :param s: (string) subject of the triple
+        :param p: (string) predicate of the triple
+        :param o: (Literal) object of the triple
+        :return: A SPARQL query String.
+        """
+        triple = []
+        prefix_set = set()
+        for item in [s, p]:
+            uri_comps = re.search("(.*[#/])([^/]+)", item)
+            prefix_var = self.uri_dict[uri_comps.group(1)]
+            prefix_set.add("PREFIX " + prefix_var + ":<" + uri_comps.group(1) + ">")
+            triple.append(prefix_var + ":" + uri_comps.group(2))
+        triple.append("'" + repr(o.toPython()).replace('\'', '') + "'")
+        query = "\n".join(prefix_set) + "\nINSERT DATA {GRAPH <" + self.graph_name + "> {" + " ".join(triple) + "}}"
+        # print(query)
+        return query
+
+    @dispatch(URIRef, URIRef, Literal)
     def build_insert_query(self, s, p, o) -> str:
         """
         Builds a SPARQL query to insert a triple into a graph.

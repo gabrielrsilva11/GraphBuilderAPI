@@ -1,6 +1,6 @@
-uri: http://www.ieeta-bit.pt/Experiment_2#
+uri: http://www.ieeta-bit.pt/WikiNER_Objects#
 language: pt_core_news_sm
-graph_name: http://www.ieeta-bit.pt/Experiment_2#
+graph_name: http://www.ieeta-bit.pt/WikiNER_Objects#
 connection: http://localhost:8890/sparql
 extra_connections:
   connections: [wikinerGrammarFeats, wikinerEntity, entityPresent]

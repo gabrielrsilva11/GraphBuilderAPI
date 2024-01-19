@@ -105,6 +105,7 @@ class CreateGraph:
         self.insert_data(self.o_poscoarse_uri, RDFS.subClassOf, self.c_attributes_uri, self.sparql)
         self.insert_data(self.o_edge_uri, RDFS.subClassOf, self.c_attributes_uri, self.sparql)
         self.insert_data(self.o_feats_uri, RDFS.subClassOf, self.c_attributes_uri, self.sparql)
+
         # object properties
         self.insert_data(self.o_head_uri, RDF.type, OWL.ObjectProperty, self.sparql)
         self.insert_data(self.o_depgraph_uri, RDF.type, OWL.ObjectProperty, self.sparql)

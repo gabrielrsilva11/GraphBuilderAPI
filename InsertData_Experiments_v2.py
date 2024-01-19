@@ -332,7 +332,7 @@ class CreateGraph:
 
                         self.insert_data(self.main_uri+feat[0].lower(), RDFS.subClassOf, self.o_feats_uri, self.sparql)
                         self.insert_data(self.main_uri+"feat_"+feat[0].lower(), RDF.type, OWL.ObjectProperty, self.sparql)
-                        self.insert_data(self.main_uri + feat[1].lower(), RDF.Type, self.main_uri+"feat_"+feat[0].lower(), self.sparql)
+                        self.insert_data(self.main_uri + feat[1].lower(), RDF.type, self.main_uri+"feat_"+feat[0].lower(), self.sparql)
                         self.insert_data(wordid_uri, self.main_uri +"feat_"+ feat[0].lower(), self.main_uri +feat[1].lower(), self.sparql)
 
     def process_conll_as_objects(self, prop_type, word, uri, to_add, graph = None):
@@ -369,8 +369,8 @@ class CreateGraph:
             graph.add((word, URIRef(uri), URIRef(to_add_uri)))
         else:
             if added:
-                self.insert_data(uri, RDF.type, OWL.ObjectProperty)
-                self.insert_data(to_add_uri, RDFS.type, uri, self.sparql)
+                self.insert_data(uri, RDF.type, OWL.ObjectProperty, self.sparql)
+                self.insert_data(to_add_uri, RDF.type, uri, self.sparql)
             self.insert_data(word, uri, to_add_uri, self.sparql)
 
     def insert_memory_script(self, lines, sentence_id, doc_id, g):
