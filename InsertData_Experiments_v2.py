@@ -203,7 +203,6 @@ class CreateGraph:
                 results = wrapper.query()
                 str_error = None
             except:
-                print(results)
                 str_error = "Error"
                 pass
 
@@ -275,7 +274,7 @@ class CreateGraph:
             self.insert_data(wordid_uri, self.d_lemma_uri, Literal(lemma), self.sparql)
             self.process_conll_as_objects('edge', wordid_uri, self.o_edge_uri, row['DEPREL'])
             self.process_conll_as_objects('pos', wordid_uri, self.o_pos_uri, row['UPOS'])
-            self.process_conll_as_objects('poscoarse', wordid_uri, self.o_poscoarse_uri, row['XPOS'])
+            #self.process_conll_as_objects('poscoarse', wordid_uri, self.o_poscoarse_uri, row['XPOS'])
             if self.preprocessing:
                 for o in range(0, len(processed_lines)):
                     word_to_check = processed_lines[o][0].strip().lower()
@@ -305,6 +304,7 @@ class CreateGraph:
         if split_feats[0] != "_":
             for feat in split_feats:
                 feat = feat.split("=")
+                feat[1] = feat[1].replace(",", "_")
                 if feat[0] in self.d_feats_list:
                     if feat[1] in self.feats_specific_list:
                         if self.in_memory:
@@ -336,6 +336,8 @@ class CreateGraph:
                         self.insert_data(wordid_uri, self.main_uri +"feat_"+ feat[0].lower(), self.main_uri +feat[1].lower(), self.sparql)
 
     def process_conll_as_objects(self, prop_type, word, uri, to_add, graph = None):
+        if to_add == "``":
+            to_add = "PUNCT"
         to_add_uri = self.main_uri + to_add
         added = True
         if to_add not in self.objectDict[prop_type]:
@@ -343,24 +345,6 @@ class CreateGraph:
             added = True
         else:
             added = False
-        # if prop_type == "edge":
-        #     if to_add not in self.edges_list:
-        #         self.edges_list.append(to_add)
-        #         added = True
-        #     else:
-        #         added = False
-        # elif prop_type == "pos":
-        #     if to_add not in self.pos_list:
-        #         self.pos_list.append(to_add)
-        #         added = True
-        #     else:
-        #         added = False
-        # elif prop_type == "poscoarse":
-        #     if to_add not in self.poscoarse_list:
-        #         self.poscoarse_list.append(to_add)
-        #         added = True
-        #     else:
-        #         added = False
 
         if self.in_memory:
             if added:
