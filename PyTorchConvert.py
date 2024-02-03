@@ -77,8 +77,8 @@ def wandb_data(dataset, data):
     wandb.log(summary)
 
 
-config_file = open('conf.yaml', 'r')
-training_config = open('training_conf.yaml', 'r')
+config_file = open('configs/graphml_conf_task1.yaml', 'r')
+training_config = open('configs/training_conf.yaml', 'r')
 
 config_data = yaml.load(config_file, Loader=yaml.FullLoader)
 training_config = yaml.load(training_config, Loader=yaml.FullLoader)
@@ -107,8 +107,8 @@ train_loader = NeighborLoader(
 )
 
 #Creating the model
-model = Spline(out_channels=data.num_classes)
-#model = GAT(hidden_channels=64, out_channels=data.num_classes)
+#model = Spline(out_channels=data.num_classes)
+model = GAT(hidden_channels=64, out_channels=data.num_classes)
 model = to_hetero(model, data.metadata(), aggr='sum')
 optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
 # optimizer = torch.optim.Adam(model.parameters(), lr=0.001, weight_decay=5e-4)
@@ -120,11 +120,11 @@ model = model.to(device)
 data_split = data_split.to(device)
 
 with torch.no_grad():  # Initialize lazy modules.
-    out = model(data.x_dict, data.edge_index_dict)
+    out = model(data_split.x_dict, data_split.edge_index_dict)
 
 if enable_wandb:
     wandb_data(data, data_split)
-    wandb.watch(model)
+    #wandb.watch(model)
 
 
 epochs = training_config['epochs']
@@ -157,7 +157,7 @@ if enable_wandb:
     wandb.log({"gat/roc": wandb.plot.roc_curve(ground_truth, predict_percents, labels=targets['originalId'])})
     wandb.log({"gat/pr": wandb.plot.pr_curve(ground_truth, predict_percents, labels=targets['originalId'])})
 
-# torch.save(model, "models/gnn.pt")
+#torch.save(model, "models/gnn.pt")
 #torch.save(data, "data/GraphData/1_to_3000.pt")
 #targets.to_pickle("data/targets.pkl")
 

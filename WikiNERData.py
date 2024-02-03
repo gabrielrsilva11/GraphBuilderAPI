@@ -102,7 +102,7 @@ def get_ner_ud_path(nlp):
                                         path_dict[path_counter_int] = dependency_list
                                         path_counter[path_counter_int] = 1
                                         path_counter_int += 1
-    path_file = open("paths_file.txt", "w")
+    path_file = open("TTLs/paths_file.txt", "w")
     for key in path_counter:
         file_writing = str(path_dict[key]) + ":" + str(path_counter[key]) + "\n"
         path_file.write(file_writing)
@@ -148,7 +148,7 @@ def get_ner_ud_path_v2():
                     path_counter[path_counter_int] = 1
                     path_counter_int += 1
         previous_id = sentence_id
-    path_file = open("paths_file.txt", "w")
+    path_file = open("TTLs/paths_file.txt", "w")
     for key in path_counter:
         file_writing = str(path_dict[key]) + ":" + str(path_counter[key]) + "\n"
         path_file.write(file_writing)
@@ -182,7 +182,7 @@ nlp = init_parser("pt",
 
 #get_ner_ud_path_v2()
 
-path_file = open("paths_file.txt", "r")
+path_file = open("TTLs/paths_file.txt", "r")
 counter_list = []
 for line in path_file:
     line_split = line.rsplit(":", 1)
@@ -190,7 +190,7 @@ for line in path_file:
 
 counter_list.sort(reverse=True, key=lambda x: x[1])
 print(counter_list)
-sorted_file = open("sorted_paths.txt", "w")
+sorted_file = open("TTLs/sorted_paths.txt", "w")
 for path in counter_list:
     file_writing = path[0] + ":" + str(path[1]) + "\n"
     sorted_file.write(file_writing)

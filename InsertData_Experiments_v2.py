@@ -1,4 +1,5 @@
 import os
+import string
 from time import sleep
 import warnings
 from SPARQLWrapper import SPARQLWrapper, POST
@@ -8,13 +9,13 @@ from unidecode import unidecode
 from Query_Builder import QueryBuilder
 from rdflib import Graph, URIRef, Literal
 from rdflib.namespace import RDFS, RDF, DOAP, FOAF, ORG, OWL, SKOS, XSD
+import re
 
 class CreateGraph:
     """
     Main class used to create the knowledge graphs.
 
     """
-
     def __init__(self, folder, graph_name, extra_connetions = [], main_uri='http://ieeta.pt/ontoud#',
                     connection_string='http://localhost:8890/sparql', language="pt_core_news_sm", preprocessing = None, in_memory = False):
         """
@@ -207,6 +208,8 @@ class CreateGraph:
                 pass
 
             if str_error:
+                if i == 0:
+                    print(query)
                 print("Error occurred. Attempting to upload triple again.")
                 print("Attempt number: ", i)
                 sleep(2*i)  # wait for 2*attempt number seconds before trying to fetch the data again
@@ -274,7 +277,7 @@ class CreateGraph:
             self.insert_data(wordid_uri, self.d_lemma_uri, Literal(lemma), self.sparql)
             self.process_conll_as_objects('edge', wordid_uri, self.o_edge_uri, row['DEPREL'])
             self.process_conll_as_objects('pos', wordid_uri, self.o_pos_uri, row['UPOS'])
-            #self.process_conll_as_objects('poscoarse', wordid_uri, self.o_poscoarse_uri, row['XPOS'])
+            self.process_conll_as_objects('poscoarse', wordid_uri, self.o_poscoarse_uri, row['XPOS'])
             if self.preprocessing:
                 for o in range(0, len(processed_lines)):
                     word_to_check = processed_lines[o][0].strip().lower()
@@ -336,8 +339,15 @@ class CreateGraph:
                         self.insert_data(wordid_uri, self.main_uri +"feat_"+ feat[0].lower(), self.main_uri +feat[1].lower(), self.sparql)
 
     def process_conll_as_objects(self, prop_type, word, uri, to_add, graph = None):
-        if to_add == "``":
-            to_add = "PUNCT"
+        if prop_type == "poscoarse":
+            transformed = ''
+            for character in to_add:
+                if character in string.punctuation:
+                    transformed = transformed+str(ord(character))
+                else:
+                    transformed = transformed+character
+            to_add = transformed
+
         to_add_uri = self.main_uri + to_add
         added = True
         if to_add not in self.objectDict[prop_type]:

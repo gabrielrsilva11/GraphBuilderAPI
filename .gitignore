@@ -1,10 +1,10 @@
-/data/index_ptwiki-latest.db
-/data/ptwiki-latest-page.db
-/data/ptwiki-latest-page.sql
+/Data_to_process/wikiner_data_files/index_ptwiki-latest.db
+/Data_to_process/wikiner_data_files/ptwiki-latest-page.db
+/Data_to_process/wikiner_data_files/ptwiki-latest-page.sql
 .DS_Store
-wikimapper_data/index_ptwiki-latest.db
-wikimapper_data/ptwiki-latest-page.db
-wikimapper_data/ptwiki-latest-page.sql
+Data_to_process/wikimapper_data/index_ptwiki-latest.db
+Data_to_process/wikimapper_data/ptwiki-latest-page.db
+Data_to_process/wikimapper_data/ptwiki-latest-page.sql
 /Grapfs
-/data/mag/
+/Data_to_process/wikiner_data_files/mag/
 /__pycache__

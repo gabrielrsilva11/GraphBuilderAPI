@@ -137,7 +137,7 @@ class OntoUD:
         :param text:
         :return:
         """
-        mapper = WikiMapper("data/index_ptwiki-latest.db")
+        mapper = WikiMapper("Data_to_process/wikiner_data_files/index_ptwiki-latest.db")
         wiki_id = mapper.title_to_id(text)
         titles = mapper.id_to_titles(wiki_id)
         return wiki_id, titles

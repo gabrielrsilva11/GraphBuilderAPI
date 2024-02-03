@@ -189,10 +189,10 @@ class CreateGraph:
             except:
                 str_error = "Error"
                 pass
-
             if str_error:
                 print("Error occurred. Attempting to upload triple again.")
                 print("Attempt number: ", i)
+
                 sleep(2*i)  # wait for 2*attempt number seconds before trying to fetch the data again
             else:
                 break

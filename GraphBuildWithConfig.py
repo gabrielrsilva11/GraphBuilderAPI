@@ -38,6 +38,7 @@ def fetch_graph(ids_to_fetch, config_data):
                         wikidata_id = True
                 else:
                     wikidata_id = True
+
                 for s2, p2, o2 in graph.triples((URIRef(s), None, None)):
                     uri_type = p2.__str__().split("#")[-1]
                     #An edge to add
@@ -52,9 +53,8 @@ def fetch_graph(ids_to_fetch, config_data):
                     #Node Attribute
                     else:
                         node_features[uri_type] = o2.__str__()
-                if config_data['target'][0]['name'][0] not in node_features and node_type == config_data['target'][0]['node']:
-                    node_features["wikinerEntity"] = "No"
-
+                #if config_data['target'][0]['name'][0] not in node_features and node_type == config_data['target'][0]['node']:
+                #    node_features["wikinerEntity"] = "No"
                 #Balance every 1 in 20 nodes
                 if balance and not wikidata_id and i > 20:
                     if s.__str__() not in indexes[layer['name']]:
@@ -83,6 +83,11 @@ def map_uri_to_index(indexes, config_data):
 
 def build_node_relationships(uniqueIds, nodeList, source_name, target_name, balancing):
     original_df = pd.DataFrame(data=nodeList, columns=["source", "target"])
+    print(original_df['source'][0])
+    print(original_df['target'][0])
+    print(source_name)
+    print(target_name)
+    print(uniqueIds)
     source_df = pd.merge(original_df['source'], uniqueIds[source_name],
                          left_on='source', right_on='originalId', how='left')
     target_df = pd.merge(original_df['target'], uniqueIds[target_name],
@@ -104,9 +109,10 @@ def build_targets(nodes_df, config_data):
         'originalId': unique_targets_id,
         'mappedId': pd.RangeIndex(len(unique_targets_id))
     })
-    targets_df = pd.merge(nodes_df['wikinerEntity'], unique_targets_df,
-                          left_on='wikinerEntity', right_on='originalId', how='left')
+    targets_df = pd.merge(nodes_df[config_data['target'][0]['name'][0]], unique_targets_df,
+                          left_on=config_data['target'][0]['name'][0], right_on='originalId', how='left')
     targets = torch.from_numpy(targets_df['mappedId'].values)
+    print(targets)
     return targets, unique_targets_df, len(unique_targets_df)
 
 def build_graph(nodes, edges, mapped_ids, config_data):

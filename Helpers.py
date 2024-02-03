@@ -282,7 +282,7 @@ def fetch_wiki_data(text: str):
     :param text:
     :return:
     """
-    mapper = WikiMapper("wikimapper_data/index_ptwiki-latest.db")
+    mapper = WikiMapper("Data_to_process/wikimapper_data/index_ptwiki-latest.db")
     wiki_id = mapper.title_to_id(text)
     titles = mapper.id_to_titles(wiki_id)
     return wiki_id, titles

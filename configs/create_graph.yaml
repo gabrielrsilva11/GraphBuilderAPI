@@ -1,0 +1,9 @@
+folder: Data_to_process/Task1/Merged
+uri: http://www.ieeta-bit.pt/Subtask1_ObjectPropertiesv2#
+#language: pt_core_news_sm
+language: en_core_web_sm
+graph_name: http://www.ieeta-bit.pt/Subtask1_ObjectProperties#
+connection: http://localhost:8890/sparql
+extra_connections:
+  connections: [softwareMention]
+  #connections: [wikinerGrammarFeats, wikinerEntity, entityPresent]

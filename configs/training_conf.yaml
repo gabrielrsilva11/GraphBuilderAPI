@@ -1,0 +1,7 @@
+epochs: 500
+batch_size: 128
+validation_split: 0.15
+test_split: 0.2
+data_file: data/GraphData/1_to_3000.pt
+targets_file: data/targets.pkl
+model_file: models/gnn.pt
