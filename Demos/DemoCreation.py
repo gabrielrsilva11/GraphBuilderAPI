@@ -1,4 +1,4 @@
-from InsertData_Experiments_v2 import CreateGraph
+from InsertData import CreateGraph
 import yaml
 import copy
 
@@ -37,4 +37,4 @@ config_data = yaml.load(config_file, Loader=yaml.FullLoader)
 graph = CreateGraph(folder=config_data['folder'], graph_name=config_data['graph_name'], extra_connetions=config_data['extra_connections']['connections'],
                     connection_string=config_data['connection'], main_uri=config_data['uri'], language=config_data['language'], preprocessing=preprocess_sentence, in_memory=False)
 
-graph.create_graph(save_file="Data_to_process/Task1/Results/Subtask1_Graph")
+graph.create_graph(save_file="../TTLs/Subtask1_DataPropertiesGraph")

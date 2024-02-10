@@ -5,160 +5,160 @@ connection:
 enable_wandb:
   True
 nodes:
-  - name: edge
-    uri: http://www.ieeta-bit.pt/Subtask1_ObjectProperties#edge
-    edges_source: []
-    edges: []
-    edges_target: []
-    edges_uri: []
-    attributes: []
-  - name: pos
-    uri: http://www.ieeta-bit.pt/Subtask1_ObjectProperties#pos
-    edges_source: [ ]
-    edges: [ ]
-    edges_target: [ ]
-    edges_uri: [ ]
-    attributes: [ ]
-  - name: poscoarse
-    uri: http://www.ieeta-bit.pt/Subtask1_ObjectProperties#poscoarse
-    edges_source: [ ]
-    edges: [ ]
-    edges_target: [ ]
-    edges_uri: [ ]
-    attributes: [ ]
-  - name: feat_aspect
-    uri: http://www.ieeta-bit.pt/Subtask1_ObjectProperties#feat_aspect
-    edges_source: [ ]
-    edges: [ ]
-    edges_target: [ ]
-    edges_uri: [ ]
-    attributes: [ ]
-  - name: feat_case
-    uri: http://www.ieeta-bit.pt/Subtask1_ObjectProperties#feat_case
-    edges_source: [ ]
-    edges: [ ]
-    edges_target: [ ]
-    edges_uri: [ ]
-    attributes: [ ]
-  - name: feat_definite
-    uri: http://www.ieeta-bit.pt/Subtask1_ObjectProperties#feat_definite
-    edges_source: [ ]
-    edges: [ ]
-    edges_target: [ ]
-    edges_uri: [ ]
-    attributes: [ ]
-  - name: feat_degree
-    uri: http://www.ieeta-bit.pt/Subtask1_ObjectProperties#feat_degree
-    edges_source: [ ]
-    edges: [ ]
-    edges_target: [ ]
-    edges_uri: [ ]
-    attributes: [ ]
-  - name: feat_foreign
-    uri: http://www.ieeta-bit.pt/Subtask1_ObjectProperties#feat_foreign
-    edges_source: [ ]
-    edges: [ ]
-    edges_target: [ ]
-    edges_uri: [ ]
-    attributes: [ ]
-  - name: feat_gender
-    uri: http://www.ieeta-bit.pt/Subtask1_ObjectProperties#feat_gender
-    edges_source: [ ]
-    edges: [ ]
-    edges_target: [ ]
-    edges_uri: [ ]
-    attributes: [ ]
-  - name: feat_mood
-    uri: http://www.ieeta-bit.pt/Subtask1_ObjectProperties#feat_mood
-    edges_source: [ ]
-    edges: [ ]
-    edges_target: [ ]
-    edges_uri: [ ]
-    attributes: [ ]
-  - name: feat_number
-    uri: http://www.ieeta-bit.pt/Subtask1_ObjectProperties#feat_number
-    edges_source: [ ]
-    edges: [ ]
-    edges_target: [ ]
-    edges_uri: [ ]
-    attributes: [ ]
-  - name: feat_numtype
-    uri: http://www.ieeta-bit.pt/Subtask1_ObjectProperties#feat_numtype
-    edges_source: [ ]
-    edges: [ ]
-    edges_target: [ ]
-    edges_uri: [ ]
-    attributes: [ ]
-  - name: feat_person
-    uri: http://www.ieeta-bit.pt/Subtask1_ObjectProperties#feat_person
-    edges_source: [ ]
-    edges: [ ]
-    edges_target: [ ]
-    edges_uri: [ ]
-    attributes: [ ]
-  - name: feat_polarity
-    uri: http://www.ieeta-bit.pt/Subtask1_ObjectProperties#feat_polarity
-    edges_source: [ ]
-    edges: [ ]
-    edges_target: [ ]
-    edges_uri: [ ]
-    attributes: [ ]
-  - name: feat_poss
-    uri: http://www.ieeta-bit.pt/Subtask1_ObjectProperties#feat_poss
-    edges_source: [ ]
-    edges: [ ]
-    edges_target: [ ]
-    edges_uri: [ ]
-    attributes: [ ]
-  - name: feat_prontype
-    uri: http://www.ieeta-bit.pt/Subtask1_ObjectProperties#feat_prontype
-    edges_source: [ ]
-    edges: [ ]
-    edges_target: [ ]
-    edges_uri: [ ]
-    attributes: [ ]
-  - name: feat_punctside
-    uri: http://www.ieeta-bit.pt/Subtask1_ObjectProperties#feat_punctside
-    edges_source: [ ]
-    edges: [ ]
-    edges_target: [ ]
-    edges_uri: [ ]
-    attributes: [ ]
-  - name: feat_puncttype
-    uri: http://www.ieeta-bit.pt/Subtask1_ObjectProperties#feat_puncttype
-    edges_source: [ ]
-    edges: [ ]
-    edges_target: [ ]
-    edges_uri: [ ]
-    attributes: [ ]
-  - name: feat_tense
-    uri: http://www.ieeta-bit.pt/Subtask1_ObjectProperties#feat_tense
-    edges_source: [ ]
-    edges: [ ]
-    edges_target: [ ]
-    edges_uri: [ ]
-    attributes: [ ]
-  - name: feat_verbform
-    uri: http://www.ieeta-bit.pt/Subtask1_ObjectProperties#feat_verbform
-    edges_source: [ ]
-    edges: [ ]
-    edges_target: [ ]
-    edges_uri: [ ]
-    attributes: [ ]
-  - name: feat_conjtype
-    uri: http://www.ieeta-bit.pt/Subtask1_ObjectProperties#feat_conjtype
-    edges_source: [ ]
-    edges: [ ]
-    edges_target: [ ]
-    edges_uri: [ ]
-    attributes: [ ]
-  - name: feat_foreign
-    uri: http://www.ieeta-bit.pt/Subtask1_ObjectProperties#feat_foreign
-    edges_source: [ ]
-    edges: [ ]
-    edges_target: [ ]
-    edges_uri: [ ]
-    attributes: [ ]
+#  - name: edge
+#    uri: http://www.ieeta-bit.pt/Subtask1_ObjectProperties#edge
+#    edges_source: []
+#    edges: []
+#    edges_target: []
+#    edges_uri: []
+#    attributes: []
+#  - name: pos
+#    uri: http://www.ieeta-bit.pt/Subtask1_ObjectProperties#pos
+#    edges_source: [ ]
+#    edges: [ ]
+#    edges_target: [ ]
+#    edges_uri: [ ]
+#    attributes: [ ]
+#  - name: poscoarse
+#    uri: http://www.ieeta-bit.pt/Subtask1_ObjectProperties#poscoarse
+#    edges_source: [ ]
+#    edges: [ ]
+#    edges_target: [ ]
+#    edges_uri: [ ]
+#    attributes: [ ]
+#  - name: feat_aspect
+#    uri: http://www.ieeta-bit.pt/Subtask1_ObjectProperties#feat_aspect
+#    edges_source: [ ]
+#    edges: [ ]
+#    edges_target: [ ]
+#    edges_uri: [ ]
+#    attributes: [ ]
+#  - name: feat_case
+#    uri: http://www.ieeta-bit.pt/Subtask1_ObjectProperties#feat_case
+#    edges_source: [ ]
+#    edges: [ ]
+#    edges_target: [ ]
+#    edges_uri: [ ]
+#    attributes: [ ]
+#  - name: feat_definite
+#    uri: http://www.ieeta-bit.pt/Subtask1_ObjectProperties#feat_definite
+#    edges_source: [ ]
+#    edges: [ ]
+#    edges_target: [ ]
+#    edges_uri: [ ]
+#    attributes: [ ]
+#  - name: feat_degree
+#    uri: http://www.ieeta-bit.pt/Subtask1_ObjectProperties#feat_degree
+#    edges_source: [ ]
+#    edges: [ ]
+#    edges_target: [ ]
+#    edges_uri: [ ]
+#    attributes: [ ]
+#  - name: feat_foreign
+#    uri: http://www.ieeta-bit.pt/Subtask1_ObjectProperties#feat_foreign
+#    edges_source: [ ]
+#    edges: [ ]
+#    edges_target: [ ]
+#    edges_uri: [ ]
+#    attributes: [ ]
+#  - name: feat_gender
+#    uri: http://www.ieeta-bit.pt/Subtask1_ObjectProperties#feat_gender
+#    edges_source: [ ]
+#    edges: [ ]
+#    edges_target: [ ]
+#    edges_uri: [ ]
+#    attributes: [ ]
+#  - name: feat_mood
+#    uri: http://www.ieeta-bit.pt/Subtask1_ObjectProperties#feat_mood
+#    edges_source: [ ]
+#    edges: [ ]
+#    edges_target: [ ]
+#    edges_uri: [ ]
+#    attributes: [ ]
+#  - name: feat_number
+#    uri: http://www.ieeta-bit.pt/Subtask1_ObjectProperties#feat_number
+#    edges_source: [ ]
+#    edges: [ ]
+#    edges_target: [ ]
+#    edges_uri: [ ]
+#    attributes: [ ]
+#  - name: feat_numtype
+#    uri: http://www.ieeta-bit.pt/Subtask1_ObjectProperties#feat_numtype
+#    edges_source: [ ]
+#    edges: [ ]
+#    edges_target: [ ]
+#    edges_uri: [ ]
+#    attributes: [ ]
+#  - name: feat_person
+#    uri: http://www.ieeta-bit.pt/Subtask1_ObjectProperties#feat_person
+#    edges_source: [ ]
+#    edges: [ ]
+#    edges_target: [ ]
+#    edges_uri: [ ]
+#    attributes: [ ]
+#  - name: feat_polarity
+#    uri: http://www.ieeta-bit.pt/Subtask1_ObjectProperties#feat_polarity
+#    edges_source: [ ]
+#    edges: [ ]
+#    edges_target: [ ]
+#    edges_uri: [ ]
+#    attributes: [ ]
+#  - name: feat_poss
+#    uri: http://www.ieeta-bit.pt/Subtask1_ObjectProperties#feat_poss
+#    edges_source: [ ]
+#    edges: [ ]
+#    edges_target: [ ]
+#    edges_uri: [ ]
+#    attributes: [ ]
+#  - name: feat_prontype
+#    uri: http://www.ieeta-bit.pt/Subtask1_ObjectProperties#feat_prontype
+#    edges_source: [ ]
+#    edges: [ ]
+#    edges_target: [ ]
+#    edges_uri: [ ]
+#    attributes: [ ]
+#  - name: feat_punctside
+#    uri: http://www.ieeta-bit.pt/Subtask1_ObjectProperties#feat_punctside
+#    edges_source: [ ]
+#    edges: [ ]
+#    edges_target: [ ]
+#    edges_uri: [ ]
+#    attributes: [ ]
+#  - name: feat_puncttype
+#    uri: http://www.ieeta-bit.pt/Subtask1_ObjectProperties#feat_puncttype
+#    edges_source: [ ]
+#    edges: [ ]
+#    edges_target: [ ]
+#    edges_uri: [ ]
+#    attributes: [ ]
+#  - name: feat_tense
+#    uri: http://www.ieeta-bit.pt/Subtask1_ObjectProperties#feat_tense
+#    edges_source: [ ]
+#    edges: [ ]
+#    edges_target: [ ]
+#    edges_uri: [ ]
+#    attributes: [ ]
+#  - name: feat_verbform
+#    uri: http://www.ieeta-bit.pt/Subtask1_ObjectProperties#feat_verbform
+#    edges_source: [ ]
+#    edges: [ ]
+#    edges_target: [ ]
+#    edges_uri: [ ]
+#    attributes: [ ]
+#  - name: feat_conjtype
+#    uri: http://www.ieeta-bit.pt/Subtask1_ObjectProperties#feat_conjtype
+#    edges_source: [ ]
+#    edges: [ ]
+#    edges_target: [ ]
+#    edges_uri: [ ]
+#    attributes: [ ]
+#  - name: feat_foreign
+#    uri: http://www.ieeta-bit.pt/Subtask1_ObjectProperties#feat_foreign
+#    edges_source: [ ]
+#    edges: [ ]
+#    edges_target: [ ]
+#    edges_uri: [ ]
+#    attributes: [ ]
   - name: word
     uri: http://www.ieeta-bit.pt/Subtask1_ObjectProperties#Word
     edges_source: [word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word]
@@ -168,10 +168,14 @@ nodes:
     attributes: [lemma, word]
   - name: sentence
     uri: http://www.ieeta-bit.pt/Subtask1_ObjectProperties#Sentence
-    edges_source: [sentence, sentence, sentence]
-    edges: [nextSentence, depGraph, previousSentence]
-    edges_target: [sentence, word, sentence]
-    edges_uri: [http://www.ieeta-bit.pt/Subtask1_ObjectProperties#nextSentence, http://www.ieeta-bit.pt/Subtask1_ObjectProperties#depGraph, http://www.ieeta-bit.pt/Subtask1_ObjectProperties#previousSentence]
+#    edges_source: [sentence, sentence]
+#    edges: [nextSentence, depGraph]
+#    edges_target: [sentence, word]
+#    edges_uri: [http://www.ieeta-bit.pt/Subtask1_ObjectProperties#nextSentence, http://www.ieeta-bit.pt/Subtask1_ObjectProperties#depGraph]
+    edges_source: [sentence]
+    edges: [nextSentence]
+    edges_target: [sentence]
+    edges_uri: [http://www.ieeta-bit.pt/Subtask1_ObjectProperties#nextSentence]
     attributes: [senttext]
 target:
   - node: word

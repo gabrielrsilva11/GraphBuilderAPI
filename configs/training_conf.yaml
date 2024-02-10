@@ -1,7 +1,7 @@
 epochs: 500
-batch_size: 128
-validation_split: 0.15
-test_split: 0.2
-data_file: data/GraphData/1_to_3000.pt
-targets_file: data/targets.pkl
-model_file: models/gnn.pt
+batch_size: 32
+validation_split: 0.3
+test_split: 0.5
+data_file: data/GraphData/Track1/BinaryModel_25000.pt
+targets_file: data/GraphData/Track1/BinaryModel_Targets_25000.pkl
+model_file: models/Track1/gnn_first5k.pt
