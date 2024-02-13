@@ -2,7 +2,6 @@ from InsertData import CreateGraph
 import yaml
 import copy
 
-
 #Function to pre-process a sentence. The output should be:
 # The full sentence and a list of any extra info to be added.
 # This list should be blank if there are no extra annotations and you want the default graph.
@@ -28,16 +27,13 @@ def preprocess_sentence(sentence):
                 final_list.append(copy_annotations)
         else:
             final_list.append(sentence_annotation)
-        print(final_list)
     return final_list
 
 
-config_file = open("../configs/create_graph.yaml", 'r')
+config_file = open("configs/create_graph.yaml", 'r')
 config_data = yaml.load(config_file, Loader=yaml.FullLoader)
 
-print(config_data['graph_name'], config_data['uri'])
-
 graph = CreateGraph(folder=config_data['folder'], graph_name=config_data['graph_name'], extra_connetions=config_data['extra_connections']['connections'],
-                    connection_string=config_data['connection'], main_uri=config_data['uri'], language=config_data['language'], preprocessing=preprocess_sentence, in_memory=True)
+                    connection_string=config_data['connection'], main_uri=config_data['uri'], language=config_data['language'], preprocessing=preprocess_sentence, in_memory=False)
 
-graph.create_graph(save_file="../TTLs/Subtask1_DataPropertiesGraph")
+graph.create_graph(save_file="TTLs/Subtask1_DataPropertiesGraph")

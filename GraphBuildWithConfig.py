@@ -60,7 +60,7 @@ def map_uri_to_index(indexes, config_data):
 
 def build_node_relationships(uniqueIds, nodeList, source_name, target_name, balancing):
     original_df = pd.DataFrame(data=nodeList, columns=["source", "target"])
-    print(original_df.to_string())
+    #print(original_df.to_string())
     if target_name in uniqueIds:
         source_df = pd.merge(original_df['source'], uniqueIds[source_name],
                              left_on='source', right_on='originalId', how='left')
@@ -84,16 +84,18 @@ def build_node_relationships(uniqueIds, nodeList, source_name, target_name, bala
     source = torch.from_numpy(source_df['mappedId'].values)
     target = torch.from_numpy((target_df['mappedId'].values))
     node_tensor = torch.stack([source, target], dim=0)
-    print(node_tensor)
+    #print(node_tensor)
     return node_tensor
 
 def build_targets(nodes_df, config_data):
+    nodes_df[config_data['target'][0]['name'][0]].fillna("No", inplace=True)
     print(nodes_df[config_data['target'][0]['name'][0]].value_counts())
-    new_target = nodes_df[config_data['target'][0]['name'][0]]
-    new_target[~new_target.isna()] = "Yes"
-    new_target[new_target.isna()] = "No"
-    print(nodes_df[config_data['target'][0]['name'][0]].value_counts())
+    # new_target = nodes_df[config_data['target'][0]['name'][0]]
+    # new_target[~new_target.isna()] = "Yes"
+    # new_target[new_target.isna()] = "No"
+    # print(nodes_df[config_data['target'][0]['name'][0]].value_counts())
     unique_targets_id = nodes_df[config_data['target'][0]['name'][0]].unique()
+    print(unique_targets_id)
     unique_targets_df = pd.DataFrame(data={
         'originalId': unique_targets_id,
         'mappedId': pd.RangeIndex(len(unique_targets_id))
@@ -131,7 +133,7 @@ def get_graph(list_to_get, config_data):
     #In our case we have to pop the last element of the list while testing.
     #This is due to a sentence referencing a non-existant next sentence.
     #This will not happen with complete texts and should be removed.
-    edges['nextSentence'].pop()
+    #edges['nextSentence'].pop()
     graph, unique_targets = build_graph(nodes, edges, mapped_uris, config_data)
     print(unique_targets)
     print("--- DATASET LOADED AND TRANSFORMED ---")

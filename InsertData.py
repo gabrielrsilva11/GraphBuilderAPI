@@ -77,6 +77,7 @@ class CreateGraph:
         self.d_word_uri = self.main_uri + "word"
         #dict to keep track of the already inserted feats
         self.d_feats_list = []
+
     def fetch_extra_properties(self, extra_connetions):
         connections_list = []
         for name in extra_connetions:

@@ -60,7 +60,9 @@ class GraphSAGE(torch.nn.Module):
   def __init__(self, hidden_channels, out_channels):
     super().__init__()
     self.sage1 = SAGEConv((-1, -1), hidden_channels)
-    self.sage2 = SAGEConv((-1, -1), out_channels)
+    self.sage2 = SAGEConv((-1, -1), 64)
+    self.sage3 = SAGEConv((-1, -1), 32)
+    self.sage4 = SAGEConv((-1, -1), out_channels)
     self.optimizer = torch.optim.Adam(self.parameters(),
                                       lr=0.01,
                                       weight_decay=5e-4)
@@ -69,8 +71,14 @@ class GraphSAGE(torch.nn.Module):
     h = self.sage1(x, edge_index)
     h = torch.relu(h)
     h = F.dropout(h, p=0.5, training=self.training)
-    h = self.sage2(h, edge_index)
-    return h, F.log_softmax(h, dim=1)
+    h = self.sage2(x, edge_index)
+    h = torch.relu(h)
+    h = F.dropout(h, p=0.5, training=self.training)
+    h = self.sage3(x, edge_index)
+    h = torch.relu(h)
+    h = F.dropout(h, p=0.5, training=self.training)
+    h = self.sage4(h, edge_index)
+    return F.log_softmax(h, dim=1)
 
   def fit(self, train_loader, epochs):
     criterion = torch.nn.CrossEntropyLoss()
