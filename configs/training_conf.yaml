@@ -1,7 +1,9 @@
-epochs: 200
+epochs: 500
 batch_size: 32
-validation_split: 0.15
-test_split: 0.2
-data_file: data/GraphData/Track1/DataPropertiesBinaryModel_3000.pt
-targets_file: data/GraphData/Track1/DataPropertiesBinaryModel_3000.pkl
+validation_split: 0.3
+test_split: 0.15
+data_file: data/GraphData/Binary/DataPropertiesBinaryModel_30000.pt
+targets_file: data/GraphData/Binary/TargetsDataPropertiesBinaryModel_30000.pkl
 model_file: models/Track1/gnn_first5k.pt
+test_data_file: data/GraphData/Track1/FullSentences/TestDataPropertiesMultiModel_5000.pt
+test_targets_file: data/GraphData/Track1/FullSentences/TestTargetsDataPropertiesMultiModel_5000.pkl

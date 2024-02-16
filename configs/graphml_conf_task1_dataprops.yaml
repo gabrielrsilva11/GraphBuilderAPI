@@ -1,26 +1,26 @@
 connection:
   - connection_uri: http://hlt.ieeta.pt:8890/sparql
-    graph_name: http://www.ieeta-bit.pt/Subtask1_DataProperties_tests#
-    base_uri: http://www.ieeta-bit.pt/Subtask1_DataProperties_tests#
+    graph_name: http://www.ieeta-bit.pt/Subtask1_DataProperties_v2#
+    base_uri: http://www.ieeta-bit.pt/Subtask1_DataProperties_v2#
 enable_wandb:
   True
 nodes:
   - name: word
-    uri: http://www.ieeta-bit.pt/Subtask1_DataProperties_tests#Word
+    uri: http://www.ieeta-bit.pt/Subtask1_DataProperties_v2#Word
     edges_source: [word, word, word, word, word]
-    edges: [depGraph, head, previousWord, fromSentence, nextWord]
-    edges_target: [word, word, word, sentence, word]
-    edges_uri: [http://www.ieeta-bit.pt/Subtask1_DataProperties_tests#depGraph, http://www.ieeta-bit.pt/Subtask1_DataProperties_tests#head, http://www.ieeta-bit.pt/Subtask1_DataProperties_tests#previousWord, http://www.ieeta-bit.pt/Subtask1_DataProperties_tests#fromSentence]
+    edges: [depGraph, head, previousWord, nextWord, fromSentence]
+    edges_target: [word, word, word, word, sentence]
+    edges_uri: [http://www.ieeta-bit.pt/Subtask1_DataProperties_v2#depGraph, http://www.ieeta-bit.pt/Subtask1_DataProperties_v2#head, http://www.ieeta-bit.pt/Subtask1_DataProperties_v2#previousWord, http://www.ieeta-bit.pt/Subtask1_DataProperties_v2#fromSentence]
     attributes: [edge, lemma, pos, poscoarse, word, aspect, case, conjtype, definite, mood, degree, foreign, gender, number, numtype, person, polarity, poss, prontype, punctside, puncttype, tense, verbform]
   - name: sentence
-    uri: http://www.ieeta-bit.pt/Subtask1_DataProperties_tests#Sentence
+    uri: http://www.ieeta-bit.pt/Subtask1_DataProperties_v2#Sentence
     edges_source: [sentence, sentence]
     edges: [nextSentence]
     edges_target: [sentence, sentence]
-    edges_uri: [http://www.ieeta-bit.pt/Subtask1_DataProperties_tests#nextSentence]
+    edges_uri: [http://www.ieeta-bit.pt/Subtask1_DataProperties_v2#nextSentence]
     attributes: [senttext]
 target:
   - node: word
     name: [softwareMention]
-    uri: [http://www.ieeta-bit.pt/Subtask1_DataProperties_tests#softwareMention]
-    balancing: False
+    uri: [http://www.ieeta-bit.pt/Subtask1_DataProperties_v2#softwareMention]
+    balancing: True

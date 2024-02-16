@@ -89,99 +89,50 @@ enable_wandb = config_data['enable_wandb']
 if enable_wandb:
     import wandb
 
-#data, targets = get_graph([*range(1, 3000, 1)], config_data)
-#torch.save(data, training_config['data_file'])
-#targets.to_pickle(training_config['targets_file'])
-data_split = torch.load(training_config['data_file'])
-targets = pd.read_pickle(training_config['targets_file'])
+#data, targets = get_graph([*range(1, 5000, 1)], config_data)
+
+# ----- SAVE DATA ------
+# torch.save(data, "data/GraphData/Track1/FullDataPropertiesMultiModel_5000.pt")
+# targets.to_pickle("data/GraphData/Track1/TargetsFullDataPropertiesMultiModel_5000.pkl")
+
+# ----- LOAD DATA ------
+data = torch.load("data/GraphData/Track1/FullDataPropertiesMultiModel_5000.pt")
+targets = pd.read_pickle("data/GraphData/Track1/TargetsFullDataPropertiesMultiModel_5000.pkl")
 # model = torch.load(training_config['model_file'])
 
-# print(type(data))
-# print(data['word']['y'])
-# print((data['word']['y']==1).nonzero())
-# print((data['word']['y']==1).nonzero())
-
-
 # CREATING THE TRAIN, TEST AND VAL MASKS
-# split = T.RandomNodeSplit(num_val=training_config['validation_split'], num_test=training_config['test_split'])#, num_train_per_class=1100)
-# data_split = split(data)
-# print(data_split)
-# print(data_split['word'].train_mask)
-# print(type(data_split['word'].train_mask))
-train_mask = []
-test_mask = []
-val_mask = []
-i = 0
-positive_examples = 0
-for x in data_split['word'].y:
-    if x != 0 and positive_examples < 700:
-        train_mask.append(True)
-        val_mask.append(False)
-        test_mask.append(False)
-        positive_examples += 1
-    elif i % 100 == 0:
-        train_mask.append(False)
-        val_mask.append(False)
-        test_mask.append(False)
-    else:
-        number = random.random()
-        if number < 0.33:
-            val_mask.append(True)
-            train_mask.append(False)
-            test_mask.append(False)
-        else:
-            test_mask.append(True)
-            val_mask.append(False)
-            train_mask.append(False)
+split = T.RandomNodeSplit(split="test_rest", num_val=training_config['validation_split'], num_test=training_config['test_split'])#, num_train_per_class=1100)
+data_split = split(data)
+#data_split = T.NormalizeFeatures()(data_split)
 
-data_split['word'].train_mask = torch.Tensor(train_mask).bool()
-data_split['word'].val_mask = torch.Tensor(val_mask).bool()
-data_split['word'].test_mask = torch.Tensor(test_mask).bool()
-# print(torch.Tensor(val_mask).bool())
-# print(torch.Tensor(test_mask).bool())
-#
-print(data_split['word'].train_mask)
-print(type(data_split['word'].train_mask))
-#
-# print(data_split['word'].train_mask)
+# -------- LOAD AND SAVE A DATA SPLIT ---------
+#torch.save(data_split, "data/GraphData/Track1/SplitDataPropertiesMultiModel_5000.pt")
+#data_split = torch.load("data/GraphData/Track1/SplitDataPropertiesMultiModel_5000.pt")
 
-# data_split['word'].train_mask = data['word'].train_mask
-# data_split['word'].val_mask = data['word'].val_mask
-# data_split['word'].test_mask = data['word'].test_mask
 #sampler = ImbalancedSampler(data_split['word'].y, input_nodes=data_split['word'].train_mask)
 # train_loader = NeighborLoader(
 #     data_split,
-#     num_neighbors=[10] * 2,
+#     num_neighbors={key: [30] * 2 for key in data_split.edge_types},
 #     batch_size=training_config['batch_size'],
-#     input_nodes=data_split['word'].train_mask,
+#     input_nodes=('word', data_split['word'].train_mask)
 #     sampler=sampler
 # )
-
-train_loader = NeighborLoader(
-    data_split,
-    # Sample 30 neighbors for each node and edge type for 2 iterations
-    num_neighbors={key: [30] * 2 for key in data_split.edge_types},
-    # Use a batch size of 128 for sampling training nodes of type paper
-    batch_size=64,
-    input_nodes=('word', data_split['word'].train_mask)
-    #sampler=sampler
-)
 
 
 #Creating the model
 model = GNN(hidden_channels=128, out_channels=data_split.num_classes)
 model = to_hetero(model, data_split.metadata(), aggr='sum')
-#weights = torch.tensor([0.07589451858, 4.8096361186, 10.0954738331, 23.1737012987, 9.52937249666, 84.9702380952, 11.5868506494, 16.4458525346, 15.2185501066, 29.9894957983, 39.217032967, 24.2772108844, 92.6948051948, 84.9702380952])
-optimizer = torch.optim.Adam(model.parameters(), lr=0.01)#, weight_decay=5e-4)
 
+optimizer = torch.optim.Adam(model.parameters(), lr=0.001)#, weight_decay=5e-4)
+#optimizer = torch.optim.SGD(model.parameters(), lr=0.001)
+
+# weights = torch.Tensor([5, 10.2, 30.4, 40.6, 50.7, 60])
 # Pass data and module onto GPU
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 print(f"Device: '{device}'")
-#weights = weights.to(device)
+# weights = weights.to(device)
 model = model.to(device)
 data_split = data_split.to(device)
-
-#model.fit(train_loader, epochs=training_config['epochs'])
 
 with torch.no_grad():  # Initialize lazy modules.
     out = model(data_split.x_dict, data_split.edge_index_dict)
@@ -196,14 +147,14 @@ pbar = tqdm(range(epochs), desc="Training Model")
 best_loss = 9999999
 best_epoch = 0
 for i in pbar:
-    loss_final = train_batch()
+    loss_final = train()
     if enable_wandb:
         wandb.log({"gat/loss": loss_final})
     if best_loss > loss_final:
         best_loss = loss_final
         best_epoch = i
     #if i%50 == 0:
-    pbar.set_description(f"Current Loss: {loss_final} -- Best Loss: {best_loss} on Epoch {best_epoch}", refresh=True)
+    pbar.set_description(f"Current epoch: {i} with Loss: {loss_final} -- Best Loss: {best_loss} on Epoch {best_epoch}", refresh=True)
     #print("Loss: ", loss_final)
 
 test_acc, ground_truth, predictions, predict_percents = test(unique_targets=targets)
@@ -217,6 +168,7 @@ if enable_wandb:
     cm = wandb.plot.confusion_matrix(
         y_true=ground_truth, preds=predictions, class_names=targets['originalId']
     )
+
     wandb.log({"gat/conf_mat": cm})
     wandb.log({"gat/roc": wandb.plot.roc_curve(ground_truth, predict_percents, labels=targets['originalId'])})
     wandb.log({"gat/pr": wandb.plot.pr_curve(ground_truth, predict_percents, labels=targets['originalId'])})

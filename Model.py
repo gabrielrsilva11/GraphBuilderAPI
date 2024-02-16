@@ -1,6 +1,7 @@
 from torch_geometric.nn import GATConv, Linear, SAGEConv, SplineConv
 import torch
 import torch.nn.functional as F
+from torch_geometric.nn.norm.batch_norm import BatchNorm
 
 
 class GAT(torch.nn.Module):
@@ -22,13 +23,32 @@ class GNN(torch.nn.Module):
     def __init__(self, hidden_channels, out_channels):
         super().__init__()
         self.conv1 = SAGEConv((-1, -1), hidden_channels)
-        self.conv2 = SAGEConv((-1, -1), hidden_channels)
-        self.conv3 = SAGEConv((-1, -1), out_channels)
+        self.batch_norm1 = BatchNorm(hidden_channels)
+        self.lin1 = Linear(-1, hidden_channels)
+        self.conv2 = SAGEConv((-1, -1), int(hidden_channels/2))
+        self.batch_norm2 = BatchNorm(int(hidden_channels/2))
+        self.lin2 = Linear(-1, int(hidden_channels/2))
+        self.conv3 = SAGEConv((-1, -1), int(hidden_channels/4))
+        self.batch_norm3 = BatchNorm(int(hidden_channels/4))
+        self.lin3 = Linear(-1, int(hidden_channels/4))
+        self.conv4 = SAGEConv((-1, -1), out_channels)
+        self.lin4 = Linear(-1, out_channels)
 
     def forward(self, x, edge_index):
-        x = self.conv1(x, edge_index).relu()
-        x = self.conv2(x, edge_index).relu()
-        x = self.conv3(x, edge_index)
+        x = self.conv1(x, edge_index)+self.lin1(x)
+        x = x.relu()
+        #x = F.dropout(x, p=0.5)
+        x = self.batch_norm1(x)
+
+        x = self.conv2(x, edge_index) + self.lin2(x)
+        x = x.relu()
+        x = self.batch_norm2(x)
+
+        x = self.conv3(x, edge_index) + self.lin3(x)
+        x = x.relu()
+        x = self.batch_norm3(x)
+
+        x = self.conv4(x, edge_index) + self.lin4(x)
         return x
 
 def accuracy(pred_y, y):

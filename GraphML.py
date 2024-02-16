@@ -6,6 +6,7 @@ from tqdm import tqdm
 import yaml
 from GraphBuildWithConfig import get_graph
 from Model import GAT, GNN, Spline, GraphSAGE
+import random
 
 def train_batch():
     model.train()
@@ -81,9 +82,16 @@ enable_wandb = config_data['enable_wandb']
 if enable_wandb:
     import wandb
 
-data, targets = get_graph([*range(1, 1500, 1)], config_data)
+data, targets = get_graph([*range(1, 10000, 1)], config_data, test=False)
+#data, targets = get_graph(random.sample(range(30000), 2000), config_data)
+# ----------------- LOAD AND SAVE DATA WHEN NEEDED -------------------------
+#torch.save(data, training_config['data_file'])
+#targets.to_pickle(training_config['targets_file'])
+# data = torch.load(training_config['data_file'])
+# targets = pd.read_pickle(training_config['targets_file'])
 
-model = GNN(hidden_channels=128, out_channels=data.num_classes)
+
+model = GNN(hidden_channels=64, out_channels=data.num_classes)
 model = to_hetero(model, data.metadata(), aggr='sum')
 optimizer = torch.optim.Adam(model.parameters(), lr=0.01)
 
@@ -110,10 +118,16 @@ for i in pbar:
         best_loss = loss_final
         best_epoch = i
     #if i%50 == 0:
-    pbar.set_description(f"Current Loss: {loss_final} -- Best Loss: {best_loss} on Epoch {best_epoch}", refresh=True)
+    pbar.set_description(f"Epoch {i} with Loss: {loss_final} -- Best Loss: {best_loss} on Epoch {best_epoch}", refresh=True)
     #print("Loss: ", loss_final)
 
-data_test, targets_test = get_graph([*range(1501, 3000, 1)], config_data)
+# data_test, targets_test = get_graph([*range(10000, 10500, 1)], config_data, test = True, targets_test = targets)
+# # ----------------- LOAD AND SAVE DATA WHEN NEEDED -------------------------
+# torch.save(data, training_config['test_data_file'])
+# targets.to_pickle(training_config['test_targets_file'])
+# data_split = torch.load(training_config['data_file'])
+# targets = pd.read_pickle(training_config['targets_file'])
+
 data_test = data_test.to(device)
 test_acc, ground_truth, predictions, predict_percents = test(data_test = data_test)
 ground_truth = ground_truth.cpu().tolist()
@@ -124,7 +138,7 @@ if enable_wandb:
     wandb.summary["gat/accuracy"] = test_acc
     wandb.log({"gat/accuracy": test_acc})
     cm = wandb.plot.confusion_matrix(
-        y_true=ground_truth, preds=predictions, class_names=targets_test['originalId']
+        y_true=ground_truth, preds=predictions, class_names=targets['originalId']
     )
     wandb.log({"gat/conf_mat": cm})
     wandb.log({"gat/roc": wandb.plot.roc_curve(ground_truth, predict_percents, labels=targets_test['originalId'])})

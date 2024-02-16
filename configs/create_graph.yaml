@@ -1,9 +1,11 @@
 folder: Data_to_process/Task1/Merged
-uri: http://www.ieeta-bit.pt/Subtask1_DataProperties_v2#
+uri: http://www.ieeta-bit.pt/Subtask1_FeatProperties#
 #language: pt_core_news_sm
 language: en_core_web_sm
-graph_name: http://www.ieeta-bit.pt/Subtask1_DataProperties_v2#
+graph_name: http://www.ieeta-bit.pt/Subtask1_FeatProperties#
 connection: http://hlt.ieeta.pt:8890/sparql
+in_memory: False
+save_file: TTLs/Subtask1_FeatsPropertiesGraph
 extra_connections:
   connections: [softwareMention, entityPresent]
   #connections: [wikinerGrammarFeats, wikinerEntity, entityPresent]

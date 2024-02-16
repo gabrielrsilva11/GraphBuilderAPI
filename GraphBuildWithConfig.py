@@ -5,31 +5,47 @@ from rdflib import URIRef
 import pandas as pd
 import torch
 from torch_geometric.data import HeteroData
+import random
 
-def fetch_graph(ids_to_fetch, config_data):
+def fetch_graph(edges, nodes, indexes, ids_to_fetch, config_data, test):
     print("--- LOADING DATASET ---")
     base_uri = config_data['connection'][0]['base_uri']
     graph_name = config_data['connection'][0]['graph_name']
     conection_string = config_data['connection'][0]['connection_uri']
     ntx = BuildNetworkx(base_uri, graph_name, conection_string)
-    edges = {}
-    nodes = {}
-    indexes = {}
     for i in tqdm(range(len(ids_to_fetch)), desc="Loading Dataset"):
         #for idx in ids_to_fetch:
         idx = ids_to_fetch[i]
         graph = ntx.fetch_graph([idx])
+        # entity = False
+        # if config_data['target'][0]['balancing']:
+        #     for s3, p3, o3 in graph.triples((None, URIRef(config_data['target'][0]['uri'][0]), None)):
+        #         if o3.__str__():
+        #             entity = True
+        # chance = random.random()
+        # if chance < 0.1:
         for layer in config_data['nodes']:
-            #Go through all the desirable nodes
             if layer['name'] not in indexes:
                 indexes[layer['name']] = []
             if layer['name'] not in nodes:
                 nodes[layer['name']] = []
             for s, p, o in graph.triples((None, RDF.type, URIRef(layer['uri']))):
-                node_type = s.__str__().split("#")[-1].split("_")[0]
+                #node_type = s.__str__().split("#")[-1].split("_")[0]
                 node_features = {}
-                # if s.__str__() not in indexes[layer['name']]:
-                #     indexes[layer['name']].append(s.__str__())
+                # if not test:
+                #     chance = 0
+                #     for s3, p3, o3 in graph.triples((URIRef(s), URIRef("http://www.ieeta-bit.pt/Subtask1_DataProperties_v2#entityPresent"), None)):
+                #         #print(s3,p3,o3)
+                #         p3_type = p3.__str__().split("#")[-1]
+                #         if p3_type == "entityPresent":
+                #             if o3.__str__() == "No":
+                #                 chance = random.random()
+                #             else:
+                #                 chance = 0
+                #
+                #     if chance > 0.02:
+                #         break
+
                 for s2, p2, o2 in graph.triples((URIRef(s), None, None)):
                     uri_type = p2.__str__().split("#")[-1]
                     #An edge to add
@@ -87,36 +103,76 @@ def build_node_relationships(uniqueIds, nodeList, source_name, target_name, bala
     #print(node_tensor)
     return node_tensor
 
-def build_targets(nodes_df, config_data):
+def build_targets(nodes_df, config_data, test=False, targets_test=None):
     nodes_df[config_data['target'][0]['name'][0]].fillna("No", inplace=True)
+
+    #Replace names with their first name
+    nodes_df[config_data['target'][0]['name'][0]] = nodes_df[config_data['target'][0]['name'][0]].replace(
+        "Application_Creation", "Application")
+    nodes_df[config_data['target'][0]['name'][0]] = nodes_df[config_data['target'][0]['name'][0]].replace(
+        "Application_Mention", "Application")
+    nodes_df[config_data['target'][0]['name'][0]] = nodes_df[config_data['target'][0]['name'][0]].replace(
+        "Application_Usage", "Application")
+    nodes_df[config_data['target'][0]['name'][0]] = nodes_df[config_data['target'][0]['name'][0]].replace(
+        "Application_Deposition", "Application")
+    nodes_df[config_data['target'][0]['name'][0]] = nodes_df[config_data['target'][0]['name'][0]].replace(
+        "PlugIn_Creation", "PlugIn")
+    nodes_df[config_data['target'][0]['name'][0]] = nodes_df[config_data['target'][0]['name'][0]].replace(
+        "PlugIn_Mention", "PlugIn")
+    nodes_df[config_data['target'][0]['name'][0]] = nodes_df[config_data['target'][0]['name'][0]].replace(
+        "PlugIn_Usage", "PlugIn")
+    nodes_df[config_data['target'][0]['name'][0]] = nodes_df[config_data['target'][0]['name'][0]].replace(
+        "PlugIn_Deposition", "PlugIn")
+    nodes_df[config_data['target'][0]['name'][0]] = nodes_df[config_data['target'][0]['name'][0]].replace(
+        "ProgrammingEnvironment_Usage", "ProgrammingEnvironment")
+    nodes_df[config_data['target'][0]['name'][0]] = nodes_df[config_data['target'][0]['name'][0]].replace(
+        "ProgrammingEnvironment_Mention", "ProgrammingEnvironment")
+    nodes_df[config_data['target'][0]['name'][0]] = nodes_df[config_data['target'][0]['name'][0]].replace(
+        "SoftwareCoreference_Deposition", "SoftwareCoreference")
+    nodes_df[config_data['target'][0]['name'][0]] = nodes_df[config_data['target'][0]['name'][0]].replace(
+        "OperatingSystem_Usage", "OperatingSystem")
+    nodes_df[config_data['target'][0]['name'][0]] = nodes_df[config_data['target'][0]['name'][0]].replace(
+        "OperatingSystem_Mention", "OperatingSystem")
+
     print(nodes_df[config_data['target'][0]['name'][0]].value_counts())
-    # new_target = nodes_df[config_data['target'][0]['name'][0]]
-    # new_target[~new_target.isna()] = "Yes"
-    # new_target[new_target.isna()] = "No"
-    # print(nodes_df[config_data['target'][0]['name'][0]].value_counts())
-    unique_targets_id = nodes_df[config_data['target'][0]['name'][0]].unique()
-    print(unique_targets_id)
-    unique_targets_df = pd.DataFrame(data={
-        'originalId': unique_targets_id,
-        'mappedId': pd.RangeIndex(len(unique_targets_id))
-    })
+    print(nodes_df[config_data['target'][0]['name'][0]])
+
+    if test:
+        unique_targets_df = targets_test
+    else:
+        unique_targets_id = nodes_df[config_data['target'][0]['name'][0]].unique()
+        print(unique_targets_id)
+        unique_targets_df = pd.DataFrame(data={
+            'originalId': unique_targets_id,
+            'mappedId': pd.RangeIndex(len(unique_targets_id))
+        })
     targets_df = pd.merge(nodes_df[config_data['target'][0]['name'][0]], unique_targets_df,
                           left_on=config_data['target'][0]['name'][0], right_on='originalId', how='left')
     targets = torch.from_numpy(targets_df['mappedId'].values)
+    if test:
+        return targets, unique_targets_df, len(nodes_df[config_data['target'][0]['name'][0]].unique())
+
     return targets, unique_targets_df, len(unique_targets_df)
 
-def build_graph(nodes, edges, mapped_ids, config_data):
-    graph_data = HeteroData()
+def build_graph(nodes, edges, mapped_ids, config_data, graph_data , test= False, test_targets=None):
     for layer in config_data['nodes']:
         column_list = []
         nodes_df = pd.DataFrame.from_records(nodes[layer['name']])
         nodes_df.index = mapped_ids[layer['name']]['mappedId']
         for attributes in layer['attributes']:
-            column_list.append(attributes)
-            nodes_df[attributes] = nodes_df[attributes].astype('category').cat.codes
+            if attributes in nodes_df.columns:
+                column_list.append(attributes)
+                nodes_df[attributes] = nodes_df[attributes].astype('category').cat.codes
+            else:
+                print("---- WARNING ----")
+                print(attributes, " is present in the config file but was not found in the data.")
+                print("-----------------")
         if layer['name'] == config_data['target'][0]['node']:
             nodes_df[config_data['target'][0]['name'][0]] = nodes_df[config_data['target'][0]['name'][0]].replace(r'\n','', regex=True)
-            targets, unique_targets, size_targets = build_targets(nodes_df, config_data)
+            if test:
+                targets, unique_targets, size_targets = build_targets(nodes_df, config_data, test=test, targets_test = test_targets)
+            else:
+                targets, unique_targets, size_targets = build_targets(nodes_df, config_data)
             graph_data[layer['name']].y = targets
             graph_data.num_classes = size_targets
         nodes_appropriate = nodes_df[column_list]
@@ -124,17 +180,19 @@ def build_graph(nodes, edges, mapped_ids, config_data):
         graph_data[layer['name']].x = nodes_tensor
         for edge_idx in range(0, len(layer['edges'])):
             graph_data[layer['edges_source'][edge_idx], layer['edges'][edge_idx], layer['edges_target'][edge_idx]].edge_index = build_node_relationships(mapped_ids, edges[layer['edges'][edge_idx]], layer['edges_source'][edge_idx], layer['edges_target'][edge_idx], config_data['target'][0]['balancing'])
-            #graph_data[layer['edges_source'][edge_idx], layer['edges'][edge_idx], layer['edges_target'][edge_idx]].num_nodes = graph_data[layer['edges_source'][edge_idx], layer['edges'][edge_idx], layer['edges_target'][edge_idx]].edge_index[1]
-    return graph_data, unique_targets
+    return graph_data, unique_targets, size_targets
 
-def get_graph(list_to_get, config_data):
-    edges, nodes, indexes = fetch_graph(list_to_get, config_data)
+def get_graph(list_to_get, config_data, test=False, targets_test = None):
+    graph_data = HeteroData()
+    edges = {}
+    nodes = {}
+    indexes = {}
+    edges, nodes, indexes = fetch_graph(edges, nodes, indexes, list_to_get, config_data, test)
     mapped_uris = map_uri_to_index(indexes, config_data)
-    #In our case we have to pop the last element of the list while testing.
-    #This is due to a sentence referencing a non-existant next sentence.
-    #This will not happen with complete texts and should be removed.
-    #edges['nextSentence'].pop()
-    graph, unique_targets = build_graph(nodes, edges, mapped_uris, config_data)
-    print(unique_targets)
+    if test:
+        graph_data, unique_targets, size_targets = build_graph(nodes, edges, mapped_uris, config_data, graph_data, test=test, test_targets=targets_test)
+    else:
+        graph_data, unique_targets, size_targets = build_graph(nodes, edges, mapped_uris, config_data, graph_data)
+    print(graph_data)
     print("--- DATASET LOADED AND TRANSFORMED ---")
-    return graph, unique_targets
+    return graph_data, unique_targets

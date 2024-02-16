@@ -8,6 +8,8 @@ from unidecode import unidecode
 from Query_Builder import QueryBuilder
 from rdflib import Graph, URIRef, Literal
 from rdflib.namespace import RDFS, RDF, DOAP, FOAF, ORG, OWL, SKOS, XSD
+import string
+
 
 class CreateGraph:
     """
@@ -202,11 +204,12 @@ class CreateGraph:
                 results = wrapper.query()
                 str_error = None
             except:
-                print(results)
                 str_error = "Error"
                 pass
 
             if str_error:
+                if i == 0:
+                    print(query)
                 print("Error occurred. Attempting to upload triple again.")
                 print("Attempt number: ", i)
                 sleep(2*i)  # wait for 2*attempt number seconds before trying to fetch the data again
@@ -274,7 +277,14 @@ class CreateGraph:
             self.insert_data(wordid_uri, self.d_lemma_uri, Literal(lemma), self.sparql)
             self.process_conll_as_objects('edge', wordid_uri, self.o_edge_uri, row['DEPREL'])
             self.process_conll_as_objects('pos', wordid_uri, self.o_pos_uri, row['UPOS'])
-            self.process_conll_as_objects('poscoarse', wordid_uri, self.o_poscoarse_uri, row['XPOS'])
+            #self.process_conll_as_objects('poscoarse', wordid_uri, self.o_poscoarse_uri, row['XPOS'])
+            transformed = ''
+            for character in row['XPOS']:
+                if character in string.punctuation:
+                    transformed = transformed + str(ord(character))
+                else:
+                    transformed = transformed + character
+            self.insert_data(wordid_uri, self.o_poscoarse_uri, Literal(transformed), self.sparql)
             if self.preprocessing:
                 for o in range(0, len(processed_lines)):
                     word_to_check = processed_lines[o][0].strip().lower()
@@ -348,6 +358,13 @@ class CreateGraph:
                 else:
                     self.insert_data(to_add_uri, RDFS.subClassOf, uri, self.sparql)
         elif prop_type == "poscoarse":
+            transformed = ''
+            for character in to_add:
+                if character in string.punctuation:
+                    transformed = transformed + str(ord(character))
+                else:
+                    transformed = transformed + character
+            to_add = transformed
             to_add_uri = self.main_uri + to_add
             if to_add not in self.poscoarse_list:
                 self.poscoarse_list.append(to_add)
@@ -358,7 +375,7 @@ class CreateGraph:
         if self.in_memory:
             graph.add((word, RDF.type, URIRef(to_add_uri)))
         else:
-            self.insert_data(word, RDFS.type, to_add_uri, self.sparql)
+            self.insert_data(word, RDF.type, to_add_uri, self.sparql)
 
     def insert_memory_script(self, lines, sentence_id, doc_id, g):
         """
@@ -421,7 +438,14 @@ class CreateGraph:
             g.add((wordid_uri, URIRef(self.d_lemma_uri), Literal(lemma)))
             self.process_conll_as_objects('edge' ,wordid_uri, self.o_edge_uri, row['DEPREL'], graph=g)
             self.process_conll_as_objects('pos',wordid_uri, self.o_pos_uri, row['UPOS'], graph=g)
-            self.process_conll_as_objects('poscoarse', wordid_uri, self.o_poscoarse_uri, row['XPOS'], graph=g)
+            transformed = ''
+            for character in row['XPOS']:
+                if character in string.punctuation:
+                    transformed = transformed + str(ord(character))
+                else:
+                    transformed = transformed + character
+            g.add((wordid_uri, URIRef(self.o_poscoarse_uri), Literal(transformed)))
+            #self.process_conll_as_objects('poscoarse', wordid_uri, self.o_poscoarse_uri, row['XPOS'], graph=g)
             # g.add((wordid_uri, URIRef(self.d_edge_uri), Literal(row['DEPREL'])))
             # g.add((wordid_uri, URIRef(self.d_pos_uri), Literal(row['UPOS'])))
             # g.add((wordid_uri, URIRef(self.d_poscoarse_uri), Literal(row['XPOS'])))
