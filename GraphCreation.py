@@ -1,4 +1,4 @@
-from InsertData_Experiments import CreateGraph
+from InsertData_LinkPrediction import CreateGraph
 import yaml
 import copy
 
@@ -37,4 +37,4 @@ graph = CreateGraph(folder=config_data['folder'], graph_name=config_data['graph_
                     connection_string=config_data['connection'], main_uri=config_data['uri'], language=config_data['language'],
                     preprocessing=preprocess_sentence, in_memory=config_data['in_memory'])
 
-graph.create_graph(save_file="TTLs/Subtask1_FeatsPropertiesGraph")
+graph.create_graph(save_file=config_data['save_file'])

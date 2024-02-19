@@ -101,7 +101,7 @@ targets = pd.read_pickle("data/GraphData/Track1/TargetsFullDataPropertiesMultiMo
 # model = torch.load(training_config['model_file'])
 
 # CREATING THE TRAIN, TEST AND VAL MASKS
-split = T.RandomNodeSplit(split="test_rest", num_val=training_config['validation_split'], num_test=training_config['test_split'])#, num_train_per_class=1100)
+split = T.RandomNodeSplit(num_val=training_config['validation_split'], num_test=training_config['test_split'])#, num_train_per_class=1100)
 data_split = split(data)
 #data_split = T.NormalizeFeatures()(data_split)
 
@@ -124,7 +124,6 @@ model = GNN(hidden_channels=128, out_channels=data_split.num_classes)
 model = to_hetero(model, data_split.metadata(), aggr='sum')
 
 optimizer = torch.optim.Adam(model.parameters(), lr=0.001)#, weight_decay=5e-4)
-#optimizer = torch.optim.SGD(model.parameters(), lr=0.001)
 
 # weights = torch.Tensor([5, 10.2, 30.4, 40.6, 50.7, 60])
 # Pass data and module onto GPU
