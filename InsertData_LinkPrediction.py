@@ -51,7 +51,6 @@ class CreateGraph:
         self.c_word_uri = self.main_uri + "Word"
         self.c_entity_uri = self.main_uri + "Entity"
 
-        self.o_entity_present = self.main_uri + "entityPresent"
         self.o_software_mention = self.main_uri + "softwareMention"
 
         # General properties -> text/conll properties to be created as object properties in the graph
@@ -65,7 +64,6 @@ class CreateGraph:
         self.o_from_text = self.main_uri + "fromText"
         self.o_contains_text = self.main_uri + "containsText"
         self.o_from_sentence_uri = self.main_uri + "fromSentence"
-
         #Extra object properties
         self.extra_object_properties = self.fetch_extra_properties(extra_connetions)
 
@@ -98,10 +96,10 @@ class CreateGraph:
         self.insert_data(self.c_text_uri, RDF.type, OWL.Class, self.sparql)
         self.insert_data(self.c_sentence_uri, RDF.type, OWL.Class, self.sparql)
         self.insert_data(self.c_word_uri, RDF.type, OWL.Class, self.sparql)
-        self.insert_data(self.c_entity_uri, RDF.type, OWL.Class, self.sparql)
-
-        self.insert_data(self.o_entity_present, RDFS.subClassOf, self.c_entity_uri, self.sparql)
-        self.insert_data(self.o_software_mention, RDFS.subClassOf, self.c_entity_uri, self.sparql)
+        # self.insert_data(self.c_entity_uri, RDF.type, OWL.Class, self.sparql)
+        #
+        # self.insert_data(self.o_entity_present, RDFS.subClassOf, self.c_entity_uri, self.sparql)
+        # self.insert_data(self.o_software_mention, RDFS.subClassOf, self.c_entity_uri, self.sparql)
 
         # object properties
         self.insert_data(self.o_head_uri, RDF.type, OWL.ObjectProperty, self.sparql)
@@ -121,6 +119,7 @@ class CreateGraph:
         if self.extra_object_properties:
             for extra_object in self.extra_object_properties:
                 self.insert_data(extra_object, RDF.type, OWL.ObjectProperty, self.sparql)
+                self.insert_data(extra_object+"_text", RDF.type, OWL.DatatypeProperty, self.sparql)
 
         # data properties
         self.insert_data(self.d_sentence_text, RDF.type, OWL.DatatypeProperty, self.sparql)
@@ -150,10 +149,10 @@ class CreateGraph:
         g.add((URIRef(self.c_text_uri), RDF.type, OWL.Class))
         g.add((URIRef(self.c_sentence_uri), RDF.type, OWL.Class))
         g.add((URIRef(self.c_word_uri), RDF.type, OWL.Class))
-        g.add((URIRef(self.c_entity_uri), RDF.type, OWL.Class))
-
-        g.add((URIRef(self.o_entity_present), RDFS.subClassOf, URIRef(self.c_entity_uri)))
-        g.add((URIRef(self.o_software_mention), RDFS.subClassOf, URIRef(self.c_entity_uri)))
+        # g.add((URIRef(self.c_entity_uri), RDF.type, OWL.Class))
+        #
+        # g.add((URIRef(self.o_entity_present), RDFS.subClassOf, URIRef(self.c_entity_uri)))
+        # g.add((URIRef(self.o_software_mention), RDFS.subClassOf, URIRef(self.c_entity_uri)))
 
         # object properties
         g.add((URIRef(self.o_head_uri), RDF.type, OWL.ObjectProperty))
@@ -172,7 +171,8 @@ class CreateGraph:
         #Insert the extras
         if self.extra_object_properties:
             for extra_object in self.extra_object_properties:
-                g.add((URIRef(extra_object), RDF.type, OWL.DatatypeProperty))
+                g.add((URIRef(extra_object), RDF.type, OWL.ObjectProperty))
+                g.add((URIRef(extra_object+"_text"), RDF.type, OWL.DatatypeProperty))
 
         # data properties
         g.add((URIRef(self.d_sentence_text), RDF.type, OWL.DatatypeProperty))
@@ -252,11 +252,12 @@ class CreateGraph:
                 self.insert_data(sentenceid_uri, self.o_from_text, textid_uri, self.sparql)
                 if sentence_id != 1:
                     #Previous sentence
-                    self.insert_data(sentenceid_uri, self.o_nextsentence_uri,
+                    self.insert_data(sentenceid_uri, self.o_previoussentence_uri,
                                      self.c_sentence_uri + "_" + str(doc_id) + "_" + str(sentence_id - 1), self.sparql)
                     #Next sentence
                     self.insert_data(self.c_sentence_uri + "_" + str(doc_id) + "_" + str(sentence_id - 1), self.o_nextsentence_uri,
                                      sentenceid_uri, self.sparql)
+
             else:
                 word_id = row['ID']
                 previous_uri = wordid_uri
@@ -287,8 +288,9 @@ class CreateGraph:
                         indexes_used.append(o)
                         for k in range(0, len(self.extra_object_properties)):
                             if processed_lines[o][k + 1] != '':
-                                self.insert_data(self.extra_object_properties[k], RDF.type, OWL.ObjectProperty, self.sparql)
-                                self.insert_data(self.main_uri+processed_lines[o][k+1], RDF.type, self.extra_object_properties[k], self.sparql)
+                                self.insert_data(self.main_uri + processed_lines[o][k + 1], self.extra_object_properties[k] + "_text", Literal(processed_lines[o][k + 1]), self.sparql)
+                                #self.insert_data(self.extra_object_properties[k], RDF.type, OWL.ObjectProperty, self.sparql)
+                                self.insert_data(self.main_uri+processed_lines[o][k+1], RDF.type, self.main_uri + "Entity", self.sparql)
                                 self.insert_data(wordid_uri, self.extra_object_properties[k], self.main_uri+processed_lines[o][k+1], self.sparql)
                         break
 
@@ -301,6 +303,7 @@ class CreateGraph:
                                  self.d_word_uri + "_" + str(doc_id) +"_" + str(sentence_id) + "_" + str(row['HEAD']), self.sparql)
                 self.insert_data(self.d_word_uri + "_" + str(doc_id) +"_" + str(sentence_id) + "_" + str(row['HEAD']), self.o_depgraph_uri,
                                  wordid_uri, self.sparql)
+
         self.insert_data(sentenceid_uri, self.d_sentence_text, Literal(' '.join(sentence)), self.sparql)
         self.insert_data(textid_uri, self.o_contains_sentence, sentenceid_uri, self.sparql)
         self.insert_data(sentenceid_uri, self.o_from_text, textid_uri, self.sparql)
@@ -403,10 +406,14 @@ class CreateGraph:
                         indexes_used.append(o)
                         for k in range(0, len(self.extra_object_properties)):
                             if processed_lines[o][k + 1] != '':
-                                g.add((URIRef(self.extra_object_properties[k]), RDF.type, OWL.ObjectProperty))
-                                g.add((URIRef(self.main_uri+processed_lines[o][k+1]), RDF.type, URIRef(self.extra_object_properties[k])))
-                                g.add((wordid_uri, URIRef(self.extra_object_properties[k]),
-                                       URIRef(self.main_uri+processed_lines[o][k+1])))
+                                g.add((URIRef(self.main_uri+processed_lines[o][k+1]), URIRef(self.extra_object_properties[k]+ "_text"), Literal(processed_lines[o][k+1])))
+                                #g.add((URIRef(self.extra_object_properties[k]), RDF.type, OWL.ObjectProperty))
+                                #g.add((URIRef(self.main_uri+processed_lines[o][k+1]), RDF.type, URIRef(self.extra_object_properties[k])))
+                                g.add((URIRef(self.main_uri + processed_lines[o][k + 1]), RDF.type,
+                                       URIRef(self.main_uri + "Entity")))
+                                #g.add((URIRef(self.main_uri+processed_lines[o][k+1]), self.main_uri+processed_lines[o][k+1]+"_text", URIRef(self.extra_object_properties[k])))
+                                g.add((wordid_uri, URIRef(self.extra_object_properties[k]),URIRef(self.main_uri+processed_lines[o][k+1])))
+                                #print(wordid_uri, URIRef(self.extra_object_properties[k]),URIRef(self.main_uri+processed_lines[o][k+1]))
                         break
 
             if row['HEAD'] == 0:

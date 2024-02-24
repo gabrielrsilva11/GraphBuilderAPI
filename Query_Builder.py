@@ -78,6 +78,16 @@ class QueryBuilder:
         """
         return query
 
+    def query_by_type(self, uri_type):
+        query = """
+            SELECT  ?s ?p ?o
+            WHERE { 
+                ?s rdf:type <"""+self.main_uri+uri_type+"""> .
+                ?s ?p ?o .
+            }
+        """
+        return query
+
     def build_query_by_or_sentence_list(self, string_list: list) -> str:
         """
         Builds a SPARQL query to look for sentences that are present in a given list. This query will look for a
@@ -122,7 +132,7 @@ class QueryBuilder:
         return query
 
     @dispatch(int, int)
-    def build_query_by_sentence_id(self, doc_id:int, sentence_id: int) -> str:
+    def build_query_by_sentence_id(self, doc_id: int, sentence_id: int) -> str:
         """
         Builds a SPARQL query to look for sentences by a given id.
         :param str_id: (int) id of the sentence to look for.
@@ -132,14 +142,16 @@ class QueryBuilder:
         PREFIX dbp:  <http://dbpedia.org/resource/>
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
         PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    
+
         SELECT ?s ?p ?o
         WHERE {
-            <""" + self.main_uri + """Sentence_""" + str(doc_id) + """_""" + str(sentence_id) + """> <""" + self.main_uri + """depGraph>* ?s . 
+            <""" + self.main_uri + """Sentence_""" + str(doc_id) + """_""" + str(
+            sentence_id) + """> <""" + self.main_uri + """depGraph>* ?s . 
             ?s ?p ?o .
         }
         """
         return query
+
 
     @dispatch(str, str, str)
     def build_insert_query(self, s, p, o) -> str:

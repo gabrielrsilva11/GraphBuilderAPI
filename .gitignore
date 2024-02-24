@@ -8,3 +8,5 @@ Data_to_process/wikimapper_data/ptwiki-latest-page.sql
 /Grapfs
 /Data_to_process/wikiner_data_files/mag/
 /__pycache__
+/.idea
+/data

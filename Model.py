@@ -1,4 +1,6 @@
-from torch_geometric.nn import GATConv, Linear, SAGEConv, SplineConv
+from torch import Tensor
+from torch_geometric.data import HeteroData
+from torch_geometric.nn import GATConv, Linear, SAGEConv, SplineConv, to_hetero
 import torch
 import torch.nn.functional as F
 from torch_geometric.nn.norm.batch_norm import BatchNorm
@@ -75,61 +77,59 @@ class Spline(torch.nn.Module):
         x = F.dropout(x)
         return F.log_softmax(x, dim=1)
 
-class GraphSAGE(torch.nn.Module):
-  """GraphSAGE"""
-  def __init__(self, hidden_channels, out_channels):
-    super().__init__()
-    self.sage1 = SAGEConv((-1, -1), hidden_channels)
-    self.sage2 = SAGEConv((-1, -1), 64)
-    self.sage3 = SAGEConv((-1, -1), 32)
-    self.sage4 = SAGEConv((-1, -1), out_channels)
-    self.optimizer = torch.optim.Adam(self.parameters(),
-                                      lr=0.01,
-                                      weight_decay=5e-4)
+class GNN_link(torch.nn.Module):
+    def __init__(self, hidden_channels):
+        super().__init__()
+        self.conv1 = SAGEConv(hidden_channels, hidden_channels)
+        self.conv2 = SAGEConv(hidden_channels, hidden_channels)
+    def forward(self, x: Tensor, edge_index: Tensor) -> Tensor:
+        x = F.relu(self.conv1(x, edge_index))
+        x = self.conv2(x, edge_index)
+        return x
 
-  def forward(self, x, edge_index):
-    h = self.sage1(x, edge_index)
-    h = torch.relu(h)
-    h = F.dropout(h, p=0.5, training=self.training)
-    h = self.sage2(x, edge_index)
-    h = torch.relu(h)
-    h = F.dropout(h, p=0.5, training=self.training)
-    h = self.sage3(x, edge_index)
-    h = torch.relu(h)
-    h = F.dropout(h, p=0.5, training=self.training)
-    h = self.sage4(h, edge_index)
-    return F.log_softmax(h, dim=1)
+# Our final classifier applies the dot-product between source and destination
+# node embeddings to derive edge-level predictions:
+class Classifier(torch.nn.Module):
+    def forward(self, x_word: Tensor, x_entity: Tensor, edge_label_index: Tensor) -> Tensor:
+        # Convert node embeddings to edge-level representations:
+        edge_feat_word = x_word[edge_label_index[0]]
+        edge_feat_entity = x_entity[edge_label_index[1]]
+        # Apply dot-product to get a prediction per supervision edge:
+        return (edge_feat_word * edge_feat_entity).sum(dim=-1)
 
-  def fit(self, train_loader, epochs):
-    criterion = torch.nn.CrossEntropyLoss()
-    optimizer = self.optimizer
-
-    self.train()
-    for epoch in range(epochs+1):
-      total_loss = 0
-      acc = 0
-      val_loss = 0
-      val_acc = 0
-
-      # Train on batches
-      for batch in train_loader:
-        optimizer.zero_grad()
-        _, out = self(batch.x, batch.edge_index)
-        loss = criterion(out[batch.train_mask], batch.y[batch.train_mask])
-        total_loss += loss
-        acc += accuracy(out[batch.train_mask].argmax(dim=1),
-                        batch.y[batch.train_mask])
-        loss.backward()
-        optimizer.step()
-
-        # Validation
-        val_loss += criterion(out[batch.val_mask], batch.y[batch.val_mask])
-        val_acc += accuracy(out[batch.val_mask].argmax(dim=1),
-                            batch.y[batch.val_mask])
-
-      # Print metrics every 10 epochs
-      if(epoch % 100 == 0):
-          print(f'Epoch {epoch:>3} | Train Loss: {loss/len(train_loader):.3f} '
-                f'| Train Acc: {acc/len(train_loader)*100:>6.2f}% | Val Loss: '
-                f'{val_loss/len(train_loader):.2f} | Val Acc: '
-                f'{val_acc/len(train_loader)*100:.2f}%')
+class ModelLink(torch.nn.Module):
+    def __init__(self, hidden_channels, data):
+        super().__init__()
+        # Since the dataset does not come with rich features, we also learn two
+        # embedding matrices for users and movies:
+        self.word_lin = torch.nn.Linear(23, hidden_channels)
+        self.word_emb = torch.nn.Embedding(data["word"].num_nodes, hidden_channels)
+        self.entity_emb = torch.nn.Embedding(data["Entity"].num_nodes, hidden_channels)
+        self.sentence_emb = torch.nn.Embedding(data["sentence"].num_nodes, hidden_channels)
+        # Instantiate homogeneous GNN:
+        self.gnn = GNN_link(hidden_channels)
+        # Convert GNN model into a heterogeneous variant:
+        self.gnn = to_hetero(self.gnn, metadata=data.metadata())
+        self.classifier = Classifier()
+    def forward(self, data: HeteroData) -> Tensor:
+        x_dict = {
+            "word": self.word_lin(data['word'].x) + self.word_emb(data["word"].node_id),
+            "Entity": self.entity_emb(data["Entity"].node_id),
+            "sentence": self.entity_emb(data["sentence"].node_id)
+        }
+        # `x_dict` holds feature matrices of all node types
+        # `edge_index_dict` holds all edge indices of all edge types
+        x_dict = self.gnn(x_dict, data.edge_index_dict)
+        pred = self.classifier(
+            x_dict["word"],
+            x_dict["Entity"],
+            # x_dict["sentence"],
+            data["word", "softwareMention", "Entity"].edge_label_index,
+            # data["word", "depGraph", "word"].edge_label_index,
+            # data["word", "previousWord", "word"].edge_label_index,
+            # data["word", "nextWord", "word"].edge_label_index,
+            # data["word", "fromSentence", "sentence"].edge_label_index,
+            # data["sentence", "nextSentence", "sentence"].edge_label_index,
+            # data["sentence", "previousSentence", "sentence"].edge_label_index,
+        )
+        return pred

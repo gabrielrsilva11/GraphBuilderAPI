@@ -28,6 +28,10 @@ class BuildNetworkx:
             g = build_subgraph(g, self.qb.build_query_by_sentence_id(doc_id, i), self.conection_string)
         return g
 
+    def fetch_graph_with_query(self, g, uri_type):
+        g = build_subgraph(g, self.qb.query_by_type(uri_type), self.conection_string)
+        return g
+
     def build_graph(self, g, start, stop):
         doc_id = 1
 

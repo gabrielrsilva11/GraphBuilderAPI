@@ -9,7 +9,7 @@ from tqdm import tqdm
 from torch_geometric.loader import NeighborLoader, ImbalancedSampler
 import yaml
 from GraphBuildWithConfig import get_graph
-from Model import GAT, GNN, Spline, GraphSAGE
+from Model import GAT, GNN, Spline
 import random
 
 def train_batch():
@@ -89,7 +89,7 @@ enable_wandb = config_data['enable_wandb']
 if enable_wandb:
     import wandb
 
-#data, targets = get_graph([*range(1, 5000, 1)], config_data)
+# data, targets = get_graph([*range(1, 10, 1)], config_data)
 
 # ----- SAVE DATA ------
 # torch.save(data, "data/GraphData/Track1/FullDataPropertiesMultiModel_5000.pt")
@@ -138,7 +138,7 @@ with torch.no_grad():  # Initialize lazy modules.
 
 if enable_wandb:
     wandb_data(data_split, data_split)
-    #wandb.watch(model)
+    wandb.watch(model)
 
 epochs = training_config['epochs']
 

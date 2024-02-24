@@ -12,7 +12,7 @@ def preprocess_sentence(sentence):
         sentence_annotation = sentence_annotation.split("|")
 
         if sentence_annotation[-1] == "O":
-            sentence_annotation[-1] = ''
+            sentence_annotation[-1] = 'No'
             sentence_annotation.append("No")
         else:
             sentence_entity = sentence_annotation[-1].split("-")

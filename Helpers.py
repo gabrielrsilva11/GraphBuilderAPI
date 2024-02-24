@@ -226,7 +226,6 @@ def build_subgraph(g: Graph, query: str, connection: str):
     :return:
     """
     sparql = SPARQLWrapper2(connection)
-    # print(query)
     sparql.setQuery(query)
     for result in sparql.query().bindings:
         triple = list(map(lambda x: URIRef(x.value) if x.type == 'uri' else (Literal(int(x.value))
