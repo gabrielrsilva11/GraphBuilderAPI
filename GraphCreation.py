@@ -1,4 +1,4 @@
-from InsertData_LinkPrediction import CreateGraph
+from InsertData_PreProcess import CreateGraph
 import yaml
 import copy
 
@@ -10,7 +10,6 @@ def preprocess_sentence(sentence):
     final_list = []
     for sentence_annotation in sentences_split:
         sentence_annotation = sentence_annotation.split("|")
-
         if sentence_annotation[-1] == "O":
             sentence_annotation[-1] = 'No'
             sentence_annotation.append("No")
