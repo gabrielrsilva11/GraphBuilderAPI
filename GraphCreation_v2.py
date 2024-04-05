@@ -1,5 +1,4 @@
 import string
-
 from InsertData_PreProcess import CreateGraph
 import yaml
 import copy
@@ -13,7 +12,7 @@ def preprocess_sentence(sentence):
     final_list = []
     for sentence_annotation in sentences_split:
         sentence_annotation = sentence_annotation.split("|")
-        if sentence_annotation[-1] == "O":
+        if sentence_annotation[-1] == "o":
             sentence_annotation[-1] = 'No'
             sentence_annotation.append("No")
         else:
@@ -30,7 +29,7 @@ def preprocess_sentence(sentence):
             final_list.append(sentence_annotation)
     return final_list
 
-punct = string.punctuation
+
 config_file = open("configs/create_graph.yaml", 'r')
 config_data = yaml.load(config_file, Loader=yaml.FullLoader)
 
@@ -38,4 +37,4 @@ graph = CreateGraph(folder=config_data['folder'], graph_name=config_data['graph_
                     connection_string=config_data['connection'], main_uri=config_data['uri'], language=config_data['language'],
                     preprocessing=preprocess_sentence, in_memory=config_data['in_memory'])
 
-graph.create_graph(save_file=config_data['save_file'])
+graph.create_graph(save_file=config_data['save_file'], coref=True)

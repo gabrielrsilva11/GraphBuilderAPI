@@ -5,7 +5,7 @@ import torch.nn.functional as F
 from tqdm import tqdm
 import yaml
 from GraphBuildWithConfig import get_graph
-from Model import GAT, GNN, Spline, GraphSAGE
+from Model import GAT, GNN, Spline
 import random
 
 def train_batch():
@@ -72,7 +72,7 @@ def wandb_data(data):
     wandb.log(summary)
 
 
-config_file = open('configs/graphml_conf_task1_dataprops.yaml', 'r')
+config_file = open('configs/graphml_conf_task1_coreference.yaml', 'r')
 training_config = open('configs/training_conf.yaml', 'r')
 
 config_data = yaml.load(config_file, Loader=yaml.FullLoader)
@@ -82,7 +82,7 @@ enable_wandb = config_data['enable_wandb']
 if enable_wandb:
     import wandb
 
-data, targets = get_graph([*range(1, 10000, 1)], config_data, test=False)
+data, targets = get_graph([*range(1, 1000, 1)], config_data, test=False)
 #data, targets = get_graph(random.sample(range(30000), 2000), config_data)
 # ----------------- LOAD AND SAVE DATA WHEN NEEDED -------------------------
 #torch.save(data, training_config['data_file'])
@@ -121,7 +121,7 @@ for i in pbar:
     pbar.set_description(f"Epoch {i} with Loss: {loss_final} -- Best Loss: {best_loss} on Epoch {best_epoch}", refresh=True)
     #print("Loss: ", loss_final)
 
-# data_test, targets_test = get_graph([*range(10000, 10500, 1)], config_data, test = True, targets_test = targets)
+data_test, targets_test = get_graph([*range(1000, 1100, 1)], config_data, test = True, targets_test = targets)
 # # ----------------- LOAD AND SAVE DATA WHEN NEEDED -------------------------
 # torch.save(data, training_config['test_data_file'])
 # targets.to_pickle(training_config['test_targets_file'])

@@ -1,0 +1,191 @@
+connection:
+  - connection_uri: http://hlt.ieeta.pt:8890/sparql
+    graph_name: http://www.ieeta-bit.pt/Subtask1_Coref#
+    base_uri: http://www.ieeta-bit.pt/Subtask1_Coref#
+enable_wandb:
+  True
+nodes:
+  - name: edge
+    uri: http://www.ieeta-bit.pt/Subtask1_Coref#edge
+    edges_source: []
+    edges: []
+    edges_target: []
+    edges_uri: []
+    attributes: []
+  - name: pos
+    uri: http://www.ieeta-bit.pt/Subtask1_Coref#pos
+    edges_source: [ ]
+    edges: [ ]
+    edges_target: [ ]
+    edges_uri: [ ]
+    attributes: [ ]
+  - name: poscoarse
+    uri: http://www.ieeta-bit.pt/Subtask1_Coref#poscoarse
+    edges_source: [ ]
+    edges: [ ]
+    edges_target: [ ]
+    edges_uri: [ ]
+    attributes: [ ]
+  - name: aspect
+    uri: http://www.ieeta-bit.pt/Subtask1_Coref#aspect
+    edges_source: [ ]
+    edges: [ ]
+    edges_target: [ ]
+    edges_uri: [ ]
+    attributes: [ ]
+  - name: case
+    uri: http://www.ieeta-bit.pt/Subtask1_Coref#case
+    edges_source: [ ]
+    edges: [ ]
+    edges_target: [ ]
+    edges_uri: [ ]
+    attributes: [ ]
+  - name: definite
+    uri: http://www.ieeta-bit.pt/Subtask1_Coref#definite
+    edges_source: [ ]
+    edges: [ ]
+    edges_target: [ ]
+    edges_uri: [ ]
+    attributes: [ ]
+  - name: degree
+    uri: http://www.ieeta-bit.pt/Subtask1_Coref#degree
+    edges_source: [ ]
+    edges: [ ]
+    edges_target: [ ]
+    edges_uri: [ ]
+    attributes: [ ]
+  - name: foreign
+    uri: http://www.ieeta-bit.pt/Subtask1_Coref#foreign
+    edges_source: [ ]
+    edges: [ ]
+    edges_target: [ ]
+    edges_uri: [ ]
+    attributes: [ ]
+  - name: gender
+    uri: http://www.ieeta-bit.pt/Subtask1_Coref#gender
+    edges_source: [ ]
+    edges: [ ]
+    edges_target: [ ]
+    edges_uri: [ ]
+    attributes: [ ]
+  - name: mood
+    uri: http://www.ieeta-bit.pt/Subtask1_Coref#mood
+    edges_source: [ ]
+    edges: [ ]
+    edges_target: [ ]
+    edges_uri: [ ]
+    attributes: [ ]
+  - name: number
+    uri: http://www.ieeta-bit.pt/Subtask1_Coref#number
+    edges_source: [ ]
+    edges: [ ]
+    edges_target: [ ]
+    edges_uri: [ ]
+    attributes: [ ]
+  - name: numtype
+    uri: http://www.ieeta-bit.pt/Subtask1_Coref#numtype
+    edges_source: [ ]
+    edges: [ ]
+    edges_target: [ ]
+    edges_uri: [ ]
+    attributes: [ ]
+  - name: person
+    uri: http://www.ieeta-bit.pt/Subtask1_Coref#person
+    edges_source: [ ]
+    edges: [ ]
+    edges_target: [ ]
+    edges_uri: [ ]
+    attributes: [ ]
+  - name: polarity
+    uri: http://www.ieeta-bit.pt/Subtask1_Coref#polarity
+    edges_source: [ ]
+    edges: [ ]
+    edges_target: [ ]
+    edges_uri: [ ]
+    attributes: [ ]
+  - name: poss
+    uri: http://www.ieeta-bit.pt/Subtask1_Coref#poss
+    edges_source: [ ]
+    edges: [ ]
+    edges_target: [ ]
+    edges_uri: [ ]
+    attributes: [ ]
+  - name: prontype
+    uri: http://www.ieeta-bit.pt/Subtask1_Coref#prontype
+    edges_source: [ ]
+    edges: [ ]
+    edges_target: [ ]
+    edges_uri: [ ]
+    attributes: [ ]
+  - name: punctside
+    uri: http://www.ieeta-bit.pt/Subtask1_Coref#punctside
+    edges_source: [ ]
+    edges: [ ]
+    edges_target: [ ]
+    edges_uri: [ ]
+    attributes: [ ]
+  - name: puncttype
+    uri: http://www.ieeta-bit.pt/Subtask1_Coref#puncttype
+    edges_source: [ ]
+    edges: [ ]
+    edges_target: [ ]
+    edges_uri: [ ]
+    attributes: [ ]
+  - name: tense
+    uri: http://www.ieeta-bit.pt/Subtask1_Coref#tense
+    edges_source: [ ]
+    edges: [ ]
+    edges_target: [ ]
+    edges_uri: [ ]
+    attributes: [ ]
+  - name: verbform
+    uri: http://www.ieeta-bit.pt/Subtask1_Coref#verbform
+    edges_source: [ ]
+    edges: [ ]
+    edges_target: [ ]
+    edges_uri: [ ]
+    attributes: [ ]
+  - name: conjtype
+    uri: http://www.ieeta-bit.pt/Subtask1_Coref#conjtype
+    edges_source: [ ]
+    edges: [ ]
+    edges_target: [ ]
+    edges_uri: [ ]
+    attributes: [ ]
+  - name: foreign
+    uri: http://www.ieeta-bit.pt/Subtask1_Coref#foreign
+    edges_source: [ ]
+    edges: [ ]
+    edges_target: [ ]
+    edges_uri: [ ]
+    attributes: [ ]
+  - name: coReference
+    uri: http://www.ieeta-bit.pt/Subtask1_Coref#coReference
+    edges_source: [ ]
+    edges: [ ]
+    edges_target: [ ]
+    edges_uri: [ ]
+    attributes: [ ]
+  - name: word
+    uri: http://www.ieeta-bit.pt/Subtask1_Coref#Word
+    edges_source: [word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word]
+    edges: [coReference, depGraph, head, previousWord, fromSentence, nextWord, pos, edge, aspect, case, conjtype, definite, degree, foreign, gender, mood, number, numtype, person, polarity, poss, prontype, punctside, puncttype, tense, verbform]
+    edges_target: [word, word, word, word, sentence, word, pos, edge, aspect, case, conjtype, definite, degree, foreign, gender, mood, number, numtype, person, polarity, poss, prontype, punctside, puncttype, tense, verbform]
+    edges_uri: [http://www.ieeta-bit.pt/Subtask1_Coref#coReference, http://www.ieeta-bit.pt/Subtask1_Coref#depGraph, http://www.ieeta-bit.pt/Subtask1_Coref#head, http://www.ieeta-bit.pt/Subtask1_Coref#previousWord, http://www.ieeta-bit.pt/Subtask1_Coref#fromSentence]
+    attributes: [lemma, word, wikidataId]
+  - name: sentence
+    uri: http://www.ieeta-bit.pt/Subtask1_Coref#Sentence
+#    edges_source: [sentence, sentence]
+#    edges: [nextSentence, depGraph]
+#    edges_target: [sentence, word]
+#    edges_uri: [http://www.ieeta-bit.pt/Subtask1_Coref#nextSentence, http://www.ieeta-bit.pt/Subtask1_Coref#depGraph]
+    edges_source: [sentence]
+    edges: [nextSentence]
+    edges_target: [sentence]
+    edges_uri: [http://www.ieeta-bit.pt/Subtask1_Coref#nextSentence]
+    attributes: [senttext]
+target:
+  - node: word
+    name: [softwareMention]
+    uri: [http://www.ieeta-bit.pt/Subtask1_Coref#softwareMention]
+    balancing: False

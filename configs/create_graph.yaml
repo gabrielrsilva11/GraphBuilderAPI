@@ -1,10 +1,10 @@
-folder: Data_to_process/Task1/Merged_Even_Shorter
-uri: http://www.ieeta-bit.pt/Subtask1_PreProcess_Short#
+folder: Data_to_process/Task1/Merged
+uri: http://www.ieeta-bit.pt/Subtask1_Coref#
 #language: pt_core_news_sm
 language: en_core_web_sm
-graph_name: http://www.ieeta-bit.pt/Subtask1_PreProcess_Short#
+graph_name: http://www.ieeta-bit.pt/Subtask1_Coref#
 connection: http://hlt.ieeta.pt:8890/sparql
-in_memory: True
+in_memory: False
 save_file: TTLs/Subtask1_PreProcess
 extra_connections:
   connections: [softwareMention]

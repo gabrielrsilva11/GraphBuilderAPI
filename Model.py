@@ -1,6 +1,7 @@
 from torch import Tensor
 from torch_geometric.data import HeteroData
-from torch_geometric.nn import GATConv, Linear, SAGEConv, SplineConv, to_hetero
+from torch_geometric.nn import GATConv, Linear, SAGEConv, SplineConv, to_hetero, TopKPooling
+from torch_geometric.nn import global_mean_pool as gap, global_max_pool as gmp
 import torch
 import torch.nn.functional as F
 from torch_geometric.nn.norm.batch_norm import BatchNorm
@@ -133,3 +134,62 @@ class ModelLink(torch.nn.Module):
             # data["sentence", "previousSentence", "sentence"].edge_label_index,
         )
         return pred
+
+
+class Net(torch.nn.Module):
+    def __init__(self, n_labels):
+        super(Net, self).__init__()
+
+        self.conv1 = SAGEConv(512, 512)
+        self.pool1 = TopKPooling(512, ratio=0.8)
+        self.conv2 = SAGEConv(512, 512)
+        self.pool2 = TopKPooling(512, ratio=0.8)
+        self.conv3 = SAGEConv(512, 512)
+        self.pool3 = TopKPooling(512, ratio=0.8)
+        #self.item_embedding = torch.nn.Embedding(num_embeddings=dim_input, embedding_dim=512)
+        # self.lin0 = torch.nn.Linear(dim_input, 512)
+        self.lin1 = torch.nn.Linear(512 * 2, 512)
+        self.lin2 = torch.nn.Linear(512, 512 // 2)
+        self.lin3 = torch.nn.Linear(512 // 2, n_labels)
+        self.bn1 = torch.nn.BatchNorm1d(512)
+        self.bn2 = torch.nn.BatchNorm1d(512 // 2)
+        self.act1 = torch.nn.ReLU()
+        self.act2 = torch.nn.ReLU()
+
+    def forward(self, data):
+        x, edge_index, batch = data.x, data.edge_index, data.batch
+        # x = self.lin0(x.float())
+        #x = self.item_embedding(x)
+        #x = x.squeeze(1)
+
+        x = F.relu(self.conv1(x, edge_index))
+
+        z = self.pool1(x, edge_index, None, batch)
+        x, edge_index, _, batch, _, _ = z
+        x1 = torch.cat([gmp(x, batch), gap(x, batch)], dim=1)
+
+        x = F.relu(self.conv2(x, edge_index))
+
+        x, edge_index, _, batch, _, _ = self.pool2(x, edge_index, None, batch)
+        x2 = torch.cat([gmp(x, batch), gap(x, batch)], dim=1)
+
+        x = F.relu(self.conv3(x, edge_index))
+
+        x, edge_index, _, batch, _, _ = self.pool3(x, edge_index, None, batch)
+        x3 = torch.cat([gmp(x, batch), gap(x, batch)], dim=1)
+
+        x = x1 + x2 + x3
+
+        x = self.lin1(x)
+        x = self.act1(x)
+        x = self.lin2(x)
+        x = self.act2(x)
+        x = F.dropout(x, p=0.5, training=self.training)
+
+        # x = torch.sigmoid(self.lin3(x))
+        x = self.lin3(x).squeeze(1)
+        # print(x)
+
+        return x
+
+
