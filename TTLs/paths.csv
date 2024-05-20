@@ -1,0 +1,2723 @@
+,path,Total,Total Entity,B Entity
+0,"['root', 'nsubjpass', 'amod']",8,1,1
+1,"['root', 'nsubjpass']",38,5,2
+2,['root'],550,69,45
+3,"['root', 'auxpass']",35,0,0
+4,"['advcl', 'prep', 'pcomp', 'prep', 'pobj', 'det']",2,0,0
+5,['punct'],1,0,0
+6,['advcl'],1,0,0
+7,"['advcl', 'dobj']",1,0,0
+8,"['advcl', 'prep']",1,0,0
+9,"['advcl', 'prep', 'pcomp']",1,0,0
+10,"['advcl', 'prep', 'pcomp', 'prep']",1,0,0
+11,"['advcl', 'prep', 'pcomp', 'prep', 'pobj']",1,0,0
+12,"['root', 'punct']",724,3,0
+13,"['root', 'ccomp', 'npadvmod', 'amod']",2,0,0
+14,"['root', 'ccomp', 'npadvmod']",4,0,0
+15,"['root', 'ccomp']",146,0,0
+16,"['root', 'ccomp', 'punct']",37,0,0
+17,"['root', 'ccomp', 'nsubj', 'det']",40,0,0
+18,"['root', 'ccomp', 'nsubj']",117,23,14
+19,"['root', 'ccomp', 'nsubj', 'amod']",19,6,6
+20,"['root', 'ccomp', 'aux']",53,0,0
+21,"['root', 'ccomp', 'dobj', 'amod']",11,2,2
+22,"['root', 'ccomp', 'dobj']",45,5,4
+23,"['root', 'ccomp', 'dobj', 'prep']",22,0,0
+24,"['root', 'ccomp', 'dobj', 'prep', 'pobj']",16,4,1
+25,"['root', 'ccomp', 'advcl', 'mark']",7,0,0
+26,"['root', 'ccomp', 'advcl', 'nsubj']",8,0,0
+27,"['root', 'ccomp', 'advcl', 'xcomp', 'aux']",3,0,0
+28,"['root', 'ccomp', 'advcl', 'xcomp']",2,0,0
+29,"['root', 'ccomp', 'advcl', 'xcomp', 'dobj']",1,0,0
+30,"['root', 'ccomp', 'advcl', 'xcomp', 'dobj', 'relcl', 'dobj']",1,0,0
+31,"['root', 'ccomp', 'advcl', 'xcomp', 'dobj', 'relcl']",1,0,0
+32,"['root', 'ccomp', 'advcl', 'xcomp', 'dobj', 'relcl', 'nsubj']",1,0,0
+33,"['root', 'ccomp', 'advcl', 'xcomp', 'dobj', 'relcl', 'aux']",1,0,0
+34,"['root', 'ccomp', 'advcl', 'xcomp', 'dobj', 'relcl', 'prt']",1,0,0
+35,"['root', 'ccomp', 'advcl', 'xcomp', 'dobj', 'relcl', 'prep']",1,0,0
+36,"['root', 'ccomp', 'advcl', 'xcomp', 'dobj', 'relcl', 'prep', 'pobj', 'amod']",1,0,0
+37,"['root', 'ccomp', 'advcl', 'xcomp', 'dobj', 'relcl', 'prep', 'pobj']",1,0,0
+38,"['root', 'ccomp', 'advcl', 'xcomp', 'dobj', 'relcl', 'prep', 'pobj', 'compound']",1,0,0
+39,"['root', 'ccomp', 'advcl', 'xcomp', 'dobj', 'relcl', 'prep', 'pobj', 'prep']",1,0,0
+40,"['root', 'ccomp', 'advcl', 'xcomp', 'dobj', 'relcl', 'prep', 'pobj', 'prep', 'pobj']",1,0,0
+41,"['root', 'ccomp', 'advcl', 'xcomp', 'dobj', 'relcl', 'prep', 'pobj', 'prep', 'pobj', 'conj']",1,0,0
+42,"['root', 'ccomp', 'advcl', 'xcomp', 'dobj', 'relcl', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'cc']",1,0,0
+43,"['root', 'ccomp', 'advcl', 'xcomp', 'dobj', 'relcl', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'conj']",1,0,0
+44,"['root', 'nsubj']",356,104,56
+45,"['root', 'compound']",59,34,29
+46,"['root', 'appos', 'compound', 'compound']",4,2,2
+47,"['root', 'appos', 'compound']",36,15,9
+48,"['root', 'appos']",103,17,10
+49,"['root', 'nsubj', 'compound']",132,84,64
+50,"['root', 'ccomp', 'nsubj', 'compound', 'compound']",5,3,3
+51,"['root', 'ccomp', 'nsubj', 'compound']",31,16,11
+52,"['root', 'nsubj', 'det']",72,1,1
+53,"['root', 'nsubj', 'amod']",38,18,18
+54,"['root', 'nsubj', 'prep']",38,4,0
+55,"['root', 'nsubj', 'prep', 'pobj', 'compound', 'compound', 'compound']",1,0,0
+56,"['root', 'nsubj', 'prep', 'pobj', 'compound', 'compound']",1,0,0
+57,"['root', 'nsubj', 'prep', 'pobj', 'compound']",9,4,4
+58,"['root', 'nsubj', 'prep', 'pobj']",30,13,8
+59,"['root', 'ccomp', 'nsubj', 'poss', 'det']",3,0,0
+60,"['root', 'ccomp', 'nsubj', 'poss']",6,4,3
+61,"['root', 'ccomp', 'nsubj', 'poss', 'case']",5,0,0
+62,"['root', 'ccomp', 'nsubj', 'prep']",16,1,0
+63,"['root', 'ccomp', 'nsubj', 'prep', 'pobj']",12,1,0
+64,"['root', 'ccomp', 'nsubj', 'npadvmod', 'det']",1,0,0
+65,"['root', 'ccomp', 'nsubj', 'npadvmod']",1,0,0
+66,"['root', 'ccomp', 'neg']",10,0,0
+67,"['root', 'ccomp', 'dobj', 'prep', 'pobj', 'amod']",3,2,2
+68,"['root', 'dobj', 'det']",56,0,0
+69,"['root', 'dobj']",114,16,12
+70,"['root', 'dobj', 'amod']",29,5,4
+71,"['root', 'dobj', 'compound']",31,9,8
+72,"['root', 'aux']",58,0,0
+73,"['root', 'dobj', 'prep']",41,0,0
+74,"['root', 'dobj', 'prep', 'pobj']",35,4,2
+75,"['root', 'ccomp', 'dobj', 'det']",23,0,0
+76,"['root', 'ccomp', 'dobj', 'prep', 'pcomp']",2,0,0
+77,"['root', 'ccomp', 'dobj', 'prep', 'pcomp', 'ccomp', 'mark']",1,0,0
+78,"['root', 'ccomp', 'dobj', 'prep', 'pcomp', 'ccomp']",1,0,0
+79,"['root', 'ccomp', 'dobj', 'prep', 'pcomp', 'ccomp', 'nsubj', 'det']",2,0,0
+80,"['root', 'ccomp', 'dobj', 'prep', 'pcomp', 'ccomp', 'nsubj']",1,0,0
+81,"['root', 'ccomp', 'dobj', 'prep', 'pcomp', 'ccomp', 'nsubj', 'compound']",1,0,0
+82,"['root', 'ccomp', 'dobj', 'prep', 'pcomp', 'ccomp', 'aux']",1,0,0
+83,"['root', 'ccomp', 'dobj', 'prep', 'pcomp', 'ccomp', 'dobj']",1,0,0
+84,"['root', 'nsubj', 'appos', 'compound']",5,1,1
+85,"['root', 'nsubj', 'appos']",28,6,4
+86,"['root', 'nsubj', 'appos', 'amod']",3,0,0
+87,"['root', 'nsubj', 'appos', 'amod', 'prep', 'pobj', 'compound', 'amod']",1,0,0
+88,"['root', 'nsubj', 'appos', 'amod', 'prep', 'pobj', 'compound']",1,0,0
+89,"['root', 'nsubj', 'appos', 'amod', 'prep', 'pobj']",1,0,0
+90,"['root', 'nsubj', 'appos', 'prep']",18,0,0
+91,"['root', 'nsubj', 'appos', 'prep', 'pobj']",12,6,4
+92,"['root', 'prep', 'pobj', 'det']",74,0,0
+93,"['root', 'prep', 'pobj']",188,22,17
+94,"['root', 'prep', 'pobj', 'compound']",45,11,10
+95,"['root', 'ccomp', 'advmod']",21,0,0
+96,"['root', 'appos', 'nummod']",39,1,1
+97,"['root', 'ccomp', 'prep']",98,0,0
+98,"['root', 'ccomp', 'prep', 'pobj']",80,10,9
+99,"['root', 'ccomp', 'prep', 'pcomp']",6,0,0
+100,"['root', 'ccomp', 'prep', 'pcomp', 'prep']",2,0,0
+101,"['root', 'ccomp', 'prep', 'pcomp', 'prep', 'pobj']",2,0,0
+102,"['root', 'ccomp', 'prep', 'pcomp', 'prep', 'pobj', 'prep']",1,0,0
+103,"['root', 'ccomp', 'prep', 'pcomp', 'prep', 'pobj', 'prep', 'pobj', 'prep']",1,0,0
+104,"['root', 'ccomp', 'prep', 'pcomp', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj']",1,0,0
+105,"['root', 'ccomp', 'prep', 'pcomp', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'acl']",1,0,0
+106,"['root', 'ccomp', 'prep', 'pcomp', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'acl', 'xcomp', 'aux']",1,0,0
+107,"['root', 'ccomp', 'prep', 'pcomp', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'acl', 'xcomp']",1,0,0
+108,"['root', 'ccomp', 'prep', 'pcomp', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'acl', 'xcomp', 'dobj', 'poss']",1,0,0
+109,"['root', 'ccomp', 'prep', 'pcomp', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'acl', 'xcomp', 'dobj']",1,0,0
+110,"['root', 'ccomp', 'prep', 'pcomp', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'acl', 'xcomp', 'dobj', 'advmod']",1,0,0
+111,"['root', 'attr', 'det']",27,0,0
+112,"['root', 'attr']",26,0,0
+113,"['root', 'attr', 'amod']",17,0,0
+114,"['root', 'attr', 'relcl', 'nsubj']",3,0,0
+115,"['root', 'attr', 'relcl']",3,0,0
+116,"['root', 'attr', 'relcl', 'ccomp', 'nsubj']",1,0,0
+117,"['root', 'attr', 'relcl', 'ccomp']",1,0,0
+118,"['root', 'attr', 'relcl', 'ccomp', 'nsubj', 'punct']",2,0,0
+119,"['root', 'attr', 'relcl', 'ccomp', 'nsubj', 'relcl', 'nsubj']",1,0,0
+120,"['root', 'attr', 'relcl', 'ccomp', 'nsubj', 'relcl']",1,0,0
+121,"['root', 'attr', 'relcl', 'ccomp', 'nsubj', 'relcl', 'prep']",1,0,0
+122,"['root', 'attr', 'relcl', 'ccomp', 'nsubj', 'relcl', 'prep', 'pobj']",1,0,0
+123,"['root', 'attr', 'relcl', 'ccomp', 'nsubj', 'relcl', 'npadvmod']",1,0,0
+124,"['root', 'attr', 'relcl', 'ccomp', 'advmod']",1,0,0
+125,"['root', 'ccomp', 'nsubj', 'poss', 'punct']",1,0,0
+126,"['root', 'ccomp', 'nsubj', 'punct']",13,0,0
+127,"['root', 'ccomp', 'prep', 'pobj', 'prep']",10,0,0
+128,"['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj']",12,3,2
+129,"['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'relcl', 'nsubj']",3,1,1
+130,"['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'relcl']",3,0,0
+131,"['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'relcl', 'ccomp', 'nsubj', 'det']",1,0,0
+132,"['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'relcl', 'ccomp', 'nsubj']",1,0,0
+133,"['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'relcl', 'ccomp']",1,0,0
+134,"['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'relcl', 'ccomp', 'nsubj', 'prep']",1,0,0
+135,"['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'relcl', 'ccomp', 'nsubj', 'prep', 'pobj', 'compound']",1,0,0
+136,"['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'relcl', 'ccomp', 'nsubj', 'prep', 'pobj']",1,0,0
+137,"['root', 'nsubj', 'nummod']",9,0,0
+138,"['root', 'advcl']",63,0,0
+139,"['root', 'advcl', 'prep']",35,0,0
+140,"['root', 'advcl', 'prep', 'pobj', 'poss', 'det']",2,0,0
+141,"['root', 'advcl', 'prep', 'pobj', 'poss']",2,0,0
+142,"['root', 'advcl', 'prep', 'pobj']",34,3,3
+143,"['root', 'advcl', 'prep', 'pobj', 'poss', 'case']",2,0,0
+144,"['root', 'ccomp', 'nsubj', 'relcl', 'nsubj']",4,0,0
+145,"['root', 'ccomp', 'nsubj', 'relcl']",5,0,0
+146,"['root', 'ccomp', 'nsubj', 'relcl', 'aux']",2,0,0
+147,"['root', 'ccomp', 'nsubj', 'relcl', 'dobj']",2,0,0
+148,"['root', 'ccomp', 'nsubj', 'relcl', 'prep']",7,0,0
+149,"['root', 'ccomp', 'nsubj', 'relcl', 'prep', 'pobj', 'poss']",1,0,0
+150,"['root', 'ccomp', 'nsubj', 'relcl', 'prep', 'pobj']",4,2,2
+151,"['root', 'ccomp', 'xcomp']",8,0,0
+152,"['root', 'ccomp', 'xcomp', 'advmod']",1,0,0
+153,"['root', 'ccomp', 'xcomp', 'advmod', 'prep']",1,0,0
+154,"['root', 'ccomp', 'xcomp', 'advmod', 'prep', 'pobj']",1,0,0
+155,"['root', 'prep']",222,0,0
+156,"['root', 'prep', 'prep']",9,0,0
+157,"['root', 'prep', 'prep', 'pobj', 'det']",3,0,0
+158,"['root', 'prep', 'prep', 'pobj']",9,3,2
+159,"['root', 'acomp']",21,0,0
+160,"['root', 'acomp', 'prep']",5,0,0
+161,"['root', 'acomp', 'prep', 'pobj', 'compound']",1,0,0
+162,"['root', 'acomp', 'prep', 'pobj', 'amod']",3,0,0
+163,"['root', 'acomp', 'prep', 'pobj', 'cc']",1,0,0
+164,"['root', 'acomp', 'prep', 'pobj', 'conj']",1,0,0
+165,"['root', 'acomp', 'prep', 'pobj', 'conj', 'acl', 'mark']",1,0,0
+166,"['root', 'acomp', 'prep', 'pobj', 'conj', 'acl']",1,0,0
+167,"['root', 'acomp', 'prep', 'pobj', 'conj', 'acl', 'nsubj', 'det']",1,0,0
+168,"['root', 'acomp', 'prep', 'pobj', 'conj', 'acl', 'nsubj']",1,0,0
+169,"['root', 'acomp', 'prep', 'pobj', 'conj', 'acl', 'nsubj', 'amod']",1,0,0
+170,"['root', 'acomp', 'prep', 'pobj', 'conj', 'acl', 'nsubj', 'compound']",1,1,1
+171,"['root', 'acomp', 'prep', 'pobj', 'conj', 'acl', 'xcomp']",1,0,0
+172,"['root', 'acomp', 'prep', 'pobj', 'conj', 'acl', 'xcomp', 'dobj', 'det']",1,0,0
+173,"['root', 'acomp', 'prep', 'pobj', 'conj', 'acl', 'xcomp', 'dobj']",1,0,0
+174,"['root', 'acomp', 'prep', 'pobj', 'conj', 'acl', 'xcomp', 'dobj', 'compound', 'amod']",1,0,0
+175,"['root', 'acomp', 'prep', 'pobj', 'conj', 'acl', 'xcomp', 'dobj', 'compound']",1,0,0
+176,"['root', 'dobj', 'nummod']",13,0,0
+177,"['root', 'dobj', 'prep', 'pobj', 'det']",4,0,0
+178,"['root', 'dobj', 'prep', 'pobj', 'prep']",12,0,0
+179,"['root', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'quantmod']",1,0,0
+180,"['root', 'dobj', 'prep', 'pobj', 'prep', 'pobj']",10,1,1
+181,"['root', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'compound']",1,0,0
+182,"['root', 'cc']",68,2,0
+183,"['root', 'conj']",51,5,1
+184,"['root', 'conj', 'ccomp', 'nsubj', 'det']",2,0,0
+185,"['root', 'conj', 'ccomp', 'nsubj']",7,1,1
+186,"['root', 'conj', 'ccomp']",6,0,0
+187,"['root', 'conj', 'ccomp', 'dobj', 'det']",2,0,0
+188,"['root', 'conj', 'ccomp', 'dobj']",4,0,0
+189,"['root', 'conj', 'ccomp', 'dobj', 'amod']",3,0,0
+190,"['root', 'conj', 'ccomp', 'dobj', 'prep', 'pobj']",3,0,0
+191,"['root', 'conj', 'ccomp', 'prep']",2,0,0
+192,"['root', 'conj', 'ccomp', 'prep', 'pcomp']",1,0,0
+193,"['root', 'conj', 'ccomp', 'prep', 'pcomp', 'advmod']",1,0,0
+194,"['root', 'conj', 'ccomp', 'prep', 'pcomp', 'prep']",1,0,0
+195,"['root', 'conj', 'ccomp', 'prep', 'pcomp', 'prep', 'pobj']",1,0,0
+196,"['root', 'punct', 'nummod']",12,0,0
+197,"['root', 'nsubj', 'poss']",11,7,7
+198,"['root', 'nsubj', 'poss', 'case']",11,0,0
+199,"['root', 'npadvmod', 'nummod']",13,0,0
+200,"['root', 'npadvmod']",32,11,8
+201,"['root', 'ccomp', 'nsubj', 'compound', 'amod']",6,3,3
+202,"['root', 'ccomp', 'prep', 'pobj', 'punct']",14,0,0
+203,"['root', 'ccomp', 'prep', 'pobj', 'appos', 'det']",1,0,0
+204,"['root', 'ccomp', 'prep', 'pobj', 'appos']",3,0,0
+205,"['root', 'ccomp', 'prep', 'pobj', 'appos', 'amod']",1,0,0
+206,"['root', 'ccomp', 'prep', 'pobj', 'appos', 'prep', 'pobj', 'det']",2,0,0
+207,"['root', 'ccomp', 'prep', 'pobj', 'appos', 'prep', 'pobj']",1,0,0
+208,"['root', 'ccomp', 'prep', 'pobj', 'appos', 'prep', 'pobj', 'nmod']",1,0,0
+209,"['root', 'ccomp', 'prep', 'pobj', 'appos', 'prep', 'pobj', 'amod', 'amod']",1,1,1
+210,"['root', 'ccomp', 'prep', 'pobj', 'appos', 'prep', 'pobj', 'amod']",1,1,0
+211,"['root', 'nsubj', 'compound', 'amod']",4,1,1
+212,"['root', 'nsubj', 'compound', 'compound']",23,13,8
+213,"['root', 'nsubj', 'punct']",71,0,0
+214,"['root', 'nsubj', 'relcl', 'nsubj']",6,0,0
+215,"['root', 'nsubj', 'relcl']",6,0,0
+216,"['root', 'nsubj', 'relcl', 'aux']",3,0,0
+217,"['root', 'nsubj', 'relcl', 'advmod']",5,0,0
+218,"['root', 'nsubj', 'relcl', 'dobj']",2,2,1
+219,"['root', 'nsubj', 'relcl', 'dobj', 'cc']",1,0,0
+220,"['root', 'nsubj', 'relcl', 'dobj', 'conj']",1,1,1
+221,"['root', 'acomp', 'xcomp', 'aux']",5,0,0
+222,"['root', 'acomp', 'xcomp']",3,0,0
+223,"['root', 'acomp', 'xcomp', 'prep', 'pobj', 'compound']",1,1,1
+224,"['root', 'acomp', 'xcomp', 'prep', 'pobj']",2,1,0
+225,"['root', 'ccomp', 'prep', 'pobj', 'det']",32,0,0
+226,"['root', 'ccomp', 'prep', 'pobj', 'compound']",8,4,3
+227,"['root', 'ccomp', 'advcl', 'aux']",7,0,0
+228,"['root', 'ccomp', 'advcl']",17,0,0
+229,"['root', 'ccomp', 'advcl', 'dobj', 'det']",1,0,0
+230,"['root', 'ccomp', 'advcl', 'dobj']",8,0,0
+231,"['root', 'ccomp', 'advcl', 'dobj', 'prep', 'pobj', 'poss']",1,0,0
+232,"['root', 'ccomp', 'advcl', 'dobj', 'prep', 'pobj']",6,0,0
+233,"['root', 'ccomp', 'advcl', 'dobj', 'prep', 'pobj', 'amod']",3,0,0
+234,"['root', 'ccomp', 'nsubj', 'prep', 'pobj', 'compound', 'compound']",1,1,1
+235,"['root', 'ccomp', 'nsubj', 'prep', 'pobj', 'compound']",3,2,1
+236,"['root', 'ccomp', 'nsubj', 'prep', 'pobj', 'prep']",4,0,0
+237,"['root', 'ccomp', 'nsubj', 'prep', 'pobj', 'prep', 'pobj']",2,1,1
+238,"['root', 'ccomp', 'dobj', 'prep', 'pobj', 'poss']",4,0,0
+239,"['root', 'ccomp', 'dobj', 'relcl', 'nsubj']",2,0,0
+240,"['root', 'ccomp', 'dobj', 'relcl']",2,0,0
+241,"['root', 'ccomp', 'dobj', 'relcl', 'punct']",3,0,0
+242,"['root', 'ccomp', 'dobj', 'relcl', 'advcl', 'advmod']",1,0,0
+243,"['root', 'ccomp', 'dobj', 'relcl', 'advcl']",1,0,0
+244,"['root', 'ccomp', 'dobj', 'relcl', 'aux']",2,0,0
+245,"['root', 'ccomp', 'dobj', 'relcl', 'prep']",2,0,0
+246,"['root', 'ccomp', 'dobj', 'relcl', 'prep', 'pobj', 'amod']",1,0,0
+247,"['root', 'ccomp', 'dobj', 'relcl', 'prep', 'pobj']",2,0,0
+248,"['root', 'ccomp', 'dobj', 'relcl', 'prep', 'pobj', 'prep', 'pobj']",1,0,0
+249,"['root', 'ccomp', 'dobj', 'relcl', 'prep', 'pobj', 'prep', 'pobj', 'cc']",1,0,0
+250,"['root', 'ccomp', 'dobj', 'relcl', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'nummod']",1,0,0
+251,"['root', 'ccomp', 'dobj', 'relcl', 'prep', 'pobj', 'prep', 'pobj', 'conj']",1,0,0
+252,"['root', 'ccomp', 'dobj', 'relcl', 'prep', 'pobj', 'relcl']",1,0,0
+253,"['root', 'ccomp', 'dobj', 'relcl', 'prep', 'pobj', 'relcl', 'aux']",1,0,0
+254,"['root', 'ccomp', 'dobj', 'relcl', 'prep', 'pobj', 'relcl', 'dobj']",1,0,0
+255,"['root', 'ccomp', 'prep', 'pobj', 'amod']",20,1,1
+256,"['root', 'ccomp', 'cc']",25,0,0
+257,"['root', 'ccomp', 'conj', 'punct']",4,0,0
+258,"['root', 'ccomp', 'conj']",23,0,0
+259,"['root', 'ccomp', 'conj', 'prep']",9,0,0
+260,"['root', 'ccomp', 'conj', 'prep', 'prep']",3,0,0
+261,"['root', 'ccomp', 'conj', 'prep', 'prep', 'pobj', 'poss']",1,0,0
+262,"['root', 'ccomp', 'conj', 'prep', 'prep', 'pobj']",1,0,0
+263,"['root', 'ccomp', 'conj', 'aux']",5,0,0
+264,"['root', 'ccomp', 'conj', 'acomp']",4,0,0
+265,"['root', 'ccomp', 'conj', 'acomp', 'xcomp']",1,0,0
+266,"['root', 'ccomp', 'conj', 'acomp', 'xcomp', 'prep', 'pobj']",1,1,1
+267,"['root', 'ccomp', 'conj', 'acomp', 'xcomp', 'npadvmod', 'amod']",1,0,0
+268,"['root', 'ccomp', 'conj', 'acomp', 'xcomp', 'npadvmod']",1,0,0
+269,"['root', 'prep', 'pobj', 'compound', 'amod']",2,0,0
+270,"['root', 'prep', 'pobj', 'prep']",39,0,0
+271,"['root', 'prep', 'pobj', 'prep', 'pobj']",34,13,7
+272,"['root', 'prep', 'pobj', 'relcl', 'advmod']",3,0,0
+273,"['root', 'prep', 'pobj', 'relcl']",5,0,0
+274,"['root', 'prep', 'pobj', 'relcl', 'dobj']",3,0,0
+275,"['root', 'prep', 'pobj', 'relcl', 'xcomp']",1,0,0
+276,"['root', 'prep', 'pobj', 'relcl', 'xcomp', 'prep', 'pobj', 'compound']",2,2,1
+277,"['root', 'prep', 'pobj', 'relcl', 'xcomp', 'prep', 'pobj']",2,1,0
+278,"['root', 'prep', 'pobj', 'relcl', 'xcomp', 'prep']",1,0,0
+279,"['root', 'prep', 'pobj', 'relcl', 'xcomp', 'prep', 'pobj', 'det']",1,0,0
+280,"['root', 'prep', 'pobj', 'punct']",30,0,0
+281,"['root', 'prep', 'pobj', 'appos', 'det']",1,0,0
+282,"['root', 'prep', 'pobj', 'appos']",6,4,2
+283,"['root', 'prep', 'pobj', 'appos', 'relcl', 'nsubj']",1,0,0
+284,"['root', 'prep', 'pobj', 'appos', 'relcl']",1,0,0
+285,"['root', 'prep', 'pobj', 'appos', 'relcl', 'dobj', 'det']",1,0,0
+286,"['root', 'prep', 'pobj', 'appos', 'relcl', 'dobj']",1,0,0
+287,"['root', 'conj', 'aux']",8,0,0
+288,"['root', 'conj', 'advmod']",10,0,0
+289,"['root', 'conj', 'prep']",22,0,0
+290,"['root', 'conj', 'prep', 'pobj']",26,2,1
+291,"['root', 'xcomp', 'aux']",15,0,0
+292,"['root', 'xcomp']",10,0,0
+293,"['root', 'xcomp', 'prt']",2,0,0
+294,"['root', 'xcomp', 'prep']",6,0,0
+295,"['root', 'xcomp', 'prep', 'pobj']",4,0,0
+296,"['root', 'xcomp', 'prep', 'pobj', 'det']",1,0,0
+297,"['root', 'xcomp', 'prep', 'pobj', 'prep']",2,0,0
+298,"['root', 'xcomp', 'prep', 'pobj', 'prep', 'pobj', 'nummod', 'advmod']",1,0,0
+299,"['root', 'xcomp', 'prep', 'pobj', 'prep', 'pobj', 'nummod']",1,0,0
+300,"['root', 'xcomp', 'prep', 'pobj', 'prep', 'pobj']",2,0,0
+301,"['root', 'prep', 'pobj', 'amod']",46,8,8
+302,"['root', 'ccomp', 'nsubj', 'nummod']",2,0,0
+303,"['root', 'ccomp', 'nsubj', 'prep', 'pobj', 'det']",3,0,0
+304,"['root', 'ccomp', 'nsubj', 'nsubj']",1,0,0
+305,"['root', 'ccomp', 'nsubj', 'nsubj', 'prep', 'pobj']",1,0,0
+306,"['root', 'ccomp', 'nsubj', 'amod', 'prep']",1,0,0
+307,"['root', 'ccomp', 'nsubj', 'amod', 'prep', 'pobj']",1,0,0
+308,"['root', 'ccomp', 'nsubj', 'amod', 'prep', 'pobj', 'cc']",1,0,0
+309,"['root', 'ccomp', 'nsubj', 'amod', 'prep', 'pobj', 'conj']",1,0,0
+310,"['root', 'ccomp', 'advcl', 'advmod']",7,0,0
+311,"['root', 'ccomp', 'advcl', 'nsubj', 'poss']",1,0,0
+312,"['root', 'ccomp', 'advcl', 'nsubj', 'amod']",2,0,0
+313,"['root', 'ccomp', 'advcl', 'prep']",13,0,0
+314,"['root', 'ccomp', 'advcl', 'prep', 'pobj', 'compound']",5,1,1
+315,"['root', 'ccomp', 'advcl', 'prep', 'pobj']",9,1,0
+316,"['root', 'ccomp', 'advcl', 'prep', 'pobj', 'prep']",2,0,0
+317,"['root', 'ccomp', 'advcl', 'prep', 'pobj', 'prep', 'pobj', 'amod']",2,1,1
+318,"['root', 'ccomp', 'advcl', 'prep', 'pobj', 'prep', 'pobj']",2,1,1
+319,"['root', 'ccomp', 'advcl', 'advmod', 'prep', 'pobj']",1,0,0
+320,"['root', 'ccomp', 'advcl', 'nsubj', 'det']",5,0,0
+321,"['root', 'ccomp', 'advcl', 'nsubj', 'compound', 'compound']",1,1,1
+322,"['root', 'ccomp', 'advcl', 'nsubj', 'compound']",2,1,0
+323,"['root', 'ccomp', 'advcl', 'dobj', 'poss']",1,0,0
+324,"['root', 'ccomp', 'advcl', 'prep', 'pobj', 'det']",4,0,0
+325,"['root', 'ccomp', 'advcl', 'prep', 'pobj', 'amod']",3,0,0
+326,"['root', 'nsubj', 'nmod', 'nmod']",2,2,2
+327,"['root', 'nsubj', 'nmod']",8,5,3
+328,"['root', 'nsubj', 'nmod', 'cc']",3,1,0
+329,"['root', 'nsubj', 'nmod', 'conj', 'compound']",2,1,0
+330,"['root', 'nsubj', 'nmod', 'conj']",4,1,0
+331,"['root', 'nsubjpass', 'det']",12,0,0
+332,"['root', 'nsubjpass', 'prep']",9,0,0
+333,"['root', 'nsubjpass', 'prep', 'pobj', 'det']",5,0,0
+334,"['root', 'nsubjpass', 'prep', 'pobj']",11,5,1
+335,"['root', 'neg']",12,0,0
+336,"['root', 'conj', 'nsubj']",18,3,2
+337,"['root', 'conj', 'ccomp', 'dobj', 'prep']",2,0,0
+338,"['root', 'conj', 'ccomp', 'dobj', 'cc']",1,0,0
+339,"['root', 'conj', 'ccomp', 'dobj', 'conj', 'det']",1,0,0
+340,"['root', 'conj', 'ccomp', 'dobj', 'conj']",1,0,0
+341,"['root', 'conj', 'punct']",33,0,0
+342,"['root', 'nsubjpass', 'nummod']",4,0,0
+343,"['root', 'dobj', 'nummod', 'compound']",3,0,0
+344,"['root', 'ccomp', 'nsubj', 'nmod']",2,2,1
+345,"['root', 'ccomp', 'xcomp', 'aux']",7,0,0
+346,"['root', 'ccomp', 'xcomp', 'dobj', 'nummod', 'compound']",1,0,0
+347,"['root', 'ccomp', 'xcomp', 'dobj', 'nummod']",1,0,0
+348,"['root', 'ccomp', 'xcomp', 'dobj']",4,0,0
+349,"['root', 'ccomp', 'xcomp', 'prep']",8,0,0
+350,"['root', 'ccomp', 'xcomp', 'prep', 'pobj', 'det']",7,0,0
+351,"['root', 'ccomp', 'xcomp', 'prep', 'pobj']",7,1,0
+352,"['root', 'ccomp', 'xcomp', 'prep', 'pobj', 'amod']",1,0,0
+353,"['root', 'ccomp', 'xcomp', 'prep', 'pobj', 'nummod']",1,0,0
+354,"['root', 'ccomp', 'xcomp', 'prep', 'pobj', 'compound']",4,2,2
+355,"['root', 'advcl', 'mark']",28,0,0
+356,"['root', 'nsubjpass', 'appos', 'compound']",1,0,0
+357,"['root', 'nsubjpass', 'appos']",4,0,0
+358,"['root', 'nsubjpass', 'appos', 'appos', 'nummod']",2,0,0
+359,"['root', 'nsubjpass', 'appos', 'appos']",3,0,0
+360,"['root', 'nsubjpass', 'appos', 'appos', 'appos', 'nummod']",2,0,0
+361,"['root', 'nsubjpass', 'appos', 'appos', 'appos']",2,0,0
+362,"['root', 'nsubjpass', 'appos', 'appos', 'appos', 'appos', 'nummod']",2,0,0
+363,"['root', 'nsubjpass', 'appos', 'appos', 'appos', 'appos']",1,0,0
+364,"['root', 'compound', 'compound', 'compound']",2,1,1
+365,"['root', 'compound', 'compound']",12,4,3
+366,"['root', 'nummod', 'nummod', 'nummod']",1,0,0
+367,"['root', 'nummod', 'nummod']",2,0,0
+368,"['root', 'npadvmod', 'compound']",5,4,4
+369,"['root', 'ccomp', 'nsubjpass', 'det']",17,0,0
+370,"['root', 'ccomp', 'nsubjpass']",26,2,1
+371,"['root', 'ccomp', 'nsubjpass', 'amod']",1,1,1
+372,"['root', 'ccomp', 'nsubjpass', 'relcl', 'nsubj']",3,0,0
+373,"['root', 'ccomp', 'nsubjpass', 'relcl']",2,0,0
+374,"['root', 'ccomp', 'nsubjpass', 'relcl', 'dobj', 'det']",3,0,0
+375,"['root', 'ccomp', 'nsubjpass', 'relcl', 'dobj']",2,0,0
+376,"['root', 'ccomp', 'nsubjpass', 'relcl', 'dobj', 'prep']",2,0,0
+377,"['root', 'ccomp', 'nsubjpass', 'relcl', 'dobj', 'prep', 'pobj', 'amod']",1,0,0
+378,"['root', 'ccomp', 'nsubjpass', 'relcl', 'dobj', 'prep', 'pobj']",1,1,0
+379,"['root', 'ccomp', 'nsubjpass', 'relcl', 'dobj', 'prep', 'pobj', 'compound']",1,1,1
+380,"['root', 'ccomp', 'auxpass']",26,0,0
+381,"['root', 'ccomp', 'agent']",5,0,0
+382,"['root', 'ccomp', 'agent', 'pobj', 'det']",1,0,0
+383,"['root', 'ccomp', 'agent', 'pobj']",4,0,0
+384,"['root', 'ccomp', 'agent', 'pobj', 'amod']",2,0,0
+385,"['root', 'ccomp', 'agent', 'pobj', 'acl']",1,0,0
+386,"['root', 'ccomp', 'agent', 'pobj', 'acl', 'dobj', 'quantmod']",1,0,0
+387,"['root', 'ccomp', 'agent', 'pobj', 'acl', 'dobj']",1,0,0
+388,"['root', 'ccomp', 'agent', 'pobj', 'acl', 'dobj', 'compound']",1,0,0
+389,"['root', 'ccomp', 'agent', 'pobj', 'acl', 'dobj', 'prep', 'pobj']",1,0,0
+390,"['root', 'ccomp', 'nsubjpass', 'compound']",7,4,3
+391,"['root', 'ccomp', 'nsubjpass', 'cc']",3,0,0
+392,"['root', 'ccomp', 'nsubjpass', 'conj', 'poss']",1,0,0
+393,"['root', 'ccomp', 'nsubjpass', 'conj']",2,0,0
+394,"['root', 'ccomp', 'nsubjpass', 'conj', 'appos', 'compound']",1,1,1
+395,"['root', 'ccomp', 'nsubjpass', 'conj', 'appos']",1,1,0
+396,"['root', 'ccomp', 'nsubjpass', 'punct']",8,0,0
+397,"['root', 'ccomp', 'nsubjpass', 'appos']",1,0,0
+398,"['root', 'ccomp', 'nsubjpass', 'appos', 'appos']",1,0,0
+399,"['root', 'ccomp', 'npadvmod', 'cc']",1,0,0
+400,"['root', 'ccomp', 'npadvmod', 'conj', 'amod']",1,0,0
+401,"['root', 'ccomp', 'npadvmod', 'conj']",1,0,0
+402,"['root', 'nsubj', 'appos', 'prep', 'pobj', 'compound']",6,3,1
+403,"['root', 'nsubj', 'appos', 'prep', 'pobj', 'prep']",2,0,0
+404,"['root', 'nsubj', 'appos', 'prep', 'pobj', 'prep', 'pobj', 'det']",3,0,0
+405,"['root', 'nsubj', 'appos', 'prep', 'pobj', 'prep', 'pobj']",3,1,0
+406,"['root', 'nsubj', 'appos', 'prep', 'pobj', 'prep', 'pobj', 'compound']",2,1,1
+407,"['root', 'ccomp', 'mark']",7,0,0
+408,"['root', 'ccomp', 'nsubjpass', 'prep', 'pobj', 'poss']",1,0,0
+409,"['root', 'ccomp', 'nsubjpass', 'prep', 'pobj', 'poss', 'case']",1,0,0
+410,"['root', 'ccomp', 'nsubjpass', 'prep', 'pobj', 'amod']",1,0,0
+411,"['root', 'ccomp', 'nsubjpass', 'prep', 'pobj', 'prep']",1,0,0
+412,"['root', 'ccomp', 'nsubjpass', 'prep', 'pobj', 'prep', 'pobj']",1,1,1
+413,"['root', 'ccomp', 'prt']",4,0,0
+414,"['root', 'ccomp', 'advcl', 'prep', 'pcomp']",2,0,0
+415,"['root', 'ccomp', 'advcl', 'prep', 'pcomp', 'dobj', 'compound']",2,1,1
+416,"['root', 'ccomp', 'advcl', 'prep', 'pcomp', 'dobj']",2,1,0
+417,"['root', 'acomp', 'advmod']",6,0,0
+418,"['root', 'dep']",10,2,2
+419,"['root', 'dep', 'punct']",12,0,0
+420,"['root', 'ccomp', 'nsubjpass', 'nummod']",5,0,0
+421,"['root', 'ccomp', 'advcl', 'nsubj', 'cc']",2,0,0
+422,"['root', 'ccomp', 'advcl', 'nsubj', 'conj']",1,0,0
+423,"['root', 'ccomp', 'advcl', 'prep', 'pobj', 'prep', 'pobj', 'det']",1,0,0
+424,"['root', 'ccomp', 'advcl', 'prep', 'pobj', 'prep', 'pobj', 'prep']",1,0,0
+425,"['root', 'ccomp', 'advcl', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj']",1,1,1
+426,"['root', 'ccomp', 'nsubjpass', 'relcl', 'dobj', 'amod']",1,0,0
+427,"['root', 'ccomp', 'conj', 'neg']",4,0,0
+428,"['root', 'ccomp', 'conj', 'prep', 'pobj']",8,2,2
+429,"['root', 'ccomp', 'conj', 'prep', 'pobj', 'amod']",3,0,0
+430,"['root', 'nsubj', 'compound', 'compound', 'compound']",7,7,5
+431,"['root', 'ccomp', 'prep', 'pobj', 'acl']",4,0,0
+432,"['root', 'ccomp', 'prep', 'pobj', 'acl', 'prep', 'pobj', 'amod']",1,0,0
+433,"['root', 'ccomp', 'prep', 'pobj', 'acl', 'prep', 'pobj']",1,0,0
+434,"['root', 'ccomp', 'prep', 'pobj', 'compound', 'amod']",1,0,0
+435,"['root', 'ccomp', 'prep', 'advmod']",2,0,0
+436,"['root', 'ccomp', 'prep', 'pobj', 'nummod']",10,1,0
+437,"['root', 'ccomp', 'advcl', 'nsubj', 'prep']",2,0,0
+438,"['root', 'ccomp', 'advcl', 'nsubj', 'prep', 'pobj', 'poss', 'det']",4,0,0
+439,"['root', 'ccomp', 'advcl', 'nsubj', 'prep', 'pobj', 'poss']",1,0,0
+440,"['root', 'ccomp', 'advcl', 'nsubj', 'prep', 'pobj']",1,0,0
+441,"['root', 'ccomp', 'advcl', 'nsubj', 'prep', 'pobj', 'poss', 'case']",1,0,0
+442,"['root', 'advcl', 'dobj', 'poss']",2,0,0
+443,"['root', 'advcl', 'dobj']",18,0,0
+444,"['root', 'advcl', 'prep', 'pobj', 'det']",11,0,0
+445,"['root', 'conj', 'prep', 'pobj', 'amod']",4,0,0
+446,"['root', 'conj', 'prep', 'pobj', 'compound', 'compound']",2,1,1
+447,"['root', 'conj', 'prep', 'pobj', 'compound']",2,1,0
+448,"['root', 'ccomp', 'nsubjpass', 'preconj']",1,0,0
+449,"['root', 'ccomp', 'nsubjpass', 'conj', 'compound']",1,0,0
+450,"['root', 'ccomp', 'dobj', 'acl', 'aux']",1,0,0
+451,"['root', 'ccomp', 'dobj', 'acl']",3,0,0
+452,"['root', 'ccomp', 'dobj', 'acl', 'attr', 'predet']",1,0,0
+453,"['root', 'ccomp', 'dobj', 'acl', 'attr']",1,0,0
+454,"['root', 'ccomp', 'dobj', 'acl', 'attr', 'det']",1,0,0
+455,"['root', 'ccomp', 'dobj', 'acl', 'attr', 'amod']",1,0,0
+456,"['root', 'nummod']",9,0,0
+457,"['root', 'ccomp', 'nsubjpass', 'acl', 'auxpass']",1,0,0
+458,"['root', 'ccomp', 'nsubjpass', 'acl']",3,0,0
+459,"['root', 'ccomp', 'nsubjpass', 'acl', 'prep']",4,0,0
+460,"['root', 'ccomp', 'nsubjpass', 'acl', 'prep', 'pobj', 'poss']",1,1,1
+461,"['root', 'ccomp', 'nsubjpass', 'acl', 'prep', 'pobj']",2,1,0
+462,"['root', 'ccomp', 'nsubjpass', 'acl', 'prep', 'pobj', 'poss', 'case']",1,0,0
+463,"['root', 'ccomp', 'nsubjpass', 'acl', 'prep', 'pobj', 'compound']",1,1,1
+464,"['root', 'ccomp', 'conj', 'nsubjpass', 'amod']",1,0,0
+465,"['root', 'ccomp', 'conj', 'nsubjpass']",5,0,0
+466,"['root', 'ccomp', 'conj', 'nsubjpass', 'prep', 'pobj', 'poss']",1,0,0
+467,"['root', 'ccomp', 'conj', 'nsubjpass', 'prep', 'pobj']",1,0,0
+468,"['root', 'ccomp', 'conj', 'auxpass']",4,0,0
+469,"['root', 'ccomp', 'conj', 'prep', 'pobj', 'det']",4,0,0
+470,"['root', 'ccomp', 'conj', 'prep', 'pobj', 'compound']",3,0,0
+471,"['root', 'ccomp', 'conj', 'prep', 'pobj', 'advmod']",1,0,0
+472,"['root', 'ccomp', 'conj', 'prep', 'pobj', 'advmod', 'prep', 'pobj', 'det']",1,0,0
+473,"['root', 'ccomp', 'conj', 'prep', 'pobj', 'advmod', 'prep', 'pobj']",1,0,0
+474,"['root', 'advmod']",59,0,0
+475,"['root', 'advcl', 'ccomp', 'nsubj']",6,1,1
+476,"['root', 'advcl', 'ccomp']",7,0,0
+477,"['root', 'advcl', 'ccomp', 'prep']",3,0,0
+478,"['root', 'advcl', 'ccomp', 'prep', 'pobj', 'poss']",1,0,0
+479,"['root', 'advcl', 'ccomp', 'prep', 'pobj']",3,0,0
+480,"['root', 'ccomp', 'conj', 'advmod']",7,0,0
+481,"['root', 'ccomp', 'dobj', 'compound', 'compound', 'compound']",1,1,1
+482,"['root', 'ccomp', 'dobj', 'compound', 'compound']",4,1,0
+483,"['root', 'ccomp', 'dobj', 'compound']",9,4,3
+484,"['root', 'ccomp', 'conj', 'dobj', 'det']",2,0,0
+485,"['root', 'ccomp', 'conj', 'dobj']",7,0,0
+486,"['root', 'ccomp', 'conj', 'dobj', 'npadvmod', 'nummod']",3,0,0
+487,"['root', 'conj', 'xcomp', 'aux']",3,0,0
+488,"['root', 'conj', 'xcomp']",4,0,0
+489,"['root', 'conj', 'xcomp', 'dobj', 'det']",1,0,0
+490,"['root', 'conj', 'xcomp', 'dobj']",3,0,0
+491,"['root', 'punct', 'nummod', 'nummod']",5,0,0
+492,"['root', 'ccomp', 'prep', 'pobj', 'relcl', 'prep']",6,0,0
+493,"['root', 'ccomp', 'prep', 'pobj', 'relcl']",7,0,0
+494,"['root', 'ccomp', 'prep', 'pobj', 'relcl', 'prep', 'pobj']",6,1,1
+495,"['root', 'ccomp', 'prep', 'pobj', 'relcl', 'nsubj']",7,0,0
+496,"['root', 'ccomp', 'prep', 'pobj', 'relcl', 'prep', 'pobj', 'det']",2,0,0
+497,"['root', 'ccomp', 'prep', 'pobj', 'relcl', 'prep', 'pobj', 'amod']",1,0,0
+498,"['root', 'dobj', 'compound', 'compound']",4,1,1
+499,"['root', 'conj', 'dobj']",8,0,0
+500,"['root', 'conj', 'dobj', 'conj', 'det']",1,0,0
+501,"['root', 'conj', 'dobj', 'conj']",2,1,0
+502,"['root', 'conj', 'ccomp', 'prep', 'pobj']",1,0,0
+503,"['root', 'conj', 'ccomp', 'advmod']",2,0,0
+504,"['root', 'ccomp', 'conj', 'nsubj']",8,0,0
+505,"['root', 'ccomp', 'conj', 'xcomp', 'aux']",7,0,0
+506,"['root', 'ccomp', 'conj', 'xcomp']",5,0,0
+507,"['root', 'ccomp', 'conj', 'xcomp', 'dobj', 'det']",3,0,0
+508,"['root', 'ccomp', 'conj', 'xcomp', 'dobj']",3,0,0
+509,"['root', 'nsubj', 'relcl', 'acomp']",1,0,0
+510,"['root', 'nsubj', 'relcl', 'acomp', 'prep']",1,0,0
+511,"['root', 'nsubj', 'relcl', 'acomp', 'prep', 'pcomp']",1,0,0
+512,"['root', 'nsubj', 'relcl', 'acomp', 'prep', 'pcomp', 'dobj', 'det']",1,0,0
+513,"['root', 'nsubj', 'relcl', 'acomp', 'prep', 'pcomp', 'dobj']",1,0,0
+514,"['root', 'nsubj', 'relcl', 'acomp', 'prep', 'pcomp', 'advmod']",1,0,0
+515,"['root', 'prep', 'amod']",2,0,0
+516,"['root', 'prep', 'amod', 'cc']",2,0,0
+517,"['root', 'prep', 'amod', 'conj']",2,0,0
+518,"['root', 'appos', 'nummod', 'nummod', 'nummod']",2,0,0
+519,"['root', 'appos', 'nummod', 'nummod']",2,0,0
+520,"['root', 'prep', 'pcomp']",14,0,0
+521,"['root', 'nsubjpass', 'compound']",10,6,6
+522,"['root', 'nsubjpass', 'compound', 'compound']",2,0,0
+523,"['root', 'nsubjpass', 'prep', 'pobj', 'compound']",4,4,2
+524,"['root', 'nsubjpass', 'prep', 'pobj', 'appos', 'punct']",2,0,0
+525,"['root', 'nsubjpass', 'prep', 'pobj', 'appos']",4,2,2
+526,"['root', 'prep', 'pobj', 'prep', 'pobj', 'det']",2,0,0
+527,"['root', 'prep', 'pobj', 'prep', 'pobj', 'nmod']",2,1,1
+528,"['root', 'prep', 'pobj', 'prep', 'pobj', 'amod']",6,1,1
+529,"['root', 'prep', 'pobj', 'prep', 'pobj', 'compound']",10,9,5
+530,"['root', 'prep', 'pobj', 'prep', 'pobj', 'punct']",4,0,0
+531,"['root', 'prep', 'pobj', 'prep', 'pobj', 'appos']",1,1,1
+532,"['root', 'prep', 'pobj', 'prep', 'pobj', 'prep']",3,0,0
+533,"['root', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj']",3,2,2
+534,"['root', 'prep', 'pobj', 'prep', 'pobj', 'relcl', 'nsubjpass']",1,0,0
+535,"['root', 'prep', 'pobj', 'prep', 'pobj', 'relcl']",1,0,0
+536,"['root', 'prep', 'pobj', 'prep', 'pobj', 'relcl', 'auxpass']",1,0,0
+537,"['root', 'prep', 'pobj', 'prep', 'pobj', 'relcl', 'prep']",1,0,0
+538,"['root', 'prep', 'pobj', 'prep', 'pobj', 'relcl', 'prep', 'pobj', 'det']",1,0,0
+539,"['root', 'prep', 'pobj', 'prep', 'pobj', 'relcl', 'prep', 'pobj']",1,0,0
+540,"['root', 'prep', 'pobj', 'prep', 'pobj', 'relcl', 'prep', 'pobj', 'amod']",1,1,1
+541,"['root', 'prep', 'pobj', 'prep', 'pobj', 'relcl', 'prep', 'pobj', 'compound']",1,0,0
+542,"['root', 'nsubjpass', 'acl']",3,0,0
+543,"['root', 'nsubjpass', 'acl', 'prep']",2,0,0
+544,"['root', 'nsubjpass', 'acl', 'prep', 'pobj']",1,1,1
+545,"['root', 'prep', 'pobj', 'acl', 'prep', 'pobj']",5,2,2
+546,"['root', 'appos', 'punct']",22,3,0
+547,"['root', 'dep', 'mark']",1,0,0
+548,"['root', 'dep', 'compound']",4,0,0
+549,"['root', 'npadvmod', 'punct']",3,0,0
+550,"['root', 'npadvmod', 'cc']",3,0,0
+551,"['root', 'npadvmod', 'conj', 'quantmod']",1,1,1
+552,"['root', 'npadvmod', 'conj']",2,0,0
+553,"['root', 'npadvmod', 'conj', 'nmod']",1,0,0
+554,"['root', 'prep', 'pobj', 'quantmod']",3,1,1
+555,"['root', 'advcl', 'npadvmod']",3,0,0
+556,"['root', 'advcl', 'nsubj', 'det']",14,0,0
+557,"['root', 'advcl', 'nsubj']",27,1,0
+558,"['root', 'prep', 'pobj', 'nummod']",15,0,0
+559,"['root', 'advcl', 'prep', 'pobj', 'quantmod']",2,2,2
+560,"['root', 'advcl', 'advcl', 'aux']",3,0,0
+561,"['root', 'advcl', 'advcl']",6,0,0
+562,"['root', 'advcl', 'advcl', 'prep']",3,0,0
+563,"['root', 'advcl', 'advcl', 'prep', 'pobj']",5,1,1
+564,"['root', 'advcl', 'prep', 'pobj', 'compound']",5,2,2
+565,"['root', 'advcl', 'prep', 'pobj', 'prep']",12,0,0
+566,"['root', 'advcl', 'prep', 'pobj', 'prep', 'pobj', 'det']",7,0,0
+567,"['root', 'advcl', 'prep', 'pobj', 'prep', 'pobj']",14,4,1
+568,"['root', 'advcl', 'prep', 'pobj', 'prep', 'pobj', 'compound']",5,3,3
+569,"['root', 'advcl', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'compound']",2,2,1
+570,"['root', 'advcl', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj']",2,1,0
+571,"['root', 'ccomp', 'acomp']",12,0,0
+572,"['root', 'ccomp', 'acomp', 'prep']",5,0,0
+573,"['root', 'ccomp', 'acomp', 'prep', 'pobj', 'det']",4,0,0
+574,"['root', 'ccomp', 'acomp', 'prep', 'pobj']",5,0,0
+575,"['root', 'ccomp', 'acomp', 'prep', 'pobj', 'prep']",5,0,0
+576,"['root', 'ccomp', 'acomp', 'prep', 'pobj', 'prep', 'pobj', 'det']",2,0,0
+577,"['root', 'ccomp', 'acomp', 'prep', 'pobj', 'prep', 'pobj']",5,0,0
+578,"['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'compound']",1,1,1
+579,"['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'cc']",1,0,0
+580,"['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'det']",1,0,0
+581,"['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'conj']",1,1,0
+582,"['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'compound']",1,1,1
+583,"['root', 'dobj', 'prep', 'pobj', 'compound']",13,7,6
+584,"['root', 'ccomp', 'attr', 'det']",8,0,0
+585,"['root', 'ccomp', 'attr']",13,0,0
+586,"['root', 'ccomp', 'attr', 'amod', 'advmod']",2,0,0
+587,"['root', 'ccomp', 'attr', 'amod']",6,0,0
+588,"['root', 'prep', 'pobj', 'amod', 'advmod']",3,0,0
+589,"['root', 'prep', 'pobj', 'conj']",8,0,0
+590,"['root', 'prep', 'pobj', 'conj', 'prep']",2,0,0
+591,"['root', 'prep', 'pobj', 'conj', 'punct']",1,0,0
+592,"['root', 'ccomp', 'acomp', 'xcomp', 'aux']",2,0,0
+593,"['root', 'ccomp', 'acomp', 'xcomp']",1,0,0
+594,"['root', 'ccomp', 'acomp', 'xcomp', 'dobj']",1,0,0
+595,"['root', 'ccomp', 'acomp', 'xcomp', 'prep']",1,0,0
+596,"['root', 'ccomp', 'acomp', 'xcomp', 'prep', 'pobj', 'amod']",1,0,0
+597,"['root', 'ccomp', 'acomp', 'xcomp', 'prep', 'pobj']",1,0,0
+598,"['root', 'ccomp', 'prep', 'pobj', 'compound', 'compound']",3,2,2
+599,"['root', 'expl']",6,0,0
+600,"['root', 'attr', 'nummod']",3,0,0
+601,"['root', 'attr', 'relcl', 'dobj', 'det']",3,0,0
+602,"['root', 'attr', 'relcl', 'dobj']",2,0,0
+603,"['root', 'attr', 'relcl', 'prep']",1,0,0
+604,"['root', 'attr', 'relcl', 'prep', 'pobj']",1,0,0
+605,"['root', 'dep', 'det']",2,0,0
+606,"['root', 'dep', 'prep']",1,0,0
+607,"['root', 'dep', 'prep', 'pobj']",2,0,0
+608,"['root', 'dep', 'cc']",1,0,0
+609,"['root', 'dep', 'conj', 'det']",2,0,0
+610,"['root', 'dep', 'conj']",1,0,0
+611,"['root', 'dep', 'conj', 'amod']",1,0,0
+612,"['root', 'dep', 'conj', 'compound']",1,0,0
+613,"['root', 'dep', 'conj', 'acl']",1,0,0
+614,"['root', 'dep', 'conj', 'acl', 'prep']",1,0,0
+615,"['root', 'dep', 'conj', 'acl', 'prep', 'pobj']",1,0,0
+616,"['root', 'nsubj', 'appos', 'prep', 'pobj', 'det']",10,0,0
+617,"['root', 'nsubj', 'appos', 'prep', 'pobj', 'punct']",2,0,0
+618,"['root', 'nsubj', 'appos', 'prep', 'pobj', 'appos']",3,2,2
+619,"['root', 'prep', 'pcomp', 'dobj']",7,1,1
+620,"['root', 'prep', 'pcomp', 'prep']",8,0,0
+621,"['root', 'npadvmod', 'amod']",3,0,0
+622,"['root', 'prep', 'pobj', 'nmod']",11,2,2
+623,"['root', 'acomp', 'xcomp', 'prep']",1,0,0
+624,"['root', 'ccomp', 'dobj', 'nmod']",1,0,0
+625,"['root', 'ccomp', 'dobj', 'nmod', 'prep']",1,0,0
+626,"['root', 'ccomp', 'dobj', 'nmod', 'prep', 'pobj']",1,0,0
+627,"['root', 'ccomp', 'conj', 'acomp', 'ccomp', 'nsubjpass', 'det']",1,0,0
+628,"['root', 'ccomp', 'conj', 'acomp', 'ccomp', 'nsubjpass']",1,0,0
+629,"['root', 'ccomp', 'conj', 'acomp', 'ccomp']",1,0,0
+630,"['root', 'ccomp', 'conj', 'acomp', 'ccomp', 'aux']",1,0,0
+631,"['root', 'ccomp', 'conj', 'acomp', 'ccomp', 'auxpass']",1,0,0
+632,"['root', 'ccomp', 'conj', 'nsubj', 'poss']",1,0,0
+633,"['root', 'ccomp', 'conj', 'nsubj', 'prep']",4,0,0
+634,"['root', 'ccomp', 'conj', 'nsubj', 'prep', 'pobj', 'det']",1,0,0
+635,"['root', 'ccomp', 'conj', 'nsubj', 'prep', 'pobj']",2,1,0
+636,"['root', 'conj', 'amod']",1,0,0
+637,"['root', 'conj', 'prep', 'pobj', 'nummod']",3,0,0
+638,"['root', 'nsubj', 'compound', 'nummod']",2,0,0
+639,"['root', 'conj', 'prep', 'pobj', 'prep']",4,0,0
+640,"['root', 'conj', 'prep', 'conj']",1,0,0
+641,"['root', 'conj', 'prep', 'conj', 'prep', 'pobj', 'quantmod']",1,0,0
+642,"['root', 'conj', 'prep', 'conj', 'prep', 'pobj']",1,0,0
+643,"['root', 'conj', 'prep', 'conj', 'cc']",1,0,0
+644,"['root', 'conj', 'prep', 'conj', 'conj']",1,0,0
+645,"['root', 'conj', 'prep', 'conj', 'conj', 'prep', 'pobj', 'nummod', 'quantmod']",1,0,0
+646,"['root', 'conj', 'prep', 'conj', 'conj', 'prep', 'pobj', 'nummod']",1,0,0
+647,"['root', 'conj', 'prep', 'conj', 'conj', 'prep', 'pobj']",1,0,0
+648,"['root', 'dobj', 'poss']",12,0,0
+649,"['root', 'conj', 'det']",1,0,0
+650,"['root', 'conj', 'compound']",5,3,2
+651,"['root', 'nsubj', 'relcl', 'ccomp', 'mark']",1,0,0
+652,"['root', 'nsubj', 'relcl', 'ccomp']",2,0,0
+653,"['root', 'nsubj', 'relcl', 'ccomp', 'nsubj', 'compound', 'compound']",1,1,1
+654,"['root', 'nsubj', 'relcl', 'ccomp', 'nsubj', 'compound']",2,1,1
+655,"['root', 'nsubj', 'relcl', 'ccomp', 'nsubj']",1,1,0
+656,"['root', 'nsubj', 'relcl', 'ccomp', 'aux']",2,0,0
+657,"['root', 'nsubj', 'relcl', 'ccomp', 'prep']",1,0,0
+658,"['root', 'nsubj', 'relcl', 'ccomp', 'prep', 'pobj', 'det']",2,0,0
+659,"['root', 'nsubj', 'relcl', 'ccomp', 'prep', 'pobj']",1,0,0
+660,"['root', 'nsubj', 'relcl', 'ccomp', 'prep', 'pobj', 'amod']",1,0,0
+661,"['root', 'nsubj', 'relcl', 'ccomp', 'prep', 'pobj', 'prep']",1,0,0
+662,"['root', 'nsubj', 'relcl', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'compound']",2,2,2
+663,"['root', 'nsubj', 'relcl', 'ccomp', 'prep', 'pobj', 'prep', 'pobj']",1,1,0
+664,"['root', 'ccomp', 'nsubj', 'relcl', 'prep', 'pobj', 'amod']",1,0,0
+665,"['root', 'ccomp', 'nsubj', 'relcl', 'cc']",3,0,0
+666,"['root', 'ccomp', 'nsubj', 'relcl', 'conj']",1,0,0
+667,"['root', 'ccomp', 'nsubj', 'relcl', 'conj', 'prep', 'pobj']",1,0,0
+668,"['root', 'ccomp', 'dobj', 'prep', 'pobj', 'amod', 'conj']",1,1,1
+669,"['root', 'ccomp', 'dobj', 'prep', 'pobj', 'relcl', 'advmod']",1,0,0
+670,"['root', 'ccomp', 'dobj', 'prep', 'pobj', 'relcl']",1,0,0
+671,"['root', 'ccomp', 'dobj', 'prep', 'pobj', 'relcl', 'nsubjpass', 'nummod']",1,0,0
+672,"['root', 'ccomp', 'dobj', 'prep', 'pobj', 'relcl', 'nsubjpass']",1,0,0
+673,"['root', 'ccomp', 'dobj', 'prep', 'pobj', 'relcl', 'auxpass']",1,0,0
+674,"['root', 'ccomp', 'dobj', 'prep', 'pobj', 'relcl', 'agent']",1,0,0
+675,"['root', 'ccomp', 'dobj', 'prep', 'pobj', 'relcl', 'agent', 'pobj', 'det']",1,0,0
+676,"['root', 'ccomp', 'dobj', 'prep', 'pobj', 'relcl', 'agent', 'pobj']",1,0,0
+677,"['root', 'ccomp', 'dobj', 'prep', 'pobj', 'relcl', 'agent', 'pobj', 'compound', 'compound']",1,0,0
+678,"['root', 'ccomp', 'dobj', 'prep', 'pobj', 'relcl', 'agent', 'pobj', 'compound']",1,0,0
+679,"['root', 'ccomp', 'dobj', 'prep', 'pobj', 'relcl', 'prep', 'pobj']",1,0,0
+680,"['root', 'ccomp', 'dobj', 'prep', 'pobj', 'relcl', 'prep', 'pobj', 'nummod']",1,0,0
+681,"['root', 'ccomp', 'dobj', 'cc']",7,1,0
+682,"['root', 'ccomp', 'dobj', 'conj', 'nmod']",1,0,0
+683,"['root', 'ccomp', 'dobj', 'conj']",2,1,1
+684,"['root', 'ccomp', 'dobj', 'conj', 'nmod', 'prep']",1,0,0
+685,"['root', 'ccomp', 'dobj', 'conj', 'nmod', 'prep', 'pobj']",1,1,1
+686,"['root', 'ccomp', 'dobj', 'conj', 'nmod', 'prep', 'pobj', 'conj']",1,1,0
+687,"['root', 'nsubj', 'conj', 'det']",1,0,0
+688,"['root', 'nsubj', 'conj']",2,1,0
+689,"['root', 'nsubj', 'conj', 'amod']",1,0,0
+690,"['root', 'nsubj', 'conj', 'compound']",1,1,0
+691,"['root', 'dobj', 'punct']",13,0,0
+692,"['root', 'dobj', 'conj', 'compound']",1,1,1
+693,"['root', 'dobj', 'conj']",4,2,0
+694,"['root', 'dobj', 'conj', 'cc']",2,0,0
+695,"['root', 'dobj', 'conj', 'conj']",3,3,1
+696,"['root', 'ccomp', 'expl']",3,0,0
+697,"['root', 'ccomp', 'attr', 'compound']",2,0,0
+698,"['root', 'ccomp', 'attr', 'prep']",4,0,0
+699,"['root', 'ccomp', 'attr', 'prep', 'pobj']",3,1,1
+700,"['root', 'conj', 'ccomp', 'mark']",1,0,0
+701,"['root', 'ccomp', 'acomp', 'prep', 'pobj', 'prep', 'pobj', 'poss']",1,1,1
+702,"['root', 'ccomp', 'acomp', 'prep', 'pobj', 'prep', 'pobj', 'poss', 'case']",2,0,0
+703,"['root', 'ccomp', 'acomp', 'prep', 'pobj', 'prep', 'pobj', 'prep']",2,0,0
+704,"['root', 'ccomp', 'acomp', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'poss', 'det']",1,0,0
+705,"['root', 'ccomp', 'acomp', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'poss']",1,0,0
+706,"['root', 'ccomp', 'acomp', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj']",2,0,0
+707,"['root', 'ccomp', 'acomp', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'amod']",1,0,0
+708,"['root', 'ccomp', 'acomp', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'npadvmod', 'amod']",1,0,0
+709,"['root', 'ccomp', 'acomp', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'npadvmod']",1,0,0
+710,"['root', 'ccomp', 'nsubj', 'prep', 'pcomp', 'mark']",1,0,0
+711,"['root', 'ccomp', 'nsubj', 'prep', 'pcomp']",1,0,0
+712,"['root', 'ccomp', 'nsubj', 'prep', 'pcomp', 'nsubj']",1,1,1
+713,"['root', 'ccomp', 'nsubj', 'prep', 'pcomp', 'aux']",1,0,0
+714,"['root', 'nsubj', 'relcl', 'dobj', 'compound']",3,3,3
+715,"['root', 'nsubj', 'relcl', 'advcl', 'aux']",1,0,0
+716,"['root', 'nsubj', 'relcl', 'advcl']",1,0,0
+717,"['root', 'nsubj', 'relcl', 'advcl', 'dobj', 'amod']",1,0,0
+718,"['root', 'nsubj', 'relcl', 'advcl', 'dobj']",2,0,0
+719,"['root', 'nsubj', 'relcl', 'advcl', 'dobj', 'prep']",2,0,0
+720,"['root', 'nsubj', 'relcl', 'advcl', 'dobj', 'prep', 'pobj']",1,0,0
+721,"['root', 'ccomp', 'acomp', 'advmod']",3,0,0
+722,"['root', 'ccomp', 'acomp', 'prep', 'pobj', 'prep', 'pobj', 'compound']",1,1,1
+723,"['root', 'ccomp', 'acomp', 'prep', 'pobj', 'prep', 'pobj', 'cc']",1,0,0
+724,"['root', 'ccomp', 'acomp', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'det']",1,0,0
+725,"['root', 'ccomp', 'acomp', 'prep', 'pobj', 'prep', 'pobj', 'conj']",1,0,0
+726,"['root', 'ccomp', 'acomp', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'amod']",1,0,0
+727,"['root', 'ccomp', 'acomp', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'prep']",1,0,0
+728,"['root', 'ccomp', 'acomp', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'prep', 'pobj']",1,1,1
+729,"['root', 'ccomp', 'advcl', 'xcomp', 'prep']",1,0,0
+730,"['root', 'ccomp', 'advcl', 'xcomp', 'prep', 'pobj', 'compound']",1,1,1
+731,"['root', 'ccomp', 'advcl', 'xcomp', 'prep', 'pobj']",1,1,0
+732,"['root', 'ccomp', 'xcomp', 'dobj', 'amod']",1,0,0
+733,"['root', 'dobj', 'cc']",3,0,0
+734,"['root', 'dobj', 'conj', 'amod']",2,0,0
+735,"['root', 'ccomp', 'nsubj', 'prep', 'pobj', 'nummod']",1,0,0
+736,"['root', 'ccomp', 'nsubj', 'prep', 'pobj', 'cc']",2,0,0
+737,"['root', 'ccomp', 'nsubj', 'prep', 'pobj', 'conj']",1,0,0
+738,"['root', 'ccomp', 'nsubj', 'relcl', 'nsubjpass']",1,0,0
+739,"['root', 'ccomp', 'nsubj', 'relcl', 'auxpass']",1,0,0
+740,"['root', 'ccomp', 'conj', 'advmod', 'prep']",1,0,0
+741,"['root', 'ccomp', 'conj', 'advmod', 'prep', 'pobj']",2,0,0
+742,"['root', 'ccomp', 'prep', 'pobj', 'relcl', 'nsubjpass']",1,0,0
+743,"['root', 'ccomp', 'prep', 'pobj', 'relcl', 'auxpass']",1,0,0
+744,"['root', 'ccomp', 'prep', 'pobj', 'relcl', 'prep', 'pobj', 'poss']",1,0,0
+745,"['root', 'ccomp', 'prep', 'pobj', 'relcl', 'prep', 'pobj', 'prep']",2,0,0
+746,"['root', 'ccomp', 'prep', 'pobj', 'relcl', 'prep', 'pobj', 'prep', 'pobj']",2,2,2
+747,"['root', 'ccomp', 'prep', 'pobj', 'relcl', 'prep', 'pobj', 'prep', 'pobj', 'prep']",1,0,0
+748,"['root', 'ccomp', 'prep', 'pobj', 'relcl', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj']",1,1,1
+749,"['root', 'xcomp', 'dobj']",4,0,0
+750,"['root', 'xcomp', 'advcl', 'mark']",1,0,0
+751,"['root', 'xcomp', 'advcl']",1,0,0
+752,"['root', 'xcomp', 'advcl', 'auxpass']",1,0,0
+753,"['root', 'xcomp', 'advcl', 'cc']",2,0,0
+754,"['root', 'xcomp', 'advcl', 'conj', 'nsubjpass']",2,0,0
+755,"['root', 'xcomp', 'advcl', 'conj']",1,0,0
+756,"['root', 'xcomp', 'advcl', 'conj', 'auxpass']",1,0,0
+757,"['root', 'xcomp', 'advcl', 'conj', 'prep', 'pobj']",1,1,1
+758,"['root', 'xcomp', 'advcl', 'conj', 'prep', 'pobj', 'relcl', 'xcomp', 'advmod']",1,0,0
+759,"['root', 'xcomp', 'advcl', 'conj', 'prep', 'pobj', 'relcl', 'xcomp']",1,0,0
+760,"['root', 'xcomp', 'advcl', 'conj', 'prep', 'pobj', 'relcl']",1,0,0
+761,"['root', 'xcomp', 'advcl', 'conj', 'prep', 'pobj', 'relcl', 'xcomp', 'conj']",1,0,0
+762,"['root', 'xcomp', 'advcl', 'conj', 'prep', 'pobj', 'relcl', 'xcomp', 'conj', 'dobj', 'amod']",1,0,0
+763,"['root', 'xcomp', 'advcl', 'conj', 'prep', 'pobj', 'relcl', 'xcomp', 'conj', 'dobj']",1,0,0
+764,"['root', 'oprd']",3,0,0
+765,"['root', 'ccomp', 'conj', 'nsubjpass', 'nummod', 'advmod']",1,0,0
+766,"['root', 'ccomp', 'conj', 'nsubjpass', 'nummod']",1,0,0
+767,"['root', 'nsubj', 'prep', 'pobj', 'det']",12,1,0
+768,"['root', 'ccomp', 'nsubj', 'appos']",2,1,1
+769,"['root', 'ccomp', 'dobj', 'acl', 'prep']",1,0,0
+770,"['root', 'ccomp', 'dobj', 'acl', 'prep', 'pobj']",1,0,0
+771,"['root', 'ccomp', 'dobj', 'acl', 'prep', 'pobj', 'nummod']",1,0,0
+772,"['root', 'ccomp', 'dobj', 'acl', 'npadvmod', 'amod']",1,0,0
+773,"['root', 'ccomp', 'dobj', 'acl', 'npadvmod']",1,0,0
+774,"['root', 'prep', 'pobj', 'relcl', 'nsubj']",4,0,0
+775,"['root', 'prep', 'pobj', 'relcl', 'aux']",1,0,0
+776,"['root', 'prep', 'pobj', 'relcl', 'dobj', 'det']",1,0,0
+777,"['root', 'prep', 'pobj', 'relcl', 'dobj', 'prep']",1,0,0
+778,"['root', 'prep', 'pobj', 'relcl', 'dobj', 'prep', 'pobj']",1,0,0
+779,"['root', 'prep', 'pobj', 'relcl', 'dobj', 'prep', 'pobj', 'acl']",1,0,0
+780,"['root', 'prep', 'pobj', 'relcl', 'dobj', 'prep', 'pobj', 'acl', 'advmod', 'npadvmod']",1,0,0
+781,"['root', 'prep', 'pobj', 'relcl', 'dobj', 'prep', 'pobj', 'acl', 'advmod']",1,0,0
+782,"['root', 'ccomp', 'nsubj', 'relcl', 'xcomp', 'aux']",1,0,0
+783,"['root', 'ccomp', 'nsubj', 'relcl', 'xcomp']",1,0,0
+784,"['root', 'ccomp', 'nsubj', 'relcl', 'xcomp', 'dobj']",1,0,0
+785,"['root', 'ccomp', 'nsubj', 'relcl', 'xcomp', 'cc']",1,0,0
+786,"['root', 'ccomp', 'nsubj', 'relcl', 'xcomp', 'conj']",1,0,0
+787,"['root', 'ccomp', 'nsubj', 'relcl', 'xcomp', 'conj', 'prep']",1,0,0
+788,"['root', 'ccomp', 'nsubj', 'relcl', 'xcomp', 'conj', 'prep', 'pobj', 'det']",2,0,0
+789,"['root', 'ccomp', 'nsubj', 'relcl', 'xcomp', 'conj', 'prep', 'pobj']",1,0,0
+790,"['root', 'ccomp', 'nsubj', 'relcl', 'xcomp', 'conj', 'prep', 'pobj', 'amod']",1,0,0
+791,"['root', 'ccomp', 'nsubj', 'relcl', 'xcomp', 'conj', 'prep', 'pobj', 'compound']",1,1,1
+792,"['root', 'ccomp', 'dobj', 'prep', 'pobj', 'compound']",9,6,6
+793,"['root', 'ccomp', 'prep', 'pobj', 'acl', 'dobj']",3,0,0
+794,"['root', 'ccomp', 'prep', 'pobj', 'acl', 'dobj', 'nummod']",2,0,0
+795,"['root', 'ccomp', 'prep', 'pobj', 'acl', 'dobj', 'amod']",2,0,0
+796,"['root', 'ccomp', 'prep', 'pcomp', 'nsubj']",1,1,1
+797,"['root', 'ccomp', 'prep', 'pcomp', 'xcomp', 'aux']",2,0,0
+798,"['root', 'ccomp', 'prep', 'pcomp', 'xcomp']",1,0,0
+799,"['root', 'ccomp', 'prep', 'pcomp', 'xcomp', 'prt']",1,0,0
+800,"['root', 'ccomp', 'prep', 'pcomp', 'xcomp', 'prt', 'prep', 'pobj', 'poss']",1,1,1
+801,"['root', 'ccomp', 'prep', 'pcomp', 'xcomp', 'prt', 'prep', 'pobj']",1,0,0
+802,"['root', 'ccomp', 'prep', 'pcomp', 'xcomp', 'prt', 'prep', 'pobj', 'poss', 'case']",1,0,0
+803,"['root', 'ccomp', 'prep', 'pcomp', 'xcomp', 'prt', 'prep', 'pobj', 'prep', 'pobj']",1,1,1
+804,"['root', 'conj', 'nsubj', 'det']",5,0,0
+805,"['root', 'conj', 'nsubj', 'compound']",4,3,3
+806,"['root', 'conj', 'acomp']",2,0,0
+807,"['root', 'conj', 'acomp', 'prep']",1,0,0
+808,"['root', 'conj', 'acomp', 'prep', 'pobj']",1,0,0
+809,"['root', 'ccomp', 'dobj', 'poss']",5,1,1
+810,"['root', 'ccomp', 'dobj', 'prep', 'pobj', 'prep']",3,0,0
+811,"['root', 'ccomp', 'dobj', 'prep', 'pobj', 'prep', 'pobj']",3,1,1
+812,"['root', 'ccomp', 'conj', 'dobj', 'prep']",3,0,0
+813,"['root', 'ccomp', 'conj', 'dobj', 'prep', 'pobj']",3,1,1
+814,"['root', 'ccomp', 'conj', 'advcl']",1,0,0
+815,"['root', 'ccomp', 'conj', 'advcl', 'dobj', 'det']",1,0,0
+816,"['root', 'ccomp', 'conj', 'advcl', 'dobj']",1,0,0
+817,"['root', 'ccomp', 'conj', 'advcl', 'conj']",1,0,0
+818,"['root', 'ccomp', 'conj', 'advcl', 'conj', 'dobj', 'det']",1,0,0
+819,"['root', 'ccomp', 'conj', 'advcl', 'conj', 'dobj']",1,0,0
+820,"['root', 'dobj', 'acl', 'aux']",2,0,0
+821,"['root', 'dobj', 'acl']",6,0,0
+822,"['root', 'dobj', 'acl', 'dobj', 'det']",1,0,0
+823,"['root', 'dobj', 'acl', 'dobj']",3,0,0
+824,"['root', 'dobj', 'acl', 'dobj', 'amod']",3,1,1
+825,"['root', 'dobj', 'acl', 'dobj', 'prep']",3,0,0
+826,"['root', 'dobj', 'acl', 'dobj', 'prep', 'pobj', 'amod']",1,0,0
+827,"['root', 'dobj', 'acl', 'dobj', 'prep', 'pobj']",2,1,1
+828,"['root', 'dobj', 'acl', 'prep']",2,0,0
+829,"['root', 'dobj', 'acl', 'prep', 'pobj', 'compound']",2,1,1
+830,"['root', 'dobj', 'acl', 'prep', 'pobj']",3,1,0
+831,"['root', 'prep', 'prep', 'advmod']",1,0,0
+832,"['root', 'prep', 'prep', 'pobj', 'compound']",1,1,1
+833,"['root', 'prep', 'prep', 'pobj', 'prep']",4,0,0
+834,"['root', 'prep', 'prep', 'pobj', 'prep', 'pobj']",5,0,0
+835,"['root', 'ccomp', 'ccomp', 'nsubjpass']",1,0,0
+836,"['root', 'ccomp', 'ccomp']",4,0,0
+837,"['root', 'ccomp', 'ccomp', 'auxpass']",1,0,0
+838,"['root', 'ccomp', 'ccomp', 'prep']",2,0,0
+839,"['root', 'ccomp', 'ccomp', 'prep', 'pobj', 'det']",2,0,0
+840,"['root', 'ccomp', 'ccomp', 'prep', 'pobj']",2,0,0
+841,"['root', 'ccomp', 'ccomp', 'prep', 'pobj', 'prep']",1,0,0
+842,"['root', 'ccomp', 'ccomp', 'prep', 'pobj', 'prep', 'pobj']",1,1,1
+843,"['root', 'ccomp', 'ccomp', 'prep', 'pobj', 'relcl', 'aux']",1,0,0
+844,"['root', 'ccomp', 'ccomp', 'prep', 'pobj', 'relcl']",1,0,0
+845,"['root', 'ccomp', 'ccomp', 'prep', 'pobj', 'relcl', 'auxpass']",1,0,0
+846,"['root', 'ccomp', 'ccomp', 'prep', 'pobj', 'relcl', 'prep']",1,0,0
+847,"['root', 'ccomp', 'ccomp', 'prep', 'pobj', 'relcl', 'prep', 'pobj']",1,1,1
+848,"['root', 'ccomp', 'ccomp', 'prep', 'pobj', 'relcl', 'advmod']",1,0,0
+849,"['root', 'attr', 'compound']",3,0,0
+850,"['root', 'attr', 'prep']",24,0,0
+851,"['root', 'attr', 'prep', 'pobj', 'det']",8,1,1
+852,"['root', 'attr', 'prep', 'pobj']",21,3,2
+853,"['root', 'ccomp', 'nsubj', 'cc']",1,0,0
+854,"['root', 'ccomp', 'nsubj', 'conj', 'amod']",2,0,0
+855,"['root', 'ccomp', 'nsubj', 'conj']",1,0,0
+856,"['root', 'ccomp', 'dobj', 'punct']",6,0,0
+857,"['root', 'ccomp', 'dobj', 'poss', 'case']",1,0,0
+858,"['root', 'ccomp', 'advcl', 'prt']",2,0,0
+859,"['root', 'ccomp', 'advcl', 'dobj', 'prep']",3,0,0
+860,"['root', 'ccomp', 'advcl', 'cc']",2,0,0
+861,"['root', 'ccomp', 'advcl', 'conj']",2,0,0
+862,"['root', 'ccomp', 'advcl', 'conj', 'dobj']",2,0,0
+863,"['root', 'ccomp', 'advcl', 'conj', 'dobj', 'amod']",1,0,0
+864,"['root', 'ccomp', 'advcl', 'conj', 'dobj', 'prep', 'pobj', 'predet']",1,0,0
+865,"['root', 'ccomp', 'advcl', 'conj', 'dobj', 'prep', 'pobj']",1,0,0
+866,"['root', 'ccomp', 'advcl', 'conj', 'dobj', 'prep', 'pobj', 'det']",1,0,0
+867,"['root', 'ccomp', 'advcl', 'conj', 'dobj', 'prep', 'pobj', 'amod']",1,0,0
+868,"['root', 'prep', 'pcomp', 'dobj', 'punct']",3,0,0
+869,"['root', 'prep', 'pcomp', 'dobj', 'relcl', 'dobj']",1,0,0
+870,"['root', 'prep', 'pcomp', 'dobj', 'relcl']",1,0,0
+871,"['root', 'prep', 'pcomp', 'dobj', 'relcl', 'nsubj']",1,0,0
+872,"['root', 'prep', 'pcomp', 'dobj', 'relcl', 'prep']",1,0,0
+873,"['root', 'prep', 'pcomp', 'dobj', 'relcl', 'prep', 'punct']",2,0,0
+874,"['root', 'prep', 'pcomp', 'dobj', 'relcl', 'prep', 'pobj']",1,0,0
+875,"['root', 'prep', 'pcomp', 'ccomp']",2,0,0
+876,"['root', 'prep', 'pcomp', 'ccomp', 'aux']",3,0,0
+877,"['root', 'prep', 'pcomp', 'ccomp', 'dobj', 'poss']",2,0,0
+878,"['root', 'prep', 'pcomp', 'ccomp', 'dobj']",1,0,0
+879,"['root', 'advcl', 'ccomp', 'nsubj', 'det']",2,0,0
+880,"['root', 'advcl', 'ccomp', 'aux']",5,0,0
+881,"['root', 'advcl', 'ccomp', 'attr', 'det']",2,0,0
+882,"['root', 'advcl', 'ccomp', 'attr']",2,0,0
+883,"['root', 'advcl', 'ccomp', 'attr', 'advcl']",1,0,0
+884,"['root', 'advcl', 'ccomp', 'attr', 'advcl', 'nsubj', 'amod']",1,0,0
+885,"['root', 'advcl', 'ccomp', 'attr', 'advcl', 'nsubj']",1,0,0
+886,"['root', 'advcl', 'ccomp', 'attr', 'advcl', 'nsubj', 'compound']",1,1,1
+887,"['root', 'advcl', 'ccomp', 'attr', 'advcl', 'prep']",1,0,0
+888,"['root', 'advcl', 'ccomp', 'attr', 'advcl', 'prep', 'pobj']",1,0,0
+889,"['root', 'advcl', 'ccomp', 'attr', 'advcl', 'prep', 'pobj', 'prep']",1,0,0
+890,"['root', 'advcl', 'ccomp', 'attr', 'advcl', 'prep', 'pobj', 'prep', 'pobj']",1,0,0
+891,"['root', 'nsubjpass', 'nummod', 'quantmod']",1,0,0
+892,"['root', 'advcl', 'nsubj', 'amod']",5,2,2
+893,"['root', 'advcl', 'prt']",4,0,0
+894,"['root', 'advcl', 'prep', 'pobj', 'acl', 'aux']",2,0,0
+895,"['root', 'advcl', 'prep', 'pobj', 'acl']",3,0,0
+896,"['root', 'advcl', 'prep', 'pobj', 'acl', 'dobj', 'det']",2,0,0
+897,"['root', 'advcl', 'prep', 'pobj', 'acl', 'dobj']",3,0,0
+898,"['root', 'advcl', 'prep', 'pobj', 'acl', 'cc']",1,0,0
+899,"['root', 'advcl', 'prep', 'pobj', 'acl', 'conj']",1,0,0
+900,"['root', 'advcl', 'prep', 'pobj', 'acl', 'conj', 'dobj', 'det']",1,0,0
+901,"['root', 'advcl', 'prep', 'pobj', 'acl', 'conj', 'dobj']",1,0,0
+902,"['root', 'advcl', 'prep', 'pobj', 'acl', 'conj', 'dobj', 'amod']",1,0,0
+903,"['root', 'ccomp', 'nsubj', 'prep', 'pobj', 'prep', 'pobj', 'compound']",1,0,0
+904,"['root', 'ccomp', 'nsubj', 'prep', 'pobj', 'prep', 'pobj', 'cc']",1,0,0
+905,"['root', 'ccomp', 'nsubj', 'prep', 'pobj', 'prep', 'pobj', 'conj']",1,0,0
+906,"['root', 'ccomp', 'nsubj', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'prep']",1,0,0
+907,"['root', 'ccomp', 'nsubj', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'prep', 'pobj', 'amod']",1,0,0
+908,"['root', 'ccomp', 'nsubj', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'prep', 'pobj']",1,0,0
+909,"['root', 'ccomp', 'nsubj', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'prep', 'pobj', 'prep']",1,0,0
+910,"['root', 'ccomp', 'nsubj', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'prep', 'pobj', 'prep', 'pobj']",1,0,0
+911,"['root', 'dobj', 'nmod']",5,2,2
+912,"['root', 'ccomp', 'dobj', 'prep', 'pobj', 'det']",3,0,0
+913,"['root', 'ccomp', 'advcl', 'prep', 'pobj', 'relcl', 'ccomp', 'nsubj']",1,0,0
+914,"['root', 'ccomp', 'advcl', 'prep', 'pobj', 'relcl', 'ccomp']",1,0,0
+915,"['root', 'ccomp', 'advcl', 'prep', 'pobj', 'relcl', 'nsubj']",1,1,1
+916,"['root', 'ccomp', 'advcl', 'prep', 'pobj', 'relcl']",1,0,0
+917,"['root', 'ccomp', 'advcl', 'prep', 'pobj', 'relcl', 'ccomp', 'aux']",1,0,0
+918,"['root', 'ccomp', 'advcl', 'prep', 'pobj', 'relcl', 'ccomp', 'auxpass']",1,0,0
+919,"['root', 'ccomp', 'advcl', 'prep', 'pobj', 'relcl', 'ccomp', 'prep']",1,0,0
+920,"['root', 'ccomp', 'advcl', 'prep', 'pobj', 'relcl', 'ccomp', 'prep', 'pobj', 'amod']",1,1,1
+921,"['root', 'ccomp', 'advcl', 'prep', 'pobj', 'relcl', 'ccomp', 'prep', 'pobj']",1,0,0
+922,"['root', 'ccomp', 'advcl', 'prep', 'pobj', 'relcl', 'ccomp', 'prep', 'pobj', 'compound']",1,0,0
+923,"['root', 'ccomp', 'dobj', 'conj', 'advmod']",1,0,0
+924,"['root', 'ccomp', 'dobj', 'conj', 'quantmod']",1,0,0
+925,"['root', 'ccomp', 'dobj', 'conj', 'prep']",2,0,0
+926,"['root', 'ccomp', 'dobj', 'conj', 'prep', 'pobj', 'amod']",1,1,1
+927,"['root', 'ccomp', 'dobj', 'conj', 'prep', 'pobj']",1,0,0
+928,"['root', 'ccomp', 'prep', 'pobj', 'conj', 'poss']",1,0,0
+929,"['root', 'ccomp', 'prep', 'pobj', 'conj']",3,0,0
+930,"['root', 'ccomp', 'advcl', 'prep', 'pobj', 'poss']",1,0,0
+931,"['root', 'ccomp', 'advcl', 'prep', 'pcomp', 'dobj', 'conj', 'compound']",1,0,0
+932,"['root', 'ccomp', 'advcl', 'prep', 'pcomp', 'dobj', 'conj']",1,0,0
+933,"['root', 'ccomp', 'conj', 'dobj', 'prep', 'pobj', 'poss']",1,0,0
+934,"['root', 'nsubj', 'nmod', 'nummod']",1,0,0
+935,"['root', 'agent', 'advmod']",1,0,0
+936,"['root', 'agent']",4,0,0
+937,"['root', 'agent', 'pobj', 'det']",2,0,0
+938,"['root', 'agent', 'pobj']",4,0,0
+939,"['root', 'nsubj', 'prep', 'pobj', 'poss']",2,1,1
+940,"['root', 'nsubj', 'prep', 'pobj', 'poss', 'case']",2,0,0
+941,"['root', 'nsubj', 'prep', 'pobj', 'amod']",8,3,3
+942,"['root', 'nsubj', 'prep', 'pobj', 'prep']",4,1,0
+943,"['root', 'nsubj', 'prep', 'pobj', 'prep', 'pobj', 'det']",2,0,0
+944,"['root', 'nsubj', 'prep', 'pobj', 'prep', 'pobj']",3,2,0
+945,"['root', 'nsubj', 'prep', 'pobj', 'prep', 'pobj', 'compound']",1,1,1
+946,"['root', 'ccomp', 'advcl', 'nsubjpass']",3,0,0
+947,"['root', 'ccomp', 'advcl', 'prep', 'pobj', 'compound', 'amod']",1,1,1
+948,"['root', 'ccomp', 'dobj', 'prep', 'pcomp', 'nsubj']",1,0,0
+949,"['root', 'ccomp', 'dobj', 'prep', 'pcomp', 'aux']",1,0,0
+950,"['root', 'ccomp', 'dobj', 'prep', 'pcomp', 'dobj']",1,0,0
+951,"['root', 'ccomp', 'dobj', 'prep', 'pcomp', 'prep']",1,0,0
+952,"['root', 'ccomp', 'dobj', 'prep', 'pcomp', 'prep', 'pobj', 'det']",1,0,0
+953,"['root', 'ccomp', 'dobj', 'prep', 'pcomp', 'prep', 'pobj']",1,1,1
+954,"['root', 'dobj', 'acl', 'prep', 'pobj', 'det']",2,0,0
+955,"['root', 'dobj', 'acl', 'prep', 'pobj', 'amod']",2,0,0
+956,"['root', 'dobj', 'acl', 'prep', 'pobj', 'prep']",1,0,0
+957,"['root', 'dobj', 'acl', 'prep', 'pobj', 'prep', 'pobj', 'compound']",1,1,1
+958,"['root', 'dobj', 'acl', 'prep', 'pobj', 'prep', 'pobj']",1,1,0
+959,"['root', 'dobj', 'acl', 'prep', 'pobj', 'prep', 'pobj', 'cc']",1,0,0
+960,"['root', 'dobj', 'acl', 'prep', 'pobj', 'prep', 'pobj', 'conj']",1,1,0
+961,"['root', 'dobj', 'acl', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'compound']",1,1,1
+962,"['root', 'dobj', 'acl', 'prep', 'pobj', 'punct']",1,0,0
+963,"['root', 'dobj', 'acl', 'prep', 'pobj', 'relcl', 'advmod']",1,0,0
+964,"['root', 'dobj', 'acl', 'prep', 'pobj', 'relcl']",1,0,0
+965,"['root', 'dobj', 'acl', 'prep', 'pobj', 'relcl', 'nsubjpass', 'amod']",2,1,1
+966,"['root', 'dobj', 'acl', 'prep', 'pobj', 'relcl', 'nsubjpass']",1,0,0
+967,"['root', 'nmod']",12,10,7
+968,"['root', 'prep', 'pobj', 'compound', 'compound']",3,1,1
+969,"['root', 'prep', 'prep', 'pobj', 'relcl', 'nsubjpass']",1,0,0
+970,"['root', 'prep', 'prep', 'pobj', 'relcl', 'auxpass']",1,0,0
+971,"['root', 'prep', 'prep', 'pobj', 'relcl', 'prep', 'pobj', 'det']",1,0,0
+972,"['root', 'prep', 'prep', 'pobj', 'relcl', 'prep', 'pobj']",1,0,0
+973,"['root', 'prep', 'prep', 'pobj', 'relcl', 'prep', 'pobj', 'compound']",2,1,1
+974,"['root', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'poss']",1,0,0
+975,"['root', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'poss', 'case']",1,0,0
+976,"['root', 'appos', 'amod']",5,1,1
+977,"['root', 'appos', 'appos', 'nummod', 'compound']",1,0,0
+978,"['root', 'appos', 'appos', 'nummod', 'punct']",6,0,0
+979,"['root', 'appos', 'appos']",38,6,4
+980,"['root', 'appos', 'appos', 'prep']",6,1,0
+981,"['root', 'appos', 'appos', 'npadvmod']",5,0,0
+982,"['root', 'appos', 'appos', 'compound', 'amod']",4,2,2
+983,"['root', 'appos', 'appos', 'amod']",6,0,0
+984,"['root', 'appos', 'nummod', 'punct']",4,0,0
+985,"['root', 'appos', 'prep']",11,1,0
+986,"['root', 'appos', 'prep', 'pobj']",7,1,0
+987,"['root', 'appos', 'appos', 'punct']",8,0,0
+988,"['root', 'appos', 'appos', 'appos', 'nummod']",8,0,0
+989,"['root', 'appos', 'appos', 'appos']",11,1,1
+990,"['root', 'appos', 'nummod', 'quantmod']",1,0,0
+991,"['root', 'appos', 'npadvmod']",9,5,4
+992,"['root', 'appos', 'appos', 'compound']",14,5,1
+993,"['root', 'appos', 'appos', 'appos', 'compound']",2,0,0
+994,"['root', 'appos', 'npadvmod', 'cc']",2,0,0
+995,"['root', 'appos', 'npadvmod', 'conj', 'compound']",2,2,2
+996,"['root', 'appos', 'npadvmod', 'conj']",2,2,0
+997,"['root', 'appos', 'acl']",2,0,0
+998,"['root', 'appos', 'acl', 'prep']",2,0,0
+999,"['root', 'appos', 'acl', 'prep', 'pobj']",2,0,0
+1000,"['root', 'appos', 'acl', 'prep', 'pobj', 'appos', 'nmod', 'nmod']",1,0,0
+1001,"['root', 'ccomp', 'agent', 'pobj', 'poss']",1,0,0
+1002,"['root', 'ccomp', 'agent', 'pobj', 'poss', 'case']",1,0,0
+1003,"['root', 'ccomp', 'agent', 'pobj', 'punct']",2,0,0
+1004,"['root', 'ccomp', 'agent', 'pobj', 'relcl', 'nsubj']",1,0,0
+1005,"['root', 'ccomp', 'agent', 'pobj', 'relcl']",1,0,0
+1006,"['root', 'ccomp', 'agent', 'pobj', 'relcl', 'dobj', 'det']",1,0,0
+1007,"['root', 'ccomp', 'agent', 'pobj', 'relcl', 'dobj']",1,0,0
+1008,"['root', 'ccomp', 'agent', 'pobj', 'relcl', 'oprd']",1,0,0
+1009,"['root', 'ccomp', 'agent', 'pobj', 'relcl', 'oprd', 'prep']",1,0,0
+1010,"['root', 'ccomp', 'agent', 'pobj', 'relcl', 'oprd', 'prep', 'pobj']",1,0,0
+1011,"['root', 'ccomp', 'agent', 'pobj', 'relcl', 'oprd', 'advcl', 'aux']",1,0,0
+1012,"['root', 'ccomp', 'agent', 'pobj', 'relcl', 'oprd', 'advcl']",1,0,0
+1013,"['root', 'ccomp', 'agent', 'pobj', 'relcl', 'oprd', 'advcl', 'ccomp', 'nsubj', 'compound']",1,0,0
+1014,"['root', 'ccomp', 'agent', 'pobj', 'relcl', 'oprd', 'advcl', 'ccomp', 'nsubj']",1,0,0
+1015,"['root', 'ccomp', 'agent', 'pobj', 'relcl', 'oprd', 'advcl', 'ccomp']",1,0,0
+1016,"['root', 'nsubjpass', 'prep', 'pobj', 'punct']",6,0,0
+1017,"['root', 'xcomp', 'prep', 'advmod']",1,0,0
+1018,"['root', 'xcomp', 'prep', 'prep', 'pobj']",2,0,0
+1019,"['root', 'advcl', 'prep', 'pobj', 'compound', 'amod']",2,1,1
+1020,"['root', 'conj', 'dobj', 'conj', 'nmod']",1,0,0
+1021,"['root', 'conj', 'dobj', 'conj', 'compound']",1,1,1
+1022,"['root', 'nsubj', 'prep', 'pobj', 'poss', 'det']",1,0,0
+1023,"['root', 'nsubjpass', 'poss', 'det']",2,0,0
+1024,"['root', 'nsubjpass', 'poss']",2,0,0
+1025,"['root', 'nsubjpass', 'poss', 'case']",3,0,0
+1026,"['root', 'prep', 'pobj', 'poss', 'compound']",4,3,3
+1027,"['root', 'prep', 'pobj', 'poss']",12,3,0
+1028,"['root', 'prep', 'pobj', 'appos', 'compound']",2,2,2
+1029,"['root', 'conj', 'attr', 'poss']",1,0,0
+1030,"['root', 'conj', 'attr']",3,0,0
+1031,"['root', 'conj', 'ccomp', 'attr', 'det']",2,0,0
+1032,"['root', 'conj', 'ccomp', 'attr']",1,0,0
+1033,"['root', 'conj', 'ccomp', 'attr', 'amod']",1,0,0
+1034,"['root', 'conj', 'ccomp', 'attr', 'prep']",2,0,0
+1035,"['root', 'conj', 'ccomp', 'attr', 'prep', 'pobj', 'poss']",1,0,0
+1036,"['root', 'conj', 'ccomp', 'attr', 'prep', 'pobj']",2,1,0
+1037,"['root', 'prep', 'pobj', 'acl']",6,0,0
+1038,"['root', 'prep', 'pobj', 'acl', 'dobj']",2,0,0
+1039,"['root', 'prep', 'pobj', 'acl', 'dobj', 'prep', 'pobj', 'poss']",1,0,0
+1040,"['root', 'prep', 'pobj', 'acl', 'dobj', 'prep', 'pobj']",2,0,0
+1041,"['root', 'prep', 'pobj', 'acl', 'dobj', 'prep', 'pobj', 'cc']",1,0,0
+1042,"['root', 'prep', 'pobj', 'acl', 'dobj', 'prep', 'pobj', 'conj', 'compound', 'advmod']",1,0,0
+1043,"['root', 'prep', 'pobj', 'acl', 'dobj', 'prep', 'pobj', 'conj', 'compound']",1,0,0
+1044,"['root', 'prep', 'pobj', 'acl', 'dobj', 'prep', 'pobj', 'conj']",1,1,1
+1045,"['root', 'attr', 'prep', 'pobj', 'punct']",3,0,0
+1046,"['root', 'attr', 'prep', 'pobj', 'compound']",4,2,2
+1047,"['root', 'attr', 'prep', 'pobj', 'relcl', 'nsubj']",3,0,0
+1048,"['root', 'attr', 'prep', 'pobj', 'relcl']",3,0,0
+1049,"['root', 'attr', 'prep', 'pobj', 'relcl', 'dobj', 'det']",1,0,0
+1050,"['root', 'attr', 'prep', 'pobj', 'relcl', 'dobj']",2,0,0
+1051,"['root', 'attr', 'prep', 'pobj', 'relcl', 'dobj', 'amod']",1,0,0
+1052,"['root', 'attr', 'prep', 'pobj', 'relcl', 'dobj', 'compound', 'nummod']",1,0,0
+1053,"['root', 'attr', 'prep', 'pobj', 'relcl', 'dobj', 'compound']",1,0,0
+1054,"['root', 'attr', 'prep', 'pobj', 'relcl', 'dobj', 'prep']",2,0,0
+1055,"['root', 'attr', 'prep', 'pobj', 'relcl', 'dobj', 'prep', 'pobj']",1,0,0
+1056,"['root', 'attr', 'prep', 'pobj', 'relcl', 'dobj', 'prep', 'pobj', 'prep', 'pobj']",1,0,0
+1057,"['root', 'attr', 'prep', 'pobj', 'relcl', 'cc']",1,0,0
+1058,"['root', 'attr', 'prep', 'pobj', 'relcl', 'conj', 'advmod']",1,0,0
+1059,"['root', 'attr', 'prep', 'pobj', 'relcl', 'conj']",1,0,0
+1060,"['root', 'attr', 'prep', 'pobj', 'relcl', 'conj', 'dobj', 'compound']",1,0,0
+1061,"['root', 'attr', 'prep', 'pobj', 'relcl', 'conj', 'dobj']",1,0,0
+1062,"['root', 'attr', 'prep', 'pobj', 'relcl', 'conj', 'dobj', 'prep', 'pobj', 'nmod', 'aux']",1,0,0
+1063,"['root', 'attr', 'prep', 'pobj', 'relcl', 'conj', 'dobj', 'prep', 'pobj']",1,0,0
+1064,"['root', 'attr', 'prep', 'pobj', 'relcl', 'conj', 'dobj', 'prep', 'pobj', 'compound']",1,0,0
+1065,"['root', 'conj', 'relcl', 'nsubj']",1,0,0
+1066,"['root', 'conj', 'relcl']",1,0,0
+1067,"['root', 'conj', 'relcl', 'acomp']",1,0,0
+1068,"['root', 'conj', 'relcl', 'acomp', 'prep']",1,0,0
+1069,"['root', 'conj', 'relcl', 'acomp', 'prep', 'pobj']",1,0,0
+1070,"['root', 'conj', 'relcl', 'prep']",1,0,0
+1071,"['root', 'conj', 'relcl', 'prep', 'pcomp', 'auxpass']",1,0,0
+1072,"['root', 'conj', 'relcl', 'prep', 'pcomp']",1,0,0
+1073,"['root', 'conj', 'relcl', 'prep', 'pcomp', 'agent']",1,0,0
+1074,"['root', 'conj', 'relcl', 'prep', 'pcomp', 'agent', 'pobj', 'compound']",2,2,1
+1075,"['root', 'conj', 'relcl', 'prep', 'pcomp', 'agent', 'pobj']",1,1,0
+1076,"['root', 'attr', 'poss']",2,2,1
+1077,"['root', 'attr', 'poss', 'case']",1,0,0
+1078,"['root', 'conj', 'dobj', 'det']",3,0,0
+1079,"['root', 'conj', 'dobj', 'punct']",1,0,0
+1080,"['root', 'conj', 'dobj', 'appos', 'compound']",2,2,1
+1081,"['root', 'conj', 'dobj', 'appos']",1,1,0
+1082,"['root', 'prep', 'cc']",2,0,0
+1083,"['root', 'prep', 'conj', 'pobj']",2,1,0
+1084,"['root', 'prep', 'pcomp', 'dobj', 'det']",2,0,0
+1085,"['root', 'prep', 'pcomp', 'dobj', 'compound', 'amod']",1,0,0
+1086,"['root', 'prep', 'pcomp', 'dobj', 'compound']",3,0,0
+1087,"['root', 'prep', 'pcomp', 'dobj', 'appos']",1,1,1
+1088,"['root', 'prep', 'pcomp', 'prep', 'pobj', 'nummod']",2,0,0
+1089,"['root', 'prep', 'pcomp', 'prep', 'pobj']",6,0,0
+1090,"['root', 'conj', 'nsubj', 'poss']",1,0,0
+1091,"['root', 'conj', 'nsubj', 'amod']",3,0,0
+1092,"['root', 'nsubj', 'appos', 'det']",13,0,0
+1093,"['root', 'nsubj', 'appos', 'relcl', 'nsubj']",1,0,0
+1094,"['root', 'nsubj', 'appos', 'relcl']",1,0,0
+1095,"['root', 'nsubj', 'appos', 'relcl', 'dobj', 'amod']",1,0,0
+1096,"['root', 'nsubj', 'appos', 'relcl', 'dobj']",1,0,0
+1097,"['root', 'dobj', 'prep', 'pobj', 'nummod']",9,0,0
+1098,"['root', 'dobj', 'prep', 'pobj', 'amod']",5,1,1
+1099,"['root', 'advcl', 'advmod']",14,0,0
+1100,"['root', 'advcl', 'nsubjpass']",1,0,0
+1101,"['root', 'advcl', 'auxpass']",1,0,0
+1102,"['root', 'advcl', 'prep', 'pobj', 'amod']",3,0,0
+1103,"['root', 'advcl', 'prep', 'pobj', 'prep', 'pobj', 'appos']",1,1,1
+1104,"['root', 'advcl', 'prep', 'pobj', 'nummod']",3,0,0
+1105,"['root', 'advcl', 'advmod', 'advmod']",1,0,0
+1106,"['root', 'advcl', 'aux']",16,0,0
+1107,"['root', 'advcl', 'dobj', 'det']",8,0,0
+1108,"['root', 'advcl', 'cc']",5,0,0
+1109,"['root', 'advcl', 'conj']",4,0,0
+1110,"['root', 'advcl', 'conj', 'dobj', 'det']",1,0,0
+1111,"['root', 'advcl', 'conj', 'dobj']",1,0,0
+1112,"['root', 'advcl', 'conj', 'dobj', 'amod']",1,0,0
+1113,"['root', 'advcl', 'conj', 'dobj', 'prep', 'pobj', 'poss']",1,0,0
+1114,"['root', 'advcl', 'conj', 'dobj', 'prep', 'pobj']",1,0,0
+1115,"['root', 'advmod', 'advmod']",5,0,0
+1116,"['root', 'advmod', 'ccomp', 'mark']",1,0,0
+1117,"['root', 'advmod', 'ccomp']",1,0,0
+1118,"['root', 'advmod', 'ccomp', 'auxpass']",1,0,0
+1119,"['root', 'advmod', 'ccomp', 'xcomp', 'aux']",1,0,0
+1120,"['root', 'advmod', 'ccomp', 'xcomp']",1,0,0
+1121,"['root', 'advmod', 'ccomp', 'xcomp', 'dobj']",1,0,0
+1122,"['root', 'advmod', 'ccomp', 'xcomp', 'dobj', 'amod']",1,0,0
+1123,"['root', 'advmod', 'ccomp', 'xcomp', 'dobj', 'prep', 'pobj']",1,1,0
+1124,"['root', 'advmod', 'ccomp', 'xcomp', 'dobj', 'prep', 'pobj', 'compound']",2,2,1
+1125,"['root', 'nsubjpass', 'punct']",8,0,0
+1126,"['root', 'conj', 'attr', 'det']",2,0,0
+1127,"['root', 'conj', 'attr', 'amod']",3,0,0
+1128,"['root', 'prep', 'pobj', 'cc']",7,0,0
+1129,"['root', 'prep', 'pobj', 'conj', 'compound']",2,0,0
+1130,"['root', 'prep', 'pcomp', 'auxpass']",3,0,0
+1131,"['root', 'prep', 'pcomp', 'prep', 'pobj', 'det']",3,0,0
+1132,"['root', 'prep', 'pcomp', 'prep', 'pobj', 'advmod']",1,0,0
+1133,"['root', 'prep', 'pcomp', 'advcl', 'aux']",1,0,0
+1134,"['root', 'prep', 'pcomp', 'advcl']",1,0,0
+1135,"['root', 'prep', 'pcomp', 'advcl', 'dobj', 'det']",1,0,0
+1136,"['root', 'prep', 'pcomp', 'advcl', 'dobj']",1,0,0
+1137,"['root', 'prep', 'pcomp', 'advcl', 'dobj', 'prep', 'pobj', 'punct']",2,0,0
+1138,"['root', 'prep', 'pcomp', 'advcl', 'dobj', 'prep', 'pobj']",1,1,1
+1139,"['root', 'prep', 'pcomp', 'advcl', 'dobj', 'prep', 'pobj', 'conj', 'nummod']",1,0,0
+1140,"['root', 'prep', 'pcomp', 'advcl', 'dobj', 'prep', 'pobj', 'conj']",1,0,0
+1141,"['root', 'nsubj', 'appos', 'punct']",5,0,0
+1142,"['root', 'nsubj', 'appos', 'appos', 'nmod']",1,1,1
+1143,"['root', 'nsubj', 'appos', 'appos']",1,0,0
+1144,"['root', 'nsubj', 'appos', 'appos', 'nmod', 'amod']",1,1,1
+1145,"['root', 'attr', 'prep', 'pobj', 'nmod', 'punct']",2,0,0
+1146,"['root', 'attr', 'prep', 'pobj', 'nmod']",1,1,0
+1147,"['root', 'attr', 'prep', 'pobj', 'nmod', 'nmod']",1,1,1
+1148,"['root', 'attr', 'relcl', 'advmod', 'npadvmod', 'nummod']",1,0,0
+1149,"['root', 'attr', 'relcl', 'advmod', 'npadvmod']",1,0,0
+1150,"['root', 'attr', 'relcl', 'advmod']",1,0,0
+1151,"['root', 'attr', 'relcl', 'cc']",1,0,0
+1152,"['root', 'attr', 'relcl', 'conj']",1,0,0
+1153,"['root', 'attr', 'relcl', 'conj', 'advmod']",1,0,0
+1154,"['root', 'attr', 'relcl', 'conj', 'xcomp', 'aux']",1,0,0
+1155,"['root', 'attr', 'relcl', 'conj', 'xcomp']",1,0,0
+1156,"['root', 'attr', 'relcl', 'conj', 'xcomp', 'advmod']",1,0,0
+1157,"['root', 'attr', 'relcl', 'conj', 'xcomp', 'dobj']",1,0,0
+1158,"['root', 'attr', 'relcl', 'conj', 'xcomp', 'dobj', 'prep']",1,0,0
+1159,"['root', 'attr', 'relcl', 'conj', 'xcomp', 'dobj', 'prep', 'pobj']",1,0,0
+1160,"['root', 'nsubj', 'appos', 'prep', 'pobj', 'prep', 'pobj', 'compound', 'amod']",1,0,0
+1161,"['root', 'nsubj', 'appos', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'compound']",2,1,1
+1162,"['root', 'nsubj', 'appos', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj']",2,1,0
+1163,"['root', 'attr', 'amod', 'advmod']",2,0,0
+1164,"['root', 'attr', 'amod', 'prep']",1,0,0
+1165,"['root', 'attr', 'amod', 'prep', 'pobj']",1,0,0
+1166,"['root', 'attr', 'amod', 'prep', 'pobj', 'cc']",1,0,0
+1167,"['root', 'attr', 'amod', 'prep', 'pobj', 'conj']",1,0,0
+1168,"['root', 'attr', 'amod', 'prep', 'pobj', 'conj', 'prep', 'pobj']",1,0,0
+1169,"['root', 'attr', 'amod', 'xcomp', 'aux']",1,0,0
+1170,"['root', 'attr', 'amod', 'xcomp']",1,0,0
+1171,"['root', 'attr', 'amod', 'xcomp', 'dobj']",1,1,1
+1172,"['root', 'attr', 'amod', 'xcomp', 'dobj', 'amod', 'advmod']",1,0,0
+1173,"['root', 'attr', 'amod', 'xcomp', 'dobj', 'compound']",1,1,1
+1174,"['root', 'advcl', 'det']",2,0,0
+1175,"['root', 'advcl', 'amod']",1,0,0
+1176,"['root', 'prep', 'pobj', 'prep', 'pobj', 'poss', 'compound']",2,1,1
+1177,"['root', 'prep', 'pobj', 'prep', 'pobj', 'poss']",4,2,1
+1178,"['root', 'prep', 'pobj', 'prep', 'pobj', 'poss', 'case']",4,0,0
+1179,"['root', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'amod', 'npadvmod']",2,2,2
+1180,"['root', 'conj', 'dobj', 'poss']",1,0,0
+1181,"['root', 'conj', 'dobj', 'acl', 'aux']",1,0,0
+1182,"['root', 'conj', 'dobj', 'acl']",1,0,0
+1183,"['root', 'conj', 'dobj', 'acl', 'dobj']",1,0,0
+1184,"['root', 'conj', 'dobj', 'acl', 'dobj', 'compound', 'compound']",1,0,0
+1185,"['root', 'conj', 'dobj', 'acl', 'dobj', 'compound']",1,0,0
+1186,"['root', 'dobj', 'relcl', 'aux']",1,0,0
+1187,"['root', 'dobj', 'relcl']",2,0,0
+1188,"['root', 'dobj', 'relcl', 'dobj', 'compound']",2,1,1
+1189,"['root', 'dobj', 'relcl', 'dobj']",1,0,0
+1190,"['root', 'conj', 'prep', 'prep']",2,0,0
+1191,"['root', 'conj', 'prep', 'prep', 'pobj']",1,0,0
+1192,"['root', 'conj', 'prep', 'prep', 'pobj', 'prep']",1,0,0
+1193,"['root', 'conj', 'prep', 'prep', 'pobj', 'prep', 'pobj', 'poss', 'det']",1,0,0
+1194,"['root', 'conj', 'prep', 'prep', 'pobj', 'prep', 'pobj', 'poss']",1,0,0
+1195,"['root', 'conj', 'prep', 'prep', 'pobj', 'prep', 'pobj']",1,0,0
+1196,"['root', 'conj', 'prep', 'prep', 'pobj', 'prep', 'pobj', 'poss', 'case']",1,0,0
+1197,"['root', 'conj', 'prep', 'prep', 'pobj', 'prep', 'pobj', 'amod']",1,0,0
+1198,"['root', 'conj', 'prep', 'pobj', 'poss', 'compound']",2,1,1
+1199,"['root', 'conj', 'prep', 'pobj', 'poss']",4,1,0
+1200,"['root', 'conj', 'prep', 'pobj', 'poss', 'case']",1,0,0
+1201,"['root', 'nsubj', 'appos', 'amod', 'amod']",1,0,0
+1202,"['root', 'nsubj', 'appos', 'amod', 'punct']",1,0,0
+1203,"['root', 'attr', 'amod', 'advmod', 'advmod']",1,0,0
+1204,"['root', 'prt']",4,0,0
+1205,"['root', 'advcl', 'punct']",3,0,0
+1206,"['root', 'advcl', 'advcl', 'prt']",1,0,0
+1207,"['root', 'advcl', 'advcl', 'prep', 'pobj', 'compound', 'amod']",1,0,0
+1208,"['root', 'advcl', 'advcl', 'prep', 'pobj', 'compound']",1,0,0
+1209,"['root', 'advcl', 'advcl', 'prep', 'pobj', 'cc']",1,0,0
+1210,"['root', 'advcl', 'advcl', 'prep', 'pobj', 'conj']",1,0,0
+1211,"['root', 'prep', 'pobj', 'conj', 'poss']",1,0,0
+1212,"['root', 'prep', 'pobj', 'conj', 'prep', 'pobj', 'compound']",1,1,1
+1213,"['root', 'prep', 'pobj', 'conj', 'prep', 'pobj']",1,1,0
+1214,"['root', 'advcl', 'dobj', 'amod', 'advmod']",1,0,0
+1215,"['root', 'advcl', 'dobj', 'amod']",6,0,0
+1216,"['root', 'advcl', 'advcl', 'attr', 'compound']",1,1,1
+1217,"['root', 'advcl', 'advcl', 'attr']",1,0,0
+1218,"['root', 'advcl', 'advcl', 'attr', 'amod']",1,1,1
+1219,"['root', 'advcl', 'advcl', 'mark']",1,0,0
+1220,"['root', 'advcl', 'advcl', 'nsubj', 'det']",2,0,0
+1221,"['root', 'advcl', 'advcl', 'nsubj']",1,0,0
+1222,"['root', 'advcl', 'advcl', 'dobj', 'poss']",1,0,0
+1223,"['root', 'advcl', 'advcl', 'dobj']",2,0,0
+1224,"['root', 'advcl', 'amod', 'amod']",1,0,0
+1225,"['root', 'advcl', 'amod', 'cc']",1,0,0
+1226,"['root', 'advcl', 'amod', 'conj']",1,0,0
+1227,"['root', 'advcl', 'relcl', 'nsubj']",1,0,0
+1228,"['root', 'advcl', 'relcl']",1,0,0
+1229,"['root', 'advcl', 'relcl', 'advmod']",1,0,0
+1230,"['root', 'advcl', 'relcl', 'prep']",1,0,0
+1231,"['root', 'advcl', 'relcl', 'prep', 'pcomp']",1,0,0
+1232,"['root', 'advcl', 'relcl', 'prep', 'pcomp', 'dobj', 'det']",1,0,0
+1233,"['root', 'advcl', 'relcl', 'prep', 'pcomp', 'dobj']",2,2,2
+1234,"['root', 'advcl', 'relcl', 'prep', 'pcomp', 'prep']",2,0,0
+1235,"['root', 'advcl', 'relcl', 'prep', 'pcomp', 'prep', 'pobj']",1,0,0
+1236,"['root', 'prep', 'prep', 'pobj', 'amod']",1,1,1
+1237,"['root', 'prep', 'prep', 'pobj', 'prep', 'pobj', 'amod']",3,1,1
+1238,"['root', 'prep', 'prep', 'pobj', 'prep', 'pobj', 'amod', 'xcomp', 'aux']",1,0,0
+1239,"['root', 'prep', 'prep', 'pobj', 'prep', 'pobj', 'amod', 'xcomp']",1,0,0
+1240,"['root', 'prep', 'prep', 'pobj', 'prep', 'pobj', 'amod', 'xcomp', 'dobj']",1,0,0
+1241,"['root', 'nsubjpass', 'acl', 'mark']",1,0,0
+1242,"['root', 'nsubjpass', 'acl', 'nsubjpass']",2,0,0
+1243,"['root', 'nsubjpass', 'acl', 'aux']",1,0,0
+1244,"['root', 'nsubjpass', 'acl', 'auxpass']",1,0,0
+1245,"['root', 'nsubjpass', 'acl', 'agent']",1,0,0
+1246,"['root', 'nsubjpass', 'acl', 'agent', 'pobj', 'det']",2,0,0
+1247,"['root', 'nsubjpass', 'acl', 'agent', 'pobj']",1,0,0
+1248,"['root', 'nsubjpass', 'acl', 'agent', 'pobj', 'amod', 'advmod', 'advmod']",1,0,0
+1249,"['root', 'nsubjpass', 'acl', 'agent', 'pobj', 'amod', 'advmod']",1,0,0
+1250,"['root', 'nsubjpass', 'acl', 'agent', 'pobj', 'amod']",2,1,1
+1251,"['root', 'nsubjpass', 'acl', 'agent', 'pobj', 'appos', 'compound']",1,1,1
+1252,"['root', 'nsubjpass', 'acl', 'agent', 'pobj', 'appos']",2,2,1
+1253,"['root', 'advcl', 'advcl', 'prep', 'pobj', 'prep']",1,0,0
+1254,"['root', 'advcl', 'advcl', 'prep', 'pobj', 'prep', 'pcomp']",1,0,0
+1255,"['root', 'advcl', 'advcl', 'prep', 'pobj', 'prep', 'pcomp', 'dobj']",1,0,0
+1256,"['root', 'advcl', 'advcl', 'prep', 'pobj', 'prep', 'pcomp', 'dobj', 'compound']",1,0,0
+1257,"['root', 'advcl', 'advcl', 'prep', 'pobj', 'prep', 'pcomp', 'cc']",1,0,0
+1258,"['root', 'advcl', 'advcl', 'prep', 'pobj', 'prep', 'pcomp', 'conj']",1,0,0
+1259,"['root', 'advcl', 'advcl', 'prep', 'pobj', 'prep', 'pcomp', 'conj', 'dobj']",1,0,0
+1260,"['root', 'advcl', 'advcl', 'prep', 'pobj', 'prep', 'pcomp', 'conj', 'dobj', 'amod']",2,0,0
+1261,"['root', 'advcl', 'prep', 'pobj', 'acl', 'dobj', 'poss']",1,0,0
+1262,"['root', 'advcl', 'prep', 'cc']",1,0,0
+1263,"['root', 'advcl', 'prep', 'conj', 'advmod']",1,0,0
+1264,"['root', 'advcl', 'prep', 'conj', 'pcomp']",1,0,0
+1265,"['root', 'advcl', 'prep', 'conj', 'pcomp', 'dobj']",1,0,0
+1266,"['root', 'advcl', 'prep', 'conj', 'pcomp', 'dobj', 'acl']",1,0,0
+1267,"['root', 'advcl', 'prep', 'conj', 'pcomp', 'dobj', 'acl', 'agent']",1,0,0
+1268,"['root', 'advcl', 'prep', 'conj', 'pcomp', 'dobj', 'acl', 'agent', 'pobj', 'nmod', 'nmod']",1,1,1
+1269,"['root', 'advcl', 'prep', 'conj', 'pcomp', 'dobj', 'acl', 'agent', 'pobj', 'nmod']",1,1,0
+1270,"['root', 'advcl', 'prep', 'conj', 'pcomp', 'dobj', 'acl', 'agent', 'pobj']",1,0,0
+1271,"['root', 'advcl', 'prep', 'conj', 'pcomp', 'dobj', 'acl', 'agent', 'pobj', 'amod']",1,0,0
+1272,"['root', 'advcl', 'prep', 'conj', 'pcomp', 'dobj', 'acl', 'agent', 'pobj', 'prep']",1,0,0
+1273,"['root', 'advcl', 'prep', 'conj', 'pcomp', 'dobj', 'acl', 'agent', 'pobj', 'prep', 'pobj', 'det']",1,0,0
+1274,"['root', 'advcl', 'prep', 'conj', 'pcomp', 'dobj', 'acl', 'agent', 'pobj', 'prep', 'pobj']",1,1,0
+1275,"['root', 'advcl', 'prep', 'conj', 'pcomp', 'dobj', 'acl', 'agent', 'pobj', 'prep', 'pobj', 'compound']",1,1,1
+1276,"['root', 'attr', 'prep', 'pobj', 'poss', 'compound']",3,1,1
+1277,"['root', 'attr', 'prep', 'pobj', 'poss']",3,1,0
+1278,"['root', 'attr', 'prep', 'pobj', 'poss', 'case']",3,0,0
+1279,"['root', 'attr', 'prep', 'pobj', 'amod']",7,2,2
+1280,"['root', 'attr', 'prep', 'pobj', 'prep']",2,0,0
+1281,"['root', 'attr', 'prep', 'pobj', 'prep', 'pobj', 'amod']",2,0,0
+1282,"['root', 'attr', 'prep', 'pobj', 'prep', 'pobj']",3,0,0
+1283,"['root', 'attr', 'prep', 'pobj', 'prep', 'pobj', 'compound']",1,0,0
+1284,"['root', 'conj', 'advcl', 'advmod']",2,0,0
+1285,"['root', 'conj', 'advcl']",6,0,0
+1286,"['root', 'conj', 'advcl', 'nsubj']",5,0,0
+1287,"['root', 'conj', 'advcl', 'attr', 'compound']",1,0,0
+1288,"['root', 'conj', 'advcl', 'attr']",1,0,0
+1289,"['root', 'conj', 'ccomp', 'aux']",2,0,0
+1290,"['root', 'conj', 'ccomp', 'attr', 'compound']",1,0,0
+1291,"['root', 'conj', 'ccomp', 'attr', 'punct']",1,1,1
+1292,"['root', 'conj', 'ccomp', 'attr', 'prep', 'pobj', 'det']",1,0,0
+1293,"['root', 'conj', 'ccomp', 'attr', 'prep', 'pobj', 'compound']",1,1,1
+1294,"['root', 'ccomp', 'csubj', 'nsubj']",1,0,0
+1295,"['root', 'ccomp', 'csubj']",1,0,0
+1296,"['root', 'ccomp', 'csubj', 'dobj', 'poss']",1,1,1
+1297,"['root', 'ccomp', 'csubj', 'dobj']",1,0,0
+1298,"['root', 'ccomp', 'csubj', 'dobj', 'poss', 'case']",1,0,0
+1299,"['root', 'ccomp', 'csubj', 'dobj', 'prep']",1,0,0
+1300,"['root', 'ccomp', 'csubj', 'dobj', 'prep', 'pobj', 'det']",1,0,0
+1301,"['root', 'ccomp', 'csubj', 'dobj', 'prep', 'pobj']",1,0,0
+1302,"['root', 'ccomp', 'csubj', 'dobj', 'prep', 'pobj', 'compound', 'compound']",1,0,0
+1303,"['root', 'ccomp', 'csubj', 'dobj', 'prep', 'pobj', 'compound']",1,0,0
+1304,"['root', 'advcl', 'conj', 'advmod']",2,0,0
+1305,"['root', 'advcl', 'conj', 'auxpass']",1,0,0
+1306,"['root', 'advcl', 'conj', 'prep', 'pobj']",2,1,1
+1307,"['root', 'advcl', 'conj', 'prep', 'pobj', 'prep']",1,1,0
+1308,"['root', 'advcl', 'conj', 'prep', 'pobj', 'prep', 'pobj']",1,1,0
+1309,"['root', 'advcl', 'conj', 'npadvmod']",1,0,0
+1310,"['root', 'prep', 'pcomp', 'dobj', 'amod']",1,0,0
+1311,"['root', 'ccomp', 'prep', 'pcomp', 'dobj', 'poss']",1,0,0
+1312,"['root', 'ccomp', 'prep', 'pcomp', 'dobj']",2,0,0
+1313,"['root', 'ccomp', 'prep', 'pcomp', 'dobj', 'amod']",1,0,0
+1314,"['root', 'ccomp', 'prep', 'pcomp', 'prep', 'pobj', 'det']",1,0,0
+1315,"['root', 'nsubj', 'relcl', 'ccomp', 'nsubjpass', 'poss']",1,0,0
+1316,"['root', 'nsubj', 'relcl', 'ccomp', 'nsubjpass']",1,0,0
+1317,"['root', 'nsubj', 'relcl', 'ccomp', 'auxpass']",1,0,0
+1318,"['root', 'prep', 'pobj', 'poss', 'poss']",1,0,0
+1319,"['root', 'prep', 'pobj', 'poss', 'case']",5,0,0
+1320,"['root', 'nsubjpass', 'cc']",2,0,0
+1321,"['root', 'nsubjpass', 'conj', 'det']",1,0,0
+1322,"['root', 'nsubjpass', 'conj']",2,1,0
+1323,"['root', 'nsubjpass', 'conj', 'nummod']",1,0,0
+1324,"['root', 'prep', 'pobj', 'conj', 'advmod']",1,0,0
+1325,"['root', 'dobj', 'relcl', 'nsubj']",1,0,0
+1326,"['root', 'dobj', 'relcl', 'attr']",1,0,0
+1327,"['root', 'dobj', 'relcl', 'attr', 'prep']",1,0,0
+1328,"['root', 'dobj', 'relcl', 'attr', 'prep', 'pobj', 'poss']",1,0,0
+1329,"['root', 'dobj', 'relcl', 'attr', 'prep', 'pobj']",1,0,0
+1330,"['root', 'dobj', 'relcl', 'attr', 'prep', 'pobj', 'amod']",1,0,0
+1331,"['root', 'prep', 'advmod']",4,0,0
+1332,"['root', 'ccomp', 'dobj', 'nmod', 'amod']",1,0,0
+1333,"['root', 'ccomp', 'advcl', 'dobj', 'compound']",1,0,0
+1334,"['root', 'ccomp', 'advcl', 'dobj', 'prep', 'pobj', 'nummod']",1,0,0
+1335,"['root', 'ccomp', 'advcl', 'dobj', 'prep', 'pobj', 'advmod']",1,0,0
+1336,"['root', 'ccomp', 'advcl', 'dobj', 'prep', 'pobj', 'advmod', 'prep']",1,0,0
+1337,"['root', 'ccomp', 'advcl', 'dobj', 'prep', 'pobj', 'advmod', 'prep', 'pobj', 'nummod']",1,0,0
+1338,"['root', 'ccomp', 'advcl', 'dobj', 'prep', 'pobj', 'advmod', 'prep', 'advmod']",1,0,0
+1339,"['root', 'ccomp', 'conj', 'prep', 'pcomp']",2,0,0
+1340,"['root', 'ccomp', 'conj', 'prep', 'pobj', 'prep']",1,0,0
+1341,"['root', 'ccomp', 'conj', 'prep', 'pobj', 'prep', 'pobj', 'det']",1,0,0
+1342,"['root', 'ccomp', 'conj', 'prep', 'pobj', 'prep', 'pobj']",2,1,0
+1343,"['root', 'ccomp', 'conj', 'prep', 'pobj', 'prep', 'pobj', 'compound']",1,1,1
+1344,"['root', 'ccomp', 'nsubj', 'prep', 'pobj', 'poss']",1,1,1
+1345,"['root', 'ccomp', 'nsubj', 'prep', 'pobj', 'poss', 'case']",1,0,0
+1346,"['root', 'ccomp', 'nsubj', 'relcl', 'dobj', 'nummod']",1,0,0
+1347,"['root', 'ccomp', 'prep', 'amod']",1,0,0
+1348,"['root', 'acomp', 'prep', 'pobj']",3,0,0
+1349,"['root', 'advcl', 'nsubj', 'compound']",4,1,1
+1350,"['root', 'advcl', 'nsubj', 'prep']",4,0,0
+1351,"['root', 'advcl', 'nsubj', 'prep', 'pobj']",3,1,1
+1352,"['root', 'advcl', 'oprd']",2,0,0
+1353,"['root', 'prep', 'pobj', 'nummod', 'quantmod']",3,0,0
+1354,"['root', 'prep', 'prep', 'pobj', 'compound', 'compound']",1,1,1
+1355,"['root', 'prep', 'punct']",1,0,0
+1356,"['root', 'prep', 'conj', 'pobj', 'prep', 'pobj', 'amod']",1,0,0
+1357,"['root', 'prep', 'conj', 'pobj', 'prep', 'pobj']",1,0,0
+1358,"['root', 'acomp', 'npadvmod', 'det']",3,0,0
+1359,"['root', 'acomp', 'npadvmod']",5,1,1
+1360,"['root', 'acomp', 'npadvmod', 'amod']",1,0,0
+1361,"['root', 'conj', 'neg']",1,0,0
+1362,"['root', 'advcl', 'nsubj', 'compound', 'compound']",1,0,0
+1363,"['root', 'cc', 'prep']",1,0,0
+1364,"['root', 'cc', 'prep', 'pobj']",1,0,0
+1365,"['root', 'cc', 'prep', 'pobj', 'acl', 'mark']",1,0,0
+1366,"['root', 'cc', 'prep', 'pobj', 'acl']",1,0,0
+1367,"['root', 'cc', 'prep', 'pobj', 'acl', 'nsubj']",1,1,0
+1368,"['root', 'cc', 'prep', 'pobj', 'acl', 'nsubj', 'compound']",2,2,1
+1369,"['root', 'cc', 'prep', 'pobj', 'acl', 'nsubj', 'punct']",1,0,0
+1370,"['root', 'cc', 'prep', 'pobj', 'acl', 'nsubj', 'appos']",1,1,1
+1371,"['root', 'cc', 'prep', 'pobj', 'acl', 'nsubj', 'appos', 'punct']",1,0,0
+1372,"['root', 'cc', 'prep', 'pobj', 'acl', 'aux']",1,0,0
+1373,"['root', 'cc', 'prep', 'pobj', 'acl', 'dobj', 'det']",1,0,0
+1374,"['root', 'cc', 'prep', 'pobj', 'acl', 'dobj']",1,0,0
+1375,"['root', 'cc', 'prep', 'pobj', 'acl', 'dobj', 'acl', 'aux']",1,0,0
+1376,"['root', 'cc', 'prep', 'pobj', 'acl', 'dobj', 'acl']",1,0,0
+1377,"['root', 'cc', 'prep', 'pobj', 'acl', 'dobj', 'acl', 'dobj', 'nummod', 'advmod']",1,0,0
+1378,"['root', 'cc', 'prep', 'pobj', 'acl', 'dobj', 'acl', 'dobj', 'nummod']",1,0,0
+1379,"['root', 'cc', 'prep', 'pobj', 'acl', 'dobj', 'acl', 'dobj']",1,0,0
+1380,"['root', 'cc', 'prep', 'pobj', 'acl', 'dobj', 'acl', 'dobj', 'prep']",2,0,0
+1381,"['root', 'cc', 'prep', 'pobj', 'acl', 'dobj', 'acl', 'dobj', 'prep', 'pobj', 'compound', 'amod']",1,0,0
+1382,"['root', 'cc', 'prep', 'pobj', 'acl', 'dobj', 'acl', 'dobj', 'prep', 'pobj', 'compound']",1,0,0
+1383,"['root', 'cc', 'prep', 'pobj', 'acl', 'dobj', 'acl', 'dobj', 'prep', 'pobj']",2,0,0
+1384,"['root', 'dobj', 'prep', 'pobj', 'nummod', 'quantmod']",1,0,0
+1385,"['root', 'advcl', 'nsubj', 'nummod']",2,0,0
+1386,"['root', 'advcl', 'ccomp', 'dobj']",3,0,0
+1387,"['root', 'advcl', 'ccomp', 'dobj', 'prep']",5,0,0
+1388,"['root', 'advcl', 'ccomp', 'dobj', 'prep', 'pobj', 'nmod']",1,0,0
+1389,"['root', 'advcl', 'ccomp', 'dobj', 'prep', 'pobj']",4,0,0
+1390,"['root', 'advcl', 'ccomp', 'dobj', 'prep', 'pobj', 'npadvmod', 'det']",1,0,0
+1391,"['root', 'advcl', 'ccomp', 'dobj', 'prep', 'pobj', 'npadvmod']",1,0,0
+1392,"['root', 'advcl', 'ccomp', 'dobj', 'prep', 'pobj', 'prep']",2,0,0
+1393,"['root', 'advcl', 'ccomp', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'compound']",2,0,0
+1394,"['root', 'advcl', 'ccomp', 'dobj', 'prep', 'pobj', 'prep', 'pobj']",1,0,0
+1395,"['root', 'advcl', 'ccomp', 'dobj', 'prep', 'pobj', 'amod']",1,0,0
+1396,"['root', 'advcl', 'ccomp', 'punct']",1,0,0
+1397,"['root', 'advcl', 'ccomp', 'advcl', 'mark']",1,0,0
+1398,"['root', 'advcl', 'ccomp', 'advcl']",1,0,0
+1399,"['root', 'advcl', 'ccomp', 'advcl', 'nsubj', 'compound']",1,1,1
+1400,"['root', 'advcl', 'ccomp', 'advcl', 'nsubj']",1,0,0
+1401,"['root', 'advcl', 'ccomp', 'advcl', 'acomp']",1,0,0
+1402,"['root', 'advcl', 'ccomp', 'advcl', 'acomp', 'prep', 'pobj', 'nummod']",1,0,0
+1403,"['root', 'advcl', 'ccomp', 'advcl', 'acomp', 'prep', 'pobj']",1,0,0
+1404,"['root', 'ccomp', 'dobj', 'conj', 'neg']",1,0,0
+1405,"['root', 'ccomp', 'dobj', 'conj', 'amod']",1,0,0
+1406,"['root', 'acomp', 'npadvmod', 'advmod']",1,0,0
+1407,"['root', 'conj', 'npadvmod']",1,0,0
+1408,"['root', 'conj', 'npadvmod', 'prep']",1,0,0
+1409,"['root', 'conj', 'npadvmod', 'prep', 'pobj']",1,0,0
+1410,"['root', 'ccomp', 'conj', 'advmod', 'prep', 'pobj', 'det']",2,0,0
+1411,"['root', 'ccomp', 'conj', 'prep', 'pcomp', 'prep']",1,0,0
+1412,"['root', 'ccomp', 'conj', 'prep', 'pcomp', 'prep', 'pobj']",1,0,0
+1413,"['root', 'ccomp', 'conj', 'prep', 'pcomp', 'prep', 'pobj', 'nmod', 'nmod']",1,1,1
+1414,"['root', 'ccomp', 'conj', 'prep', 'pcomp', 'prep', 'pobj', 'nmod']",1,1,0
+1415,"['root', 'ccomp', 'conj', 'prep', 'pcomp', 'prep', 'pobj', 'amod']",1,0,0
+1416,"['root', 'ccomp', 'prep', 'prep']",2,0,0
+1417,"['root', 'ccomp', 'prep', 'prep', 'pobj', 'det']",2,0,0
+1418,"['root', 'ccomp', 'prep', 'prep', 'pobj']",2,0,0
+1419,"['root', 'ccomp', 'prep', 'prep', 'pobj', 'relcl', 'advmod']",1,0,0
+1420,"['root', 'ccomp', 'prep', 'prep', 'pobj', 'relcl']",1,0,0
+1421,"['root', 'ccomp', 'prep', 'prep', 'pobj', 'relcl', 'nsubj']",1,0,0
+1422,"['root', 'ccomp', 'prep', 'prep', 'pobj', 'relcl', 'xcomp', 'aux']",1,0,0
+1423,"['root', 'ccomp', 'prep', 'prep', 'pobj', 'relcl', 'xcomp']",1,0,0
+1424,"['root', 'ccomp', 'prep', 'prep', 'pobj', 'relcl', 'xcomp', 'prt']",1,0,0
+1425,"['root', 'ccomp', 'prep', 'prep', 'pobj', 'relcl', 'xcomp', 'prep']",1,0,0
+1426,"['root', 'ccomp', 'prep', 'prep', 'pobj', 'relcl', 'xcomp', 'prep', 'pobj', 'amod']",1,0,0
+1427,"['root', 'ccomp', 'prep', 'prep', 'pobj', 'relcl', 'xcomp', 'prep', 'pobj']",1,1,1
+1428,"['root', 'ccomp', 'prep', 'prep', 'pobj', 'relcl', 'xcomp', 'npadvmod', 'advmod']",1,0,0
+1429,"['root', 'ccomp', 'prep', 'prep', 'pobj', 'relcl', 'xcomp', 'npadvmod']",1,0,0
+1430,"['root', 'ccomp', 'prep', 'prep', 'pobj', 'relcl', 'xcomp', 'npadvmod', 'cc']",1,0,0
+1431,"['root', 'ccomp', 'prep', 'prep', 'pobj', 'relcl', 'xcomp', 'npadvmod', 'conj']",1,0,0
+1432,"['root', 'attr', 'npadvmod', 'compound']",1,0,0
+1433,"['root', 'attr', 'npadvmod']",1,0,0
+1434,"['root', 'prep', 'pobj', 'appos', 'nummod']",2,0,0
+1435,"['root', 'acomp', 'npadvmod', 'nummod', 'quantmod']",2,0,0
+1436,"['root', 'acomp', 'npadvmod', 'nummod']",1,0,0
+1437,"['root', 'acomp', 'prep', 'prep', 'pobj', 'compound']",1,0,0
+1438,"['root', 'prep', 'prep', 'pobj', 'punct']",1,0,0
+1439,"['root', 'prep', 'prep', 'pobj', 'conj', 'compound']",1,0,0
+1440,"['root', 'prep', 'prep', 'pobj', 'conj']",1,0,0
+1441,"['root', 'prep', 'prep', 'pobj', 'conj', 'cc']",1,0,0
+1442,"['root', 'prep', 'prep', 'pobj', 'conj', 'conj', 'compound']",1,0,0
+1443,"['root', 'prep', 'prep', 'pobj', 'conj', 'conj']",1,0,0
+1444,"['root', 'dobj', 'prep', 'pobj', 'punct']",10,0,0
+1445,"['root', 'dobj', 'prep', 'pobj', 'appos', 'nummod']",1,0,0
+1446,"['root', 'dobj', 'prep', 'pobj', 'appos']",3,1,1
+1447,"['root', 'conj', 'appos']",1,1,1
+1448,"['root', 'dobj', 'appos', 'nummod']",1,0,0
+1449,"['root', 'dobj', 'appos']",2,2,2
+1450,"['root', 'dobj', 'prep', 'pobj', 'npadvmod']",1,0,0
+1451,"['root', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'det']",1,0,0
+1452,"['root', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'nmod', 'punct']",3,0,0
+1453,"['root', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'nmod']",10,0,0
+1454,"['root', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'nmod', 'amod']",1,0,0
+1455,"['root', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'nmod', 'appos', 'advmod']",1,0,0
+1456,"['root', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj']",4,0,0
+1457,"['root', 'nsubj', 'prep', 'pobj', 'nummod']",2,0,0
+1458,"['root', 'prep', 'prep', 'pobj', 'nummod']",2,0,0
+1459,"['root', 'prep', 'pobj', 'prep', 'pobj', 'nummod']",3,0,0
+1460,"['root', 'ccomp', 'nsubjpass', 'nummod', 'quantmod']",2,0,0
+1461,"['root', 'ccomp', 'nsubjpass', 'acl', 'dobj', 'amod']",1,0,0
+1462,"['root', 'ccomp', 'nsubjpass', 'acl', 'dobj']",1,0,0
+1463,"['root', 'ccomp', 'nsubjpass', 'acl', 'dobj', 'compound']",1,0,0
+1464,"['root', 'ccomp', 'acomp', 'prep', 'pobj', 'compound']",1,0,0
+1465,"['root', 'ccomp', 'acomp', 'prep', 'pobj', 'punct']",1,0,0
+1466,"['root', 'ccomp', 'acomp', 'prep', 'pobj', 'appos']",1,0,0
+1467,"['root', 'ccomp', 'acomp', 'prep', 'pobj', 'appos', 'compound']",1,0,0
+1468,"['root', 'ccomp', 'acomp', 'prep', 'pobj', 'appos', 'relcl', 'nsubj']",1,0,0
+1469,"['root', 'ccomp', 'acomp', 'prep', 'pobj', 'appos', 'relcl']",1,0,0
+1470,"['root', 'ccomp', 'acomp', 'prep', 'pobj', 'appos', 'relcl', 'aux']",1,0,0
+1471,"['root', 'ccomp', 'acomp', 'prep', 'pobj', 'appos', 'relcl', 'dobj']",1,0,0
+1472,"['root', 'ccomp', 'acomp', 'prep', 'pobj', 'appos', 'relcl', 'dobj', 'amod']",1,0,0
+1473,"['root', 'ccomp', 'acomp', 'prep', 'pobj', 'appos', 'relcl', 'dobj', 'prep']",1,0,0
+1474,"['root', 'ccomp', 'acomp', 'prep', 'pobj', 'appos', 'relcl', 'dobj', 'prep', 'pobj']",1,0,0
+1475,"['root', 'ccomp', 'acomp', 'prep', 'pobj', 'appos', 'relcl', 'dobj', 'prep', 'pobj', 'relcl', 'nsubj', 'poss']",1,0,0
+1476,"['root', 'ccomp', 'acomp', 'prep', 'pobj', 'appos', 'relcl', 'dobj', 'prep', 'pobj', 'relcl', 'nsubj']",1,0,0
+1477,"['root', 'ccomp', 'acomp', 'prep', 'pobj', 'appos', 'relcl', 'dobj', 'prep', 'pobj', 'relcl', 'nsubj', 'amod']",1,0,0
+1478,"['root', 'ccomp', 'acomp', 'prep', 'pobj', 'appos', 'relcl', 'dobj', 'prep', 'pobj', 'relcl']",1,0,0
+1479,"['root', 'ccomp', 'acomp', 'prep', 'pobj', 'appos', 'relcl', 'dobj', 'prep', 'pobj', 'relcl', 'acomp']",1,0,0
+1480,"['root', 'ccomp', 'agent', 'pobj', 'prep']",2,0,0
+1481,"['root', 'ccomp', 'agent', 'pobj', 'prep', 'pobj', 'amod']",1,0,0
+1482,"['root', 'ccomp', 'agent', 'pobj', 'prep', 'pobj']",1,0,0
+1483,"['root', 'ccomp', 'agent', 'pobj', 'prep', 'pobj', 'compound', 'compound']",2,2,2
+1484,"['root', 'ccomp', 'agent', 'pobj', 'prep', 'pobj', 'compound']",2,2,0
+1485,"['root', 'ccomp', 'conj', 'nsubjpass', 'prep']",1,0,0
+1486,"['root', 'ccomp', 'conj', 'nsubjpass', 'prep', 'pobj', 'amod']",1,0,0
+1487,"['root', 'ccomp', 'conj', 'agent', 'pobj']",1,0,0
+1488,"['root', 'nsubj', 'appos', 'prep', 'pobj', 'amod']",1,0,0
+1489,"['root', 'prep', 'pobj', 'prep', 'pobj', 'compound', 'compound']",1,1,1
+1490,"['root', 'ccomp', 'dobj', 'prep', 'pobj', 'cc']",4,1,0
+1491,"['root', 'ccomp', 'dobj', 'prep', 'pobj', 'conj']",2,0,0
+1492,"['root', 'ccomp', 'dobj', 'relcl', 'nsubjpass']",1,0,0
+1493,"['root', 'ccomp', 'dobj', 'relcl', 'advmod']",1,0,0
+1494,"['root', 'ccomp', 'dobj', 'relcl', 'auxpass']",1,0,0
+1495,"['root', 'ccomp', 'dobj', 'relcl', 'oprd']",1,0,0
+1496,"['root', 'ccomp', 'dobj', 'relcl', 'prep', 'pobj', 'compound', 'nmod']",1,1,1
+1497,"['root', 'ccomp', 'dobj', 'relcl', 'prep', 'pobj', 'compound']",1,1,0
+1498,"['root', 'ccomp', 'dobj', 'relcl', 'prep', 'pobj', 'compound', 'nmod', 'conj']",1,1,0
+1499,"['root', 'ccomp', 'dobj', 'relcl', 'prep', 'pobj', 'conj', 'amod']",1,0,0
+1500,"['root', 'ccomp', 'dobj', 'relcl', 'prep', 'pobj', 'conj']",1,0,0
+1501,"['root', 'ccomp', 'attr', 'prep', 'pcomp']",1,0,0
+1502,"['root', 'ccomp', 'attr', 'prep', 'pcomp', 'prep']",1,0,0
+1503,"['root', 'ccomp', 'attr', 'prep', 'pcomp', 'prep', 'pobj', 'nmod']",1,0,0
+1504,"['root', 'ccomp', 'attr', 'prep', 'pcomp', 'prep', 'pobj']",1,0,0
+1505,"['root', 'ccomp', 'attr', 'prep', 'pcomp', 'prep', 'pobj', 'nmod', 'cc']",1,0,0
+1506,"['root', 'ccomp', 'attr', 'prep', 'pcomp', 'prep', 'pobj', 'nmod', 'conj']",1,0,0
+1507,"['root', 'ccomp', 'attr', 'prep', 'pcomp', 'prep', 'pobj', 'punct']",2,0,0
+1508,"['root', 'ccomp', 'attr', 'prep', 'pcomp', 'prep', 'pobj', 'amod']",1,0,0
+1509,"['root', 'ccomp', 'attr', 'prep', 'pcomp', 'prep', 'pobj', 'amod', 'prep']",1,0,0
+1510,"['root', 'ccomp', 'attr', 'prep', 'pcomp', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'amod']",1,0,0
+1511,"['root', 'ccomp', 'attr', 'prep', 'pcomp', 'prep', 'pobj', 'amod', 'prep', 'pobj']",1,0,0
+1512,"['root', 'ccomp', 'attr', 'prep', 'pcomp', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'compound']",1,0,0
+1513,"['root', 'ccomp', 'prep', 'pobj', 'nummod', 'advmod']",1,0,0
+1514,"['root', 'dobj', 'prep', 'pcomp']",2,0,0
+1515,"['root', 'dobj', 'prep', 'pcomp', 'prep']",2,0,0
+1516,"['root', 'dobj', 'prep', 'pcomp', 'prep', 'pobj', 'amod']",2,1,1
+1517,"['root', 'dobj', 'prep', 'pcomp', 'prep', 'pobj']",3,0,0
+1518,"['root', 'conj', 'dobj', 'advmod']",1,0,0
+1519,"['root', 'conj', 'dobj', 'amod']",2,0,0
+1520,"['root', 'conj', 'prep', 'pobj', 'conj']",1,0,0
+1521,"['root', 'ccomp', 'nsubjpass', 'compound', 'compound']",1,0,0
+1522,"['root', 'ccomp', 'nsubjpass', 'acl', 'agent']",1,0,0
+1523,"['root', 'ccomp', 'nsubjpass', 'acl', 'agent', 'pobj', 'det']",1,0,0
+1524,"['root', 'ccomp', 'nsubjpass', 'acl', 'agent', 'pobj']",1,0,0
+1525,"['root', 'ccomp', 'nsubjpass', 'acl', 'agent', 'pobj', 'amod']",1,0,0
+1526,"['root', 'ccomp', 'nsubjpass', 'acl', 'agent', 'pobj', 'compound', 'compound']",1,1,1
+1527,"['root', 'ccomp', 'nsubjpass', 'acl', 'agent', 'pobj', 'compound']",1,1,0
+1528,"['root', 'ccomp', 'nsubjpass', 'acl', 'prep', 'pobj', 'nummod']",1,0,0
+1529,"['root', 'ccomp', 'dobj', 'nummod']",6,0,0
+1530,"['root', 'ccomp', 'dobj', 'acl', 'agent']",1,0,0
+1531,"['root', 'ccomp', 'dobj', 'acl', 'agent', 'pobj', 'amod']",1,0,0
+1532,"['root', 'ccomp', 'dobj', 'acl', 'agent', 'pobj']",1,0,0
+1533,"['root', 'ccomp', 'dobj', 'acl', 'agent', 'pobj', 'amod', 'cc']",1,0,0
+1534,"['root', 'ccomp', 'dobj', 'acl', 'agent', 'pobj', 'amod', 'conj']",1,0,0
+1535,"['root', 'ccomp', 'dobj', 'acl', 'agent', 'pobj', 'compound', 'compound']",1,1,1
+1536,"['root', 'ccomp', 'dobj', 'acl', 'agent', 'pobj', 'compound']",1,1,0
+1537,"['root', 'advmod', 'npadvmod', 'compound']",1,0,0
+1538,"['root', 'advmod', 'npadvmod']",9,0,0
+1539,"['root', 'advmod', 'npadvmod', 'prep']",1,0,0
+1540,"['root', 'ccomp', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'det']",5,0,0
+1541,"['root', 'ccomp', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'amod']",1,0,0
+1542,"['root', 'ccomp', 'prep', 'pobj', 'acl', 'nsubj']",1,0,0
+1543,"['root', 'ccomp', 'prep', 'pobj', 'acl', 'aux']",1,0,0
+1544,"['root', 'ccomp', 'prep', 'pobj', 'acl', 'dobj', 'prep']",1,0,0
+1545,"['root', 'ccomp', 'prep', 'pobj', 'acl', 'dobj', 'prep', 'pobj', 'nmod']",1,0,0
+1546,"['root', 'ccomp', 'prep', 'pobj', 'acl', 'dobj', 'prep', 'pobj']",1,0,0
+1547,"['root', 'ccomp', 'prep', 'pobj', 'acl', 'dobj', 'prep', 'pobj', 'nmod', 'cc']",1,0,0
+1548,"['root', 'ccomp', 'prep', 'pobj', 'acl', 'dobj', 'prep', 'pobj', 'nmod', 'conj']",1,0,0
+1549,"['root', 'dobj', 'compound', 'compound', 'amod']",1,0,0
+1550,"['root', 'dobj', 'compound', 'compound', 'punct']",1,0,0
+1551,"['root', 'dobj', 'prep', 'punct']",1,0,0
+1552,"['root', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'prep']",3,0,0
+1553,"['root', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'poss', 'det']",3,0,0
+1554,"['root', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'poss']",1,0,0
+1555,"['root', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'poss', 'case']",1,0,0
+1556,"['root', 'npadvmod', 'prep', 'pobj']",3,0,0
+1557,"['root', 'npadvmod', 'appos']",1,0,0
+1558,"['root', 'nmod', 'nmod']",1,1,0
+1559,"['root', 'conj', 'prep', 'prep', 'pobj', 'appos']",1,0,0
+1560,"['root', 'appos', 'npadvmod', 'compound']",1,1,1
+1561,"['root', 'appos', 'appos', 'compound', 'compound']",2,2,2
+1562,"['root', 'appos', 'appos', 'prep', 'pobj']",1,1,0
+1563,"['root', 'appos', 'appos', 'appos', 'punct']",3,0,0
+1564,"['root', 'appos', 'appos', 'appos', 'appos']",3,0,0
+1565,"['root', 'appos', 'appos', 'appos', 'appos', 'nummod']",3,0,0
+1566,"['root', 'dep', 'nmod', 'nmod']",1,0,0
+1567,"['root', 'dep', 'nmod']",1,0,0
+1568,"['root', 'dep', 'nmod', 'punct']",4,0,0
+1569,"['root', 'dep', 'appos']",3,0,0
+1570,"['root', 'amod']",15,6,3
+1571,"['root', 'appos', 'appos', 'cc']",1,1,0
+1572,"['root', 'appos', 'appos', 'conj']",1,1,0
+1573,"['root', 'appos', 'nmod']",2,1,0
+1574,"['root', 'appos', 'appos', 'nmod']",1,0,0
+1575,"['root', 'appos', 'appos', 'nummod']",5,0,0
+1576,"['root', 'appos', 'appos', 'nummod', 'prep']",1,0,0
+1577,"['root', 'appos', 'appos', 'compound', 'nummod']",1,0,0
+1578,"['root', 'appos', 'compound', 'nummod']",1,0,0
+1579,"['root', 'appos', 'appos', 'appos', 'nummod', 'nummod']",1,0,0
+1580,"['root', 'appos', 'appos', 'appos', 'appos', 'appos']",1,0,0
+1581,"['root', 'compound', 'amod']",1,0,0
+1582,"['root', 'acl']",2,0,0
+1583,"['root', 'acl', 'agent']",1,0,0
+1584,"['root', 'acl', 'agent', 'pobj', 'compound']",2,2,1
+1585,"['root', 'appos', 'compound', 'nmod']",1,0,0
+1586,"['root', 'appos', 'prep', 'pobj', 'nmod']",1,0,0
+1587,"['root', 'nmod', 'prep']",1,1,0
+1588,"['root', 'nmod', 'prep', 'pobj']",2,2,1
+1589,"['root', 'appos', 'det']",1,0,0
+1590,"['root', 'appos', 'prep', 'pobj', 'det']",3,0,0
+1591,"['root', 'appos', 'prep', 'pobj', 'prep', 'pobj', 'prep']",1,0,0
+1592,"['root', 'appos', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj']",1,0,0
+1593,"['root', 'compound', 'nmod']",1,0,0
+1594,"['root', 'appos', 'appos', 'nummod', 'nummod']",1,0,0
+1595,"['root', 'compound', 'case']",1,1,0
+1596,"['root', 'compound', 'case', 'punct']",5,0,0
+1597,"['root', 'appos', 'compound', 'compound', 'compound']",1,0,0
+1598,"['root', 'appos', 'conj']",1,1,0
+1599,"['root', 'appos', 'conj', 'cc']",1,1,0
+1600,"['root', 'appos', 'conj', 'conj']",1,1,0
+1601,"['root', 'nmod', 'nummod']",1,1,0
+1602,"['root', 'appos', 'npadvmod', 'nummod']",1,0,0
+1603,"['root', 'prep', 'pobj', 'npadvmod']",2,0,0
+1604,"['root', 'advcl', 'prep', 'pcomp']",3,0,0
+1605,"['root', 'advcl', 'prep', 'pobj', 'prep', 'pobj', 'amod']",2,0,0
+1606,"['root', 'advcl', 'prep', 'pobj', 'prep', 'pobj', 'conj']",1,1,1
+1607,"['root', 'advcl', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'cc']",2,0,0
+1608,"['root', 'advcl', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'conj']",1,1,1
+1609,"['root', 'conj', 'prep', 'pobj', 'det']",5,0,0
+1610,"['root', 'conj', 'advmod', 'prep']",3,0,0
+1611,"['root', 'conj', 'advmod', 'prep', 'pobj']",2,1,1
+1612,"['root', 'conj', 'advcl', 'dobj', 'det']",1,0,0
+1613,"['root', 'conj', 'advcl', 'dobj']",3,0,0
+1614,"['root', 'conj', 'advcl', 'dobj', 'amod']",2,0,0
+1615,"['root', 'conj', 'advcl', 'dobj', 'compound', 'compound']",1,1,1
+1616,"['root', 'conj', 'advcl', 'dobj', 'compound']",1,1,0
+1617,"['root', 'advcl', 'ccomp', 'mark']",4,0,0
+1618,"['root', 'advcl', 'ccomp', 'dobj', 'det']",1,0,0
+1619,"['root', 'advcl', 'ccomp', 'dobj', 'amod']",1,0,0
+1620,"['root', 'advcl', 'ccomp', 'dobj', 'prep', 'pobj', 'det']",1,0,0
+1621,"['root', 'ccomp', 'ccomp', 'dobj']",2,0,0
+1622,"['root', 'ccomp', 'ccomp', 'nsubj']",4,0,0
+1623,"['root', 'ccomp', 'ccomp', 'npadvmod']",2,0,0
+1624,"['root', 'xcomp', 'advmod']",1,0,0
+1625,"['root', 'xcomp', 'advmod', 'prep', 'pobj']",1,0,0
+1626,"['root', 'nsubj', 'poss', 'det']",1,0,0
+1627,"['root', 'prep', 'pobj', 'prep', 'pobj', 'appos', 'det']",1,0,0
+1628,"['root', 'prep', 'pobj', 'prep', 'pobj', 'appos', 'amod']",1,0,0
+1629,"['root', 'prep', 'pobj', 'prep', 'pobj', 'appos', 'prep']",1,0,0
+1630,"['root', 'prep', 'pobj', 'prep', 'pobj', 'appos', 'prep', 'pobj']",1,1,1
+1631,"['root', 'ccomp', 'xcomp', 'cc']",1,0,0
+1632,"['root', 'ccomp', 'xcomp', 'conj']",1,0,0
+1633,"['root', 'ccomp', 'xcomp', 'conj', 'dobj']",1,0,0
+1634,"['root', 'ccomp', 'xcomp', 'conj', 'dobj', 'relcl', 'advmod']",1,0,0
+1635,"['root', 'ccomp', 'xcomp', 'conj', 'dobj', 'relcl']",1,0,0
+1636,"['root', 'ccomp', 'xcomp', 'conj', 'dobj', 'relcl', 'nsubjpass', 'poss']",2,0,0
+1637,"['root', 'ccomp', 'xcomp', 'conj', 'dobj', 'relcl', 'nsubjpass']",1,0,0
+1638,"['root', 'ccomp', 'xcomp', 'conj', 'dobj', 'relcl', 'aux']",1,0,0
+1639,"['root', 'ccomp', 'xcomp', 'conj', 'dobj', 'relcl', 'auxpass']",1,0,0
+1640,"['root', 'conj', 'ccomp', 'neg']",1,0,0
+1641,"['root', 'conj', 'ccomp', 'dobj', 'prep', 'pobj', 'det']",1,0,0
+1642,"['root', 'conj', 'ccomp', 'dobj', 'prep', 'pobj', 'amod']",2,0,0
+1643,"['root', 'ccomp', 'conj', 'acomp', 'advmod', 'advmod']",1,0,0
+1644,"['root', 'ccomp', 'conj', 'acomp', 'advmod']",1,0,0
+1645,"['root', 'ccomp', 'conj', 'acomp', 'prep']",1,0,0
+1646,"['root', 'ccomp', 'conj', 'acomp', 'prep', 'pobj']",1,0,0
+1647,"['root', 'advcl', 'agent']",4,0,0
+1648,"['root', 'advcl', 'agent', 'pobj']",3,1,0
+1649,"['root', 'advcl', 'agent', 'pobj', 'prep']",2,1,0
+1650,"['root', 'advcl', 'agent', 'pobj', 'prep', 'pobj', 'det']",2,0,0
+1651,"['root', 'advcl', 'agent', 'pobj', 'prep', 'pobj']",2,1,0
+1652,"['root', 'advcl', 'agent', 'pobj', 'prep', 'pobj', 'compound', 'amod']",1,0,0
+1653,"['root', 'advcl', 'agent', 'pobj', 'prep', 'pobj', 'compound']",1,0,0
+1654,"['root', 'advcl', 'agent', 'pobj', 'cc']",2,0,0
+1655,"['root', 'advcl', 'agent', 'pobj', 'conj']",1,0,0
+1656,"['root', 'advcl', 'agent', 'pobj', 'conj', 'acl']",1,0,0
+1657,"['root', 'advcl', 'agent', 'pobj', 'conj', 'acl', 'agent', 'pobj']",1,0,0
+1658,"['root', 'advcl', 'agent', 'pobj', 'conj', 'acl', 'agent', 'pobj', 'compound']",2,1,1
+1659,"['root', 'advcl', 'agent', 'pobj', 'conj', 'acl', 'agent', 'pobj', 'conj']",1,0,0
+1660,"['root', 'advcl', 'agent', 'pobj', 'conj', 'acl', 'agent', 'pobj', 'conj', 'prep']",1,0,0
+1661,"['root', 'advcl', 'agent', 'pobj', 'conj', 'acl', 'agent', 'pobj', 'conj', 'prep', 'pobj', 'det']",1,0,0
+1662,"['root', 'advcl', 'agent', 'pobj', 'conj', 'acl', 'agent', 'pobj', 'conj', 'prep', 'pobj']",1,0,0
+1663,"['root', 'advcl', 'agent', 'pobj', 'conj', 'acl', 'agent', 'pobj', 'conj', 'prep', 'pobj', 'amod']",2,0,0
+1664,"['root', 'advcl', 'agent', 'pobj', 'conj', 'acl', 'agent', 'pobj', 'conj', 'prep', 'pobj', 'nmod']",1,1,1
+1665,"['root', 'advmod', 'npadvmod', 'nummod']",4,0,0
+1666,"['root', 'npadvmod', 'poss', 'det']",1,0,0
+1667,"['root', 'npadvmod', 'poss']",1,0,0
+1668,"['root', 'npadvmod', 'poss', 'case']",1,0,0
+1669,"['root', 'ccomp', 'npadvmod', 'det']",1,0,0
+1670,"['root', 'ccomp', 'conj', 'nsubj', 'det']",1,0,0
+1671,"['root', 'ccomp', 'conj', 'nsubj', 'amod']",1,0,0
+1672,"['root', 'ccomp', 'conj', 'nsubj', 'prep', 'pobj', 'compound']",1,1,1
+1673,"['root', 'ccomp', 'conj', 'xcomp', 'prep']",1,0,0
+1674,"['root', 'ccomp', 'conj', 'xcomp', 'prep', 'pobj', 'amod']",1,0,0
+1675,"['root', 'ccomp', 'conj', 'xcomp', 'prep', 'pobj']",1,0,0
+1676,"['root', 'xcomp', 'attr', 'det']",1,0,0
+1677,"['root', 'xcomp', 'attr']",1,0,0
+1678,"['root', 'xcomp', 'attr', 'amod']",1,0,0
+1679,"['root', 'ccomp', 'nsubj', 'acl', 'advmod']",1,0,0
+1680,"['root', 'ccomp', 'nsubj', 'acl']",2,0,0
+1681,"['root', 'ccomp', 'nsubj', 'acl', 'dobj']",1,0,0
+1682,"['root', 'prep', 'pcomp', 'nsubj', 'amod']",2,1,1
+1683,"['root', 'prep', 'pcomp', 'nsubj']",3,2,1
+1684,"['root', 'prep', 'pcomp', 'cc']",1,0,0
+1685,"['root', 'prep', 'pcomp', 'conj']",2,0,0
+1686,"['root', 'prep', 'pcomp', 'conj', 'advmod', 'npadvmod', 'nummod']",1,0,0
+1687,"['root', 'prep', 'pcomp', 'conj', 'advmod', 'npadvmod']",1,0,0
+1688,"['root', 'prep', 'pcomp', 'conj', 'prep']",1,0,0
+1689,"['root', 'prep', 'pcomp', 'conj', 'prep', 'pobj']",2,0,0
+1690,"['root', 'nsubj', 'nmod', 'det']",1,0,0
+1691,"['root', 'dobj', 'compound', 'nummod']",1,0,0
+1692,"['root', 'dobj', 'prep', 'pobj', 'compound', 'amod']",2,1,1
+1693,"['root', 'dobj', 'compound', 'amod']",2,0,0
+1694,"['root', 'conj', 'advmod', 'npadvmod', 'nummod']",1,0,0
+1695,"['root', 'conj', 'advmod', 'npadvmod']",3,0,0
+1696,"['root', 'conj', 'advcl', 'mark']",2,0,0
+1697,"['root', 'conj', 'advcl', 'dobj', 'prep', 'pobj', 'nummod', 'compound']",1,0,0
+1698,"['root', 'conj', 'advcl', 'dobj', 'prep', 'pobj', 'nummod']",3,0,0
+1699,"['root', 'conj', 'advcl', 'dobj', 'prep', 'pobj', 'prep']",1,0,0
+1700,"['root', 'conj', 'advcl', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'compound']",1,0,0
+1701,"['root', 'conj', 'advcl', 'dobj', 'prep', 'pobj', 'prep', 'npadvmod', 'amod']",1,0,0
+1702,"['root', 'conj', 'advcl', 'dobj', 'prep', 'pobj', 'prep', 'npadvmod']",1,0,0
+1703,"['root', 'conj', 'advcl', 'dobj', 'cc']",1,0,0
+1704,"['root', 'conj', 'advcl', 'dobj', 'conj']",1,0,0
+1705,"['root', 'conj', 'advcl', 'dobj', 'conj', 'acl']",1,0,0
+1706,"['root', 'conj', 'advcl', 'dobj', 'conj', 'acl', 'prep']",1,0,0
+1707,"['root', 'conj', 'advcl', 'dobj', 'conj', 'acl', 'prep', 'pobj']",1,0,0
+1708,"['root', 'conj', 'advcl', 'dobj', 'conj', 'acl', 'prep', 'prep']",1,0,0
+1709,"['root', 'conj', 'advcl', 'dobj', 'conj', 'acl', 'prep', 'prep', 'pobj', 'compound']",1,0,0
+1710,"['root', 'ccomp', 'nsubj', 'amod', 'amod']",1,0,0
+1711,"['root', 'ccomp', 'npadvmod', 'nummod']",1,0,0
+1712,"['root', 'conj', 'advcl', 'npadvmod', 'nummod']",1,0,0
+1713,"['root', 'conj', 'advcl', 'npadvmod']",1,0,0
+1714,"['root', 'advcl', 'npadvmod', 'det']",1,0,0
+1715,"['root', 'advcl', 'npadvmod', 'amod']",1,0,0
+1716,"['root', 'advcl', 'npadvmod', 'nummod']",2,0,0
+1717,"['root', 'advcl', 'advcl', 'dobj', 'amod']",1,0,0
+1718,"['root', 'advcl', 'advcl', 'dobj', 'acl']",1,0,0
+1719,"['root', 'advcl', 'advcl', 'dobj', 'acl', 'agent']",2,0,0
+1720,"['root', 'advcl', 'advcl', 'dobj', 'acl', 'agent', 'pobj', 'det']",4,0,0
+1721,"['root', 'advcl', 'advcl', 'dobj', 'acl', 'agent', 'pobj']",1,0,0
+1722,"['root', 'advcl', 'advcl', 'dobj', 'acl', 'agent', 'pobj', 'compound', 'nummod']",1,0,0
+1723,"['root', 'advcl', 'advcl', 'dobj', 'acl', 'agent', 'pobj', 'compound']",1,0,0
+1724,"['root', 'advcl', 'advcl', 'dobj', 'acl', 'agent', 'pobj', 'prep']",1,0,0
+1725,"['root', 'advcl', 'advcl', 'dobj', 'acl', 'agent', 'pobj', 'prep', 'pobj', 'nmod', 'amod']",1,0,0
+1726,"['root', 'advcl', 'advcl', 'dobj', 'acl', 'agent', 'pobj', 'prep', 'pobj', 'nmod']",1,0,0
+1727,"['root', 'advcl', 'advcl', 'dobj', 'acl', 'agent', 'pobj', 'prep', 'pobj']",1,0,0
+1728,"['root', 'advcl', 'advcl', 'dobj', 'acl', 'agent', 'pobj', 'prep', 'pobj', 'amod']",1,0,0
+1729,"['root', 'advcl', 'advcl', 'dobj', 'acl', 'agent', 'pobj', 'npadvmod', 'amod']",1,0,0
+1730,"['root', 'advcl', 'advcl', 'dobj', 'acl', 'agent', 'pobj', 'npadvmod']",1,0,0
+1731,"['root', 'advcl', 'advcl', 'dobj', 'acl', 'agent', 'pobj', 'punct']",2,0,0
+1732,"['root', 'advcl', 'advcl', 'dobj', 'acl', 'agent', 'pobj', 'relcl', 'nsubj']",1,0,0
+1733,"['root', 'advcl', 'advcl', 'dobj', 'acl', 'agent', 'pobj', 'relcl']",1,0,0
+1734,"['root', 'advcl', 'advcl', 'dobj', 'acl', 'agent', 'pobj', 'relcl', 'dobj']",2,0,0
+1735,"['root', 'advcl', 'advcl', 'dobj', 'acl', 'agent', 'pobj', 'relcl', 'prep']",1,0,0
+1736,"['root', 'advcl', 'advcl', 'dobj', 'acl', 'agent', 'pobj', 'relcl', 'prep', 'pobj']",1,0,0
+1737,"['root', 'advcl', 'advcl', 'dobj', 'acl', 'agent', 'pobj', 'relcl', 'advcl']",1,0,0
+1738,"['root', 'advcl', 'advcl', 'dobj', 'acl', 'agent', 'pobj', 'relcl', 'advcl', 'dobj']",1,0,0
+1739,"['root', 'advcl', 'advcl', 'dobj', 'acl', 'agent', 'pobj', 'relcl', 'advcl', 'advmod']",1,0,0
+1740,"['root', 'advcl', 'advcl', 'dobj', 'acl', 'agent', 'pobj', 'relcl', 'advcl', 'advmod', 'npadvmod']",1,0,0
+1741,"['root', 'advcl', 'advcl', 'dobj', 'acl', 'agent', 'pobj', 'relcl', 'advcl', 'advmod', 'prep']",1,0,0
+1742,"['root', 'advcl', 'advcl', 'dobj', 'acl', 'agent', 'pobj', 'relcl', 'advcl', 'advmod', 'prep', 'pobj']",1,0,0
+1743,"['root', 'advcl', 'advcl', 'dobj', 'acl', 'agent', 'pobj', 'relcl', 'advcl', 'prep', 'pobj']",1,0,0
+1744,"['root', 'advcl', 'dobj', 'compound', 'compound']",1,0,0
+1745,"['root', 'advcl', 'prep', 'pobj', 'prep', 'advmod']",1,0,0
+1746,"['root', 'advcl', 'prep', 'pobj', 'acl', 'mark']",1,0,0
+1747,"['root', 'advcl', 'prep', 'pobj', 'acl', 'nsubj', 'poss']",1,0,0
+1748,"['root', 'advcl', 'prep', 'pobj', 'acl', 'nsubj']",1,0,0
+1749,"['root', 'advcl', 'prep', 'pobj', 'acl', 'nsubj', 'compound', 'compound']",1,1,1
+1750,"['root', 'advcl', 'prep', 'pobj', 'acl', 'nsubj', 'compound']",1,1,0
+1751,"['root', 'advcl', 'prep', 'pobj', 'acl', 'dobj', 'amod']",1,0,0
+1752,"['root', 'acomp', 'punct']",1,0,0
+1753,"['root', 'conj', 'advmod', 'npadvmod', 'advmod']",1,0,0
+1754,"['root', 'conj', 'advmod', 'prep', 'pobj', 'nummod']",1,0,0
+1755,"['root', 'nsubj', 'nmod', 'amod']",1,0,0
+1756,"['root', 'ccomp', 'prep', 'pobj', 'appos', 'relcl', 'nsubj', 'det']",1,0,0
+1757,"['root', 'ccomp', 'prep', 'pobj', 'appos', 'relcl', 'nsubj']",1,0,0
+1758,"['root', 'ccomp', 'prep', 'pobj', 'appos', 'relcl']",1,0,0
+1759,"['root', 'ccomp', 'prep', 'pobj', 'appos', 'relcl', 'nsubj', 'prep', 'pobj', 'compound']",1,1,1
+1760,"['root', 'ccomp', 'prep', 'pobj', 'appos', 'relcl', 'nsubj', 'prep', 'pobj']",1,1,0
+1761,"['root', 'ccomp', 'prep', 'pobj', 'appos', 'relcl', 'nsubj', 'relcl']",1,0,0
+1762,"['root', 'ccomp', 'prep', 'pobj', 'appos', 'relcl', 'nsubj', 'relcl', 'prep', 'pobj']",1,0,0
+1763,"['root', 'ccomp', 'prep', 'pobj', 'appos', 'relcl', 'prep', 'pobj']",1,1,1
+1764,"['root', 'ccomp', 'advmod', 'neg']",2,0,0
+1765,"['root', 'dobj', 'nmod', 'nummod']",1,1,0
+1766,"['root', 'advcl', 'ccomp', 'dobj', 'poss']",1,0,0
+1767,"['root', 'advcl', 'ccomp', 'dative']",1,0,0
+1768,"['root', 'advcl', 'ccomp', 'dative', 'pobj', 'compound', 'compound']",1,1,1
+1769,"['root', 'advcl', 'ccomp', 'dative', 'pobj', 'compound']",2,1,1
+1770,"['root', 'advcl', 'ccomp', 'dative', 'pobj']",1,1,0
+1771,"['root', 'advmod', 'prep']",1,0,0
+1772,"['root', 'advmod', 'prep', 'pobj', 'amod']",1,0,0
+1773,"['root', 'advmod', 'prep', 'pobj']",1,0,0
+1774,"['root', 'advmod', 'prep', 'pobj', 'compound']",1,0,0
+1775,"['root', 'advmod', 'prep', 'pobj', 'relcl', 'aux']",1,0,0
+1776,"['root', 'advmod', 'prep', 'pobj', 'relcl']",1,0,0
+1777,"['root', 'advmod', 'prep', 'pobj', 'relcl', 'dobj']",1,0,0
+1778,"['root', 'advmod', 'prep', 'pobj', 'relcl', 'prep']",1,0,0
+1779,"['root', 'advmod', 'prep', 'pobj', 'relcl', 'prep', 'pobj', 'det']",2,0,0
+1780,"['root', 'advmod', 'prep', 'pobj', 'relcl', 'prep', 'pobj']",1,1,1
+1781,"['root', 'prep', 'pobj', 'acl', 'mark']",1,0,0
+1782,"['root', 'prep', 'pobj', 'acl', 'nsubj']",1,0,0
+1783,"['root', 'prep', 'pobj', 'acl', 'acomp']",1,0,0
+1784,"['root', 'prep', 'pobj', 'acl', 'acomp', 'cc']",1,0,0
+1785,"['root', 'prep', 'pobj', 'acl', 'acomp', 'conj', 'advmod']",1,0,0
+1786,"['root', 'prep', 'pobj', 'acl', 'acomp', 'conj']",1,0,0
+1787,"['root', 'prep', 'pobj', 'acl', 'acomp', 'conj', 'prep']",2,0,0
+1788,"['root', 'prep', 'pobj', 'acl', 'acomp', 'conj', 'prep', 'pobj', 'amod']",1,0,0
+1789,"['root', 'prep', 'pobj', 'acl', 'acomp', 'conj', 'prep', 'pobj']",2,0,0
+1790,"['root', 'prep', 'pobj', 'acl', 'acomp', 'conj', 'prep', 'pobj', 'compound', 'nummod']",1,0,0
+1791,"['root', 'prep', 'pobj', 'acl', 'acomp', 'conj', 'prep', 'pobj', 'compound', 'amod']",1,0,0
+1792,"['root', 'nsubj', 'appos', 'prep', 'pobj', 'prep', 'pobj', 'amod']",1,0,0
+1793,"['root', 'nsubj', 'appos', 'prep', 'pobj', 'prep', 'pobj', 'prep']",1,0,0
+1794,"['root', 'nsubj', 'appos', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'poss']",1,0,0
+1795,"['root', 'nsubj', 'appos', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'cc']",1,0,0
+1796,"['root', 'nsubj', 'appos', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'conj']",1,0,0
+1797,"['root', 'nsubj', 'appos', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'compound']",2,1,1
+1798,"['root', 'nsubj', 'appos', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'relcl', 'nsubj']",1,0,0
+1799,"['root', 'nsubj', 'appos', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'relcl']",1,0,0
+1800,"['root', 'nsubj', 'appos', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'relcl', 'advmod']",1,0,0
+1801,"['root', 'dobj', 'prep', 'pobj', 'poss']",1,1,1
+1802,"['root', 'dobj', 'prep', 'pobj', 'poss', 'case']",1,0,0
+1803,"['root', 'dobj', 'prep', 'pobj', 'nmod']",3,0,0
+1804,"['root', 'dobj', 'prep', 'pobj', 'nmod', 'punct']",2,0,0
+1805,"['root', 'dobj', 'prep', 'pobj', 'appos', 'punct']",2,0,0
+1806,"['root', 'dobj', 'prep', 'pobj', 'appos', 'dep', 'nmod']",1,0,0
+1807,"['root', 'dobj', 'prep', 'pobj', 'appos', 'dep']",1,0,0
+1808,"['root', 'dobj', 'prep', 'pobj', 'appos', 'prep']",1,0,0
+1809,"['root', 'dobj', 'prep', 'pobj', 'appos', 'prep', 'pobj']",2,0,0
+1810,"['root', 'dobj', 'amod', 'npadvmod']",1,0,0
+1811,"['root', 'prep', 'pobj', 'acl', 'prep']",4,0,0
+1812,"['root', 'prep', 'pobj', 'acl', 'prep', 'punct']",2,0,0
+1813,"['root', 'prep', 'pobj', 'acl', 'prep', 'pobj', 'amod']",2,0,0
+1814,"['root', 'prep', 'pobj', 'acl', 'prep', 'pobj', 'amod', 'cc']",1,0,0
+1815,"['root', 'prep', 'pobj', 'acl', 'prep', 'pobj', 'amod', 'conj']",1,0,0
+1816,"['root', 'prep', 'pobj', 'acl', 'agent']",1,0,0
+1817,"['root', 'prep', 'pobj', 'acl', 'agent', 'pobj']",1,1,1
+1818,"['root', 'prep', 'pobj', 'acl', 'agent', 'pobj', 'punct']",1,0,0
+1819,"['root', 'prep', 'pobj', 'acl', 'agent', 'pobj', 'relcl', 'nsubj']",1,0,0
+1820,"['root', 'prep', 'pobj', 'acl', 'agent', 'pobj', 'relcl']",1,0,0
+1821,"['root', 'prep', 'pobj', 'acl', 'agent', 'pobj', 'relcl', 'aux']",1,0,0
+1822,"['root', 'prep', 'pobj', 'acl', 'agent', 'pobj', 'relcl', 'dobj', 'poss']",1,0,0
+1823,"['root', 'prep', 'pobj', 'acl', 'agent', 'pobj', 'relcl', 'dobj']",1,0,0
+1824,"['root', 'prep', 'pobj', 'acl', 'agent', 'pobj', 'relcl', 'dobj', 'amod']",1,0,0
+1825,"['root', 'ccomp', 'advmod', 'advmod']",2,0,0
+1826,"['root', 'ccomp', 'prep', 'pcomp', 'dobj', 'nummod']",1,0,0
+1827,"['root', 'attr', 'cc']",1,0,0
+1828,"['root', 'attr', 'conj']",1,0,0
+1829,"['root', 'attr', 'conj', 'amod']",1,0,0
+1830,"['root', 'dobj', 'prep', 'pcomp', 'dobj']",1,1,1
+1831,"['root', 'dobj', 'prep', 'pcomp', 'cc']",2,0,0
+1832,"['root', 'dobj', 'prep', 'pcomp', 'cc', 'advmod']",1,0,0
+1833,"['root', 'dobj', 'prep', 'pcomp', 'conj']",1,0,0
+1834,"['root', 'dobj', 'prep', 'pcomp', 'conj', 'dobj']",1,0,0
+1835,"['root', 'dobj', 'prep', 'pcomp', 'conj', 'prep', 'pobj', 'poss']",1,0,0
+1836,"['root', 'dobj', 'prep', 'pcomp', 'conj', 'prep', 'pobj']",1,0,0
+1837,"['root', 'dobj', 'prep', 'pcomp', 'conj', 'prep', 'pobj', 'prep']",1,0,0
+1838,"['root', 'dobj', 'prep', 'pcomp', 'conj', 'prep', 'pobj', 'prep', 'pobj', 'amod']",1,1,1
+1839,"['root', 'xcomp', 'auxpass']",1,0,0
+1840,"['root', 'xcomp', 'prep', 'pobj', 'nummod']",1,0,0
+1841,"['root', 'xcomp', 'prep', 'pobj', 'punct']",4,0,0
+1842,"['root', 'xcomp', 'prep', 'pobj', 'relcl', 'xcomp', 'advmod']",1,0,0
+1843,"['root', 'xcomp', 'prep', 'pobj', 'relcl', 'xcomp']",1,0,0
+1844,"['root', 'xcomp', 'prep', 'pobj', 'relcl', 'nsubj', 'det']",2,0,0
+1845,"['root', 'xcomp', 'prep', 'pobj', 'relcl', 'nsubj']",1,1,0
+1846,"['root', 'xcomp', 'prep', 'pobj', 'relcl', 'nsubj', 'compound']",1,1,1
+1847,"['root', 'xcomp', 'prep', 'pobj', 'relcl']",1,0,0
+1848,"['root', 'xcomp', 'prep', 'pobj', 'relcl', 'xcomp', 'prep']",1,0,0
+1849,"['root', 'xcomp', 'prep', 'pobj', 'relcl', 'xcomp', 'prep', 'pobj', 'det']",1,0,0
+1850,"['root', 'xcomp', 'prep', 'pobj', 'relcl', 'xcomp', 'prep', 'pobj']",1,0,0
+1851,"['root', 'xcomp', 'prep', 'pobj', 'relcl', 'xcomp', 'prep', 'pobj', 'compound']",1,0,0
+1852,"['root', 'conj', 'nsubjpass', 'amod']",1,1,1
+1853,"['root', 'conj', 'xcomp', 'advmod']",1,0,0
+1854,"['root', 'ccomp', 'xcomp', 'prep', 'pobj', 'prep']",2,1,0
+1855,"['root', 'ccomp', 'xcomp', 'prep', 'pobj', 'prep', 'pobj', 'compound']",1,1,0
+1856,"['root', 'ccomp', 'xcomp', 'prep', 'pobj', 'prep', 'pobj']",1,1,0
+1857,"['root', 'ccomp', 'xcomp', 'prep', 'pobj', 'acl']",1,0,0
+1858,"['root', 'ccomp', 'xcomp', 'prep', 'pobj', 'acl', 'cc']",1,0,0
+1859,"['root', 'ccomp', 'xcomp', 'prep', 'pobj', 'acl', 'conj']",1,0,0
+1860,"['root', 'ccomp', 'xcomp', 'prep', 'pobj', 'acl', 'conj', 'dobj']",1,0,0
+1861,"['root', 'ccomp', 'xcomp', 'prep', 'pobj', 'acl', 'conj', 'dobj', 'prep', 'pobj', 'poss']",1,0,0
+1862,"['root', 'ccomp', 'xcomp', 'prep', 'pobj', 'acl', 'conj', 'dobj', 'prep', 'pobj']",1,0,0
+1863,"['root', 'nsubj', 'predet']",1,0,0
+1864,"['root', 'advcl', 'xcomp', 'aux']",4,0,0
+1865,"['root', 'advcl', 'xcomp']",2,0,0
+1866,"['root', 'advcl', 'xcomp', 'dobj']",2,0,0
+1867,"['root', 'advcl', 'xcomp', 'ccomp', 'xcomp', 'dobj']",1,0,0
+1868,"['root', 'advcl', 'xcomp', 'ccomp', 'xcomp']",1,0,0
+1869,"['root', 'advcl', 'xcomp', 'ccomp', 'nsubjpass']",1,0,0
+1870,"['root', 'advcl', 'xcomp', 'ccomp']",1,0,0
+1871,"['root', 'advcl', 'xcomp', 'ccomp', 'auxpass']",1,0,0
+1872,"['root', 'advcl', 'xcomp', 'ccomp', 'neg']",2,0,0
+1873,"['root', 'advcl', 'dobj', 'compound']",1,0,0
+1874,"['root', 'advcl', 'dobj', 'prep']",5,0,0
+1875,"['root', 'advcl', 'dobj', 'prep', 'pobj', 'nummod']",1,0,0
+1876,"['root', 'advcl', 'dobj', 'prep', 'pobj']",6,0,0
+1877,"['root', 'advcl', 'dobj', 'prep', 'pobj', 'nummod', 'cc']",2,0,0
+1878,"['root', 'advcl', 'dobj', 'prep', 'pobj', 'nummod', 'conj']",1,0,0
+1879,"['root', 'advcl', 'dobj', 'prep', 'pobj', 'compound']",1,0,0
+1880,"['root', 'advcl', 'dobj', 'prep', 'pobj', 'conj']",1,0,0
+1881,"['root', 'advcl', 'dobj', 'prep', 'pobj', 'conj', 'dobj']",1,0,0
+1882,"['root', 'advcl', 'dobj', 'prep', 'pobj', 'conj', 'dobj', 'compound']",1,0,0
+1883,"['root', 'dobj', 'prep', 'pobj', 'nummod', 'compound']",2,0,0
+1884,"['root', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'amod']",1,0,0
+1885,"['root', 'dobj', 'prep', 'pobj', 'amod', 'npadvmod', 'compound']",1,0,0
+1886,"['root', 'dobj', 'prep', 'pobj', 'amod', 'prep']",1,0,0
+1887,"['root', 'dobj', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'det']",2,0,0
+1888,"['root', 'dobj', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'compound']",1,0,0
+1889,"['root', 'dobj', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'acl']",1,0,0
+1890,"['root', 'dobj', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'acl', 'dobj']",1,0,0
+1891,"['root', 'dobj', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'acl', 'prep']",1,0,0
+1892,"['root', 'dobj', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'acl', 'prep', 'pobj']",1,0,0
+1893,"['root', 'dobj', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'acl', 'advcl', 'advmod']",1,0,0
+1894,"['root', 'dobj', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'acl', 'advcl']",1,0,0
+1895,"['root', 'dobj', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'acl', 'advcl', 'nsubj', 'det']",1,0,0
+1896,"['root', 'dobj', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'acl', 'advcl', 'nsubj']",1,0,0
+1897,"['root', 'dobj', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'acl', 'advcl', 'nsubj', 'amod']",1,0,0
+1898,"['root', 'ccomp', 'dobj', 'nummod', 'compound']",2,0,0
+1899,"['root', 'ccomp', 'dative']",1,0,0
+1900,"['root', 'ccomp', 'dative', 'pobj']",1,0,0
+1901,"['root', 'ccomp', 'dative', 'pobj', 'acl']",1,0,0
+1902,"['root', 'ccomp', 'dative', 'pobj', 'acl', 'dobj', 'compound']",1,1,1
+1903,"['root', 'ccomp', 'dative', 'pobj', 'acl', 'dobj']",1,0,0
+1904,"['root', 'ccomp', 'dative', 'pobj', 'acl', 'prep']",1,0,0
+1905,"['root', 'ccomp', 'dative', 'pobj', 'acl', 'prep', 'pobj']",1,0,0
+1906,"['root', 'ccomp', 'advcl', 'dobj', 'nummod']",1,0,0
+1907,"['root', 'dative']",2,0,0
+1908,"['root', 'dative', 'pobj']",2,0,0
+1909,"['root', 'dative', 'pobj', 'acl']",1,0,0
+1910,"['root', 'dative', 'pobj', 'acl', 'prt']",1,0,0
+1911,"['root', 'dative', 'pobj', 'acl', 'dobj', 'amod']",1,0,0
+1912,"['root', 'dative', 'pobj', 'acl', 'dobj']",1,0,0
+1913,"['root', 'advcl', 'dobj', 'nummod']",1,0,0
+1914,"['root', 'advcl', 'dobj', 'prep', 'pobj', 'det']",1,0,0
+1915,"['root', 'ccomp', 'nsubj', 'compound', 'appos', 'compound']",2,2,1
+1916,"['root', 'ccomp', 'nsubj', 'compound', 'appos']",1,1,0
+1917,"['root', 'ccomp', 'nsubj', 'compound', 'case']",1,0,0
+1918,"['root', 'ccomp', 'prep', 'pobj', 'compound', 'nummod', 'amod']",1,0,0
+1919,"['root', 'ccomp', 'prep', 'pobj', 'compound', 'nummod']",1,0,0
+1920,"['root', 'ccomp', 'prep', 'pobj', 'compound', 'nummod', 'quantmod']",2,0,0
+1921,"['root', 'nsubj', 'compound', 'compound', 'amod']",1,0,0
+1922,"['root', 'dobj', 'prep', 'pobj', 'advmod']",1,0,0
+1923,"['root', 'dobj', 'prep', 'pobj', 'advmod', 'npadvmod', 'nummod']",1,0,0
+1924,"['root', 'dobj', 'prep', 'pobj', 'advmod', 'npadvmod']",1,0,0
+1925,"['root', 'dobj', 'prep', 'pobj', 'advmod', 'prep']",1,0,0
+1926,"['root', 'dobj', 'prep', 'pobj', 'advmod', 'prep', 'pobj', 'det']",2,0,0
+1927,"['root', 'dobj', 'prep', 'pobj', 'advmod', 'prep', 'pobj', 'nummod', 'compound']",1,0,0
+1928,"['root', 'dobj', 'prep', 'pobj', 'advmod', 'prep', 'pobj', 'acl']",1,0,0
+1929,"['root', 'dobj', 'prep', 'pobj', 'advmod', 'prep', 'pobj', 'acl', 'prep']",1,0,0
+1930,"['root', 'dobj', 'prep', 'pobj', 'advmod', 'prep', 'pobj', 'acl', 'prep', 'pobj']",1,0,0
+1931,"['root', 'dobj', 'prep', 'pobj', 'advmod', 'prep', 'pobj', 'acl', 'prep', 'pobj', 'amod']",1,0,0
+1932,"['root', 'dobj', 'prep', 'pobj', 'advmod', 'prep', 'pobj', 'acl', 'prep', 'pobj', 'prep', 'pobj']",1,0,0
+1933,"['root', 'ccomp', 'prep', 'pobj', 'relcl', 'aux']",1,0,0
+1934,"['root', 'ccomp', 'prep', 'pobj', 'relcl', 'advmod']",2,0,0
+1935,"['root', 'ccomp', 'prep', 'pobj', 'cc']",5,0,0
+1936,"['root', 'ccomp', 'prep', 'pobj', 'conj', 'det']",2,0,0
+1937,"['root', 'ccomp', 'prep', 'pobj', 'conj', 'prep']",1,0,0
+1938,"['root', 'ccomp', 'prep', 'pobj', 'conj', 'prep', 'pobj', 'amod']",1,0,0
+1939,"['root', 'ccomp', 'prep', 'pobj', 'conj', 'prep', 'pobj']",1,0,0
+1940,"['root', 'ccomp', 'prep', 'pobj', 'conj', 'relcl']",1,0,0
+1941,"['root', 'ccomp', 'prep', 'pobj', 'conj', 'relcl', 'acomp']",1,0,0
+1942,"['root', 'ccomp', 'prep', 'pobj', 'conj', 'relcl', 'prep']",1,0,0
+1943,"['root', 'ccomp', 'prep', 'pobj', 'conj', 'relcl', 'prep', 'pobj', 'amod']",1,0,0
+1944,"['root', 'ccomp', 'prep', 'pobj', 'conj', 'relcl', 'conj']",1,0,0
+1945,"['root', 'ccomp', 'prep', 'pobj', 'conj', 'relcl', 'conj', 'dobj', 'nmod']",1,0,0
+1946,"['root', 'ccomp', 'prep', 'pobj', 'conj', 'relcl', 'conj', 'dobj']",1,0,0
+1947,"['root', 'ccomp', 'prep', 'pobj', 'conj', 'relcl', 'conj', 'dobj', 'nmod', 'conj']",1,0,0
+1948,"['root', 'ccomp', 'prep', 'pobj', 'conj', 'relcl', 'conj', 'dobj', 'nmod', 'conj', 'conj']",1,0,0
+1949,"['root', 'ccomp', 'nsubj', 'prep', 'pobj', 'amod']",3,1,1
+1950,"['root', 'ccomp', 'prep', 'npadvmod', 'nummod']",1,0,0
+1951,"['root', 'ccomp', 'prep', 'npadvmod']",1,0,0
+1952,"['root', 'attr', 'nummod', 'compound']",1,0,0
+1953,"['root', 'advcl', 'dobj', 'prep', 'pobj', 'amod']",2,0,0
+1954,"['root', 'advcl', 'dobj', 'prep', 'pobj', 'prep']",1,0,0
+1955,"['root', 'advcl', 'dobj', 'prep', 'pobj', 'prep', 'pobj']",1,0,0
+1956,"['root', 'advcl', 'dobj', 'cc']",1,0,0
+1957,"['root', 'advcl', 'dobj', 'conj', 'amod']",1,0,0
+1958,"['root', 'advcl', 'dobj', 'conj']",1,0,0
+1959,"['root', 'acomp', 'xcomp', 'dobj', 'compound', 'amod']",1,0,0
+1960,"['root', 'acomp', 'xcomp', 'dobj', 'compound']",1,0,0
+1961,"['root', 'acomp', 'xcomp', 'dobj']",1,0,0
+1962,"['root', 'acomp', 'xcomp', 'dobj', 'relcl']",1,0,0
+1963,"['root', 'acomp', 'xcomp', 'dobj', 'relcl', 'cc']",2,0,0
+1964,"['root', 'acomp', 'xcomp', 'dobj', 'relcl', 'conj']",1,0,0
+1965,"['root', 'acomp', 'xcomp', 'dobj', 'relcl', 'conj', 'dobj', 'amod']",1,0,0
+1966,"['root', 'acomp', 'xcomp', 'dobj', 'relcl', 'conj', 'dobj']",1,0,0
+1967,"['root', 'acomp', 'xcomp', 'dobj', 'relcl', 'conj', 'dobj', 'amod', 'conj']",1,0,0
+1968,"['root', 'npadvmod', 'npadvmod']",1,0,0
+1969,"['root', 'npadvmod', 'npadvmod', 'nummod']",1,0,0
+1970,"['root', 'attr', 'prep', 'pobj', 'appos', 'compound']",1,1,1
+1971,"['root', 'attr', 'prep', 'pobj', 'appos']",1,1,0
+1972,"['root', 'attr', 'prep', 'pobj', 'acl']",1,0,0
+1973,"['root', 'attr', 'prep', 'pobj', 'acl', 'npadvmod']",1,0,0
+1974,"['root', 'attr', 'prep', 'pobj', 'acl', 'npadvmod', 'nummod']",1,0,0
+1975,"['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'acl']",1,0,0
+1976,"['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'acl', 'xcomp', 'aux']",1,0,0
+1977,"['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'acl', 'xcomp']",1,0,0
+1978,"['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'acl', 'xcomp', 'cc']",1,0,0
+1979,"['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'acl', 'xcomp', 'conj']",1,0,0
+1980,"['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'acl', 'xcomp', 'conj', 'dobj', 'nmod']",1,0,0
+1981,"['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'acl', 'xcomp', 'conj', 'dobj']",1,0,0
+1982,"['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'acl', 'xcomp', 'conj', 'dobj', 'nmod', 'cc']",2,0,0
+1983,"['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'acl', 'xcomp', 'conj', 'dobj', 'nmod', 'conj']",1,0,0
+1984,"['root', 'advcl', 'oprd', 'punct']",6,0,0
+1985,"['root', 'advcl', 'oprd', 'conj']",1,0,0
+1986,"['root', 'advcl', 'oprd', 'conj', 'conj']",1,0,0
+1987,"['root', 'advcl', 'oprd', 'conj', 'conj', 'amod']",1,0,0
+1988,"['root', 'advcl', 'dobj', 'acl', 'aux']",1,0,0
+1989,"['root', 'advcl', 'dobj', 'acl']",1,0,0
+1990,"['root', 'advcl', 'dobj', 'acl', 'dobj']",1,0,0
+1991,"['root', 'nsubjpass', 'prep', 'pobj', 'poss']",1,1,1
+1992,"['root', 'nsubjpass', 'prep', 'pobj', 'poss', 'case']",1,0,0
+1993,"['root', 'nmod', 'punct']",4,0,0
+1994,"['root', 'npadvmod', 'prep']",1,0,0
+1995,"['root', 'npadvmod', 'prep', 'pobj', 'nummod']",2,0,0
+1996,"['root', 'npadvmod', 'prep', 'pobj', 'punct']",1,0,0
+1997,"['root', 'pobj']",2,0,0
+1998,"['root', 'pobj', 'prep']",1,0,0
+1999,"['root', 'pobj', 'prep', 'pobj']",1,0,0
+2000,"['root', 'appos', 'nummod', 'compound']",2,0,0
+2001,"['root', 'dobj', 'poss', 'case', 'punct']",1,0,0
+2002,"['root', 'dobj', 'poss', 'case']",1,0,0
+2003,"['root', 'advcl', 'agent', 'pobj', 'det']",2,1,0
+2004,"['root', 'advcl', 'agent', 'pobj', 'compound']",2,2,1
+2005,"['root', 'appos', 'npadvmod', 'nmod']",1,0,0
+2006,"['root', 'npadvmod', 'nmod', 'nmod']",1,0,0
+2007,"['root', 'npadvmod', 'nmod']",3,0,0
+2008,"['root', 'npadvmod', 'nmod', 'nummod']",2,0,0
+2009,"['root', 'nummod', 'appos', 'nummod']",1,0,0
+2010,"['root', 'nummod', 'appos']",2,0,0
+2011,"['root', 'nummod', 'nmod', 'nummod']",1,0,0
+2012,"['root', 'nummod', 'nmod']",2,0,0
+2013,"['root', 'appos', 'nmod', 'nmod', 'nummod']",1,0,0
+2014,"['root', 'appos', 'nmod', 'nummod']",1,0,0
+2015,"['root', 'ccomp', 'prep', 'pobj', 'poss']",1,0,0
+2016,"['root', 'prep', 'pobj', 'compound', 'nummod']",1,0,0
+2017,"['root', 'dative', 'pobj', 'relcl', 'dep', 'poss']",1,0,0
+2018,"['root', 'dative', 'pobj', 'relcl', 'dep']",1,0,0
+2019,"['root', 'dative', 'pobj', 'relcl']",1,0,0
+2020,"['root', 'dative', 'pobj', 'relcl', 'nsubj']",1,0,0
+2021,"['root', 'dative', 'pobj', 'relcl', 'ccomp']",1,0,0
+2022,"['root', 'dative', 'pobj', 'relcl', 'ccomp', 'prep']",1,0,0
+2023,"['root', 'dative', 'pobj', 'relcl', 'ccomp', 'prep', 'pobj', 'nummod']",1,0,0
+2024,"['root', 'dative', 'pobj', 'relcl', 'ccomp', 'prep', 'pobj']",1,0,0
+2025,"['root', 'dative', 'pobj', 'relcl', 'ccomp', 'prep', 'pobj', 'compound']",1,0,0
+2026,"['root', 'dative', 'pobj', 'relcl', 'ccomp', 'prep', 'pobj', 'prep']",1,0,0
+2027,"['root', 'dative', 'pobj', 'relcl', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'det']",1,0,0
+2028,"['root', 'dative', 'pobj', 'relcl', 'ccomp', 'prep', 'pobj', 'prep', 'pobj']",1,0,0
+2029,"['root', 'dative', 'pobj', 'relcl', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'prep']",1,0,0
+2030,"['root', 'dative', 'pobj', 'relcl', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj']",1,0,0
+2031,"['root', 'dative', 'pobj', 'relcl', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'amod']",1,0,0
+2032,"['root', 'dative', 'pobj', 'relcl', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'compound', 'nummod']",1,0,0
+2033,"['root', 'dative', 'pobj', 'relcl', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'compound']",1,1,1
+2034,"['root', 'dative', 'pobj', 'relcl', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'prep']",1,0,0
+2035,"['root', 'dative', 'pobj', 'relcl', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj']",1,0,0
+2036,"['root', 'dative', 'pobj', 'relcl', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'amod']",1,0,0
+2037,"['root', 'dative', 'pobj', 'relcl', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'nummod']",1,0,0
+2038,"['root', 'nmod', 'compound']",1,1,1
+2039,"['root', 'relcl', 'aux']",1,0,0
+2040,"['root', 'relcl']",1,0,0
+2041,"['root', 'relcl', 'auxpass']",1,0,0
+2042,"['root', 'relcl', 'prep']",1,0,0
+2043,"['root', 'relcl', 'prep', 'prep']",4,0,0
+2044,"['root', 'relcl', 'prep', 'prep', 'pobj', 'det']",4,0,0
+2045,"['root', 'relcl', 'prep', 'prep', 'pobj']",2,0,0
+2046,"['root', 'relcl', 'prep', 'prep', 'pobj', 'amod']",1,0,0
+2047,"['root', 'relcl', 'prep', 'prep', 'pobj', 'prep', 'pobj']",2,0,0
+2048,"['root', 'relcl', 'prep', 'prep', 'pobj', 'prep', 'pobj', 'amod']",1,0,0
+2049,"['root', 'relcl', 'prep', 'prep', 'pobj', 'cc', 'advmod']",1,0,0
+2050,"['root', 'relcl', 'prep', 'prep', 'pobj', 'conj', 'amod']",1,0,0
+2051,"['root', 'relcl', 'prep', 'prep', 'pobj', 'conj', 'prep', 'pobj', 'amod']",1,0,0
+2052,"['root', 'ccomp', 'nsubj', 'compound', 'compound', 'compound', 'compound']",1,1,1
+2053,"['root', 'ccomp', 'nsubj', 'compound', 'compound', 'compound']",1,1,0
+2054,"['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'amod']",2,1,1
+2055,"['root', 'ccomp', 'nsubj', 'appos', 'prep']",1,0,0
+2056,"['root', 'ccomp', 'nsubj', 'appos', 'prep', 'pobj', 'det']",1,0,0
+2057,"['root', 'ccomp', 'nsubj', 'appos', 'prep', 'pobj']",1,1,0
+2058,"['root', 'ccomp', 'nsubj', 'appos', 'prep', 'pobj', 'compound', 'compound']",1,1,1
+2059,"['root', 'ccomp', 'nsubj', 'appos', 'prep', 'pobj', 'compound']",2,2,0
+2060,"['root', 'ccomp', 'nsubj', 'appos', 'prep', 'pobj', 'punct']",2,0,0
+2061,"['root', 'ccomp', 'nsubj', 'appos', 'prep', 'pobj', 'appos']",1,1,1
+2062,"['root', 'ccomp', 'dobj', 'nummod', 'cc']",3,0,0
+2063,"['root', 'ccomp', 'dobj', 'nummod', 'conj']",2,0,0
+2064,"['root', 'conj', 'xcomp', 'dobj', 'amod']",2,0,0
+2065,"['root', 'ccomp', 'dobj', 'prep', 'pobj', 'compound', 'amod']",1,1,1
+2066,"['root', 'ccomp', 'dobj', 'prep', 'pobj', 'compound', 'compound']",2,0,0
+2067,"['root', 'ccomp', 'dobj', 'prep', 'pobj', 'conj', 'amod']",1,0,0
+2068,"['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'det']",4,0,0
+2069,"['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'relcl', 'prep', 'pobj', 'det']",1,0,0
+2070,"['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'relcl', 'prep', 'pobj']",2,1,0
+2071,"['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'relcl', 'prep', 'pobj', 'compound']",1,1,1
+2072,"['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'relcl', 'prep']",1,0,0
+2073,"['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'acl', 'aux']",1,0,0
+2074,"['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'acl', 'dobj', 'nmod', 'amod']",1,0,0
+2075,"['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'acl', 'dobj', 'nmod']",1,0,0
+2076,"['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'acl', 'dobj', 'amod']",1,0,0
+2077,"['root', 'xcomp', 'xcomp']",1,0,0
+2078,"['root', 'xcomp', 'xcomp', 'ccomp', 'nsubj', 'compound']",1,0,0
+2079,"['root', 'xcomp', 'xcomp', 'ccomp', 'nsubj']",1,0,0
+2080,"['root', 'xcomp', 'xcomp', 'ccomp']",1,0,0
+2081,"['root', 'xcomp', 'xcomp', 'ccomp', 'prep']",1,0,0
+2082,"['root', 'xcomp', 'xcomp', 'ccomp', 'prep', 'pobj', 'amod']",1,0,0
+2083,"['root', 'xcomp', 'xcomp', 'ccomp', 'prep', 'pobj']",1,0,0
+2084,"['root', 'xcomp', 'xcomp', 'ccomp', 'prep', 'pobj', 'cc']",1,0,0
+2085,"['root', 'xcomp', 'xcomp', 'ccomp', 'prep', 'pobj', 'conj']",1,0,0
+2086,"['root', 'xcomp', 'xcomp', 'ccomp', 'prep', 'pobj', 'relcl', 'nsubj']",1,0,0
+2087,"['root', 'xcomp', 'xcomp', 'ccomp', 'prep', 'pobj', 'relcl']",1,0,0
+2088,"['root', 'xcomp', 'xcomp', 'ccomp', 'prep', 'pobj', 'relcl', 'ccomp', 'aux']",1,0,0
+2089,"['root', 'xcomp', 'xcomp', 'ccomp', 'prep', 'pobj', 'relcl', 'ccomp']",1,0,0
+2090,"['root', 'xcomp', 'xcomp', 'ccomp', 'prep', 'pobj', 'relcl', 'ccomp', 'auxpass']",1,0,0
+2091,"['root', 'xcomp', 'xcomp', 'ccomp', 'prep', 'pobj', 'relcl', 'ccomp', 'advmod']",1,0,0
+2092,"['root', 'xcomp', 'xcomp', 'ccomp', 'prep', 'pobj', 'relcl', 'ccomp', 'advcl']",1,0,0
+2093,"['root', 'xcomp', 'xcomp', 'ccomp', 'prep', 'pobj', 'relcl', 'ccomp', 'advcl', 'dobj']",1,0,0
+2094,"['root', 'csubj']",1,0,0
+2095,"['root', 'csubj', 'dobj']",2,2,2
+2096,"['root', 'csubj', 'prep']",4,0,0
+2097,"['root', 'csubj', 'prep', 'pobj']",2,0,0
+2098,"['root', 'csubj', 'prep', 'pobj', 'prep', 'pobj', 'amod']",1,0,0
+2099,"['root', 'csubj', 'prep', 'pobj', 'prep', 'pobj']",1,0,0
+2100,"['root', 'csubj', 'prep', 'pobj', 'nummod']",1,0,0
+2101,"['root', 'csubj', 'prep', 'pobj', 'compound', 'compound']",1,1,1
+2102,"['root', 'csubj', 'prep', 'pobj', 'compound']",2,1,0
+2103,"['root', 'attr', 'prep', 'pobj', 'prep', 'pobj', 'acl']",1,0,0
+2104,"['root', 'attr', 'prep', 'pobj', 'prep', 'pobj', 'acl', 'prep']",3,0,0
+2105,"['root', 'attr', 'prep', 'pobj', 'prep', 'pobj', 'acl', 'prep', 'pobj']",1,0,0
+2106,"['root', 'attr', 'prep', 'pobj', 'prep', 'pobj', 'acl', 'prep', 'pcomp']",1,0,0
+2107,"['root', 'attr', 'prep', 'pobj', 'prep', 'pobj', 'acl', 'prep', 'pcomp', 'dobj']",1,1,1
+2108,"['root', 'det']",4,1,1
+2109,"['root', 'conj', 'nsubj', 'compound', 'amod']",2,0,0
+2110,"['root', 'dep', 'compound', 'compound']",1,0,0
+2111,"['root', 'npadvmod', 'compound', 'compound']",2,2,1
+2112,"['root', 'prep', 'pcomp', 'dobj', 'amod', 'amod']",1,1,1
+2113,"['root', 'prep', 'pcomp', 'dobj', 'amod', 'punct']",1,1,0
+2114,"['root', 'prep', 'pcomp', 'dobj', 'prep']",2,0,0
+2115,"['root', 'prep', 'pcomp', 'dobj', 'prep', 'pobj']",2,1,1
+2116,"['root', 'attr', 'prep', 'pobj', 'relcl', 'prep']",1,0,0
+2117,"['root', 'attr', 'prep', 'pobj', 'relcl', 'prep', 'pobj', 'det']",1,0,0
+2118,"['root', 'attr', 'prep', 'pobj', 'relcl', 'prep', 'pobj']",1,0,0
+2119,"['root', 'attr', 'prep', 'pobj', 'relcl', 'prep', 'pobj', 'amod']",1,0,0
+2120,"['root', 'attr', 'prep', 'pobj', 'relcl', 'prep', 'pobj', 'prep', 'pobj', 'nummod']",1,0,0
+2121,"['root', 'attr', 'prep', 'pobj', 'relcl', 'prep', 'pobj', 'prep', 'pobj']",1,0,0
+2122,"['root', 'dobj', 'prep', 'pobj', 'compound', 'compound']",1,0,0
+2123,"['root', 'dobj', 'nmod', 'cc']",1,0,0
+2124,"['root', 'dobj', 'nmod', 'conj']",1,0,0
+2125,"['root', 'nsubj', 'acl']",4,0,0
+2126,"['root', 'nsubj', 'acl', 'prep']",1,0,0
+2127,"['root', 'nsubj', 'acl', 'prep', 'pobj']",1,1,1
+2128,"['root', 'prep', 'pcomp', 'nsubjpass', 'nummod']",1,0,0
+2129,"['root', 'prep', 'pcomp', 'nsubjpass']",2,1,0
+2130,"['root', 'prep', 'pcomp', 'nsubjpass', 'amod']",1,0,0
+2131,"['root', 'prep', 'pcomp', 'aux']",2,0,0
+2132,"['root', 'prep', 'pcomp', 'prep', 'pobj', 'amod']",2,0,0
+2133,"['root', 'nsubjpass', 'prep', 'pobj', 'nummod']",1,0,0
+2134,"['root', 'nsubjpass', 'prep', 'pobj', 'prep']",1,0,0
+2135,"['root', 'nsubjpass', 'prep', 'pobj', 'prep', 'pobj']",2,0,0
+2136,"['root', 'dobj', 'acl', 'mark']",1,0,0
+2137,"['root', 'dobj', 'acl', 'nsubj', 'det']",1,0,0
+2138,"['root', 'dobj', 'acl', 'nsubj']",1,0,0
+2139,"['root', 'dobj', 'acl', 'nsubj', 'amod']",1,0,0
+2140,"['root', 'dobj', 'acl', 'nsubj', 'compound']",1,1,1
+2141,"['root', 'prep', 'pobj', 'poss', 'det']",1,0,0
+2142,"['root', 'advcl', 'prep', 'pobj', 'prep', 'pobj', 'poss']",2,1,1
+2143,"['root', 'advcl', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'prep']",1,0,0
+2144,"['root', 'advcl', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'compound']",1,1,1
+2145,"['root', 'advcl', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj']",1,1,0
+2146,"['root', 'nsubj', 'acl', 'agent']",2,0,0
+2147,"['root', 'nsubj', 'acl', 'agent', 'pobj']",2,0,0
+2148,"['root', 'nsubj', 'acl', 'xcomp', 'aux']",1,0,0
+2149,"['root', 'nsubj', 'acl', 'xcomp']",1,0,0
+2150,"['root', 'nsubj', 'acl', 'xcomp', 'dobj']",1,0,0
+2151,"['root', 'dobj', 'prep', 'pobj', 'appos', 'amod', 'npadvmod']",1,1,1
+2152,"['root', 'dobj', 'prep', 'pobj', 'appos', 'prep', 'pobj', 'compound', 'compound']",1,1,1
+2153,"['root', 'dobj', 'prep', 'pobj', 'appos', 'prep', 'pobj', 'compound']",1,1,0
+2154,"['root', 'dobj', 'prep', 'pobj', 'appos', 'relcl', 'nsubjpass']",1,0,0
+2155,"['root', 'dobj', 'prep', 'pobj', 'appos', 'relcl']",1,0,0
+2156,"['root', 'dobj', 'prep', 'pobj', 'appos', 'relcl', 'aux']",1,0,0
+2157,"['root', 'dobj', 'prep', 'pobj', 'appos', 'relcl', 'auxpass']",1,0,0
+2158,"['root', 'dobj', 'prep', 'pobj', 'appos', 'relcl', 'prep']",3,0,0
+2159,"['root', 'dobj', 'prep', 'pobj', 'appos', 'relcl', 'prep', 'pobj', 'det']",1,0,0
+2160,"['root', 'dobj', 'prep', 'pobj', 'appos', 'relcl', 'prep', 'pobj']",3,0,0
+2161,"['root', 'dobj', 'prep', 'pobj', 'appos', 'relcl', 'prep', 'pobj', 'compound']",1,1,1
+2162,"['root', 'dobj', 'prep', 'pobj', 'appos', 'relcl', 'prep', 'pobj', 'prep', 'pobj']",1,0,0
+2163,"['root', 'dobj', 'acl', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'det']",2,0,0
+2164,"['root', 'dobj', 'acl', 'dobj', 'prep', 'pobj', 'punct']",2,0,0
+2165,"['root', 'dobj', 'acl', 'dobj', 'prep', 'pobj', 'compound']",1,0,0
+2166,"['root', 'dobj', 'acl', 'dobj', 'prep', 'pobj', 'prep']",1,0,0
+2167,"['root', 'dobj', 'acl', 'dobj', 'prep', 'pobj', 'prep', 'pobj']",1,1,1
+2168,"['root', 'dobj', 'acl', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'cc']",1,0,0
+2169,"['root', 'dobj', 'acl', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'conj']",1,1,0
+2170,"['root', 'dobj', 'acl', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'compound']",1,1,1
+2171,"['root', 'dobj', 'acl', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'prep']",1,1,0
+2172,"['root', 'dobj', 'acl', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'prep', 'pobj', 'compound']",1,1,0
+2173,"['root', 'dobj', 'acl', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'prep', 'pobj']",1,1,0
+2174,"['root', 'dobj', 'acl', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'punct']",2,0,0
+2175,"['root', 'dobj', 'acl', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'appos']",1,1,1
+2176,"['root', 'npadvmod', 'appos', 'nummod']",1,0,0
+2177,"['root', 'prep', 'pcomp', 'prt']",1,0,0
+2178,"['root', 'prep', 'pcomp', 'dobj', 'prep', 'pobj', 'poss', 'det']",1,0,0
+2179,"['root', 'prep', 'pcomp', 'dobj', 'prep', 'pobj', 'poss']",1,0,0
+2180,"['root', 'prep', 'pcomp', 'dobj', 'prep', 'pobj', 'poss', 'case']",1,0,0
+2181,"['root', 'prep', 'pcomp', 'prep', 'pobj', 'prep', 'pobj', 'compound']",1,1,1
+2182,"['root', 'prep', 'pcomp', 'prep', 'pobj', 'prep', 'pobj']",1,1,0
+2183,"['root', 'prep', 'pcomp', 'prep', 'pobj', 'punct']",1,0,0
+2184,"['root', 'prep', 'pcomp', 'prep', 'pobj', 'acl']",1,0,0
+2185,"['root', 'prep', 'pcomp', 'prep', 'pobj', 'acl', 'agent']",1,0,0
+2186,"['root', 'prep', 'pcomp', 'prep', 'pobj', 'acl', 'agent', 'pobj', 'compound']",1,0,0
+2187,"['root', 'prep', 'pcomp', 'prep', 'pobj', 'acl', 'agent', 'pobj']",1,0,0
+2188,"['root', 'advcl', 'prep', 'pobj', 'prep', 'pobj', 'poss', 'case']",1,0,0
+2189,"['root', 'advcl', 'prep', 'pobj', 'advmod']",1,0,0
+2190,"['root', 'advcl', 'prep', 'pobj', 'advmod', 'prep', 'pobj']",1,0,0
+2191,"['root', 'advcl', 'prep', 'pobj', 'advmod', 'prep', 'pobj', 'amod']",2,0,0
+2192,"['root', 'advcl', 'prep', 'pobj', 'advmod', 'prep', 'pobj', 'nmod', 'nmod']",1,1,1
+2193,"['root', 'advcl', 'prep', 'pobj', 'advmod', 'prep', 'pobj', 'nmod']",1,1,1
+2194,"['root', 'advcl', 'prep', 'pobj', 'advmod', 'prep', 'pobj', 'advmod']",1,0,0
+2195,"['root', 'advcl', 'prep', 'pobj', 'advmod', 'prep', 'pobj', 'advmod', 'prep']",1,0,0
+2196,"['root', 'advcl', 'prep', 'pobj', 'advmod', 'prep', 'pobj', 'advmod', 'prep', 'pobj']",1,0,0
+2197,"['root', 'conj', 'cc']",1,0,0
+2198,"['root', 'conj', 'conj', 'nsubj']",1,0,0
+2199,"['root', 'conj', 'conj', 'nsubj', 'compound']",1,1,1
+2200,"['root', 'conj', 'conj']",1,0,0
+2201,"['root', 'conj', 'conj', 'dobj']",1,0,0
+2202,"['root', 'conj', 'conj', 'dobj', 'prep']",1,0,0
+2203,"['root', 'conj', 'conj', 'dobj', 'prep', 'pobj']",2,0,0
+2204,"['root', 'conj', 'conj', 'dobj', 'prep', 'pobj', 'amod']",1,0,0
+2205,"['root', 'conj', 'conj', 'advcl', 'aux']",1,0,0
+2206,"['root', 'conj', 'conj', 'advcl']",1,0,0
+2207,"['root', 'conj', 'conj', 'advcl', 'prep', 'advmod', 'advmod']",1,0,0
+2208,"['root', 'conj', 'conj', 'advcl', 'prep', 'advmod']",1,0,0
+2209,"['root', 'conj', 'conj', 'advcl', 'prep', 'pobj', 'amod']",1,0,0
+2210,"['root', 'conj', 'conj', 'punct']",1,0,0
+2211,"['root', 'dobj', 'npadvmod', 'amod']",1,0,0
+2212,"['root', 'dobj', 'npadvmod']",1,0,0
+2213,"['root', 'dobj', 'acl', 'prep', 'pobj', 'poss']",1,0,0
+2214,"['root', 'dobj', 'acl', 'prep', 'pobj', 'amod', 'prep', 'pobj']",1,0,0
+2215,"['root', 'dobj', 'acl', 'prep', 'pobj', 'acl']",1,0,0
+2216,"['root', 'dobj', 'acl', 'prep', 'pobj', 'acl', 'agent']",1,0,0
+2217,"['root', 'dobj', 'acl', 'prep', 'pobj', 'acl', 'agent', 'pobj']",1,0,0
+2218,"['root', 'dobj', 'acl', 'prep', 'pobj', 'acl', 'agent', 'pobj', 'prep', 'pobj', 'amod']",1,1,1
+2219,"['root', 'dobj', 'acl', 'prep', 'pobj', 'acl', 'agent', 'pobj', 'prep', 'pobj']",1,0,0
+2220,"['root', 'dobj', 'acl', 'prep', 'pobj', 'acl', 'agent', 'pobj', 'prep', 'pobj', 'compound', 'compound']",1,0,0
+2221,"['root', 'dobj', 'acl', 'prep', 'pobj', 'acl', 'agent', 'pobj', 'prep', 'pobj', 'compound']",1,0,0
+2222,"['root', 'prep', 'pobj', 'relcl', 'prep']",3,0,0
+2223,"['root', 'prep', 'pobj', 'relcl', 'prep', 'cc']",1,0,0
+2224,"['root', 'prep', 'pobj', 'relcl', 'prep', 'conj']",1,0,0
+2225,"['root', 'prep', 'pobj', 'relcl', 'prep', 'conj', 'prep']",1,0,0
+2226,"['root', 'prep', 'pobj', 'relcl', 'prep', 'conj', 'prep', 'pobj', 'amod']",1,0,0
+2227,"['root', 'prep', 'pobj', 'relcl', 'prep', 'conj', 'prep', 'pobj']",1,0,0
+2228,"['root', 'prep', 'pobj', 'relcl', 'advcl', 'mark']",1,0,0
+2229,"['root', 'prep', 'pobj', 'relcl', 'advcl']",1,0,0
+2230,"['root', 'prep', 'pobj', 'relcl', 'advcl', 'nsubj', 'det']",1,0,0
+2231,"['root', 'prep', 'pobj', 'relcl', 'advcl', 'nsubj']",1,0,0
+2232,"['root', 'prep', 'pobj', 'relcl', 'advcl', 'nsubj', 'compound', 'amod']",1,0,0
+2233,"['root', 'prep', 'pobj', 'relcl', 'advcl', 'nsubj', 'compound']",2,0,0
+2234,"['root', 'prep', 'pobj', 'relcl', 'advcl', 'nsubj', 'compound', 'compound']",1,0,0
+2235,"['root', 'prep', 'pobj', 'relcl', 'advcl', 'dobj', 'compound']",1,0,0
+2236,"['root', 'prep', 'pobj', 'relcl', 'advcl', 'dobj']",1,0,0
+2237,"['root', 'prep', 'pobj', 'relcl', 'advcl', 'advcl']",1,0,0
+2238,"['root', 'prep', 'pobj', 'relcl', 'advcl', 'advcl', 'dobj', 'compound']",1,1,1
+2239,"['root', 'prep', 'pobj', 'relcl', 'advcl', 'advcl', 'dobj']",1,1,0
+2240,"['root', 'prep', 'pobj', 'relcl', 'advcl', 'advcl', 'advmod']",1,0,0
+2241,"['root', 'prep', 'pobj', 'relcl', 'advcl', 'advcl', 'advmod', 'prep', 'pobj', 'poss']",1,0,0
+2242,"['root', 'prep', 'pobj', 'relcl', 'advcl', 'advcl', 'advmod', 'prep', 'pobj']",1,0,0
+2243,"['root', 'prep', 'pobj', 'relcl', 'advcl', 'advcl', 'advmod', 'prep', 'pobj', 'amod']",1,0,0
+2244,"['root', 'advcl', 'ccomp', 'nsubj', 'compound']",2,0,0
+2245,"['root', 'advcl', 'ccomp', 'prep', 'prep']",2,0,0
+2246,"['root', 'advcl', 'ccomp', 'prep', 'prep', 'pobj']",1,0,0
+2247,"['root', 'advcl', 'ccomp', 'prep', 'pobj', 'det']",1,0,0
+2248,"['root', 'advcl', 'ccomp', 'prep', 'pobj', 'amod']",1,0,0
+2249,"['root', 'advcl', 'ccomp', 'prep', 'pobj', 'prep', 'pobj']",1,0,0
+2250,"['root', 'dobj', 'nummod', 'advmod']",1,0,0
+2251,"['root', 'ccomp', 'acomp', 'prep', 'pobj', 'prep', 'pobj', 'amod']",1,0,0
+2252,"['root', 'ccomp', 'conj', 'prep', 'pobj', 'prep', 'pobj', 'amod']",1,0,0
+2253,"['root', 'nsubj', 'appos', 'prep', 'pobj', 'cc']",1,1,0
+2254,"['root', 'nsubj', 'appos', 'prep', 'pobj', 'conj']",1,1,0
+2255,"['root', 'nsubj', 'cc']",1,0,0
+2256,"['root', 'conj', 'npadvmod', 'nummod', 'advmod']",1,0,0
+2257,"['root', 'conj', 'npadvmod', 'nummod']",1,0,0
+2258,"['root', 'conj', 'prep', 'pobj', 'prep', 'pobj']",5,0,0
+2259,"['root', 'conj', 'prep', 'pobj', 'prep', 'pobj', 'prep']",1,0,0
+2260,"['root', 'conj', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'compound']",1,0,0
+2261,"['root', 'conj', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj']",1,0,0
+2262,"['root', 'ccomp', 'ccomp', 'nsubj', 'det']",1,0,0
+2263,"['root', 'ccomp', 'ccomp', 'aux']",1,0,0
+2264,"['root', 'ccomp', 'ccomp', 'npadvmod', 'nummod']",1,0,0
+2265,"['root', 'ccomp', 'ccomp', 'npadvmod', 'prep']",1,0,0
+2266,"['root', 'ccomp', 'ccomp', 'npadvmod', 'prep', 'pobj']",1,0,0
+2267,"['root', 'ccomp', 'ccomp', 'advcl', 'mark']",1,0,0
+2268,"['root', 'ccomp', 'ccomp', 'advcl']",1,0,0
+2269,"['root', 'ccomp', 'ccomp', 'advcl', 'nsubj', 'compound', 'compound']",1,0,0
+2270,"['root', 'ccomp', 'ccomp', 'advcl', 'nsubj', 'compound']",1,0,0
+2271,"['root', 'ccomp', 'ccomp', 'advcl', 'nsubj']",1,0,0
+2272,"['root', 'ccomp', 'dep']",1,0,0
+2273,"['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'prep']",1,0,0
+2274,"['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'det']",3,0,0
+2275,"['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj']",2,1,1
+2276,"['root', 'conj', 'nsubjpass', 'det']",4,0,0
+2277,"['root', 'conj', 'nsubjpass']",1,0,0
+2278,"['root', 'conj', 'auxpass']",1,0,0
+2279,"['root', 'conj', 'prep', 'pobj', 'prep', 'pobj', 'nummod']",1,0,0
+2280,"['root', 'conj', 'advcl', 'nsubj', 'prep']",1,0,0
+2281,"['root', 'conj', 'advcl', 'nsubj', 'prep', 'pobj', 'poss']",1,0,0
+2282,"['root', 'conj', 'advcl', 'nsubj', 'prep', 'pobj']",1,0,0
+2283,"['root', 'conj', 'advcl', 'nsubj', 'prep', 'pobj', 'poss', 'case']",1,0,0
+2284,"['root', 'conj', 'advcl', 'nsubj', 'prep', 'pobj', 'compound']",1,0,0
+2285,"['root', 'conj', 'advcl', 'nsubj', 'conj', 'det']",1,0,0
+2286,"['root', 'conj', 'advcl', 'nsubj', 'conj']",1,0,0
+2287,"['root', 'conj', 'advcl', 'nsubj', 'conj', 'amod']",1,0,0
+2288,"['root', 'conj', 'advcl', 'nsubj', 'conj', 'compound']",1,1,1
+2289,"['root', 'conj', 'advcl', 'conj']",1,0,0
+2290,"['root', 'conj', 'advcl', 'conj', 'dobj', 'amod']",1,1,1
+2291,"['root', 'conj', 'advcl', 'conj', 'dobj']",1,0,0
+2292,"['root', 'nsubj', 'relcl', 'prep']",2,0,0
+2293,"['root', 'nsubj', 'relcl', 'prep', 'pobj']",3,0,0
+2294,"['root', 'nsubj', 'relcl', 'prep', 'pcomp']",1,0,0
+2295,"['root', 'nsubj', 'relcl', 'prep', 'pobj', 'prep']",1,0,0
+2296,"['root', 'nsubj', 'relcl', 'prep', 'pobj', 'prep', 'pobj', 'det']",2,0,0
+2297,"['root', 'nsubj', 'relcl', 'prep', 'pobj', 'prep', 'pobj']",1,0,0
+2298,"['root', 'nsubj', 'relcl', 'prep', 'pobj', 'prep', 'pobj', 'amod']",1,1,1
+2299,"['root', 'nsubj', 'relcl', 'prep', 'pobj', 'prep', 'pobj', 'compound']",1,1,1
+2300,"['root', 'conj', 'advcl', 'aux']",2,0,0
+2301,"['root', 'conj', 'advcl', 'advmod', 'prep', 'pobj']",1,0,0
+2302,"['root', 'conj', 'advcl', 'advmod', 'prep', 'pobj', 'poss', 'case']",1,0,0
+2303,"['root', 'ccomp', 'prep', 'pobj', 'npadvmod', 'amod']",1,0,0
+2304,"['root', 'ccomp', 'prep', 'pobj', 'npadvmod']",1,0,0
+2305,"['root', 'attr', 'acl']",1,0,0
+2306,"['root', 'attr', 'acl', 'prep']",1,0,0
+2307,"['root', 'attr', 'acl', 'prep', 'pobj']",1,0,0
+2308,"['root', 'prep', 'pobj', 'prep', 'pobj', 'compound', 'amod']",1,0,0
+2309,"['root', 'xcomp', 'dobj', 'det']",1,0,0
+2310,"['root', 'xcomp', 'dobj', 'amod']",1,0,0
+2311,"['root', 'advcl', 'nsubj', 'prep', 'pobj', 'det']",2,0,0
+2312,"['root', 'advcl', 'nsubj', 'prep', 'pobj', 'compound', 'amod']",1,0,0
+2313,"['root', 'advcl', 'nsubj', 'prep', 'pobj', 'prep', 'pobj', 'amod']",1,1,1
+2314,"['root', 'advcl', 'nsubj', 'prep', 'pobj', 'prep', 'pobj']",1,0,0
+2315,"['root', 'advcl', 'nsubj', 'prep', 'pobj', 'prep', 'pobj', 'compound']",1,0,0
+2316,"['root', 'prep', 'pobj', 'amod', 'prep']",1,0,0
+2317,"['root', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'nummod']",1,0,0
+2318,"['root', 'prep', 'pobj', 'amod', 'prep', 'pobj']",1,0,0
+2319,"['root', 'agent', 'pobj', 'poss', 'det']",1,0,0
+2320,"['root', 'agent', 'pobj', 'poss']",1,0,0
+2321,"['root', 'agent', 'pobj', 'poss', 'case']",2,0,0
+2322,"['root', 'agent', 'pobj', 'prep']",1,0,0
+2323,"['root', 'agent', 'pobj', 'prep', 'pobj', 'amod']",1,1,1
+2324,"['root', 'agent', 'pobj', 'prep', 'pobj']",1,0,0
+2325,"['root', 'prep', 'pobj', 'prep', 'pobj', 'nmod', 'amod']",1,0,0
+2326,"['root', 'prep', 'pobj', 'prep', 'pobj', 'nmod', 'amod', 'cc']",1,0,0
+2327,"['root', 'prep', 'pobj', 'prep', 'pobj', 'nmod', 'amod', 'conj']",1,0,0
+2328,"['root', 'prep', 'pobj', 'prep', 'pobj', 'nmod', 'appos', 'punct']",1,0,0
+2329,"['root', 'prep', 'pobj', 'prep', 'pobj', 'nmod', 'appos']",1,1,1
+2330,"['root', 'prep', 'pobj', 'prep', 'pobj', 'nmod', 'punct']",1,0,0
+2331,"['root', 'prep', 'pobj', 'conj', 'nummod']",1,0,0
+2332,"['root', 'prep', 'prep', 'pobj', 'conj', 'nummod']",1,0,0
+2333,"['root', 'prep', 'pobj', 'npadvmod', 'det']",1,0,0
+2334,"['root', 'prep', 'prep', 'pobj', 'poss']",1,0,0
+2335,"['root', 'prep', 'prep', 'pobj', 'poss', 'case']",1,0,0
+2336,"['root', 'advmod', 'npadvmod', 'appos', 'nmod']",1,0,0
+2337,"['root', 'advmod', 'npadvmod', 'appos']",1,0,0
+2338,"['root', 'ccomp', 'nsubj', 'acl', 'xcomp', 'aux']",2,0,0
+2339,"['root', 'ccomp', 'nsubj', 'acl', 'xcomp']",1,0,0
+2340,"['root', 'ccomp', 'nsubj', 'acl', 'xcomp', 'attr']",1,1,1
+2341,"['root', 'ccomp', 'dobj', 'nummod', 'quantmod']",1,0,0
+2342,"['root', 'ccomp', 'prep', 'pobj', 'acl', 'dobj', 'conj']",1,0,0
+2343,"['root', 'ccomp', 'prep', 'pobj', 'relcl', 'prep', 'pcomp', 'auxpass']",1,0,0
+2344,"['root', 'ccomp', 'prep', 'pobj', 'relcl', 'prep', 'pcomp']",1,0,0
+2345,"['root', 'ccomp', 'prep', 'pobj', 'relcl', 'prep', 'pcomp', 'prep', 'pobj']",1,0,0
+2346,"['root', 'ccomp', 'prep', 'pobj', 'relcl', 'prep', 'pcomp', 'prep', 'pobj', 'prep', 'pobj']",2,2,2
+2347,"['root', 'advcl', 'xcomp', 'dobj', 'det']",1,0,0
+2348,"['root', 'advcl', 'xcomp', 'dobj', 'amod', 'npadvmod']",1,1,1
+2349,"['root', 'advcl', 'xcomp', 'dobj', 'prep']",1,0,0
+2350,"['root', 'advcl', 'xcomp', 'dobj', 'prep', 'pobj']",1,1,0
+2351,"['root', 'advcl', 'xcomp', 'dobj', 'prep', 'pobj', 'compound']",2,2,1
+2352,"['root', 'advcl', 'xcomp', 'dobj', 'punct']",2,0,0
+2353,"['root', 'advcl', 'xcomp', 'dobj', 'acl']",1,0,0
+2354,"['root', 'advcl', 'xcomp', 'dobj', 'acl', 'oprd', 'compound']",1,0,0
+2355,"['root', 'advcl', 'xcomp', 'dobj', 'acl', 'oprd']",1,1,1
+2356,"['root', 'advcl', 'conj', 'nsubj']",1,0,0
+2357,"['root', 'advcl', 'conj', 'xcomp']",2,0,0
+2358,"['root', 'advcl', 'conj', 'xcomp', 'dobj']",3,0,0
+2359,"['root', 'ccomp', 'conj', 'xcomp', 'xcomp']",1,0,0
+2360,"['root', 'ccomp', 'conj', 'xcomp', 'xcomp', 'dobj']",1,0,0
+2361,"['root', 'ccomp', 'conj', 'xcomp', 'xcomp', 'prep', 'pobj']",1,1,1
+2362,"['root', 'ccomp', 'conj', 'xcomp', 'xcomp', 'prep', 'pobj', 'punct']",2,0,0
+2363,"['root', 'ccomp', 'conj', 'xcomp', 'xcomp', 'prep', 'pobj', 'advmod', 'npadvmod', 'nummod']",1,0,0
+2364,"['root', 'ccomp', 'conj', 'xcomp', 'xcomp', 'prep', 'pobj', 'advmod', 'npadvmod']",1,0,0
+2365,"['root', 'ccomp', 'conj', 'xcomp', 'xcomp', 'prep', 'pobj', 'advmod']",1,0,0
+2366,"['root', 'ccomp', 'conj', 'xcomp', 'xcomp', 'prep', 'pobj', 'advmod', 'npadvmod', 'punct']",2,0,0
+2367,"['root', 'ccomp', 'conj', 'xcomp', 'xcomp', 'prep', 'pobj', 'advmod', 'npadvmod', 'appos', 'nummod']",1,0,0
+2368,"['root', 'ccomp', 'conj', 'xcomp', 'xcomp', 'prep', 'pobj', 'advmod', 'npadvmod', 'appos']",1,0,0
+2369,"['root', 'ccomp', 'conj', 'xcomp', 'xcomp', 'prep', 'pobj', 'advmod', 'advmod', 'prep']",1,0,0
+2370,"['root', 'ccomp', 'conj', 'xcomp', 'xcomp', 'prep', 'pobj', 'advmod', 'advmod', 'prep', 'pobj']",1,1,1
+2371,"['root', 'ccomp', 'conj', 'xcomp', 'xcomp', 'advcl']",1,0,0
+2372,"['root', 'ccomp', 'conj', 'xcomp', 'xcomp', 'advcl', 'prep', 'pobj', 'det']",1,0,0
+2373,"['root', 'ccomp', 'conj', 'xcomp', 'xcomp', 'advcl', 'prep', 'pobj']",1,0,0
+2374,"['root', 'ccomp', 'nsubjpass', 'relcl', 'ccomp', 'nsubj']",1,0,0
+2375,"['root', 'ccomp', 'nsubjpass', 'relcl', 'ccomp']",2,0,0
+2376,"['root', 'ccomp', 'nsubjpass', 'relcl', 'ccomp', 'acomp']",1,0,0
+2377,"['root', 'ccomp', 'nsubjpass', 'relcl', 'ccomp', 'acomp', 'prep']",1,0,0
+2378,"['root', 'ccomp', 'nsubjpass', 'relcl', 'ccomp', 'acomp', 'prep', 'pobj']",1,0,0
+2379,"['root', 'ccomp', 'nsubjpass', 'relcl', 'ccomp', 'acomp', 'prep', 'pobj', 'cc']",1,0,0
+2380,"['root', 'ccomp', 'nsubjpass', 'relcl', 'ccomp', 'acomp', 'prep', 'pobj', 'conj', 'advmod']",1,0,0
+2381,"['root', 'ccomp', 'nsubjpass', 'relcl', 'ccomp', 'acomp', 'prep', 'pobj', 'conj']",1,0,0
+2382,"['root', 'ccomp', 'nsubjpass', 'relcl', 'ccomp', 'acomp', 'prep', 'pobj', 'conj', 'amod']",1,0,0
+2383,"['root', 'ccomp', 'xcomp', 'attr', 'amod']",1,1,1
+2384,"['root', 'ccomp', 'xcomp', 'attr']",1,0,0
+2385,"['root', 'xcomp', 'dobj', 'prep']",1,0,0
+2386,"['root', 'xcomp', 'dobj', 'prep', 'pobj', 'det']",1,0,0
+2387,"['root', 'xcomp', 'dobj', 'prep', 'pobj']",1,0,0
+2388,"['root', 'xcomp', 'dobj', 'prep', 'pobj', 'compound']",1,1,1
+2389,"['root', 'xcomp', 'prep', 'prep']",1,0,0
+2390,"['root', 'xcomp', 'prep', 'prep', 'pobj', 'cc']",1,0,0
+2391,"['root', 'xcomp', 'prep', 'prep', 'pobj', 'conj']",1,0,0
+2392,"['root', 'xcomp', 'prep', 'pcomp', 'dobj']",1,0,0
+2393,"['root', 'xcomp', 'prep', 'pcomp']",1,0,0
+2394,"['root', 'xcomp', 'prep', 'pcomp', 'nsubj']",1,0,0
+2395,"['root', 'xcomp', 'prep', 'pcomp', 'prep']",1,0,0
+2396,"['root', 'xcomp', 'prep', 'pcomp', 'prep', 'pobj', 'det']",1,0,0
+2397,"['root', 'xcomp', 'prep', 'pcomp', 'prep', 'pobj', 'punct']",2,0,0
+2398,"['root', 'xcomp', 'prep', 'pcomp', 'prep', 'pobj', 'amod']",1,0,0
+2399,"['root', 'advcl', 'acomp']",1,1,1
+2400,"['root', 'advcl', 'conj', 'mark']",1,0,0
+2401,"['root', 'advcl', 'conj', 'expl']",1,0,0
+2402,"['root', 'advcl', 'conj', 'attr', 'det']",1,0,0
+2403,"['root', 'advcl', 'conj', 'attr']",1,0,0
+2404,"['root', 'advcl', 'conj', 'attr', 'amod']",1,0,0
+2405,"['root', 'advcl', 'conj', 'attr', 'prep', 'pobj']",1,1,1
+2406,"['root', 'advcl', 'conj', 'attr', 'prep', 'pobj', 'punct']",3,0,0
+2407,"['root', 'advcl', 'conj', 'attr', 'prep', 'pobj', 'conj']",1,1,1
+2408,"['root', 'advcl', 'conj', 'attr', 'prep', 'pobj', 'conj', 'conj']",1,1,1
+2409,"['root', 'advcl', 'conj', 'attr', 'prep', 'pobj', 'conj', 'conj', 'conj']",1,1,1
+2410,"['root', 'advcl', 'conj', 'attr', 'prep', 'pobj', 'conj', 'conj', 'conj', 'cc']",1,0,0
+2411,"['root', 'advcl', 'conj', 'attr', 'prep', 'pobj', 'conj', 'conj', 'conj', 'conj']",1,1,1
+2412,"['root', 'ccomp', 'nsubj', 'prep', 'pobj', 'acl']",1,0,0
+2413,"['root', 'ccomp', 'nsubj', 'prep', 'pobj', 'acl', 'prep']",1,0,0
+2414,"['root', 'ccomp', 'nsubj', 'prep', 'pobj', 'acl', 'prep', 'pobj']",1,0,0
+2415,"['root', 'acl', 'nsubj', 'punct']",2,0,0
+2416,"['root', 'acl', 'nsubj']",1,0,0
+2417,"['root', 'acl', 'nsubj', 'compound']",1,0,0
+2418,"['root', 'acl', 'dobj', 'compound']",1,1,1
+2419,"['root', 'acl', 'dobj']",1,0,0
+2420,"['root', 'advcl', 'conj', 'xcomp', 'aux']",1,0,0
+2421,"['root', 'advcl', 'conj', 'xcomp', 'dobj', 'advcl', 'advmod']",1,0,0
+2422,"['root', 'advcl', 'conj', 'xcomp', 'dobj', 'advcl']",1,0,0
+2423,"['root', 'advcl', 'conj', 'xcomp', 'dobj', 'advcl', 'nsubj']",1,0,0
+2424,"['root', 'advcl', 'conj', 'xcomp', 'dobj', 'punct']",1,0,0
+2425,"['root', 'advcl', 'conj', 'xcomp', 'dobj', 'poss']",1,0,0
+2426,"['root', 'advcl', 'conj', 'xcomp', 'dobj', 'compound']",1,0,0
+2427,"['root', 'advcl', 'agent', 'pobj', 'nummod']",1,0,0
+2428,"['root', 'advcl', 'agent', 'pobj', 'amod']",1,1,1
+2429,"['root', 'advcl', 'prep', 'punct']",2,0,0
+2430,"['root', 'nsubjpass', 'prep', 'pobj', 'conj', 'compound']",2,2,1
+2431,"['root', 'nsubjpass', 'prep', 'pobj', 'conj', 'cc']",1,0,0
+2432,"['root', 'nsubjpass', 'prep', 'pobj', 'conj', 'conj']",1,1,1
+2433,"['root', 'nsubjpass', 'prep', 'pobj', 'conj', 'conj', 'appos', 'det']",1,0,0
+2434,"['root', 'nsubjpass', 'prep', 'pobj', 'conj', 'conj', 'appos']",1,0,0
+2435,"['root', 'nsubjpass', 'prep', 'pobj', 'conj', 'conj', 'appos', 'prep']",1,0,0
+2436,"['root', 'nsubjpass', 'prep', 'pobj', 'conj', 'conj', 'appos', 'prep', 'pobj', 'compound']",2,1,1
+2437,"['root', 'advmod', 'neg']",1,0,0
+2438,"['root', 'agent', 'pobj', 'amod']",1,1,1
+2439,"['root', 'prep', 'pobj', 'prep', 'pobj', 'cc']",1,0,0
+2440,"['root', 'prep', 'pobj', 'prep', 'pobj', 'conj']",1,0,0
+2441,"['root', 'ccomp', 'xcomp', 'dobj', 'prep']",1,0,0
+2442,"['root', 'ccomp', 'xcomp', 'dobj', 'prep', 'pobj']",1,0,0
+2443,"['root', 'nsubj', 'appos', 'prep', 'pobj', 'appos', 'poss']",1,1,1
+2444,"['root', 'nsubj', 'appos', 'prep', 'pobj', 'appos', 'poss', 'case']",1,0,0
+2445,"['root', 'nsubj', 'appos', 'prep', 'pobj', 'appos', 'compound']",1,0,0
+2446,"['root', 'ccomp', 'prep', 'pobj', 'conj', 'compound']",1,0,0
+2447,"['root', 'nsubj', 'prep', 'pobj', 'appos', 'compound']",1,1,1
+2448,"['root', 'nsubj', 'prep', 'pobj', 'appos']",1,1,0
+2449,"['root', 'dobj', 'appos', 'punct']",4,0,0
+2450,"['root', 'npadvmod', 'advmod']",1,0,0
+2451,"['root', 'npadvmod', 'det']",1,0,0
+2452,"['root', 'ccomp', 'xcomp', 'prep', 'prep']",1,0,0
+2453,"['root', 'ccomp', 'xcomp', 'prep', 'prep', 'pobj']",1,0,0
+2454,"['root', 'cc', 'advmod']",2,0,0
+2455,"['root', 'nsubj', 'acl', 'aux']",2,0,0
+2456,"['root', 'nsubj', 'acl', 'dobj', 'det']",1,0,0
+2457,"['root', 'nsubj', 'acl', 'dobj']",1,0,0
+2458,"['root', 'nsubj', 'acl', 'dobj', 'amod']",1,0,0
+2459,"['root', 'nsubj', 'acl', 'dobj', 'compound']",1,1,1
+2460,"['root', 'nsubj', 'acl', 'dobj', 'punct']",4,0,0
+2461,"['root', 'nsubj', 'acl', 'dobj', 'relcl', 'nsubj']",1,0,0
+2462,"['root', 'nsubj', 'acl', 'dobj', 'relcl']",1,0,0
+2463,"['root', 'nsubj', 'acl', 'dobj', 'relcl', 'prep']",1,0,0
+2464,"['root', 'nsubj', 'acl', 'dobj', 'relcl', 'prep', 'pobj', 'det']",1,0,0
+2465,"['root', 'nsubj', 'acl', 'dobj', 'relcl', 'prep', 'pobj']",1,0,0
+2466,"['root', 'nsubj', 'acl', 'dobj', 'relcl', 'prep', 'pobj', 'compound']",1,0,0
+2467,"['root', 'prep', 'pobj', 'conj', 'conj', 'compound']",1,0,0
+2468,"['root', 'prep', 'pobj', 'conj', 'conj']",1,0,0
+2469,"['root', 'prep', 'pobj', 'conj', 'conj', 'cc']",1,0,0
+2470,"['root', 'prep', 'pobj', 'conj', 'conj', 'conj']",1,0,0
+2471,"['root', 'prep', 'pobj', 'conj', 'conj', 'conj', 'prep']",1,0,0
+2472,"['root', 'prep', 'pobj', 'conj', 'conj', 'conj', 'prep', 'pobj', 'poss', 'compound', 'amod']",1,0,0
+2473,"['root', 'prep', 'pobj', 'conj', 'conj', 'conj', 'prep', 'pobj', 'poss', 'compound']",2,1,1
+2474,"['root', 'prep', 'pobj', 'conj', 'conj', 'conj', 'prep', 'pobj', 'poss']",1,1,0
+2475,"['root', 'prep', 'pobj', 'conj', 'conj', 'conj', 'prep', 'pobj']",1,0,0
+2476,"['root', 'ccomp', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'compound']",1,0,0
+2477,"['root', 'ccomp', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'cc']",1,0,0
+2478,"['root', 'ccomp', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'poss', 'amod']",1,0,0
+2479,"['root', 'ccomp', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'conj']",1,0,0
+2480,"['root', 'ccomp', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'poss', 'case']",1,0,0
+2481,"['root', 'advcl', 'prep', 'pobj', 'punct']",4,0,0
+2482,"['root', 'advcl', 'prep', 'pobj', 'nmod']",1,0,0
+2483,"['root', 'nsubj', 'acl', 'agent', 'pobj', 'det']",1,0,0
+2484,"['root', 'nsubj', 'acl', 'agent', 'pobj', 'amod']",1,0,0
+2485,"['root', 'nsubj', 'acl', 'agent', 'pobj', 'prep']",1,0,0
+2486,"['root', 'nsubj', 'acl', 'agent', 'pobj', 'prep', 'pobj', 'det']",2,0,0
+2487,"['root', 'nsubj', 'acl', 'agent', 'pobj', 'prep', 'pobj']",1,1,0
+2488,"['root', 'nsubj', 'acl', 'agent', 'pobj', 'prep', 'pobj', 'amod']",1,0,0
+2489,"['root', 'nsubj', 'acl', 'agent', 'pobj', 'prep', 'pobj', 'compound']",2,2,1
+2490,"['root', 'nsubj', 'acl', 'agent', 'pobj', 'prep', 'pobj', 'punct']",2,0,0
+2491,"['root', 'nsubj', 'acl', 'agent', 'pobj', 'prep', 'pobj', 'relcl', 'nsubj']",1,0,0
+2492,"['root', 'nsubj', 'acl', 'agent', 'pobj', 'prep', 'pobj', 'relcl']",1,0,0
+2493,"['root', 'nsubj', 'acl', 'agent', 'pobj', 'prep', 'pobj', 'relcl', 'dobj']",1,0,0
+2494,"['root', 'nsubj', 'acl', 'agent', 'pobj', 'prep', 'pobj', 'relcl', 'dobj', 'prep']",1,0,0
+2495,"['root', 'nsubj', 'acl', 'agent', 'pobj', 'prep', 'pobj', 'relcl', 'dobj', 'prep', 'pobj']",1,0,0
+2496,"['root', 'nsubj', 'acl', 'agent', 'pobj', 'prep', 'pobj', 'relcl', 'dobj', 'prep', 'pobj', 'prep']",1,0,0
+2497,"['root', 'nsubj', 'acl', 'agent', 'pobj', 'prep', 'pobj', 'relcl', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'amod', 'npadvmod']",1,0,0
+2498,"['root', 'nsubj', 'acl', 'agent', 'pobj', 'prep', 'pobj', 'relcl', 'dobj', 'prep', 'pobj', 'prep', 'pobj']",1,0,0
+2499,"['root', 'dobj', 'conj', 'nsubj', 'det']",1,1,1
+2500,"['root', 'dobj', 'conj', 'nsubj']",1,1,0
+2501,"['root', 'dobj', 'conj', 'attr']",1,1,0
+2502,"['root', 'dobj', 'conj', 'conj', 'compound']",2,2,2
+2503,"['root', 'dobj', 'prep', 'pobj', 'cc']",1,0,0
+2504,"['root', 'dobj', 'prep', 'pobj', 'conj']",1,0,0
+2505,"['root', 'dobj', 'prep', 'pobj', 'conj', 'compound']",1,1,1
+2506,"['root', 'dobj', 'prep', 'pobj', 'conj', 'prep']",1,0,0
+2507,"['root', 'dobj', 'prep', 'pobj', 'conj', 'prep', 'pobj', 'compound']",1,1,1
+2508,"['root', 'dobj', 'prep', 'pobj', 'conj', 'prep', 'pobj']",1,1,0
+2509,"['root', 'dobj', 'prep', 'pobj', 'conj', 'prep', 'pobj', 'prep']",1,0,0
+2510,"['root', 'dobj', 'prep', 'pobj', 'conj', 'prep', 'pobj', 'prep', 'pobj']",1,0,0
+2511,"['root', 'dobj', 'prep', 'pobj', 'conj', 'prep', 'pobj', 'prep', 'pobj', 'amod']",1,0,0
+2512,"['root', 'dobj', 'prep', 'pobj', 'conj', 'prep', 'pobj', 'prep', 'pobj', 'prep']",1,0,0
+2513,"['root', 'dobj', 'prep', 'pobj', 'conj', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj']",1,1,1
+2514,"['root', 'prep', 'pobj', 'prep', 'amod']",1,0,0
+2515,"['root', 'prep', 'pobj', 'prep', 'pcomp']",1,0,0
+2516,"['root', 'prep', 'pobj', 'prep', 'pcomp', 'dobj', 'det']",1,0,0
+2517,"['root', 'prep', 'pobj', 'prep', 'pcomp', 'dobj']",1,0,0
+2518,"['root', 'prep', 'pobj', 'prep', 'pcomp', 'dobj', 'compound']",2,0,0
+2519,"['root', 'prep', 'pobj', 'prep', 'pcomp', 'dobj', 'compound', 'compound']",1,0,0
+2520,"['root', 'prep', 'pobj', 'prep', 'pcomp', 'dobj', 'cc']",2,0,0
+2521,"['root', 'prep', 'pobj', 'prep', 'pcomp', 'dobj', 'conj', 'nmod']",1,0,0
+2522,"['root', 'prep', 'pobj', 'prep', 'pcomp', 'dobj', 'conj']",1,0,0
+2523,"['root', 'prep', 'pobj', 'prep', 'pcomp', 'dobj', 'conj', 'nmod', 'punct']",1,0,0
+2524,"['root', 'prep', 'pobj', 'prep', 'pcomp', 'dobj', 'relcl', 'ccomp', 'nsubj']",1,0,0
+2525,"['root', 'prep', 'pobj', 'prep', 'pcomp', 'dobj', 'relcl', 'ccomp']",1,0,0
+2526,"['root', 'prep', 'pobj', 'prep', 'pcomp', 'dobj', 'relcl']",1,0,0
+2527,"['root', 'prep', 'pobj', 'prep', 'pcomp', 'dobj', 'relcl', 'ccomp', 'dobj', 'amod']",1,0,0
+2528,"['root', 'prep', 'pobj', 'prep', 'pcomp', 'dobj', 'relcl', 'ccomp', 'dobj']",1,0,0
+2529,"['root', 'prep', 'pobj', 'prep', 'pcomp', 'dobj', 'relcl', 'ccomp', 'dobj', 'nmod']",1,0,0
+2530,"['root', 'prep', 'pobj', 'prep', 'pcomp', 'dobj', 'relcl', 'ccomp', 'dobj', 'punct']",1,0,0
+2531,"['root', 'prep', 'pobj', 'prep', 'pcomp', 'dobj', 'relcl', 'ccomp', 'conj']",1,0,0
+2532,"['root', 'prep', 'pobj', 'prep', 'pcomp', 'dobj', 'relcl', 'ccomp', 'conj', 'dobj', 'amod']",1,0,0
+2533,"['root', 'prep', 'pobj', 'prep', 'pcomp', 'dobj', 'relcl', 'ccomp', 'conj', 'dobj']",1,0,0
+2534,"['root', 'prep', 'amod', 'cc', 'advmod']",1,0,0
+2535,"['root', 'nsubj', 'appos', 'prep', 'pobj', 'compound', 'compound']",2,1,1
+2536,"['root', 'ccomp', 'ccomp', 'nsubj', 'amod']",2,0,0
+2537,"['root', 'ccomp', 'ccomp', 'nsubj', 'amod', 'prep']",1,0,0
+2538,"['root', 'ccomp', 'ccomp', 'nsubj', 'amod', 'prep', 'pcomp']",1,0,0
+2539,"['root', 'ccomp', 'ccomp', 'nsubj', 'amod', 'prep', 'pcomp', 'prep']",1,0,0
+2540,"['root', 'ccomp', 'ccomp', 'nsubj', 'amod', 'prep', 'pcomp', 'prep', 'pobj', 'amod']",1,0,0
+2541,"['root', 'ccomp', 'ccomp', 'nsubj', 'amod', 'prep', 'pcomp', 'prep', 'pobj']",1,0,0
+2542,"['root', 'ccomp', 'ccomp', 'dobj', 'relcl', 'nsubj']",1,0,0
+2543,"['root', 'ccomp', 'ccomp', 'dobj', 'relcl']",1,0,0
+2544,"['root', 'ccomp', 'ccomp', 'dobj', 'relcl', 'prep']",1,0,0
+2545,"['root', 'ccomp', 'ccomp', 'dobj', 'relcl', 'prep', 'pobj']",1,0,0
+2546,"['root', 'ccomp', 'ccomp', 'dobj', 'relcl', 'prep', 'pobj', 'prep', 'pcomp']",1,0,0
+2547,"['root', 'ccomp', 'ccomp', 'dobj', 'relcl', 'prep', 'pobj', 'prep', 'pcomp', 'dobj', 'det']",1,0,0
+2548,"['root', 'ccomp', 'ccomp', 'dobj', 'relcl', 'prep', 'pobj', 'prep', 'pcomp', 'dobj']",1,0,0
+2549,"['root', 'acomp', 'advcl', 'mark']",1,0,0
+2550,"['root', 'acomp', 'advcl']",1,0,0
+2551,"['root', 'acomp', 'advcl', 'advmod', 'npadvmod', 'nummod', 'quantmod']",1,0,0
+2552,"['root', 'acomp', 'advcl', 'advmod', 'npadvmod', 'nummod', 'punct']",1,0,0
+2553,"['root', 'acomp', 'advcl', 'advmod', 'npadvmod']",1,0,0
+2554,"['root', 'acomp', 'advcl', 'advmod']",1,0,0
+2555,"['root', 'attr', 'acl', 'nsubj']",1,0,0
+2556,"['root', 'attr', 'acl', 'attr', 'det']",1,0,0
+2557,"['root', 'attr', 'acl', 'attr']",1,0,0
+2558,"['root', 'attr', 'acl', 'attr', 'amod']",1,0,0
+2559,"['root', 'attr', 'acl', 'advmod']",1,0,0
+2560,"['root', 'ccomp', 'prep', 'pobj', 'amod', 'prep', 'pobj']",1,0,0
+2561,"['root', 'ccomp', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'prep']",1,0,0
+2562,"['root', 'ccomp', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'prep', 'pobj', 'amod']",1,0,0
+2563,"['root', 'ccomp', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'prep', 'pobj']",1,0,0
+2564,"['root', 'ccomp', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'prep', 'pobj', 'punct']",2,0,0
+2565,"['root', 'ccomp', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'amod']",1,0,0
+2566,"['root', 'ccomp', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'prep', 'pobj', 'conj']",1,0,0
+2567,"['root', 'ccomp', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'conj']",1,0,0
+2568,"['root', 'ccomp', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'conj', 'prep']",1,0,0
+2569,"['root', 'ccomp', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'conj', 'prep', 'pobj']",1,0,0
+2570,"['root', 'ccomp', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'conj', 'cc']",1,0,0
+2571,"['root', 'ccomp', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'conj', 'conj', 'amod', 'advmod']",1,0,0
+2572,"['root', 'ccomp', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'conj', 'conj', 'amod']",1,0,0
+2573,"['root', 'ccomp', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'conj', 'conj', 'acl']",1,0,0
+2574,"['root', 'ccomp', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'conj', 'conj', 'acl', 'agent']",1,0,0
+2575,"['root', 'ccomp', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'conj', 'conj', 'acl', 'agent', 'pobj', 'amod']",1,0,0
+2576,"['root', 'ccomp', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'conj', 'conj', 'acl', 'agent', 'pobj']",1,0,0
+2577,"['root', 'ccomp', 'advcl', 'auxpass']",2,0,0
+2578,"['root', 'prep', 'pobj', 'relcl', 'prep', 'pobj', 'amod']",2,0,0
+2579,"['root', 'prep', 'pobj', 'relcl', 'prep', 'pobj']",2,0,0
+2580,"['root', 'prep', 'pobj', 'conj', 'nsubj']",1,0,0
+2581,"['root', 'prep', 'pobj', 'conj', 'nsubj', 'relcl', 'nsubj']",1,0,0
+2582,"['root', 'prep', 'pobj', 'conj', 'nsubj', 'relcl']",1,0,0
+2583,"['root', 'prep', 'pobj', 'conj', 'ccomp', 'nsubj']",1,0,0
+2584,"['root', 'prep', 'pobj', 'conj', 'ccomp']",1,0,0
+2585,"['root', 'prep', 'pobj', 'conj', 'ccomp', 'aux']",1,0,0
+2586,"['root', 'prep', 'pobj', 'conj', 'ccomp', 'dobj']",1,0,0
+2587,"['root', 'prep', 'pobj', 'conj', 'ccomp', 'prep', 'pobj', 'det']",1,0,0
+2588,"['root', 'prep', 'pobj', 'conj', 'ccomp', 'prep', 'pobj']",1,0,0
+2589,"['root', 'ccomp', 'attr', 'advmod']",1,0,0
+2590,"['root', 'ccomp', 'attr', 'prep', 'pobj', 'det']",1,0,0
+2591,"['root', 'ccomp', 'attr', 'prep', 'pobj', 'amod']",1,0,0
+2592,"['root', 'ccomp', 'attr', 'cc']",1,0,0
+2593,"['root', 'ccomp', 'attr', 'cc', 'advmod']",1,0,0
+2594,"['root', 'ccomp', 'attr', 'conj']",1,0,0
+2595,"['root', 'ccomp', 'attr', 'conj', 'prep']",1,0,0
+2596,"['root', 'ccomp', 'attr', 'conj', 'prep', 'pobj']",1,0,0
+2597,"['root', 'advcl', 'ccomp', 'attr', 'prep']",1,0,0
+2598,"['root', 'advcl', 'ccomp', 'attr', 'prep', 'pobj', 'det']",1,0,0
+2599,"['root', 'advcl', 'ccomp', 'attr', 'prep', 'pobj']",1,0,0
+2600,"['root', 'advcl', 'ccomp', 'attr', 'prep', 'pobj', 'compound']",1,1,1
+2601,"['root', 'ccomp', 'oprd', 'det']",2,1,0
+2602,"['root', 'ccomp', 'oprd']",1,1,0
+2603,"['root', 'ccomp', 'oprd', 'amod']",1,1,1
+2604,"['root', 'ccomp', 'oprd', 'prep']",1,1,0
+2605,"['root', 'ccomp', 'oprd', 'prep', 'pobj']",1,1,0
+2606,"['root', 'ccomp', 'oprd', 'prep', 'pobj', 'compound']",1,1,0
+2607,"['root', 'ccomp', 'conj', 'dobj', 'poss']",1,0,0
+2608,"['root', 'nsubjpass', 'quantmod']",4,0,0
+2609,"['root', 'attr', 'prep', 'pobj', 'cc']",1,0,0
+2610,"['root', 'attr', 'prep', 'pobj', 'conj', 'amod']",1,0,0
+2611,"['root', 'attr', 'prep', 'pobj', 'conj']",1,0,0
+2612,"['root', 'attr', 'prep', 'pobj', 'conj', 'prep']",1,0,0
+2613,"['root', 'attr', 'prep', 'pobj', 'conj', 'prep', 'pobj']",1,0,0
+2614,"['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'relcl', 'dobj', 'compound']",1,0,0
+2615,"['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'relcl', 'dobj']",1,0,0
+2616,"['root', 'ccomp', 'advcl', 'nsubjpass', 'poss']",1,0,0
+2617,"['root', 'ccomp', 'advcl', 'nsubjpass', 'compound', 'compound']",2,0,0
+2618,"['root', 'ccomp', 'advcl', 'nsubjpass', 'compound']",1,0,0
+2619,"['root', 'ccomp', 'advcl', 'conj', 'advmod']",1,0,0
+2620,"['root', 'ccomp', 'advcl', 'conj', 'dobj', 'det']",1,0,0
+2621,"['root', 'ccomp', 'advcl', 'conj', 'dobj', 'amod', 'advmod']",1,0,0
+2622,"['root', 'ccomp', 'advcl', 'conj', 'dobj', 'compound', 'amod']",1,0,0
+2623,"['root', 'advcl', 'ccomp', 'acomp']",1,0,0
+2624,"['root', 'advcl', 'ccomp', 'acomp', 'advmod']",1,0,0
+2625,"['root', 'advcl', 'ccomp', 'acomp', 'xcomp']",1,0,0
+2626,"['root', 'advcl', 'ccomp', 'acomp', 'xcomp', 'dobj']",1,0,0
+2627,"['root', 'advcl', 'ccomp', 'acomp', 'xcomp', 'dobj', 'prep']",1,0,0
+2628,"['root', 'advcl', 'ccomp', 'acomp', 'xcomp', 'dobj', 'prep', 'pobj', 'amod']",1,0,0
+2629,"['root', 'advcl', 'ccomp', 'acomp', 'xcomp', 'dobj', 'prep', 'pobj']",1,0,0
+2630,"['root', 'prep', 'pobj', 'acl', 'advmod']",1,0,0
+2631,"['root', 'prep', 'pobj', 'acl', 'prep', 'pobj', 'punct']",2,0,0
+2632,"['root', 'prep', 'pobj', 'acl', 'prep', 'pobj', 'conj']",1,0,0
+2633,"['root', 'prep', 'pobj', 'acl', 'prep', 'pobj', 'conj', 'cc']",1,0,0
+2634,"['root', 'prep', 'pobj', 'acl', 'prep', 'pobj', 'conj', 'conj', 'amod']",1,0,0
+2635,"['root', 'prep', 'pobj', 'acl', 'prep', 'pobj', 'conj', 'conj']",1,0,0
+2636,"['root', 'nsubj', 'appos', 'cc']",2,0,0
+2637,"['root', 'nsubj', 'appos', 'conj']",1,0,0
+2638,"['root', 'nsubj', 'appos', 'conj', 'prep', 'pobj']",2,1,1
+2639,"['root', 'nsubj', 'appos', 'conj', 'prep', 'advmod']",1,0,0
+2640,"['root', 'nsubj', 'appos', 'conj', 'prep']",1,0,0
+2641,"['root', 'prep', 'pcomp', 'nsubj', 'det']",1,0,0
+2642,"['root', 'prep', 'pcomp', 'nsubj', 'nummod']",1,0,0
+2643,"['root', 'prep', 'pcomp', 'conj', 'dobj']",1,0,0
+2644,"['root', 'prep', 'pcomp', 'conj', 'advmod']",1,0,0
+2645,"['root', 'prep', 'pcomp', 'conj', 'prep', 'pobj', 'amod']",1,0,0
+2646,"['root', 'ccomp', 'conj', 'expl']",1,0,0
+2647,"['root', 'ccomp', 'conj', 'attr', 'nummod']",1,0,0
+2648,"['root', 'ccomp', 'conj', 'attr']",1,0,0
+2649,"['root', 'attr', 'prep', 'pobj', 'relcl', 'xcomp', 'aux']",1,0,0
+2650,"['root', 'attr', 'prep', 'pobj', 'relcl', 'xcomp']",1,0,0
+2651,"['root', 'attr', 'prep', 'pobj', 'relcl', 'xcomp', 'dobj']",1,0,0
+2652,"['root', 'attr', 'prep', 'pobj', 'relcl', 'xcomp', 'dobj', 'compound']",1,0,0
+2653,"['root', 'conj', 'prep', 'amod']",1,0,0
+2654,"['root', 'nsubjpass', 'nummod', 'advmod']",1,0,0
+2655,"['root', 'prep', 'pobj', 'relcl', 'nsubj', 'det']",1,0,0
+2656,"['root', 'prep', 'pobj', 'relcl', 'nsubj', 'punct']",2,0,0
+2657,"['root', 'prep', 'pobj', 'relcl', 'prep', 'advmod']",2,0,0
+2658,"['root', 'prep', 'pobj', 'relcl', 'prep', 'pobj', 'poss']",2,0,0
+2659,"['root', 'prep', 'pobj', 'relcl', 'dobj', 'amod']",1,0,0
+2660,"['root', 'prep', 'pobj', 'relcl', 'dobj', 'relcl', 'prep']",1,0,0
+2661,"['root', 'prep', 'pobj', 'relcl', 'dobj', 'relcl']",1,0,0
+2662,"['root', 'prep', 'pobj', 'relcl', 'dobj', 'relcl', 'prep', 'pobj']",1,0,0
+2663,"['root', 'prep', 'pobj', 'relcl', 'dobj', 'relcl', 'nsubj']",1,0,0
+2664,"['root', 'prep', 'pobj', 'relcl', 'dobj', 'relcl', 'aux']",1,0,0
+2665,"['root', 'prep', 'pobj', 'relcl', 'dobj', 'relcl', 'advmod']",2,0,0
+2666,"['root', 'conj', 'prep', 'pobj', 'nummod', 'cc']",1,0,0
+2667,"['root', 'conj', 'prep', 'pobj', 'nummod', 'conj']",1,0,0
+2668,"['root', 'conj', 'expl']",1,0,0
+2669,"['root', 'conj', 'attr', 'conj', 'amod', 'advmod']",1,0,0
+2670,"['root', 'conj', 'attr', 'conj', 'amod']",1,0,0
+2671,"['root', 'conj', 'attr', 'conj']",1,0,0
+2672,"['root', 'appos', 'prep', 'pobj', 'nummod']",2,0,0
+2673,"['root', 'appos', 'prep', 'pobj', 'punct']",1,0,0
+2674,"['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'amod']",1,0,0
+2675,"['root', 'pobj', 'poss', 'det']",1,0,0
+2676,"['root', 'pobj', 'poss']",1,0,0
+2677,"['root', 'pobj', 'poss', 'case']",1,0,0
+2678,"['root', 'dep', 'dobj', 'det']",1,0,0
+2679,"['root', 'dep', 'dobj']",1,0,0
+2680,"['root', 'dep', 'dobj', 'prep']",2,0,0
+2681,"['root', 'dep', 'dobj', 'prep', 'pobj', 'poss', 'det']",1,0,0
+2682,"['root', 'dep', 'dobj', 'prep', 'pobj', 'poss']",1,0,0
+2683,"['root', 'dep', 'dobj', 'prep', 'pobj']",1,0,0
+2684,"['root', 'dep', 'dobj', 'prep', 'pobj', 'poss', 'case']",1,0,0
+2685,"['root', 'ccomp', 'dobj', 'appos', 'quantmod']",1,0,0
+2686,"['root', 'ccomp', 'dobj', 'appos']",1,0,0
+2687,"['root', 'ccomp', 'dobj', 'appos', 'compound']",1,0,0
+2688,"['root', 'ccomp', 'dobj', 'prep', 'pobj', 'acl']",1,0,0
+2689,"['root', 'ccomp', 'dobj', 'prep', 'pobj', 'acl', 'prep']",1,0,0
+2690,"['root', 'ccomp', 'dobj', 'prep', 'pobj', 'acl', 'prep', 'pobj', 'amod']",1,0,0
+2691,"['root', 'ccomp', 'dobj', 'prep', 'pobj', 'acl', 'prep', 'pobj']",1,0,0
+2692,"['root', 'prep', 'pcomp', 'ccomp', 'nsubjpass', 'nmod']",1,0,0
+2693,"['root', 'prep', 'pcomp', 'ccomp', 'nsubjpass']",2,0,0
+2694,"['root', 'prep', 'pcomp', 'ccomp', 'nsubjpass', 'nummod', 'compound']",1,0,0
+2695,"['root', 'prep', 'pcomp', 'ccomp', 'nsubjpass', 'nummod']",2,0,0
+2696,"['root', 'prep', 'pcomp', 'ccomp', 'nsubjpass', 'prep']",1,0,0
+2697,"['root', 'prep', 'pcomp', 'ccomp', 'nsubjpass', 'prep', 'pobj', 'det']",1,0,0
+2698,"['root', 'prep', 'pcomp', 'ccomp', 'nsubjpass', 'prep', 'pobj', 'nummod', 'compound']",1,0,0
+2699,"['root', 'prep', 'pcomp', 'ccomp', 'auxpass']",1,0,0
+2700,"['root', 'ccomp', 'attr', 'poss', 'det']",1,0,0
+2701,"['root', 'ccomp', 'attr', 'poss']",1,0,0
+2702,"['root', 'ccomp', 'attr', 'poss', 'amod']",1,0,0
+2703,"['root', 'ccomp', 'attr', 'poss', 'case']",1,0,0
+2704,"['root', 'ccomp', 'attr', 'prep', 'pobj', 'poss']",1,0,0
+2705,"['root', 'ccomp', 'attr', 'prep', 'pobj', 'compound', 'nummod']",1,0,0
+2706,"['root', 'ccomp', 'conj', 'prep', 'pobj', 'nummod']",1,0,0
+2707,"['root', 'nummod', 'quantmod']",1,0,0
+2708,"['root', 'nsubjpass', 'conj', 'compound']",1,1,1
+2709,"['root', 'prep', 'pcomp', 'mark']",1,0,0
+2710,"['root', 'prep', 'pcomp', 'nsubjpass', 'compound']",2,2,1
+2711,"['root', 'prep', 'pcomp', 'xcomp', 'aux']",3,0,0
+2712,"['root', 'prep', 'pcomp', 'xcomp']",1,0,0
+2713,"['root', 'prep', 'pcomp', 'xcomp', 'prep', 'pobj', 'det']",1,0,0
+2714,"['root', 'prep', 'pcomp', 'xcomp', 'prep', 'pobj']",1,1,0
+2715,"['root', 'prep', 'pcomp', 'xcomp', 'prep', 'pobj', 'compound']",2,2,1
+2716,"['root', 'prep', 'pcomp', 'xcomp', 'advcl']",1,0,0
+2717,"['root', 'prep', 'pcomp', 'xcomp', 'advcl', 'dobj', 'det']",1,0,0
+2718,"['root', 'prep', 'pcomp', 'xcomp', 'advcl', 'dobj']",1,0,0
+2719,"['root', 'prep', 'pcomp', 'xcomp', 'advcl', 'dobj', 'amod']",1,0,0
+2720,"['root', 'prep', 'pcomp', 'xcomp', 'advcl', 'xcomp']",1,0,0
+2721,"['root', 'prep', 'pcomp', 'xcomp', 'advcl', 'xcomp', 'dobj']",1,0,0

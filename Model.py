@@ -27,6 +27,7 @@ class GNN(torch.nn.Module):
         super().__init__()
         self.conv1 = SAGEConv((-1, -1), hidden_channels)
         self.batch_norm1 = BatchNorm(hidden_channels)
+        self.pool1 = TopKPooling(hidden_channels, ratio=0.8)
         self.lin1 = Linear(-1, hidden_channels)
         self.conv2 = SAGEConv((-1, -1), int(hidden_channels/2))
         self.batch_norm2 = BatchNorm(int(hidden_channels/2))
@@ -137,22 +138,22 @@ class ModelLink(torch.nn.Module):
 
 
 class Net(torch.nn.Module):
-    def __init__(self, n_labels):
+    def __init__(self):
         super(Net, self).__init__()
 
-        self.conv1 = SAGEConv(512, 512)
+        self.conv1 = SAGEConv((-1, -1), 512)
         self.pool1 = TopKPooling(512, ratio=0.8)
-        self.conv2 = SAGEConv(512, 512)
+        self.conv2 = SAGEConv((-1, -1), 512)
         self.pool2 = TopKPooling(512, ratio=0.8)
-        self.conv3 = SAGEConv(512, 512)
+        self.conv3 = SAGEConv((-1, -1), 512)
         self.pool3 = TopKPooling(512, ratio=0.8)
-        #self.item_embedding = torch.nn.Embedding(num_embeddings=dim_input, embedding_dim=512)
-        # self.lin0 = torch.nn.Linear(dim_input, 512)
-        self.lin1 = torch.nn.Linear(512 * 2, 512)
-        self.lin2 = torch.nn.Linear(512, 512 // 2)
-        self.lin3 = torch.nn.Linear(512 // 2, n_labels)
+        #self.item_embedding = torch.nn.Embedding(num_embeddings=, embedding_dim=512)
+        #self.lin0 = torch.nn.Linear(-1, 512)
+        self.lin1 = Linear(-1, 512)
+        self.lin2 = Linear(-1, 512 // 2)
+        self.lin3 = Linear(-1, 7)
         self.bn1 = torch.nn.BatchNorm1d(512)
-        self.bn2 = torch.nn.BatchNorm1d(512 // 2)
+        self.bn2 = torch.nn.BatchNorm1d(512//2)
         self.act1 = torch.nn.ReLU()
         self.act2 = torch.nn.ReLU()
 
@@ -186,7 +187,7 @@ class Net(torch.nn.Module):
         x = self.act2(x)
         x = F.dropout(x, p=0.5, training=self.training)
 
-        # x = torch.sigmoid(self.lin3(x))
+        x = torch.sigmoid(self.lin3(x))
         x = self.lin3(x).squeeze(1)
         # print(x)
 

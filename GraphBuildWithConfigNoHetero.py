@@ -6,21 +6,21 @@ import pandas as pd
 import torch
 from torch_geometric.data import HeteroData
 import random
-from typing import List
-from vertexai.language_models import TextEmbeddingInput, TextEmbeddingModel
+
+def build_pandas_from_config(config_data):
+    dataframe_edges = pd.DataFrame()
+    dataframe_attributes = pd.DataFrame()
+    for layer in config_data['nodes']:
+        print(layer['edges'])
+        print(layer['attributes'])
 
 def fetch_graph(edges, nodes, indexes, ids_to_fetch, config_data, test):
     print("--- LOADING DATASET ---")
-    if test:
-        base_uri = config_data['connection'][0]['base_uri_test']
-        graph_name = config_data['connection'][0]['graph_name_test']
-    else:
-        base_uri = config_data['connection'][0]['base_uri']
-        graph_name = config_data['connection'][0]['graph_name']
-
+    base_uri = config_data['connection'][0]['base_uri']
+    graph_name = config_data['connection'][0]['graph_name']
     conection_string = config_data['connection'][0]['connection_uri']
     ntx = BuildNetworkx(base_uri, graph_name, conection_string)
-    embeds = {}
+    dataframe = build_pandas_from_config(config_data)
     for i in tqdm(range(len(ids_to_fetch)), desc="Loading Dataset"):
         idx = ids_to_fetch[i]
         graph = ntx.fetch_graph([idx])
@@ -32,6 +32,19 @@ def fetch_graph(edges, nodes, indexes, ids_to_fetch, config_data, test):
             for s, p, o in graph.triples((None, RDF.type, URIRef(layer['uri']))):
                 #node_type = s.__str__().split("#")[-1].split("_")[0]
                 node_features = {}
+                # if not test:
+                #     chance = 0
+                #     for s3, p3, o3 in graph.triples((URIRef(s), URIRef("http://www.ieeta-bit.pt/Subtask1_DataProperties_v2#entityPresent"), None)):
+                #         #print(s3,p3,o3)
+                #         p3_type = p3.__str__().split("#")[-1]
+                #         if p3_type == "entityPresent":
+                #             if o3.__str__() == "No":
+                #                 chance = random.random()
+                #             else:
+                #                 chance = 0
+                #
+                #     if chance > 0.02:
+                #         break
                 for s2, p2, o2 in graph.triples((URIRef(s), None, None)):
                     uri_type = p2.__str__().split("#")[-1]
                     #An edge to add
@@ -43,29 +56,9 @@ def fetch_graph(edges, nodes, indexes, ids_to_fetch, config_data, test):
                     else:
                         node_features[uri_type] = o2.__str__()
 
-                    # if uri_type == 'senttext':
-                    #     sentence = o2.__str__().replace("  ", " ").split(" ")
-                    #     if "" in sentence:
-                    #         sentence.remove("")
-                    #    sentence_id = s2.__str__().split("#")[-1].split("Sentence")[-1]
-                        # try:
-                        #     embeds[sentence_id] = [sentence, embed_text(sentence, "CLASSIFICATION", "text-multilingual-embedding-preview-0409")]
-                        # except:
-                        #     print("--- ERROR OCCURED ON GETTING SENTENCE EMBEDDINGS ---")
-                        #     print(sentence)
-                node_features['uri'] = s2.__str__().split("#")[-1]
-                if layer['name'] == 'word':
-                    if node_features['word'] != '':
-                        nodes[layer['name']].append(node_features)
-                        add = True
-                    else:
-                        add = False
-                else:
-                    nodes[layer['name']].append(node_features)
-                    add = True
-                # nodes[layer['name']].append(node_features)
-                if s.__str__() not in indexes[layer['name']] and add:
+                if s.__str__() not in indexes[layer['name']]:
                     indexes[layer['name']].append(s.__str__())
+                nodes[layer['name']].append(node_features)
     return edges, nodes, indexes
 
 
@@ -79,16 +72,6 @@ def map_uri_to_index(indexes, config_data):
         unique_ids[layer['name']] = unique_ids_df
     return unique_ids
 
-def embed_text(
-    texts: List[str] = ["banana muffins? ", "banana bread? banana muffins?"],
-    task: str = "RETRIEVAL_DOCUMENT",
-    model_name: str = "textembedding-gecko@003",
-) -> List[List[float]]:
-    """Embeds texts with a pre-trained, foundational model."""
-    model = TextEmbeddingModel.from_pretrained(model_name)
-    inputs = [TextEmbeddingInput(text, task) for text in texts]
-    embeddings = model.get_embeddings(inputs)
-    return [embedding.values for embedding in embeddings]
 
 def build_node_relationships(uniqueIds, nodeList, source_name, target_name, balancing):
     original_df = pd.DataFrame(data=nodeList, columns=["source", "target"])
@@ -114,32 +97,43 @@ def build_node_relationships(uniqueIds, nodeList, source_name, target_name, bala
     source_df = source_df.iloc[index_targets]
 
     source = torch.from_numpy(source_df['mappedId'].values)
-    #source = source.type(torch.int64)
     target = torch.from_numpy((target_df['mappedId'].values))
-    #target = target.type(torch.int64)
-    to_remove = torch.isnan(target)
-    source = source[to_remove != True]
-    target = target[to_remove != True]
-    to_remove_source = torch.isnan(source)
-    source = source[to_remove_source != True]
-    target = target[to_remove_source != True]
-    source = source.type(torch.int64)
-    target = target.type(torch.int64)
     node_tensor = torch.stack([source, target], dim=0)
+    #print(node_tensor)
     return node_tensor
 
 def build_targets(nodes_df, config_data, test=False, targets_test=None):
     nodes_df[config_data['target'][0]['name'][0]].fillna("0", inplace=True)
 
     # Replace names with their first name
+    nodes_df[config_data['target'][0]['name'][0]] = nodes_df[config_data['target'][0]['name'][0]].replace(
+        "2", "1")
+    nodes_df[config_data['target'][0]['name'][0]] = nodes_df[config_data['target'][0]['name'][0]].replace(
+        "4", "3")
+    nodes_df[config_data['target'][0]['name'][0]] = nodes_df[config_data['target'][0]['name'][0]].replace(
+        "6", "5")
+    nodes_df[config_data['target'][0]['name'][0]] = nodes_df[config_data['target'][0]['name'][0]].replace(
+        "8", "7")
     # nodes_df[config_data['target'][0]['name'][0]] = nodes_df[config_data['target'][0]['name'][0]].replace(
-    #     "2", "1")
+    #     "Application_Deposition", "Application")
     # nodes_df[config_data['target'][0]['name'][0]] = nodes_df[config_data['target'][0]['name'][0]].replace(
-    #     "4", "3")
+    #     "PlugIn_Creation", "PlugIn")
     # nodes_df[config_data['target'][0]['name'][0]] = nodes_df[config_data['target'][0]['name'][0]].replace(
-    #     "6", "5")
+    #     "PlugIn_Mention", "PlugIn")
     # nodes_df[config_data['target'][0]['name'][0]] = nodes_df[config_data['target'][0]['name'][0]].replace(
-    #     "8", "7")
+    #     "PlugIn_Usage", "PlugIn")
+    # nodes_df[config_data['target'][0]['name'][0]] = nodes_df[config_data['target'][0]['name'][0]].replace(
+    #     "PlugIn_Deposition", "PlugIn")
+    # nodes_df[config_data['target'][0]['name'][0]] = nodes_df[config_data['target'][0]['name'][0]].replace(
+    #     "ProgrammingEnvironment_Usage", "ProgrammingEnvironment")
+    # nodes_df[config_data['target'][0]['name'][0]] = nodes_df[config_data['target'][0]['name'][0]].replace(
+    #     "ProgrammingEnvironment_Mention", "ProgrammingEnvironment")
+    # nodes_df[config_data['target'][0]['name'][0]] = nodes_df[config_data['target'][0]['name'][0]].replace(
+    #     "SoftwareCoreference_Deposition", "SoftwareCoreference")
+    # nodes_df[config_data['target'][0]['name'][0]] = nodes_df[config_data['target'][0]['name'][0]].replace(
+    #     "OperatingSystem_Usage", "OperatingSystem")
+    # nodes_df[config_data['target'][0]['name'][0]] = nodes_df[config_data['target'][0]['name'][0]].replace(
+    #     "OperatingSystem_Mention", "OperatingSystem")
 
     print(nodes_df[config_data['target'][0]['name'][0]].value_counts())
     #print(nodes_df[config_data['target'][0]['name'][0]])
@@ -160,7 +154,7 @@ def build_targets(nodes_df, config_data, test=False, targets_test=None):
 
     return targets, unique_targets_df, len(unique_targets_df)
 
-def build_graph(nodes, edges, mapped_ids, config_data, graph_data , test= False, test_targets=None, embedding = True):
+def build_graph(nodes, edges, mapped_ids, config_data, graph_data , test= False, test_targets=None):
     for layer in config_data['nodes']:
         column_list = []
         nodes_df = pd.DataFrame.from_records(nodes[layer['name']])
@@ -168,8 +162,7 @@ def build_graph(nodes, edges, mapped_ids, config_data, graph_data , test= False,
         for attributes in layer['attributes']:
             if attributes in nodes_df.columns:
                 column_list.append(attributes)
-                if attributes != 'embeddings':
-                    nodes_df[attributes] = nodes_df[attributes].astype('category').cat.codes
+                nodes_df[attributes] = nodes_df[attributes].astype('category').cat.codes
             else:
                 print("---- WARNING ----")
                 print(attributes, " is present in the config file but was not found in the data.")
@@ -182,83 +175,24 @@ def build_graph(nodes, edges, mapped_ids, config_data, graph_data , test= False,
                 targets, unique_targets, size_targets = build_targets(nodes_df, config_data)
             graph_data[layer['name']].y = targets
             graph_data.num_classes = size_targets
-        if layer['name'] == 'word':
-            if embedding:
-                print(column_list)
-                column_list.remove('embeddings')
-
-            column_list.remove('word')
-            column_list.remove('lemma')
-            nodes_appropriate = nodes_df[column_list]
-            nodes_tensor = torch.from_numpy(nodes_appropriate.values).to(torch.float)
-            if embedding:
-                embeds = nodes_df['embeddings'].values
-                embeds_tensor = torch.stack(embeds.tolist(), dim=0)
-                nodes_tensor = torch.cat((nodes_tensor, embeds_tensor), 1)
-        else:
-            nodes_appropriate = nodes_df[column_list]
-            nodes_tensor = torch.from_numpy(nodes_appropriate.values).to(torch.float)
+        nodes_appropriate = nodes_df[column_list]
+        nodes_tensor = torch.from_numpy(nodes_appropriate.values).to(torch.float)
         graph_data[layer['name']].x = nodes_tensor
         for edge_idx in range(0, len(layer['edges'])):
             graph_data[layer['edges_source'][edge_idx], layer['edges'][edge_idx], layer['edges_target'][edge_idx]].edge_index = build_node_relationships(mapped_ids, edges[layer['edges'][edge_idx]], layer['edges_source'][edge_idx], layer['edges_target'][edge_idx], config_data['target'][0]['balancing'])
     return graph_data, unique_targets, size_targets
 
-def match_embeds_to_words(nodes):
-    sentences = []
-    sentence = []
-    #Go through words and build sentences to match indexes that might be missing
-    for i in range(0, len(nodes['word'])):
-        current_uri = nodes['word'][i]['uri'].split("_")[1:3]
-        if i == 0:
-            check_uri = current_uri[1]
-        elif check_uri != current_uri[1]:
-            sentences.append(sentence)
-            check_uri = current_uri[1]
-            sentence = []
-        if nodes['word'][i]['word'] == '':
-            nodes['word'][i]['embeddings'] = torch.zeros(768)
-        else:
-            sentence.append(nodes['word'][i]['word'])
-    sentences.append(sentence)
-    embeddings = []
-    #For each built sentence query google cloud for embeddings
-    for i in tqdm(range(len(sentences)), desc="Generating Embeddings: "):
-        try:
-            embeds = embed_text(sentences[i], "CLASSIFICATION", "text-multilingual-embedding-preview-0409")
-            embeddings.append(embeds)
-        except:
-            print("---- EMBEDDING FAILED ----")
-            print(sentences[i])
-    embed_sentence = 0
-    embed_word = 0
-    for i in range(0, len(nodes['word'])):
-        current_uri = nodes['word'][i]['uri'].split("_")[1:3]
-        if i == 0:
-            check_uri = current_uri[1]
-        elif check_uri != current_uri[1]:
-            embed_sentence += 1
-            embed_word = 0
-            check_uri = current_uri[1]
-        if 'embeddings' not in nodes['word'][i]:
-            nodes['word'][i]['embeddings'] = torch.Tensor(embeddings[embed_sentence][embed_word])
-            embed_word += 1
-    return nodes
-
-
-def get_graph(list_to_get, config_data, test=False, targets_test = None, embedding = True):
+def get_graph(list_to_get, config_data, test=False, targets_test = None):
     graph_data = HeteroData()
     edges = {}
     nodes = {}
     indexes = {}
-    embeds = {}
     edges, nodes, indexes = fetch_graph(edges, nodes, indexes, list_to_get, config_data, test)
-    if embedding:
-        nodes = match_embeds_to_words(nodes)
     mapped_uris = map_uri_to_index(indexes, config_data)
     if test:
-        graph_data, unique_targets, size_targets = build_graph(nodes, edges, mapped_uris, config_data, graph_data, test=test, test_targets=targets_test, embedding=embedding)
+        graph_data, unique_targets, size_targets = build_graph(nodes, edges, mapped_uris, config_data, graph_data, test=test, test_targets=targets_test)
     else:
-        graph_data, unique_targets, size_targets = build_graph(nodes, edges, mapped_uris, config_data, graph_data, embedding=embedding)
+        graph_data, unique_targets, size_targets = build_graph(nodes, edges, mapped_uris, config_data, graph_data)
     print(graph_data)
     print("--- DATASET LOADED AND TRANSFORMED ---")
     return graph_data, unique_targets

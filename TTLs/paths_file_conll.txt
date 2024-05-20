@@ -1,0 +1,2722 @@
+['root', 'nsubjpass', 'amod']:8:1
+['root', 'nsubjpass']:38:2
+['root']:550:45
+['root', 'auxpass']:35:0
+['advcl', 'prep', 'pcomp', 'prep', 'pobj', 'det']:2:0
+['punct']:1:0
+['advcl']:1:0
+['advcl', 'dobj']:1:0
+['advcl', 'prep']:1:0
+['advcl', 'prep', 'pcomp']:1:0
+['advcl', 'prep', 'pcomp', 'prep']:1:0
+['advcl', 'prep', 'pcomp', 'prep', 'pobj']:1:0
+['root', 'punct']:724:0
+['root', 'ccomp', 'npadvmod', 'amod']:2:0
+['root', 'ccomp', 'npadvmod']:4:0
+['root', 'ccomp']:146:0
+['root', 'ccomp', 'punct']:37:0
+['root', 'ccomp', 'nsubj', 'det']:40:0
+['root', 'ccomp', 'nsubj']:117:14
+['root', 'ccomp', 'nsubj', 'amod']:19:6
+['root', 'ccomp', 'aux']:53:0
+['root', 'ccomp', 'dobj', 'amod']:11:2
+['root', 'ccomp', 'dobj']:45:4
+['root', 'ccomp', 'dobj', 'prep']:22:0
+['root', 'ccomp', 'dobj', 'prep', 'pobj']:16:1
+['root', 'ccomp', 'advcl', 'mark']:7:0
+['root', 'ccomp', 'advcl', 'nsubj']:8:0
+['root', 'ccomp', 'advcl', 'xcomp', 'aux']:3:0
+['root', 'ccomp', 'advcl', 'xcomp']:2:0
+['root', 'ccomp', 'advcl', 'xcomp', 'dobj']:1:0
+['root', 'ccomp', 'advcl', 'xcomp', 'dobj', 'relcl', 'dobj']:1:0
+['root', 'ccomp', 'advcl', 'xcomp', 'dobj', 'relcl']:1:0
+['root', 'ccomp', 'advcl', 'xcomp', 'dobj', 'relcl', 'nsubj']:1:0
+['root', 'ccomp', 'advcl', 'xcomp', 'dobj', 'relcl', 'aux']:1:0
+['root', 'ccomp', 'advcl', 'xcomp', 'dobj', 'relcl', 'prt']:1:0
+['root', 'ccomp', 'advcl', 'xcomp', 'dobj', 'relcl', 'prep']:1:0
+['root', 'ccomp', 'advcl', 'xcomp', 'dobj', 'relcl', 'prep', 'pobj', 'amod']:1:0
+['root', 'ccomp', 'advcl', 'xcomp', 'dobj', 'relcl', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'advcl', 'xcomp', 'dobj', 'relcl', 'prep', 'pobj', 'compound']:1:0
+['root', 'ccomp', 'advcl', 'xcomp', 'dobj', 'relcl', 'prep', 'pobj', 'prep']:1:0
+['root', 'ccomp', 'advcl', 'xcomp', 'dobj', 'relcl', 'prep', 'pobj', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'advcl', 'xcomp', 'dobj', 'relcl', 'prep', 'pobj', 'prep', 'pobj', 'conj']:1:0
+['root', 'ccomp', 'advcl', 'xcomp', 'dobj', 'relcl', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'cc']:1:0
+['root', 'ccomp', 'advcl', 'xcomp', 'dobj', 'relcl', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'conj']:1:0
+['root', 'nsubj']:356:56
+['root', 'compound']:59:29
+['root', 'appos', 'compound', 'compound']:4:2
+['root', 'appos', 'compound']:36:9
+['root', 'appos']:103:10
+['root', 'nsubj', 'compound']:132:64
+['root', 'ccomp', 'nsubj', 'compound', 'compound']:5:3
+['root', 'ccomp', 'nsubj', 'compound']:31:11
+['root', 'nsubj', 'det']:72:1
+['root', 'nsubj', 'amod']:38:18
+['root', 'nsubj', 'prep']:38:0
+['root', 'nsubj', 'prep', 'pobj', 'compound', 'compound', 'compound']:1:0
+['root', 'nsubj', 'prep', 'pobj', 'compound', 'compound']:1:0
+['root', 'nsubj', 'prep', 'pobj', 'compound']:9:4
+['root', 'nsubj', 'prep', 'pobj']:30:8
+['root', 'ccomp', 'nsubj', 'poss', 'det']:3:0
+['root', 'ccomp', 'nsubj', 'poss']:6:3
+['root', 'ccomp', 'nsubj', 'poss', 'case']:5:0
+['root', 'ccomp', 'nsubj', 'prep']:16:0
+['root', 'ccomp', 'nsubj', 'prep', 'pobj']:12:0
+['root', 'ccomp', 'nsubj', 'npadvmod', 'det']:1:0
+['root', 'ccomp', 'nsubj', 'npadvmod']:1:0
+['root', 'ccomp', 'neg']:10:0
+['root', 'ccomp', 'dobj', 'prep', 'pobj', 'amod']:3:2
+['root', 'dobj', 'det']:56:0
+['root', 'dobj']:114:12
+['root', 'dobj', 'amod']:29:4
+['root', 'dobj', 'compound']:31:8
+['root', 'aux']:58:0
+['root', 'dobj', 'prep']:41:0
+['root', 'dobj', 'prep', 'pobj']:35:2
+['root', 'ccomp', 'dobj', 'det']:23:0
+['root', 'ccomp', 'dobj', 'prep', 'pcomp']:2:0
+['root', 'ccomp', 'dobj', 'prep', 'pcomp', 'ccomp', 'mark']:1:0
+['root', 'ccomp', 'dobj', 'prep', 'pcomp', 'ccomp']:1:0
+['root', 'ccomp', 'dobj', 'prep', 'pcomp', 'ccomp', 'nsubj', 'det']:2:0
+['root', 'ccomp', 'dobj', 'prep', 'pcomp', 'ccomp', 'nsubj']:1:0
+['root', 'ccomp', 'dobj', 'prep', 'pcomp', 'ccomp', 'nsubj', 'compound']:1:0
+['root', 'ccomp', 'dobj', 'prep', 'pcomp', 'ccomp', 'aux']:1:0
+['root', 'ccomp', 'dobj', 'prep', 'pcomp', 'ccomp', 'dobj']:1:0
+['root', 'nsubj', 'appos', 'compound']:5:1
+['root', 'nsubj', 'appos']:28:4
+['root', 'nsubj', 'appos', 'amod']:3:0
+['root', 'nsubj', 'appos', 'amod', 'prep', 'pobj', 'compound', 'amod']:1:0
+['root', 'nsubj', 'appos', 'amod', 'prep', 'pobj', 'compound']:1:0
+['root', 'nsubj', 'appos', 'amod', 'prep', 'pobj']:1:0
+['root', 'nsubj', 'appos', 'prep']:18:0
+['root', 'nsubj', 'appos', 'prep', 'pobj']:12:4
+['root', 'prep', 'pobj', 'det']:74:0
+['root', 'prep', 'pobj']:188:17
+['root', 'prep', 'pobj', 'compound']:45:10
+['root', 'ccomp', 'advmod']:21:0
+['root', 'appos', 'nummod']:39:1
+['root', 'ccomp', 'prep']:98:0
+['root', 'ccomp', 'prep', 'pobj']:80:9
+['root', 'ccomp', 'prep', 'pcomp']:6:0
+['root', 'ccomp', 'prep', 'pcomp', 'prep']:2:0
+['root', 'ccomp', 'prep', 'pcomp', 'prep', 'pobj']:2:0
+['root', 'ccomp', 'prep', 'pcomp', 'prep', 'pobj', 'prep']:1:0
+['root', 'ccomp', 'prep', 'pcomp', 'prep', 'pobj', 'prep', 'pobj', 'prep']:1:0
+['root', 'ccomp', 'prep', 'pcomp', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'prep', 'pcomp', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'acl']:1:0
+['root', 'ccomp', 'prep', 'pcomp', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'acl', 'xcomp', 'aux']:1:0
+['root', 'ccomp', 'prep', 'pcomp', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'acl', 'xcomp']:1:0
+['root', 'ccomp', 'prep', 'pcomp', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'acl', 'xcomp', 'dobj', 'poss']:1:0
+['root', 'ccomp', 'prep', 'pcomp', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'acl', 'xcomp', 'dobj']:1:0
+['root', 'ccomp', 'prep', 'pcomp', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'acl', 'xcomp', 'dobj', 'advmod']:1:0
+['root', 'attr', 'det']:27:0
+['root', 'attr']:26:0
+['root', 'attr', 'amod']:17:0
+['root', 'attr', 'relcl', 'nsubj']:3:0
+['root', 'attr', 'relcl']:3:0
+['root', 'attr', 'relcl', 'ccomp', 'nsubj']:1:0
+['root', 'attr', 'relcl', 'ccomp']:1:0
+['root', 'attr', 'relcl', 'ccomp', 'nsubj', 'punct']:2:0
+['root', 'attr', 'relcl', 'ccomp', 'nsubj', 'relcl', 'nsubj']:1:0
+['root', 'attr', 'relcl', 'ccomp', 'nsubj', 'relcl']:1:0
+['root', 'attr', 'relcl', 'ccomp', 'nsubj', 'relcl', 'prep']:1:0
+['root', 'attr', 'relcl', 'ccomp', 'nsubj', 'relcl', 'prep', 'pobj']:1:0
+['root', 'attr', 'relcl', 'ccomp', 'nsubj', 'relcl', 'npadvmod']:1:0
+['root', 'attr', 'relcl', 'ccomp', 'advmod']:1:0
+['root', 'ccomp', 'nsubj', 'poss', 'punct']:1:0
+['root', 'ccomp', 'nsubj', 'punct']:13:0
+['root', 'ccomp', 'prep', 'pobj', 'prep']:10:0
+['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj']:12:2
+['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'relcl', 'nsubj']:3:1
+['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'relcl']:3:0
+['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'relcl', 'ccomp', 'nsubj', 'det']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'relcl', 'ccomp', 'nsubj']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'relcl', 'ccomp']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'relcl', 'ccomp', 'nsubj', 'prep']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'relcl', 'ccomp', 'nsubj', 'prep', 'pobj', 'compound']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'relcl', 'ccomp', 'nsubj', 'prep', 'pobj']:1:0
+['root', 'nsubj', 'nummod']:9:0
+['root', 'advcl']:63:0
+['root', 'advcl', 'prep']:35:0
+['root', 'advcl', 'prep', 'pobj', 'poss', 'det']:2:0
+['root', 'advcl', 'prep', 'pobj', 'poss']:2:0
+['root', 'advcl', 'prep', 'pobj']:34:3
+['root', 'advcl', 'prep', 'pobj', 'poss', 'case']:2:0
+['root', 'ccomp', 'nsubj', 'relcl', 'nsubj']:4:0
+['root', 'ccomp', 'nsubj', 'relcl']:5:0
+['root', 'ccomp', 'nsubj', 'relcl', 'aux']:2:0
+['root', 'ccomp', 'nsubj', 'relcl', 'dobj']:2:0
+['root', 'ccomp', 'nsubj', 'relcl', 'prep']:7:0
+['root', 'ccomp', 'nsubj', 'relcl', 'prep', 'pobj', 'poss']:1:0
+['root', 'ccomp', 'nsubj', 'relcl', 'prep', 'pobj']:4:2
+['root', 'ccomp', 'xcomp']:8:0
+['root', 'ccomp', 'xcomp', 'advmod']:1:0
+['root', 'ccomp', 'xcomp', 'advmod', 'prep']:1:0
+['root', 'ccomp', 'xcomp', 'advmod', 'prep', 'pobj']:1:0
+['root', 'prep']:222:0
+['root', 'prep', 'prep']:9:0
+['root', 'prep', 'prep', 'pobj', 'det']:3:0
+['root', 'prep', 'prep', 'pobj']:9:2
+['root', 'acomp']:21:0
+['root', 'acomp', 'prep']:5:0
+['root', 'acomp', 'prep', 'pobj', 'compound']:1:0
+['root', 'acomp', 'prep', 'pobj', 'amod']:3:0
+['root', 'acomp', 'prep', 'pobj', 'cc']:1:0
+['root', 'acomp', 'prep', 'pobj', 'conj']:1:0
+['root', 'acomp', 'prep', 'pobj', 'conj', 'acl', 'mark']:1:0
+['root', 'acomp', 'prep', 'pobj', 'conj', 'acl']:1:0
+['root', 'acomp', 'prep', 'pobj', 'conj', 'acl', 'nsubj', 'det']:1:0
+['root', 'acomp', 'prep', 'pobj', 'conj', 'acl', 'nsubj']:1:0
+['root', 'acomp', 'prep', 'pobj', 'conj', 'acl', 'nsubj', 'amod']:1:0
+['root', 'acomp', 'prep', 'pobj', 'conj', 'acl', 'nsubj', 'compound']:1:1
+['root', 'acomp', 'prep', 'pobj', 'conj', 'acl', 'xcomp']:1:0
+['root', 'acomp', 'prep', 'pobj', 'conj', 'acl', 'xcomp', 'dobj', 'det']:1:0
+['root', 'acomp', 'prep', 'pobj', 'conj', 'acl', 'xcomp', 'dobj']:1:0
+['root', 'acomp', 'prep', 'pobj', 'conj', 'acl', 'xcomp', 'dobj', 'compound', 'amod']:1:0
+['root', 'acomp', 'prep', 'pobj', 'conj', 'acl', 'xcomp', 'dobj', 'compound']:1:0
+['root', 'dobj', 'nummod']:13:0
+['root', 'dobj', 'prep', 'pobj', 'det']:4:0
+['root', 'dobj', 'prep', 'pobj', 'prep']:12:0
+['root', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'quantmod']:1:0
+['root', 'dobj', 'prep', 'pobj', 'prep', 'pobj']:10:1
+['root', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'compound']:1:0
+['root', 'cc']:68:0
+['root', 'conj']:51:1
+['root', 'conj', 'ccomp', 'nsubj', 'det']:2:0
+['root', 'conj', 'ccomp', 'nsubj']:7:1
+['root', 'conj', 'ccomp']:6:0
+['root', 'conj', 'ccomp', 'dobj', 'det']:2:0
+['root', 'conj', 'ccomp', 'dobj']:4:0
+['root', 'conj', 'ccomp', 'dobj', 'amod']:3:0
+['root', 'conj', 'ccomp', 'dobj', 'prep', 'pobj']:3:0
+['root', 'conj', 'ccomp', 'prep']:2:0
+['root', 'conj', 'ccomp', 'prep', 'pcomp']:1:0
+['root', 'conj', 'ccomp', 'prep', 'pcomp', 'advmod']:1:0
+['root', 'conj', 'ccomp', 'prep', 'pcomp', 'prep']:1:0
+['root', 'conj', 'ccomp', 'prep', 'pcomp', 'prep', 'pobj']:1:0
+['root', 'punct', 'nummod']:12:0
+['root', 'nsubj', 'poss']:11:7
+['root', 'nsubj', 'poss', 'case']:11:0
+['root', 'npadvmod', 'nummod']:13:0
+['root', 'npadvmod']:32:8
+['root', 'ccomp', 'nsubj', 'compound', 'amod']:6:3
+['root', 'ccomp', 'prep', 'pobj', 'punct']:14:0
+['root', 'ccomp', 'prep', 'pobj', 'appos', 'det']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'appos']:3:0
+['root', 'ccomp', 'prep', 'pobj', 'appos', 'amod']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'appos', 'prep', 'pobj', 'det']:2:0
+['root', 'ccomp', 'prep', 'pobj', 'appos', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'appos', 'prep', 'pobj', 'nmod']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'appos', 'prep', 'pobj', 'amod', 'amod']:1:1
+['root', 'ccomp', 'prep', 'pobj', 'appos', 'prep', 'pobj', 'amod']:1:0
+['root', 'nsubj', 'compound', 'amod']:4:1
+['root', 'nsubj', 'compound', 'compound']:23:8
+['root', 'nsubj', 'punct']:71:0
+['root', 'nsubj', 'relcl', 'nsubj']:6:0
+['root', 'nsubj', 'relcl']:6:0
+['root', 'nsubj', 'relcl', 'aux']:3:0
+['root', 'nsubj', 'relcl', 'advmod']:5:0
+['root', 'nsubj', 'relcl', 'dobj']:2:1
+['root', 'nsubj', 'relcl', 'dobj', 'cc']:1:0
+['root', 'nsubj', 'relcl', 'dobj', 'conj']:1:1
+['root', 'acomp', 'xcomp', 'aux']:5:0
+['root', 'acomp', 'xcomp']:3:0
+['root', 'acomp', 'xcomp', 'prep', 'pobj', 'compound']:1:1
+['root', 'acomp', 'xcomp', 'prep', 'pobj']:2:0
+['root', 'ccomp', 'prep', 'pobj', 'det']:32:0
+['root', 'ccomp', 'prep', 'pobj', 'compound']:8:3
+['root', 'ccomp', 'advcl', 'aux']:7:0
+['root', 'ccomp', 'advcl']:17:0
+['root', 'ccomp', 'advcl', 'dobj', 'det']:1:0
+['root', 'ccomp', 'advcl', 'dobj']:8:0
+['root', 'ccomp', 'advcl', 'dobj', 'prep', 'pobj', 'poss']:1:0
+['root', 'ccomp', 'advcl', 'dobj', 'prep', 'pobj']:6:0
+['root', 'ccomp', 'advcl', 'dobj', 'prep', 'pobj', 'amod']:3:0
+['root', 'ccomp', 'nsubj', 'prep', 'pobj', 'compound', 'compound']:1:1
+['root', 'ccomp', 'nsubj', 'prep', 'pobj', 'compound']:3:1
+['root', 'ccomp', 'nsubj', 'prep', 'pobj', 'prep']:4:0
+['root', 'ccomp', 'nsubj', 'prep', 'pobj', 'prep', 'pobj']:2:1
+['root', 'ccomp', 'dobj', 'prep', 'pobj', 'poss']:4:0
+['root', 'ccomp', 'dobj', 'relcl', 'nsubj']:2:0
+['root', 'ccomp', 'dobj', 'relcl']:2:0
+['root', 'ccomp', 'dobj', 'relcl', 'punct']:3:0
+['root', 'ccomp', 'dobj', 'relcl', 'advcl', 'advmod']:1:0
+['root', 'ccomp', 'dobj', 'relcl', 'advcl']:1:0
+['root', 'ccomp', 'dobj', 'relcl', 'aux']:2:0
+['root', 'ccomp', 'dobj', 'relcl', 'prep']:2:0
+['root', 'ccomp', 'dobj', 'relcl', 'prep', 'pobj', 'amod']:1:0
+['root', 'ccomp', 'dobj', 'relcl', 'prep', 'pobj']:2:0
+['root', 'ccomp', 'dobj', 'relcl', 'prep', 'pobj', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'dobj', 'relcl', 'prep', 'pobj', 'prep', 'pobj', 'cc']:1:0
+['root', 'ccomp', 'dobj', 'relcl', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'nummod']:1:0
+['root', 'ccomp', 'dobj', 'relcl', 'prep', 'pobj', 'prep', 'pobj', 'conj']:1:0
+['root', 'ccomp', 'dobj', 'relcl', 'prep', 'pobj', 'relcl']:1:0
+['root', 'ccomp', 'dobj', 'relcl', 'prep', 'pobj', 'relcl', 'aux']:1:0
+['root', 'ccomp', 'dobj', 'relcl', 'prep', 'pobj', 'relcl', 'dobj']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'amod']:20:1
+['root', 'ccomp', 'cc']:25:0
+['root', 'ccomp', 'conj', 'punct']:4:0
+['root', 'ccomp', 'conj']:23:0
+['root', 'ccomp', 'conj', 'prep']:9:0
+['root', 'ccomp', 'conj', 'prep', 'prep']:3:0
+['root', 'ccomp', 'conj', 'prep', 'prep', 'pobj', 'poss']:1:0
+['root', 'ccomp', 'conj', 'prep', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'conj', 'aux']:5:0
+['root', 'ccomp', 'conj', 'acomp']:4:0
+['root', 'ccomp', 'conj', 'acomp', 'xcomp']:1:0
+['root', 'ccomp', 'conj', 'acomp', 'xcomp', 'prep', 'pobj']:1:1
+['root', 'ccomp', 'conj', 'acomp', 'xcomp', 'npadvmod', 'amod']:1:0
+['root', 'ccomp', 'conj', 'acomp', 'xcomp', 'npadvmod']:1:0
+['root', 'prep', 'pobj', 'compound', 'amod']:2:0
+['root', 'prep', 'pobj', 'prep']:39:0
+['root', 'prep', 'pobj', 'prep', 'pobj']:34:7
+['root', 'prep', 'pobj', 'relcl', 'advmod']:3:0
+['root', 'prep', 'pobj', 'relcl']:5:0
+['root', 'prep', 'pobj', 'relcl', 'dobj']:3:0
+['root', 'prep', 'pobj', 'relcl', 'xcomp']:1:0
+['root', 'prep', 'pobj', 'relcl', 'xcomp', 'prep', 'pobj', 'compound']:2:1
+['root', 'prep', 'pobj', 'relcl', 'xcomp', 'prep', 'pobj']:2:0
+['root', 'prep', 'pobj', 'relcl', 'xcomp', 'prep']:1:0
+['root', 'prep', 'pobj', 'relcl', 'xcomp', 'prep', 'pobj', 'det']:1:0
+['root', 'prep', 'pobj', 'punct']:30:0
+['root', 'prep', 'pobj', 'appos', 'det']:1:0
+['root', 'prep', 'pobj', 'appos']:6:2
+['root', 'prep', 'pobj', 'appos', 'relcl', 'nsubj']:1:0
+['root', 'prep', 'pobj', 'appos', 'relcl']:1:0
+['root', 'prep', 'pobj', 'appos', 'relcl', 'dobj', 'det']:1:0
+['root', 'prep', 'pobj', 'appos', 'relcl', 'dobj']:1:0
+['root', 'conj', 'aux']:8:0
+['root', 'conj', 'advmod']:10:0
+['root', 'conj', 'prep']:22:0
+['root', 'conj', 'prep', 'pobj']:26:1
+['root', 'xcomp', 'aux']:15:0
+['root', 'xcomp']:10:0
+['root', 'xcomp', 'prt']:2:0
+['root', 'xcomp', 'prep']:6:0
+['root', 'xcomp', 'prep', 'pobj']:4:0
+['root', 'xcomp', 'prep', 'pobj', 'det']:1:0
+['root', 'xcomp', 'prep', 'pobj', 'prep']:2:0
+['root', 'xcomp', 'prep', 'pobj', 'prep', 'pobj', 'nummod', 'advmod']:1:0
+['root', 'xcomp', 'prep', 'pobj', 'prep', 'pobj', 'nummod']:1:0
+['root', 'xcomp', 'prep', 'pobj', 'prep', 'pobj']:2:0
+['root', 'prep', 'pobj', 'amod']:46:8
+['root', 'ccomp', 'nsubj', 'nummod']:2:0
+['root', 'ccomp', 'nsubj', 'prep', 'pobj', 'det']:3:0
+['root', 'ccomp', 'nsubj', 'nsubj']:1:0
+['root', 'ccomp', 'nsubj', 'nsubj', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'nsubj', 'amod', 'prep']:1:0
+['root', 'ccomp', 'nsubj', 'amod', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'nsubj', 'amod', 'prep', 'pobj', 'cc']:1:0
+['root', 'ccomp', 'nsubj', 'amod', 'prep', 'pobj', 'conj']:1:0
+['root', 'ccomp', 'advcl', 'advmod']:7:0
+['root', 'ccomp', 'advcl', 'nsubj', 'poss']:1:0
+['root', 'ccomp', 'advcl', 'nsubj', 'amod']:2:0
+['root', 'ccomp', 'advcl', 'prep']:13:0
+['root', 'ccomp', 'advcl', 'prep', 'pobj', 'compound']:5:1
+['root', 'ccomp', 'advcl', 'prep', 'pobj']:9:0
+['root', 'ccomp', 'advcl', 'prep', 'pobj', 'prep']:2:0
+['root', 'ccomp', 'advcl', 'prep', 'pobj', 'prep', 'pobj', 'amod']:2:1
+['root', 'ccomp', 'advcl', 'prep', 'pobj', 'prep', 'pobj']:2:1
+['root', 'ccomp', 'advcl', 'advmod', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'advcl', 'nsubj', 'det']:5:0
+['root', 'ccomp', 'advcl', 'nsubj', 'compound', 'compound']:1:1
+['root', 'ccomp', 'advcl', 'nsubj', 'compound']:2:0
+['root', 'ccomp', 'advcl', 'dobj', 'poss']:1:0
+['root', 'ccomp', 'advcl', 'prep', 'pobj', 'det']:4:0
+['root', 'ccomp', 'advcl', 'prep', 'pobj', 'amod']:3:0
+['root', 'nsubj', 'nmod', 'nmod']:2:2
+['root', 'nsubj', 'nmod']:8:3
+['root', 'nsubj', 'nmod', 'cc']:3:0
+['root', 'nsubj', 'nmod', 'conj', 'compound']:2:0
+['root', 'nsubj', 'nmod', 'conj']:4:0
+['root', 'nsubjpass', 'det']:12:0
+['root', 'nsubjpass', 'prep']:9:0
+['root', 'nsubjpass', 'prep', 'pobj', 'det']:5:0
+['root', 'nsubjpass', 'prep', 'pobj']:11:1
+['root', 'neg']:12:0
+['root', 'conj', 'nsubj']:18:2
+['root', 'conj', 'ccomp', 'dobj', 'prep']:2:0
+['root', 'conj', 'ccomp', 'dobj', 'cc']:1:0
+['root', 'conj', 'ccomp', 'dobj', 'conj', 'det']:1:0
+['root', 'conj', 'ccomp', 'dobj', 'conj']:1:0
+['root', 'conj', 'punct']:33:0
+['root', 'nsubjpass', 'nummod']:4:0
+['root', 'dobj', 'nummod', 'compound']:3:0
+['root', 'ccomp', 'nsubj', 'nmod']:2:1
+['root', 'ccomp', 'xcomp', 'aux']:7:0
+['root', 'ccomp', 'xcomp', 'dobj', 'nummod', 'compound']:1:0
+['root', 'ccomp', 'xcomp', 'dobj', 'nummod']:1:0
+['root', 'ccomp', 'xcomp', 'dobj']:4:0
+['root', 'ccomp', 'xcomp', 'prep']:8:0
+['root', 'ccomp', 'xcomp', 'prep', 'pobj', 'det']:7:0
+['root', 'ccomp', 'xcomp', 'prep', 'pobj']:7:0
+['root', 'ccomp', 'xcomp', 'prep', 'pobj', 'amod']:1:0
+['root', 'ccomp', 'xcomp', 'prep', 'pobj', 'nummod']:1:0
+['root', 'ccomp', 'xcomp', 'prep', 'pobj', 'compound']:4:2
+['root', 'advcl', 'mark']:28:0
+['root', 'nsubjpass', 'appos', 'compound']:1:0
+['root', 'nsubjpass', 'appos']:4:0
+['root', 'nsubjpass', 'appos', 'appos', 'nummod']:2:0
+['root', 'nsubjpass', 'appos', 'appos']:3:0
+['root', 'nsubjpass', 'appos', 'appos', 'appos', 'nummod']:2:0
+['root', 'nsubjpass', 'appos', 'appos', 'appos']:2:0
+['root', 'nsubjpass', 'appos', 'appos', 'appos', 'appos', 'nummod']:2:0
+['root', 'nsubjpass', 'appos', 'appos', 'appos', 'appos']:1:0
+['root', 'compound', 'compound', 'compound']:2:1
+['root', 'compound', 'compound']:12:3
+['root', 'nummod', 'nummod', 'nummod']:1:0
+['root', 'nummod', 'nummod']:2:0
+['root', 'npadvmod', 'compound']:5:4
+['root', 'ccomp', 'nsubjpass', 'det']:17:0
+['root', 'ccomp', 'nsubjpass']:26:1
+['root', 'ccomp', 'nsubjpass', 'amod']:1:1
+['root', 'ccomp', 'nsubjpass', 'relcl', 'nsubj']:3:0
+['root', 'ccomp', 'nsubjpass', 'relcl']:2:0
+['root', 'ccomp', 'nsubjpass', 'relcl', 'dobj', 'det']:3:0
+['root', 'ccomp', 'nsubjpass', 'relcl', 'dobj']:2:0
+['root', 'ccomp', 'nsubjpass', 'relcl', 'dobj', 'prep']:2:0
+['root', 'ccomp', 'nsubjpass', 'relcl', 'dobj', 'prep', 'pobj', 'amod']:1:0
+['root', 'ccomp', 'nsubjpass', 'relcl', 'dobj', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'nsubjpass', 'relcl', 'dobj', 'prep', 'pobj', 'compound']:1:1
+['root', 'ccomp', 'auxpass']:26:0
+['root', 'ccomp', 'agent']:5:0
+['root', 'ccomp', 'agent', 'pobj', 'det']:1:0
+['root', 'ccomp', 'agent', 'pobj']:4:0
+['root', 'ccomp', 'agent', 'pobj', 'amod']:2:0
+['root', 'ccomp', 'agent', 'pobj', 'acl']:1:0
+['root', 'ccomp', 'agent', 'pobj', 'acl', 'dobj', 'quantmod']:1:0
+['root', 'ccomp', 'agent', 'pobj', 'acl', 'dobj']:1:0
+['root', 'ccomp', 'agent', 'pobj', 'acl', 'dobj', 'compound']:1:0
+['root', 'ccomp', 'agent', 'pobj', 'acl', 'dobj', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'nsubjpass', 'compound']:7:3
+['root', 'ccomp', 'nsubjpass', 'cc']:3:0
+['root', 'ccomp', 'nsubjpass', 'conj', 'poss']:1:0
+['root', 'ccomp', 'nsubjpass', 'conj']:2:0
+['root', 'ccomp', 'nsubjpass', 'conj', 'appos', 'compound']:1:1
+['root', 'ccomp', 'nsubjpass', 'conj', 'appos']:1:0
+['root', 'ccomp', 'nsubjpass', 'punct']:8:0
+['root', 'ccomp', 'nsubjpass', 'appos']:1:0
+['root', 'ccomp', 'nsubjpass', 'appos', 'appos']:1:0
+['root', 'ccomp', 'npadvmod', 'cc']:1:0
+['root', 'ccomp', 'npadvmod', 'conj', 'amod']:1:0
+['root', 'ccomp', 'npadvmod', 'conj']:1:0
+['root', 'nsubj', 'appos', 'prep', 'pobj', 'compound']:6:1
+['root', 'nsubj', 'appos', 'prep', 'pobj', 'prep']:2:0
+['root', 'nsubj', 'appos', 'prep', 'pobj', 'prep', 'pobj', 'det']:3:0
+['root', 'nsubj', 'appos', 'prep', 'pobj', 'prep', 'pobj']:3:0
+['root', 'nsubj', 'appos', 'prep', 'pobj', 'prep', 'pobj', 'compound']:2:1
+['root', 'ccomp', 'mark']:7:0
+['root', 'ccomp', 'nsubjpass', 'prep', 'pobj', 'poss']:1:0
+['root', 'ccomp', 'nsubjpass', 'prep', 'pobj', 'poss', 'case']:1:0
+['root', 'ccomp', 'nsubjpass', 'prep', 'pobj', 'amod']:1:0
+['root', 'ccomp', 'nsubjpass', 'prep', 'pobj', 'prep']:1:0
+['root', 'ccomp', 'nsubjpass', 'prep', 'pobj', 'prep', 'pobj']:1:1
+['root', 'ccomp', 'prt']:4:0
+['root', 'ccomp', 'advcl', 'prep', 'pcomp']:2:0
+['root', 'ccomp', 'advcl', 'prep', 'pcomp', 'dobj', 'compound']:2:1
+['root', 'ccomp', 'advcl', 'prep', 'pcomp', 'dobj']:2:0
+['root', 'acomp', 'advmod']:6:0
+['root', 'dep']:10:2
+['root', 'dep', 'punct']:12:0
+['root', 'ccomp', 'nsubjpass', 'nummod']:5:0
+['root', 'ccomp', 'advcl', 'nsubj', 'cc']:2:0
+['root', 'ccomp', 'advcl', 'nsubj', 'conj']:1:0
+['root', 'ccomp', 'advcl', 'prep', 'pobj', 'prep', 'pobj', 'det']:1:0
+['root', 'ccomp', 'advcl', 'prep', 'pobj', 'prep', 'pobj', 'prep']:1:0
+['root', 'ccomp', 'advcl', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj']:1:1
+['root', 'ccomp', 'nsubjpass', 'relcl', 'dobj', 'amod']:1:0
+['root', 'ccomp', 'conj', 'neg']:4:0
+['root', 'ccomp', 'conj', 'prep', 'pobj']:8:2
+['root', 'ccomp', 'conj', 'prep', 'pobj', 'amod']:3:0
+['root', 'nsubj', 'compound', 'compound', 'compound']:7:5
+['root', 'ccomp', 'prep', 'pobj', 'acl']:4:0
+['root', 'ccomp', 'prep', 'pobj', 'acl', 'prep', 'pobj', 'amod']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'acl', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'compound', 'amod']:1:0
+['root', 'ccomp', 'prep', 'advmod']:2:0
+['root', 'ccomp', 'prep', 'pobj', 'nummod']:10:0
+['root', 'ccomp', 'advcl', 'nsubj', 'prep']:2:0
+['root', 'ccomp', 'advcl', 'nsubj', 'prep', 'pobj', 'poss', 'det']:4:0
+['root', 'ccomp', 'advcl', 'nsubj', 'prep', 'pobj', 'poss']:1:0
+['root', 'ccomp', 'advcl', 'nsubj', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'advcl', 'nsubj', 'prep', 'pobj', 'poss', 'case']:1:0
+['root', 'advcl', 'dobj', 'poss']:2:0
+['root', 'advcl', 'dobj']:18:0
+['root', 'advcl', 'prep', 'pobj', 'det']:11:0
+['root', 'conj', 'prep', 'pobj', 'amod']:4:0
+['root', 'conj', 'prep', 'pobj', 'compound', 'compound']:2:1
+['root', 'conj', 'prep', 'pobj', 'compound']:2:0
+['root', 'ccomp', 'nsubjpass', 'preconj']:1:0
+['root', 'ccomp', 'nsubjpass', 'conj', 'compound']:1:0
+['root', 'ccomp', 'dobj', 'acl', 'aux']:1:0
+['root', 'ccomp', 'dobj', 'acl']:3:0
+['root', 'ccomp', 'dobj', 'acl', 'attr', 'predet']:1:0
+['root', 'ccomp', 'dobj', 'acl', 'attr']:1:0
+['root', 'ccomp', 'dobj', 'acl', 'attr', 'det']:1:0
+['root', 'ccomp', 'dobj', 'acl', 'attr', 'amod']:1:0
+['root', 'nummod']:9:0
+['root', 'ccomp', 'nsubjpass', 'acl', 'auxpass']:1:0
+['root', 'ccomp', 'nsubjpass', 'acl']:3:0
+['root', 'ccomp', 'nsubjpass', 'acl', 'prep']:4:0
+['root', 'ccomp', 'nsubjpass', 'acl', 'prep', 'pobj', 'poss']:1:1
+['root', 'ccomp', 'nsubjpass', 'acl', 'prep', 'pobj']:2:0
+['root', 'ccomp', 'nsubjpass', 'acl', 'prep', 'pobj', 'poss', 'case']:1:0
+['root', 'ccomp', 'nsubjpass', 'acl', 'prep', 'pobj', 'compound']:1:1
+['root', 'ccomp', 'conj', 'nsubjpass', 'amod']:1:0
+['root', 'ccomp', 'conj', 'nsubjpass']:5:0
+['root', 'ccomp', 'conj', 'nsubjpass', 'prep', 'pobj', 'poss']:1:0
+['root', 'ccomp', 'conj', 'nsubjpass', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'conj', 'auxpass']:4:0
+['root', 'ccomp', 'conj', 'prep', 'pobj', 'det']:4:0
+['root', 'ccomp', 'conj', 'prep', 'pobj', 'compound']:3:0
+['root', 'ccomp', 'conj', 'prep', 'pobj', 'advmod']:1:0
+['root', 'ccomp', 'conj', 'prep', 'pobj', 'advmod', 'prep', 'pobj', 'det']:1:0
+['root', 'ccomp', 'conj', 'prep', 'pobj', 'advmod', 'prep', 'pobj']:1:0
+['root', 'advmod']:59:0
+['root', 'advcl', 'ccomp', 'nsubj']:6:1
+['root', 'advcl', 'ccomp']:7:0
+['root', 'advcl', 'ccomp', 'prep']:3:0
+['root', 'advcl', 'ccomp', 'prep', 'pobj', 'poss']:1:0
+['root', 'advcl', 'ccomp', 'prep', 'pobj']:3:0
+['root', 'ccomp', 'conj', 'advmod']:7:0
+['root', 'ccomp', 'dobj', 'compound', 'compound', 'compound']:1:1
+['root', 'ccomp', 'dobj', 'compound', 'compound']:4:0
+['root', 'ccomp', 'dobj', 'compound']:9:3
+['root', 'ccomp', 'conj', 'dobj', 'det']:2:0
+['root', 'ccomp', 'conj', 'dobj']:7:0
+['root', 'ccomp', 'conj', 'dobj', 'npadvmod', 'nummod']:3:0
+['root', 'conj', 'xcomp', 'aux']:3:0
+['root', 'conj', 'xcomp']:4:0
+['root', 'conj', 'xcomp', 'dobj', 'det']:1:0
+['root', 'conj', 'xcomp', 'dobj']:3:0
+['root', 'punct', 'nummod', 'nummod']:5:0
+['root', 'ccomp', 'prep', 'pobj', 'relcl', 'prep']:6:0
+['root', 'ccomp', 'prep', 'pobj', 'relcl']:7:0
+['root', 'ccomp', 'prep', 'pobj', 'relcl', 'prep', 'pobj']:6:1
+['root', 'ccomp', 'prep', 'pobj', 'relcl', 'nsubj']:7:0
+['root', 'ccomp', 'prep', 'pobj', 'relcl', 'prep', 'pobj', 'det']:2:0
+['root', 'ccomp', 'prep', 'pobj', 'relcl', 'prep', 'pobj', 'amod']:1:0
+['root', 'dobj', 'compound', 'compound']:4:1
+['root', 'conj', 'dobj']:8:0
+['root', 'conj', 'dobj', 'conj', 'det']:1:0
+['root', 'conj', 'dobj', 'conj']:2:0
+['root', 'conj', 'ccomp', 'prep', 'pobj']:1:0
+['root', 'conj', 'ccomp', 'advmod']:2:0
+['root', 'ccomp', 'conj', 'nsubj']:8:0
+['root', 'ccomp', 'conj', 'xcomp', 'aux']:7:0
+['root', 'ccomp', 'conj', 'xcomp']:5:0
+['root', 'ccomp', 'conj', 'xcomp', 'dobj', 'det']:3:0
+['root', 'ccomp', 'conj', 'xcomp', 'dobj']:3:0
+['root', 'nsubj', 'relcl', 'acomp']:1:0
+['root', 'nsubj', 'relcl', 'acomp', 'prep']:1:0
+['root', 'nsubj', 'relcl', 'acomp', 'prep', 'pcomp']:1:0
+['root', 'nsubj', 'relcl', 'acomp', 'prep', 'pcomp', 'dobj', 'det']:1:0
+['root', 'nsubj', 'relcl', 'acomp', 'prep', 'pcomp', 'dobj']:1:0
+['root', 'nsubj', 'relcl', 'acomp', 'prep', 'pcomp', 'advmod']:1:0
+['root', 'prep', 'amod']:2:0
+['root', 'prep', 'amod', 'cc']:2:0
+['root', 'prep', 'amod', 'conj']:2:0
+['root', 'appos', 'nummod', 'nummod', 'nummod']:2:0
+['root', 'appos', 'nummod', 'nummod']:2:0
+['root', 'prep', 'pcomp']:14:0
+['root', 'nsubjpass', 'compound']:10:6
+['root', 'nsubjpass', 'compound', 'compound']:2:0
+['root', 'nsubjpass', 'prep', 'pobj', 'compound']:4:2
+['root', 'nsubjpass', 'prep', 'pobj', 'appos', 'punct']:2:0
+['root', 'nsubjpass', 'prep', 'pobj', 'appos']:4:2
+['root', 'prep', 'pobj', 'prep', 'pobj', 'det']:2:0
+['root', 'prep', 'pobj', 'prep', 'pobj', 'nmod']:2:1
+['root', 'prep', 'pobj', 'prep', 'pobj', 'amod']:6:1
+['root', 'prep', 'pobj', 'prep', 'pobj', 'compound']:10:5
+['root', 'prep', 'pobj', 'prep', 'pobj', 'punct']:4:0
+['root', 'prep', 'pobj', 'prep', 'pobj', 'appos']:1:1
+['root', 'prep', 'pobj', 'prep', 'pobj', 'prep']:3:0
+['root', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj']:3:2
+['root', 'prep', 'pobj', 'prep', 'pobj', 'relcl', 'nsubjpass']:1:0
+['root', 'prep', 'pobj', 'prep', 'pobj', 'relcl']:1:0
+['root', 'prep', 'pobj', 'prep', 'pobj', 'relcl', 'auxpass']:1:0
+['root', 'prep', 'pobj', 'prep', 'pobj', 'relcl', 'prep']:1:0
+['root', 'prep', 'pobj', 'prep', 'pobj', 'relcl', 'prep', 'pobj', 'det']:1:0
+['root', 'prep', 'pobj', 'prep', 'pobj', 'relcl', 'prep', 'pobj']:1:0
+['root', 'prep', 'pobj', 'prep', 'pobj', 'relcl', 'prep', 'pobj', 'amod']:1:1
+['root', 'prep', 'pobj', 'prep', 'pobj', 'relcl', 'prep', 'pobj', 'compound']:1:0
+['root', 'nsubjpass', 'acl']:3:0
+['root', 'nsubjpass', 'acl', 'prep']:2:0
+['root', 'nsubjpass', 'acl', 'prep', 'pobj']:1:1
+['root', 'prep', 'pobj', 'acl', 'prep', 'pobj']:5:2
+['root', 'appos', 'punct']:22:0
+['root', 'dep', 'mark']:1:0
+['root', 'dep', 'compound']:4:0
+['root', 'npadvmod', 'punct']:3:0
+['root', 'npadvmod', 'cc']:3:0
+['root', 'npadvmod', 'conj', 'quantmod']:1:1
+['root', 'npadvmod', 'conj']:2:0
+['root', 'npadvmod', 'conj', 'nmod']:1:0
+['root', 'prep', 'pobj', 'quantmod']:3:1
+['root', 'advcl', 'npadvmod']:3:0
+['root', 'advcl', 'nsubj', 'det']:14:0
+['root', 'advcl', 'nsubj']:27:0
+['root', 'prep', 'pobj', 'nummod']:15:0
+['root', 'advcl', 'prep', 'pobj', 'quantmod']:2:2
+['root', 'advcl', 'advcl', 'aux']:3:0
+['root', 'advcl', 'advcl']:6:0
+['root', 'advcl', 'advcl', 'prep']:3:0
+['root', 'advcl', 'advcl', 'prep', 'pobj']:5:1
+['root', 'advcl', 'prep', 'pobj', 'compound']:5:2
+['root', 'advcl', 'prep', 'pobj', 'prep']:12:0
+['root', 'advcl', 'prep', 'pobj', 'prep', 'pobj', 'det']:7:0
+['root', 'advcl', 'prep', 'pobj', 'prep', 'pobj']:14:1
+['root', 'advcl', 'prep', 'pobj', 'prep', 'pobj', 'compound']:5:3
+['root', 'advcl', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'compound']:2:1
+['root', 'advcl', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj']:2:0
+['root', 'ccomp', 'acomp']:12:0
+['root', 'ccomp', 'acomp', 'prep']:5:0
+['root', 'ccomp', 'acomp', 'prep', 'pobj', 'det']:4:0
+['root', 'ccomp', 'acomp', 'prep', 'pobj']:5:0
+['root', 'ccomp', 'acomp', 'prep', 'pobj', 'prep']:5:0
+['root', 'ccomp', 'acomp', 'prep', 'pobj', 'prep', 'pobj', 'det']:2:0
+['root', 'ccomp', 'acomp', 'prep', 'pobj', 'prep', 'pobj']:5:0
+['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'compound']:1:1
+['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'cc']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'det']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'conj']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'compound']:1:1
+['root', 'dobj', 'prep', 'pobj', 'compound']:13:6
+['root', 'ccomp', 'attr', 'det']:8:0
+['root', 'ccomp', 'attr']:13:0
+['root', 'ccomp', 'attr', 'amod', 'advmod']:2:0
+['root', 'ccomp', 'attr', 'amod']:6:0
+['root', 'prep', 'pobj', 'amod', 'advmod']:3:0
+['root', 'prep', 'pobj', 'conj']:8:0
+['root', 'prep', 'pobj', 'conj', 'prep']:2:0
+['root', 'prep', 'pobj', 'conj', 'punct']:1:0
+['root', 'ccomp', 'acomp', 'xcomp', 'aux']:2:0
+['root', 'ccomp', 'acomp', 'xcomp']:1:0
+['root', 'ccomp', 'acomp', 'xcomp', 'dobj']:1:0
+['root', 'ccomp', 'acomp', 'xcomp', 'prep']:1:0
+['root', 'ccomp', 'acomp', 'xcomp', 'prep', 'pobj', 'amod']:1:0
+['root', 'ccomp', 'acomp', 'xcomp', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'compound', 'compound']:3:2
+['root', 'expl']:6:0
+['root', 'attr', 'nummod']:3:0
+['root', 'attr', 'relcl', 'dobj', 'det']:3:0
+['root', 'attr', 'relcl', 'dobj']:2:0
+['root', 'attr', 'relcl', 'prep']:1:0
+['root', 'attr', 'relcl', 'prep', 'pobj']:1:0
+['root', 'dep', 'det']:2:0
+['root', 'dep', 'prep']:1:0
+['root', 'dep', 'prep', 'pobj']:2:0
+['root', 'dep', 'cc']:1:0
+['root', 'dep', 'conj', 'det']:2:0
+['root', 'dep', 'conj']:1:0
+['root', 'dep', 'conj', 'amod']:1:0
+['root', 'dep', 'conj', 'compound']:1:0
+['root', 'dep', 'conj', 'acl']:1:0
+['root', 'dep', 'conj', 'acl', 'prep']:1:0
+['root', 'dep', 'conj', 'acl', 'prep', 'pobj']:1:0
+['root', 'nsubj', 'appos', 'prep', 'pobj', 'det']:10:0
+['root', 'nsubj', 'appos', 'prep', 'pobj', 'punct']:2:0
+['root', 'nsubj', 'appos', 'prep', 'pobj', 'appos']:3:2
+['root', 'prep', 'pcomp', 'dobj']:7:1
+['root', 'prep', 'pcomp', 'prep']:8:0
+['root', 'npadvmod', 'amod']:3:0
+['root', 'prep', 'pobj', 'nmod']:11:2
+['root', 'acomp', 'xcomp', 'prep']:1:0
+['root', 'ccomp', 'dobj', 'nmod']:1:0
+['root', 'ccomp', 'dobj', 'nmod', 'prep']:1:0
+['root', 'ccomp', 'dobj', 'nmod', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'conj', 'acomp', 'ccomp', 'nsubjpass', 'det']:1:0
+['root', 'ccomp', 'conj', 'acomp', 'ccomp', 'nsubjpass']:1:0
+['root', 'ccomp', 'conj', 'acomp', 'ccomp']:1:0
+['root', 'ccomp', 'conj', 'acomp', 'ccomp', 'aux']:1:0
+['root', 'ccomp', 'conj', 'acomp', 'ccomp', 'auxpass']:1:0
+['root', 'ccomp', 'conj', 'nsubj', 'poss']:1:0
+['root', 'ccomp', 'conj', 'nsubj', 'prep']:4:0
+['root', 'ccomp', 'conj', 'nsubj', 'prep', 'pobj', 'det']:1:0
+['root', 'ccomp', 'conj', 'nsubj', 'prep', 'pobj']:2:0
+['root', 'conj', 'amod']:1:0
+['root', 'conj', 'prep', 'pobj', 'nummod']:3:0
+['root', 'nsubj', 'compound', 'nummod']:2:0
+['root', 'conj', 'prep', 'pobj', 'prep']:4:0
+['root', 'conj', 'prep', 'conj']:1:0
+['root', 'conj', 'prep', 'conj', 'prep', 'pobj', 'quantmod']:1:0
+['root', 'conj', 'prep', 'conj', 'prep', 'pobj']:1:0
+['root', 'conj', 'prep', 'conj', 'cc']:1:0
+['root', 'conj', 'prep', 'conj', 'conj']:1:0
+['root', 'conj', 'prep', 'conj', 'conj', 'prep', 'pobj', 'nummod', 'quantmod']:1:0
+['root', 'conj', 'prep', 'conj', 'conj', 'prep', 'pobj', 'nummod']:1:0
+['root', 'conj', 'prep', 'conj', 'conj', 'prep', 'pobj']:1:0
+['root', 'dobj', 'poss']:12:0
+['root', 'conj', 'det']:1:0
+['root', 'conj', 'compound']:5:2
+['root', 'nsubj', 'relcl', 'ccomp', 'mark']:1:0
+['root', 'nsubj', 'relcl', 'ccomp']:2:0
+['root', 'nsubj', 'relcl', 'ccomp', 'nsubj', 'compound', 'compound']:1:1
+['root', 'nsubj', 'relcl', 'ccomp', 'nsubj', 'compound']:2:1
+['root', 'nsubj', 'relcl', 'ccomp', 'nsubj']:1:0
+['root', 'nsubj', 'relcl', 'ccomp', 'aux']:2:0
+['root', 'nsubj', 'relcl', 'ccomp', 'prep']:1:0
+['root', 'nsubj', 'relcl', 'ccomp', 'prep', 'pobj', 'det']:2:0
+['root', 'nsubj', 'relcl', 'ccomp', 'prep', 'pobj']:1:0
+['root', 'nsubj', 'relcl', 'ccomp', 'prep', 'pobj', 'amod']:1:0
+['root', 'nsubj', 'relcl', 'ccomp', 'prep', 'pobj', 'prep']:1:0
+['root', 'nsubj', 'relcl', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'compound']:2:2
+['root', 'nsubj', 'relcl', 'ccomp', 'prep', 'pobj', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'nsubj', 'relcl', 'prep', 'pobj', 'amod']:1:0
+['root', 'ccomp', 'nsubj', 'relcl', 'cc']:3:0
+['root', 'ccomp', 'nsubj', 'relcl', 'conj']:1:0
+['root', 'ccomp', 'nsubj', 'relcl', 'conj', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'dobj', 'prep', 'pobj', 'amod', 'conj']:1:1
+['root', 'ccomp', 'dobj', 'prep', 'pobj', 'relcl', 'advmod']:1:0
+['root', 'ccomp', 'dobj', 'prep', 'pobj', 'relcl']:1:0
+['root', 'ccomp', 'dobj', 'prep', 'pobj', 'relcl', 'nsubjpass', 'nummod']:1:0
+['root', 'ccomp', 'dobj', 'prep', 'pobj', 'relcl', 'nsubjpass']:1:0
+['root', 'ccomp', 'dobj', 'prep', 'pobj', 'relcl', 'auxpass']:1:0
+['root', 'ccomp', 'dobj', 'prep', 'pobj', 'relcl', 'agent']:1:0
+['root', 'ccomp', 'dobj', 'prep', 'pobj', 'relcl', 'agent', 'pobj', 'det']:1:0
+['root', 'ccomp', 'dobj', 'prep', 'pobj', 'relcl', 'agent', 'pobj']:1:0
+['root', 'ccomp', 'dobj', 'prep', 'pobj', 'relcl', 'agent', 'pobj', 'compound', 'compound']:1:0
+['root', 'ccomp', 'dobj', 'prep', 'pobj', 'relcl', 'agent', 'pobj', 'compound']:1:0
+['root', 'ccomp', 'dobj', 'prep', 'pobj', 'relcl', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'dobj', 'prep', 'pobj', 'relcl', 'prep', 'pobj', 'nummod']:1:0
+['root', 'ccomp', 'dobj', 'cc']:7:0
+['root', 'ccomp', 'dobj', 'conj', 'nmod']:1:0
+['root', 'ccomp', 'dobj', 'conj']:2:1
+['root', 'ccomp', 'dobj', 'conj', 'nmod', 'prep']:1:0
+['root', 'ccomp', 'dobj', 'conj', 'nmod', 'prep', 'pobj']:1:1
+['root', 'ccomp', 'dobj', 'conj', 'nmod', 'prep', 'pobj', 'conj']:1:0
+['root', 'nsubj', 'conj', 'det']:1:0
+['root', 'nsubj', 'conj']:2:0
+['root', 'nsubj', 'conj', 'amod']:1:0
+['root', 'nsubj', 'conj', 'compound']:1:0
+['root', 'dobj', 'punct']:13:0
+['root', 'dobj', 'conj', 'compound']:1:1
+['root', 'dobj', 'conj']:4:0
+['root', 'dobj', 'conj', 'cc']:2:0
+['root', 'dobj', 'conj', 'conj']:3:1
+['root', 'ccomp', 'expl']:3:0
+['root', 'ccomp', 'attr', 'compound']:2:0
+['root', 'ccomp', 'attr', 'prep']:4:0
+['root', 'ccomp', 'attr', 'prep', 'pobj']:3:1
+['root', 'conj', 'ccomp', 'mark']:1:0
+['root', 'ccomp', 'acomp', 'prep', 'pobj', 'prep', 'pobj', 'poss']:1:1
+['root', 'ccomp', 'acomp', 'prep', 'pobj', 'prep', 'pobj', 'poss', 'case']:2:0
+['root', 'ccomp', 'acomp', 'prep', 'pobj', 'prep', 'pobj', 'prep']:2:0
+['root', 'ccomp', 'acomp', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'poss', 'det']:1:0
+['root', 'ccomp', 'acomp', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'poss']:1:0
+['root', 'ccomp', 'acomp', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj']:2:0
+['root', 'ccomp', 'acomp', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'amod']:1:0
+['root', 'ccomp', 'acomp', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'npadvmod', 'amod']:1:0
+['root', 'ccomp', 'acomp', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'npadvmod']:1:0
+['root', 'ccomp', 'nsubj', 'prep', 'pcomp', 'mark']:1:0
+['root', 'ccomp', 'nsubj', 'prep', 'pcomp']:1:0
+['root', 'ccomp', 'nsubj', 'prep', 'pcomp', 'nsubj']:1:1
+['root', 'ccomp', 'nsubj', 'prep', 'pcomp', 'aux']:1:0
+['root', 'nsubj', 'relcl', 'dobj', 'compound']:3:3
+['root', 'nsubj', 'relcl', 'advcl', 'aux']:1:0
+['root', 'nsubj', 'relcl', 'advcl']:1:0
+['root', 'nsubj', 'relcl', 'advcl', 'dobj', 'amod']:1:0
+['root', 'nsubj', 'relcl', 'advcl', 'dobj']:2:0
+['root', 'nsubj', 'relcl', 'advcl', 'dobj', 'prep']:2:0
+['root', 'nsubj', 'relcl', 'advcl', 'dobj', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'acomp', 'advmod']:3:0
+['root', 'ccomp', 'acomp', 'prep', 'pobj', 'prep', 'pobj', 'compound']:1:1
+['root', 'ccomp', 'acomp', 'prep', 'pobj', 'prep', 'pobj', 'cc']:1:0
+['root', 'ccomp', 'acomp', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'det']:1:0
+['root', 'ccomp', 'acomp', 'prep', 'pobj', 'prep', 'pobj', 'conj']:1:0
+['root', 'ccomp', 'acomp', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'amod']:1:0
+['root', 'ccomp', 'acomp', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'prep']:1:0
+['root', 'ccomp', 'acomp', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'prep', 'pobj']:1:1
+['root', 'ccomp', 'advcl', 'xcomp', 'prep']:1:0
+['root', 'ccomp', 'advcl', 'xcomp', 'prep', 'pobj', 'compound']:1:1
+['root', 'ccomp', 'advcl', 'xcomp', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'xcomp', 'dobj', 'amod']:1:0
+['root', 'dobj', 'cc']:3:0
+['root', 'dobj', 'conj', 'amod']:2:0
+['root', 'ccomp', 'nsubj', 'prep', 'pobj', 'nummod']:1:0
+['root', 'ccomp', 'nsubj', 'prep', 'pobj', 'cc']:2:0
+['root', 'ccomp', 'nsubj', 'prep', 'pobj', 'conj']:1:0
+['root', 'ccomp', 'nsubj', 'relcl', 'nsubjpass']:1:0
+['root', 'ccomp', 'nsubj', 'relcl', 'auxpass']:1:0
+['root', 'ccomp', 'conj', 'advmod', 'prep']:1:0
+['root', 'ccomp', 'conj', 'advmod', 'prep', 'pobj']:2:0
+['root', 'ccomp', 'prep', 'pobj', 'relcl', 'nsubjpass']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'relcl', 'auxpass']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'relcl', 'prep', 'pobj', 'poss']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'relcl', 'prep', 'pobj', 'prep']:2:0
+['root', 'ccomp', 'prep', 'pobj', 'relcl', 'prep', 'pobj', 'prep', 'pobj']:2:2
+['root', 'ccomp', 'prep', 'pobj', 'relcl', 'prep', 'pobj', 'prep', 'pobj', 'prep']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'relcl', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj']:1:1
+['root', 'xcomp', 'dobj']:4:0
+['root', 'xcomp', 'advcl', 'mark']:1:0
+['root', 'xcomp', 'advcl']:1:0
+['root', 'xcomp', 'advcl', 'auxpass']:1:0
+['root', 'xcomp', 'advcl', 'cc']:2:0
+['root', 'xcomp', 'advcl', 'conj', 'nsubjpass']:2:0
+['root', 'xcomp', 'advcl', 'conj']:1:0
+['root', 'xcomp', 'advcl', 'conj', 'auxpass']:1:0
+['root', 'xcomp', 'advcl', 'conj', 'prep', 'pobj']:1:1
+['root', 'xcomp', 'advcl', 'conj', 'prep', 'pobj', 'relcl', 'xcomp', 'advmod']:1:0
+['root', 'xcomp', 'advcl', 'conj', 'prep', 'pobj', 'relcl', 'xcomp']:1:0
+['root', 'xcomp', 'advcl', 'conj', 'prep', 'pobj', 'relcl']:1:0
+['root', 'xcomp', 'advcl', 'conj', 'prep', 'pobj', 'relcl', 'xcomp', 'conj']:1:0
+['root', 'xcomp', 'advcl', 'conj', 'prep', 'pobj', 'relcl', 'xcomp', 'conj', 'dobj', 'amod']:1:0
+['root', 'xcomp', 'advcl', 'conj', 'prep', 'pobj', 'relcl', 'xcomp', 'conj', 'dobj']:1:0
+['root', 'oprd']:3:0
+['root', 'ccomp', 'conj', 'nsubjpass', 'nummod', 'advmod']:1:0
+['root', 'ccomp', 'conj', 'nsubjpass', 'nummod']:1:0
+['root', 'nsubj', 'prep', 'pobj', 'det']:12:0
+['root', 'ccomp', 'nsubj', 'appos']:2:1
+['root', 'ccomp', 'dobj', 'acl', 'prep']:1:0
+['root', 'ccomp', 'dobj', 'acl', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'dobj', 'acl', 'prep', 'pobj', 'nummod']:1:0
+['root', 'ccomp', 'dobj', 'acl', 'npadvmod', 'amod']:1:0
+['root', 'ccomp', 'dobj', 'acl', 'npadvmod']:1:0
+['root', 'prep', 'pobj', 'relcl', 'nsubj']:4:0
+['root', 'prep', 'pobj', 'relcl', 'aux']:1:0
+['root', 'prep', 'pobj', 'relcl', 'dobj', 'det']:1:0
+['root', 'prep', 'pobj', 'relcl', 'dobj', 'prep']:1:0
+['root', 'prep', 'pobj', 'relcl', 'dobj', 'prep', 'pobj']:1:0
+['root', 'prep', 'pobj', 'relcl', 'dobj', 'prep', 'pobj', 'acl']:1:0
+['root', 'prep', 'pobj', 'relcl', 'dobj', 'prep', 'pobj', 'acl', 'advmod', 'npadvmod']:1:0
+['root', 'prep', 'pobj', 'relcl', 'dobj', 'prep', 'pobj', 'acl', 'advmod']:1:0
+['root', 'ccomp', 'nsubj', 'relcl', 'xcomp', 'aux']:1:0
+['root', 'ccomp', 'nsubj', 'relcl', 'xcomp']:1:0
+['root', 'ccomp', 'nsubj', 'relcl', 'xcomp', 'dobj']:1:0
+['root', 'ccomp', 'nsubj', 'relcl', 'xcomp', 'cc']:1:0
+['root', 'ccomp', 'nsubj', 'relcl', 'xcomp', 'conj']:1:0
+['root', 'ccomp', 'nsubj', 'relcl', 'xcomp', 'conj', 'prep']:1:0
+['root', 'ccomp', 'nsubj', 'relcl', 'xcomp', 'conj', 'prep', 'pobj', 'det']:2:0
+['root', 'ccomp', 'nsubj', 'relcl', 'xcomp', 'conj', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'nsubj', 'relcl', 'xcomp', 'conj', 'prep', 'pobj', 'amod']:1:0
+['root', 'ccomp', 'nsubj', 'relcl', 'xcomp', 'conj', 'prep', 'pobj', 'compound']:1:1
+['root', 'ccomp', 'dobj', 'prep', 'pobj', 'compound']:9:6
+['root', 'ccomp', 'prep', 'pobj', 'acl', 'dobj']:3:0
+['root', 'ccomp', 'prep', 'pobj', 'acl', 'dobj', 'nummod']:2:0
+['root', 'ccomp', 'prep', 'pobj', 'acl', 'dobj', 'amod']:2:0
+['root', 'ccomp', 'prep', 'pcomp', 'nsubj']:1:1
+['root', 'ccomp', 'prep', 'pcomp', 'xcomp', 'aux']:2:0
+['root', 'ccomp', 'prep', 'pcomp', 'xcomp']:1:0
+['root', 'ccomp', 'prep', 'pcomp', 'xcomp', 'prt']:1:0
+['root', 'ccomp', 'prep', 'pcomp', 'xcomp', 'prt', 'prep', 'pobj', 'poss']:1:1
+['root', 'ccomp', 'prep', 'pcomp', 'xcomp', 'prt', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'prep', 'pcomp', 'xcomp', 'prt', 'prep', 'pobj', 'poss', 'case']:1:0
+['root', 'ccomp', 'prep', 'pcomp', 'xcomp', 'prt', 'prep', 'pobj', 'prep', 'pobj']:1:1
+['root', 'conj', 'nsubj', 'det']:5:0
+['root', 'conj', 'nsubj', 'compound']:4:3
+['root', 'conj', 'acomp']:2:0
+['root', 'conj', 'acomp', 'prep']:1:0
+['root', 'conj', 'acomp', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'dobj', 'poss']:5:1
+['root', 'ccomp', 'dobj', 'prep', 'pobj', 'prep']:3:0
+['root', 'ccomp', 'dobj', 'prep', 'pobj', 'prep', 'pobj']:3:1
+['root', 'ccomp', 'conj', 'dobj', 'prep']:3:0
+['root', 'ccomp', 'conj', 'dobj', 'prep', 'pobj']:3:1
+['root', 'ccomp', 'conj', 'advcl']:1:0
+['root', 'ccomp', 'conj', 'advcl', 'dobj', 'det']:1:0
+['root', 'ccomp', 'conj', 'advcl', 'dobj']:1:0
+['root', 'ccomp', 'conj', 'advcl', 'conj']:1:0
+['root', 'ccomp', 'conj', 'advcl', 'conj', 'dobj', 'det']:1:0
+['root', 'ccomp', 'conj', 'advcl', 'conj', 'dobj']:1:0
+['root', 'dobj', 'acl', 'aux']:2:0
+['root', 'dobj', 'acl']:6:0
+['root', 'dobj', 'acl', 'dobj', 'det']:1:0
+['root', 'dobj', 'acl', 'dobj']:3:0
+['root', 'dobj', 'acl', 'dobj', 'amod']:3:1
+['root', 'dobj', 'acl', 'dobj', 'prep']:3:0
+['root', 'dobj', 'acl', 'dobj', 'prep', 'pobj', 'amod']:1:0
+['root', 'dobj', 'acl', 'dobj', 'prep', 'pobj']:2:1
+['root', 'dobj', 'acl', 'prep']:2:0
+['root', 'dobj', 'acl', 'prep', 'pobj', 'compound']:2:1
+['root', 'dobj', 'acl', 'prep', 'pobj']:3:0
+['root', 'prep', 'prep', 'advmod']:1:0
+['root', 'prep', 'prep', 'pobj', 'compound']:1:1
+['root', 'prep', 'prep', 'pobj', 'prep']:4:0
+['root', 'prep', 'prep', 'pobj', 'prep', 'pobj']:5:0
+['root', 'ccomp', 'ccomp', 'nsubjpass']:1:0
+['root', 'ccomp', 'ccomp']:4:0
+['root', 'ccomp', 'ccomp', 'auxpass']:1:0
+['root', 'ccomp', 'ccomp', 'prep']:2:0
+['root', 'ccomp', 'ccomp', 'prep', 'pobj', 'det']:2:0
+['root', 'ccomp', 'ccomp', 'prep', 'pobj']:2:0
+['root', 'ccomp', 'ccomp', 'prep', 'pobj', 'prep']:1:0
+['root', 'ccomp', 'ccomp', 'prep', 'pobj', 'prep', 'pobj']:1:1
+['root', 'ccomp', 'ccomp', 'prep', 'pobj', 'relcl', 'aux']:1:0
+['root', 'ccomp', 'ccomp', 'prep', 'pobj', 'relcl']:1:0
+['root', 'ccomp', 'ccomp', 'prep', 'pobj', 'relcl', 'auxpass']:1:0
+['root', 'ccomp', 'ccomp', 'prep', 'pobj', 'relcl', 'prep']:1:0
+['root', 'ccomp', 'ccomp', 'prep', 'pobj', 'relcl', 'prep', 'pobj']:1:1
+['root', 'ccomp', 'ccomp', 'prep', 'pobj', 'relcl', 'advmod']:1:0
+['root', 'attr', 'compound']:3:0
+['root', 'attr', 'prep']:24:0
+['root', 'attr', 'prep', 'pobj', 'det']:8:1
+['root', 'attr', 'prep', 'pobj']:21:2
+['root', 'ccomp', 'nsubj', 'cc']:1:0
+['root', 'ccomp', 'nsubj', 'conj', 'amod']:2:0
+['root', 'ccomp', 'nsubj', 'conj']:1:0
+['root', 'ccomp', 'dobj', 'punct']:6:0
+['root', 'ccomp', 'dobj', 'poss', 'case']:1:0
+['root', 'ccomp', 'advcl', 'prt']:2:0
+['root', 'ccomp', 'advcl', 'dobj', 'prep']:3:0
+['root', 'ccomp', 'advcl', 'cc']:2:0
+['root', 'ccomp', 'advcl', 'conj']:2:0
+['root', 'ccomp', 'advcl', 'conj', 'dobj']:2:0
+['root', 'ccomp', 'advcl', 'conj', 'dobj', 'amod']:1:0
+['root', 'ccomp', 'advcl', 'conj', 'dobj', 'prep', 'pobj', 'predet']:1:0
+['root', 'ccomp', 'advcl', 'conj', 'dobj', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'advcl', 'conj', 'dobj', 'prep', 'pobj', 'det']:1:0
+['root', 'ccomp', 'advcl', 'conj', 'dobj', 'prep', 'pobj', 'amod']:1:0
+['root', 'prep', 'pcomp', 'dobj', 'punct']:3:0
+['root', 'prep', 'pcomp', 'dobj', 'relcl', 'dobj']:1:0
+['root', 'prep', 'pcomp', 'dobj', 'relcl']:1:0
+['root', 'prep', 'pcomp', 'dobj', 'relcl', 'nsubj']:1:0
+['root', 'prep', 'pcomp', 'dobj', 'relcl', 'prep']:1:0
+['root', 'prep', 'pcomp', 'dobj', 'relcl', 'prep', 'punct']:2:0
+['root', 'prep', 'pcomp', 'dobj', 'relcl', 'prep', 'pobj']:1:0
+['root', 'prep', 'pcomp', 'ccomp']:2:0
+['root', 'prep', 'pcomp', 'ccomp', 'aux']:3:0
+['root', 'prep', 'pcomp', 'ccomp', 'dobj', 'poss']:2:0
+['root', 'prep', 'pcomp', 'ccomp', 'dobj']:1:0
+['root', 'advcl', 'ccomp', 'nsubj', 'det']:2:0
+['root', 'advcl', 'ccomp', 'aux']:5:0
+['root', 'advcl', 'ccomp', 'attr', 'det']:2:0
+['root', 'advcl', 'ccomp', 'attr']:2:0
+['root', 'advcl', 'ccomp', 'attr', 'advcl']:1:0
+['root', 'advcl', 'ccomp', 'attr', 'advcl', 'nsubj', 'amod']:1:0
+['root', 'advcl', 'ccomp', 'attr', 'advcl', 'nsubj']:1:0
+['root', 'advcl', 'ccomp', 'attr', 'advcl', 'nsubj', 'compound']:1:1
+['root', 'advcl', 'ccomp', 'attr', 'advcl', 'prep']:1:0
+['root', 'advcl', 'ccomp', 'attr', 'advcl', 'prep', 'pobj']:1:0
+['root', 'advcl', 'ccomp', 'attr', 'advcl', 'prep', 'pobj', 'prep']:1:0
+['root', 'advcl', 'ccomp', 'attr', 'advcl', 'prep', 'pobj', 'prep', 'pobj']:1:0
+['root', 'nsubjpass', 'nummod', 'quantmod']:1:0
+['root', 'advcl', 'nsubj', 'amod']:5:2
+['root', 'advcl', 'prt']:4:0
+['root', 'advcl', 'prep', 'pobj', 'acl', 'aux']:2:0
+['root', 'advcl', 'prep', 'pobj', 'acl']:3:0
+['root', 'advcl', 'prep', 'pobj', 'acl', 'dobj', 'det']:2:0
+['root', 'advcl', 'prep', 'pobj', 'acl', 'dobj']:3:0
+['root', 'advcl', 'prep', 'pobj', 'acl', 'cc']:1:0
+['root', 'advcl', 'prep', 'pobj', 'acl', 'conj']:1:0
+['root', 'advcl', 'prep', 'pobj', 'acl', 'conj', 'dobj', 'det']:1:0
+['root', 'advcl', 'prep', 'pobj', 'acl', 'conj', 'dobj']:1:0
+['root', 'advcl', 'prep', 'pobj', 'acl', 'conj', 'dobj', 'amod']:1:0
+['root', 'ccomp', 'nsubj', 'prep', 'pobj', 'prep', 'pobj', 'compound']:1:0
+['root', 'ccomp', 'nsubj', 'prep', 'pobj', 'prep', 'pobj', 'cc']:1:0
+['root', 'ccomp', 'nsubj', 'prep', 'pobj', 'prep', 'pobj', 'conj']:1:0
+['root', 'ccomp', 'nsubj', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'prep']:1:0
+['root', 'ccomp', 'nsubj', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'prep', 'pobj', 'amod']:1:0
+['root', 'ccomp', 'nsubj', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'nsubj', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'prep', 'pobj', 'prep']:1:0
+['root', 'ccomp', 'nsubj', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'prep', 'pobj', 'prep', 'pobj']:1:0
+['root', 'dobj', 'nmod']:5:2
+['root', 'ccomp', 'dobj', 'prep', 'pobj', 'det']:3:0
+['root', 'ccomp', 'advcl', 'prep', 'pobj', 'relcl', 'ccomp', 'nsubj']:1:0
+['root', 'ccomp', 'advcl', 'prep', 'pobj', 'relcl', 'ccomp']:1:0
+['root', 'ccomp', 'advcl', 'prep', 'pobj', 'relcl', 'nsubj']:1:1
+['root', 'ccomp', 'advcl', 'prep', 'pobj', 'relcl']:1:0
+['root', 'ccomp', 'advcl', 'prep', 'pobj', 'relcl', 'ccomp', 'aux']:1:0
+['root', 'ccomp', 'advcl', 'prep', 'pobj', 'relcl', 'ccomp', 'auxpass']:1:0
+['root', 'ccomp', 'advcl', 'prep', 'pobj', 'relcl', 'ccomp', 'prep']:1:0
+['root', 'ccomp', 'advcl', 'prep', 'pobj', 'relcl', 'ccomp', 'prep', 'pobj', 'amod']:1:1
+['root', 'ccomp', 'advcl', 'prep', 'pobj', 'relcl', 'ccomp', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'advcl', 'prep', 'pobj', 'relcl', 'ccomp', 'prep', 'pobj', 'compound']:1:0
+['root', 'ccomp', 'dobj', 'conj', 'advmod']:1:0
+['root', 'ccomp', 'dobj', 'conj', 'quantmod']:1:0
+['root', 'ccomp', 'dobj', 'conj', 'prep']:2:0
+['root', 'ccomp', 'dobj', 'conj', 'prep', 'pobj', 'amod']:1:1
+['root', 'ccomp', 'dobj', 'conj', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'conj', 'poss']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'conj']:3:0
+['root', 'ccomp', 'advcl', 'prep', 'pobj', 'poss']:1:0
+['root', 'ccomp', 'advcl', 'prep', 'pcomp', 'dobj', 'conj', 'compound']:1:0
+['root', 'ccomp', 'advcl', 'prep', 'pcomp', 'dobj', 'conj']:1:0
+['root', 'ccomp', 'conj', 'dobj', 'prep', 'pobj', 'poss']:1:0
+['root', 'nsubj', 'nmod', 'nummod']:1:0
+['root', 'agent', 'advmod']:1:0
+['root', 'agent']:4:0
+['root', 'agent', 'pobj', 'det']:2:0
+['root', 'agent', 'pobj']:4:0
+['root', 'nsubj', 'prep', 'pobj', 'poss']:2:1
+['root', 'nsubj', 'prep', 'pobj', 'poss', 'case']:2:0
+['root', 'nsubj', 'prep', 'pobj', 'amod']:8:3
+['root', 'nsubj', 'prep', 'pobj', 'prep']:4:0
+['root', 'nsubj', 'prep', 'pobj', 'prep', 'pobj', 'det']:2:0
+['root', 'nsubj', 'prep', 'pobj', 'prep', 'pobj']:3:0
+['root', 'nsubj', 'prep', 'pobj', 'prep', 'pobj', 'compound']:1:1
+['root', 'ccomp', 'advcl', 'nsubjpass']:3:0
+['root', 'ccomp', 'advcl', 'prep', 'pobj', 'compound', 'amod']:1:1
+['root', 'ccomp', 'dobj', 'prep', 'pcomp', 'nsubj']:1:0
+['root', 'ccomp', 'dobj', 'prep', 'pcomp', 'aux']:1:0
+['root', 'ccomp', 'dobj', 'prep', 'pcomp', 'dobj']:1:0
+['root', 'ccomp', 'dobj', 'prep', 'pcomp', 'prep']:1:0
+['root', 'ccomp', 'dobj', 'prep', 'pcomp', 'prep', 'pobj', 'det']:1:0
+['root', 'ccomp', 'dobj', 'prep', 'pcomp', 'prep', 'pobj']:1:1
+['root', 'dobj', 'acl', 'prep', 'pobj', 'det']:2:0
+['root', 'dobj', 'acl', 'prep', 'pobj', 'amod']:2:0
+['root', 'dobj', 'acl', 'prep', 'pobj', 'prep']:1:0
+['root', 'dobj', 'acl', 'prep', 'pobj', 'prep', 'pobj', 'compound']:1:1
+['root', 'dobj', 'acl', 'prep', 'pobj', 'prep', 'pobj']:1:0
+['root', 'dobj', 'acl', 'prep', 'pobj', 'prep', 'pobj', 'cc']:1:0
+['root', 'dobj', 'acl', 'prep', 'pobj', 'prep', 'pobj', 'conj']:1:0
+['root', 'dobj', 'acl', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'compound']:1:1
+['root', 'dobj', 'acl', 'prep', 'pobj', 'punct']:1:0
+['root', 'dobj', 'acl', 'prep', 'pobj', 'relcl', 'advmod']:1:0
+['root', 'dobj', 'acl', 'prep', 'pobj', 'relcl']:1:0
+['root', 'dobj', 'acl', 'prep', 'pobj', 'relcl', 'nsubjpass', 'amod']:2:1
+['root', 'dobj', 'acl', 'prep', 'pobj', 'relcl', 'nsubjpass']:1:0
+['root', 'nmod']:12:7
+['root', 'prep', 'pobj', 'compound', 'compound']:3:1
+['root', 'prep', 'prep', 'pobj', 'relcl', 'nsubjpass']:1:0
+['root', 'prep', 'prep', 'pobj', 'relcl', 'auxpass']:1:0
+['root', 'prep', 'prep', 'pobj', 'relcl', 'prep', 'pobj', 'det']:1:0
+['root', 'prep', 'prep', 'pobj', 'relcl', 'prep', 'pobj']:1:0
+['root', 'prep', 'prep', 'pobj', 'relcl', 'prep', 'pobj', 'compound']:2:1
+['root', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'poss']:1:0
+['root', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'poss', 'case']:1:0
+['root', 'appos', 'amod']:5:1
+['root', 'appos', 'appos', 'nummod', 'compound']:1:0
+['root', 'appos', 'appos', 'nummod', 'punct']:6:0
+['root', 'appos', 'appos']:38:4
+['root', 'appos', 'appos', 'prep']:6:0
+['root', 'appos', 'appos', 'npadvmod']:5:0
+['root', 'appos', 'appos', 'compound', 'amod']:4:2
+['root', 'appos', 'appos', 'amod']:6:0
+['root', 'appos', 'nummod', 'punct']:4:0
+['root', 'appos', 'prep']:11:0
+['root', 'appos', 'prep', 'pobj']:7:0
+['root', 'appos', 'appos', 'punct']:8:0
+['root', 'appos', 'appos', 'appos', 'nummod']:8:0
+['root', 'appos', 'appos', 'appos']:11:1
+['root', 'appos', 'nummod', 'quantmod']:1:0
+['root', 'appos', 'npadvmod']:9:4
+['root', 'appos', 'appos', 'compound']:14:1
+['root', 'appos', 'appos', 'appos', 'compound']:2:0
+['root', 'appos', 'npadvmod', 'cc']:2:0
+['root', 'appos', 'npadvmod', 'conj', 'compound']:2:2
+['root', 'appos', 'npadvmod', 'conj']:2:0
+['root', 'appos', 'acl']:2:0
+['root', 'appos', 'acl', 'prep']:2:0
+['root', 'appos', 'acl', 'prep', 'pobj']:2:0
+['root', 'appos', 'acl', 'prep', 'pobj', 'appos', 'nmod', 'nmod']:1:0
+['root', 'ccomp', 'agent', 'pobj', 'poss']:1:0
+['root', 'ccomp', 'agent', 'pobj', 'poss', 'case']:1:0
+['root', 'ccomp', 'agent', 'pobj', 'punct']:2:0
+['root', 'ccomp', 'agent', 'pobj', 'relcl', 'nsubj']:1:0
+['root', 'ccomp', 'agent', 'pobj', 'relcl']:1:0
+['root', 'ccomp', 'agent', 'pobj', 'relcl', 'dobj', 'det']:1:0
+['root', 'ccomp', 'agent', 'pobj', 'relcl', 'dobj']:1:0
+['root', 'ccomp', 'agent', 'pobj', 'relcl', 'oprd']:1:0
+['root', 'ccomp', 'agent', 'pobj', 'relcl', 'oprd', 'prep']:1:0
+['root', 'ccomp', 'agent', 'pobj', 'relcl', 'oprd', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'agent', 'pobj', 'relcl', 'oprd', 'advcl', 'aux']:1:0
+['root', 'ccomp', 'agent', 'pobj', 'relcl', 'oprd', 'advcl']:1:0
+['root', 'ccomp', 'agent', 'pobj', 'relcl', 'oprd', 'advcl', 'ccomp', 'nsubj', 'compound']:1:0
+['root', 'ccomp', 'agent', 'pobj', 'relcl', 'oprd', 'advcl', 'ccomp', 'nsubj']:1:0
+['root', 'ccomp', 'agent', 'pobj', 'relcl', 'oprd', 'advcl', 'ccomp']:1:0
+['root', 'nsubjpass', 'prep', 'pobj', 'punct']:6:0
+['root', 'xcomp', 'prep', 'advmod']:1:0
+['root', 'xcomp', 'prep', 'prep', 'pobj']:2:0
+['root', 'advcl', 'prep', 'pobj', 'compound', 'amod']:2:1
+['root', 'conj', 'dobj', 'conj', 'nmod']:1:0
+['root', 'conj', 'dobj', 'conj', 'compound']:1:1
+['root', 'nsubj', 'prep', 'pobj', 'poss', 'det']:1:0
+['root', 'nsubjpass', 'poss', 'det']:2:0
+['root', 'nsubjpass', 'poss']:2:0
+['root', 'nsubjpass', 'poss', 'case']:3:0
+['root', 'prep', 'pobj', 'poss', 'compound']:4:3
+['root', 'prep', 'pobj', 'poss']:12:0
+['root', 'prep', 'pobj', 'appos', 'compound']:2:2
+['root', 'conj', 'attr', 'poss']:1:0
+['root', 'conj', 'attr']:3:0
+['root', 'conj', 'ccomp', 'attr', 'det']:2:0
+['root', 'conj', 'ccomp', 'attr']:1:0
+['root', 'conj', 'ccomp', 'attr', 'amod']:1:0
+['root', 'conj', 'ccomp', 'attr', 'prep']:2:0
+['root', 'conj', 'ccomp', 'attr', 'prep', 'pobj', 'poss']:1:0
+['root', 'conj', 'ccomp', 'attr', 'prep', 'pobj']:2:0
+['root', 'prep', 'pobj', 'acl']:6:0
+['root', 'prep', 'pobj', 'acl', 'dobj']:2:0
+['root', 'prep', 'pobj', 'acl', 'dobj', 'prep', 'pobj', 'poss']:1:0
+['root', 'prep', 'pobj', 'acl', 'dobj', 'prep', 'pobj']:2:0
+['root', 'prep', 'pobj', 'acl', 'dobj', 'prep', 'pobj', 'cc']:1:0
+['root', 'prep', 'pobj', 'acl', 'dobj', 'prep', 'pobj', 'conj', 'compound', 'advmod']:1:0
+['root', 'prep', 'pobj', 'acl', 'dobj', 'prep', 'pobj', 'conj', 'compound']:1:0
+['root', 'prep', 'pobj', 'acl', 'dobj', 'prep', 'pobj', 'conj']:1:1
+['root', 'attr', 'prep', 'pobj', 'punct']:3:0
+['root', 'attr', 'prep', 'pobj', 'compound']:4:2
+['root', 'attr', 'prep', 'pobj', 'relcl', 'nsubj']:3:0
+['root', 'attr', 'prep', 'pobj', 'relcl']:3:0
+['root', 'attr', 'prep', 'pobj', 'relcl', 'dobj', 'det']:1:0
+['root', 'attr', 'prep', 'pobj', 'relcl', 'dobj']:2:0
+['root', 'attr', 'prep', 'pobj', 'relcl', 'dobj', 'amod']:1:0
+['root', 'attr', 'prep', 'pobj', 'relcl', 'dobj', 'compound', 'nummod']:1:0
+['root', 'attr', 'prep', 'pobj', 'relcl', 'dobj', 'compound']:1:0
+['root', 'attr', 'prep', 'pobj', 'relcl', 'dobj', 'prep']:2:0
+['root', 'attr', 'prep', 'pobj', 'relcl', 'dobj', 'prep', 'pobj']:1:0
+['root', 'attr', 'prep', 'pobj', 'relcl', 'dobj', 'prep', 'pobj', 'prep', 'pobj']:1:0
+['root', 'attr', 'prep', 'pobj', 'relcl', 'cc']:1:0
+['root', 'attr', 'prep', 'pobj', 'relcl', 'conj', 'advmod']:1:0
+['root', 'attr', 'prep', 'pobj', 'relcl', 'conj']:1:0
+['root', 'attr', 'prep', 'pobj', 'relcl', 'conj', 'dobj', 'compound']:1:0
+['root', 'attr', 'prep', 'pobj', 'relcl', 'conj', 'dobj']:1:0
+['root', 'attr', 'prep', 'pobj', 'relcl', 'conj', 'dobj', 'prep', 'pobj', 'nmod', 'aux']:1:0
+['root', 'attr', 'prep', 'pobj', 'relcl', 'conj', 'dobj', 'prep', 'pobj']:1:0
+['root', 'attr', 'prep', 'pobj', 'relcl', 'conj', 'dobj', 'prep', 'pobj', 'compound']:1:0
+['root', 'conj', 'relcl', 'nsubj']:1:0
+['root', 'conj', 'relcl']:1:0
+['root', 'conj', 'relcl', 'acomp']:1:0
+['root', 'conj', 'relcl', 'acomp', 'prep']:1:0
+['root', 'conj', 'relcl', 'acomp', 'prep', 'pobj']:1:0
+['root', 'conj', 'relcl', 'prep']:1:0
+['root', 'conj', 'relcl', 'prep', 'pcomp', 'auxpass']:1:0
+['root', 'conj', 'relcl', 'prep', 'pcomp']:1:0
+['root', 'conj', 'relcl', 'prep', 'pcomp', 'agent']:1:0
+['root', 'conj', 'relcl', 'prep', 'pcomp', 'agent', 'pobj', 'compound']:2:1
+['root', 'conj', 'relcl', 'prep', 'pcomp', 'agent', 'pobj']:1:0
+['root', 'attr', 'poss']:2:1
+['root', 'attr', 'poss', 'case']:1:0
+['root', 'conj', 'dobj', 'det']:3:0
+['root', 'conj', 'dobj', 'punct']:1:0
+['root', 'conj', 'dobj', 'appos', 'compound']:2:1
+['root', 'conj', 'dobj', 'appos']:1:0
+['root', 'prep', 'cc']:2:0
+['root', 'prep', 'conj', 'pobj']:2:0
+['root', 'prep', 'pcomp', 'dobj', 'det']:2:0
+['root', 'prep', 'pcomp', 'dobj', 'compound', 'amod']:1:0
+['root', 'prep', 'pcomp', 'dobj', 'compound']:3:0
+['root', 'prep', 'pcomp', 'dobj', 'appos']:1:1
+['root', 'prep', 'pcomp', 'prep', 'pobj', 'nummod']:2:0
+['root', 'prep', 'pcomp', 'prep', 'pobj']:6:0
+['root', 'conj', 'nsubj', 'poss']:1:0
+['root', 'conj', 'nsubj', 'amod']:3:0
+['root', 'nsubj', 'appos', 'det']:13:0
+['root', 'nsubj', 'appos', 'relcl', 'nsubj']:1:0
+['root', 'nsubj', 'appos', 'relcl']:1:0
+['root', 'nsubj', 'appos', 'relcl', 'dobj', 'amod']:1:0
+['root', 'nsubj', 'appos', 'relcl', 'dobj']:1:0
+['root', 'dobj', 'prep', 'pobj', 'nummod']:9:0
+['root', 'dobj', 'prep', 'pobj', 'amod']:5:1
+['root', 'advcl', 'advmod']:14:0
+['root', 'advcl', 'nsubjpass']:1:0
+['root', 'advcl', 'auxpass']:1:0
+['root', 'advcl', 'prep', 'pobj', 'amod']:3:0
+['root', 'advcl', 'prep', 'pobj', 'prep', 'pobj', 'appos']:1:1
+['root', 'advcl', 'prep', 'pobj', 'nummod']:3:0
+['root', 'advcl', 'advmod', 'advmod']:1:0
+['root', 'advcl', 'aux']:16:0
+['root', 'advcl', 'dobj', 'det']:8:0
+['root', 'advcl', 'cc']:5:0
+['root', 'advcl', 'conj']:4:0
+['root', 'advcl', 'conj', 'dobj', 'det']:1:0
+['root', 'advcl', 'conj', 'dobj']:1:0
+['root', 'advcl', 'conj', 'dobj', 'amod']:1:0
+['root', 'advcl', 'conj', 'dobj', 'prep', 'pobj', 'poss']:1:0
+['root', 'advcl', 'conj', 'dobj', 'prep', 'pobj']:1:0
+['root', 'advmod', 'advmod']:5:0
+['root', 'advmod', 'ccomp', 'mark']:1:0
+['root', 'advmod', 'ccomp']:1:0
+['root', 'advmod', 'ccomp', 'auxpass']:1:0
+['root', 'advmod', 'ccomp', 'xcomp', 'aux']:1:0
+['root', 'advmod', 'ccomp', 'xcomp']:1:0
+['root', 'advmod', 'ccomp', 'xcomp', 'dobj']:1:0
+['root', 'advmod', 'ccomp', 'xcomp', 'dobj', 'amod']:1:0
+['root', 'advmod', 'ccomp', 'xcomp', 'dobj', 'prep', 'pobj']:1:0
+['root', 'advmod', 'ccomp', 'xcomp', 'dobj', 'prep', 'pobj', 'compound']:2:1
+['root', 'nsubjpass', 'punct']:8:0
+['root', 'conj', 'attr', 'det']:2:0
+['root', 'conj', 'attr', 'amod']:3:0
+['root', 'prep', 'pobj', 'cc']:7:0
+['root', 'prep', 'pobj', 'conj', 'compound']:2:0
+['root', 'prep', 'pcomp', 'auxpass']:3:0
+['root', 'prep', 'pcomp', 'prep', 'pobj', 'det']:3:0
+['root', 'prep', 'pcomp', 'prep', 'pobj', 'advmod']:1:0
+['root', 'prep', 'pcomp', 'advcl', 'aux']:1:0
+['root', 'prep', 'pcomp', 'advcl']:1:0
+['root', 'prep', 'pcomp', 'advcl', 'dobj', 'det']:1:0
+['root', 'prep', 'pcomp', 'advcl', 'dobj']:1:0
+['root', 'prep', 'pcomp', 'advcl', 'dobj', 'prep', 'pobj', 'punct']:2:0
+['root', 'prep', 'pcomp', 'advcl', 'dobj', 'prep', 'pobj']:1:1
+['root', 'prep', 'pcomp', 'advcl', 'dobj', 'prep', 'pobj', 'conj', 'nummod']:1:0
+['root', 'prep', 'pcomp', 'advcl', 'dobj', 'prep', 'pobj', 'conj']:1:0
+['root', 'nsubj', 'appos', 'punct']:5:0
+['root', 'nsubj', 'appos', 'appos', 'nmod']:1:1
+['root', 'nsubj', 'appos', 'appos']:1:0
+['root', 'nsubj', 'appos', 'appos', 'nmod', 'amod']:1:1
+['root', 'attr', 'prep', 'pobj', 'nmod', 'punct']:2:0
+['root', 'attr', 'prep', 'pobj', 'nmod']:1:0
+['root', 'attr', 'prep', 'pobj', 'nmod', 'nmod']:1:1
+['root', 'attr', 'relcl', 'advmod', 'npadvmod', 'nummod']:1:0
+['root', 'attr', 'relcl', 'advmod', 'npadvmod']:1:0
+['root', 'attr', 'relcl', 'advmod']:1:0
+['root', 'attr', 'relcl', 'cc']:1:0
+['root', 'attr', 'relcl', 'conj']:1:0
+['root', 'attr', 'relcl', 'conj', 'advmod']:1:0
+['root', 'attr', 'relcl', 'conj', 'xcomp', 'aux']:1:0
+['root', 'attr', 'relcl', 'conj', 'xcomp']:1:0
+['root', 'attr', 'relcl', 'conj', 'xcomp', 'advmod']:1:0
+['root', 'attr', 'relcl', 'conj', 'xcomp', 'dobj']:1:0
+['root', 'attr', 'relcl', 'conj', 'xcomp', 'dobj', 'prep']:1:0
+['root', 'attr', 'relcl', 'conj', 'xcomp', 'dobj', 'prep', 'pobj']:1:0
+['root', 'nsubj', 'appos', 'prep', 'pobj', 'prep', 'pobj', 'compound', 'amod']:1:0
+['root', 'nsubj', 'appos', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'compound']:2:1
+['root', 'nsubj', 'appos', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj']:2:0
+['root', 'attr', 'amod', 'advmod']:2:0
+['root', 'attr', 'amod', 'prep']:1:0
+['root', 'attr', 'amod', 'prep', 'pobj']:1:0
+['root', 'attr', 'amod', 'prep', 'pobj', 'cc']:1:0
+['root', 'attr', 'amod', 'prep', 'pobj', 'conj']:1:0
+['root', 'attr', 'amod', 'prep', 'pobj', 'conj', 'prep', 'pobj']:1:0
+['root', 'attr', 'amod', 'xcomp', 'aux']:1:0
+['root', 'attr', 'amod', 'xcomp']:1:0
+['root', 'attr', 'amod', 'xcomp', 'dobj']:1:1
+['root', 'attr', 'amod', 'xcomp', 'dobj', 'amod', 'advmod']:1:0
+['root', 'attr', 'amod', 'xcomp', 'dobj', 'compound']:1:1
+['root', 'advcl', 'det']:2:0
+['root', 'advcl', 'amod']:1:0
+['root', 'prep', 'pobj', 'prep', 'pobj', 'poss', 'compound']:2:1
+['root', 'prep', 'pobj', 'prep', 'pobj', 'poss']:4:1
+['root', 'prep', 'pobj', 'prep', 'pobj', 'poss', 'case']:4:0
+['root', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'amod', 'npadvmod']:2:2
+['root', 'conj', 'dobj', 'poss']:1:0
+['root', 'conj', 'dobj', 'acl', 'aux']:1:0
+['root', 'conj', 'dobj', 'acl']:1:0
+['root', 'conj', 'dobj', 'acl', 'dobj']:1:0
+['root', 'conj', 'dobj', 'acl', 'dobj', 'compound', 'compound']:1:0
+['root', 'conj', 'dobj', 'acl', 'dobj', 'compound']:1:0
+['root', 'dobj', 'relcl', 'aux']:1:0
+['root', 'dobj', 'relcl']:2:0
+['root', 'dobj', 'relcl', 'dobj', 'compound']:2:1
+['root', 'dobj', 'relcl', 'dobj']:1:0
+['root', 'conj', 'prep', 'prep']:2:0
+['root', 'conj', 'prep', 'prep', 'pobj']:1:0
+['root', 'conj', 'prep', 'prep', 'pobj', 'prep']:1:0
+['root', 'conj', 'prep', 'prep', 'pobj', 'prep', 'pobj', 'poss', 'det']:1:0
+['root', 'conj', 'prep', 'prep', 'pobj', 'prep', 'pobj', 'poss']:1:0
+['root', 'conj', 'prep', 'prep', 'pobj', 'prep', 'pobj']:1:0
+['root', 'conj', 'prep', 'prep', 'pobj', 'prep', 'pobj', 'poss', 'case']:1:0
+['root', 'conj', 'prep', 'prep', 'pobj', 'prep', 'pobj', 'amod']:1:0
+['root', 'conj', 'prep', 'pobj', 'poss', 'compound']:2:1
+['root', 'conj', 'prep', 'pobj', 'poss']:4:0
+['root', 'conj', 'prep', 'pobj', 'poss', 'case']:1:0
+['root', 'nsubj', 'appos', 'amod', 'amod']:1:0
+['root', 'nsubj', 'appos', 'amod', 'punct']:1:0
+['root', 'attr', 'amod', 'advmod', 'advmod']:1:0
+['root', 'prt']:4:0
+['root', 'advcl', 'punct']:3:0
+['root', 'advcl', 'advcl', 'prt']:1:0
+['root', 'advcl', 'advcl', 'prep', 'pobj', 'compound', 'amod']:1:0
+['root', 'advcl', 'advcl', 'prep', 'pobj', 'compound']:1:0
+['root', 'advcl', 'advcl', 'prep', 'pobj', 'cc']:1:0
+['root', 'advcl', 'advcl', 'prep', 'pobj', 'conj']:1:0
+['root', 'prep', 'pobj', 'conj', 'poss']:1:0
+['root', 'prep', 'pobj', 'conj', 'prep', 'pobj', 'compound']:1:1
+['root', 'prep', 'pobj', 'conj', 'prep', 'pobj']:1:0
+['root', 'advcl', 'dobj', 'amod', 'advmod']:1:0
+['root', 'advcl', 'dobj', 'amod']:6:0
+['root', 'advcl', 'advcl', 'attr', 'compound']:1:1
+['root', 'advcl', 'advcl', 'attr']:1:0
+['root', 'advcl', 'advcl', 'attr', 'amod']:1:1
+['root', 'advcl', 'advcl', 'mark']:1:0
+['root', 'advcl', 'advcl', 'nsubj', 'det']:2:0
+['root', 'advcl', 'advcl', 'nsubj']:1:0
+['root', 'advcl', 'advcl', 'dobj', 'poss']:1:0
+['root', 'advcl', 'advcl', 'dobj']:2:0
+['root', 'advcl', 'amod', 'amod']:1:0
+['root', 'advcl', 'amod', 'cc']:1:0
+['root', 'advcl', 'amod', 'conj']:1:0
+['root', 'advcl', 'relcl', 'nsubj']:1:0
+['root', 'advcl', 'relcl']:1:0
+['root', 'advcl', 'relcl', 'advmod']:1:0
+['root', 'advcl', 'relcl', 'prep']:1:0
+['root', 'advcl', 'relcl', 'prep', 'pcomp']:1:0
+['root', 'advcl', 'relcl', 'prep', 'pcomp', 'dobj', 'det']:1:0
+['root', 'advcl', 'relcl', 'prep', 'pcomp', 'dobj']:2:2
+['root', 'advcl', 'relcl', 'prep', 'pcomp', 'prep']:2:0
+['root', 'advcl', 'relcl', 'prep', 'pcomp', 'prep', 'pobj']:1:0
+['root', 'prep', 'prep', 'pobj', 'amod']:1:1
+['root', 'prep', 'prep', 'pobj', 'prep', 'pobj', 'amod']:3:1
+['root', 'prep', 'prep', 'pobj', 'prep', 'pobj', 'amod', 'xcomp', 'aux']:1:0
+['root', 'prep', 'prep', 'pobj', 'prep', 'pobj', 'amod', 'xcomp']:1:0
+['root', 'prep', 'prep', 'pobj', 'prep', 'pobj', 'amod', 'xcomp', 'dobj']:1:0
+['root', 'nsubjpass', 'acl', 'mark']:1:0
+['root', 'nsubjpass', 'acl', 'nsubjpass']:2:0
+['root', 'nsubjpass', 'acl', 'aux']:1:0
+['root', 'nsubjpass', 'acl', 'auxpass']:1:0
+['root', 'nsubjpass', 'acl', 'agent']:1:0
+['root', 'nsubjpass', 'acl', 'agent', 'pobj', 'det']:2:0
+['root', 'nsubjpass', 'acl', 'agent', 'pobj']:1:0
+['root', 'nsubjpass', 'acl', 'agent', 'pobj', 'amod', 'advmod', 'advmod']:1:0
+['root', 'nsubjpass', 'acl', 'agent', 'pobj', 'amod', 'advmod']:1:0
+['root', 'nsubjpass', 'acl', 'agent', 'pobj', 'amod']:2:1
+['root', 'nsubjpass', 'acl', 'agent', 'pobj', 'appos', 'compound']:1:1
+['root', 'nsubjpass', 'acl', 'agent', 'pobj', 'appos']:2:1
+['root', 'advcl', 'advcl', 'prep', 'pobj', 'prep']:1:0
+['root', 'advcl', 'advcl', 'prep', 'pobj', 'prep', 'pcomp']:1:0
+['root', 'advcl', 'advcl', 'prep', 'pobj', 'prep', 'pcomp', 'dobj']:1:0
+['root', 'advcl', 'advcl', 'prep', 'pobj', 'prep', 'pcomp', 'dobj', 'compound']:1:0
+['root', 'advcl', 'advcl', 'prep', 'pobj', 'prep', 'pcomp', 'cc']:1:0
+['root', 'advcl', 'advcl', 'prep', 'pobj', 'prep', 'pcomp', 'conj']:1:0
+['root', 'advcl', 'advcl', 'prep', 'pobj', 'prep', 'pcomp', 'conj', 'dobj']:1:0
+['root', 'advcl', 'advcl', 'prep', 'pobj', 'prep', 'pcomp', 'conj', 'dobj', 'amod']:2:0
+['root', 'advcl', 'prep', 'pobj', 'acl', 'dobj', 'poss']:1:0
+['root', 'advcl', 'prep', 'cc']:1:0
+['root', 'advcl', 'prep', 'conj', 'advmod']:1:0
+['root', 'advcl', 'prep', 'conj', 'pcomp']:1:0
+['root', 'advcl', 'prep', 'conj', 'pcomp', 'dobj']:1:0
+['root', 'advcl', 'prep', 'conj', 'pcomp', 'dobj', 'acl']:1:0
+['root', 'advcl', 'prep', 'conj', 'pcomp', 'dobj', 'acl', 'agent']:1:0
+['root', 'advcl', 'prep', 'conj', 'pcomp', 'dobj', 'acl', 'agent', 'pobj', 'nmod', 'nmod']:1:1
+['root', 'advcl', 'prep', 'conj', 'pcomp', 'dobj', 'acl', 'agent', 'pobj', 'nmod']:1:0
+['root', 'advcl', 'prep', 'conj', 'pcomp', 'dobj', 'acl', 'agent', 'pobj']:1:0
+['root', 'advcl', 'prep', 'conj', 'pcomp', 'dobj', 'acl', 'agent', 'pobj', 'amod']:1:0
+['root', 'advcl', 'prep', 'conj', 'pcomp', 'dobj', 'acl', 'agent', 'pobj', 'prep']:1:0
+['root', 'advcl', 'prep', 'conj', 'pcomp', 'dobj', 'acl', 'agent', 'pobj', 'prep', 'pobj', 'det']:1:0
+['root', 'advcl', 'prep', 'conj', 'pcomp', 'dobj', 'acl', 'agent', 'pobj', 'prep', 'pobj']:1:0
+['root', 'advcl', 'prep', 'conj', 'pcomp', 'dobj', 'acl', 'agent', 'pobj', 'prep', 'pobj', 'compound']:1:1
+['root', 'attr', 'prep', 'pobj', 'poss', 'compound']:3:1
+['root', 'attr', 'prep', 'pobj', 'poss']:3:0
+['root', 'attr', 'prep', 'pobj', 'poss', 'case']:3:0
+['root', 'attr', 'prep', 'pobj', 'amod']:7:2
+['root', 'attr', 'prep', 'pobj', 'prep']:2:0
+['root', 'attr', 'prep', 'pobj', 'prep', 'pobj', 'amod']:2:0
+['root', 'attr', 'prep', 'pobj', 'prep', 'pobj']:3:0
+['root', 'attr', 'prep', 'pobj', 'prep', 'pobj', 'compound']:1:0
+['root', 'conj', 'advcl', 'advmod']:2:0
+['root', 'conj', 'advcl']:6:0
+['root', 'conj', 'advcl', 'nsubj']:5:0
+['root', 'conj', 'advcl', 'attr', 'compound']:1:0
+['root', 'conj', 'advcl', 'attr']:1:0
+['root', 'conj', 'ccomp', 'aux']:2:0
+['root', 'conj', 'ccomp', 'attr', 'compound']:1:0
+['root', 'conj', 'ccomp', 'attr', 'punct']:1:1
+['root', 'conj', 'ccomp', 'attr', 'prep', 'pobj', 'det']:1:0
+['root', 'conj', 'ccomp', 'attr', 'prep', 'pobj', 'compound']:1:1
+['root', 'ccomp', 'csubj', 'nsubj']:1:0
+['root', 'ccomp', 'csubj']:1:0
+['root', 'ccomp', 'csubj', 'dobj', 'poss']:1:1
+['root', 'ccomp', 'csubj', 'dobj']:1:0
+['root', 'ccomp', 'csubj', 'dobj', 'poss', 'case']:1:0
+['root', 'ccomp', 'csubj', 'dobj', 'prep']:1:0
+['root', 'ccomp', 'csubj', 'dobj', 'prep', 'pobj', 'det']:1:0
+['root', 'ccomp', 'csubj', 'dobj', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'csubj', 'dobj', 'prep', 'pobj', 'compound', 'compound']:1:0
+['root', 'ccomp', 'csubj', 'dobj', 'prep', 'pobj', 'compound']:1:0
+['root', 'advcl', 'conj', 'advmod']:2:0
+['root', 'advcl', 'conj', 'auxpass']:1:0
+['root', 'advcl', 'conj', 'prep', 'pobj']:2:1
+['root', 'advcl', 'conj', 'prep', 'pobj', 'prep']:1:0
+['root', 'advcl', 'conj', 'prep', 'pobj', 'prep', 'pobj']:1:0
+['root', 'advcl', 'conj', 'npadvmod']:1:0
+['root', 'prep', 'pcomp', 'dobj', 'amod']:1:0
+['root', 'ccomp', 'prep', 'pcomp', 'dobj', 'poss']:1:0
+['root', 'ccomp', 'prep', 'pcomp', 'dobj']:2:0
+['root', 'ccomp', 'prep', 'pcomp', 'dobj', 'amod']:1:0
+['root', 'ccomp', 'prep', 'pcomp', 'prep', 'pobj', 'det']:1:0
+['root', 'nsubj', 'relcl', 'ccomp', 'nsubjpass', 'poss']:1:0
+['root', 'nsubj', 'relcl', 'ccomp', 'nsubjpass']:1:0
+['root', 'nsubj', 'relcl', 'ccomp', 'auxpass']:1:0
+['root', 'prep', 'pobj', 'poss', 'poss']:1:0
+['root', 'prep', 'pobj', 'poss', 'case']:5:0
+['root', 'nsubjpass', 'cc']:2:0
+['root', 'nsubjpass', 'conj', 'det']:1:0
+['root', 'nsubjpass', 'conj']:2:0
+['root', 'nsubjpass', 'conj', 'nummod']:1:0
+['root', 'prep', 'pobj', 'conj', 'advmod']:1:0
+['root', 'dobj', 'relcl', 'nsubj']:1:0
+['root', 'dobj', 'relcl', 'attr']:1:0
+['root', 'dobj', 'relcl', 'attr', 'prep']:1:0
+['root', 'dobj', 'relcl', 'attr', 'prep', 'pobj', 'poss']:1:0
+['root', 'dobj', 'relcl', 'attr', 'prep', 'pobj']:1:0
+['root', 'dobj', 'relcl', 'attr', 'prep', 'pobj', 'amod']:1:0
+['root', 'prep', 'advmod']:4:0
+['root', 'ccomp', 'dobj', 'nmod', 'amod']:1:0
+['root', 'ccomp', 'advcl', 'dobj', 'compound']:1:0
+['root', 'ccomp', 'advcl', 'dobj', 'prep', 'pobj', 'nummod']:1:0
+['root', 'ccomp', 'advcl', 'dobj', 'prep', 'pobj', 'advmod']:1:0
+['root', 'ccomp', 'advcl', 'dobj', 'prep', 'pobj', 'advmod', 'prep']:1:0
+['root', 'ccomp', 'advcl', 'dobj', 'prep', 'pobj', 'advmod', 'prep', 'pobj', 'nummod']:1:0
+['root', 'ccomp', 'advcl', 'dobj', 'prep', 'pobj', 'advmod', 'prep', 'advmod']:1:0
+['root', 'ccomp', 'conj', 'prep', 'pcomp']:2:0
+['root', 'ccomp', 'conj', 'prep', 'pobj', 'prep']:1:0
+['root', 'ccomp', 'conj', 'prep', 'pobj', 'prep', 'pobj', 'det']:1:0
+['root', 'ccomp', 'conj', 'prep', 'pobj', 'prep', 'pobj']:2:0
+['root', 'ccomp', 'conj', 'prep', 'pobj', 'prep', 'pobj', 'compound']:1:1
+['root', 'ccomp', 'nsubj', 'prep', 'pobj', 'poss']:1:1
+['root', 'ccomp', 'nsubj', 'prep', 'pobj', 'poss', 'case']:1:0
+['root', 'ccomp', 'nsubj', 'relcl', 'dobj', 'nummod']:1:0
+['root', 'ccomp', 'prep', 'amod']:1:0
+['root', 'acomp', 'prep', 'pobj']:3:0
+['root', 'advcl', 'nsubj', 'compound']:4:1
+['root', 'advcl', 'nsubj', 'prep']:4:0
+['root', 'advcl', 'nsubj', 'prep', 'pobj']:3:1
+['root', 'advcl', 'oprd']:2:0
+['root', 'prep', 'pobj', 'nummod', 'quantmod']:3:0
+['root', 'prep', 'prep', 'pobj', 'compound', 'compound']:1:1
+['root', 'prep', 'punct']:1:0
+['root', 'prep', 'conj', 'pobj', 'prep', 'pobj', 'amod']:1:0
+['root', 'prep', 'conj', 'pobj', 'prep', 'pobj']:1:0
+['root', 'acomp', 'npadvmod', 'det']:3:0
+['root', 'acomp', 'npadvmod']:5:1
+['root', 'acomp', 'npadvmod', 'amod']:1:0
+['root', 'conj', 'neg']:1:0
+['root', 'advcl', 'nsubj', 'compound', 'compound']:1:0
+['root', 'cc', 'prep']:1:0
+['root', 'cc', 'prep', 'pobj']:1:0
+['root', 'cc', 'prep', 'pobj', 'acl', 'mark']:1:0
+['root', 'cc', 'prep', 'pobj', 'acl']:1:0
+['root', 'cc', 'prep', 'pobj', 'acl', 'nsubj']:1:0
+['root', 'cc', 'prep', 'pobj', 'acl', 'nsubj', 'compound']:2:1
+['root', 'cc', 'prep', 'pobj', 'acl', 'nsubj', 'punct']:1:0
+['root', 'cc', 'prep', 'pobj', 'acl', 'nsubj', 'appos']:1:1
+['root', 'cc', 'prep', 'pobj', 'acl', 'nsubj', 'appos', 'punct']:1:0
+['root', 'cc', 'prep', 'pobj', 'acl', 'aux']:1:0
+['root', 'cc', 'prep', 'pobj', 'acl', 'dobj', 'det']:1:0
+['root', 'cc', 'prep', 'pobj', 'acl', 'dobj']:1:0
+['root', 'cc', 'prep', 'pobj', 'acl', 'dobj', 'acl', 'aux']:1:0
+['root', 'cc', 'prep', 'pobj', 'acl', 'dobj', 'acl']:1:0
+['root', 'cc', 'prep', 'pobj', 'acl', 'dobj', 'acl', 'dobj', 'nummod', 'advmod']:1:0
+['root', 'cc', 'prep', 'pobj', 'acl', 'dobj', 'acl', 'dobj', 'nummod']:1:0
+['root', 'cc', 'prep', 'pobj', 'acl', 'dobj', 'acl', 'dobj']:1:0
+['root', 'cc', 'prep', 'pobj', 'acl', 'dobj', 'acl', 'dobj', 'prep']:2:0
+['root', 'cc', 'prep', 'pobj', 'acl', 'dobj', 'acl', 'dobj', 'prep', 'pobj', 'compound', 'amod']:1:0
+['root', 'cc', 'prep', 'pobj', 'acl', 'dobj', 'acl', 'dobj', 'prep', 'pobj', 'compound']:1:0
+['root', 'cc', 'prep', 'pobj', 'acl', 'dobj', 'acl', 'dobj', 'prep', 'pobj']:2:0
+['root', 'dobj', 'prep', 'pobj', 'nummod', 'quantmod']:1:0
+['root', 'advcl', 'nsubj', 'nummod']:2:0
+['root', 'advcl', 'ccomp', 'dobj']:3:0
+['root', 'advcl', 'ccomp', 'dobj', 'prep']:5:0
+['root', 'advcl', 'ccomp', 'dobj', 'prep', 'pobj', 'nmod']:1:0
+['root', 'advcl', 'ccomp', 'dobj', 'prep', 'pobj']:4:0
+['root', 'advcl', 'ccomp', 'dobj', 'prep', 'pobj', 'npadvmod', 'det']:1:0
+['root', 'advcl', 'ccomp', 'dobj', 'prep', 'pobj', 'npadvmod']:1:0
+['root', 'advcl', 'ccomp', 'dobj', 'prep', 'pobj', 'prep']:2:0
+['root', 'advcl', 'ccomp', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'compound']:2:0
+['root', 'advcl', 'ccomp', 'dobj', 'prep', 'pobj', 'prep', 'pobj']:1:0
+['root', 'advcl', 'ccomp', 'dobj', 'prep', 'pobj', 'amod']:1:0
+['root', 'advcl', 'ccomp', 'punct']:1:0
+['root', 'advcl', 'ccomp', 'advcl', 'mark']:1:0
+['root', 'advcl', 'ccomp', 'advcl']:1:0
+['root', 'advcl', 'ccomp', 'advcl', 'nsubj', 'compound']:1:1
+['root', 'advcl', 'ccomp', 'advcl', 'nsubj']:1:0
+['root', 'advcl', 'ccomp', 'advcl', 'acomp']:1:0
+['root', 'advcl', 'ccomp', 'advcl', 'acomp', 'prep', 'pobj', 'nummod']:1:0
+['root', 'advcl', 'ccomp', 'advcl', 'acomp', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'dobj', 'conj', 'neg']:1:0
+['root', 'ccomp', 'dobj', 'conj', 'amod']:1:0
+['root', 'acomp', 'npadvmod', 'advmod']:1:0
+['root', 'conj', 'npadvmod']:1:0
+['root', 'conj', 'npadvmod', 'prep']:1:0
+['root', 'conj', 'npadvmod', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'conj', 'advmod', 'prep', 'pobj', 'det']:2:0
+['root', 'ccomp', 'conj', 'prep', 'pcomp', 'prep']:1:0
+['root', 'ccomp', 'conj', 'prep', 'pcomp', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'conj', 'prep', 'pcomp', 'prep', 'pobj', 'nmod', 'nmod']:1:1
+['root', 'ccomp', 'conj', 'prep', 'pcomp', 'prep', 'pobj', 'nmod']:1:0
+['root', 'ccomp', 'conj', 'prep', 'pcomp', 'prep', 'pobj', 'amod']:1:0
+['root', 'ccomp', 'prep', 'prep']:2:0
+['root', 'ccomp', 'prep', 'prep', 'pobj', 'det']:2:0
+['root', 'ccomp', 'prep', 'prep', 'pobj']:2:0
+['root', 'ccomp', 'prep', 'prep', 'pobj', 'relcl', 'advmod']:1:0
+['root', 'ccomp', 'prep', 'prep', 'pobj', 'relcl']:1:0
+['root', 'ccomp', 'prep', 'prep', 'pobj', 'relcl', 'nsubj']:1:0
+['root', 'ccomp', 'prep', 'prep', 'pobj', 'relcl', 'xcomp', 'aux']:1:0
+['root', 'ccomp', 'prep', 'prep', 'pobj', 'relcl', 'xcomp']:1:0
+['root', 'ccomp', 'prep', 'prep', 'pobj', 'relcl', 'xcomp', 'prt']:1:0
+['root', 'ccomp', 'prep', 'prep', 'pobj', 'relcl', 'xcomp', 'prep']:1:0
+['root', 'ccomp', 'prep', 'prep', 'pobj', 'relcl', 'xcomp', 'prep', 'pobj', 'amod']:1:0
+['root', 'ccomp', 'prep', 'prep', 'pobj', 'relcl', 'xcomp', 'prep', 'pobj']:1:1
+['root', 'ccomp', 'prep', 'prep', 'pobj', 'relcl', 'xcomp', 'npadvmod', 'advmod']:1:0
+['root', 'ccomp', 'prep', 'prep', 'pobj', 'relcl', 'xcomp', 'npadvmod']:1:0
+['root', 'ccomp', 'prep', 'prep', 'pobj', 'relcl', 'xcomp', 'npadvmod', 'cc']:1:0
+['root', 'ccomp', 'prep', 'prep', 'pobj', 'relcl', 'xcomp', 'npadvmod', 'conj']:1:0
+['root', 'attr', 'npadvmod', 'compound']:1:0
+['root', 'attr', 'npadvmod']:1:0
+['root', 'prep', 'pobj', 'appos', 'nummod']:2:0
+['root', 'acomp', 'npadvmod', 'nummod', 'quantmod']:2:0
+['root', 'acomp', 'npadvmod', 'nummod']:1:0
+['root', 'acomp', 'prep', 'prep', 'pobj', 'compound']:1:0
+['root', 'prep', 'prep', 'pobj', 'punct']:1:0
+['root', 'prep', 'prep', 'pobj', 'conj', 'compound']:1:0
+['root', 'prep', 'prep', 'pobj', 'conj']:1:0
+['root', 'prep', 'prep', 'pobj', 'conj', 'cc']:1:0
+['root', 'prep', 'prep', 'pobj', 'conj', 'conj', 'compound']:1:0
+['root', 'prep', 'prep', 'pobj', 'conj', 'conj']:1:0
+['root', 'dobj', 'prep', 'pobj', 'punct']:10:0
+['root', 'dobj', 'prep', 'pobj', 'appos', 'nummod']:1:0
+['root', 'dobj', 'prep', 'pobj', 'appos']:3:1
+['root', 'conj', 'appos']:1:1
+['root', 'dobj', 'appos', 'nummod']:1:0
+['root', 'dobj', 'appos']:2:2
+['root', 'dobj', 'prep', 'pobj', 'npadvmod']:1:0
+['root', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'det']:1:0
+['root', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'nmod', 'punct']:3:0
+['root', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'nmod']:10:0
+['root', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'nmod', 'amod']:1:0
+['root', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'nmod', 'appos', 'advmod']:1:0
+['root', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj']:4:0
+['root', 'nsubj', 'prep', 'pobj', 'nummod']:2:0
+['root', 'prep', 'prep', 'pobj', 'nummod']:2:0
+['root', 'prep', 'pobj', 'prep', 'pobj', 'nummod']:3:0
+['root', 'ccomp', 'nsubjpass', 'nummod', 'quantmod']:2:0
+['root', 'ccomp', 'nsubjpass', 'acl', 'dobj', 'amod']:1:0
+['root', 'ccomp', 'nsubjpass', 'acl', 'dobj']:1:0
+['root', 'ccomp', 'nsubjpass', 'acl', 'dobj', 'compound']:1:0
+['root', 'ccomp', 'acomp', 'prep', 'pobj', 'compound']:1:0
+['root', 'ccomp', 'acomp', 'prep', 'pobj', 'punct']:1:0
+['root', 'ccomp', 'acomp', 'prep', 'pobj', 'appos']:1:0
+['root', 'ccomp', 'acomp', 'prep', 'pobj', 'appos', 'compound']:1:0
+['root', 'ccomp', 'acomp', 'prep', 'pobj', 'appos', 'relcl', 'nsubj']:1:0
+['root', 'ccomp', 'acomp', 'prep', 'pobj', 'appos', 'relcl']:1:0
+['root', 'ccomp', 'acomp', 'prep', 'pobj', 'appos', 'relcl', 'aux']:1:0
+['root', 'ccomp', 'acomp', 'prep', 'pobj', 'appos', 'relcl', 'dobj']:1:0
+['root', 'ccomp', 'acomp', 'prep', 'pobj', 'appos', 'relcl', 'dobj', 'amod']:1:0
+['root', 'ccomp', 'acomp', 'prep', 'pobj', 'appos', 'relcl', 'dobj', 'prep']:1:0
+['root', 'ccomp', 'acomp', 'prep', 'pobj', 'appos', 'relcl', 'dobj', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'acomp', 'prep', 'pobj', 'appos', 'relcl', 'dobj', 'prep', 'pobj', 'relcl', 'nsubj', 'poss']:1:0
+['root', 'ccomp', 'acomp', 'prep', 'pobj', 'appos', 'relcl', 'dobj', 'prep', 'pobj', 'relcl', 'nsubj']:1:0
+['root', 'ccomp', 'acomp', 'prep', 'pobj', 'appos', 'relcl', 'dobj', 'prep', 'pobj', 'relcl', 'nsubj', 'amod']:1:0
+['root', 'ccomp', 'acomp', 'prep', 'pobj', 'appos', 'relcl', 'dobj', 'prep', 'pobj', 'relcl']:1:0
+['root', 'ccomp', 'acomp', 'prep', 'pobj', 'appos', 'relcl', 'dobj', 'prep', 'pobj', 'relcl', 'acomp']:1:0
+['root', 'ccomp', 'agent', 'pobj', 'prep']:2:0
+['root', 'ccomp', 'agent', 'pobj', 'prep', 'pobj', 'amod']:1:0
+['root', 'ccomp', 'agent', 'pobj', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'agent', 'pobj', 'prep', 'pobj', 'compound', 'compound']:2:2
+['root', 'ccomp', 'agent', 'pobj', 'prep', 'pobj', 'compound']:2:0
+['root', 'ccomp', 'conj', 'nsubjpass', 'prep']:1:0
+['root', 'ccomp', 'conj', 'nsubjpass', 'prep', 'pobj', 'amod']:1:0
+['root', 'ccomp', 'conj', 'agent', 'pobj']:1:0
+['root', 'nsubj', 'appos', 'prep', 'pobj', 'amod']:1:0
+['root', 'prep', 'pobj', 'prep', 'pobj', 'compound', 'compound']:1:1
+['root', 'ccomp', 'dobj', 'prep', 'pobj', 'cc']:4:0
+['root', 'ccomp', 'dobj', 'prep', 'pobj', 'conj']:2:0
+['root', 'ccomp', 'dobj', 'relcl', 'nsubjpass']:1:0
+['root', 'ccomp', 'dobj', 'relcl', 'advmod']:1:0
+['root', 'ccomp', 'dobj', 'relcl', 'auxpass']:1:0
+['root', 'ccomp', 'dobj', 'relcl', 'oprd']:1:0
+['root', 'ccomp', 'dobj', 'relcl', 'prep', 'pobj', 'compound', 'nmod']:1:1
+['root', 'ccomp', 'dobj', 'relcl', 'prep', 'pobj', 'compound']:1:0
+['root', 'ccomp', 'dobj', 'relcl', 'prep', 'pobj', 'compound', 'nmod', 'conj']:1:0
+['root', 'ccomp', 'dobj', 'relcl', 'prep', 'pobj', 'conj', 'amod']:1:0
+['root', 'ccomp', 'dobj', 'relcl', 'prep', 'pobj', 'conj']:1:0
+['root', 'ccomp', 'attr', 'prep', 'pcomp']:1:0
+['root', 'ccomp', 'attr', 'prep', 'pcomp', 'prep']:1:0
+['root', 'ccomp', 'attr', 'prep', 'pcomp', 'prep', 'pobj', 'nmod']:1:0
+['root', 'ccomp', 'attr', 'prep', 'pcomp', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'attr', 'prep', 'pcomp', 'prep', 'pobj', 'nmod', 'cc']:1:0
+['root', 'ccomp', 'attr', 'prep', 'pcomp', 'prep', 'pobj', 'nmod', 'conj']:1:0
+['root', 'ccomp', 'attr', 'prep', 'pcomp', 'prep', 'pobj', 'punct']:2:0
+['root', 'ccomp', 'attr', 'prep', 'pcomp', 'prep', 'pobj', 'amod']:1:0
+['root', 'ccomp', 'attr', 'prep', 'pcomp', 'prep', 'pobj', 'amod', 'prep']:1:0
+['root', 'ccomp', 'attr', 'prep', 'pcomp', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'amod']:1:0
+['root', 'ccomp', 'attr', 'prep', 'pcomp', 'prep', 'pobj', 'amod', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'attr', 'prep', 'pcomp', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'compound']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'nummod', 'advmod']:1:0
+['root', 'dobj', 'prep', 'pcomp']:2:0
+['root', 'dobj', 'prep', 'pcomp', 'prep']:2:0
+['root', 'dobj', 'prep', 'pcomp', 'prep', 'pobj', 'amod']:2:1
+['root', 'dobj', 'prep', 'pcomp', 'prep', 'pobj']:3:0
+['root', 'conj', 'dobj', 'advmod']:1:0
+['root', 'conj', 'dobj', 'amod']:2:0
+['root', 'conj', 'prep', 'pobj', 'conj']:1:0
+['root', 'ccomp', 'nsubjpass', 'compound', 'compound']:1:0
+['root', 'ccomp', 'nsubjpass', 'acl', 'agent']:1:0
+['root', 'ccomp', 'nsubjpass', 'acl', 'agent', 'pobj', 'det']:1:0
+['root', 'ccomp', 'nsubjpass', 'acl', 'agent', 'pobj']:1:0
+['root', 'ccomp', 'nsubjpass', 'acl', 'agent', 'pobj', 'amod']:1:0
+['root', 'ccomp', 'nsubjpass', 'acl', 'agent', 'pobj', 'compound', 'compound']:1:1
+['root', 'ccomp', 'nsubjpass', 'acl', 'agent', 'pobj', 'compound']:1:0
+['root', 'ccomp', 'nsubjpass', 'acl', 'prep', 'pobj', 'nummod']:1:0
+['root', 'ccomp', 'dobj', 'nummod']:6:0
+['root', 'ccomp', 'dobj', 'acl', 'agent']:1:0
+['root', 'ccomp', 'dobj', 'acl', 'agent', 'pobj', 'amod']:1:0
+['root', 'ccomp', 'dobj', 'acl', 'agent', 'pobj']:1:0
+['root', 'ccomp', 'dobj', 'acl', 'agent', 'pobj', 'amod', 'cc']:1:0
+['root', 'ccomp', 'dobj', 'acl', 'agent', 'pobj', 'amod', 'conj']:1:0
+['root', 'ccomp', 'dobj', 'acl', 'agent', 'pobj', 'compound', 'compound']:1:1
+['root', 'ccomp', 'dobj', 'acl', 'agent', 'pobj', 'compound']:1:0
+['root', 'advmod', 'npadvmod', 'compound']:1:0
+['root', 'advmod', 'npadvmod']:9:0
+['root', 'advmod', 'npadvmod', 'prep']:1:0
+['root', 'ccomp', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'det']:5:0
+['root', 'ccomp', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'amod']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'acl', 'nsubj']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'acl', 'aux']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'acl', 'dobj', 'prep']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'acl', 'dobj', 'prep', 'pobj', 'nmod']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'acl', 'dobj', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'acl', 'dobj', 'prep', 'pobj', 'nmod', 'cc']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'acl', 'dobj', 'prep', 'pobj', 'nmod', 'conj']:1:0
+['root', 'dobj', 'compound', 'compound', 'amod']:1:0
+['root', 'dobj', 'compound', 'compound', 'punct']:1:0
+['root', 'dobj', 'prep', 'punct']:1:0
+['root', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'prep']:3:0
+['root', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'poss', 'det']:3:0
+['root', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'poss']:1:0
+['root', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'poss', 'case']:1:0
+['root', 'npadvmod', 'prep', 'pobj']:3:0
+['root', 'npadvmod', 'appos']:1:0
+['root', 'nmod', 'nmod']:1:0
+['root', 'conj', 'prep', 'prep', 'pobj', 'appos']:1:0
+['root', 'appos', 'npadvmod', 'compound']:1:1
+['root', 'appos', 'appos', 'compound', 'compound']:2:2
+['root', 'appos', 'appos', 'prep', 'pobj']:1:0
+['root', 'appos', 'appos', 'appos', 'punct']:3:0
+['root', 'appos', 'appos', 'appos', 'appos']:3:0
+['root', 'appos', 'appos', 'appos', 'appos', 'nummod']:3:0
+['root', 'dep', 'nmod', 'nmod']:1:0
+['root', 'dep', 'nmod']:1:0
+['root', 'dep', 'nmod', 'punct']:4:0
+['root', 'dep', 'appos']:3:0
+['root', 'amod']:15:3
+['root', 'appos', 'appos', 'cc']:1:0
+['root', 'appos', 'appos', 'conj']:1:0
+['root', 'appos', 'nmod']:2:0
+['root', 'appos', 'appos', 'nmod']:1:0
+['root', 'appos', 'appos', 'nummod']:5:0
+['root', 'appos', 'appos', 'nummod', 'prep']:1:0
+['root', 'appos', 'appos', 'compound', 'nummod']:1:0
+['root', 'appos', 'compound', 'nummod']:1:0
+['root', 'appos', 'appos', 'appos', 'nummod', 'nummod']:1:0
+['root', 'appos', 'appos', 'appos', 'appos', 'appos']:1:0
+['root', 'compound', 'amod']:1:0
+['root', 'acl']:2:0
+['root', 'acl', 'agent']:1:0
+['root', 'acl', 'agent', 'pobj', 'compound']:2:1
+['root', 'appos', 'compound', 'nmod']:1:0
+['root', 'appos', 'prep', 'pobj', 'nmod']:1:0
+['root', 'nmod', 'prep']:1:0
+['root', 'nmod', 'prep', 'pobj']:2:1
+['root', 'appos', 'det']:1:0
+['root', 'appos', 'prep', 'pobj', 'det']:3:0
+['root', 'appos', 'prep', 'pobj', 'prep', 'pobj', 'prep']:1:0
+['root', 'appos', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj']:1:0
+['root', 'compound', 'nmod']:1:0
+['root', 'appos', 'appos', 'nummod', 'nummod']:1:0
+['root', 'compound', 'case']:1:0
+['root', 'compound', 'case', 'punct']:5:0
+['root', 'appos', 'compound', 'compound', 'compound']:1:0
+['root', 'appos', 'conj']:1:0
+['root', 'appos', 'conj', 'cc']:1:0
+['root', 'appos', 'conj', 'conj']:1:0
+['root', 'nmod', 'nummod']:1:0
+['root', 'appos', 'npadvmod', 'nummod']:1:0
+['root', 'prep', 'pobj', 'npadvmod']:2:0
+['root', 'advcl', 'prep', 'pcomp']:3:0
+['root', 'advcl', 'prep', 'pobj', 'prep', 'pobj', 'amod']:2:0
+['root', 'advcl', 'prep', 'pobj', 'prep', 'pobj', 'conj']:1:1
+['root', 'advcl', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'cc']:2:0
+['root', 'advcl', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'conj']:1:1
+['root', 'conj', 'prep', 'pobj', 'det']:5:0
+['root', 'conj', 'advmod', 'prep']:3:0
+['root', 'conj', 'advmod', 'prep', 'pobj']:2:1
+['root', 'conj', 'advcl', 'dobj', 'det']:1:0
+['root', 'conj', 'advcl', 'dobj']:3:0
+['root', 'conj', 'advcl', 'dobj', 'amod']:2:0
+['root', 'conj', 'advcl', 'dobj', 'compound', 'compound']:1:1
+['root', 'conj', 'advcl', 'dobj', 'compound']:1:0
+['root', 'advcl', 'ccomp', 'mark']:4:0
+['root', 'advcl', 'ccomp', 'dobj', 'det']:1:0
+['root', 'advcl', 'ccomp', 'dobj', 'amod']:1:0
+['root', 'advcl', 'ccomp', 'dobj', 'prep', 'pobj', 'det']:1:0
+['root', 'ccomp', 'ccomp', 'dobj']:2:0
+['root', 'ccomp', 'ccomp', 'nsubj']:4:0
+['root', 'ccomp', 'ccomp', 'npadvmod']:2:0
+['root', 'xcomp', 'advmod']:1:0
+['root', 'xcomp', 'advmod', 'prep', 'pobj']:1:0
+['root', 'nsubj', 'poss', 'det']:1:0
+['root', 'prep', 'pobj', 'prep', 'pobj', 'appos', 'det']:1:0
+['root', 'prep', 'pobj', 'prep', 'pobj', 'appos', 'amod']:1:0
+['root', 'prep', 'pobj', 'prep', 'pobj', 'appos', 'prep']:1:0
+['root', 'prep', 'pobj', 'prep', 'pobj', 'appos', 'prep', 'pobj']:1:1
+['root', 'ccomp', 'xcomp', 'cc']:1:0
+['root', 'ccomp', 'xcomp', 'conj']:1:0
+['root', 'ccomp', 'xcomp', 'conj', 'dobj']:1:0
+['root', 'ccomp', 'xcomp', 'conj', 'dobj', 'relcl', 'advmod']:1:0
+['root', 'ccomp', 'xcomp', 'conj', 'dobj', 'relcl']:1:0
+['root', 'ccomp', 'xcomp', 'conj', 'dobj', 'relcl', 'nsubjpass', 'poss']:2:0
+['root', 'ccomp', 'xcomp', 'conj', 'dobj', 'relcl', 'nsubjpass']:1:0
+['root', 'ccomp', 'xcomp', 'conj', 'dobj', 'relcl', 'aux']:1:0
+['root', 'ccomp', 'xcomp', 'conj', 'dobj', 'relcl', 'auxpass']:1:0
+['root', 'conj', 'ccomp', 'neg']:1:0
+['root', 'conj', 'ccomp', 'dobj', 'prep', 'pobj', 'det']:1:0
+['root', 'conj', 'ccomp', 'dobj', 'prep', 'pobj', 'amod']:2:0
+['root', 'ccomp', 'conj', 'acomp', 'advmod', 'advmod']:1:0
+['root', 'ccomp', 'conj', 'acomp', 'advmod']:1:0
+['root', 'ccomp', 'conj', 'acomp', 'prep']:1:0
+['root', 'ccomp', 'conj', 'acomp', 'prep', 'pobj']:1:0
+['root', 'advcl', 'agent']:4:0
+['root', 'advcl', 'agent', 'pobj']:3:0
+['root', 'advcl', 'agent', 'pobj', 'prep']:2:0
+['root', 'advcl', 'agent', 'pobj', 'prep', 'pobj', 'det']:2:0
+['root', 'advcl', 'agent', 'pobj', 'prep', 'pobj']:2:0
+['root', 'advcl', 'agent', 'pobj', 'prep', 'pobj', 'compound', 'amod']:1:0
+['root', 'advcl', 'agent', 'pobj', 'prep', 'pobj', 'compound']:1:0
+['root', 'advcl', 'agent', 'pobj', 'cc']:2:0
+['root', 'advcl', 'agent', 'pobj', 'conj']:1:0
+['root', 'advcl', 'agent', 'pobj', 'conj', 'acl']:1:0
+['root', 'advcl', 'agent', 'pobj', 'conj', 'acl', 'agent', 'pobj']:1:0
+['root', 'advcl', 'agent', 'pobj', 'conj', 'acl', 'agent', 'pobj', 'compound']:2:1
+['root', 'advcl', 'agent', 'pobj', 'conj', 'acl', 'agent', 'pobj', 'conj']:1:0
+['root', 'advcl', 'agent', 'pobj', 'conj', 'acl', 'agent', 'pobj', 'conj', 'prep']:1:0
+['root', 'advcl', 'agent', 'pobj', 'conj', 'acl', 'agent', 'pobj', 'conj', 'prep', 'pobj', 'det']:1:0
+['root', 'advcl', 'agent', 'pobj', 'conj', 'acl', 'agent', 'pobj', 'conj', 'prep', 'pobj']:1:0
+['root', 'advcl', 'agent', 'pobj', 'conj', 'acl', 'agent', 'pobj', 'conj', 'prep', 'pobj', 'amod']:2:0
+['root', 'advcl', 'agent', 'pobj', 'conj', 'acl', 'agent', 'pobj', 'conj', 'prep', 'pobj', 'nmod']:1:1
+['root', 'advmod', 'npadvmod', 'nummod']:4:0
+['root', 'npadvmod', 'poss', 'det']:1:0
+['root', 'npadvmod', 'poss']:1:0
+['root', 'npadvmod', 'poss', 'case']:1:0
+['root', 'ccomp', 'npadvmod', 'det']:1:0
+['root', 'ccomp', 'conj', 'nsubj', 'det']:1:0
+['root', 'ccomp', 'conj', 'nsubj', 'amod']:1:0
+['root', 'ccomp', 'conj', 'nsubj', 'prep', 'pobj', 'compound']:1:1
+['root', 'ccomp', 'conj', 'xcomp', 'prep']:1:0
+['root', 'ccomp', 'conj', 'xcomp', 'prep', 'pobj', 'amod']:1:0
+['root', 'ccomp', 'conj', 'xcomp', 'prep', 'pobj']:1:0
+['root', 'xcomp', 'attr', 'det']:1:0
+['root', 'xcomp', 'attr']:1:0
+['root', 'xcomp', 'attr', 'amod']:1:0
+['root', 'ccomp', 'nsubj', 'acl', 'advmod']:1:0
+['root', 'ccomp', 'nsubj', 'acl']:2:0
+['root', 'ccomp', 'nsubj', 'acl', 'dobj']:1:0
+['root', 'prep', 'pcomp', 'nsubj', 'amod']:2:1
+['root', 'prep', 'pcomp', 'nsubj']:3:1
+['root', 'prep', 'pcomp', 'cc']:1:0
+['root', 'prep', 'pcomp', 'conj']:2:0
+['root', 'prep', 'pcomp', 'conj', 'advmod', 'npadvmod', 'nummod']:1:0
+['root', 'prep', 'pcomp', 'conj', 'advmod', 'npadvmod']:1:0
+['root', 'prep', 'pcomp', 'conj', 'prep']:1:0
+['root', 'prep', 'pcomp', 'conj', 'prep', 'pobj']:2:0
+['root', 'nsubj', 'nmod', 'det']:1:0
+['root', 'dobj', 'compound', 'nummod']:1:0
+['root', 'dobj', 'prep', 'pobj', 'compound', 'amod']:2:1
+['root', 'dobj', 'compound', 'amod']:2:0
+['root', 'conj', 'advmod', 'npadvmod', 'nummod']:1:0
+['root', 'conj', 'advmod', 'npadvmod']:3:0
+['root', 'conj', 'advcl', 'mark']:2:0
+['root', 'conj', 'advcl', 'dobj', 'prep', 'pobj', 'nummod', 'compound']:1:0
+['root', 'conj', 'advcl', 'dobj', 'prep', 'pobj', 'nummod']:3:0
+['root', 'conj', 'advcl', 'dobj', 'prep', 'pobj', 'prep']:1:0
+['root', 'conj', 'advcl', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'compound']:1:0
+['root', 'conj', 'advcl', 'dobj', 'prep', 'pobj', 'prep', 'npadvmod', 'amod']:1:0
+['root', 'conj', 'advcl', 'dobj', 'prep', 'pobj', 'prep', 'npadvmod']:1:0
+['root', 'conj', 'advcl', 'dobj', 'cc']:1:0
+['root', 'conj', 'advcl', 'dobj', 'conj']:1:0
+['root', 'conj', 'advcl', 'dobj', 'conj', 'acl']:1:0
+['root', 'conj', 'advcl', 'dobj', 'conj', 'acl', 'prep']:1:0
+['root', 'conj', 'advcl', 'dobj', 'conj', 'acl', 'prep', 'pobj']:1:0
+['root', 'conj', 'advcl', 'dobj', 'conj', 'acl', 'prep', 'prep']:1:0
+['root', 'conj', 'advcl', 'dobj', 'conj', 'acl', 'prep', 'prep', 'pobj', 'compound']:1:0
+['root', 'ccomp', 'nsubj', 'amod', 'amod']:1:0
+['root', 'ccomp', 'npadvmod', 'nummod']:1:0
+['root', 'conj', 'advcl', 'npadvmod', 'nummod']:1:0
+['root', 'conj', 'advcl', 'npadvmod']:1:0
+['root', 'advcl', 'npadvmod', 'det']:1:0
+['root', 'advcl', 'npadvmod', 'amod']:1:0
+['root', 'advcl', 'npadvmod', 'nummod']:2:0
+['root', 'advcl', 'advcl', 'dobj', 'amod']:1:0
+['root', 'advcl', 'advcl', 'dobj', 'acl']:1:0
+['root', 'advcl', 'advcl', 'dobj', 'acl', 'agent']:2:0
+['root', 'advcl', 'advcl', 'dobj', 'acl', 'agent', 'pobj', 'det']:4:0
+['root', 'advcl', 'advcl', 'dobj', 'acl', 'agent', 'pobj']:1:0
+['root', 'advcl', 'advcl', 'dobj', 'acl', 'agent', 'pobj', 'compound', 'nummod']:1:0
+['root', 'advcl', 'advcl', 'dobj', 'acl', 'agent', 'pobj', 'compound']:1:0
+['root', 'advcl', 'advcl', 'dobj', 'acl', 'agent', 'pobj', 'prep']:1:0
+['root', 'advcl', 'advcl', 'dobj', 'acl', 'agent', 'pobj', 'prep', 'pobj', 'nmod', 'amod']:1:0
+['root', 'advcl', 'advcl', 'dobj', 'acl', 'agent', 'pobj', 'prep', 'pobj', 'nmod']:1:0
+['root', 'advcl', 'advcl', 'dobj', 'acl', 'agent', 'pobj', 'prep', 'pobj']:1:0
+['root', 'advcl', 'advcl', 'dobj', 'acl', 'agent', 'pobj', 'prep', 'pobj', 'amod']:1:0
+['root', 'advcl', 'advcl', 'dobj', 'acl', 'agent', 'pobj', 'npadvmod', 'amod']:1:0
+['root', 'advcl', 'advcl', 'dobj', 'acl', 'agent', 'pobj', 'npadvmod']:1:0
+['root', 'advcl', 'advcl', 'dobj', 'acl', 'agent', 'pobj', 'punct']:2:0
+['root', 'advcl', 'advcl', 'dobj', 'acl', 'agent', 'pobj', 'relcl', 'nsubj']:1:0
+['root', 'advcl', 'advcl', 'dobj', 'acl', 'agent', 'pobj', 'relcl']:1:0
+['root', 'advcl', 'advcl', 'dobj', 'acl', 'agent', 'pobj', 'relcl', 'dobj']:2:0
+['root', 'advcl', 'advcl', 'dobj', 'acl', 'agent', 'pobj', 'relcl', 'prep']:1:0
+['root', 'advcl', 'advcl', 'dobj', 'acl', 'agent', 'pobj', 'relcl', 'prep', 'pobj']:1:0
+['root', 'advcl', 'advcl', 'dobj', 'acl', 'agent', 'pobj', 'relcl', 'advcl']:1:0
+['root', 'advcl', 'advcl', 'dobj', 'acl', 'agent', 'pobj', 'relcl', 'advcl', 'dobj']:1:0
+['root', 'advcl', 'advcl', 'dobj', 'acl', 'agent', 'pobj', 'relcl', 'advcl', 'advmod']:1:0
+['root', 'advcl', 'advcl', 'dobj', 'acl', 'agent', 'pobj', 'relcl', 'advcl', 'advmod', 'npadvmod']:1:0
+['root', 'advcl', 'advcl', 'dobj', 'acl', 'agent', 'pobj', 'relcl', 'advcl', 'advmod', 'prep']:1:0
+['root', 'advcl', 'advcl', 'dobj', 'acl', 'agent', 'pobj', 'relcl', 'advcl', 'advmod', 'prep', 'pobj']:1:0
+['root', 'advcl', 'advcl', 'dobj', 'acl', 'agent', 'pobj', 'relcl', 'advcl', 'prep', 'pobj']:1:0
+['root', 'advcl', 'dobj', 'compound', 'compound']:1:0
+['root', 'advcl', 'prep', 'pobj', 'prep', 'advmod']:1:0
+['root', 'advcl', 'prep', 'pobj', 'acl', 'mark']:1:0
+['root', 'advcl', 'prep', 'pobj', 'acl', 'nsubj', 'poss']:1:0
+['root', 'advcl', 'prep', 'pobj', 'acl', 'nsubj']:1:0
+['root', 'advcl', 'prep', 'pobj', 'acl', 'nsubj', 'compound', 'compound']:1:1
+['root', 'advcl', 'prep', 'pobj', 'acl', 'nsubj', 'compound']:1:0
+['root', 'advcl', 'prep', 'pobj', 'acl', 'dobj', 'amod']:1:0
+['root', 'acomp', 'punct']:1:0
+['root', 'conj', 'advmod', 'npadvmod', 'advmod']:1:0
+['root', 'conj', 'advmod', 'prep', 'pobj', 'nummod']:1:0
+['root', 'nsubj', 'nmod', 'amod']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'appos', 'relcl', 'nsubj', 'det']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'appos', 'relcl', 'nsubj']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'appos', 'relcl']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'appos', 'relcl', 'nsubj', 'prep', 'pobj', 'compound']:1:1
+['root', 'ccomp', 'prep', 'pobj', 'appos', 'relcl', 'nsubj', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'appos', 'relcl', 'nsubj', 'relcl']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'appos', 'relcl', 'nsubj', 'relcl', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'appos', 'relcl', 'prep', 'pobj']:1:1
+['root', 'ccomp', 'advmod', 'neg']:2:0
+['root', 'dobj', 'nmod', 'nummod']:1:0
+['root', 'advcl', 'ccomp', 'dobj', 'poss']:1:0
+['root', 'advcl', 'ccomp', 'dative']:1:0
+['root', 'advcl', 'ccomp', 'dative', 'pobj', 'compound', 'compound']:1:1
+['root', 'advcl', 'ccomp', 'dative', 'pobj', 'compound']:2:1
+['root', 'advcl', 'ccomp', 'dative', 'pobj']:1:0
+['root', 'advmod', 'prep']:1:0
+['root', 'advmod', 'prep', 'pobj', 'amod']:1:0
+['root', 'advmod', 'prep', 'pobj']:1:0
+['root', 'advmod', 'prep', 'pobj', 'compound']:1:0
+['root', 'advmod', 'prep', 'pobj', 'relcl', 'aux']:1:0
+['root', 'advmod', 'prep', 'pobj', 'relcl']:1:0
+['root', 'advmod', 'prep', 'pobj', 'relcl', 'dobj']:1:0
+['root', 'advmod', 'prep', 'pobj', 'relcl', 'prep']:1:0
+['root', 'advmod', 'prep', 'pobj', 'relcl', 'prep', 'pobj', 'det']:2:0
+['root', 'advmod', 'prep', 'pobj', 'relcl', 'prep', 'pobj']:1:1
+['root', 'prep', 'pobj', 'acl', 'mark']:1:0
+['root', 'prep', 'pobj', 'acl', 'nsubj']:1:0
+['root', 'prep', 'pobj', 'acl', 'acomp']:1:0
+['root', 'prep', 'pobj', 'acl', 'acomp', 'cc']:1:0
+['root', 'prep', 'pobj', 'acl', 'acomp', 'conj', 'advmod']:1:0
+['root', 'prep', 'pobj', 'acl', 'acomp', 'conj']:1:0
+['root', 'prep', 'pobj', 'acl', 'acomp', 'conj', 'prep']:2:0
+['root', 'prep', 'pobj', 'acl', 'acomp', 'conj', 'prep', 'pobj', 'amod']:1:0
+['root', 'prep', 'pobj', 'acl', 'acomp', 'conj', 'prep', 'pobj']:2:0
+['root', 'prep', 'pobj', 'acl', 'acomp', 'conj', 'prep', 'pobj', 'compound', 'nummod']:1:0
+['root', 'prep', 'pobj', 'acl', 'acomp', 'conj', 'prep', 'pobj', 'compound', 'amod']:1:0
+['root', 'nsubj', 'appos', 'prep', 'pobj', 'prep', 'pobj', 'amod']:1:0
+['root', 'nsubj', 'appos', 'prep', 'pobj', 'prep', 'pobj', 'prep']:1:0
+['root', 'nsubj', 'appos', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'poss']:1:0
+['root', 'nsubj', 'appos', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'cc']:1:0
+['root', 'nsubj', 'appos', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'conj']:1:0
+['root', 'nsubj', 'appos', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'compound']:2:1
+['root', 'nsubj', 'appos', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'relcl', 'nsubj']:1:0
+['root', 'nsubj', 'appos', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'relcl']:1:0
+['root', 'nsubj', 'appos', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'relcl', 'advmod']:1:0
+['root', 'dobj', 'prep', 'pobj', 'poss']:1:1
+['root', 'dobj', 'prep', 'pobj', 'poss', 'case']:1:0
+['root', 'dobj', 'prep', 'pobj', 'nmod']:3:0
+['root', 'dobj', 'prep', 'pobj', 'nmod', 'punct']:2:0
+['root', 'dobj', 'prep', 'pobj', 'appos', 'punct']:2:0
+['root', 'dobj', 'prep', 'pobj', 'appos', 'dep', 'nmod']:1:0
+['root', 'dobj', 'prep', 'pobj', 'appos', 'dep']:1:0
+['root', 'dobj', 'prep', 'pobj', 'appos', 'prep']:1:0
+['root', 'dobj', 'prep', 'pobj', 'appos', 'prep', 'pobj']:2:0
+['root', 'dobj', 'amod', 'npadvmod']:1:0
+['root', 'prep', 'pobj', 'acl', 'prep']:4:0
+['root', 'prep', 'pobj', 'acl', 'prep', 'punct']:2:0
+['root', 'prep', 'pobj', 'acl', 'prep', 'pobj', 'amod']:2:0
+['root', 'prep', 'pobj', 'acl', 'prep', 'pobj', 'amod', 'cc']:1:0
+['root', 'prep', 'pobj', 'acl', 'prep', 'pobj', 'amod', 'conj']:1:0
+['root', 'prep', 'pobj', 'acl', 'agent']:1:0
+['root', 'prep', 'pobj', 'acl', 'agent', 'pobj']:1:1
+['root', 'prep', 'pobj', 'acl', 'agent', 'pobj', 'punct']:1:0
+['root', 'prep', 'pobj', 'acl', 'agent', 'pobj', 'relcl', 'nsubj']:1:0
+['root', 'prep', 'pobj', 'acl', 'agent', 'pobj', 'relcl']:1:0
+['root', 'prep', 'pobj', 'acl', 'agent', 'pobj', 'relcl', 'aux']:1:0
+['root', 'prep', 'pobj', 'acl', 'agent', 'pobj', 'relcl', 'dobj', 'poss']:1:0
+['root', 'prep', 'pobj', 'acl', 'agent', 'pobj', 'relcl', 'dobj']:1:0
+['root', 'prep', 'pobj', 'acl', 'agent', 'pobj', 'relcl', 'dobj', 'amod']:1:0
+['root', 'ccomp', 'advmod', 'advmod']:2:0
+['root', 'ccomp', 'prep', 'pcomp', 'dobj', 'nummod']:1:0
+['root', 'attr', 'cc']:1:0
+['root', 'attr', 'conj']:1:0
+['root', 'attr', 'conj', 'amod']:1:0
+['root', 'dobj', 'prep', 'pcomp', 'dobj']:1:1
+['root', 'dobj', 'prep', 'pcomp', 'cc']:2:0
+['root', 'dobj', 'prep', 'pcomp', 'cc', 'advmod']:1:0
+['root', 'dobj', 'prep', 'pcomp', 'conj']:1:0
+['root', 'dobj', 'prep', 'pcomp', 'conj', 'dobj']:1:0
+['root', 'dobj', 'prep', 'pcomp', 'conj', 'prep', 'pobj', 'poss']:1:0
+['root', 'dobj', 'prep', 'pcomp', 'conj', 'prep', 'pobj']:1:0
+['root', 'dobj', 'prep', 'pcomp', 'conj', 'prep', 'pobj', 'prep']:1:0
+['root', 'dobj', 'prep', 'pcomp', 'conj', 'prep', 'pobj', 'prep', 'pobj', 'amod']:1:1
+['root', 'xcomp', 'auxpass']:1:0
+['root', 'xcomp', 'prep', 'pobj', 'nummod']:1:0
+['root', 'xcomp', 'prep', 'pobj', 'punct']:4:0
+['root', 'xcomp', 'prep', 'pobj', 'relcl', 'xcomp', 'advmod']:1:0
+['root', 'xcomp', 'prep', 'pobj', 'relcl', 'xcomp']:1:0
+['root', 'xcomp', 'prep', 'pobj', 'relcl', 'nsubj', 'det']:2:0
+['root', 'xcomp', 'prep', 'pobj', 'relcl', 'nsubj']:1:0
+['root', 'xcomp', 'prep', 'pobj', 'relcl', 'nsubj', 'compound']:1:1
+['root', 'xcomp', 'prep', 'pobj', 'relcl']:1:0
+['root', 'xcomp', 'prep', 'pobj', 'relcl', 'xcomp', 'prep']:1:0
+['root', 'xcomp', 'prep', 'pobj', 'relcl', 'xcomp', 'prep', 'pobj', 'det']:1:0
+['root', 'xcomp', 'prep', 'pobj', 'relcl', 'xcomp', 'prep', 'pobj']:1:0
+['root', 'xcomp', 'prep', 'pobj', 'relcl', 'xcomp', 'prep', 'pobj', 'compound']:1:0
+['root', 'conj', 'nsubjpass', 'amod']:1:1
+['root', 'conj', 'xcomp', 'advmod']:1:0
+['root', 'ccomp', 'xcomp', 'prep', 'pobj', 'prep']:2:0
+['root', 'ccomp', 'xcomp', 'prep', 'pobj', 'prep', 'pobj', 'compound']:1:0
+['root', 'ccomp', 'xcomp', 'prep', 'pobj', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'xcomp', 'prep', 'pobj', 'acl']:1:0
+['root', 'ccomp', 'xcomp', 'prep', 'pobj', 'acl', 'cc']:1:0
+['root', 'ccomp', 'xcomp', 'prep', 'pobj', 'acl', 'conj']:1:0
+['root', 'ccomp', 'xcomp', 'prep', 'pobj', 'acl', 'conj', 'dobj']:1:0
+['root', 'ccomp', 'xcomp', 'prep', 'pobj', 'acl', 'conj', 'dobj', 'prep', 'pobj', 'poss']:1:0
+['root', 'ccomp', 'xcomp', 'prep', 'pobj', 'acl', 'conj', 'dobj', 'prep', 'pobj']:1:0
+['root', 'nsubj', 'predet']:1:0
+['root', 'advcl', 'xcomp', 'aux']:4:0
+['root', 'advcl', 'xcomp']:2:0
+['root', 'advcl', 'xcomp', 'dobj']:2:0
+['root', 'advcl', 'xcomp', 'ccomp', 'xcomp', 'dobj']:1:0
+['root', 'advcl', 'xcomp', 'ccomp', 'xcomp']:1:0
+['root', 'advcl', 'xcomp', 'ccomp', 'nsubjpass']:1:0
+['root', 'advcl', 'xcomp', 'ccomp']:1:0
+['root', 'advcl', 'xcomp', 'ccomp', 'auxpass']:1:0
+['root', 'advcl', 'xcomp', 'ccomp', 'neg']:2:0
+['root', 'advcl', 'dobj', 'compound']:1:0
+['root', 'advcl', 'dobj', 'prep']:5:0
+['root', 'advcl', 'dobj', 'prep', 'pobj', 'nummod']:1:0
+['root', 'advcl', 'dobj', 'prep', 'pobj']:6:0
+['root', 'advcl', 'dobj', 'prep', 'pobj', 'nummod', 'cc']:2:0
+['root', 'advcl', 'dobj', 'prep', 'pobj', 'nummod', 'conj']:1:0
+['root', 'advcl', 'dobj', 'prep', 'pobj', 'compound']:1:0
+['root', 'advcl', 'dobj', 'prep', 'pobj', 'conj']:1:0
+['root', 'advcl', 'dobj', 'prep', 'pobj', 'conj', 'dobj']:1:0
+['root', 'advcl', 'dobj', 'prep', 'pobj', 'conj', 'dobj', 'compound']:1:0
+['root', 'dobj', 'prep', 'pobj', 'nummod', 'compound']:2:0
+['root', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'amod']:1:0
+['root', 'dobj', 'prep', 'pobj', 'amod', 'npadvmod', 'compound']:1:0
+['root', 'dobj', 'prep', 'pobj', 'amod', 'prep']:1:0
+['root', 'dobj', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'det']:2:0
+['root', 'dobj', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'compound']:1:0
+['root', 'dobj', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'acl']:1:0
+['root', 'dobj', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'acl', 'dobj']:1:0
+['root', 'dobj', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'acl', 'prep']:1:0
+['root', 'dobj', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'acl', 'prep', 'pobj']:1:0
+['root', 'dobj', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'acl', 'advcl', 'advmod']:1:0
+['root', 'dobj', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'acl', 'advcl']:1:0
+['root', 'dobj', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'acl', 'advcl', 'nsubj', 'det']:1:0
+['root', 'dobj', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'acl', 'advcl', 'nsubj']:1:0
+['root', 'dobj', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'acl', 'advcl', 'nsubj', 'amod']:1:0
+['root', 'ccomp', 'dobj', 'nummod', 'compound']:2:0
+['root', 'ccomp', 'dative']:1:0
+['root', 'ccomp', 'dative', 'pobj']:1:0
+['root', 'ccomp', 'dative', 'pobj', 'acl']:1:0
+['root', 'ccomp', 'dative', 'pobj', 'acl', 'dobj', 'compound']:1:1
+['root', 'ccomp', 'dative', 'pobj', 'acl', 'dobj']:1:0
+['root', 'ccomp', 'dative', 'pobj', 'acl', 'prep']:1:0
+['root', 'ccomp', 'dative', 'pobj', 'acl', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'advcl', 'dobj', 'nummod']:1:0
+['root', 'dative']:2:0
+['root', 'dative', 'pobj']:2:0
+['root', 'dative', 'pobj', 'acl']:1:0
+['root', 'dative', 'pobj', 'acl', 'prt']:1:0
+['root', 'dative', 'pobj', 'acl', 'dobj', 'amod']:1:0
+['root', 'dative', 'pobj', 'acl', 'dobj']:1:0
+['root', 'advcl', 'dobj', 'nummod']:1:0
+['root', 'advcl', 'dobj', 'prep', 'pobj', 'det']:1:0
+['root', 'ccomp', 'nsubj', 'compound', 'appos', 'compound']:2:1
+['root', 'ccomp', 'nsubj', 'compound', 'appos']:1:0
+['root', 'ccomp', 'nsubj', 'compound', 'case']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'compound', 'nummod', 'amod']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'compound', 'nummod']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'compound', 'nummod', 'quantmod']:2:0
+['root', 'nsubj', 'compound', 'compound', 'amod']:1:0
+['root', 'dobj', 'prep', 'pobj', 'advmod']:1:0
+['root', 'dobj', 'prep', 'pobj', 'advmod', 'npadvmod', 'nummod']:1:0
+['root', 'dobj', 'prep', 'pobj', 'advmod', 'npadvmod']:1:0
+['root', 'dobj', 'prep', 'pobj', 'advmod', 'prep']:1:0
+['root', 'dobj', 'prep', 'pobj', 'advmod', 'prep', 'pobj', 'det']:2:0
+['root', 'dobj', 'prep', 'pobj', 'advmod', 'prep', 'pobj', 'nummod', 'compound']:1:0
+['root', 'dobj', 'prep', 'pobj', 'advmod', 'prep', 'pobj', 'acl']:1:0
+['root', 'dobj', 'prep', 'pobj', 'advmod', 'prep', 'pobj', 'acl', 'prep']:1:0
+['root', 'dobj', 'prep', 'pobj', 'advmod', 'prep', 'pobj', 'acl', 'prep', 'pobj']:1:0
+['root', 'dobj', 'prep', 'pobj', 'advmod', 'prep', 'pobj', 'acl', 'prep', 'pobj', 'amod']:1:0
+['root', 'dobj', 'prep', 'pobj', 'advmod', 'prep', 'pobj', 'acl', 'prep', 'pobj', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'relcl', 'aux']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'relcl', 'advmod']:2:0
+['root', 'ccomp', 'prep', 'pobj', 'cc']:5:0
+['root', 'ccomp', 'prep', 'pobj', 'conj', 'det']:2:0
+['root', 'ccomp', 'prep', 'pobj', 'conj', 'prep']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'conj', 'prep', 'pobj', 'amod']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'conj', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'conj', 'relcl']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'conj', 'relcl', 'acomp']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'conj', 'relcl', 'prep']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'conj', 'relcl', 'prep', 'pobj', 'amod']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'conj', 'relcl', 'conj']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'conj', 'relcl', 'conj', 'dobj', 'nmod']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'conj', 'relcl', 'conj', 'dobj']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'conj', 'relcl', 'conj', 'dobj', 'nmod', 'conj']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'conj', 'relcl', 'conj', 'dobj', 'nmod', 'conj', 'conj']:1:0
+['root', 'ccomp', 'nsubj', 'prep', 'pobj', 'amod']:3:1
+['root', 'ccomp', 'prep', 'npadvmod', 'nummod']:1:0
+['root', 'ccomp', 'prep', 'npadvmod']:1:0
+['root', 'attr', 'nummod', 'compound']:1:0
+['root', 'advcl', 'dobj', 'prep', 'pobj', 'amod']:2:0
+['root', 'advcl', 'dobj', 'prep', 'pobj', 'prep']:1:0
+['root', 'advcl', 'dobj', 'prep', 'pobj', 'prep', 'pobj']:1:0
+['root', 'advcl', 'dobj', 'cc']:1:0
+['root', 'advcl', 'dobj', 'conj', 'amod']:1:0
+['root', 'advcl', 'dobj', 'conj']:1:0
+['root', 'acomp', 'xcomp', 'dobj', 'compound', 'amod']:1:0
+['root', 'acomp', 'xcomp', 'dobj', 'compound']:1:0
+['root', 'acomp', 'xcomp', 'dobj']:1:0
+['root', 'acomp', 'xcomp', 'dobj', 'relcl']:1:0
+['root', 'acomp', 'xcomp', 'dobj', 'relcl', 'cc']:2:0
+['root', 'acomp', 'xcomp', 'dobj', 'relcl', 'conj']:1:0
+['root', 'acomp', 'xcomp', 'dobj', 'relcl', 'conj', 'dobj', 'amod']:1:0
+['root', 'acomp', 'xcomp', 'dobj', 'relcl', 'conj', 'dobj']:1:0
+['root', 'acomp', 'xcomp', 'dobj', 'relcl', 'conj', 'dobj', 'amod', 'conj']:1:0
+['root', 'npadvmod', 'npadvmod']:1:0
+['root', 'npadvmod', 'npadvmod', 'nummod']:1:0
+['root', 'attr', 'prep', 'pobj', 'appos', 'compound']:1:1
+['root', 'attr', 'prep', 'pobj', 'appos']:1:0
+['root', 'attr', 'prep', 'pobj', 'acl']:1:0
+['root', 'attr', 'prep', 'pobj', 'acl', 'npadvmod']:1:0
+['root', 'attr', 'prep', 'pobj', 'acl', 'npadvmod', 'nummod']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'acl']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'acl', 'xcomp', 'aux']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'acl', 'xcomp']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'acl', 'xcomp', 'cc']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'acl', 'xcomp', 'conj']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'acl', 'xcomp', 'conj', 'dobj', 'nmod']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'acl', 'xcomp', 'conj', 'dobj']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'acl', 'xcomp', 'conj', 'dobj', 'nmod', 'cc']:2:0
+['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'acl', 'xcomp', 'conj', 'dobj', 'nmod', 'conj']:1:0
+['root', 'advcl', 'oprd', 'punct']:6:0
+['root', 'advcl', 'oprd', 'conj']:1:0
+['root', 'advcl', 'oprd', 'conj', 'conj']:1:0
+['root', 'advcl', 'oprd', 'conj', 'conj', 'amod']:1:0
+['root', 'advcl', 'dobj', 'acl', 'aux']:1:0
+['root', 'advcl', 'dobj', 'acl']:1:0
+['root', 'advcl', 'dobj', 'acl', 'dobj']:1:0
+['root', 'nsubjpass', 'prep', 'pobj', 'poss']:1:1
+['root', 'nsubjpass', 'prep', 'pobj', 'poss', 'case']:1:0
+['root', 'nmod', 'punct']:4:0
+['root', 'npadvmod', 'prep']:1:0
+['root', 'npadvmod', 'prep', 'pobj', 'nummod']:2:0
+['root', 'npadvmod', 'prep', 'pobj', 'punct']:1:0
+['root', 'pobj']:2:0
+['root', 'pobj', 'prep']:1:0
+['root', 'pobj', 'prep', 'pobj']:1:0
+['root', 'appos', 'nummod', 'compound']:2:0
+['root', 'dobj', 'poss', 'case', 'punct']:1:0
+['root', 'dobj', 'poss', 'case']:1:0
+['root', 'advcl', 'agent', 'pobj', 'det']:2:0
+['root', 'advcl', 'agent', 'pobj', 'compound']:2:1
+['root', 'appos', 'npadvmod', 'nmod']:1:0
+['root', 'npadvmod', 'nmod', 'nmod']:1:0
+['root', 'npadvmod', 'nmod']:3:0
+['root', 'npadvmod', 'nmod', 'nummod']:2:0
+['root', 'nummod', 'appos', 'nummod']:1:0
+['root', 'nummod', 'appos']:2:0
+['root', 'nummod', 'nmod', 'nummod']:1:0
+['root', 'nummod', 'nmod']:2:0
+['root', 'appos', 'nmod', 'nmod', 'nummod']:1:0
+['root', 'appos', 'nmod', 'nummod']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'poss']:1:0
+['root', 'prep', 'pobj', 'compound', 'nummod']:1:0
+['root', 'dative', 'pobj', 'relcl', 'dep', 'poss']:1:0
+['root', 'dative', 'pobj', 'relcl', 'dep']:1:0
+['root', 'dative', 'pobj', 'relcl']:1:0
+['root', 'dative', 'pobj', 'relcl', 'nsubj']:1:0
+['root', 'dative', 'pobj', 'relcl', 'ccomp']:1:0
+['root', 'dative', 'pobj', 'relcl', 'ccomp', 'prep']:1:0
+['root', 'dative', 'pobj', 'relcl', 'ccomp', 'prep', 'pobj', 'nummod']:1:0
+['root', 'dative', 'pobj', 'relcl', 'ccomp', 'prep', 'pobj']:1:0
+['root', 'dative', 'pobj', 'relcl', 'ccomp', 'prep', 'pobj', 'compound']:1:0
+['root', 'dative', 'pobj', 'relcl', 'ccomp', 'prep', 'pobj', 'prep']:1:0
+['root', 'dative', 'pobj', 'relcl', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'det']:1:0
+['root', 'dative', 'pobj', 'relcl', 'ccomp', 'prep', 'pobj', 'prep', 'pobj']:1:0
+['root', 'dative', 'pobj', 'relcl', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'prep']:1:0
+['root', 'dative', 'pobj', 'relcl', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj']:1:0
+['root', 'dative', 'pobj', 'relcl', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'amod']:1:0
+['root', 'dative', 'pobj', 'relcl', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'compound', 'nummod']:1:0
+['root', 'dative', 'pobj', 'relcl', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'compound']:1:1
+['root', 'dative', 'pobj', 'relcl', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'prep']:1:0
+['root', 'dative', 'pobj', 'relcl', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj']:1:0
+['root', 'dative', 'pobj', 'relcl', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'amod']:1:0
+['root', 'dative', 'pobj', 'relcl', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'nummod']:1:0
+['root', 'nmod', 'compound']:1:1
+['root', 'relcl', 'aux']:1:0
+['root', 'relcl']:1:0
+['root', 'relcl', 'auxpass']:1:0
+['root', 'relcl', 'prep']:1:0
+['root', 'relcl', 'prep', 'prep']:4:0
+['root', 'relcl', 'prep', 'prep', 'pobj', 'det']:4:0
+['root', 'relcl', 'prep', 'prep', 'pobj']:2:0
+['root', 'relcl', 'prep', 'prep', 'pobj', 'amod']:1:0
+['root', 'relcl', 'prep', 'prep', 'pobj', 'prep', 'pobj']:2:0
+['root', 'relcl', 'prep', 'prep', 'pobj', 'prep', 'pobj', 'amod']:1:0
+['root', 'relcl', 'prep', 'prep', 'pobj', 'cc', 'advmod']:1:0
+['root', 'relcl', 'prep', 'prep', 'pobj', 'conj', 'amod']:1:0
+['root', 'relcl', 'prep', 'prep', 'pobj', 'conj', 'prep', 'pobj', 'amod']:1:0
+['root', 'ccomp', 'nsubj', 'compound', 'compound', 'compound', 'compound']:1:1
+['root', 'ccomp', 'nsubj', 'compound', 'compound', 'compound']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'amod']:2:1
+['root', 'ccomp', 'nsubj', 'appos', 'prep']:1:0
+['root', 'ccomp', 'nsubj', 'appos', 'prep', 'pobj', 'det']:1:0
+['root', 'ccomp', 'nsubj', 'appos', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'nsubj', 'appos', 'prep', 'pobj', 'compound', 'compound']:1:1
+['root', 'ccomp', 'nsubj', 'appos', 'prep', 'pobj', 'compound']:2:0
+['root', 'ccomp', 'nsubj', 'appos', 'prep', 'pobj', 'punct']:2:0
+['root', 'ccomp', 'nsubj', 'appos', 'prep', 'pobj', 'appos']:1:1
+['root', 'ccomp', 'dobj', 'nummod', 'cc']:3:0
+['root', 'ccomp', 'dobj', 'nummod', 'conj']:2:0
+['root', 'conj', 'xcomp', 'dobj', 'amod']:2:0
+['root', 'ccomp', 'dobj', 'prep', 'pobj', 'compound', 'amod']:1:1
+['root', 'ccomp', 'dobj', 'prep', 'pobj', 'compound', 'compound']:2:0
+['root', 'ccomp', 'dobj', 'prep', 'pobj', 'conj', 'amod']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'det']:4:0
+['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'relcl', 'prep', 'pobj', 'det']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'relcl', 'prep', 'pobj']:2:0
+['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'relcl', 'prep', 'pobj', 'compound']:1:1
+['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'relcl', 'prep']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'acl', 'aux']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'acl', 'dobj', 'nmod', 'amod']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'acl', 'dobj', 'nmod']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'acl', 'dobj', 'amod']:1:0
+['root', 'xcomp', 'xcomp']:1:0
+['root', 'xcomp', 'xcomp', 'ccomp', 'nsubj', 'compound']:1:0
+['root', 'xcomp', 'xcomp', 'ccomp', 'nsubj']:1:0
+['root', 'xcomp', 'xcomp', 'ccomp']:1:0
+['root', 'xcomp', 'xcomp', 'ccomp', 'prep']:1:0
+['root', 'xcomp', 'xcomp', 'ccomp', 'prep', 'pobj', 'amod']:1:0
+['root', 'xcomp', 'xcomp', 'ccomp', 'prep', 'pobj']:1:0
+['root', 'xcomp', 'xcomp', 'ccomp', 'prep', 'pobj', 'cc']:1:0
+['root', 'xcomp', 'xcomp', 'ccomp', 'prep', 'pobj', 'conj']:1:0
+['root', 'xcomp', 'xcomp', 'ccomp', 'prep', 'pobj', 'relcl', 'nsubj']:1:0
+['root', 'xcomp', 'xcomp', 'ccomp', 'prep', 'pobj', 'relcl']:1:0
+['root', 'xcomp', 'xcomp', 'ccomp', 'prep', 'pobj', 'relcl', 'ccomp', 'aux']:1:0
+['root', 'xcomp', 'xcomp', 'ccomp', 'prep', 'pobj', 'relcl', 'ccomp']:1:0
+['root', 'xcomp', 'xcomp', 'ccomp', 'prep', 'pobj', 'relcl', 'ccomp', 'auxpass']:1:0
+['root', 'xcomp', 'xcomp', 'ccomp', 'prep', 'pobj', 'relcl', 'ccomp', 'advmod']:1:0
+['root', 'xcomp', 'xcomp', 'ccomp', 'prep', 'pobj', 'relcl', 'ccomp', 'advcl']:1:0
+['root', 'xcomp', 'xcomp', 'ccomp', 'prep', 'pobj', 'relcl', 'ccomp', 'advcl', 'dobj']:1:0
+['root', 'csubj']:1:0
+['root', 'csubj', 'dobj']:2:2
+['root', 'csubj', 'prep']:4:0
+['root', 'csubj', 'prep', 'pobj']:2:0
+['root', 'csubj', 'prep', 'pobj', 'prep', 'pobj', 'amod']:1:0
+['root', 'csubj', 'prep', 'pobj', 'prep', 'pobj']:1:0
+['root', 'csubj', 'prep', 'pobj', 'nummod']:1:0
+['root', 'csubj', 'prep', 'pobj', 'compound', 'compound']:1:1
+['root', 'csubj', 'prep', 'pobj', 'compound']:2:0
+['root', 'attr', 'prep', 'pobj', 'prep', 'pobj', 'acl']:1:0
+['root', 'attr', 'prep', 'pobj', 'prep', 'pobj', 'acl', 'prep']:3:0
+['root', 'attr', 'prep', 'pobj', 'prep', 'pobj', 'acl', 'prep', 'pobj']:1:0
+['root', 'attr', 'prep', 'pobj', 'prep', 'pobj', 'acl', 'prep', 'pcomp']:1:0
+['root', 'attr', 'prep', 'pobj', 'prep', 'pobj', 'acl', 'prep', 'pcomp', 'dobj']:1:1
+['root', 'det']:4:1
+['root', 'conj', 'nsubj', 'compound', 'amod']:2:0
+['root', 'dep', 'compound', 'compound']:1:0
+['root', 'npadvmod', 'compound', 'compound']:2:1
+['root', 'prep', 'pcomp', 'dobj', 'amod', 'amod']:1:1
+['root', 'prep', 'pcomp', 'dobj', 'amod', 'punct']:1:0
+['root', 'prep', 'pcomp', 'dobj', 'prep']:2:0
+['root', 'prep', 'pcomp', 'dobj', 'prep', 'pobj']:2:1
+['root', 'attr', 'prep', 'pobj', 'relcl', 'prep']:1:0
+['root', 'attr', 'prep', 'pobj', 'relcl', 'prep', 'pobj', 'det']:1:0
+['root', 'attr', 'prep', 'pobj', 'relcl', 'prep', 'pobj']:1:0
+['root', 'attr', 'prep', 'pobj', 'relcl', 'prep', 'pobj', 'amod']:1:0
+['root', 'attr', 'prep', 'pobj', 'relcl', 'prep', 'pobj', 'prep', 'pobj', 'nummod']:1:0
+['root', 'attr', 'prep', 'pobj', 'relcl', 'prep', 'pobj', 'prep', 'pobj']:1:0
+['root', 'dobj', 'prep', 'pobj', 'compound', 'compound']:1:0
+['root', 'dobj', 'nmod', 'cc']:1:0
+['root', 'dobj', 'nmod', 'conj']:1:0
+['root', 'nsubj', 'acl']:4:0
+['root', 'nsubj', 'acl', 'prep']:1:0
+['root', 'nsubj', 'acl', 'prep', 'pobj']:1:1
+['root', 'prep', 'pcomp', 'nsubjpass', 'nummod']:1:0
+['root', 'prep', 'pcomp', 'nsubjpass']:2:0
+['root', 'prep', 'pcomp', 'nsubjpass', 'amod']:1:0
+['root', 'prep', 'pcomp', 'aux']:2:0
+['root', 'prep', 'pcomp', 'prep', 'pobj', 'amod']:2:0
+['root', 'nsubjpass', 'prep', 'pobj', 'nummod']:1:0
+['root', 'nsubjpass', 'prep', 'pobj', 'prep']:1:0
+['root', 'nsubjpass', 'prep', 'pobj', 'prep', 'pobj']:2:0
+['root', 'dobj', 'acl', 'mark']:1:0
+['root', 'dobj', 'acl', 'nsubj', 'det']:1:0
+['root', 'dobj', 'acl', 'nsubj']:1:0
+['root', 'dobj', 'acl', 'nsubj', 'amod']:1:0
+['root', 'dobj', 'acl', 'nsubj', 'compound']:1:1
+['root', 'prep', 'pobj', 'poss', 'det']:1:0
+['root', 'advcl', 'prep', 'pobj', 'prep', 'pobj', 'poss']:2:1
+['root', 'advcl', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'prep']:1:0
+['root', 'advcl', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'compound']:1:1
+['root', 'advcl', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj']:1:0
+['root', 'nsubj', 'acl', 'agent']:2:0
+['root', 'nsubj', 'acl', 'agent', 'pobj']:2:0
+['root', 'nsubj', 'acl', 'xcomp', 'aux']:1:0
+['root', 'nsubj', 'acl', 'xcomp']:1:0
+['root', 'nsubj', 'acl', 'xcomp', 'dobj']:1:0
+['root', 'dobj', 'prep', 'pobj', 'appos', 'amod', 'npadvmod']:1:1
+['root', 'dobj', 'prep', 'pobj', 'appos', 'prep', 'pobj', 'compound', 'compound']:1:1
+['root', 'dobj', 'prep', 'pobj', 'appos', 'prep', 'pobj', 'compound']:1:0
+['root', 'dobj', 'prep', 'pobj', 'appos', 'relcl', 'nsubjpass']:1:0
+['root', 'dobj', 'prep', 'pobj', 'appos', 'relcl']:1:0
+['root', 'dobj', 'prep', 'pobj', 'appos', 'relcl', 'aux']:1:0
+['root', 'dobj', 'prep', 'pobj', 'appos', 'relcl', 'auxpass']:1:0
+['root', 'dobj', 'prep', 'pobj', 'appos', 'relcl', 'prep']:3:0
+['root', 'dobj', 'prep', 'pobj', 'appos', 'relcl', 'prep', 'pobj', 'det']:1:0
+['root', 'dobj', 'prep', 'pobj', 'appos', 'relcl', 'prep', 'pobj']:3:0
+['root', 'dobj', 'prep', 'pobj', 'appos', 'relcl', 'prep', 'pobj', 'compound']:1:1
+['root', 'dobj', 'prep', 'pobj', 'appos', 'relcl', 'prep', 'pobj', 'prep', 'pobj']:1:0
+['root', 'dobj', 'acl', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'det']:2:0
+['root', 'dobj', 'acl', 'dobj', 'prep', 'pobj', 'punct']:2:0
+['root', 'dobj', 'acl', 'dobj', 'prep', 'pobj', 'compound']:1:0
+['root', 'dobj', 'acl', 'dobj', 'prep', 'pobj', 'prep']:1:0
+['root', 'dobj', 'acl', 'dobj', 'prep', 'pobj', 'prep', 'pobj']:1:1
+['root', 'dobj', 'acl', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'cc']:1:0
+['root', 'dobj', 'acl', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'conj']:1:0
+['root', 'dobj', 'acl', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'compound']:1:1
+['root', 'dobj', 'acl', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'prep']:1:0
+['root', 'dobj', 'acl', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'prep', 'pobj', 'compound']:1:0
+['root', 'dobj', 'acl', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'prep', 'pobj']:1:0
+['root', 'dobj', 'acl', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'punct']:2:0
+['root', 'dobj', 'acl', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'appos']:1:1
+['root', 'npadvmod', 'appos', 'nummod']:1:0
+['root', 'prep', 'pcomp', 'prt']:1:0
+['root', 'prep', 'pcomp', 'dobj', 'prep', 'pobj', 'poss', 'det']:1:0
+['root', 'prep', 'pcomp', 'dobj', 'prep', 'pobj', 'poss']:1:0
+['root', 'prep', 'pcomp', 'dobj', 'prep', 'pobj', 'poss', 'case']:1:0
+['root', 'prep', 'pcomp', 'prep', 'pobj', 'prep', 'pobj', 'compound']:1:1
+['root', 'prep', 'pcomp', 'prep', 'pobj', 'prep', 'pobj']:1:0
+['root', 'prep', 'pcomp', 'prep', 'pobj', 'punct']:1:0
+['root', 'prep', 'pcomp', 'prep', 'pobj', 'acl']:1:0
+['root', 'prep', 'pcomp', 'prep', 'pobj', 'acl', 'agent']:1:0
+['root', 'prep', 'pcomp', 'prep', 'pobj', 'acl', 'agent', 'pobj', 'compound']:1:0
+['root', 'prep', 'pcomp', 'prep', 'pobj', 'acl', 'agent', 'pobj']:1:0
+['root', 'advcl', 'prep', 'pobj', 'prep', 'pobj', 'poss', 'case']:1:0
+['root', 'advcl', 'prep', 'pobj', 'advmod']:1:0
+['root', 'advcl', 'prep', 'pobj', 'advmod', 'prep', 'pobj']:1:0
+['root', 'advcl', 'prep', 'pobj', 'advmod', 'prep', 'pobj', 'amod']:2:0
+['root', 'advcl', 'prep', 'pobj', 'advmod', 'prep', 'pobj', 'nmod', 'nmod']:1:1
+['root', 'advcl', 'prep', 'pobj', 'advmod', 'prep', 'pobj', 'nmod']:1:1
+['root', 'advcl', 'prep', 'pobj', 'advmod', 'prep', 'pobj', 'advmod']:1:0
+['root', 'advcl', 'prep', 'pobj', 'advmod', 'prep', 'pobj', 'advmod', 'prep']:1:0
+['root', 'advcl', 'prep', 'pobj', 'advmod', 'prep', 'pobj', 'advmod', 'prep', 'pobj']:1:0
+['root', 'conj', 'cc']:1:0
+['root', 'conj', 'conj', 'nsubj']:1:0
+['root', 'conj', 'conj', 'nsubj', 'compound']:1:1
+['root', 'conj', 'conj']:1:0
+['root', 'conj', 'conj', 'dobj']:1:0
+['root', 'conj', 'conj', 'dobj', 'prep']:1:0
+['root', 'conj', 'conj', 'dobj', 'prep', 'pobj']:2:0
+['root', 'conj', 'conj', 'dobj', 'prep', 'pobj', 'amod']:1:0
+['root', 'conj', 'conj', 'advcl', 'aux']:1:0
+['root', 'conj', 'conj', 'advcl']:1:0
+['root', 'conj', 'conj', 'advcl', 'prep', 'advmod', 'advmod']:1:0
+['root', 'conj', 'conj', 'advcl', 'prep', 'advmod']:1:0
+['root', 'conj', 'conj', 'advcl', 'prep', 'pobj', 'amod']:1:0
+['root', 'conj', 'conj', 'punct']:1:0
+['root', 'dobj', 'npadvmod', 'amod']:1:0
+['root', 'dobj', 'npadvmod']:1:0
+['root', 'dobj', 'acl', 'prep', 'pobj', 'poss']:1:0
+['root', 'dobj', 'acl', 'prep', 'pobj', 'amod', 'prep', 'pobj']:1:0
+['root', 'dobj', 'acl', 'prep', 'pobj', 'acl']:1:0
+['root', 'dobj', 'acl', 'prep', 'pobj', 'acl', 'agent']:1:0
+['root', 'dobj', 'acl', 'prep', 'pobj', 'acl', 'agent', 'pobj']:1:0
+['root', 'dobj', 'acl', 'prep', 'pobj', 'acl', 'agent', 'pobj', 'prep', 'pobj', 'amod']:1:1
+['root', 'dobj', 'acl', 'prep', 'pobj', 'acl', 'agent', 'pobj', 'prep', 'pobj']:1:0
+['root', 'dobj', 'acl', 'prep', 'pobj', 'acl', 'agent', 'pobj', 'prep', 'pobj', 'compound', 'compound']:1:0
+['root', 'dobj', 'acl', 'prep', 'pobj', 'acl', 'agent', 'pobj', 'prep', 'pobj', 'compound']:1:0
+['root', 'prep', 'pobj', 'relcl', 'prep']:3:0
+['root', 'prep', 'pobj', 'relcl', 'prep', 'cc']:1:0
+['root', 'prep', 'pobj', 'relcl', 'prep', 'conj']:1:0
+['root', 'prep', 'pobj', 'relcl', 'prep', 'conj', 'prep']:1:0
+['root', 'prep', 'pobj', 'relcl', 'prep', 'conj', 'prep', 'pobj', 'amod']:1:0
+['root', 'prep', 'pobj', 'relcl', 'prep', 'conj', 'prep', 'pobj']:1:0
+['root', 'prep', 'pobj', 'relcl', 'advcl', 'mark']:1:0
+['root', 'prep', 'pobj', 'relcl', 'advcl']:1:0
+['root', 'prep', 'pobj', 'relcl', 'advcl', 'nsubj', 'det']:1:0
+['root', 'prep', 'pobj', 'relcl', 'advcl', 'nsubj']:1:0
+['root', 'prep', 'pobj', 'relcl', 'advcl', 'nsubj', 'compound', 'amod']:1:0
+['root', 'prep', 'pobj', 'relcl', 'advcl', 'nsubj', 'compound']:2:0
+['root', 'prep', 'pobj', 'relcl', 'advcl', 'nsubj', 'compound', 'compound']:1:0
+['root', 'prep', 'pobj', 'relcl', 'advcl', 'dobj', 'compound']:1:0
+['root', 'prep', 'pobj', 'relcl', 'advcl', 'dobj']:1:0
+['root', 'prep', 'pobj', 'relcl', 'advcl', 'advcl']:1:0
+['root', 'prep', 'pobj', 'relcl', 'advcl', 'advcl', 'dobj', 'compound']:1:1
+['root', 'prep', 'pobj', 'relcl', 'advcl', 'advcl', 'dobj']:1:0
+['root', 'prep', 'pobj', 'relcl', 'advcl', 'advcl', 'advmod']:1:0
+['root', 'prep', 'pobj', 'relcl', 'advcl', 'advcl', 'advmod', 'prep', 'pobj', 'poss']:1:0
+['root', 'prep', 'pobj', 'relcl', 'advcl', 'advcl', 'advmod', 'prep', 'pobj']:1:0
+['root', 'prep', 'pobj', 'relcl', 'advcl', 'advcl', 'advmod', 'prep', 'pobj', 'amod']:1:0
+['root', 'advcl', 'ccomp', 'nsubj', 'compound']:2:0
+['root', 'advcl', 'ccomp', 'prep', 'prep']:2:0
+['root', 'advcl', 'ccomp', 'prep', 'prep', 'pobj']:1:0
+['root', 'advcl', 'ccomp', 'prep', 'pobj', 'det']:1:0
+['root', 'advcl', 'ccomp', 'prep', 'pobj', 'amod']:1:0
+['root', 'advcl', 'ccomp', 'prep', 'pobj', 'prep', 'pobj']:1:0
+['root', 'dobj', 'nummod', 'advmod']:1:0
+['root', 'ccomp', 'acomp', 'prep', 'pobj', 'prep', 'pobj', 'amod']:1:0
+['root', 'ccomp', 'conj', 'prep', 'pobj', 'prep', 'pobj', 'amod']:1:0
+['root', 'nsubj', 'appos', 'prep', 'pobj', 'cc']:1:0
+['root', 'nsubj', 'appos', 'prep', 'pobj', 'conj']:1:0
+['root', 'nsubj', 'cc']:1:0
+['root', 'conj', 'npadvmod', 'nummod', 'advmod']:1:0
+['root', 'conj', 'npadvmod', 'nummod']:1:0
+['root', 'conj', 'prep', 'pobj', 'prep', 'pobj']:5:0
+['root', 'conj', 'prep', 'pobj', 'prep', 'pobj', 'prep']:1:0
+['root', 'conj', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'compound']:1:0
+['root', 'conj', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'ccomp', 'nsubj', 'det']:1:0
+['root', 'ccomp', 'ccomp', 'aux']:1:0
+['root', 'ccomp', 'ccomp', 'npadvmod', 'nummod']:1:0
+['root', 'ccomp', 'ccomp', 'npadvmod', 'prep']:1:0
+['root', 'ccomp', 'ccomp', 'npadvmod', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'ccomp', 'advcl', 'mark']:1:0
+['root', 'ccomp', 'ccomp', 'advcl']:1:0
+['root', 'ccomp', 'ccomp', 'advcl', 'nsubj', 'compound', 'compound']:1:0
+['root', 'ccomp', 'ccomp', 'advcl', 'nsubj', 'compound']:1:0
+['root', 'ccomp', 'ccomp', 'advcl', 'nsubj']:1:0
+['root', 'ccomp', 'dep']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'prep']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'det']:3:0
+['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj']:2:1
+['root', 'conj', 'nsubjpass', 'det']:4:0
+['root', 'conj', 'nsubjpass']:1:0
+['root', 'conj', 'auxpass']:1:0
+['root', 'conj', 'prep', 'pobj', 'prep', 'pobj', 'nummod']:1:0
+['root', 'conj', 'advcl', 'nsubj', 'prep']:1:0
+['root', 'conj', 'advcl', 'nsubj', 'prep', 'pobj', 'poss']:1:0
+['root', 'conj', 'advcl', 'nsubj', 'prep', 'pobj']:1:0
+['root', 'conj', 'advcl', 'nsubj', 'prep', 'pobj', 'poss', 'case']:1:0
+['root', 'conj', 'advcl', 'nsubj', 'prep', 'pobj', 'compound']:1:0
+['root', 'conj', 'advcl', 'nsubj', 'conj', 'det']:1:0
+['root', 'conj', 'advcl', 'nsubj', 'conj']:1:0
+['root', 'conj', 'advcl', 'nsubj', 'conj', 'amod']:1:0
+['root', 'conj', 'advcl', 'nsubj', 'conj', 'compound']:1:1
+['root', 'conj', 'advcl', 'conj']:1:0
+['root', 'conj', 'advcl', 'conj', 'dobj', 'amod']:1:1
+['root', 'conj', 'advcl', 'conj', 'dobj']:1:0
+['root', 'nsubj', 'relcl', 'prep']:2:0
+['root', 'nsubj', 'relcl', 'prep', 'pobj']:3:0
+['root', 'nsubj', 'relcl', 'prep', 'pcomp']:1:0
+['root', 'nsubj', 'relcl', 'prep', 'pobj', 'prep']:1:0
+['root', 'nsubj', 'relcl', 'prep', 'pobj', 'prep', 'pobj', 'det']:2:0
+['root', 'nsubj', 'relcl', 'prep', 'pobj', 'prep', 'pobj']:1:0
+['root', 'nsubj', 'relcl', 'prep', 'pobj', 'prep', 'pobj', 'amod']:1:1
+['root', 'nsubj', 'relcl', 'prep', 'pobj', 'prep', 'pobj', 'compound']:1:1
+['root', 'conj', 'advcl', 'aux']:2:0
+['root', 'conj', 'advcl', 'advmod', 'prep', 'pobj']:1:0
+['root', 'conj', 'advcl', 'advmod', 'prep', 'pobj', 'poss', 'case']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'npadvmod', 'amod']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'npadvmod']:1:0
+['root', 'attr', 'acl']:1:0
+['root', 'attr', 'acl', 'prep']:1:0
+['root', 'attr', 'acl', 'prep', 'pobj']:1:0
+['root', 'prep', 'pobj', 'prep', 'pobj', 'compound', 'amod']:1:0
+['root', 'xcomp', 'dobj', 'det']:1:0
+['root', 'xcomp', 'dobj', 'amod']:1:0
+['root', 'advcl', 'nsubj', 'prep', 'pobj', 'det']:2:0
+['root', 'advcl', 'nsubj', 'prep', 'pobj', 'compound', 'amod']:1:0
+['root', 'advcl', 'nsubj', 'prep', 'pobj', 'prep', 'pobj', 'amod']:1:1
+['root', 'advcl', 'nsubj', 'prep', 'pobj', 'prep', 'pobj']:1:0
+['root', 'advcl', 'nsubj', 'prep', 'pobj', 'prep', 'pobj', 'compound']:1:0
+['root', 'prep', 'pobj', 'amod', 'prep']:1:0
+['root', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'nummod']:1:0
+['root', 'prep', 'pobj', 'amod', 'prep', 'pobj']:1:0
+['root', 'agent', 'pobj', 'poss', 'det']:1:0
+['root', 'agent', 'pobj', 'poss']:1:0
+['root', 'agent', 'pobj', 'poss', 'case']:2:0
+['root', 'agent', 'pobj', 'prep']:1:0
+['root', 'agent', 'pobj', 'prep', 'pobj', 'amod']:1:1
+['root', 'agent', 'pobj', 'prep', 'pobj']:1:0
+['root', 'prep', 'pobj', 'prep', 'pobj', 'nmod', 'amod']:1:0
+['root', 'prep', 'pobj', 'prep', 'pobj', 'nmod', 'amod', 'cc']:1:0
+['root', 'prep', 'pobj', 'prep', 'pobj', 'nmod', 'amod', 'conj']:1:0
+['root', 'prep', 'pobj', 'prep', 'pobj', 'nmod', 'appos', 'punct']:1:0
+['root', 'prep', 'pobj', 'prep', 'pobj', 'nmod', 'appos']:1:1
+['root', 'prep', 'pobj', 'prep', 'pobj', 'nmod', 'punct']:1:0
+['root', 'prep', 'pobj', 'conj', 'nummod']:1:0
+['root', 'prep', 'prep', 'pobj', 'conj', 'nummod']:1:0
+['root', 'prep', 'pobj', 'npadvmod', 'det']:1:0
+['root', 'prep', 'prep', 'pobj', 'poss']:1:0
+['root', 'prep', 'prep', 'pobj', 'poss', 'case']:1:0
+['root', 'advmod', 'npadvmod', 'appos', 'nmod']:1:0
+['root', 'advmod', 'npadvmod', 'appos']:1:0
+['root', 'ccomp', 'nsubj', 'acl', 'xcomp', 'aux']:2:0
+['root', 'ccomp', 'nsubj', 'acl', 'xcomp']:1:0
+['root', 'ccomp', 'nsubj', 'acl', 'xcomp', 'attr']:1:1
+['root', 'ccomp', 'dobj', 'nummod', 'quantmod']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'acl', 'dobj', 'conj']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'relcl', 'prep', 'pcomp', 'auxpass']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'relcl', 'prep', 'pcomp']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'relcl', 'prep', 'pcomp', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'relcl', 'prep', 'pcomp', 'prep', 'pobj', 'prep', 'pobj']:2:2
+['root', 'advcl', 'xcomp', 'dobj', 'det']:1:0
+['root', 'advcl', 'xcomp', 'dobj', 'amod', 'npadvmod']:1:1
+['root', 'advcl', 'xcomp', 'dobj', 'prep']:1:0
+['root', 'advcl', 'xcomp', 'dobj', 'prep', 'pobj']:1:0
+['root', 'advcl', 'xcomp', 'dobj', 'prep', 'pobj', 'compound']:2:1
+['root', 'advcl', 'xcomp', 'dobj', 'punct']:2:0
+['root', 'advcl', 'xcomp', 'dobj', 'acl']:1:0
+['root', 'advcl', 'xcomp', 'dobj', 'acl', 'oprd', 'compound']:1:0
+['root', 'advcl', 'xcomp', 'dobj', 'acl', 'oprd']:1:1
+['root', 'advcl', 'conj', 'nsubj']:1:0
+['root', 'advcl', 'conj', 'xcomp']:2:0
+['root', 'advcl', 'conj', 'xcomp', 'dobj']:3:0
+['root', 'ccomp', 'conj', 'xcomp', 'xcomp']:1:0
+['root', 'ccomp', 'conj', 'xcomp', 'xcomp', 'dobj']:1:0
+['root', 'ccomp', 'conj', 'xcomp', 'xcomp', 'prep', 'pobj']:1:1
+['root', 'ccomp', 'conj', 'xcomp', 'xcomp', 'prep', 'pobj', 'punct']:2:0
+['root', 'ccomp', 'conj', 'xcomp', 'xcomp', 'prep', 'pobj', 'advmod', 'npadvmod', 'nummod']:1:0
+['root', 'ccomp', 'conj', 'xcomp', 'xcomp', 'prep', 'pobj', 'advmod', 'npadvmod']:1:0
+['root', 'ccomp', 'conj', 'xcomp', 'xcomp', 'prep', 'pobj', 'advmod']:1:0
+['root', 'ccomp', 'conj', 'xcomp', 'xcomp', 'prep', 'pobj', 'advmod', 'npadvmod', 'punct']:2:0
+['root', 'ccomp', 'conj', 'xcomp', 'xcomp', 'prep', 'pobj', 'advmod', 'npadvmod', 'appos', 'nummod']:1:0
+['root', 'ccomp', 'conj', 'xcomp', 'xcomp', 'prep', 'pobj', 'advmod', 'npadvmod', 'appos']:1:0
+['root', 'ccomp', 'conj', 'xcomp', 'xcomp', 'prep', 'pobj', 'advmod', 'advmod', 'prep']:1:0
+['root', 'ccomp', 'conj', 'xcomp', 'xcomp', 'prep', 'pobj', 'advmod', 'advmod', 'prep', 'pobj']:1:1
+['root', 'ccomp', 'conj', 'xcomp', 'xcomp', 'advcl']:1:0
+['root', 'ccomp', 'conj', 'xcomp', 'xcomp', 'advcl', 'prep', 'pobj', 'det']:1:0
+['root', 'ccomp', 'conj', 'xcomp', 'xcomp', 'advcl', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'nsubjpass', 'relcl', 'ccomp', 'nsubj']:1:0
+['root', 'ccomp', 'nsubjpass', 'relcl', 'ccomp']:2:0
+['root', 'ccomp', 'nsubjpass', 'relcl', 'ccomp', 'acomp']:1:0
+['root', 'ccomp', 'nsubjpass', 'relcl', 'ccomp', 'acomp', 'prep']:1:0
+['root', 'ccomp', 'nsubjpass', 'relcl', 'ccomp', 'acomp', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'nsubjpass', 'relcl', 'ccomp', 'acomp', 'prep', 'pobj', 'cc']:1:0
+['root', 'ccomp', 'nsubjpass', 'relcl', 'ccomp', 'acomp', 'prep', 'pobj', 'conj', 'advmod']:1:0
+['root', 'ccomp', 'nsubjpass', 'relcl', 'ccomp', 'acomp', 'prep', 'pobj', 'conj']:1:0
+['root', 'ccomp', 'nsubjpass', 'relcl', 'ccomp', 'acomp', 'prep', 'pobj', 'conj', 'amod']:1:0
+['root', 'ccomp', 'xcomp', 'attr', 'amod']:1:1
+['root', 'ccomp', 'xcomp', 'attr']:1:0
+['root', 'xcomp', 'dobj', 'prep']:1:0
+['root', 'xcomp', 'dobj', 'prep', 'pobj', 'det']:1:0
+['root', 'xcomp', 'dobj', 'prep', 'pobj']:1:0
+['root', 'xcomp', 'dobj', 'prep', 'pobj', 'compound']:1:1
+['root', 'xcomp', 'prep', 'prep']:1:0
+['root', 'xcomp', 'prep', 'prep', 'pobj', 'cc']:1:0
+['root', 'xcomp', 'prep', 'prep', 'pobj', 'conj']:1:0
+['root', 'xcomp', 'prep', 'pcomp', 'dobj']:1:0
+['root', 'xcomp', 'prep', 'pcomp']:1:0
+['root', 'xcomp', 'prep', 'pcomp', 'nsubj']:1:0
+['root', 'xcomp', 'prep', 'pcomp', 'prep']:1:0
+['root', 'xcomp', 'prep', 'pcomp', 'prep', 'pobj', 'det']:1:0
+['root', 'xcomp', 'prep', 'pcomp', 'prep', 'pobj', 'punct']:2:0
+['root', 'xcomp', 'prep', 'pcomp', 'prep', 'pobj', 'amod']:1:0
+['root', 'advcl', 'acomp']:1:1
+['root', 'advcl', 'conj', 'mark']:1:0
+['root', 'advcl', 'conj', 'expl']:1:0
+['root', 'advcl', 'conj', 'attr', 'det']:1:0
+['root', 'advcl', 'conj', 'attr']:1:0
+['root', 'advcl', 'conj', 'attr', 'amod']:1:0
+['root', 'advcl', 'conj', 'attr', 'prep', 'pobj']:1:1
+['root', 'advcl', 'conj', 'attr', 'prep', 'pobj', 'punct']:3:0
+['root', 'advcl', 'conj', 'attr', 'prep', 'pobj', 'conj']:1:1
+['root', 'advcl', 'conj', 'attr', 'prep', 'pobj', 'conj', 'conj']:1:1
+['root', 'advcl', 'conj', 'attr', 'prep', 'pobj', 'conj', 'conj', 'conj']:1:1
+['root', 'advcl', 'conj', 'attr', 'prep', 'pobj', 'conj', 'conj', 'conj', 'cc']:1:0
+['root', 'advcl', 'conj', 'attr', 'prep', 'pobj', 'conj', 'conj', 'conj', 'conj']:1:1
+['root', 'ccomp', 'nsubj', 'prep', 'pobj', 'acl']:1:0
+['root', 'ccomp', 'nsubj', 'prep', 'pobj', 'acl', 'prep']:1:0
+['root', 'ccomp', 'nsubj', 'prep', 'pobj', 'acl', 'prep', 'pobj']:1:0
+['root', 'acl', 'nsubj', 'punct']:2:0
+['root', 'acl', 'nsubj']:1:0
+['root', 'acl', 'nsubj', 'compound']:1:0
+['root', 'acl', 'dobj', 'compound']:1:1
+['root', 'acl', 'dobj']:1:0
+['root', 'advcl', 'conj', 'xcomp', 'aux']:1:0
+['root', 'advcl', 'conj', 'xcomp', 'dobj', 'advcl', 'advmod']:1:0
+['root', 'advcl', 'conj', 'xcomp', 'dobj', 'advcl']:1:0
+['root', 'advcl', 'conj', 'xcomp', 'dobj', 'advcl', 'nsubj']:1:0
+['root', 'advcl', 'conj', 'xcomp', 'dobj', 'punct']:1:0
+['root', 'advcl', 'conj', 'xcomp', 'dobj', 'poss']:1:0
+['root', 'advcl', 'conj', 'xcomp', 'dobj', 'compound']:1:0
+['root', 'advcl', 'agent', 'pobj', 'nummod']:1:0
+['root', 'advcl', 'agent', 'pobj', 'amod']:1:1
+['root', 'advcl', 'prep', 'punct']:2:0
+['root', 'nsubjpass', 'prep', 'pobj', 'conj', 'compound']:2:1
+['root', 'nsubjpass', 'prep', 'pobj', 'conj', 'cc']:1:0
+['root', 'nsubjpass', 'prep', 'pobj', 'conj', 'conj']:1:1
+['root', 'nsubjpass', 'prep', 'pobj', 'conj', 'conj', 'appos', 'det']:1:0
+['root', 'nsubjpass', 'prep', 'pobj', 'conj', 'conj', 'appos']:1:0
+['root', 'nsubjpass', 'prep', 'pobj', 'conj', 'conj', 'appos', 'prep']:1:0
+['root', 'nsubjpass', 'prep', 'pobj', 'conj', 'conj', 'appos', 'prep', 'pobj', 'compound']:2:1
+['root', 'advmod', 'neg']:1:0
+['root', 'agent', 'pobj', 'amod']:1:1
+['root', 'prep', 'pobj', 'prep', 'pobj', 'cc']:1:0
+['root', 'prep', 'pobj', 'prep', 'pobj', 'conj']:1:0
+['root', 'ccomp', 'xcomp', 'dobj', 'prep']:1:0
+['root', 'ccomp', 'xcomp', 'dobj', 'prep', 'pobj']:1:0
+['root', 'nsubj', 'appos', 'prep', 'pobj', 'appos', 'poss']:1:1
+['root', 'nsubj', 'appos', 'prep', 'pobj', 'appos', 'poss', 'case']:1:0
+['root', 'nsubj', 'appos', 'prep', 'pobj', 'appos', 'compound']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'conj', 'compound']:1:0
+['root', 'nsubj', 'prep', 'pobj', 'appos', 'compound']:1:1
+['root', 'nsubj', 'prep', 'pobj', 'appos']:1:0
+['root', 'dobj', 'appos', 'punct']:4:0
+['root', 'npadvmod', 'advmod']:1:0
+['root', 'npadvmod', 'det']:1:0
+['root', 'ccomp', 'xcomp', 'prep', 'prep']:1:0
+['root', 'ccomp', 'xcomp', 'prep', 'prep', 'pobj']:1:0
+['root', 'cc', 'advmod']:2:0
+['root', 'nsubj', 'acl', 'aux']:2:0
+['root', 'nsubj', 'acl', 'dobj', 'det']:1:0
+['root', 'nsubj', 'acl', 'dobj']:1:0
+['root', 'nsubj', 'acl', 'dobj', 'amod']:1:0
+['root', 'nsubj', 'acl', 'dobj', 'compound']:1:1
+['root', 'nsubj', 'acl', 'dobj', 'punct']:4:0
+['root', 'nsubj', 'acl', 'dobj', 'relcl', 'nsubj']:1:0
+['root', 'nsubj', 'acl', 'dobj', 'relcl']:1:0
+['root', 'nsubj', 'acl', 'dobj', 'relcl', 'prep']:1:0
+['root', 'nsubj', 'acl', 'dobj', 'relcl', 'prep', 'pobj', 'det']:1:0
+['root', 'nsubj', 'acl', 'dobj', 'relcl', 'prep', 'pobj']:1:0
+['root', 'nsubj', 'acl', 'dobj', 'relcl', 'prep', 'pobj', 'compound']:1:0
+['root', 'prep', 'pobj', 'conj', 'conj', 'compound']:1:0
+['root', 'prep', 'pobj', 'conj', 'conj']:1:0
+['root', 'prep', 'pobj', 'conj', 'conj', 'cc']:1:0
+['root', 'prep', 'pobj', 'conj', 'conj', 'conj']:1:0
+['root', 'prep', 'pobj', 'conj', 'conj', 'conj', 'prep']:1:0
+['root', 'prep', 'pobj', 'conj', 'conj', 'conj', 'prep', 'pobj', 'poss', 'compound', 'amod']:1:0
+['root', 'prep', 'pobj', 'conj', 'conj', 'conj', 'prep', 'pobj', 'poss', 'compound']:2:1
+['root', 'prep', 'pobj', 'conj', 'conj', 'conj', 'prep', 'pobj', 'poss']:1:0
+['root', 'prep', 'pobj', 'conj', 'conj', 'conj', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'compound']:1:0
+['root', 'ccomp', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'cc']:1:0
+['root', 'ccomp', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'poss', 'amod']:1:0
+['root', 'ccomp', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'conj']:1:0
+['root', 'ccomp', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'poss', 'case']:1:0
+['root', 'advcl', 'prep', 'pobj', 'punct']:4:0
+['root', 'advcl', 'prep', 'pobj', 'nmod']:1:0
+['root', 'nsubj', 'acl', 'agent', 'pobj', 'det']:1:0
+['root', 'nsubj', 'acl', 'agent', 'pobj', 'amod']:1:0
+['root', 'nsubj', 'acl', 'agent', 'pobj', 'prep']:1:0
+['root', 'nsubj', 'acl', 'agent', 'pobj', 'prep', 'pobj', 'det']:2:0
+['root', 'nsubj', 'acl', 'agent', 'pobj', 'prep', 'pobj']:1:0
+['root', 'nsubj', 'acl', 'agent', 'pobj', 'prep', 'pobj', 'amod']:1:0
+['root', 'nsubj', 'acl', 'agent', 'pobj', 'prep', 'pobj', 'compound']:2:1
+['root', 'nsubj', 'acl', 'agent', 'pobj', 'prep', 'pobj', 'punct']:2:0
+['root', 'nsubj', 'acl', 'agent', 'pobj', 'prep', 'pobj', 'relcl', 'nsubj']:1:0
+['root', 'nsubj', 'acl', 'agent', 'pobj', 'prep', 'pobj', 'relcl']:1:0
+['root', 'nsubj', 'acl', 'agent', 'pobj', 'prep', 'pobj', 'relcl', 'dobj']:1:0
+['root', 'nsubj', 'acl', 'agent', 'pobj', 'prep', 'pobj', 'relcl', 'dobj', 'prep']:1:0
+['root', 'nsubj', 'acl', 'agent', 'pobj', 'prep', 'pobj', 'relcl', 'dobj', 'prep', 'pobj']:1:0
+['root', 'nsubj', 'acl', 'agent', 'pobj', 'prep', 'pobj', 'relcl', 'dobj', 'prep', 'pobj', 'prep']:1:0
+['root', 'nsubj', 'acl', 'agent', 'pobj', 'prep', 'pobj', 'relcl', 'dobj', 'prep', 'pobj', 'prep', 'pobj', 'amod', 'npadvmod']:1:0
+['root', 'nsubj', 'acl', 'agent', 'pobj', 'prep', 'pobj', 'relcl', 'dobj', 'prep', 'pobj', 'prep', 'pobj']:1:0
+['root', 'dobj', 'conj', 'nsubj', 'det']:1:1
+['root', 'dobj', 'conj', 'nsubj']:1:0
+['root', 'dobj', 'conj', 'attr']:1:0
+['root', 'dobj', 'conj', 'conj', 'compound']:2:2
+['root', 'dobj', 'prep', 'pobj', 'cc']:1:0
+['root', 'dobj', 'prep', 'pobj', 'conj']:1:0
+['root', 'dobj', 'prep', 'pobj', 'conj', 'compound']:1:1
+['root', 'dobj', 'prep', 'pobj', 'conj', 'prep']:1:0
+['root', 'dobj', 'prep', 'pobj', 'conj', 'prep', 'pobj', 'compound']:1:1
+['root', 'dobj', 'prep', 'pobj', 'conj', 'prep', 'pobj']:1:0
+['root', 'dobj', 'prep', 'pobj', 'conj', 'prep', 'pobj', 'prep']:1:0
+['root', 'dobj', 'prep', 'pobj', 'conj', 'prep', 'pobj', 'prep', 'pobj']:1:0
+['root', 'dobj', 'prep', 'pobj', 'conj', 'prep', 'pobj', 'prep', 'pobj', 'amod']:1:0
+['root', 'dobj', 'prep', 'pobj', 'conj', 'prep', 'pobj', 'prep', 'pobj', 'prep']:1:0
+['root', 'dobj', 'prep', 'pobj', 'conj', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj']:1:1
+['root', 'prep', 'pobj', 'prep', 'amod']:1:0
+['root', 'prep', 'pobj', 'prep', 'pcomp']:1:0
+['root', 'prep', 'pobj', 'prep', 'pcomp', 'dobj', 'det']:1:0
+['root', 'prep', 'pobj', 'prep', 'pcomp', 'dobj']:1:0
+['root', 'prep', 'pobj', 'prep', 'pcomp', 'dobj', 'compound']:2:0
+['root', 'prep', 'pobj', 'prep', 'pcomp', 'dobj', 'compound', 'compound']:1:0
+['root', 'prep', 'pobj', 'prep', 'pcomp', 'dobj', 'cc']:2:0
+['root', 'prep', 'pobj', 'prep', 'pcomp', 'dobj', 'conj', 'nmod']:1:0
+['root', 'prep', 'pobj', 'prep', 'pcomp', 'dobj', 'conj']:1:0
+['root', 'prep', 'pobj', 'prep', 'pcomp', 'dobj', 'conj', 'nmod', 'punct']:1:0
+['root', 'prep', 'pobj', 'prep', 'pcomp', 'dobj', 'relcl', 'ccomp', 'nsubj']:1:0
+['root', 'prep', 'pobj', 'prep', 'pcomp', 'dobj', 'relcl', 'ccomp']:1:0
+['root', 'prep', 'pobj', 'prep', 'pcomp', 'dobj', 'relcl']:1:0
+['root', 'prep', 'pobj', 'prep', 'pcomp', 'dobj', 'relcl', 'ccomp', 'dobj', 'amod']:1:0
+['root', 'prep', 'pobj', 'prep', 'pcomp', 'dobj', 'relcl', 'ccomp', 'dobj']:1:0
+['root', 'prep', 'pobj', 'prep', 'pcomp', 'dobj', 'relcl', 'ccomp', 'dobj', 'nmod']:1:0
+['root', 'prep', 'pobj', 'prep', 'pcomp', 'dobj', 'relcl', 'ccomp', 'dobj', 'punct']:1:0
+['root', 'prep', 'pobj', 'prep', 'pcomp', 'dobj', 'relcl', 'ccomp', 'conj']:1:0
+['root', 'prep', 'pobj', 'prep', 'pcomp', 'dobj', 'relcl', 'ccomp', 'conj', 'dobj', 'amod']:1:0
+['root', 'prep', 'pobj', 'prep', 'pcomp', 'dobj', 'relcl', 'ccomp', 'conj', 'dobj']:1:0
+['root', 'prep', 'amod', 'cc', 'advmod']:1:0
+['root', 'nsubj', 'appos', 'prep', 'pobj', 'compound', 'compound']:2:1
+['root', 'ccomp', 'ccomp', 'nsubj', 'amod']:2:0
+['root', 'ccomp', 'ccomp', 'nsubj', 'amod', 'prep']:1:0
+['root', 'ccomp', 'ccomp', 'nsubj', 'amod', 'prep', 'pcomp']:1:0
+['root', 'ccomp', 'ccomp', 'nsubj', 'amod', 'prep', 'pcomp', 'prep']:1:0
+['root', 'ccomp', 'ccomp', 'nsubj', 'amod', 'prep', 'pcomp', 'prep', 'pobj', 'amod']:1:0
+['root', 'ccomp', 'ccomp', 'nsubj', 'amod', 'prep', 'pcomp', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'ccomp', 'dobj', 'relcl', 'nsubj']:1:0
+['root', 'ccomp', 'ccomp', 'dobj', 'relcl']:1:0
+['root', 'ccomp', 'ccomp', 'dobj', 'relcl', 'prep']:1:0
+['root', 'ccomp', 'ccomp', 'dobj', 'relcl', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'ccomp', 'dobj', 'relcl', 'prep', 'pobj', 'prep', 'pcomp']:1:0
+['root', 'ccomp', 'ccomp', 'dobj', 'relcl', 'prep', 'pobj', 'prep', 'pcomp', 'dobj', 'det']:1:0
+['root', 'ccomp', 'ccomp', 'dobj', 'relcl', 'prep', 'pobj', 'prep', 'pcomp', 'dobj']:1:0
+['root', 'acomp', 'advcl', 'mark']:1:0
+['root', 'acomp', 'advcl']:1:0
+['root', 'acomp', 'advcl', 'advmod', 'npadvmod', 'nummod', 'quantmod']:1:0
+['root', 'acomp', 'advcl', 'advmod', 'npadvmod', 'nummod', 'punct']:1:0
+['root', 'acomp', 'advcl', 'advmod', 'npadvmod']:1:0
+['root', 'acomp', 'advcl', 'advmod']:1:0
+['root', 'attr', 'acl', 'nsubj']:1:0
+['root', 'attr', 'acl', 'attr', 'det']:1:0
+['root', 'attr', 'acl', 'attr']:1:0
+['root', 'attr', 'acl', 'attr', 'amod']:1:0
+['root', 'attr', 'acl', 'advmod']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'amod', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'prep']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'prep', 'pobj', 'amod']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'prep', 'pobj', 'punct']:2:0
+['root', 'ccomp', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'amod']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'prep', 'pobj', 'conj']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'conj']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'conj', 'prep']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'conj', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'conj', 'cc']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'conj', 'conj', 'amod', 'advmod']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'conj', 'conj', 'amod']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'conj', 'conj', 'acl']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'conj', 'conj', 'acl', 'agent']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'conj', 'conj', 'acl', 'agent', 'pobj', 'amod']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'amod', 'prep', 'pobj', 'prep', 'pobj', 'conj', 'conj', 'conj', 'acl', 'agent', 'pobj']:1:0
+['root', 'ccomp', 'advcl', 'auxpass']:2:0
+['root', 'prep', 'pobj', 'relcl', 'prep', 'pobj', 'amod']:2:0
+['root', 'prep', 'pobj', 'relcl', 'prep', 'pobj']:2:0
+['root', 'prep', 'pobj', 'conj', 'nsubj']:1:0
+['root', 'prep', 'pobj', 'conj', 'nsubj', 'relcl', 'nsubj']:1:0
+['root', 'prep', 'pobj', 'conj', 'nsubj', 'relcl']:1:0
+['root', 'prep', 'pobj', 'conj', 'ccomp', 'nsubj']:1:0
+['root', 'prep', 'pobj', 'conj', 'ccomp']:1:0
+['root', 'prep', 'pobj', 'conj', 'ccomp', 'aux']:1:0
+['root', 'prep', 'pobj', 'conj', 'ccomp', 'dobj']:1:0
+['root', 'prep', 'pobj', 'conj', 'ccomp', 'prep', 'pobj', 'det']:1:0
+['root', 'prep', 'pobj', 'conj', 'ccomp', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'attr', 'advmod']:1:0
+['root', 'ccomp', 'attr', 'prep', 'pobj', 'det']:1:0
+['root', 'ccomp', 'attr', 'prep', 'pobj', 'amod']:1:0
+['root', 'ccomp', 'attr', 'cc']:1:0
+['root', 'ccomp', 'attr', 'cc', 'advmod']:1:0
+['root', 'ccomp', 'attr', 'conj']:1:0
+['root', 'ccomp', 'attr', 'conj', 'prep']:1:0
+['root', 'ccomp', 'attr', 'conj', 'prep', 'pobj']:1:0
+['root', 'advcl', 'ccomp', 'attr', 'prep']:1:0
+['root', 'advcl', 'ccomp', 'attr', 'prep', 'pobj', 'det']:1:0
+['root', 'advcl', 'ccomp', 'attr', 'prep', 'pobj']:1:0
+['root', 'advcl', 'ccomp', 'attr', 'prep', 'pobj', 'compound']:1:1
+['root', 'ccomp', 'oprd', 'det']:2:0
+['root', 'ccomp', 'oprd']:1:0
+['root', 'ccomp', 'oprd', 'amod']:1:1
+['root', 'ccomp', 'oprd', 'prep']:1:0
+['root', 'ccomp', 'oprd', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'oprd', 'prep', 'pobj', 'compound']:1:0
+['root', 'ccomp', 'conj', 'dobj', 'poss']:1:0
+['root', 'nsubjpass', 'quantmod']:4:0
+['root', 'attr', 'prep', 'pobj', 'cc']:1:0
+['root', 'attr', 'prep', 'pobj', 'conj', 'amod']:1:0
+['root', 'attr', 'prep', 'pobj', 'conj']:1:0
+['root', 'attr', 'prep', 'pobj', 'conj', 'prep']:1:0
+['root', 'attr', 'prep', 'pobj', 'conj', 'prep', 'pobj']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'relcl', 'dobj', 'compound']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'relcl', 'dobj']:1:0
+['root', 'ccomp', 'advcl', 'nsubjpass', 'poss']:1:0
+['root', 'ccomp', 'advcl', 'nsubjpass', 'compound', 'compound']:2:0
+['root', 'ccomp', 'advcl', 'nsubjpass', 'compound']:1:0
+['root', 'ccomp', 'advcl', 'conj', 'advmod']:1:0
+['root', 'ccomp', 'advcl', 'conj', 'dobj', 'det']:1:0
+['root', 'ccomp', 'advcl', 'conj', 'dobj', 'amod', 'advmod']:1:0
+['root', 'ccomp', 'advcl', 'conj', 'dobj', 'compound', 'amod']:1:0
+['root', 'advcl', 'ccomp', 'acomp']:1:0
+['root', 'advcl', 'ccomp', 'acomp', 'advmod']:1:0
+['root', 'advcl', 'ccomp', 'acomp', 'xcomp']:1:0
+['root', 'advcl', 'ccomp', 'acomp', 'xcomp', 'dobj']:1:0
+['root', 'advcl', 'ccomp', 'acomp', 'xcomp', 'dobj', 'prep']:1:0
+['root', 'advcl', 'ccomp', 'acomp', 'xcomp', 'dobj', 'prep', 'pobj', 'amod']:1:0
+['root', 'advcl', 'ccomp', 'acomp', 'xcomp', 'dobj', 'prep', 'pobj']:1:0
+['root', 'prep', 'pobj', 'acl', 'advmod']:1:0
+['root', 'prep', 'pobj', 'acl', 'prep', 'pobj', 'punct']:2:0
+['root', 'prep', 'pobj', 'acl', 'prep', 'pobj', 'conj']:1:0
+['root', 'prep', 'pobj', 'acl', 'prep', 'pobj', 'conj', 'cc']:1:0
+['root', 'prep', 'pobj', 'acl', 'prep', 'pobj', 'conj', 'conj', 'amod']:1:0
+['root', 'prep', 'pobj', 'acl', 'prep', 'pobj', 'conj', 'conj']:1:0
+['root', 'nsubj', 'appos', 'cc']:2:0
+['root', 'nsubj', 'appos', 'conj']:1:0
+['root', 'nsubj', 'appos', 'conj', 'prep', 'pobj']:2:1
+['root', 'nsubj', 'appos', 'conj', 'prep', 'advmod']:1:0
+['root', 'nsubj', 'appos', 'conj', 'prep']:1:0
+['root', 'prep', 'pcomp', 'nsubj', 'det']:1:0
+['root', 'prep', 'pcomp', 'nsubj', 'nummod']:1:0
+['root', 'prep', 'pcomp', 'conj', 'dobj']:1:0
+['root', 'prep', 'pcomp', 'conj', 'advmod']:1:0
+['root', 'prep', 'pcomp', 'conj', 'prep', 'pobj', 'amod']:1:0
+['root', 'ccomp', 'conj', 'expl']:1:0
+['root', 'ccomp', 'conj', 'attr', 'nummod']:1:0
+['root', 'ccomp', 'conj', 'attr']:1:0
+['root', 'attr', 'prep', 'pobj', 'relcl', 'xcomp', 'aux']:1:0
+['root', 'attr', 'prep', 'pobj', 'relcl', 'xcomp']:1:0
+['root', 'attr', 'prep', 'pobj', 'relcl', 'xcomp', 'dobj']:1:0
+['root', 'attr', 'prep', 'pobj', 'relcl', 'xcomp', 'dobj', 'compound']:1:0
+['root', 'conj', 'prep', 'amod']:1:0
+['root', 'nsubjpass', 'nummod', 'advmod']:1:0
+['root', 'prep', 'pobj', 'relcl', 'nsubj', 'det']:1:0
+['root', 'prep', 'pobj', 'relcl', 'nsubj', 'punct']:2:0
+['root', 'prep', 'pobj', 'relcl', 'prep', 'advmod']:2:0
+['root', 'prep', 'pobj', 'relcl', 'prep', 'pobj', 'poss']:2:0
+['root', 'prep', 'pobj', 'relcl', 'dobj', 'amod']:1:0
+['root', 'prep', 'pobj', 'relcl', 'dobj', 'relcl', 'prep']:1:0
+['root', 'prep', 'pobj', 'relcl', 'dobj', 'relcl']:1:0
+['root', 'prep', 'pobj', 'relcl', 'dobj', 'relcl', 'prep', 'pobj']:1:0
+['root', 'prep', 'pobj', 'relcl', 'dobj', 'relcl', 'nsubj']:1:0
+['root', 'prep', 'pobj', 'relcl', 'dobj', 'relcl', 'aux']:1:0
+['root', 'prep', 'pobj', 'relcl', 'dobj', 'relcl', 'advmod']:2:0
+['root', 'conj', 'prep', 'pobj', 'nummod', 'cc']:1:0
+['root', 'conj', 'prep', 'pobj', 'nummod', 'conj']:1:0
+['root', 'conj', 'expl']:1:0
+['root', 'conj', 'attr', 'conj', 'amod', 'advmod']:1:0
+['root', 'conj', 'attr', 'conj', 'amod']:1:0
+['root', 'conj', 'attr', 'conj']:1:0
+['root', 'appos', 'prep', 'pobj', 'nummod']:2:0
+['root', 'appos', 'prep', 'pobj', 'punct']:1:0
+['root', 'ccomp', 'prep', 'pobj', 'prep', 'pobj', 'prep', 'pobj', 'amod']:1:0
+['root', 'pobj', 'poss', 'det']:1:0
+['root', 'pobj', 'poss']:1:0
+['root', 'pobj', 'poss', 'case']:1:0
+['root', 'dep', 'dobj', 'det']:1:0
+['root', 'dep', 'dobj']:1:0
+['root', 'dep', 'dobj', 'prep']:2:0
+['root', 'dep', 'dobj', 'prep', 'pobj', 'poss', 'det']:1:0
+['root', 'dep', 'dobj', 'prep', 'pobj', 'poss']:1:0
+['root', 'dep', 'dobj', 'prep', 'pobj']:1:0
+['root', 'dep', 'dobj', 'prep', 'pobj', 'poss', 'case']:1:0
+['root', 'ccomp', 'dobj', 'appos', 'quantmod']:1:0
+['root', 'ccomp', 'dobj', 'appos']:1:0
+['root', 'ccomp', 'dobj', 'appos', 'compound']:1:0
+['root', 'ccomp', 'dobj', 'prep', 'pobj', 'acl']:1:0
+['root', 'ccomp', 'dobj', 'prep', 'pobj', 'acl', 'prep']:1:0
+['root', 'ccomp', 'dobj', 'prep', 'pobj', 'acl', 'prep', 'pobj', 'amod']:1:0
+['root', 'ccomp', 'dobj', 'prep', 'pobj', 'acl', 'prep', 'pobj']:1:0
+['root', 'prep', 'pcomp', 'ccomp', 'nsubjpass', 'nmod']:1:0
+['root', 'prep', 'pcomp', 'ccomp', 'nsubjpass']:2:0
+['root', 'prep', 'pcomp', 'ccomp', 'nsubjpass', 'nummod', 'compound']:1:0
+['root', 'prep', 'pcomp', 'ccomp', 'nsubjpass', 'nummod']:2:0
+['root', 'prep', 'pcomp', 'ccomp', 'nsubjpass', 'prep']:1:0
+['root', 'prep', 'pcomp', 'ccomp', 'nsubjpass', 'prep', 'pobj', 'det']:1:0
+['root', 'prep', 'pcomp', 'ccomp', 'nsubjpass', 'prep', 'pobj', 'nummod', 'compound']:1:0
+['root', 'prep', 'pcomp', 'ccomp', 'auxpass']:1:0
+['root', 'ccomp', 'attr', 'poss', 'det']:1:0
+['root', 'ccomp', 'attr', 'poss']:1:0
+['root', 'ccomp', 'attr', 'poss', 'amod']:1:0
+['root', 'ccomp', 'attr', 'poss', 'case']:1:0
+['root', 'ccomp', 'attr', 'prep', 'pobj', 'poss']:1:0
+['root', 'ccomp', 'attr', 'prep', 'pobj', 'compound', 'nummod']:1:0
+['root', 'ccomp', 'conj', 'prep', 'pobj', 'nummod']:1:0
+['root', 'nummod', 'quantmod']:1:0
+['root', 'nsubjpass', 'conj', 'compound']:1:1
+['root', 'prep', 'pcomp', 'mark']:1:0
+['root', 'prep', 'pcomp', 'nsubjpass', 'compound']:2:1
+['root', 'prep', 'pcomp', 'xcomp', 'aux']:3:0
+['root', 'prep', 'pcomp', 'xcomp']:1:0
+['root', 'prep', 'pcomp', 'xcomp', 'prep', 'pobj', 'det']:1:0
+['root', 'prep', 'pcomp', 'xcomp', 'prep', 'pobj']:1:0
+['root', 'prep', 'pcomp', 'xcomp', 'prep', 'pobj', 'compound']:2:1
+['root', 'prep', 'pcomp', 'xcomp', 'advcl']:1:0
+['root', 'prep', 'pcomp', 'xcomp', 'advcl', 'dobj', 'det']:1:0
+['root', 'prep', 'pcomp', 'xcomp', 'advcl', 'dobj']:1:0
+['root', 'prep', 'pcomp', 'xcomp', 'advcl', 'dobj', 'amod']:1:0
+['root', 'prep', 'pcomp', 'xcomp', 'advcl', 'xcomp']:1:0
+['root', 'prep', 'pcomp', 'xcomp', 'advcl', 'xcomp', 'dobj']:1:0

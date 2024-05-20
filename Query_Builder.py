@@ -109,6 +109,18 @@ class QueryBuilder:
                 LIMIT 1000"""
         return query
 
+    def build_query_senttext_by_id(self, doc_id: int, sentence_id: int) -> str:
+        query = """
+            select ?text
+                where{
+                    graph <""" + self.graph_name + """> {
+                        <""" + self.main_uri + "Sentence_" + str(doc_id) + "_" + str(sentence_id) + """> <""" + self.main_uri + """#senttext> ?text .
+                    }
+            }
+        """
+        return query
+
+
     @dispatch(str)
     def build_query_by_sentence_id(self, str_id: str) -> str:
         """
@@ -128,7 +140,6 @@ class QueryBuilder:
             ?s ?p ?o .
         }
         """
-
         return query
 
     @dispatch(int, int)

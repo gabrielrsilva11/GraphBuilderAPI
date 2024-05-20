@@ -14,12 +14,12 @@ import re
 from fastcoref import spacy_component
 import spacy
 import logging
+from datasets import load_dataset
 
 logging.getLogger("fastcoref").setLevel(logging.WARNING)
 class CreateGraph:
     """
     Main class used to create the knowledge graphs.
-
     """
     def __init__(self, folder, graph_name, extra_connetions = [], main_uri='http://ieeta.pt/ontoud#',
                     connection_string='http://localhost:8890/sparql', language="pt_core_news_sm", preprocessing = None, in_memory = False):
@@ -88,6 +88,7 @@ class CreateGraph:
         self.d_id_uri = self.main_uri + "id"
         self.d_lemma_uri = self.main_uri + "lemma"
         self.d_word_uri = self.main_uri + "word"
+        self.d_upper_uri = self.main_uri + "uppercase"
         self.d_wikimapper_uri = self.main_uri + "wikidataId"
         #dict to keep track of the already inserted feats
         self.d_feats_list = []
@@ -115,6 +116,7 @@ class CreateGraph:
             self.g.bind("xsd", XSD)
             self.g.bind("foaf", FOAF)
 
+        # Classes and sub-classes
         self.insert_data(self.c_text_uri, RDF.type, OWL.Class)
         self.insert_data(self.c_sentence_uri, RDF.type, OWL.Class)
         self.insert_data(self.c_word_uri, RDF.type, OWL.Class)
@@ -124,6 +126,14 @@ class CreateGraph:
         self.insert_data(self.o_poscoarse_uri, RDFS.subClassOf, self.c_attributes_uri)
         self.insert_data(self.o_edge_uri, RDFS.subClassOf, self.c_attributes_uri)
         self.insert_data(self.o_feats_uri, RDFS.subClassOf, self.c_attributes_uri)
+
+        # data properties
+        self.insert_data(self.d_sentence_text, RDF.type, OWL.DatatypeProperty)
+        self.insert_data(self.d_id_uri, RDF.type, OWL.DatatypeProperty)
+        self.insert_data(self.d_lemma_uri, RDF.type, OWL.DatatypeProperty)
+        self.insert_data(self.d_word_uri, RDF.type, OWL.DatatypeProperty)
+        self.insert_data(self.d_upper_uri, RDF.type, OWL.DatatypeProperty)
+        self.insert_data(self.d_wikimapper_uri, RDF.type, OWL.DatatypeProperty)
 
         # object properties
         self.insert_data(self.o_head_uri, RDF.type, OWL.ObjectProperty)
@@ -143,13 +153,6 @@ class CreateGraph:
         if self.extra_object_properties:
             for extra_object in self.extra_object_properties:
                 self.insert_data(extra_object, RDF.type, OWL.DatatypeProperty)
-
-        # data properties
-        self.insert_data(self.d_sentence_text, RDF.type, OWL.DatatypeProperty)
-        self.insert_data(self.d_id_uri, RDF.type, OWL.DatatypeProperty)
-        self.insert_data(self.d_lemma_uri, RDF.type, OWL.DatatypeProperty)
-        self.insert_data(self.d_word_uri, RDF.type, OWL.DatatypeProperty)
-        self.insert_data(self.d_wikimapper_uri, RDF.type, OWL.DatatypeProperty)
 
     def insert_data(self, s, p, o):
         """
@@ -198,10 +201,10 @@ class CreateGraph:
         :return: the last used sentence_id.
         """
         text = ""
-        text_nohtml = re.sub(r'http\S+', '', lines)
+        # text_nohtml = re.sub(r'http\S+', '', lines)
         #text_nohtml = text_nohtml.lower()
         if self.preprocessing:
-            processed_lines = self.preprocessing(text_nohtml)
+            processed_lines = self.preprocessing(lines)
             sentence = ""
             for line in processed_lines:
                 sentence += line[0] + " "
@@ -225,9 +228,10 @@ class CreateGraph:
             word = row['FORM'].replace("'", "").replace("\"", "")
             lemma = row['LEMMA'].replace("'", "").replace("\"", "")
             word_id = row['ID']
+            upper_case = word[0].isupper()
             sentence.append(unidecode(word))
             if row['ID'] == 1:
-                sentence_id+=1
+                sentence_id += 1
                 sentenceid_uri = self.c_sentence_uri + "_" + str(doc_id) + "_" + str(sentence_id)
                 # if sentence_id > 0:
                 #     sentence = [sentence[-1]]
@@ -279,8 +283,10 @@ class CreateGraph:
                 lower_bound = upper_bound
 
             self.insert_data(wordid_uri, RDF.type, self.c_word_uri)
-            self.insert_data(wordid_uri, self.d_id_uri, Literal(row['ID']))
+            #self.insert_data(wordid_uri, self.d_id_uri, Literal(row['ID']))
             self.insert_data(wordid_uri, self.d_word_uri, Literal(word))
+            if upper_case:
+                self.insert_data(wordid_uri, self.d_upper_uri, Literal("True"))
             self.process_feats(wordid_uri, row['FEATS'])
             #self.insert_data(wordid_uri, self.d_feats_uri, Literal(row['feats']))
             self.insert_data(wordid_uri, self.d_id_uri, Literal(row['ID']))
@@ -432,6 +438,7 @@ class CreateGraph:
                         reference_sentence_id = self.d_word_uri + "_" + str(doc_id) + "_" + str(second_ref_sentence_id) + "_" + str(
                             ref_word_id)
                         self.insert_data(root_sentence_id, self.o_coreference_uri, reference_sentence_id)
+                        self.insert_data(reference_sentence_id, self.o_coreference_uri, root_sentence_id)
         return
 
     def create_graph(self, save_file = "Serialized", coref = False):
@@ -469,3 +476,31 @@ class CreateGraph:
             doc_id += 1
         if self.in_memory:
             self.g.serialize(destination=save_file+".ttl", format="turtle")
+
+    def create_graph_from_datasets(self, dataset_name, save_file="Serialized", coref=False):
+        doc_id = 0
+        i = 0
+        data_to_send = []
+        #self.insert_relationship_data()
+        dataset = load_dataset(dataset_name, split="test")
+        print(dataset)
+        total = 0
+        self.insert_relationship_data()
+        sentence_id = 0
+        with tqdm(total=dataset.num_rows) as pbar:
+            for data in dataset:
+                data_to_send.append(data)
+                i += 1
+                if i == 50:
+                    sentence_id = self.insert_script(data_to_send, sentence_id, doc_id, coref)
+                    sentence_id = sentence_id + 1
+                    i = 0
+                    data_to_send = []
+                pbar.update(total)
+                total += 1
+
+        if data_to_send:
+            sentence_id = self.insert_script(data_to_send, sentence_id, doc_id, coref)
+            doc_id += 1
+        if self.in_memory:
+            self.g.serialize(destination=save_file + ".ttl", format="turtle")

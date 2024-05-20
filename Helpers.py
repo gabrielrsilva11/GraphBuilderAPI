@@ -202,6 +202,7 @@ def filter_dependencies(dependencies: list, attribute: str, filter_root: bool, f
     path = []
     if len(dependencies) == 2:
         path = filter_dependencies(dependencies[1], attribute, filter_root, filter_id)
+
     if filter_root:
         if filter_id:
             if dependencies[0]['edge'] != 'root':
@@ -211,7 +212,8 @@ def filter_dependencies(dependencies: list, attribute: str, filter_root: bool, f
                 path.append([dependencies[0][attribute], dependencies[0]['id']])
     else:
         if filter_id:
-            path.append(dependencies[0][attribute])
+            if attribute in dependencies[0]:
+                path.append(dependencies[0][attribute])
         else:
             path.append([dependencies[0][attribute], dependencies[0]['id']])
     return path

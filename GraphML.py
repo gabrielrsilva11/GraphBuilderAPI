@@ -5,8 +5,9 @@ import torch.nn.functional as F
 from tqdm import tqdm
 import yaml
 from GraphBuildWithConfig import get_graph
-from Model import GAT, GNN, Spline
+from Model import GAT, GNN, Spline, Net
 import random
+from sklearn.metrics import precision_recall_fscore_support, confusion_matrix
 
 def train_batch():
     model.train()
@@ -60,8 +61,8 @@ def embedding_to_wandb(h, targets_index, color, key="embedding"):
     wandb.log({key: df})
 
 
-def wandb_data(data):
-    wandb.init(project='Competition_Task1')
+def wandb_data(data, name):
+    wandb.init(project='Slate2024_Embeddings', name=name)
     summary = dict()
     summary["data"] = dict()
     summary["data"]["num_features"] = data.num_features
@@ -82,51 +83,55 @@ enable_wandb = config_data['enable_wandb']
 if enable_wandb:
     import wandb
 
-data, targets = get_graph([*range(1, 1000, 1)], config_data, test=False)
+# data, targets = get_graph([*range(6482, 9482, 1)], config_data, test=False, embedding=False)
 #data, targets = get_graph(random.sample(range(30000), 2000), config_data)
 # ----------------- LOAD AND SAVE DATA WHEN NEEDED -------------------------
-#torch.save(data, training_config['data_file'])
-#targets.to_pickle(training_config['targets_file'])
-# data = torch.load(training_config['data_file'])
-# targets = pd.read_pickle(training_config['targets_file'])
-
+# torch.save(data, training_config['data_file'])
+# targets.to_pickle(training_config['targets_file'])
+data = torch.load(training_config['data_file'])
+targets = pd.read_pickle(training_config['targets_file'])
 
 model = GNN(hidden_channels=64, out_channels=data.num_classes)
-model = to_hetero(model, data.metadata(), aggr='sum')
+model = to_hetero(model, data.metadata(), aggr='max')
 optimizer = torch.optim.Adam(model.parameters(), lr=0.01)
-
 with torch.no_grad():  # Initialize lazy modules.
     out = model(data.x_dict, data.edge_index_dict)
+    #out = model(data)
 
 if enable_wandb:
-    wandb_data(data)
+    name = "ConllEmbeddings_3kTrain_1kTest_5classes_Embeddings"
+    wandb_data(data, name)
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 print(f"Device: '{device}'")
 model = model.to(device)
 data = data.to(device)
 
-epochs = training_config['epochs']
-pbar = tqdm(range(epochs), desc="Training Model")
-best_loss = 9999999
-best_epoch = 0
-for i in pbar:
-    loss_final = train()
-    if enable_wandb:
-        wandb.log({"gat/loss": loss_final})
-    if best_loss > loss_final:
-        best_loss = loss_final
-        best_epoch = i
-    #if i%50 == 0:
-    pbar.set_description(f"Epoch {i} with Loss: {loss_final} -- Best Loss: {best_loss} on Epoch {best_epoch}", refresh=True)
-    #print("Loss: ", loss_final)
-
-data_test, targets_test = get_graph([*range(1000, 1100, 1)], config_data, test = True, targets_test = targets)
-# # ----------------- LOAD AND SAVE DATA WHEN NEEDED -------------------------
-# torch.save(data, training_config['test_data_file'])
-# targets.to_pickle(training_config['test_targets_file'])
-# data_split = torch.load(training_config['data_file'])
-# targets = pd.read_pickle(training_config['targets_file'])
+# epochs = training_config['epochs']
+# pbar = tqdm(range(epochs), desc="Training Model")
+# best_loss = 9999999
+# best_epoch = 0
+# for i in pbar:
+#     loss_final = train()
+#     if enable_wandb:
+#         wandb.log({"gat/loss": loss_final})
+#     if best_loss > loss_final:
+#         best_loss = loss_final
+#         best_epoch = i
+#     #if i%50 == 0:
+#     pbar.set_description(f"Epoch {i} Loss: {loss_final} -- Best: {best_loss} Epoch {best_epoch}", refresh=True)
+#     #print("Loss: ", loss_final)
+#
+# torch.save(model, training_config['model_file'])
+model = torch.load(training_config['model_file'])
+print(model.parameters)
+model.eval()
+# data_test, targets_test = get_graph([*range(10000, 11000, 1)], config_data, test = True, targets_test = targets, embedding=True)
+# # # ----------------- LOAD AND SAVE DATA WHEN NEEDED -------------------------
+# torch.save(data_test, training_config['test_data_file'])
+# targets_test.to_pickle(training_config['test_targets_file'])
+data_test = torch.load(training_config['test_data_file'])
+targets_test = pd.read_pickle(training_config['test_targets_file'])
 
 data_test = data_test.to(device)
 test_acc, ground_truth, predictions, predict_percents = test(data_test = data_test)
@@ -134,9 +139,17 @@ ground_truth = ground_truth.cpu().tolist()
 predictions = predictions.cpu().tolist()
 predict_percents = predict_percents.cpu().tolist()
 
+precision, recall, f1, support = precision_recall_fscore_support(ground_truth, predictions, average='macro')
+print("Precision: ", precision, " Recall: ", recall, " F1: ", f1)
+cm = confusion_matrix(ground_truth, predictions)
+print(cm)
+
 if enable_wandb:
     wandb.summary["gat/accuracy"] = test_acc
-    wandb.log({"gat/accuracy": test_acc})
+    wandb.log({"gat/accuracy": test_acc,
+               "gat/precision": precision,
+               "gat/recall": recall,
+               "gat/f1": f1})
     cm = wandb.plot.confusion_matrix(
         y_true=ground_truth, preds=predictions, class_names=targets['originalId']
     )

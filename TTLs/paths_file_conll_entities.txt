@@ -1,0 +1,71 @@
+['root', 'nsubjpass', 'amod']:4:0
+['root', 'punct']:59:0
+['root']:78:44
+['root', 'nsubj', 'compound']:27:21
+['root', 'compound']:24:14
+['root', 'nsubj', 'det']:55:1
+['root', 'nsubj']:105:39
+['root', 'ccomp', 'nsubj']:9:4
+['root', 'ccomp', 'nsubj', 'amod']:5:3
+['root', 'ccomp', 'nsubj', 'poss']:3:3
+['root', 'advcl']:3:0
+['root', 'nsubj', 'poss']:9:6
+['root', 'ccomp', 'nsubj', 'compound', 'amod']:4:3
+['root', 'prep']:12:0
+['root', 'nsubj', 'amod']:17:11
+['root', 'nsubjpass']:5:2
+['root', 'ccomp', 'nsubj', 'nummod']:1:0
+['root', 'ccomp', 'nsubj', 'det']:8:0
+['root', 'nsubjpass', 'det']:10:0
+['root', 'nsubjpass', 'nummod']:1:0
+['root', 'nsubj', 'nmod']:2:2
+['root', 'ccomp', 'nsubj', 'nmod']:1:1
+['root', 'compound', 'compound', 'compound']:2:1
+['root', 'ccomp', 'nsubjpass', 'det']:9:0
+['root', 'dep']:1:1
+['root', 'ccomp', 'nsubjpass', 'nummod']:1:0
+['root', 'nsubj', 'compound', 'compound']:8:2
+['root', 'ccomp', 'nsubj', 'compound']:4:2
+['root', 'nsubjpass', 'compound']:5:3
+['root', 'npadvmod']:1:0
+['root', 'dep', 'det']:2:0
+['root', 'nsubj', 'compound', 'nummod']:1:0
+['root', 'compound', 'compound']:6:3
+['root', 'nsubj', 'compound', 'compound', 'compound']:2:2
+['root', 'nsubjpass', 'nummod', 'quantmod']:1:0
+['root', 'nmod']:7:7
+['root', 'ccomp', 'prep', 'pobj', 'relcl', 'prep']:1:0
+['root', 'conj', 'dobj', 'conj', 'nmod']:1:0
+['root', 'advmod']:3:0
+['root', 'nsubjpass', 'poss', 'det']:2:0
+['root', 'advcl', 'advmod', 'advmod']:1:0
+['root', 'advcl', 'det']:2:0
+['root', 'ccomp', 'prep']:1:0
+['root', 'dep', 'nmod', 'nmod']:1:0
+['root', 'amod']:6:3
+['root', 'compound', 'amod']:1:0
+['root', 'nummod']:1:0
+['root', 'nsubj', 'poss', 'det']:1:0
+['root', 'ccomp', 'cc']:1:0
+['root', 'nsubj', 'nmod', 'det']:1:0
+['root', 'cc']:10:0
+['root', 'nsubj', 'nmod', 'amod']:1:0
+['root', 'ccomp', 'advmod']:1:0
+['root', 'dobj']:1:0
+['root', 'npadvmod', 'nummod']:1:0
+['root', 'dep', 'compound']:1:0
+['root', 'nmod', 'compound']:1:1
+['root', 'csubj']:1:0
+['root', 'det']:2:1
+['root', 'dep', 'compound', 'compound']:1:0
+['root', 'npadvmod', 'nmod']:1:0
+['root', 'appos']:1:0
+['root', 'appos', 'compound', 'compound']:1:0
+['root', 'advcl', 'advmod']:2:0
+['root', 'nsubj', 'compound', 'amod']:1:0
+['root', 'advcl', 'mark']:2:0
+['root', 'nsubj', 'nummod']:1:0
+['root', 'cc', 'advmod']:1:0
+['root', 'expl']:1:0
+['root', 'nsubjpass', 'quantmod']:1:0
+['root', 'nsubjpass', 'nummod', 'advmod']:1:0
