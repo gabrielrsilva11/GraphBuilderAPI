@@ -31,7 +31,8 @@ def list_conll_subgraph(graph: Graph, root_node: rdflib.term.Node, transverse_by
             sub_nodes.append(
                 list_conll_subgraph(graph=graph, root_node=o, transverse_by=transverse_by, order_by=order_by, main_uri=main_uri))
         elif p == id_uri:
-            this_node.insert(0, o.__str__())
+            #this_node.insert(0, o.__str__())
+            this_node.insert(0, int(o.__str__()))
         elif p == edge_uri:
             edge = o.__str__()
         elif p == word_uri:  # Information to collection on the node.
@@ -153,15 +154,17 @@ def check_for_edges(g: Graph, edges: list = None, edge_uri: URIRef = None) -> li
     root_nodes = []
     for s, p, o in g.triples((None, edge_uri, None)):
         for edge in edges:
-            if o.__str__() == edge:
+            split_edge = o.__str__().split('#')[-1]
+            if split_edge == edge:
                 root_nodes.append(s)
     return root_nodes
 
 
-def find_edge_node(graph: Graph, root_node: rdflib.term.Node, transverse_by: URIRef, stop_node: str,
-                   order_by: URIRef = None, result: list = None) -> list:
+def find_edge_node(graph: Graph, root_node: rdflib.term.Node, transverse_by: URIRef,
+                   order_by: URIRef = None, result: list = None, base_uri: str = None) -> list:
     """
 
+    :param base_uri: URI of the graph
     :param graph: Graph that will be transversed
     :param root_node: Where to start searching the graph
     :param transverse_by: The URI used to search deeper within the graph
@@ -173,8 +176,8 @@ def find_edge_node(graph: Graph, root_node: rdflib.term.Node, transverse_by: URI
     :return:
     """
     this_node, sub_nodes, edge = defaultdict(), [], ''
-    word_uri = URIRef("http://ieeta.pt/ontoud#word")
-    id_uri = URIRef("http://ieeta.pt/ontoud#id")
+    word_uri = URIRef(base_uri + "word")
+    id_uri = URIRef(base_uri + "id")
     for s, p, o in graph.triples((root_node, None, None)):
         if p == word_uri:
             result.append(o.__str__())
@@ -183,7 +186,7 @@ def find_edge_node(graph: Graph, root_node: rdflib.term.Node, transverse_by: URI
         elif p == transverse_by:
             sub_nodes.append(
                 find_edge_node(graph=graph, root_node=o, transverse_by=transverse_by,
-                               order_by=order_by, stop_node=stop_node, result=result))
+                               order_by=order_by, result=result, base_uri=base_uri))
         # elif p == edge_uri:
         #     if o.__str__() == stop_node:
         #         # if word == stop_word:

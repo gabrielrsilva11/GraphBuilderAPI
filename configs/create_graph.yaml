@@ -1,11 +1,13 @@
-folder: Data_to_process/Task1/Merged
-uri: http://www.ieeta-bit.pt/Conll_Coref_test#
+#folder: Data_to_process/Task1/Merged
+folder: Data_to_process/OpenIE/s2_en/Merged
+uri: http://www.ieeta-bit.pt/OpenIE_s2_en#
 #language: pt_core_news_sm
 language: en_core_web_sm
-graph_name: http://www.ieeta-bit.pt/Conll_Coref_test#
-connection: http://hlt.ieeta.pt:8890/sparql
+graph_name: http://www.ieeta-bit.pt/OpenIE_s2_en#
+connection: http://34.175.171.126:8890/sparql
 in_memory: False
-save_file: TTLs/Conll_Coref
+save_file: TTLs/OIE_Test
 extra_connections:
-  connections: [pos_tags, chunk_tags, ner_tags]
+  #connections: [pos_tags, chunk_tags, OIE_tags]
   #connections: [wikinerGrammarFeats, wikinerEntity, entityPresent]
+  connections: [OIE_tags]

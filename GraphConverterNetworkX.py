@@ -23,7 +23,6 @@ class BuildNetworkx:
     def fetch_graph(self, ids_list):
         g = Graph()
         doc_id = 0
-
         for i in ids_list:
             g = build_subgraph(g, self.qb.build_query_by_sentence_id(doc_id, i), self.conection_string)
         return g

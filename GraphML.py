@@ -62,7 +62,7 @@ def embedding_to_wandb(h, targets_index, color, key="embedding"):
 
 
 def wandb_data(data, name):
-    wandb.init(project='Slate2024_Embeddings', name=name)
+    wandb.init(project='OpenIE_Embeddings_v1', name=name)
     summary = dict()
     summary["data"] = dict()
     summary["data"]["num_features"] = data.num_features
@@ -73,7 +73,7 @@ def wandb_data(data, name):
     wandb.log(summary)
 
 
-config_file = open('configs/graphml_conf_task1_coreference.yaml', 'r')
+config_file = open('configs/OpenIE/GraphML_OpenIE.yaml', 'r')
 training_config = open('configs/training_conf.yaml', 'r')
 
 config_data = yaml.load(config_file, Loader=yaml.FullLoader)
@@ -83,13 +83,13 @@ enable_wandb = config_data['enable_wandb']
 if enable_wandb:
     import wandb
 
-# data, targets = get_graph([*range(6482, 9482, 1)], config_data, test=False, embedding=False)
+data, targets = get_graph([*range(0, 5000, 1)], config_data, test=False, embedding=training_config['embeddings'])
 #data, targets = get_graph(random.sample(range(30000), 2000), config_data)
 # ----------------- LOAD AND SAVE DATA WHEN NEEDED -------------------------
-# torch.save(data, training_config['data_file'])
-# targets.to_pickle(training_config['targets_file'])
-data = torch.load(training_config['data_file'])
-targets = pd.read_pickle(training_config['targets_file'])
+torch.save(data, training_config['data_file'])
+targets.to_pickle(training_config['targets_file'])
+# data = torch.load(training_config['data_file'])
+# targets = pd.read_pickle(training_config['targets_file'])
 
 model = GNN(hidden_channels=64, out_channels=data.num_classes)
 model = to_hetero(model, data.metadata(), aggr='max')
@@ -99,7 +99,7 @@ with torch.no_grad():  # Initialize lazy modules.
     #out = model(data)
 
 if enable_wandb:
-    name = "ConllEmbeddings_3kTrain_1kTest_5classes_Embeddings"
+    name = "S2_English_2Targets"
     wandb_data(data, name)
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -107,31 +107,31 @@ print(f"Device: '{device}'")
 model = model.to(device)
 data = data.to(device)
 
-# epochs = training_config['epochs']
-# pbar = tqdm(range(epochs), desc="Training Model")
-# best_loss = 9999999
-# best_epoch = 0
-# for i in pbar:
-#     loss_final = train()
-#     if enable_wandb:
-#         wandb.log({"gat/loss": loss_final})
-#     if best_loss > loss_final:
-#         best_loss = loss_final
-#         best_epoch = i
-#     #if i%50 == 0:
-#     pbar.set_description(f"Epoch {i} Loss: {loss_final} -- Best: {best_loss} Epoch {best_epoch}", refresh=True)
-#     #print("Loss: ", loss_final)
-#
-# torch.save(model, training_config['model_file'])
-model = torch.load(training_config['model_file'])
-print(model.parameters)
+epochs = training_config['epochs']
+pbar = tqdm(range(epochs), desc="Training Model")
+best_loss = 9999999
+best_epoch = 0
+for i in pbar:
+    loss_final = train()
+    if enable_wandb:
+        wandb.log({"gat/loss": loss_final})
+    if best_loss > loss_final:
+        best_loss = loss_final
+        best_epoch = i
+    #if i%50 == 0:
+    pbar.set_description(f"Epoch {i} Loss: {loss_final} -- Best: {best_loss} Epoch {best_epoch}", refresh=True)
+    #print("Loss: ", loss_final)
+
+torch.save(model, training_config['model_file'])
+#model = torch.load(training_config['model_file'])
+#print(model.parameters)
 model.eval()
-# data_test, targets_test = get_graph([*range(10000, 11000, 1)], config_data, test = True, targets_test = targets, embedding=True)
+data_test, targets_test = get_graph([*range(5000, 6000, 1)], config_data, test = True, targets_test = targets, embedding=training_config['embeddings'])
 # # # ----------------- LOAD AND SAVE DATA WHEN NEEDED -------------------------
-# torch.save(data_test, training_config['test_data_file'])
-# targets_test.to_pickle(training_config['test_targets_file'])
-data_test = torch.load(training_config['test_data_file'])
-targets_test = pd.read_pickle(training_config['test_targets_file'])
+torch.save(data_test, training_config['test_data_file'])
+targets_test.to_pickle(training_config['test_targets_file'])
+# data_test = torch.load(training_config['test_data_file'])
+# targets_test = pd.read_pickle(training_config['test_targets_file'])
 
 data_test = data_test.to(device)
 test_acc, ground_truth, predictions, predict_percents = test(data_test = data_test)

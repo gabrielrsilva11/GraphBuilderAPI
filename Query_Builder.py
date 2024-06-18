@@ -140,6 +140,7 @@ class QueryBuilder:
             ?s ?p ?o .
         }
         """
+
         return query
 
     @dispatch(int, int)

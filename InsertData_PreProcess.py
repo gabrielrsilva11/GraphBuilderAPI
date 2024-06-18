@@ -47,7 +47,7 @@ class CreateGraph:
         self.nlp = spacy.load("en_core_web_trf")
         config = {"ext_names": {"conll_pd": "pandas"}}
         self.nlp.add_pipe("conll_formatter", config=config, last=True)
-        self.nlp.add_pipe("fastcoref")
+        #self.nlp.add_pipe("fastcoref")
                      #config={'model_architecture': 'LingMessCoref', 'model_path': 'biu-nlp/lingmess-coref'})
         self.connection = connection_string
         self.sparql = SPARQLWrapper(self.connection)
@@ -225,8 +225,8 @@ class CreateGraph:
         self.insert_data(textid_uri, RDF.type, self.c_text_uri)
         indexes_used = []
         for index, row in conll.iterrows():
-            word = row['FORM'].replace("'", "").replace("\"", "")
-            lemma = row['LEMMA'].replace("'", "").replace("\"", "")
+            word = row['FORM'].replace("'", "APOS").replace("\"", "")
+            lemma = row['LEMMA'].replace("'", "APOS").replace("\"", "")
             word_id = row['ID']
             upper_case = word[0].isupper()
             sentence.append(unidecode(word))

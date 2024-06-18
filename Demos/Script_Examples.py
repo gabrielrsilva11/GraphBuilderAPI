@@ -3,10 +3,10 @@ import string
 from rdflib import Graph
 from rdflib.namespace import RDF, OWL
 from Helpers import *
-from InsertData import CreateGraph
 from Query_Builder import *
 
-base_uri = "http://ieeta-bit.pt/wikiner#"
+base_uri = "http://www.ieeta-bit.pt/OpenIE_s2_en#"
+graph_name = "http://www.ieeta-bit.pt/OpenIE_s2_en#"
 sentence_uri = URIRef(base_uri + "Sentence")
 head_uri = URIRef(base_uri + "head")
 word_uri = URIRef(base_uri + "word")
@@ -19,26 +19,13 @@ lemma_uri = URIRef(base_uri + "lemma")
 poscoarse_uri = URIRef(base_uri + "poscoarse")
 depgraph_uri = URIRef(base_uri + "depGraph")
 
-
-uri_dict = {"http://ieeta-bit.pt/wikiner#": "ontoud"}
-graph_name = "WikiNER"
 qb = QueryBuilder(base_uri, graph_name)
-conection_string = 'http://localhost:8890/sparql'
-
+conection_string = 'http://34.175.171.126:8890/sparql'
 g = Graph()
 
-relations_uri = {"http://ieeta-bit.pt/wikiner#" : "ieeta"}
-connection = 'http://estga-fiware.ua.pt:8890/sparql'
-# graph = CreateGraph(folder="DemoData", relations_uri=relations_uri,
-#                   connection_string=connection, language='pt')
-#
-# # create_graph = CreateGraph(folder="DemoData")
-pp = pprint.PrettyPrinter(indent=4)
-# #g = build_subgraph(g, qb.build_query_by_sentence_id(500), conection_string)
+g = build_subgraph(g, qb.build_query_by_sentence_id(0, 1), conection_string)
 # info_list = []
-#
-#
-# senttext_uri = URIRef("http://ieeta.pt/ontoud#senttext")
+
 # aa = qb.build_query_by_and_sentence_list(['Portugal', 'Algarve', 'Europa'])
 # print(aa)
 # #
@@ -48,15 +35,15 @@ pp = pprint.PrettyPrinter(indent=4)
 # for s, p, o in g.triples((None, senttext_uri, None)):
 #     print(s, p, o)
 #
-# nodes_list = [edge_uri, id_uri, word_uri, lemma_uri]
-# for s, p, o in g.triples((None, RDF.type, sentence_uri)):
-#     print(s,p,o)
-#     grafo = list_subgraph(nodes_list = nodes_list, graph=g, root_node=s, transverse_by=depgraph_uri, order_by=id_uri)
-#     pp.pprint(grafo)
+nodes_list = [edge_uri, id_uri, word_uri, lemma_uri]
+for s, p, o in g.triples((None, RDF.type, sentence_uri)):
+    print(s,p,o)
+    grafo = list_subgraph(nodes_list = nodes_list, graph=g, root_node=s, transverse_by=depgraph_uri, order_by=id_uri)
+    pprint.pprint(grafo)
 
-for sent_id in fetch_id_by_sentence(qb.build_query_by_sentence_start("A Biblia contem um numero de "), conection_string):
-    print(sent_id)
-    g = build_subgraph(g, qb.build_query_by_sentence_id(sent_id), conection_string)
+# for sent_id in fetch_id_by_sentence(qb.build_query_by_sentence_start("A Biblia contem um numero de "), conection_string):
+#     print(sent_id)
+#     g = build_subgraph(g, qb.build_query_by_sentence_id(sent_id), conection_string)
 
 # edges = ["obj", "nsubj"]
 # for i in range(0, 9999):
