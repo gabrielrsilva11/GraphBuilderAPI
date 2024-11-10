@@ -29,7 +29,7 @@ def gemini(llm, query):
     return resp
 
 
-GOOGLE_API_KEY = "AIzaSyD1CATa-F8cdTRmRiLiXU3DfZIjv_MJz-c"
+GOOGLE_API_KEY = ""
 os.environ["GOOGLE_API_KEY"] = GOOGLE_API_KEY
 safety_settings={
         HarmCategory.HARM_CATEGORY_HATE_SPEECH: HarmBlockThreshold.BLOCK_NONE,
