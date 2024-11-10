@@ -39,7 +39,6 @@ def preprocess_sentence(sentence):
 #     return final_list
 
 
-
 config_file = open("configs/create_graph.yaml", 'r')
 config_data = yaml.load(config_file, Loader=yaml.FullLoader)
 

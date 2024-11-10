@@ -51,7 +51,7 @@ class CreateGraph:
                      #config={'model_architecture': 'LingMessCoref', 'model_path': 'biu-nlp/lingmess-coref'})
         self.connection = connection_string
         self.sparql = SPARQLWrapper(self.connection)
-        self.mapper = WikiMapper("Data_to_process/wikimapper_data/en")
+        self.mapper = WikiMapper("wikimapper_data/index_ptwiki-latest.db")
         #self.sparql.setCredentials("dba", "dbapass")
         self.sparql.setMethod(POST)
         self.queries = QueryBuilder(self.main_uri, self.graph_name)
@@ -228,7 +228,10 @@ class CreateGraph:
             word = row['FORM'].replace("'", "APOS").replace("\"", "")
             lemma = row['LEMMA'].replace("'", "APOS").replace("\"", "")
             word_id = row['ID']
-            upper_case = word[0].isupper()
+            try:
+                upper_case = word[0].isupper()
+            except:
+                print(word)
             sentence.append(unidecode(word))
             if row['ID'] == 1:
                 sentence_id += 1

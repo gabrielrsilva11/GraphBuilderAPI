@@ -1,0 +1,6629 @@
+@prefix ns1: <http://www.ieeta-bit.pt/OpenIE_s2_pt#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:OIE_tags a owl:DatatypeProperty .
+
+ns1:containsSentence a owl:ObjectProperty .
+
+ns1:containsText a owl:ObjectProperty .
+
+ns1:depGraph a owl:ObjectProperty .
+
+ns1:fromSentence a owl:ObjectProperty .
+
+ns1:fromText a owl:ObjectProperty .
+
+ns1:head a owl:ObjectProperty .
+
+ns1:id a owl:DatatypeProperty .
+
+ns1:lemma a owl:DatatypeProperty .
+
+ns1:nextSentence a owl:ObjectProperty .
+
+ns1:nextWord a owl:ObjectProperty .
+
+ns1:previousSentence a owl:ObjectProperty .
+
+ns1:previousWord a owl:ObjectProperty .
+
+ns1:senttext a owl:DatatypeProperty .
+
+ns1:wikidataId a owl:ObjectProperty .
+
+ns1:word a owl:DatatypeProperty .
+
+ns1:Text a owl:Class .
+
+ns1:aux a ns1:edge .
+
+ns1:cnd a ns1:feat_mood .
+
+ns1:feat_case a owl:ObjectProperty ;
+    rdfs:subClassOf ns1:feats .
+
+ns1:feat_definite a owl:ObjectProperty ;
+    rdfs:subClassOf ns1:feats .
+
+ns1:feat_person a owl:ObjectProperty ;
+    rdfs:subClassOf ns1:feats .
+
+ns1:feat_polarity a owl:ObjectProperty ;
+    rdfs:subClassOf ns1:feats .
+
+ns1:feat_voice a owl:ObjectProperty ;
+    rdfs:subClassOf ns1:feats .
+
+ns1:ger a ns1:feat_verbform .
+
+ns1:imp a ns1:feat_tense .
+
+ns1:neg a ns1:feat_polarity .
+
+ns1:acl a ns1:edge .
+
+ns1:csubj a ns1:edge .
+
+ns1:expl a ns1:edge .
+
+ns1:feat_gender a owl:ObjectProperty ;
+    rdfs:subClassOf ns1:feats .
+
+ns1:feat_mood a owl:ObjectProperty ;
+    rdfs:subClassOf ns1:feats .
+
+ns1:feat_number a owl:ObjectProperty ;
+    rdfs:subClassOf ns1:feats .
+
+ns1:feat_numtype a owl:ObjectProperty ;
+    rdfs:subClassOf ns1:feats .
+
+ns1:nummod a ns1:edge .
+
+<http://www.ieeta-bit.pt/OpenIE_s2_pt#obl:agent> a ns1:edge .
+
+ns1:ord a ns1:feat_numtype .
+
+ns1:word_0_10_1 a ns1:Word ;
+    ns1:edge ns1:det ;
+    ns1:feat_definite ns1:def ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_10_2 ;
+    ns1:id 1 ;
+    ns1:lemma "o" ;
+    ns1:nextWord ns1:word_0_10_2 ;
+    ns1:pos ns1:DET ;
+    ns1:poscoarse ns1:DET ;
+    ns1:word "A" .
+
+ns1:word_0_10_36 a ns1:Word ;
+    ns1:edge ns1:punct ;
+    ns1:head ns1:word_0_10_5 ;
+    ns1:id 36 ;
+    ns1:lemma "." ;
+    ns1:pos ns1:PUNCT ;
+    ns1:poscoarse ns1:PUNCT ;
+    ns1:previousWord ns1:word_0_10_35 ;
+    ns1:word "." .
+
+ns1:word_0_11_1 a ns1:Word ;
+    ns1:edge <http://www.ieeta-bit.pt/OpenIE_s2_pt#aux:pass> ;
+    ns1:feat_mood ns1:ind ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_person ns1:3 ;
+    ns1:feat_tense ns1:past ;
+    ns1:feat_verbform ns1:fin ;
+    ns1:head ns1:word_0_11_2 ;
+    ns1:id 1 ;
+    ns1:lemma "ser" ;
+    ns1:nextWord ns1:word_0_11_2 ;
+    ns1:pos ns1:AUX ;
+    ns1:poscoarse ns1:AUX ;
+    ns1:word "Foi" .
+
+ns1:word_0_11_87 a ns1:Word ;
+    ns1:edge ns1:punct ;
+    ns1:head ns1:word_0_11_51 ;
+    ns1:id 87 ;
+    ns1:lemma "." ;
+    ns1:pos ns1:PUNCT ;
+    ns1:poscoarse ns1:PUNCT ;
+    ns1:previousWord ns1:word_0_11_86 ;
+    ns1:word "." .
+
+ns1:word_0_12_1 a ns1:Word ;
+    ns1:edge ns1:case ;
+    ns1:head ns1:word_0_12_2 ;
+    ns1:id 1 ;
+    ns1:lemma "em" ;
+    ns1:nextWord ns1:word_0_12_2 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:word "Em" .
+
+ns1:word_0_12_43 a ns1:Word ;
+    ns1:edge ns1:punct ;
+    ns1:head ns1:word_0_12_10 ;
+    ns1:id 43 ;
+    ns1:lemma "." ;
+    ns1:pos ns1:PUNCT ;
+    ns1:poscoarse ns1:PUNCT ;
+    ns1:previousWord ns1:word_0_12_42 ;
+    ns1:word "." .
+
+ns1:word_0_13_1 a ns1:Word ;
+    ns1:edge ns1:advmod ;
+    ns1:head ns1:word_0_13_2 ;
+    ns1:id 1 ;
+    ns1:lemma "tecnicamente" ;
+    ns1:nextWord ns1:word_0_13_2 ;
+    ns1:pos ns1:ADV ;
+    ns1:poscoarse ns1:ADV ;
+    ns1:word "Tecnicamente" .
+
+ns1:word_0_13_32 a ns1:Word ;
+    ns1:edge ns1:punct ;
+    ns1:head ns1:word_0_13_21 ;
+    ns1:id 32 ;
+    ns1:lemma "." ;
+    ns1:pos ns1:PUNCT ;
+    ns1:poscoarse ns1:PUNCT ;
+    ns1:previousWord ns1:word_0_13_31 ;
+    ns1:word "." .
+
+ns1:word_0_1_9 a ns1:Word ;
+    ns1:edge ns1:punct ;
+    ns1:head ns1:word_0_1_5 ;
+    ns1:id 9 ;
+    ns1:lemma "." ;
+    ns1:pos ns1:PUNCT ;
+    ns1:poscoarse ns1:PUNCT ;
+    ns1:previousWord ns1:word_0_1_8 ;
+    ns1:word "." .
+
+ns1:word_0_2_1 a ns1:Word ;
+    ns1:edge ns1:nsubj ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:plur ;
+    ns1:head ns1:word_0_2_2 ;
+    ns1:id 1 ;
+    ns1:lemma "pesquisa" ;
+    ns1:nextWord ns1:word_0_2_2 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:word "Pesquisas" .
+
+ns1:word_0_2_28 a ns1:Word ;
+    ns1:edge ns1:punct ;
+    ns1:head ns1:word_0_2_2 ;
+    ns1:id 28 ;
+    ns1:lemma "." ;
+    ns1:pos ns1:PUNCT ;
+    ns1:poscoarse ns1:PUNCT ;
+    ns1:previousWord ns1:word_0_2_27 ;
+    ns1:word "." .
+
+ns1:word_0_3_1 a ns1:Word ;
+    ns1:edge ns1:case ;
+    ns1:feat_definite ns1:def ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_3_2 ;
+    ns1:id 1 ;
+    ns1:lemma "em o" ;
+    ns1:nextWord ns1:word_0_3_2 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:word "No" .
+
+ns1:word_0_3_25 a ns1:Word ;
+    ns1:edge ns1:punct ;
+    ns1:head ns1:word_0_3_12 ;
+    ns1:id 25 ;
+    ns1:lemma "." ;
+    ns1:pos ns1:PUNCT ;
+    ns1:poscoarse ns1:PUNCT ;
+    ns1:previousWord ns1:word_0_3_24 ;
+    ns1:word "." .
+
+ns1:word_0_4_1 a ns1:Word ;
+    ns1:edge ns1:det ;
+    ns1:feat_definite ns1:def ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:plur ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_4_2 ;
+    ns1:id 1 ;
+    ns1:lemma "o" ;
+    ns1:nextWord ns1:word_0_4_2 ;
+    ns1:pos ns1:DET ;
+    ns1:poscoarse ns1:DET ;
+    ns1:word "As" .
+
+ns1:word_0_4_49 a ns1:Word ;
+    ns1:edge ns1:punct ;
+    ns1:head ns1:word_0_4_9 ;
+    ns1:id 49 ;
+    ns1:lemma "." ;
+    ns1:pos ns1:PUNCT ;
+    ns1:poscoarse ns1:PUNCT ;
+    ns1:previousWord ns1:word_0_4_48 ;
+    ns1:word "." .
+
+ns1:word_0_5_1 a ns1:Word ;
+    ns1:edge ns1:case ;
+    ns1:head ns1:word_0_5_2 ;
+    ns1:id 1 ;
+    ns1:lemma "em" ;
+    ns1:nextWord ns1:word_0_5_2 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:word "Em" .
+
+ns1:word_0_5_19 a ns1:Word ;
+    ns1:edge ns1:punct ;
+    ns1:head ns1:word_0_5_8 ;
+    ns1:id 19 ;
+    ns1:lemma "." ;
+    ns1:pos ns1:PUNCT ;
+    ns1:poscoarse ns1:PUNCT ;
+    ns1:previousWord ns1:word_0_5_18 ;
+    ns1:word "." .
+
+ns1:word_0_6_1 a ns1:Word ;
+    ns1:OIE_tags "A1" ;
+    ns1:edge ns1:case ;
+    ns1:feat_definite ns1:def ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_6_2 ;
+    ns1:id 1 ;
+    ns1:lemma "em o" ;
+    ns1:nextWord ns1:word_0_6_2 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:word "Na" .
+
+ns1:word_0_6_12 a ns1:Word ;
+    ns1:edge ns1:punct ;
+    ns1:head ns1:word_0_6_11 ;
+    ns1:id 12 ;
+    ns1:lemma "." ;
+    ns1:pos ns1:PUNCT ;
+    ns1:poscoarse ns1:PUNCT ;
+    ns1:previousWord ns1:word_0_6_11 ;
+    ns1:word "." .
+
+ns1:word_0_7_1 a ns1:Word ;
+    ns1:edge ns1:det ;
+    ns1:feat_definite ns1:def ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_7_2 ;
+    ns1:id 1 ;
+    ns1:lemma "o" ;
+    ns1:nextWord ns1:word_0_7_2 ;
+    ns1:pos ns1:DET ;
+    ns1:poscoarse ns1:DET ;
+    ns1:word "O" .
+
+ns1:word_0_7_45 a ns1:Word ;
+    ns1:edge ns1:punct ;
+    ns1:head ns1:word_0_7_7 ;
+    ns1:id 45 ;
+    ns1:lemma "." ;
+    ns1:pos ns1:PUNCT ;
+    ns1:poscoarse ns1:PUNCT ;
+    ns1:previousWord ns1:word_0_7_44 ;
+    ns1:word "." .
+
+ns1:word_0_8_1 a ns1:Word ;
+    ns1:OIE_tags "A1" ;
+    ns1:edge ns1:case ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:plur ;
+    ns1:feat_prontype ns1:dem ;
+    ns1:head ns1:word_0_8_2 ;
+    ns1:id 1 ;
+    ns1:lemma "em esse" ;
+    ns1:nextWord ns1:word_0_8_2 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:word "Nesses" .
+
+ns1:word_0_8_17 a ns1:Word ;
+    ns1:edge ns1:punct ;
+    ns1:head ns1:word_0_8_8 ;
+    ns1:id 17 ;
+    ns1:lemma "." ;
+    ns1:pos ns1:PUNCT ;
+    ns1:poscoarse ns1:PUNCT ;
+    ns1:previousWord ns1:word_0_8_16 ;
+    ns1:word "." .
+
+ns1:word_0_9_1 a ns1:Word ;
+    ns1:OIE_tags "A1" ;
+    ns1:edge ns1:case ;
+    ns1:head ns1:word_0_9_3 ;
+    ns1:id 1 ;
+    ns1:lemma "após" ;
+    ns1:nextWord ns1:word_0_9_2 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:word "Após" .
+
+ns1:word_0_9_41 a ns1:Word ;
+    ns1:edge ns1:punct ;
+    ns1:head ns1:word_0_9_18 ;
+    ns1:id 41 ;
+    ns1:lemma "." ;
+    ns1:pos ns1:PUNCT ;
+    ns1:poscoarse ns1:PUNCT ;
+    ns1:previousWord ns1:word_0_9_40 ;
+    ns1:word "." .
+
+ns1:Sentence_0_1 a ns1:Sentence ;
+    ns1:depGraph ns1:word_0_1_5 ;
+    ns1:fromText ns1:Text_0 ;
+    ns1:nextSentence ns1:Sentence_0_2 ;
+    ns1:senttext "Nolan Bushnell esta no conselho consultivo da Anti-AgingGames ." .
+
+ns1:Sentence_0_13 a ns1:Sentence ;
+    ns1:depGraph ns1:word_0_13_21 ;
+    ns1:fromText ns1:Text_0 ;
+    ns1:previousSentence ns1:Sentence_0_12 ;
+    ns1:senttext "Tecnicamente avancado - com um nucleo RISC superscalar , barramento de 64 bits e overclocked internamente - O microprocessador ainda poderia executar instrucoes Series 32000 atraves de traducao em tempo real ." .
+
+ns1:cc a ns1:edge .
+
+ns1:ccomp a ns1:edge .
+
+ns1:feat_tense a owl:ObjectProperty ;
+    rdfs:subClassOf ns1:feats .
+
+ns1:word_0_10_13 a ns1:Word ;
+    ns1:edge ns1:det ;
+    ns1:feat_definite ns1:def ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_10_14 ;
+    ns1:id 13 ;
+    ns1:lemma "o" ;
+    ns1:nextWord ns1:word_0_10_14 ;
+    ns1:pos ns1:DET ;
+    ns1:poscoarse ns1:DET ;
+    ns1:previousWord ns1:word_0_10_12 ;
+    ns1:word "a" .
+
+ns1:word_0_10_15 a ns1:Word ;
+    ns1:edge ns1:expl ;
+    ns1:feat_case ns1:acc ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_person ns1:3 ;
+    ns1:feat_prontype ns1:prs ;
+    ns1:head ns1:word_0_10_16 ;
+    ns1:id 15 ;
+    ns1:lemma "se" ;
+    ns1:nextWord ns1:word_0_10_16 ;
+    ns1:pos ns1:PRON ;
+    ns1:poscoarse ns1:PRON ;
+    ns1:previousWord ns1:word_0_10_14 ;
+    ns1:word "se" .
+
+ns1:word_0_10_17 a ns1:Word ;
+    ns1:edge ns1:obj ;
+    ns1:feat_numtype ns1:card ;
+    ns1:head ns1:word_0_10_16 ;
+    ns1:id 17 ;
+    ns1:lemma "" ;
+    ns1:nextWord ns1:word_0_10_18 ;
+    ns1:pos ns1:NUM ;
+    ns1:poscoarse ns1:NUM ;
+    ns1:previousWord ns1:word_0_10_16 ;
+    ns1:word "" .
+
+ns1:word_0_10_18 a ns1:Word ;
+    ns1:edge ns1:case ;
+    ns1:feat_definite ns1:def ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_10_19 ;
+    ns1:id 18 ;
+    ns1:lemma "em o" ;
+    ns1:nextWord ns1:word_0_10_19 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_10_17 ;
+    ns1:word "no" .
+
+ns1:word_0_10_20 a ns1:Word ;
+    ns1:edge ns1:case ;
+    ns1:feat_definite ns1:def ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_10_21 ;
+    ns1:id 20 ;
+    ns1:lemma "de o" ;
+    ns1:nextWord ns1:word_0_10_21 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_10_19 ;
+    ns1:word "da" .
+
+ns1:word_0_10_22 a ns1:Word ;
+    ns1:edge ns1:punct ;
+    ns1:head ns1:word_0_10_16 ;
+    ns1:id 22 ;
+    ns1:lemma "," ;
+    ns1:nextWord ns1:word_0_10_23 ;
+    ns1:pos ns1:PUNCT ;
+    ns1:poscoarse ns1:PUNCT ;
+    ns1:previousWord ns1:word_0_10_21 ;
+    ns1:word "," .
+
+ns1:word_0_10_23 a ns1:Word ;
+    ns1:edge ns1:advmod ;
+    ns1:head ns1:word_0_10_26 ;
+    ns1:id 23 ;
+    ns1:lemma "como" ;
+    ns1:nextWord ns1:word_0_10_24 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_10_22 ;
+    ns1:word "como" .
+
+ns1:word_0_10_24 a ns1:Word ;
+    ns1:edge ns1:det ;
+    ns1:feat_definite ns1:def ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:plur ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_10_25 ;
+    ns1:id 24 ;
+    ns1:lemma "o" ;
+    ns1:nextWord ns1:word_0_10_25 ;
+    ns1:pos ns1:DET ;
+    ns1:poscoarse ns1:DET ;
+    ns1:previousWord ns1:word_0_10_23 ;
+    ns1:word "os" .
+
+ns1:word_0_10_27 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:edge ns1:case ;
+    ns1:head ns1:word_0_10_29 ;
+    ns1:id 27 ;
+    ns1:lemma "com" ;
+    ns1:nextWord ns1:word_0_10_28 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_10_26 ;
+    ns1:word "com" .
+
+ns1:word_0_10_28 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:edge ns1:det ;
+    ns1:feat_definite ns1:ind ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_10_29 ;
+    ns1:id 28 ;
+    ns1:lemma "um" ;
+    ns1:nextWord ns1:word_0_10_29 ;
+    ns1:pos ns1:DET ;
+    ns1:poscoarse ns1:DET ;
+    ns1:previousWord ns1:word_0_10_27 ;
+    ns1:word "uma" .
+
+ns1:word_0_10_3 a ns1:Word ;
+    ns1:edge ns1:amod ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_10_2 ;
+    ns1:id 3 ;
+    ns1:lemma "britânico" ;
+    ns1:nextWord ns1:word_0_10_4 ;
+    ns1:pos ns1:ADJ ;
+    ns1:poscoarse ns1:ADJ ;
+    ns1:previousWord ns1:word_0_10_2 ;
+    ns1:word "britânica" .
+
+ns1:word_0_10_31 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:edge <http://www.ieeta-bit.pt/OpenIE_s2_pt#flat:name> ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_10_30 ;
+    ns1:id 31 ;
+    ns1:lemma "Warfare" ;
+    ns1:nextWord ns1:word_0_10_32 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_10_30 ;
+    ns1:word "Warfare" .
+
+ns1:word_0_10_32 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:edge ns1:case ;
+    ns1:feat_definite ns1:def ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_10_33 ;
+    ns1:id 32 ;
+    ns1:lemma "em o" ;
+    ns1:nextWord ns1:word_0_10_33 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_10_31 ;
+    ns1:word "na" .
+
+ns1:word_0_10_34 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:edge ns1:case ;
+    ns1:head ns1:word_0_10_35 ;
+    ns1:id 34 ;
+    ns1:lemma "de" ;
+    ns1:nextWord ns1:word_0_10_35 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_10_33 ;
+    ns1:word "de" .
+
+ns1:word_0_10_4 a ns1:Word ;
+    ns1:edge <http://www.ieeta-bit.pt/OpenIE_s2_pt#aux:pass> ;
+    ns1:feat_mood ns1:ind ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_person ns1:3 ;
+    ns1:feat_tense ns1:pres ;
+    ns1:feat_verbform ns1:fin ;
+    ns1:head ns1:word_0_10_5 ;
+    ns1:id 4 ;
+    ns1:lemma "ser" ;
+    ns1:nextWord ns1:word_0_10_5 ;
+    ns1:pos ns1:AUX ;
+    ns1:poscoarse ns1:AUX ;
+    ns1:previousWord ns1:word_0_10_3 ;
+    ns1:word "é" .
+
+ns1:word_0_10_6 a ns1:Word ;
+    ns1:edge ns1:aux ;
+    ns1:feat_verbform ns1:inf ;
+    ns1:head ns1:word_0_10_8 ;
+    ns1:id 6 ;
+    ns1:lemma "ter" ;
+    ns1:nextWord ns1:word_0_10_7 ;
+    ns1:pos ns1:AUX ;
+    ns1:poscoarse ns1:AUX ;
+    ns1:previousWord ns1:word_0_10_5 ;
+    ns1:word "ter" .
+
+ns1:word_0_10_7 a ns1:Word ;
+    ns1:edge <http://www.ieeta-bit.pt/OpenIE_s2_pt#aux:pass> ;
+    ns1:feat_verbform ns1:part ;
+    ns1:head ns1:word_0_10_8 ;
+    ns1:id 7 ;
+    ns1:lemma "ser" ;
+    ns1:nextWord ns1:word_0_10_8 ;
+    ns1:pos ns1:AUX ;
+    ns1:poscoarse ns1:AUX ;
+    ns1:previousWord ns1:word_0_10_6 ;
+    ns1:word "sido" .
+
+ns1:word_0_10_9 a ns1:Word ;
+    ns1:edge ns1:mark ;
+    ns1:head ns1:word_0_10_10 ;
+    ns1:id 9 ;
+    ns1:lemma "para" ;
+    ns1:nextWord ns1:word_0_10_10 ;
+    ns1:pos ns1:SCONJ ;
+    ns1:poscoarse ns1:SCONJ ;
+    ns1:previousWord ns1:word_0_10_8 ;
+    ns1:word "para" .
+
+ns1:word_0_11_10 a ns1:Word ;
+    ns1:edge ns1:case ;
+    ns1:head ns1:word_0_11_11 ;
+    ns1:id 10 ;
+    ns1:lemma "de" ;
+    ns1:nextWord ns1:word_0_11_11 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_11_9 ;
+    ns1:word "de" .
+
+ns1:word_0_11_12 a ns1:Word ;
+    ns1:edge ns1:punct ;
+    ns1:head ns1:word_0_11_2 ;
+    ns1:id 12 ;
+    ns1:lemma "," ;
+    ns1:nextWord ns1:word_0_11_13 ;
+    ns1:pos ns1:PUNCT ;
+    ns1:poscoarse ns1:PUNCT ;
+    ns1:previousWord ns1:word_0_11_11 ;
+    ns1:word "," .
+
+ns1:word_0_11_13 a ns1:Word ;
+    ns1:edge ns1:expl ;
+    ns1:feat_case ns1:acc ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_person ns1:3 ;
+    ns1:feat_prontype ns1:prs ;
+    ns1:head ns1:word_0_11_14 ;
+    ns1:id 13 ;
+    ns1:lemma "se" ;
+    ns1:nextWord ns1:word_0_11_14 ;
+    ns1:pos ns1:PRON ;
+    ns1:poscoarse ns1:PRON ;
+    ns1:previousWord ns1:word_0_11_12 ;
+    ns1:word "se" .
+
+ns1:word_0_11_15 a ns1:Word ;
+    ns1:edge ns1:case ;
+    ns1:head ns1:word_0_11_16 ;
+    ns1:id 15 ;
+    ns1:lemma "com" ;
+    ns1:nextWord ns1:word_0_11_16 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_11_14 ;
+    ns1:word "com" .
+
+ns1:word_0_11_17 a ns1:Word ;
+    ns1:edge ns1:amod ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_11_16 ;
+    ns1:id 17 ;
+    ns1:lemma "negativo" ;
+    ns1:nextWord ns1:word_0_11_18 ;
+    ns1:pos ns1:ADJ ;
+    ns1:poscoarse ns1:ADJ ;
+    ns1:previousWord ns1:word_0_11_16 ;
+    ns1:word "negativa" .
+
+ns1:word_0_11_18 a ns1:Word ;
+    ns1:edge ns1:punct ;
+    ns1:head ns1:word_0_11_20 ;
+    ns1:id 18 ;
+    ns1:lemma "," ;
+    ns1:nextWord ns1:word_0_11_19 ;
+    ns1:pos ns1:PUNCT ;
+    ns1:poscoarse ns1:PUNCT ;
+    ns1:previousWord ns1:word_0_11_17 ;
+    ns1:word "," .
+
+ns1:word_0_11_19 a ns1:Word ;
+    ns1:edge ns1:advmod ;
+    ns1:head ns1:word_0_11_20 ;
+    ns1:id 19 ;
+    ns1:lemma "rapidamente" ;
+    ns1:nextWord ns1:word_0_11_20 ;
+    ns1:pos ns1:ADV ;
+    ns1:poscoarse ns1:ADV ;
+    ns1:previousWord ns1:word_0_11_18 ;
+    ns1:word "rapidamente" .
+
+ns1:word_0_11_21 a ns1:Word ;
+    ns1:edge ns1:det ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:dem ;
+    ns1:head ns1:word_0_11_22 ;
+    ns1:id 21 ;
+    ns1:lemma "este" ;
+    ns1:nextWord ns1:word_0_11_22 ;
+    ns1:pos ns1:DET ;
+    ns1:poscoarse ns1:DET ;
+    ns1:previousWord ns1:word_0_11_20 ;
+    ns1:word "esta" .
+
+ns1:word_0_11_23 a ns1:Word ;
+    ns1:edge ns1:case ;
+    ns1:feat_definite ns1:def ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_11_24 ;
+    ns1:id 23 ;
+    ns1:lemma "em o" ;
+    ns1:nextWord ns1:word_0_11_24 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_11_22 ;
+    ns1:word "no" .
+
+ns1:word_0_11_25 a ns1:Word ;
+    ns1:edge ns1:amod ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_11_26 ;
+    ns1:id 25 ;
+    ns1:lemma "pequeno" ;
+    ns1:nextWord ns1:word_0_11_26 ;
+    ns1:pos ns1:ADJ ;
+    ns1:poscoarse ns1:ADJ ;
+    ns1:previousWord ns1:word_0_11_24 ;
+    ns1:word "pequeno" .
+
+ns1:word_0_11_27 a ns1:Word ;
+    ns1:edge ns1:amod ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_11_26 ;
+    ns1:id 27 ;
+    ns1:lemma "fotoelétrico" ;
+    ns1:nextWord ns1:word_0_11_28 ;
+    ns1:pos ns1:ADJ ;
+    ns1:poscoarse ns1:ADJ ;
+    ns1:previousWord ns1:word_0_11_26 ;
+    ns1:word "fotoelétrico" .
+
+ns1:word_0_11_29 a ns1:Word ;
+    ns1:edge ns1:xcomp ;
+    ns1:feat_verbform ns1:inf ;
+    ns1:head ns1:word_0_11_28 ;
+    ns1:id 29 ;
+    ns1:lemma "ser" ;
+    ns1:nextWord ns1:word_0_11_30 ;
+    ns1:pos ns1:VERB ;
+    ns1:poscoarse ns1:VERB ;
+    ns1:previousWord ns1:word_0_11_28 ;
+    ns1:word "ser" .
+
+ns1:word_0_11_3 a ns1:Word ;
+    ns1:edge ns1:case ;
+    ns1:head ns1:word_0_11_5 ;
+    ns1:id 3 ;
+    ns1:lemma "por" ;
+    ns1:nextWord ns1:word_0_11_4 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_11_2 ;
+    ns1:word "por" .
+
+ns1:word_0_11_30 a ns1:Word ;
+    ns1:edge ns1:advmod ;
+    ns1:head ns1:word_0_11_34 ;
+    ns1:id 30 ;
+    ns1:lemma "quando" ;
+    ns1:nextWord ns1:word_0_11_31 ;
+    ns1:pos ns1:ADV ;
+    ns1:poscoarse ns1:ADV ;
+    ns1:previousWord ns1:word_0_11_29 ;
+    ns1:word "quando" .
+
+ns1:word_0_11_31 a ns1:Word ;
+    ns1:edge ns1:det ;
+    ns1:feat_definite ns1:def ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_11_32 ;
+    ns1:id 31 ;
+    ns1:lemma "o" ;
+    ns1:nextWord ns1:word_0_11_32 ;
+    ns1:pos ns1:DET ;
+    ns1:poscoarse ns1:DET ;
+    ns1:previousWord ns1:word_0_11_30 ;
+    ns1:word "a" .
+
+ns1:word_0_11_33 a ns1:Word ;
+    ns1:edge ns1:amod ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_11_32 ;
+    ns1:id 33 ;
+    ns1:lemma "ultra-violeta" ;
+    ns1:nextWord ns1:word_0_11_34 ;
+    ns1:pos ns1:ADJ ;
+    ns1:poscoarse ns1:ADJ ;
+    ns1:previousWord ns1:word_0_11_32 ;
+    ns1:word "ultra-violeta" .
+
+ns1:word_0_11_35 a ns1:Word ;
+    ns1:edge ns1:case ;
+    ns1:head ns1:word_0_11_37 ;
+    ns1:id 35 ;
+    ns1:lemma "sobre" ;
+    ns1:nextWord ns1:word_0_11_36 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_11_34 ;
+    ns1:word "sobre" .
+
+ns1:word_0_11_36 a ns1:Word ;
+    ns1:edge ns1:det ;
+    ns1:feat_definite ns1:def ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_11_37 ;
+    ns1:id 36 ;
+    ns1:lemma "o" ;
+    ns1:nextWord ns1:word_0_11_37 ;
+    ns1:pos ns1:DET ;
+    ns1:poscoarse ns1:DET ;
+    ns1:previousWord ns1:word_0_11_35 ;
+    ns1:word "a" .
+
+ns1:word_0_11_38 a ns1:Word ;
+    ns1:edge ns1:punct ;
+    ns1:head ns1:word_0_11_2 ;
+    ns1:id 38 ;
+    ns1:lemma ";" ;
+    ns1:nextWord ns1:word_0_11_39 ;
+    ns1:pos ns1:PUNCT ;
+    ns1:poscoarse ns1:PUNCT ;
+    ns1:previousWord ns1:word_0_11_37 ;
+    ns1:word ";" .
+
+ns1:word_0_11_39 a ns1:Word ;
+    ns1:edge ns1:mark ;
+    ns1:head ns1:word_0_11_44 ;
+    ns1:id 39 ;
+    ns1:lemma "enquanto" ;
+    ns1:nextWord ns1:word_0_11_40 ;
+    ns1:pos ns1:ADV ;
+    ns1:poscoarse ns1:ADV ;
+    ns1:previousWord ns1:word_0_11_38 ;
+    ns1:word "enquanto" .
+
+ns1:word_0_11_4 a ns1:Word ;
+    ns1:edge ns1:det ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:plur ;
+    ns1:feat_prontype ns1:dem ;
+    ns1:head ns1:word_0_11_5 ;
+    ns1:id 4 ;
+    ns1:lemma "esse" ;
+    ns1:nextWord ns1:word_0_11_5 ;
+    ns1:pos ns1:DET ;
+    ns1:poscoarse ns1:DET ;
+    ns1:previousWord ns1:word_0_11_3 ;
+    ns1:word "essas" .
+
+ns1:word_0_11_40 a ns1:Word ;
+    ns1:edge ns1:mark ;
+    ns1:head ns1:word_0_11_44 ;
+    ns1:id 40 ;
+    ns1:lemma "se" ;
+    ns1:nextWord ns1:word_0_11_41 ;
+    ns1:pos ns1:SCONJ ;
+    ns1:poscoarse ns1:SCONJ ;
+    ns1:previousWord ns1:word_0_11_39 ;
+    ns1:word "se" .
+
+ns1:word_0_11_41 a ns1:Word ;
+    ns1:edge ns1:det ;
+    ns1:feat_definite ns1:def ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_11_42 ;
+    ns1:id 41 ;
+    ns1:lemma "o" ;
+    ns1:nextWord ns1:word_0_11_42 ;
+    ns1:pos ns1:DET ;
+    ns1:poscoarse ns1:DET ;
+    ns1:previousWord ns1:word_0_11_40 ;
+    ns1:word "a" .
+
+ns1:word_0_11_43 a ns1:Word ;
+    ns1:edge ns1:cop ;
+    ns1:feat_mood ns1:ind ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_person ns1:3 ;
+    ns1:feat_tense ns1:pres ;
+    ns1:feat_verbform ns1:fin ;
+    ns1:head ns1:word_0_11_44 ;
+    ns1:id 43 ;
+    ns1:lemma "ser" ;
+    ns1:nextWord ns1:word_0_11_44 ;
+    ns1:pos ns1:AUX ;
+    ns1:poscoarse ns1:AUX ;
+    ns1:previousWord ns1:word_0_11_42 ;
+    ns1:word "é" .
+
+ns1:word_0_11_45 a ns1:Word ;
+    ns1:edge ns1:mark ;
+    ns1:head ns1:word_0_11_46 ;
+    ns1:id 45 ;
+    ns1:lemma "para" ;
+    ns1:nextWord ns1:word_0_11_46 ;
+    ns1:pos ns1:SCONJ ;
+    ns1:poscoarse ns1:SCONJ ;
+    ns1:previousWord ns1:word_0_11_44 ;
+    ns1:word "para" .
+
+ns1:word_0_11_47 a ns1:Word ;
+    ns1:edge ns1:punct ;
+    ns1:head ns1:word_0_11_46 ;
+    ns1:id 47 ;
+    ns1:lemma "," ;
+    ns1:nextWord ns1:word_0_11_48 ;
+    ns1:pos ns1:PUNCT ;
+    ns1:poscoarse ns1:PUNCT ;
+    ns1:previousWord ns1:word_0_11_46 ;
+    ns1:word "," .
+
+ns1:word_0_11_48 a ns1:Word ;
+    ns1:edge ns1:det ;
+    ns1:feat_definite ns1:def ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_11_49 ;
+    ns1:id 48 ;
+    ns1:lemma "o" ;
+    ns1:nextWord ns1:word_0_11_49 ;
+    ns1:pos ns1:DET ;
+    ns1:poscoarse ns1:DET ;
+    ns1:previousWord ns1:word_0_11_47 ;
+    ns1:word "o" .
+
+ns1:word_0_11_50 a ns1:Word ;
+    ns1:edge ns1:amod ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_11_49 ;
+    ns1:id 50 ;
+    ns1:lemma "fotoelétrico" ;
+    ns1:nextWord ns1:word_0_11_51 ;
+    ns1:pos ns1:ADJ ;
+    ns1:poscoarse ns1:ADJ ;
+    ns1:previousWord ns1:word_0_11_49 ;
+    ns1:word "fotoelétrico" .
+
+ns1:word_0_11_52 a ns1:Word ;
+    ns1:edge ns1:det ;
+    ns1:feat_definite ns1:ind ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_11_53 ;
+    ns1:id 52 ;
+    ns1:lemma "um" ;
+    ns1:nextWord ns1:word_0_11_53 ;
+    ns1:pos ns1:DET ;
+    ns1:poscoarse ns1:DET ;
+    ns1:previousWord ns1:word_0_11_51 ;
+    ns1:word "uma" .
+
+ns1:word_0_11_54 a ns1:Word ;
+    ns1:edge ns1:amod ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_11_53 ;
+    ns1:id 54 ;
+    ns1:lemma "positivo" ;
+    ns1:nextWord ns1:word_0_11_55 ;
+    ns1:pos ns1:ADJ ;
+    ns1:poscoarse ns1:ADJ ;
+    ns1:previousWord ns1:word_0_11_53 ;
+    ns1:word "positiva" .
+
+ns1:word_0_11_55 a ns1:Word ;
+    ns1:edge ns1:advmod ;
+    ns1:head ns1:word_0_11_56 ;
+    ns1:id 55 ;
+    ns1:lemma "quando" ;
+    ns1:nextWord ns1:word_0_11_56 ;
+    ns1:pos ns1:ADV ;
+    ns1:poscoarse ns1:ADV ;
+    ns1:previousWord ns1:word_0_11_54 ;
+    ns1:word "quando" .
+
+ns1:word_0_11_57 a ns1:Word ;
+    ns1:edge ns1:case ;
+    ns1:feat_definite ns1:def ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_11_58 ;
+    ns1:id 57 ;
+    ns1:lemma "a o" ;
+    ns1:nextWord ns1:word_0_11_58 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_11_56 ;
+    ns1:word "à" .
+
+ns1:word_0_11_59 a ns1:Word ;
+    ns1:edge ns1:punct ;
+    ns1:head ns1:word_0_11_56 ;
+    ns1:id 59 ;
+    ns1:lemma "," ;
+    ns1:nextWord ns1:word_0_11_60 ;
+    ns1:pos ns1:PUNCT ;
+    ns1:poscoarse ns1:PUNCT ;
+    ns1:previousWord ns1:word_0_11_58 ;
+    ns1:word "," .
+
+ns1:word_0_11_6 a ns1:Word ;
+    ns1:edge ns1:nsubj ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:plur ;
+    ns1:feat_prontype ns1:rel ;
+    ns1:head ns1:word_0_11_8 ;
+    ns1:id 6 ;
+    ns1:lemma "que" ;
+    ns1:nextWord ns1:word_0_11_7 ;
+    ns1:pos ns1:PRON ;
+    ns1:poscoarse ns1:PRON ;
+    ns1:previousWord ns1:word_0_11_5 ;
+    ns1:word "que" .
+
+ns1:word_0_11_60 a ns1:Word ;
+    ns1:edge ns1:det ;
+    ns1:feat_definite ns1:def ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_11_61 ;
+    ns1:id 60 ;
+    ns1:lemma "o" ;
+    ns1:nextWord ns1:word_0_11_61 ;
+    ns1:pos ns1:DET ;
+    ns1:poscoarse ns1:DET ;
+    ns1:previousWord ns1:word_0_11_59 ;
+    ns1:word "a" .
+
+ns1:word_0_11_62 a ns1:Word ;
+    ns1:edge ns1:amod ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_11_61 ;
+    ns1:id 62 ;
+    ns1:lemma "negativo" ;
+    ns1:nextWord ns1:word_0_11_63 ;
+    ns1:pos ns1:ADJ ;
+    ns1:poscoarse ns1:ADJ ;
+    ns1:previousWord ns1:word_0_11_61 ;
+    ns1:word "negativa" .
+
+ns1:word_0_11_64 a ns1:Word ;
+    ns1:edge ns1:case ;
+    ns1:head ns1:word_0_11_66 ;
+    ns1:id 64 ;
+    ns1:lemma "para" ;
+    ns1:nextWord ns1:word_0_11_65 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_11_63 ;
+    ns1:word "para" .
+
+ns1:word_0_11_65 a ns1:Word ;
+    ns1:edge ns1:det ;
+    ns1:feat_definite ns1:def ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_11_66 ;
+    ns1:id 65 ;
+    ns1:lemma "o" ;
+    ns1:nextWord ns1:word_0_11_66 ;
+    ns1:pos ns1:DET ;
+    ns1:poscoarse ns1:DET ;
+    ns1:previousWord ns1:word_0_11_64 ;
+    ns1:word "o" .
+
+ns1:word_0_11_67 a ns1:Word ;
+    ns1:edge ns1:case ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_11_68 ;
+    ns1:id 67 ;
+    ns1:lemma "por o" ;
+    ns1:nextWord ns1:word_0_11_68 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_11_66 ;
+    ns1:word "pelo" .
+
+ns1:word_0_11_69 a ns1:Word ;
+    ns1:edge ns1:det ;
+    ns1:feat_definite ns1:def ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_11_70 ;
+    ns1:id 69 ;
+    ns1:lemma "o" ;
+    ns1:nextWord ns1:word_0_11_70 ;
+    ns1:pos ns1:DET ;
+    ns1:poscoarse ns1:DET ;
+    ns1:previousWord ns1:word_0_11_68 ;
+    ns1:word "o" .
+
+ns1:word_0_11_7 a ns1:Word ;
+    ns1:edge ns1:det ;
+    ns1:feat_definite ns1:ind ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_11_8 ;
+    ns1:id 7 ;
+    ns1:lemma "um" ;
+    ns1:nextWord ns1:word_0_11_8 ;
+    ns1:pos ns1:DET ;
+    ns1:poscoarse ns1:DET ;
+    ns1:previousWord ns1:word_0_11_6 ;
+    ns1:word "uma" .
+
+ns1:word_0_11_71 a ns1:Word ;
+    ns1:edge <http://www.ieeta-bit.pt/OpenIE_s2_pt#aux:pass> ;
+    ns1:feat_mood ns1:ind ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_person ns1:3 ;
+    ns1:feat_tense ns1:pres ;
+    ns1:feat_verbform ns1:fin ;
+    ns1:head ns1:word_0_11_72 ;
+    ns1:id 71 ;
+    ns1:lemma "ser" ;
+    ns1:nextWord ns1:word_0_11_72 ;
+    ns1:pos ns1:AUX ;
+    ns1:poscoarse ns1:AUX ;
+    ns1:previousWord ns1:word_0_11_70 ;
+    ns1:word "é" .
+
+ns1:word_0_11_73 a ns1:Word ;
+    ns1:edge ns1:punct ;
+    ns1:head ns1:word_0_11_77 ;
+    ns1:id 73 ;
+    ns1:lemma ";" ;
+    ns1:nextWord ns1:word_0_11_74 ;
+    ns1:pos ns1:PUNCT ;
+    ns1:poscoarse ns1:PUNCT ;
+    ns1:previousWord ns1:word_0_11_72 ;
+    ns1:word ";" .
+
+ns1:word_0_11_74 a ns1:Word ;
+    ns1:OIE_tags "A1" ;
+    ns1:edge ns1:det ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:dem ;
+    ns1:head ns1:word_0_11_75 ;
+    ns1:id 74 ;
+    ns1:lemma "este" ;
+    ns1:nextWord ns1:word_0_11_75 ;
+    ns1:pos ns1:DET ;
+    ns1:poscoarse ns1:DET ;
+    ns1:previousWord ns1:word_0_11_73 ;
+    ns1:word "esta" .
+
+ns1:word_0_11_76 a ns1:Word ;
+    ns1:OIE_tags "A1" ;
+    ns1:edge ns1:amod ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_11_75 ;
+    ns1:id 76 ;
+    ns1:lemma "positivo" ;
+    ns1:nextWord ns1:word_0_11_77 ;
+    ns1:pos ns1:ADJ ;
+    ns1:poscoarse ns1:ADJ ;
+    ns1:previousWord ns1:word_0_11_75 ;
+    ns1:word "positiva" .
+
+ns1:word_0_11_78 a ns1:Word ;
+    ns1:edge ns1:cop ;
+    ns1:feat_verbform ns1:inf ;
+    ns1:head ns1:word_0_11_79 ;
+    ns1:id 78 ;
+    ns1:lemma "ser" ;
+    ns1:nextWord ns1:word_0_11_79 ;
+    ns1:pos ns1:AUX ;
+    ns1:poscoarse ns1:AUX ;
+    ns1:previousWord ns1:word_0_11_77 ;
+    ns1:word "ser" .
+
+ns1:word_0_11_80 a ns1:Word ;
+    ns1:edge ns1:punct ;
+    ns1:head ns1:word_0_11_84 ;
+    ns1:id 80 ;
+    ns1:lemma ";" ;
+    ns1:nextWord ns1:word_0_11_81 ;
+    ns1:pos ns1:PUNCT ;
+    ns1:poscoarse ns1:PUNCT ;
+    ns1:previousWord ns1:word_0_11_79 ;
+    ns1:word ";" .
+
+ns1:word_0_11_81 a ns1:Word ;
+    ns1:OIE_tags "A1" ;
+    ns1:edge ns1:det ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:dem ;
+    ns1:head ns1:word_0_11_82 ;
+    ns1:id 81 ;
+    ns1:lemma "este" ;
+    ns1:nextWord ns1:word_0_11_82 ;
+    ns1:pos ns1:DET ;
+    ns1:poscoarse ns1:DET ;
+    ns1:previousWord ns1:word_0_11_80 ;
+    ns1:word "esta" .
+
+ns1:word_0_11_83 a ns1:Word ;
+    ns1:OIE_tags "A1" ;
+    ns1:edge ns1:amod ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_11_82 ;
+    ns1:id 83 ;
+    ns1:lemma "positivo" ;
+    ns1:nextWord ns1:word_0_11_84 ;
+    ns1:pos ns1:ADJ ;
+    ns1:poscoarse ns1:ADJ ;
+    ns1:previousWord ns1:word_0_11_82 ;
+    ns1:word "positiva" .
+
+ns1:word_0_11_85 a ns1:Word ;
+    ns1:edge ns1:cop ;
+    ns1:feat_verbform ns1:inf ;
+    ns1:head ns1:word_0_11_86 ;
+    ns1:id 85 ;
+    ns1:lemma "ser" ;
+    ns1:nextWord ns1:word_0_11_86 ;
+    ns1:pos ns1:AUX ;
+    ns1:poscoarse ns1:AUX ;
+    ns1:previousWord ns1:word_0_11_84 ;
+    ns1:word "ser" .
+
+ns1:word_0_11_9 a ns1:Word ;
+    ns1:edge ns1:amod ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_11_8 ;
+    ns1:id 9 ;
+    ns1:lemma "recém-limpa" ;
+    ns1:nextWord ns1:word_0_11_10 ;
+    ns1:pos ns1:ADJ ;
+    ns1:poscoarse ns1:ADJ ;
+    ns1:previousWord ns1:word_0_11_8 ;
+    ns1:word "recém-limpa" .
+
+ns1:word_0_12_12 a ns1:Word ;
+    ns1:OIE_tags "R" ;
+    ns1:edge <http://www.ieeta-bit.pt/OpenIE_s2_pt#flat:name> ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_12_11 ;
+    ns1:id 12 ;
+    ns1:lemma "Barber" ;
+    ns1:nextWord ns1:word_0_12_13 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_12_11 ;
+    ns1:word "Barber" .
+
+ns1:word_0_12_13 a ns1:Word ;
+    ns1:OIE_tags "R" ;
+    ns1:edge ns1:mark ;
+    ns1:head ns1:word_0_12_14 ;
+    ns1:id 13 ;
+    ns1:lemma "a" ;
+    ns1:nextWord ns1:word_0_12_14 ;
+    ns1:pos ns1:SCONJ ;
+    ns1:poscoarse ns1:SCONJ ;
+    ns1:previousWord ns1:word_0_12_12 ;
+    ns1:word "a" .
+
+ns1:word_0_12_15 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:edge ns1:det ;
+    ns1:feat_definite ns1:ind ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_12_16 ;
+    ns1:id 15 ;
+    ns1:lemma "um" ;
+    ns1:nextWord ns1:word_0_12_16 ;
+    ns1:pos ns1:DET ;
+    ns1:poscoarse ns1:DET ;
+    ns1:previousWord ns1:word_0_12_14 ;
+    ns1:word "um" .
+
+ns1:word_0_12_17 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:edge ns1:case ;
+    ns1:head ns1:word_0_12_18 ;
+    ns1:id 17 ;
+    ns1:lemma "de" ;
+    ns1:nextWord ns1:word_0_12_18 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_12_16 ;
+    ns1:word "de" .
+
+ns1:word_0_12_19 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:edge ns1:case ;
+    ns1:head ns1:word_0_12_21 ;
+    ns1:id 19 ;
+    ns1:lemma "para" ;
+    ns1:nextWord ns1:word_0_12_20 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_12_18 ;
+    ns1:word "para" .
+
+ns1:word_0_12_20 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:edge ns1:det ;
+    ns1:feat_definite ns1:def ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_12_21 ;
+    ns1:id 20 ;
+    ns1:lemma "o" ;
+    ns1:nextWord ns1:word_0_12_21 ;
+    ns1:pos ns1:DET ;
+    ns1:poscoarse ns1:DET ;
+    ns1:previousWord ns1:word_0_12_19 ;
+    ns1:word "a" .
+
+ns1:word_0_12_22 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:edge ns1:case ;
+    ns1:head ns1:word_0_12_23 ;
+    ns1:id 22 ;
+    ns1:lemma "de" ;
+    ns1:nextWord ns1:word_0_12_23 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_12_21 ;
+    ns1:word "de" .
+
+ns1:word_0_12_24 a ns1:Word ;
+    ns1:edge ns1:punct ;
+    ns1:head ns1:word_0_12_25 ;
+    ns1:id 24 ;
+    ns1:lemma "," ;
+    ns1:nextWord ns1:word_0_12_25 ;
+    ns1:pos ns1:PUNCT ;
+    ns1:poscoarse ns1:PUNCT ;
+    ns1:previousWord ns1:word_0_12_23 ;
+    ns1:word "," .
+
+ns1:word_0_12_26 a ns1:Word ;
+    ns1:edge <http://www.ieeta-bit.pt/OpenIE_s2_pt#flat:name> ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_12_25 ;
+    ns1:id 26 ;
+    ns1:lemma "Briselli" ;
+    ns1:nextWord ns1:word_0_12_27 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_12_25 ;
+    ns1:word "Briselli" .
+
+ns1:word_0_12_27 a ns1:Word ;
+    ns1:edge ns1:punct ;
+    ns1:head ns1:word_0_12_29 ;
+    ns1:id 27 ;
+    ns1:lemma "," ;
+    ns1:nextWord ns1:word_0_12_28 ;
+    ns1:pos ns1:PUNCT ;
+    ns1:poscoarse ns1:PUNCT ;
+    ns1:previousWord ns1:word_0_12_26 ;
+    ns1:word "," .
+
+ns1:word_0_12_28 a ns1:Word ;
+    ns1:edge ns1:det ;
+    ns1:feat_definite ns1:ind ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_12_29 ;
+    ns1:id 28 ;
+    ns1:lemma "um" ;
+    ns1:nextWord ns1:word_0_12_29 ;
+    ns1:pos ns1:DET ;
+    ns1:poscoarse ns1:DET ;
+    ns1:previousWord ns1:word_0_12_27 ;
+    ns1:word "um" .
+
+ns1:word_0_12_3 a ns1:Word ;
+    ns1:edge ns1:det ;
+    ns1:feat_definite ns1:def ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_12_4 ;
+    ns1:id 3 ;
+    ns1:lemma "o" ;
+    ns1:nextWord ns1:word_0_12_4 ;
+    ns1:pos ns1:DET ;
+    ns1:poscoarse ns1:DET ;
+    ns1:previousWord ns1:word_0_12_2 ;
+    ns1:word "o" .
+
+ns1:word_0_12_30 a ns1:Word ;
+    ns1:edge ns1:case ;
+    ns1:feat_definite ns1:def ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_12_31 ;
+    ns1:id 30 ;
+    ns1:lemma "de o" ;
+    ns1:nextWord ns1:word_0_12_31 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_12_29 ;
+    ns1:word "do" .
+
+ns1:word_0_12_32 a ns1:Word ;
+    ns1:edge <http://www.ieeta-bit.pt/OpenIE_s2_pt#flat:name> ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_12_31 ;
+    ns1:id 32 ;
+    ns1:lemma "Institute" ;
+    ns1:nextWord ns1:word_0_12_33 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_12_31 ;
+    ns1:word "Institute" .
+
+ns1:word_0_12_33 a ns1:Word ;
+    ns1:edge <http://www.ieeta-bit.pt/OpenIE_s2_pt#flat:name> ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_12_31 ;
+    ns1:id 33 ;
+    ns1:lemma "of" ;
+    ns1:nextWord ns1:word_0_12_34 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_12_32 ;
+    ns1:word "of" .
+
+ns1:word_0_12_34 a ns1:Word ;
+    ns1:edge <http://www.ieeta-bit.pt/OpenIE_s2_pt#flat:name> ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_12_31 ;
+    ns1:id 34 ;
+    ns1:lemma "Music" ;
+    ns1:nextWord ns1:word_0_12_35 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_12_33 ;
+    ns1:word "Music" .
+
+ns1:word_0_12_35 a ns1:Word ;
+    ns1:edge ns1:case ;
+    ns1:feat_definite ns1:def ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_12_37 ;
+    ns1:id 35 ;
+    ns1:lemma "em o" ;
+    ns1:nextWord ns1:word_0_12_36 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_12_34 ;
+    ns1:word "no" .
+
+ns1:word_0_12_36 a ns1:Word ;
+    ns1:edge ns1:amod ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_12_37 ;
+    ns1:id 36 ;
+    ns1:lemma "mesmo" ;
+    ns1:nextWord ns1:word_0_12_37 ;
+    ns1:pos ns1:ADJ ;
+    ns1:poscoarse ns1:ADJ ;
+    ns1:previousWord ns1:word_0_12_35 ;
+    ns1:word "mesmo" .
+
+ns1:word_0_12_38 a ns1:Word ;
+    ns1:edge ns1:mark ;
+    ns1:head ns1:word_0_12_39 ;
+    ns1:id 38 ;
+    ns1:lemma "que" ;
+    ns1:nextWord ns1:word_0_12_39 ;
+    ns1:pos ns1:SCONJ ;
+    ns1:poscoarse ns1:SCONJ ;
+    ns1:previousWord ns1:word_0_12_37 ;
+    ns1:word "que" .
+
+ns1:word_0_12_40 a ns1:Word ;
+    ns1:edge <http://www.ieeta-bit.pt/OpenIE_s2_pt#flat:name> ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_12_39 ;
+    ns1:id 40 ;
+    ns1:lemma "Barber" ;
+    ns1:nextWord ns1:word_0_12_41 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_12_39 ;
+    ns1:word "Barber" .
+
+ns1:word_0_12_41 a ns1:Word ;
+    ns1:edge ns1:punct ;
+    ns1:head ns1:word_0_12_42 ;
+    ns1:id 41 ;
+    ns1:lemma "," ;
+    ns1:nextWord ns1:word_0_12_42 ;
+    ns1:pos ns1:PUNCT ;
+    ns1:poscoarse ns1:PUNCT ;
+    ns1:previousWord ns1:word_0_12_40 ;
+    ns1:word "," .
+
+ns1:word_0_12_5 a ns1:Word ;
+    ns1:OIE_tags "A1" ;
+    ns1:edge ns1:case ;
+    ns1:feat_definite ns1:def ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_12_6 ;
+    ns1:id 5 ;
+    ns1:lemma "de o" ;
+    ns1:nextWord ns1:word_0_12_6 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_12_4 ;
+    ns1:word "da" .
+
+ns1:word_0_12_7 a ns1:Word ;
+    ns1:OIE_tags "A1" ;
+    ns1:edge <http://www.ieeta-bit.pt/OpenIE_s2_pt#flat:name> ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_12_6 ;
+    ns1:id 7 ;
+    ns1:lemma "Samuel" ;
+    ns1:nextWord ns1:word_0_12_8 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_12_6 ;
+    ns1:word "Samuel" .
+
+ns1:word_0_12_8 a ns1:Word ;
+    ns1:OIE_tags "A1" ;
+    ns1:edge <http://www.ieeta-bit.pt/OpenIE_s2_pt#flat:name> ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_12_6 ;
+    ns1:id 8 ;
+    ns1:lemma "Simeon" ;
+    ns1:nextWord ns1:word_0_12_9 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_12_7 ;
+    ns1:word "Simeon" .
+
+ns1:word_0_12_9 a ns1:Word ;
+    ns1:OIE_tags "A1" ;
+    ns1:edge <http://www.ieeta-bit.pt/OpenIE_s2_pt#flat:name> ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_12_6 ;
+    ns1:id 9 ;
+    ns1:lemma "Fels" ;
+    ns1:nextWord ns1:word_0_12_10 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_12_8 ;
+    ns1:word "Fels" .
+
+ns1:word_0_13_11 a ns1:Word ;
+    ns1:edge ns1:case ;
+    ns1:head ns1:word_0_13_13 ;
+    ns1:id 11 ;
+    ns1:lemma "de" ;
+    ns1:nextWord ns1:word_0_13_12 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_13_10 ;
+    ns1:word "de" .
+
+ns1:word_0_13_12 a ns1:Word ;
+    ns1:edge ns1:nummod ;
+    ns1:feat_numtype ns1:card ;
+    ns1:head ns1:word_0_13_13 ;
+    ns1:id 12 ;
+    ns1:lemma "64" ;
+    ns1:nextWord ns1:word_0_13_13 ;
+    ns1:pos ns1:NUM ;
+    ns1:poscoarse ns1:NUM ;
+    ns1:previousWord ns1:word_0_13_11 ;
+    ns1:word "64" .
+
+ns1:word_0_13_14 a ns1:Word ;
+    ns1:edge ns1:cc ;
+    ns1:head ns1:word_0_13_15 ;
+    ns1:id 14 ;
+    ns1:lemma "e" ;
+    ns1:nextWord ns1:word_0_13_15 ;
+    ns1:pos ns1:CCONJ ;
+    ns1:poscoarse ns1:CCONJ ;
+    ns1:previousWord ns1:word_0_13_13 ;
+    ns1:word "e" .
+
+ns1:word_0_13_16 a ns1:Word ;
+    ns1:edge ns1:advmod ;
+    ns1:head ns1:word_0_13_10 ;
+    ns1:id 16 ;
+    ns1:lemma "internamente" ;
+    ns1:nextWord ns1:word_0_13_17 ;
+    ns1:pos ns1:ADV ;
+    ns1:poscoarse ns1:ADV ;
+    ns1:previousWord ns1:word_0_13_15 ;
+    ns1:word "internamente" .
+
+ns1:word_0_13_17 a ns1:Word ;
+    ns1:edge ns1:punct ;
+    ns1:head ns1:word_0_13_2 ;
+    ns1:id 17 ;
+    ns1:lemma "-" ;
+    ns1:nextWord ns1:word_0_13_18 ;
+    ns1:pos ns1:PUNCT ;
+    ns1:poscoarse ns1:PUNCT ;
+    ns1:previousWord ns1:word_0_13_16 ;
+    ns1:word "-" .
+
+ns1:word_0_13_18 a ns1:Word ;
+    ns1:edge ns1:det ;
+    ns1:feat_definite ns1:def ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_13_19 ;
+    ns1:id 18 ;
+    ns1:lemma "o" ;
+    ns1:nextWord ns1:word_0_13_19 ;
+    ns1:pos ns1:DET ;
+    ns1:poscoarse ns1:DET ;
+    ns1:previousWord ns1:word_0_13_17 ;
+    ns1:word "O" .
+
+ns1:word_0_13_20 a ns1:Word ;
+    ns1:OIE_tags "R" ;
+    ns1:edge ns1:advmod ;
+    ns1:head ns1:word_0_13_22 ;
+    ns1:id 20 ;
+    ns1:lemma "ainda" ;
+    ns1:nextWord ns1:word_0_13_21 ;
+    ns1:pos ns1:ADV ;
+    ns1:poscoarse ns1:ADV ;
+    ns1:previousWord ns1:word_0_13_19 ;
+    ns1:word "ainda" .
+
+ns1:word_0_13_23 a ns1:Word ;
+    ns1:edge ns1:obj ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:plur ;
+    ns1:head ns1:word_0_13_22 ;
+    ns1:id 23 ;
+    ns1:lemma "instrução" ;
+    ns1:nextWord ns1:word_0_13_24 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_13_22 ;
+    ns1:word "instruções" .
+
+ns1:word_0_13_25 a ns1:Word ;
+    ns1:edge ns1:nummod ;
+    ns1:feat_numtype ns1:card ;
+    ns1:head ns1:word_0_13_24 ;
+    ns1:id 25 ;
+    ns1:lemma "32000" ;
+    ns1:nextWord ns1:word_0_13_26 ;
+    ns1:pos ns1:NUM ;
+    ns1:poscoarse ns1:NUM ;
+    ns1:previousWord ns1:word_0_13_24 ;
+    ns1:word "32000" .
+
+ns1:word_0_13_27 a ns1:Word ;
+    ns1:edge ns1:case ;
+    ns1:head ns1:word_0_13_28 ;
+    ns1:id 27 ;
+    ns1:lemma "de" ;
+    ns1:nextWord ns1:word_0_13_28 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_13_26 ;
+    ns1:word "de" .
+
+ns1:word_0_13_29 a ns1:Word ;
+    ns1:edge ns1:case ;
+    ns1:head ns1:word_0_13_30 ;
+    ns1:id 29 ;
+    ns1:lemma "em" ;
+    ns1:nextWord ns1:word_0_13_30 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_13_28 ;
+    ns1:word "em" .
+
+ns1:word_0_13_3 a ns1:Word ;
+    ns1:edge ns1:punct ;
+    ns1:head ns1:word_0_13_2 ;
+    ns1:id 3 ;
+    ns1:lemma "-" ;
+    ns1:nextWord ns1:word_0_13_4 ;
+    ns1:pos ns1:PUNCT ;
+    ns1:poscoarse ns1:PUNCT ;
+    ns1:previousWord ns1:word_0_13_2 ;
+    ns1:word "-" .
+
+ns1:word_0_13_31 a ns1:Word ;
+    ns1:edge ns1:amod ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_13_30 ;
+    ns1:id 31 ;
+    ns1:lemma "real" ;
+    ns1:nextWord ns1:word_0_13_32 ;
+    ns1:pos ns1:ADJ ;
+    ns1:poscoarse ns1:ADJ ;
+    ns1:previousWord ns1:word_0_13_30 ;
+    ns1:word "real" .
+
+ns1:word_0_13_4 a ns1:Word ;
+    ns1:edge ns1:case ;
+    ns1:head ns1:word_0_13_6 ;
+    ns1:id 4 ;
+    ns1:lemma "com" ;
+    ns1:nextWord ns1:word_0_13_5 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_13_3 ;
+    ns1:word "com" .
+
+ns1:word_0_13_5 a ns1:Word ;
+    ns1:edge ns1:det ;
+    ns1:feat_definite ns1:ind ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_13_6 ;
+    ns1:id 5 ;
+    ns1:lemma "um" ;
+    ns1:nextWord ns1:word_0_13_6 ;
+    ns1:pos ns1:DET ;
+    ns1:poscoarse ns1:DET ;
+    ns1:previousWord ns1:word_0_13_4 ;
+    ns1:word "um" .
+
+ns1:word_0_13_7 a ns1:Word ;
+    ns1:edge ns1:appos ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_numtype ns1:ord ;
+    ns1:head ns1:word_0_13_6 ;
+    ns1:id 7 ;
+    ns1:lemma "RISC" ;
+    ns1:nextWord ns1:word_0_13_8 ;
+    ns1:pos ns1:ADJ ;
+    ns1:poscoarse ns1:ADJ ;
+    ns1:previousWord ns1:word_0_13_6 ;
+    ns1:word "RISC" .
+
+ns1:word_0_13_8 a ns1:Word ;
+    ns1:edge ns1:xcomp ;
+    ns1:feat_verbform ns1:inf ;
+    ns1:head ns1:word_0_13_2 ;
+    ns1:id 8 ;
+    ns1:lemma "superscalar" ;
+    ns1:nextWord ns1:word_0_13_9 ;
+    ns1:pos ns1:VERB ;
+    ns1:poscoarse ns1:VERB ;
+    ns1:previousWord ns1:word_0_13_7 ;
+    ns1:word "superscalar" .
+
+ns1:word_0_13_9 a ns1:Word ;
+    ns1:edge ns1:punct ;
+    ns1:head ns1:word_0_13_10 ;
+    ns1:id 9 ;
+    ns1:lemma "," ;
+    ns1:nextWord ns1:word_0_13_10 ;
+    ns1:pos ns1:PUNCT ;
+    ns1:poscoarse ns1:PUNCT ;
+    ns1:previousWord ns1:word_0_13_8 ;
+    ns1:word "," .
+
+ns1:word_0_1_1 a ns1:Word ;
+    ns1:OIE_tags "A1" ;
+    ns1:depGraph ns1:word_0_1_2 ;
+    ns1:edge ns1:nsubj ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_1_5 ;
+    ns1:id 1 ;
+    ns1:lemma "Nolan" ;
+    ns1:nextWord ns1:word_0_1_2 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:word "Nolan" .
+
+ns1:word_0_1_2 a ns1:Word ;
+    ns1:OIE_tags "A1" ;
+    ns1:edge <http://www.ieeta-bit.pt/OpenIE_s2_pt#flat:name> ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_1_1 ;
+    ns1:id 2 ;
+    ns1:lemma "Bushnell" ;
+    ns1:nextWord ns1:word_0_1_3 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_1_1 ;
+    ns1:word "Bushnell" .
+
+ns1:word_0_1_3 a ns1:Word ;
+    ns1:OIE_tags "R" ;
+    ns1:edge ns1:cop ;
+    ns1:feat_mood ns1:ind ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_person ns1:3 ;
+    ns1:feat_tense ns1:pres ;
+    ns1:feat_verbform ns1:fin ;
+    ns1:head ns1:word_0_1_5 ;
+    ns1:id 3 ;
+    ns1:lemma "estar" ;
+    ns1:nextWord ns1:word_0_1_4 ;
+    ns1:pos ns1:AUX ;
+    ns1:poscoarse ns1:AUX ;
+    ns1:previousWord ns1:word_0_1_2 ;
+    ns1:word "está" .
+
+ns1:word_0_1_4 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:edge ns1:case ;
+    ns1:feat_definite ns1:def ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_1_5 ;
+    ns1:id 4 ;
+    ns1:lemma "em o" ;
+    ns1:nextWord ns1:word_0_1_5 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_1_3 ;
+    ns1:word "no" .
+
+ns1:word_0_1_6 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:edge ns1:amod ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_1_5 ;
+    ns1:id 6 ;
+    ns1:lemma "consultivo" ;
+    ns1:nextWord ns1:word_0_1_7 ;
+    ns1:pos ns1:ADJ ;
+    ns1:poscoarse ns1:ADJ ;
+    ns1:previousWord ns1:word_0_1_5 ;
+    ns1:word "consultivo" .
+
+ns1:word_0_1_7 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:edge ns1:case ;
+    ns1:feat_definite ns1:def ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_1_8 ;
+    ns1:id 7 ;
+    ns1:lemma "de o" ;
+    ns1:nextWord ns1:word_0_1_8 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_1_6 ;
+    ns1:word "da" .
+
+ns1:word_0_2_11 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:edge ns1:det ;
+    ns1:feat_definite ns1:ind ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_2_12 ;
+    ns1:id 11 ;
+    ns1:lemma "um" ;
+    ns1:nextWord ns1:word_0_2_12 ;
+    ns1:pos ns1:DET ;
+    ns1:poscoarse ns1:DET ;
+    ns1:previousWord ns1:word_0_2_10 ;
+    ns1:word "uma" .
+
+ns1:word_0_2_13 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:edge ns1:amod ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_2_12 ;
+    ns1:id 13 ;
+    ns1:lemma "regular" ;
+    ns1:nextWord ns1:word_0_2_14 ;
+    ns1:pos ns1:ADJ ;
+    ns1:poscoarse ns1:ADJ ;
+    ns1:previousWord ns1:word_0_2_12 ;
+    ns1:word "regular" .
+
+ns1:word_0_2_14 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:edge <http://www.ieeta-bit.pt/OpenIE_s2_pt#nsubj:pass> ;
+    ns1:head ns1:word_0_2_17 ;
+    ns1:id 14 ;
+    ns1:lemma "que" ;
+    ns1:nextWord ns1:word_0_2_15 ;
+    ns1:pos ns1:SCONJ ;
+    ns1:poscoarse ns1:SCONJ ;
+    ns1:previousWord ns1:word_0_2_13 ;
+    ns1:word "que" .
+
+ns1:word_0_2_15 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:edge ns1:advmod ;
+    ns1:feat_polarity ns1:neg ;
+    ns1:head ns1:word_0_2_17 ;
+    ns1:id 15 ;
+    ns1:lemma "não" ;
+    ns1:nextWord ns1:word_0_2_16 ;
+    ns1:pos ns1:ADV ;
+    ns1:poscoarse ns1:ADV ;
+    ns1:previousWord ns1:word_0_2_14 ;
+    ns1:word "não" .
+
+ns1:word_0_2_16 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:edge <http://www.ieeta-bit.pt/OpenIE_s2_pt#aux:pass> ;
+    ns1:feat_mood ns1:ind ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_person ns1:3 ;
+    ns1:feat_tense ns1:pres ;
+    ns1:feat_verbform ns1:fin ;
+    ns1:head ns1:word_0_2_17 ;
+    ns1:id 16 ;
+    ns1:lemma "ser" ;
+    ns1:nextWord ns1:word_0_2_17 ;
+    ns1:pos ns1:AUX ;
+    ns1:poscoarse ns1:AUX ;
+    ns1:previousWord ns1:word_0_2_15 ;
+    ns1:word "é" .
+
+ns1:word_0_2_19 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:edge ns1:case ;
+    ns1:feat_definite ns1:def ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_2_20 ;
+    ns1:id 19 ;
+    ns1:lemma "de o" ;
+    ns1:nextWord ns1:word_0_2_20 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_2_18 ;
+    ns1:word "da" .
+
+ns1:word_0_2_21 a ns1:Word ;
+    ns1:edge ns1:cop ;
+    ns1:feat_mood ns1:ind ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_person ns1:3 ;
+    ns1:feat_tense ns1:pres ;
+    ns1:feat_verbform ns1:fin ;
+    ns1:head ns1:word_0_2_22 ;
+    ns1:id 21 ;
+    ns1:lemma "ser" ;
+    ns1:nextWord ns1:word_0_2_22 ;
+    ns1:pos ns1:AUX ;
+    ns1:poscoarse ns1:AUX ;
+    ns1:previousWord ns1:word_0_2_20 ;
+    ns1:word "é" .
+
+ns1:word_0_2_23 a ns1:Word ;
+    ns1:edge ns1:det ;
+    ns1:feat_definite ns1:def ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_2_24 ;
+    ns1:id 23 ;
+    ns1:lemma "o" ;
+    ns1:nextWord ns1:word_0_2_24 ;
+    ns1:pos ns1:DET ;
+    ns1:poscoarse ns1:DET ;
+    ns1:previousWord ns1:word_0_2_22 ;
+    ns1:word "a" .
+
+ns1:word_0_2_25 a ns1:Word ;
+    ns1:edge ns1:case ;
+    ns1:feat_definite ns1:def ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:plur ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_2_26 ;
+    ns1:id 25 ;
+    ns1:lemma "de o" ;
+    ns1:nextWord ns1:word_0_2_26 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_2_24 ;
+    ns1:word "dos" .
+
+ns1:word_0_2_27 a ns1:Word ;
+    ns1:edge ns1:amod ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:plur ;
+    ns1:head ns1:word_0_2_26 ;
+    ns1:id 27 ;
+    ns1:lemma "circundante" ;
+    ns1:nextWord ns1:word_0_2_28 ;
+    ns1:pos ns1:ADJ ;
+    ns1:poscoarse ns1:ADJ ;
+    ns1:previousWord ns1:word_0_2_26 ;
+    ns1:word "circundantes" .
+
+ns1:word_0_2_3 a ns1:Word ;
+    ns1:edge ns1:mark ;
+    ns1:head ns1:word_0_2_12 ;
+    ns1:id 3 ;
+    ns1:lemma "que" ;
+    ns1:nextWord ns1:word_0_2_4 ;
+    ns1:pos ns1:SCONJ ;
+    ns1:poscoarse ns1:SCONJ ;
+    ns1:previousWord ns1:word_0_2_2 ;
+    ns1:word "que" .
+
+ns1:word_0_2_4 a ns1:Word ;
+    ns1:edge ns1:det ;
+    ns1:feat_definite ns1:def ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_2_5 ;
+    ns1:id 4 ;
+    ns1:lemma "o" ;
+    ns1:nextWord ns1:word_0_2_5 ;
+    ns1:pos ns1:DET ;
+    ns1:poscoarse ns1:DET ;
+    ns1:previousWord ns1:word_0_2_3 ;
+    ns1:word "a" .
+
+ns1:word_0_2_6 a ns1:Word ;
+    ns1:edge ns1:case ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_2_7 ;
+    ns1:id 6 ;
+    ns1:lemma "por o" ;
+    ns1:nextWord ns1:word_0_2_7 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_2_5 ;
+    ns1:word "pela" .
+
+ns1:word_0_2_8 a ns1:Word ;
+    ns1:OIE_tags "A1" ;
+    ns1:edge ns1:det ;
+    ns1:feat_definite ns1:def ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_2_9 ;
+    ns1:id 8 ;
+    ns1:lemma "o" ;
+    ns1:nextWord ns1:word_0_2_9 ;
+    ns1:pos ns1:DET ;
+    ns1:poscoarse ns1:DET ;
+    ns1:previousWord ns1:word_0_2_7 ;
+    ns1:word "a" .
+
+ns1:word_0_3_10 a ns1:Word ;
+    ns1:OIE_tags "A1" ;
+    ns1:edge <http://www.ieeta-bit.pt/OpenIE_s2_pt#flat:name> ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_3_9 ;
+    ns1:id 10 ;
+    ns1:lemma "von" ;
+    ns1:nextWord ns1:word_0_3_11 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_3_9 ;
+    ns1:word "von" .
+
+ns1:word_0_3_11 a ns1:Word ;
+    ns1:OIE_tags "A1" ;
+    ns1:edge <http://www.ieeta-bit.pt/OpenIE_s2_pt#flat:name> ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_3_9 ;
+    ns1:id 11 ;
+    ns1:lemma "Ribbentrop" ;
+    ns1:nextWord ns1:word_0_3_12 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_3_10 ;
+    ns1:word "Ribbentrop" .
+
+ns1:word_0_3_14 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:edge ns1:det ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:plur ;
+    ns1:feat_prontype ns1:ind ;
+    ns1:head ns1:word_0_3_15 ;
+    ns1:id 14 ;
+    ns1:lemma "outro" ;
+    ns1:nextWord ns1:word_0_3_15 ;
+    ns1:pos ns1:DET ;
+    ns1:poscoarse ns1:DET ;
+    ns1:previousWord ns1:word_0_3_13 ;
+    ns1:word "outros" .
+
+ns1:word_0_3_16 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:edge ns1:mark ;
+    ns1:head ns1:word_0_3_17 ;
+    ns1:id 16 ;
+    ns1:lemma "a" ;
+    ns1:nextWord ns1:word_0_3_17 ;
+    ns1:pos ns1:SCONJ ;
+    ns1:poscoarse ns1:SCONJ ;
+    ns1:previousWord ns1:word_0_3_15 ;
+    ns1:word "a" .
+
+ns1:word_0_3_18 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:edge ns1:case ;
+    ns1:head ns1:word_0_3_20 ;
+    ns1:id 18 ;
+    ns1:lemma "com" ;
+    ns1:nextWord ns1:word_0_3_19 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_3_17 ;
+    ns1:word "com" .
+
+ns1:word_0_3_19 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:edge ns1:det ;
+    ns1:feat_definite ns1:def ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_3_20 ;
+    ns1:id 19 ;
+    ns1:lemma "o" ;
+    ns1:nextWord ns1:word_0_3_20 ;
+    ns1:pos ns1:DET ;
+    ns1:poscoarse ns1:DET ;
+    ns1:previousWord ns1:word_0_3_18 ;
+    ns1:word "a" .
+
+ns1:word_0_3_21 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:edge ns1:case ;
+    ns1:head ns1:word_0_3_24 ;
+    ns1:id 21 ;
+    ns1:lemma "para" ;
+    ns1:nextWord ns1:word_0_3_22 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_3_20 ;
+    ns1:word "para" .
+
+ns1:word_0_3_22 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:edge ns1:det ;
+    ns1:feat_definite ns1:def ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_3_24 ;
+    ns1:id 22 ;
+    ns1:lemma "o" ;
+    ns1:nextWord ns1:word_0_3_23 ;
+    ns1:pos ns1:DET ;
+    ns1:poscoarse ns1:DET ;
+    ns1:previousWord ns1:word_0_3_21 ;
+    ns1:word "a" .
+
+ns1:word_0_3_23 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:edge ns1:amod ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_3_24 ;
+    ns1:id 23 ;
+    ns1:lemma "próximo" ;
+    ns1:nextWord ns1:word_0_3_24 ;
+    ns1:pos ns1:ADJ ;
+    ns1:poscoarse ns1:ADJ ;
+    ns1:previousWord ns1:word_0_3_22 ;
+    ns1:word "próxima" .
+
+ns1:word_0_3_3 a ns1:Word ;
+    ns1:edge ns1:punct ;
+    ns1:head ns1:word_0_3_2 ;
+    ns1:id 3 ;
+    ns1:lemma "," ;
+    ns1:nextWord ns1:word_0_3_4 ;
+    ns1:pos ns1:PUNCT ;
+    ns1:poscoarse ns1:PUNCT ;
+    ns1:previousWord ns1:word_0_3_2 ;
+    ns1:word "," .
+
+ns1:word_0_3_4 a ns1:Word ;
+    ns1:edge ns1:case ;
+    ns1:head ns1:word_0_3_5 ;
+    ns1:id 4 ;
+    ns1:lemma "de" ;
+    ns1:nextWord ns1:word_0_3_5 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_3_3 ;
+    ns1:word "de" .
+
+ns1:word_0_3_6 a ns1:Word ;
+    ns1:edge ns1:case ;
+    ns1:head ns1:word_0_3_7 ;
+    ns1:id 6 ;
+    ns1:lemma "a" ;
+    ns1:nextWord ns1:word_0_3_7 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_3_5 ;
+    ns1:word "a" .
+
+ns1:word_0_3_8 a ns1:Word ;
+    ns1:edge ns1:punct ;
+    ns1:head ns1:word_0_3_2 ;
+    ns1:id 8 ;
+    ns1:lemma "," ;
+    ns1:nextWord ns1:word_0_3_9 ;
+    ns1:pos ns1:PUNCT ;
+    ns1:poscoarse ns1:PUNCT ;
+    ns1:previousWord ns1:word_0_3_7 ;
+    ns1:word "," .
+
+ns1:word_0_4_10 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:edge ns1:case ;
+    ns1:feat_definite ns1:def ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_4_11 ;
+    ns1:id 10 ;
+    ns1:lemma "de o" ;
+    ns1:nextWord ns1:word_0_4_11 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_4_9 ;
+    ns1:word "da" .
+
+ns1:word_0_4_12 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:edge ns1:case ;
+    ns1:feat_definite ns1:def ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:plur ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_4_13 ;
+    ns1:id 12 ;
+    ns1:lemma "de o" ;
+    ns1:nextWord ns1:word_0_4_13 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_4_11 ;
+    ns1:word "das" .
+
+ns1:word_0_4_14 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:edge ns1:case ;
+    ns1:head ns1:word_0_4_15 ;
+    ns1:id 14 ;
+    ns1:lemma "para" ;
+    ns1:nextWord ns1:word_0_4_15 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_4_13 ;
+    ns1:word "para" .
+
+ns1:word_0_4_16 a ns1:Word ;
+    ns1:edge ns1:punct ;
+    ns1:head ns1:word_0_4_20 ;
+    ns1:id 16 ;
+    ns1:lemma "," ;
+    ns1:nextWord ns1:word_0_4_17 ;
+    ns1:pos ns1:PUNCT ;
+    ns1:poscoarse ns1:PUNCT ;
+    ns1:previousWord ns1:word_0_4_15 ;
+    ns1:word "," .
+
+ns1:word_0_4_17 a ns1:Word ;
+    ns1:edge ns1:mark ;
+    ns1:head ns1:word_0_4_20 ;
+    ns1:id 17 ;
+    ns1:lemma "pois" ;
+    ns1:nextWord ns1:word_0_4_18 ;
+    ns1:pos ns1:SCONJ ;
+    ns1:poscoarse ns1:SCONJ ;
+    ns1:previousWord ns1:word_0_4_16 ;
+    ns1:word "pois" .
+
+ns1:word_0_4_18 a ns1:Word ;
+    ns1:edge ns1:det ;
+    ns1:feat_definite ns1:def ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_4_19 ;
+    ns1:id 18 ;
+    ns1:lemma "o" ;
+    ns1:nextWord ns1:word_0_4_19 ;
+    ns1:pos ns1:DET ;
+    ns1:poscoarse ns1:DET ;
+    ns1:previousWord ns1:word_0_4_17 ;
+    ns1:word "a" .
+
+ns1:word_0_4_21 a ns1:Word ;
+    ns1:edge ns1:det ;
+    ns1:feat_definite ns1:def ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_4_22 ;
+    ns1:id 21 ;
+    ns1:lemma "o" ;
+    ns1:nextWord ns1:word_0_4_22 ;
+    ns1:pos ns1:DET ;
+    ns1:poscoarse ns1:DET ;
+    ns1:previousWord ns1:word_0_4_20 ;
+    ns1:word "o" .
+
+ns1:word_0_4_23 a ns1:Word ;
+    ns1:edge <http://www.ieeta-bit.pt/OpenIE_s2_pt#flat:name> ;
+    ns1:feat_numtype ns1:card ;
+    ns1:head ns1:word_0_4_22 ;
+    ns1:id 23 ;
+    ns1:lemma "100" ;
+    ns1:nextWord ns1:word_0_4_24 ;
+    ns1:pos ns1:NUM ;
+    ns1:poscoarse ns1:NUM ;
+    ns1:previousWord ns1:word_0_4_22 ;
+    ns1:word "100" .
+
+ns1:word_0_4_24 a ns1:Word ;
+    ns1:edge ns1:case ;
+    ns1:head ns1:word_0_4_25 ;
+    ns1:id 24 ;
+    ns1:lemma "com" ;
+    ns1:nextWord ns1:word_0_4_25 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_4_23 ;
+    ns1:word "com" .
+
+ns1:word_0_4_26 a ns1:Word ;
+    ns1:edge ns1:amod ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:plur ;
+    ns1:head ns1:word_0_4_25 ;
+    ns1:id 26 ;
+    ns1:lemma "intercambiável" ;
+    ns1:nextWord ns1:word_0_4_27 ;
+    ns1:pos ns1:ADJ ;
+    ns1:poscoarse ns1:ADJ ;
+    ns1:previousWord ns1:word_0_4_25 ;
+    ns1:word "intercambiáveis" .
+
+ns1:word_0_4_27 a ns1:Word ;
+    ns1:edge ns1:case ;
+    ns1:head ns1:word_0_4_28 ;
+    ns1:id 27 ;
+    ns1:lemma "de" ;
+    ns1:nextWord ns1:word_0_4_28 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_4_26 ;
+    ns1:word "de" .
+
+ns1:word_0_4_29 a ns1:Word ;
+    ns1:edge ns1:amod ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_4_28 ;
+    ns1:id 29 ;
+    ns1:lemma "frontal" ;
+    ns1:nextWord ns1:word_0_4_30 ;
+    ns1:pos ns1:ADJ ;
+    ns1:poscoarse ns1:ADJ ;
+    ns1:previousWord ns1:word_0_4_28 ;
+    ns1:word "frontal" .
+
+ns1:word_0_4_3 a ns1:Word ;
+    ns1:OIE_tags "A1" ;
+    ns1:edge ns1:amod ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:plur ;
+    ns1:head ns1:word_0_4_2 ;
+    ns1:id 3 ;
+    ns1:lemma "barato" ;
+    ns1:nextWord ns1:word_0_4_4 ;
+    ns1:pos ns1:ADJ ;
+    ns1:poscoarse ns1:ADJ ;
+    ns1:previousWord ns1:word_0_4_2 ;
+    ns1:word "baratas" .
+
+ns1:word_0_4_31 a ns1:Word ;
+    ns1:edge ns1:advmod ;
+    ns1:head ns1:word_0_4_33 ;
+    ns1:id 31 ;
+    ns1:lemma "apenas" ;
+    ns1:nextWord ns1:word_0_4_32 ;
+    ns1:pos ns1:ADV ;
+    ns1:poscoarse ns1:ADV ;
+    ns1:previousWord ns1:word_0_4_30 ;
+    ns1:word "apenas" .
+
+ns1:word_0_4_32 a ns1:Word ;
+    ns1:edge ns1:case ;
+    ns1:head ns1:word_0_4_33 ;
+    ns1:id 32 ;
+    ns1:lemma "para" ;
+    ns1:nextWord ns1:word_0_4_33 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_4_31 ;
+    ns1:word "para" .
+
+ns1:word_0_4_34 a ns1:Word ;
+    ns1:edge ns1:case ;
+    ns1:head ns1:word_0_4_35 ;
+    ns1:id 34 ;
+    ns1:lemma "de" ;
+    ns1:nextWord ns1:word_0_4_35 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_4_33 ;
+    ns1:word "de" .
+
+ns1:word_0_4_36 a ns1:Word ;
+    ns1:edge ns1:amod ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_4_37 ;
+    ns1:id 36 ;
+    ns1:lemma "único" ;
+    ns1:nextWord ns1:word_0_4_37 ;
+    ns1:pos ns1:ADJ ;
+    ns1:poscoarse ns1:ADJ ;
+    ns1:previousWord ns1:word_0_4_35 ;
+    ns1:word "única" .
+
+ns1:word_0_4_38 a ns1:Word ;
+    ns1:edge ns1:cc ;
+    ns1:head ns1:word_0_4_39 ;
+    ns1:id 38 ;
+    ns1:lemma "e" ;
+    ns1:nextWord ns1:word_0_4_39 ;
+    ns1:pos ns1:CCONJ ;
+    ns1:poscoarse ns1:CCONJ ;
+    ns1:previousWord ns1:word_0_4_37 ;
+    ns1:word "e" .
+
+ns1:word_0_4_4 a ns1:Word ;
+    ns1:OIE_tags "A1" ;
+    ns1:edge ns1:case ;
+    ns1:head ns1:word_0_4_5 ;
+    ns1:id 4 ;
+    ns1:lemma "de" ;
+    ns1:nextWord ns1:word_0_4_5 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_4_3 ;
+    ns1:word "de" .
+
+ns1:word_0_4_40 a ns1:Word ;
+    ns1:edge ns1:case ;
+    ns1:feat_definite ns1:def ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:plur ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_4_41 ;
+    ns1:id 40 ;
+    ns1:lemma "de o" ;
+    ns1:nextWord ns1:word_0_4_41 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_4_39 ;
+    ns1:word "das" .
+
+ns1:word_0_4_42 a ns1:Word ;
+    ns1:edge ns1:case ;
+    ns1:head ns1:word_0_4_43 ;
+    ns1:id 42 ;
+    ns1:lemma "de" ;
+    ns1:nextWord ns1:word_0_4_43 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_4_41 ;
+    ns1:word "de" .
+
+ns1:word_0_4_44 a ns1:Word ;
+    ns1:edge ns1:case ;
+    ns1:head ns1:word_0_4_45 ;
+    ns1:id 44 ;
+    ns1:lemma "de" ;
+    ns1:nextWord ns1:word_0_4_45 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_4_43 ;
+    ns1:word "de" .
+
+ns1:word_0_4_47 a ns1:Word ;
+    ns1:edge <http://www.ieeta-bit.pt/OpenIE_s2_pt#flat:name> ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_4_46 ;
+    ns1:id 47 ;
+    ns1:lemma "Ikon" ;
+    ns1:nextWord ns1:word_0_4_48 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_4_46 ;
+    ns1:word "Ikon" .
+
+ns1:word_0_4_48 a ns1:Word ;
+    ns1:edge <http://www.ieeta-bit.pt/OpenIE_s2_pt#flat:name> ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_4_46 ;
+    ns1:id 48 ;
+    ns1:lemma "Contaflex" ;
+    ns1:nextWord ns1:word_0_4_49 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_4_47 ;
+    ns1:word "Contaflex" .
+
+ns1:word_0_4_6 a ns1:Word ;
+    ns1:OIE_tags "A1" ;
+    ns1:edge ns1:case ;
+    ns1:head ns1:word_0_4_7 ;
+    ns1:id 6 ;
+    ns1:lemma "de" ;
+    ns1:nextWord ns1:word_0_4_7 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_4_5 ;
+    ns1:word "de" .
+
+ns1:word_0_4_8 a ns1:Word ;
+    ns1:edge ns1:advmod ;
+    ns1:head ns1:word_0_4_9 ;
+    ns1:id 8 ;
+    ns1:lemma "também" ;
+    ns1:nextWord ns1:word_0_4_9 ;
+    ns1:pos ns1:ADV ;
+    ns1:poscoarse ns1:ADV ;
+    ns1:previousWord ns1:word_0_4_7 ;
+    ns1:word "também" .
+
+ns1:word_0_5_10 a ns1:Word ;
+    ns1:OIE_tags "R" ;
+    ns1:edge ns1:amod ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_5_11 ;
+    ns1:id 10 ;
+    ns1:lemma "PRIMEIRA" ;
+    ns1:nextWord ns1:word_0_5_11 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_5_9 ;
+    ns1:word "PRIMEIRA" .
+
+ns1:word_0_5_12 a ns1:Word ;
+    ns1:OIE_tags "R" ;
+    ns1:edge <http://www.ieeta-bit.pt/OpenIE_s2_pt#flat:name> ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_5_11 ;
+    ns1:id 12 ;
+    ns1:lemma "Nacional" ;
+    ns1:nextWord ns1:word_0_5_13 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_5_11 ;
+    ns1:word "Nacional" .
+
+ns1:word_0_5_13 a ns1:Word ;
+    ns1:OIE_tags "R" ;
+    ns1:edge ns1:case ;
+    ns1:head ns1:word_0_5_14 ;
+    ns1:id 13 ;
+    ns1:lemma "em" ;
+    ns1:nextWord ns1:word_0_5_14 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_5_12 ;
+    ns1:word "em" .
+
+ns1:word_0_5_15 a ns1:Word ;
+    ns1:OIE_tags "R" ;
+    ns1:edge ns1:mark ;
+    ns1:head ns1:word_0_5_16 ;
+    ns1:id 15 ;
+    ns1:lemma "para" ;
+    ns1:nextWord ns1:word_0_5_16 ;
+    ns1:pos ns1:SCONJ ;
+    ns1:poscoarse ns1:SCONJ ;
+    ns1:previousWord ns1:word_0_5_14 ;
+    ns1:word "para" .
+
+ns1:word_0_5_18 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:edge ns1:appos ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_5_17 ;
+    ns1:id 18 ;
+    ns1:lemma "Lego" ;
+    ns1:nextWord ns1:word_0_5_19 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_5_17 ;
+    ns1:word "Lego" .
+
+ns1:word_0_5_3 a ns1:Word ;
+    ns1:edge ns1:case ;
+    ns1:head ns1:word_0_5_4 ;
+    ns1:id 3 ;
+    ns1:lemma "de" ;
+    ns1:nextWord ns1:word_0_5_4 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_5_2 ;
+    ns1:word "de" .
+
+ns1:word_0_5_5 a ns1:Word ;
+    ns1:edge ns1:punct ;
+    ns1:head ns1:word_0_5_2 ;
+    ns1:id 5 ;
+    ns1:lemma "," ;
+    ns1:nextWord ns1:word_0_5_6 ;
+    ns1:pos ns1:PUNCT ;
+    ns1:poscoarse ns1:PUNCT ;
+    ns1:previousWord ns1:word_0_5_4 ;
+    ns1:word "," .
+
+ns1:word_0_5_7 a ns1:Word ;
+    ns1:OIE_tags "A1" ;
+    ns1:edge <http://www.ieeta-bit.pt/OpenIE_s2_pt#flat:name> ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_5_6 ;
+    ns1:id 7 ;
+    ns1:lemma "Wozniak" ;
+    ns1:nextWord ns1:word_0_5_8 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_5_6 ;
+    ns1:word "Wozniak" .
+
+ns1:word_0_5_9 a ns1:Word ;
+    ns1:OIE_tags "R" ;
+    ns1:edge ns1:case ;
+    ns1:feat_definite ns1:def ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_5_11 ;
+    ns1:id 9 ;
+    ns1:lemma "de o" ;
+    ns1:nextWord ns1:word_0_5_10 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_5_8 ;
+    ns1:word "da" .
+
+ns1:word_0_6_10 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:edge ns1:cop ;
+    ns1:feat_mood ns1:ind ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_person ns1:3 ;
+    ns1:feat_tense ns1:pres ;
+    ns1:feat_verbform ns1:fin ;
+    ns1:head ns1:word_0_6_11 ;
+    ns1:id 10 ;
+    ns1:lemma "ser" ;
+    ns1:nextWord ns1:word_0_6_11 ;
+    ns1:pos ns1:AUX ;
+    ns1:poscoarse ns1:AUX ;
+    ns1:previousWord ns1:word_0_6_9 ;
+    ns1:word "é" .
+
+ns1:word_0_6_3 a ns1:Word ;
+    ns1:OIE_tags "A1" ;
+    ns1:edge ns1:nmod ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_6_2 ;
+    ns1:id 3 ;
+    ns1:lemma "cliente" ;
+    ns1:nextWord ns1:word_0_6_4 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_6_2 ;
+    ns1:word "cliente" .
+
+ns1:word_0_6_4 a ns1:Word ;
+    ns1:OIE_tags "A1" ;
+    ns1:edge ns1:case ;
+    ns1:head ns1:word_0_6_5 ;
+    ns1:id 4 ;
+    ns1:lemma "de" ;
+    ns1:nextWord ns1:word_0_6_5 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_6_3 ;
+    ns1:word "de" .
+
+ns1:word_0_6_6 a ns1:Word ;
+    ns1:edge ns1:punct ;
+    ns1:head ns1:word_0_6_2 ;
+    ns1:id 6 ;
+    ns1:lemma "," ;
+    ns1:nextWord ns1:word_0_6_7 ;
+    ns1:pos ns1:PUNCT ;
+    ns1:poscoarse ns1:PUNCT ;
+    ns1:previousWord ns1:word_0_6_5 ;
+    ns1:word "," .
+
+ns1:word_0_6_8 a ns1:Word ;
+    ns1:OIE_tags "R" ;
+    ns1:edge ns1:det ;
+    ns1:feat_definite ns1:def ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_6_9 ;
+    ns1:id 8 ;
+    ns1:lemma "o" ;
+    ns1:nextWord ns1:word_0_6_9 ;
+    ns1:pos ns1:DET ;
+    ns1:poscoarse ns1:DET ;
+    ns1:previousWord ns1:word_0_6_7 ;
+    ns1:word "o" .
+
+ns1:word_0_7_10 a ns1:Word ;
+    ns1:edge ns1:case ;
+    ns1:feat_definite ns1:def ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_7_11 ;
+    ns1:id 10 ;
+    ns1:lemma "de o" ;
+    ns1:nextWord ns1:word_0_7_11 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_7_9 ;
+    ns1:word "da" .
+
+ns1:word_0_7_12 a ns1:Word ;
+    ns1:edge ns1:punct ;
+    ns1:head ns1:word_0_7_13 ;
+    ns1:id 12 ;
+    ns1:lemma "(" ;
+    ns1:nextWord ns1:word_0_7_13 ;
+    ns1:pos ns1:PUNCT ;
+    ns1:poscoarse ns1:PUNCT ;
+    ns1:previousWord ns1:word_0_7_11 ;
+    ns1:word "(" .
+
+ns1:word_0_7_14 a ns1:Word ;
+    ns1:edge <http://www.ieeta-bit.pt/OpenIE_s2_pt#flat:name> ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_7_13 ;
+    ns1:id 14 ;
+    ns1:lemma "Pahor" ;
+    ns1:nextWord ns1:word_0_7_15 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_7_13 ;
+    ns1:word "Pahor" .
+
+ns1:word_0_7_15 a ns1:Word ;
+    ns1:edge ns1:punct ;
+    ns1:head ns1:word_0_7_13 ;
+    ns1:id 15 ;
+    ns1:lemma ")" ;
+    ns1:nextWord ns1:word_0_7_16 ;
+    ns1:pos ns1:PUNCT ;
+    ns1:poscoarse ns1:PUNCT ;
+    ns1:previousWord ns1:word_0_7_14 ;
+    ns1:word ")" .
+
+ns1:word_0_7_16 a ns1:Word ;
+    ns1:edge ns1:punct ;
+    ns1:head ns1:word_0_7_23 ;
+    ns1:id 16 ;
+    ns1:lemma "," ;
+    ns1:nextWord ns1:word_0_7_17 ;
+    ns1:pos ns1:PUNCT ;
+    ns1:poscoarse ns1:PUNCT ;
+    ns1:previousWord ns1:word_0_7_15 ;
+    ns1:word "," .
+
+ns1:word_0_7_17 a ns1:Word ;
+    ns1:edge ns1:advmod ;
+    ns1:head ns1:word_0_7_23 ;
+    ns1:id 17 ;
+    ns1:lemma "enquanto" ;
+    ns1:nextWord ns1:word_0_7_18 ;
+    ns1:pos ns1:ADV ;
+    ns1:poscoarse ns1:ADV ;
+    ns1:previousWord ns1:word_0_7_16 ;
+    ns1:word "enquanto" .
+
+ns1:word_0_7_18 a ns1:Word ;
+    ns1:edge ns1:det ;
+    ns1:feat_definite ns1:def ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_7_19 ;
+    ns1:id 18 ;
+    ns1:lemma "o" ;
+    ns1:nextWord ns1:word_0_7_19 ;
+    ns1:pos ns1:DET ;
+    ns1:poscoarse ns1:DET ;
+    ns1:previousWord ns1:word_0_7_17 ;
+    ns1:word "o" .
+
+ns1:word_0_7_20 a ns1:Word ;
+    ns1:edge ns1:amod ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_7_19 ;
+    ns1:id 20 ;
+    ns1:lemma "operacional" ;
+    ns1:nextWord ns1:word_0_7_21 ;
+    ns1:pos ns1:ADJ ;
+    ns1:poscoarse ns1:ADJ ;
+    ns1:previousWord ns1:word_0_7_19 ;
+    ns1:word "operacional" .
+
+ns1:word_0_7_21 a ns1:Word ;
+    ns1:edge ns1:cop ;
+    ns1:feat_mood ns1:ind ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_person ns1:3 ;
+    ns1:feat_tense ns1:pres ;
+    ns1:feat_verbform ns1:fin ;
+    ns1:head ns1:word_0_7_23 ;
+    ns1:id 21 ;
+    ns1:lemma "estar" ;
+    ns1:nextWord ns1:word_0_7_22 ;
+    ns1:pos ns1:AUX ;
+    ns1:poscoarse ns1:AUX ;
+    ns1:previousWord ns1:word_0_7_20 ;
+    ns1:word "está" .
+
+ns1:word_0_7_22 a ns1:Word ;
+    ns1:edge ns1:case ;
+    ns1:feat_definite ns1:def ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_7_23 ;
+    ns1:id 22 ;
+    ns1:lemma "em o" ;
+    ns1:nextWord ns1:word_0_7_23 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_7_21 ;
+    ns1:word "no" .
+
+ns1:word_0_7_24 a ns1:Word ;
+    ns1:edge ns1:case ;
+    ns1:feat_definite ns1:def ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_7_25 ;
+    ns1:id 24 ;
+    ns1:lemma "de o" ;
+    ns1:nextWord ns1:word_0_7_25 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_7_23 ;
+    ns1:word "do" .
+
+ns1:word_0_7_26 a ns1:Word ;
+    ns1:edge ns1:case ;
+    ns1:feat_definite ns1:def ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_7_27 ;
+    ns1:id 26 ;
+    ns1:lemma "de o" ;
+    ns1:nextWord ns1:word_0_7_27 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_7_25 ;
+    ns1:word "do" .
+
+ns1:word_0_7_28 a ns1:Word ;
+    ns1:edge <http://www.ieeta-bit.pt/OpenIE_s2_pt#flat:name> ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_7_27 ;
+    ns1:id 28 ;
+    ns1:lemma "Geral" ;
+    ns1:nextWord ns1:word_0_7_29 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_7_27 ;
+    ns1:word "Geral" .
+
+ns1:word_0_7_29 a ns1:Word ;
+    ns1:edge ns1:case ;
+    ns1:feat_definite ns1:def ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:plur ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_7_30 ;
+    ns1:id 29 ;
+    ns1:lemma "de o" ;
+    ns1:nextWord ns1:word_0_7_30 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_7_28 ;
+    ns1:word "dos" .
+
+ns1:word_0_7_3 a ns1:Word ;
+    ns1:edge ns1:case ;
+    ns1:feat_definite ns1:def ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_7_4 ;
+    ns1:id 3 ;
+    ns1:lemma "de o" ;
+    ns1:nextWord ns1:word_0_7_4 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_7_2 ;
+    ns1:word "da" .
+
+ns1:word_0_7_31 a ns1:Word ;
+    ns1:edge ns1:case ;
+    ns1:feat_definite ns1:def ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_7_32 ;
+    ns1:id 31 ;
+    ns1:lemma "de o" ;
+    ns1:nextWord ns1:word_0_7_32 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_7_30 ;
+    ns1:word "da" .
+
+ns1:word_0_7_33 a ns1:Word ;
+    ns1:edge ns1:punct ;
+    ns1:head ns1:word_0_7_34 ;
+    ns1:id 33 ;
+    ns1:lemma "," ;
+    ns1:nextWord ns1:word_0_7_34 ;
+    ns1:pos ns1:PUNCT ;
+    ns1:poscoarse ns1:PUNCT ;
+    ns1:previousWord ns1:word_0_7_32 ;
+    ns1:word "," .
+
+ns1:word_0_7_35 a ns1:Word ;
+    ns1:OIE_tags "R" ;
+    ns1:edge ns1:nsubj ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:rel ;
+    ns1:head ns1:word_0_7_36 ;
+    ns1:id 35 ;
+    ns1:lemma "que" ;
+    ns1:nextWord ns1:word_0_7_36 ;
+    ns1:pos ns1:PRON ;
+    ns1:poscoarse ns1:PRON ;
+    ns1:previousWord ns1:word_0_7_34 ;
+    ns1:word "que" .
+
+ns1:word_0_7_37 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:edge ns1:case ;
+    ns1:head ns1:word_0_7_38 ;
+    ns1:id 37 ;
+    ns1:lemma "desde" ;
+    ns1:nextWord ns1:word_0_7_38 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_7_36 ;
+    ns1:word "desde" .
+
+ns1:word_0_7_39 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:edge ns1:case ;
+    ns1:head ns1:word_0_7_40 ;
+    ns1:id 39 ;
+    ns1:lemma "de" ;
+    ns1:nextWord ns1:word_0_7_40 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_7_38 ;
+    ns1:word "de" .
+
+ns1:word_0_7_41 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:edge ns1:case ;
+    ns1:feat_definite ns1:def ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_7_42 ;
+    ns1:id 41 ;
+    ns1:lemma "por o" ;
+    ns1:nextWord ns1:word_0_7_42 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_7_40 ;
+    ns1:word "pelo" .
+
+ns1:word_0_7_44 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:edge <http://www.ieeta-bit.pt/OpenIE_s2_pt#flat:name> ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_7_43 ;
+    ns1:id 44 ;
+    ns1:lemma "Božič" ;
+    ns1:nextWord ns1:word_0_7_45 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_7_43 ;
+    ns1:word "Božič" .
+
+ns1:word_0_7_5 a ns1:Word ;
+    ns1:edge ns1:cop ;
+    ns1:feat_mood ns1:ind ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_person ns1:3 ;
+    ns1:feat_tense ns1:pres ;
+    ns1:feat_verbform ns1:fin ;
+    ns1:head ns1:word_0_7_7 ;
+    ns1:id 5 ;
+    ns1:lemma "ser" ;
+    ns1:nextWord ns1:word_0_7_6 ;
+    ns1:pos ns1:AUX ;
+    ns1:poscoarse ns1:AUX ;
+    ns1:previousWord ns1:word_0_7_4 ;
+    ns1:word "é" .
+
+ns1:word_0_7_6 a ns1:Word ;
+    ns1:edge ns1:det ;
+    ns1:feat_definite ns1:def ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_7_7 ;
+    ns1:id 6 ;
+    ns1:lemma "o" ;
+    ns1:nextWord ns1:word_0_7_7 ;
+    ns1:pos ns1:DET ;
+    ns1:poscoarse ns1:DET ;
+    ns1:previousWord ns1:word_0_7_5 ;
+    ns1:word "o" .
+
+ns1:word_0_7_8 a ns1:Word ;
+    ns1:edge ns1:case ;
+    ns1:feat_definite ns1:def ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_7_9 ;
+    ns1:id 8 ;
+    ns1:lemma "de o" ;
+    ns1:nextWord ns1:word_0_7_9 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_7_7 ;
+    ns1:word "da" .
+
+ns1:word_0_8_11 a ns1:Word ;
+    ns1:edge ns1:case ;
+    ns1:head ns1:word_0_8_12 ;
+    ns1:id 11 ;
+    ns1:lemma "de" ;
+    ns1:nextWord ns1:word_0_8_12 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_8_10 ;
+    ns1:word "de" .
+
+ns1:word_0_8_13 a ns1:Word ;
+    ns1:edge ns1:det ;
+    ns1:feat_definite ns1:def ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:plur ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_8_14 ;
+    ns1:id 13 ;
+    ns1:lemma "o" ;
+    ns1:nextWord ns1:word_0_8_14 ;
+    ns1:pos ns1:DET ;
+    ns1:poscoarse ns1:DET ;
+    ns1:previousWord ns1:word_0_8_12 ;
+    ns1:word "as" .
+
+ns1:word_0_8_15 a ns1:Word ;
+    ns1:edge <http://www.ieeta-bit.pt/OpenIE_s2_pt#flat:name> ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:plur ;
+    ns1:head ns1:word_0_8_14 ;
+    ns1:id 15 ;
+    ns1:lemma "Forças" ;
+    ns1:nextWord ns1:word_0_8_16 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_8_14 ;
+    ns1:word "Forças" .
+
+ns1:word_0_8_16 a ns1:Word ;
+    ns1:edge <http://www.ieeta-bit.pt/OpenIE_s2_pt#flat:name> ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_8_14 ;
+    ns1:id 16 ;
+    ns1:lemma "Militares" ;
+    ns1:nextWord ns1:word_0_8_17 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_8_15 ;
+    ns1:word "Militares" .
+
+ns1:word_0_8_3 a ns1:Word ;
+    ns1:edge ns1:punct ;
+    ns1:head ns1:word_0_8_2 ;
+    ns1:id 3 ;
+    ns1:lemma "," ;
+    ns1:nextWord ns1:word_0_8_4 ;
+    ns1:pos ns1:PUNCT ;
+    ns1:poscoarse ns1:PUNCT ;
+    ns1:previousWord ns1:word_0_8_2 ;
+    ns1:word "," .
+
+ns1:word_0_8_4 a ns1:Word ;
+    ns1:OIE_tags "R" ;
+    ns1:edge ns1:det ;
+    ns1:feat_definite ns1:def ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:plur ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_8_5 ;
+    ns1:id 4 ;
+    ns1:lemma "o" ;
+    ns1:nextWord ns1:word_0_8_5 ;
+    ns1:pos ns1:DET ;
+    ns1:poscoarse ns1:DET ;
+    ns1:previousWord ns1:word_0_8_3 ;
+    ns1:word "os" .
+
+ns1:word_0_8_6 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:edge ns1:cop ;
+    ns1:feat_mood ns1:ind ;
+    ns1:feat_number ns1:plur ;
+    ns1:feat_person ns1:3 ;
+    ns1:feat_tense ns1:imp ;
+    ns1:feat_verbform ns1:fin ;
+    ns1:head ns1:word_0_8_8 ;
+    ns1:id 6 ;
+    ns1:lemma "ser" ;
+    ns1:nextWord ns1:word_0_8_7 ;
+    ns1:pos ns1:AUX ;
+    ns1:poscoarse ns1:AUX ;
+    ns1:previousWord ns1:word_0_8_5 ;
+    ns1:word "eram" .
+
+ns1:word_0_8_7 a ns1:Word ;
+    ns1:edge ns1:advmod ;
+    ns1:head ns1:word_0_8_8 ;
+    ns1:id 7 ;
+    ns1:lemma "extremamente" ;
+    ns1:nextWord ns1:word_0_8_8 ;
+    ns1:pos ns1:ADV ;
+    ns1:poscoarse ns1:ADV ;
+    ns1:previousWord ns1:word_0_8_6 ;
+    ns1:word "extremamente" .
+
+ns1:word_0_8_9 a ns1:Word ;
+    ns1:edge ns1:case ;
+    ns1:feat_definite ns1:def ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_8_10 ;
+    ns1:id 9 ;
+    ns1:lemma "a o" ;
+    ns1:nextWord ns1:word_0_8_10 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_8_8 ;
+    ns1:word "à" .
+
+ns1:word_0_9_11 a ns1:Word ;
+    ns1:OIE_tags "A1" ;
+    ns1:edge ns1:case ;
+    ns1:head ns1:word_0_9_12 ;
+    ns1:id 11 ;
+    ns1:lemma "de" ;
+    ns1:nextWord ns1:word_0_9_12 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_9_10 ;
+    ns1:word "de" .
+
+ns1:word_0_9_13 a ns1:Word ;
+    ns1:OIE_tags "A1" ;
+    ns1:edge ns1:case ;
+    ns1:head ns1:word_0_9_14 ;
+    ns1:id 13 ;
+    ns1:lemma "de" ;
+    ns1:nextWord ns1:word_0_9_14 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_9_12 ;
+    ns1:word "de" .
+
+ns1:word_0_9_15 a ns1:Word ;
+    ns1:edge ns1:punct ;
+    ns1:head ns1:word_0_9_3 ;
+    ns1:id 15 ;
+    ns1:lemma "," ;
+    ns1:nextWord ns1:word_0_9_16 ;
+    ns1:pos ns1:PUNCT ;
+    ns1:poscoarse ns1:PUNCT ;
+    ns1:previousWord ns1:word_0_9_14 ;
+    ns1:word "," .
+
+ns1:word_0_9_17 a ns1:Word ;
+    ns1:OIE_tags "R" ;
+    ns1:edge <http://www.ieeta-bit.pt/OpenIE_s2_pt#flat:name> ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_9_16 ;
+    ns1:id 17 ;
+    ns1:lemma "Platz" ;
+    ns1:nextWord ns1:word_0_9_18 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_9_16 ;
+    ns1:word "Platz" .
+
+ns1:word_0_9_2 a ns1:Word ;
+    ns1:OIE_tags "A1" ;
+    ns1:edge ns1:det ;
+    ns1:feat_definite ns1:def ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_9_3 ;
+    ns1:id 2 ;
+    ns1:lemma "o" ;
+    ns1:nextWord ns1:word_0_9_3 ;
+    ns1:pos ns1:DET ;
+    ns1:poscoarse ns1:DET ;
+    ns1:previousWord ns1:word_0_9_1 ;
+    ns1:word "a" .
+
+ns1:word_0_9_20 a ns1:Word ;
+    ns1:edge ns1:case ;
+    ns1:feat_definite ns1:def ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:plur ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_9_21 ;
+    ns1:id 20 ;
+    ns1:lemma "de o" ;
+    ns1:nextWord ns1:word_0_9_21 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_9_19 ;
+    ns1:word "dos" .
+
+ns1:word_0_9_22 a ns1:Word ;
+    ns1:edge ns1:advmod ;
+    ns1:head ns1:word_0_9_23 ;
+    ns1:id 22 ;
+    ns1:lemma "mais" ;
+    ns1:nextWord ns1:word_0_9_23 ;
+    ns1:pos ns1:ADV ;
+    ns1:poscoarse ns1:ADV ;
+    ns1:previousWord ns1:word_0_9_21 ;
+    ns1:word "mais" .
+
+ns1:word_0_9_24 a ns1:Word ;
+    ns1:edge ns1:obl ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:plur ;
+    ns1:feat_prontype ns1:rel ;
+    ns1:head ns1:word_0_9_29 ;
+    ns1:id 24 ;
+    ns1:lemma "onde" ;
+    ns1:nextWord ns1:word_0_9_25 ;
+    ns1:pos ns1:PRON ;
+    ns1:poscoarse ns1:PRON ;
+    ns1:previousWord ns1:word_0_9_23 ;
+    ns1:word "onde" .
+
+ns1:word_0_9_25 a ns1:Word ;
+    ns1:edge ns1:det ;
+    ns1:feat_definite ns1:def ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_9_26 ;
+    ns1:id 25 ;
+    ns1:lemma "o" ;
+    ns1:nextWord ns1:word_0_9_26 ;
+    ns1:pos ns1:DET ;
+    ns1:poscoarse ns1:DET ;
+    ns1:previousWord ns1:word_0_9_24 ;
+    ns1:word "o" .
+
+ns1:word_0_9_27 a ns1:Word ;
+    ns1:edge <http://www.ieeta-bit.pt/OpenIE_s2_pt#aux:pass> ;
+    ns1:feat_mood ns1:ind ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_person ns1:3 ;
+    ns1:feat_tense ns1:past ;
+    ns1:feat_verbform ns1:fin ;
+    ns1:head ns1:word_0_9_29 ;
+    ns1:id 27 ;
+    ns1:lemma "ser" ;
+    ns1:nextWord ns1:word_0_9_28 ;
+    ns1:pos ns1:AUX ;
+    ns1:poscoarse ns1:AUX ;
+    ns1:previousWord ns1:word_0_9_26 ;
+    ns1:word "foi" .
+
+ns1:word_0_9_28 a ns1:Word ;
+    ns1:edge ns1:punct ;
+    ns1:feat_definite ns1:ind ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_9_29 ;
+    ns1:id 28 ;
+    ns1:lemma "" ;
+    ns1:nextWord ns1:word_0_9_29 ;
+    ns1:pos ns1:DET ;
+    ns1:poscoarse ns1:DET ;
+    ns1:previousWord ns1:word_0_9_27 ;
+    ns1:word "" .
+
+ns1:word_0_9_30 a ns1:Word ;
+    ns1:edge ns1:obj ;
+    ns1:feat_numtype ns1:card ;
+    ns1:head ns1:word_0_9_29 ;
+    ns1:id 30 ;
+    ns1:lemma "" ;
+    ns1:nextWord ns1:word_0_9_31 ;
+    ns1:pos ns1:NUM ;
+    ns1:poscoarse ns1:NUM ;
+    ns1:previousWord ns1:word_0_9_29 ;
+    ns1:word "" .
+
+ns1:word_0_9_31 a ns1:Word ;
+    ns1:edge ns1:mark ;
+    ns1:head ns1:word_0_9_32 ;
+    ns1:id 31 ;
+    ns1:lemma "para" ;
+    ns1:nextWord ns1:word_0_9_32 ;
+    ns1:pos ns1:SCONJ ;
+    ns1:poscoarse ns1:SCONJ ;
+    ns1:previousWord ns1:word_0_9_30 ;
+    ns1:word "para" .
+
+ns1:word_0_9_33 a ns1:Word ;
+    ns1:edge ns1:det ;
+    ns1:feat_definite ns1:ind ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_9_35 ;
+    ns1:id 33 ;
+    ns1:lemma "um" ;
+    ns1:nextWord ns1:word_0_9_34 ;
+    ns1:pos ns1:DET ;
+    ns1:poscoarse ns1:DET ;
+    ns1:previousWord ns1:word_0_9_32 ;
+    ns1:word "uma" .
+
+ns1:word_0_9_34 a ns1:Word ;
+    ns1:edge ns1:amod ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_9_35 ;
+    ns1:id 34 ;
+    ns1:lemma "novo" ;
+    ns1:nextWord ns1:word_0_9_35 ;
+    ns1:pos ns1:ADJ ;
+    ns1:poscoarse ns1:ADJ ;
+    ns1:previousWord ns1:word_0_9_33 ;
+    ns1:word "nova" .
+
+ns1:word_0_9_36 a ns1:Word ;
+    ns1:edge ns1:case ;
+    ns1:head ns1:word_0_9_37 ;
+    ns1:id 36 ;
+    ns1:lemma "entre" ;
+    ns1:nextWord ns1:word_0_9_37 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_9_35 ;
+    ns1:word "entre" .
+
+ns1:word_0_9_38 a ns1:Word ;
+    ns1:edge <http://www.ieeta-bit.pt/OpenIE_s2_pt#flat:name> ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_9_37 ;
+    ns1:id 38 ;
+    ns1:lemma "Oriental" ;
+    ns1:nextWord ns1:word_0_9_39 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_9_37 ;
+    ns1:word "Oriental" .
+
+ns1:word_0_9_39 a ns1:Word ;
+    ns1:edge ns1:cc ;
+    ns1:head ns1:word_0_9_40 ;
+    ns1:id 39 ;
+    ns1:lemma "e" ;
+    ns1:nextWord ns1:word_0_9_40 ;
+    ns1:pos ns1:CCONJ ;
+    ns1:poscoarse ns1:CCONJ ;
+    ns1:previousWord ns1:word_0_9_38 ;
+    ns1:word "e" .
+
+ns1:word_0_9_4 a ns1:Word ;
+    ns1:OIE_tags "A1" ;
+    ns1:edge ns1:amod ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_9_3 ;
+    ns1:id 4 ;
+    ns1:lemma "inicial" ;
+    ns1:nextWord ns1:word_0_9_5 ;
+    ns1:pos ns1:ADJ ;
+    ns1:poscoarse ns1:ADJ ;
+    ns1:previousWord ns1:word_0_9_3 ;
+    ns1:word "inicial" .
+
+ns1:word_0_9_5 a ns1:Word ;
+    ns1:OIE_tags "A1" ;
+    ns1:edge ns1:case ;
+    ns1:feat_definite ns1:def ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:art ;
+    ns1:head ns1:word_0_9_6 ;
+    ns1:id 5 ;
+    ns1:lemma "de o" ;
+    ns1:nextWord ns1:word_0_9_6 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_9_4 ;
+    ns1:word "do" .
+
+ns1:word_0_9_7 a ns1:Word ;
+    ns1:OIE_tags "A1" ;
+    ns1:edge ns1:case ;
+    ns1:head ns1:word_0_9_8 ;
+    ns1:id 7 ;
+    ns1:lemma "de" ;
+    ns1:nextWord ns1:word_0_9_8 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_9_6 ;
+    ns1:word "de" .
+
+ns1:word_0_9_9 a ns1:Word ;
+    ns1:OIE_tags "A1" ;
+    ns1:edge ns1:case ;
+    ns1:head ns1:word_0_9_10 ;
+    ns1:id 9 ;
+    ns1:lemma "em" ;
+    ns1:nextWord ns1:word_0_9_10 ;
+    ns1:pos ns1:ADP ;
+    ns1:poscoarse ns1:ADP ;
+    ns1:previousWord ns1:word_0_9_8 ;
+    ns1:word "em" .
+
+ns1:Attributes a owl:Class .
+
+ns1:Sentence_0_10 a ns1:Sentence ;
+    ns1:depGraph ns1:word_0_10_5 ;
+    ns1:fromText ns1:Text_0 ;
+    ns1:nextSentence ns1:Sentence_0_11 ;
+    ns1:previousSentence ns1:Sentence_0_9 ;
+    ns1:senttext "A piada britanica e dito ter sido colocado para descansar quando  a paz se rompeu  no final da guerra , como os paises concordam com uma proibicao Joke Warfare na Convencao de Genebra ." .
+
+ns1:Sentence_0_11 a ns1:Sentence ;
+    ns1:depGraph ns1:word_0_11_51 ;
+    ns1:fromText ns1:Text_0 ;
+    ns1:nextSentence ns1:Sentence_0_12 ;
+    ns1:previousSentence ns1:Sentence_0_10 ;
+    ns1:senttext "Foi provado por essas investigacoes que uma superficie recem-limpa de zinco , se carregada com eletricidade negativa , rapidamente perde esta carga no entanto pequeno efeito fotoeletrico pode ser quando a luz ultra-violeta cai sobre a superficie ; enquanto se a superficie e descarregada para comecar , o efeito fotoeletrico adquire uma carga positiva quando exposta a luz , a electrificacao negativa saindo para o gas pelo qual o metal e cercado ; esta electrificacao positiva pode ser muito ; esta electrificacao positiva pode ser muito ." .
+
+ns1:Sentence_0_12 a ns1:Sentence ;
+    ns1:depGraph ns1:word_0_12_10 ;
+    ns1:fromText ns1:Text_0 ;
+    ns1:nextSentence ns1:Sentence_0_13 ;
+    ns1:previousSentence ns1:Sentence_0_11 ;
+    ns1:senttext "Em 1939 o industrialista da Filadelfia Samuel Simeon Fels encomendou Samuel Barber a escrever um concerto de violino para a divisao de Fels , Iso Briselli , um graduado do Curtis Institute of Music no mesmo ano que Samuel Barber , 1934 ." .
+
+ns1:Sentence_0_2 a ns1:Sentence ;
+    ns1:depGraph ns1:word_0_2_2 ;
+    ns1:fromText ns1:Text_0 ;
+    ns1:nextSentence ns1:Sentence_0_3 ;
+    ns1:previousSentence ns1:Sentence_0_1 ;
+    ns1:senttext "Pesquisas mostram que a razao pela qual a mente completa uma figura regular que nao e percebida atraves da sensacao e aumentar a regularidade dos estimulos circundantes ." .
+
+ns1:Sentence_0_3 a ns1:Sentence ;
+    ns1:depGraph ns1:word_0_3_12 ;
+    ns1:fromText ns1:Text_0 ;
+    ns1:nextSentence ns1:Sentence_0_4 ;
+    ns1:previousSentence ns1:Sentence_0_2 ;
+    ns1:senttext "No primeiro , de 1938 a 1939 , Joachim von Ribbentrop tentou persuadir outros estados a alinhar-se com a Alemanha para a proxima guerra ." .
+
+ns1:Sentence_0_4 a ns1:Sentence ;
+    ns1:depGraph ns1:word_0_4_9 ;
+    ns1:fromText ns1:Text_0 ;
+    ns1:nextSentence ns1:Sentence_0_5 ;
+    ns1:previousSentence ns1:Sentence_0_3 ;
+    ns1:senttext "As cameras baratas de obturador de folhas tambem beneficiaram da medicao das lentes para tras , pois a Topcon introduziu o Auto 100 com lentes intercambiaveis de montagem frontal projetadas apenas para camera de reflexo unica lente e uma das cameras de obturador de folhas Zeiss Ikon Contaflex ." .
+
+ns1:Sentence_0_5 a ns1:Sentence ;
+    ns1:depGraph ns1:word_0_5_8 ;
+    ns1:fromText ns1:Text_0 ;
+    ns1:nextSentence ns1:Sentence_0_6 ;
+    ns1:previousSentence ns1:Sentence_0_4 ;
+    ns1:senttext "Em marco de 2006 , Steve Wozniak participou da PRIMEIRA Competicao Nacional em Atlanta para mostrar robos Lego ." .
+
+ns1:Sentence_0_6 a ns1:Sentence ;
+    ns1:depGraph ns1:word_0_6_11 ;
+    ns1:fromText ns1:Text_0 ;
+    ns1:nextSentence ns1:Sentence_0_7 ;
+    ns1:previousSentence ns1:Sentence_0_5 ;
+    ns1:senttext "Na configuracao cliente de NAT , configurar o gateway e suficiente ." .
+
+ns1:Sentence_0_7 a ns1:Sentence ;
+    ns1:depGraph ns1:word_0_7_7 ;
+    ns1:fromText ns1:Text_0 ;
+    ns1:nextSentence ns1:Sentence_0_8 ;
+    ns1:previousSentence ns1:Sentence_0_6 ;
+    ns1:senttext "O Comandante-em-Chefe da SAF e o Presidente da Republica da Eslovenia ( Borut Pahor ) , enquanto o comando operacional esta no dominio do Chefe do Estado-Maior Geral dos Militares da Eslovenia , cargo que ocupa desde fevereiro de 2012 pelo brigadeiro Dobran Bozic ." .
+
+ns1:Sentence_0_8 a ns1:Sentence ;
+    ns1:depGraph ns1:word_0_8_8 ;
+    ns1:fromText ns1:Text_0 ;
+    ns1:nextSentence ns1:Sentence_0_9 ;
+    ns1:previousSentence ns1:Sentence_0_7 ;
+    ns1:senttext "Nesses casos , os Vikings eram extremamente vulneraveis a perseguicao de Alfred as Grandes Forcas Militares ." .
+
+ns1:Sentence_0_9 a ns1:Sentence ;
+    ns1:depGraph ns1:word_0_9_18 ;
+    ns1:fromText ns1:Text_0 ;
+    ns1:nextSentence ns1:Sentence_0_10 ;
+    ns1:previousSentence ns1:Sentence_0_8 ;
+    ns1:senttext "Apos a abertura inicial do Muro de Berlim em 9 de novembro de 1989 , Potsdamer Platz tornou-se um dos locais mais antigos onde o Muro foi  quebrado  para criar uma nova fronteira entre Berlim Oriental e Ocidental ." .
+
+ns1:acc a ns1:feat_case .
+
+ns1:feat_prontype a owl:ObjectProperty ;
+    rdfs:subClassOf ns1:feats .
+
+ns1:feat_verbform a owl:ObjectProperty ;
+    rdfs:subClassOf ns1:feats .
+
+<http://www.ieeta-bit.pt/OpenIE_s2_pt#nsubj:pass> a ns1:edge .
+
+ns1:prs a ns1:feat_prontype .
+
+ns1:word_0_10_11 a ns1:Word ;
+    ns1:depGraph ns1:word_0_10_12 ;
+    ns1:edge ns1:advmod ;
+    ns1:head ns1:word_0_10_10 ;
+    ns1:id 11 ;
+    ns1:lemma "quando" ;
+    ns1:nextWord ns1:word_0_10_12 ;
+    ns1:pos ns1:ADV ;
+    ns1:poscoarse ns1:ADV ;
+    ns1:previousWord ns1:word_0_10_10 ;
+    ns1:word "quando" .
+
+ns1:word_0_10_12 a ns1:Word ;
+    ns1:depGraph ns1:word_0_10_16 ;
+    ns1:edge ns1:obl ;
+    ns1:feat_numtype ns1:card ;
+    ns1:head ns1:word_0_10_11 ;
+    ns1:id 12 ;
+    ns1:lemma "" ;
+    ns1:nextWord ns1:word_0_10_13 ;
+    ns1:pos ns1:NUM ;
+    ns1:poscoarse ns1:NUM ;
+    ns1:previousWord ns1:word_0_10_11 ;
+    ns1:word "" .
+
+ns1:word_0_10_14 a ns1:Word ;
+    ns1:depGraph ns1:word_0_10_13 ;
+    ns1:edge ns1:nsubj ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_10_16 ;
+    ns1:id 14 ;
+    ns1:lemma "paz" ;
+    ns1:nextWord ns1:word_0_10_15 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_10_13 ;
+    ns1:word "paz" .
+
+ns1:word_0_10_21 a ns1:Word ;
+    ns1:depGraph ns1:word_0_10_20 ;
+    ns1:edge ns1:nmod ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_10_19 ;
+    ns1:id 21 ;
+    ns1:lemma "guerra" ;
+    ns1:nextWord ns1:word_0_10_22 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_10_20 ;
+    ns1:word "guerra" .
+
+ns1:word_0_10_25 a ns1:Word ;
+    ns1:OIE_tags "A1" ;
+    ns1:depGraph ns1:word_0_10_24 ;
+    ns1:edge ns1:nsubj ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:plur ;
+    ns1:head ns1:word_0_10_26 ;
+    ns1:id 25 ;
+    ns1:lemma "país" ;
+    ns1:nextWord ns1:word_0_10_26 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_10_24 ;
+    ns1:word "países" .
+
+ns1:word_0_10_30 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:depGraph ns1:word_0_10_31 ;
+    ns1:edge ns1:appos ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_10_29 ;
+    ns1:id 30 ;
+    ns1:lemma "Joke" ;
+    ns1:nextWord ns1:word_0_10_31 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_10_29 ;
+    ns1:word "Joke" .
+
+ns1:word_0_10_35 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:depGraph ns1:word_0_10_34 ;
+    ns1:edge ns1:nmod ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_10_33 ;
+    ns1:id 35 ;
+    ns1:lemma "Genebra" ;
+    ns1:nextWord ns1:word_0_10_36 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_10_34 ;
+    ns1:word "Genebra" .
+
+ns1:word_0_11_11 a ns1:Word ;
+    ns1:depGraph ns1:word_0_11_10 ;
+    ns1:edge ns1:nmod ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_11_8 ;
+    ns1:id 11 ;
+    ns1:lemma "zinco" ;
+    ns1:nextWord ns1:word_0_11_12 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_11_10 ;
+    ns1:word "zinco" .
+
+ns1:word_0_11_24 a ns1:Word ;
+    ns1:depGraph ns1:word_0_11_23 ;
+    ns1:edge ns1:nmod ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_11_22 ;
+    ns1:id 24 ;
+    ns1:lemma "entanto" ;
+    ns1:nextWord ns1:word_0_11_25 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_11_23 ;
+    ns1:word "entanto" .
+
+ns1:word_0_11_28 a ns1:Word ;
+    ns1:depGraph ns1:word_0_11_29 ;
+    ns1:edge ns1:csubj ;
+    ns1:feat_mood ns1:ind ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_person ns1:3 ;
+    ns1:feat_tense ns1:pres ;
+    ns1:feat_verbform ns1:fin ;
+    ns1:head ns1:word_0_11_2 ;
+    ns1:id 28 ;
+    ns1:lemma "poder" ;
+    ns1:nextWord ns1:word_0_11_29 ;
+    ns1:pos ns1:VERB ;
+    ns1:poscoarse ns1:VERB ;
+    ns1:previousWord ns1:word_0_11_27 ;
+    ns1:word "pode" .
+
+ns1:word_0_11_42 a ns1:Word ;
+    ns1:depGraph ns1:word_0_11_41 ;
+    ns1:edge <http://www.ieeta-bit.pt/OpenIE_s2_pt#nsubj:pass> ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_11_44 ;
+    ns1:id 42 ;
+    ns1:lemma "superfície" ;
+    ns1:nextWord ns1:word_0_11_43 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_11_41 ;
+    ns1:word "superfície" .
+
+ns1:word_0_11_58 a ns1:Word ;
+    ns1:depGraph ns1:word_0_11_57 ;
+    ns1:edge ns1:obl ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_11_56 ;
+    ns1:id 58 ;
+    ns1:lemma "luz" ;
+    ns1:nextWord ns1:word_0_11_59 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_11_57 ;
+    ns1:word "luz" .
+
+ns1:word_0_11_68 a ns1:Word ;
+    ns1:depGraph ns1:word_0_11_67 ;
+    ns1:edge ns1:obl ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:rel ;
+    ns1:head ns1:word_0_11_72 ;
+    ns1:id 68 ;
+    ns1:lemma "qual" ;
+    ns1:nextWord ns1:word_0_11_69 ;
+    ns1:pos ns1:PRON ;
+    ns1:poscoarse ns1:PRON ;
+    ns1:previousWord ns1:word_0_11_67 ;
+    ns1:word "qual" .
+
+ns1:word_0_11_70 a ns1:Word ;
+    ns1:depGraph ns1:word_0_11_69 ;
+    ns1:edge <http://www.ieeta-bit.pt/OpenIE_s2_pt#nsubj:pass> ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_11_72 ;
+    ns1:id 70 ;
+    ns1:lemma "metal" ;
+    ns1:nextWord ns1:word_0_11_71 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_11_69 ;
+    ns1:word "metal" .
+
+ns1:word_0_11_79 a ns1:Word ;
+    ns1:depGraph ns1:word_0_11_78 ;
+    ns1:edge ns1:xcomp ;
+    ns1:head ns1:word_0_11_77 ;
+    ns1:id 79 ;
+    ns1:lemma "muito" ;
+    ns1:nextWord ns1:word_0_11_80 ;
+    ns1:pos ns1:ADV ;
+    ns1:poscoarse ns1:ADV ;
+    ns1:previousWord ns1:word_0_11_78 ;
+    ns1:word "muito" .
+
+ns1:word_0_11_86 a ns1:Word ;
+    ns1:depGraph ns1:word_0_11_85 ;
+    ns1:edge ns1:xcomp ;
+    ns1:head ns1:word_0_11_84 ;
+    ns1:id 86 ;
+    ns1:lemma "muito" ;
+    ns1:nextWord ns1:word_0_11_87 ;
+    ns1:pos ns1:ADV ;
+    ns1:poscoarse ns1:ADV ;
+    ns1:previousWord ns1:word_0_11_85 ;
+    ns1:word "muito" .
+
+ns1:word_0_12_11 a ns1:Word ;
+    ns1:OIE_tags "R" ;
+    ns1:depGraph ns1:word_0_12_12 ;
+    ns1:edge ns1:obj ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_12_10 ;
+    ns1:id 11 ;
+    ns1:lemma "Samuel" ;
+    ns1:nextWord ns1:word_0_12_12 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_12_10 ;
+    ns1:word "Samuel" .
+
+ns1:word_0_12_2 a ns1:Word ;
+    ns1:depGraph ns1:word_0_12_1 ;
+    ns1:edge ns1:obl ;
+    ns1:feat_numtype ns1:card ;
+    ns1:head ns1:word_0_12_10 ;
+    ns1:id 2 ;
+    ns1:lemma "1939" ;
+    ns1:nextWord ns1:word_0_12_3 ;
+    ns1:pos ns1:NUM ;
+    ns1:poscoarse ns1:NUM ;
+    ns1:previousWord ns1:word_0_12_1 ;
+    ns1:word "1939" .
+
+ns1:word_0_12_23 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:depGraph ns1:word_0_12_22 ;
+    ns1:edge ns1:nmod ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_12_21 ;
+    ns1:id 23 ;
+    ns1:lemma "Fels" ;
+    ns1:nextWord ns1:word_0_12_24 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_12_22 ;
+    ns1:word "Fels" .
+
+ns1:word_0_12_42 a ns1:Word ;
+    ns1:depGraph ns1:word_0_12_41 ;
+    ns1:edge ns1:appos ;
+    ns1:feat_numtype ns1:card ;
+    ns1:head ns1:word_0_12_39 ;
+    ns1:id 42 ;
+    ns1:lemma "1934" ;
+    ns1:nextWord ns1:word_0_12_43 ;
+    ns1:pos ns1:NUM ;
+    ns1:poscoarse ns1:NUM ;
+    ns1:previousWord ns1:word_0_12_41 ;
+    ns1:word "1934" .
+
+ns1:word_0_13_15 a ns1:Word ;
+    ns1:depGraph ns1:word_0_13_14 ;
+    ns1:edge ns1:conj ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:plur ;
+    ns1:head ns1:word_0_13_13 ;
+    ns1:id 15 ;
+    ns1:lemma "overclocked" ;
+    ns1:nextWord ns1:word_0_13_16 ;
+    ns1:pos ns1:ADJ ;
+    ns1:poscoarse ns1:ADJ ;
+    ns1:previousWord ns1:word_0_13_14 ;
+    ns1:word "overclocked" .
+
+ns1:word_0_13_19 a ns1:Word ;
+    ns1:OIE_tags "A1" ;
+    ns1:depGraph ns1:word_0_13_18 ;
+    ns1:edge ns1:nsubj ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_13_21 ;
+    ns1:id 19 ;
+    ns1:lemma "microprocessador" ;
+    ns1:nextWord ns1:word_0_13_20 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_13_18 ;
+    ns1:word "microprocessador" .
+
+ns1:word_0_13_28 a ns1:Word ;
+    ns1:depGraph ns1:word_0_13_27 ;
+    ns1:edge ns1:obl ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_13_26 ;
+    ns1:id 28 ;
+    ns1:lemma "tradução" ;
+    ns1:nextWord ns1:word_0_13_29 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_13_27 ;
+    ns1:word "tradução" .
+
+ns1:word_0_1_8 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:depGraph ns1:word_0_1_7 ;
+    ns1:edge ns1:nmod ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_1_5 ;
+    ns1:id 8 ;
+    ns1:lemma "Anti-AgingGames" ;
+    ns1:nextWord ns1:word_0_1_9 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_1_7 ;
+    ns1:word "Anti-AgingGames" .
+
+ns1:word_0_2_18 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:depGraph ns1:word_0_2_20 ;
+    ns1:edge ns1:advmod ;
+    ns1:head ns1:word_0_2_17 ;
+    ns1:id 18 ;
+    ns1:lemma "através" ;
+    ns1:nextWord ns1:word_0_2_19 ;
+    ns1:pos ns1:ADV ;
+    ns1:poscoarse ns1:ADV ;
+    ns1:previousWord ns1:word_0_2_17 ;
+    ns1:word "através" .
+
+ns1:word_0_2_20 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:depGraph ns1:word_0_2_19 ;
+    ns1:edge ns1:obl ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_2_18 ;
+    ns1:id 20 ;
+    ns1:lemma "sensação" ;
+    ns1:nextWord ns1:word_0_2_21 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_2_19 ;
+    ns1:word "sensação" .
+
+ns1:word_0_2_7 a ns1:Word ;
+    ns1:depGraph ns1:word_0_2_6 ;
+    ns1:edge ns1:obl ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_prontype ns1:rel ;
+    ns1:head ns1:word_0_2_10 ;
+    ns1:id 7 ;
+    ns1:lemma "qual" ;
+    ns1:nextWord ns1:word_0_2_8 ;
+    ns1:pos ns1:PRON ;
+    ns1:poscoarse ns1:PRON ;
+    ns1:previousWord ns1:word_0_2_6 ;
+    ns1:word "qual" .
+
+ns1:word_0_2_9 a ns1:Word ;
+    ns1:OIE_tags "A1" ;
+    ns1:depGraph ns1:word_0_2_8 ;
+    ns1:edge ns1:nsubj ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_2_10 ;
+    ns1:id 9 ;
+    ns1:lemma "mente" ;
+    ns1:nextWord ns1:word_0_2_10 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_2_8 ;
+    ns1:word "mente" .
+
+ns1:word_0_3_15 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:depGraph ns1:word_0_3_14 ;
+    ns1:edge ns1:obj ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:plur ;
+    ns1:head ns1:word_0_3_13 ;
+    ns1:id 15 ;
+    ns1:lemma "estado" ;
+    ns1:nextWord ns1:word_0_3_16 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_3_14 ;
+    ns1:word "estados" .
+
+ns1:word_0_3_7 a ns1:Word ;
+    ns1:depGraph ns1:word_0_3_6 ;
+    ns1:edge ns1:nmod ;
+    ns1:feat_numtype ns1:card ;
+    ns1:head ns1:word_0_3_5 ;
+    ns1:id 7 ;
+    ns1:lemma "1939" ;
+    ns1:nextWord ns1:word_0_3_8 ;
+    ns1:pos ns1:NUM ;
+    ns1:poscoarse ns1:NUM ;
+    ns1:previousWord ns1:word_0_3_6 ;
+    ns1:word "1939" .
+
+ns1:word_0_4_15 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:depGraph ns1:word_0_4_14 ;
+    ns1:edge ns1:advmod ;
+    ns1:head ns1:word_0_4_13 ;
+    ns1:id 15 ;
+    ns1:lemma "trás" ;
+    ns1:nextWord ns1:word_0_4_16 ;
+    ns1:pos ns1:ADV ;
+    ns1:poscoarse ns1:ADV ;
+    ns1:previousWord ns1:word_0_4_14 ;
+    ns1:word "trás" .
+
+ns1:word_0_4_19 a ns1:Word ;
+    ns1:depGraph ns1:word_0_4_18 ;
+    ns1:edge ns1:nsubj ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_4_20 ;
+    ns1:id 19 ;
+    ns1:lemma "Topcon" ;
+    ns1:nextWord ns1:word_0_4_20 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_4_18 ;
+    ns1:word "Topcon" .
+
+ns1:word_0_4_35 a ns1:Word ;
+    ns1:depGraph ns1:word_0_4_34 ;
+    ns1:edge ns1:nmod ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_4_33 ;
+    ns1:id 35 ;
+    ns1:lemma "reflexo" ;
+    ns1:nextWord ns1:word_0_4_36 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_4_34 ;
+    ns1:word "reflexo" .
+
+ns1:word_0_4_37 a ns1:Word ;
+    ns1:depGraph ns1:word_0_4_36 ;
+    ns1:edge ns1:obl ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_4_30 ;
+    ns1:id 37 ;
+    ns1:lemma "lente" ;
+    ns1:nextWord ns1:word_0_4_38 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_4_36 ;
+    ns1:word "lente" .
+
+ns1:word_0_4_7 a ns1:Word ;
+    ns1:OIE_tags "A1" ;
+    ns1:depGraph ns1:word_0_4_6 ;
+    ns1:edge ns1:nmod ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:plur ;
+    ns1:head ns1:word_0_4_5 ;
+    ns1:id 7 ;
+    ns1:lemma "folha" ;
+    ns1:nextWord ns1:word_0_4_8 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_4_6 ;
+    ns1:word "folhas" .
+
+ns1:word_0_5_14 a ns1:Word ;
+    ns1:OIE_tags "R" ;
+    ns1:depGraph ns1:word_0_5_13 ;
+    ns1:edge ns1:nmod ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_5_11 ;
+    ns1:id 14 ;
+    ns1:lemma "Atlanta" ;
+    ns1:nextWord ns1:word_0_5_15 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_5_13 ;
+    ns1:word "Atlanta" .
+
+ns1:word_0_5_17 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:depGraph ns1:word_0_5_18 ;
+    ns1:edge ns1:obj ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:plur ;
+    ns1:head ns1:word_0_5_16 ;
+    ns1:id 17 ;
+    ns1:lemma "robôs" ;
+    ns1:nextWord ns1:word_0_5_18 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_5_16 ;
+    ns1:word "robôs" .
+
+ns1:word_0_5_4 a ns1:Word ;
+    ns1:depGraph ns1:word_0_5_3 ;
+    ns1:edge ns1:nmod ;
+    ns1:feat_numtype ns1:card ;
+    ns1:head ns1:word_0_5_2 ;
+    ns1:id 4 ;
+    ns1:lemma "2006" ;
+    ns1:nextWord ns1:word_0_5_5 ;
+    ns1:pos ns1:NUM ;
+    ns1:poscoarse ns1:NUM ;
+    ns1:previousWord ns1:word_0_5_3 ;
+    ns1:word "2006" .
+
+ns1:word_0_5_6 a ns1:Word ;
+    ns1:OIE_tags "A1" ;
+    ns1:depGraph ns1:word_0_5_7 ;
+    ns1:edge ns1:nsubj ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_5_8 ;
+    ns1:id 6 ;
+    ns1:lemma "Steve" ;
+    ns1:nextWord ns1:word_0_5_7 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_5_5 ;
+    ns1:word "Steve" .
+
+ns1:word_0_6_5 a ns1:Word ;
+    ns1:OIE_tags "A1" ;
+    ns1:depGraph ns1:word_0_6_4 ;
+    ns1:edge ns1:nmod ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_6_2 ;
+    ns1:id 5 ;
+    ns1:lemma "NAT" ;
+    ns1:nextWord ns1:word_0_6_6 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_6_4 ;
+    ns1:word "NAT" .
+
+ns1:word_0_6_9 a ns1:Word ;
+    ns1:OIE_tags "R" ;
+    ns1:depGraph ns1:word_0_6_8 ;
+    ns1:edge ns1:obj ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_6_7 ;
+    ns1:id 9 ;
+    ns1:lemma "gateway" ;
+    ns1:nextWord ns1:word_0_6_10 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_6_8 ;
+    ns1:word "gateway" .
+
+ns1:word_0_7_32 a ns1:Word ;
+    ns1:depGraph ns1:word_0_7_31 ;
+    ns1:edge ns1:nmod ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_7_30 ;
+    ns1:id 32 ;
+    ns1:lemma "Eslovénia" ;
+    ns1:nextWord ns1:word_0_7_33 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_7_31 ;
+    ns1:word "Eslovénia" .
+
+ns1:word_0_7_4 a ns1:Word ;
+    ns1:depGraph ns1:word_0_7_3 ;
+    ns1:edge ns1:nmod ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_7_2 ;
+    ns1:id 4 ;
+    ns1:lemma "SAF" ;
+    ns1:nextWord ns1:word_0_7_5 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_7_3 ;
+    ns1:word "SAF" .
+
+ns1:word_0_7_40 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:depGraph ns1:word_0_7_39 ;
+    ns1:edge ns1:nmod ;
+    ns1:feat_numtype ns1:card ;
+    ns1:head ns1:word_0_7_38 ;
+    ns1:id 40 ;
+    ns1:lemma "2012" ;
+    ns1:nextWord ns1:word_0_7_41 ;
+    ns1:pos ns1:NUM ;
+    ns1:poscoarse ns1:NUM ;
+    ns1:previousWord ns1:word_0_7_39 ;
+    ns1:word "2012" .
+
+ns1:word_0_7_43 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:depGraph ns1:word_0_7_44 ;
+    ns1:edge ns1:appos ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_7_42 ;
+    ns1:id 43 ;
+    ns1:lemma "Dobran" ;
+    ns1:nextWord ns1:word_0_7_44 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_7_42 ;
+    ns1:word "Dobran" .
+
+ns1:word_0_8_12 a ns1:Word ;
+    ns1:depGraph ns1:word_0_8_11 ;
+    ns1:edge ns1:nmod ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_8_10 ;
+    ns1:id 12 ;
+    ns1:lemma "Alfred" ;
+    ns1:nextWord ns1:word_0_8_13 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_8_11 ;
+    ns1:word "Alfred" .
+
+ns1:word_0_8_5 a ns1:Word ;
+    ns1:OIE_tags "R" ;
+    ns1:depGraph ns1:word_0_8_4 ;
+    ns1:edge ns1:nsubj ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:plur ;
+    ns1:head ns1:word_0_8_8 ;
+    ns1:id 5 ;
+    ns1:lemma "Vikings" ;
+    ns1:nextWord ns1:word_0_8_6 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_8_4 ;
+    ns1:word "Vikings" .
+
+ns1:word_0_9_14 a ns1:Word ;
+    ns1:OIE_tags "A1" ;
+    ns1:depGraph ns1:word_0_9_13 ;
+    ns1:edge ns1:nmod ;
+    ns1:feat_numtype ns1:card ;
+    ns1:head ns1:word_0_9_12 ;
+    ns1:id 14 ;
+    ns1:lemma "1989" ;
+    ns1:nextWord ns1:word_0_9_15 ;
+    ns1:pos ns1:NUM ;
+    ns1:poscoarse ns1:NUM ;
+    ns1:previousWord ns1:word_0_9_13 ;
+    ns1:word "1989" .
+
+ns1:word_0_9_16 a ns1:Word ;
+    ns1:OIE_tags "R" ;
+    ns1:depGraph ns1:word_0_9_17 ;
+    ns1:edge ns1:nsubj ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_9_18 ;
+    ns1:id 16 ;
+    ns1:lemma "Potsdamer" ;
+    ns1:nextWord ns1:word_0_9_17 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_9_15 ;
+    ns1:word "Potsdamer" .
+
+ns1:word_0_9_19 a ns1:Word ;
+    ns1:depGraph ns1:word_0_9_21 ;
+    ns1:edge ns1:obj ;
+    ns1:feat_numtype ns1:card ;
+    ns1:head ns1:word_0_9_18 ;
+    ns1:id 19 ;
+    ns1:lemma "um" ;
+    ns1:nextWord ns1:word_0_9_20 ;
+    ns1:pos ns1:NUM ;
+    ns1:poscoarse ns1:NUM ;
+    ns1:previousWord ns1:word_0_9_18 ;
+    ns1:word "um" .
+
+ns1:word_0_9_23 a ns1:Word ;
+    ns1:depGraph ns1:word_0_9_22 ;
+    ns1:edge ns1:amod ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:plur ;
+    ns1:head ns1:word_0_9_21 ;
+    ns1:id 23 ;
+    ns1:lemma "antigo" ;
+    ns1:nextWord ns1:word_0_9_24 ;
+    ns1:pos ns1:ADJ ;
+    ns1:poscoarse ns1:ADJ ;
+    ns1:previousWord ns1:word_0_9_22 ;
+    ns1:word "antigos" .
+
+ns1:word_0_9_26 a ns1:Word ;
+    ns1:depGraph ns1:word_0_9_25 ;
+    ns1:edge ns1:nsubj ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_9_29 ;
+    ns1:id 26 ;
+    ns1:lemma "Muro" ;
+    ns1:nextWord ns1:word_0_9_27 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_9_25 ;
+    ns1:word "Muro" .
+
+ns1:word_0_9_40 a ns1:Word ;
+    ns1:depGraph ns1:word_0_9_39 ;
+    ns1:edge ns1:conj ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_9_37 ;
+    ns1:id 40 ;
+    ns1:lemma "Ocidental" ;
+    ns1:nextWord ns1:word_0_9_41 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_9_39 ;
+    ns1:word "Ocidental" .
+
+ns1:word_0_9_8 a ns1:Word ;
+    ns1:OIE_tags "A1" ;
+    ns1:depGraph ns1:word_0_9_7 ;
+    ns1:edge ns1:nmod ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_9_6 ;
+    ns1:id 8 ;
+    ns1:lemma "Berlim" ;
+    ns1:nextWord ns1:word_0_9_9 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_9_7 ;
+    ns1:word "Berlim" .
+
+ns1:dem a ns1:feat_prontype .
+
+ns1:pass a ns1:feat_voice .
+
+ns1:rel a ns1:feat_prontype .
+
+ns1:word_0_10_19 a ns1:Word ;
+    ns1:depGraph ns1:word_0_10_18,
+        ns1:word_0_10_21 ;
+    ns1:edge ns1:obl ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_10_16 ;
+    ns1:id 19 ;
+    ns1:lemma "final" ;
+    ns1:nextWord ns1:word_0_10_20 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_10_18 ;
+    ns1:word "final" .
+
+ns1:word_0_10_2 a ns1:Word ;
+    ns1:depGraph ns1:word_0_10_1,
+        ns1:word_0_10_3 ;
+    ns1:edge <http://www.ieeta-bit.pt/OpenIE_s2_pt#nsubj:pass> ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_10_5 ;
+    ns1:id 2 ;
+    ns1:lemma "piada" ;
+    ns1:nextWord ns1:word_0_10_3 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_10_1 ;
+    ns1:word "piada" .
+
+ns1:word_0_10_33 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:depGraph ns1:word_0_10_32,
+        ns1:word_0_10_35 ;
+    ns1:edge ns1:nmod ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_10_29 ;
+    ns1:id 33 ;
+    ns1:lemma "Convenção" ;
+    ns1:nextWord ns1:word_0_10_34 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_10_32 ;
+    ns1:word "Convenção" .
+
+ns1:word_0_11_20 a ns1:Word ;
+    ns1:depGraph ns1:word_0_11_18,
+        ns1:word_0_11_19 ;
+    ns1:edge ns1:amod ;
+    ns1:feat_mood ns1:ind ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_person ns1:3 ;
+    ns1:feat_tense ns1:pres ;
+    ns1:feat_verbform ns1:fin ;
+    ns1:head ns1:word_0_11_16 ;
+    ns1:id 20 ;
+    ns1:lemma "perder" ;
+    ns1:nextWord ns1:word_0_11_21 ;
+    ns1:pos ns1:VERB ;
+    ns1:poscoarse ns1:VERB ;
+    ns1:previousWord ns1:word_0_11_19 ;
+    ns1:word "perde" .
+
+ns1:word_0_11_22 a ns1:Word ;
+    ns1:depGraph ns1:word_0_11_21,
+        ns1:word_0_11_24 ;
+    ns1:edge ns1:obj ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_11_14 ;
+    ns1:id 22 ;
+    ns1:lemma "carga" ;
+    ns1:nextWord ns1:word_0_11_23 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_11_21 ;
+    ns1:word "carga" .
+
+ns1:word_0_11_26 a ns1:Word ;
+    ns1:depGraph ns1:word_0_11_25,
+        ns1:word_0_11_27 ;
+    ns1:edge ns1:obl ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_11_14 ;
+    ns1:id 26 ;
+    ns1:lemma "efeito" ;
+    ns1:nextWord ns1:word_0_11_27 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_11_25 ;
+    ns1:word "efeito" .
+
+ns1:word_0_11_32 a ns1:Word ;
+    ns1:depGraph ns1:word_0_11_31,
+        ns1:word_0_11_33 ;
+    ns1:edge ns1:nsubj ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_11_34 ;
+    ns1:id 32 ;
+    ns1:lemma "luz" ;
+    ns1:nextWord ns1:word_0_11_33 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_11_31 ;
+    ns1:word "luz" .
+
+ns1:word_0_11_37 a ns1:Word ;
+    ns1:depGraph ns1:word_0_11_35,
+        ns1:word_0_11_36 ;
+    ns1:edge ns1:obl ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_11_34 ;
+    ns1:id 37 ;
+    ns1:lemma "superfície" ;
+    ns1:nextWord ns1:word_0_11_38 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_11_36 ;
+    ns1:word "superfície" .
+
+ns1:word_0_11_46 a ns1:Word ;
+    ns1:depGraph ns1:word_0_11_45,
+        ns1:word_0_11_47 ;
+    ns1:edge ns1:advcl ;
+    ns1:feat_verbform ns1:inf ;
+    ns1:head ns1:word_0_11_44 ;
+    ns1:id 46 ;
+    ns1:lemma "começar" ;
+    ns1:nextWord ns1:word_0_11_47 ;
+    ns1:pos ns1:VERB ;
+    ns1:poscoarse ns1:VERB ;
+    ns1:previousWord ns1:word_0_11_45 ;
+    ns1:word "começar" .
+
+ns1:word_0_11_49 a ns1:Word ;
+    ns1:depGraph ns1:word_0_11_48,
+        ns1:word_0_11_50 ;
+    ns1:edge ns1:nsubj ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_11_51 ;
+    ns1:id 49 ;
+    ns1:lemma "efeito" ;
+    ns1:nextWord ns1:word_0_11_50 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_11_48 ;
+    ns1:word "efeito" .
+
+ns1:word_0_11_61 a ns1:Word ;
+    ns1:depGraph ns1:word_0_11_60,
+        ns1:word_0_11_62 ;
+    ns1:edge ns1:nsubj ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_11_63 ;
+    ns1:id 61 ;
+    ns1:lemma "electrificação" ;
+    ns1:nextWord ns1:word_0_11_62 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_11_60 ;
+    ns1:word "electrificação" .
+
+ns1:word_0_11_63 a ns1:Word ;
+    ns1:depGraph ns1:word_0_11_61,
+        ns1:word_0_11_66 ;
+    ns1:edge ns1:advcl ;
+    ns1:feat_verbform ns1:ger ;
+    ns1:head ns1:word_0_11_51 ;
+    ns1:id 63 ;
+    ns1:lemma "sair" ;
+    ns1:nextWord ns1:word_0_11_64 ;
+    ns1:pos ns1:VERB ;
+    ns1:poscoarse ns1:VERB ;
+    ns1:previousWord ns1:word_0_11_62 ;
+    ns1:word "saindo" .
+
+ns1:word_0_11_75 a ns1:Word ;
+    ns1:OIE_tags "A1" ;
+    ns1:depGraph ns1:word_0_11_74,
+        ns1:word_0_11_76 ;
+    ns1:edge ns1:nsubj ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_11_77 ;
+    ns1:id 75 ;
+    ns1:lemma "electrificação" ;
+    ns1:nextWord ns1:word_0_11_76 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_11_74 ;
+    ns1:word "electrificação" .
+
+ns1:word_0_11_82 a ns1:Word ;
+    ns1:OIE_tags "A1" ;
+    ns1:depGraph ns1:word_0_11_81,
+        ns1:word_0_11_83 ;
+    ns1:edge ns1:nsubj ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_11_84 ;
+    ns1:id 82 ;
+    ns1:lemma "electrificação" ;
+    ns1:nextWord ns1:word_0_11_83 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_11_81 ;
+    ns1:word "electrificação" .
+
+ns1:word_0_12_18 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:depGraph ns1:word_0_12_17,
+        ns1:word_0_12_21 ;
+    ns1:edge ns1:nmod ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_12_16 ;
+    ns1:id 18 ;
+    ns1:lemma "violino" ;
+    ns1:nextWord ns1:word_0_12_19 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_12_17 ;
+    ns1:word "violino" .
+
+ns1:word_0_12_25 a ns1:Word ;
+    ns1:depGraph ns1:word_0_12_24,
+        ns1:word_0_12_26 ;
+    ns1:edge ns1:appos ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_12_21 ;
+    ns1:id 25 ;
+    ns1:lemma "Iso" ;
+    ns1:nextWord ns1:word_0_12_26 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_12_24 ;
+    ns1:word "Iso" .
+
+ns1:word_0_12_37 a ns1:Word ;
+    ns1:depGraph ns1:word_0_12_35,
+        ns1:word_0_12_36 ;
+    ns1:edge ns1:obl ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_12_14 ;
+    ns1:id 37 ;
+    ns1:lemma "ano" ;
+    ns1:nextWord ns1:word_0_12_38 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_12_36 ;
+    ns1:word "ano" .
+
+ns1:word_0_12_4 a ns1:Word ;
+    ns1:OIE_tags "A1" ;
+    ns1:depGraph ns1:word_0_12_3,
+        ns1:word_0_12_6 ;
+    ns1:edge ns1:nsubj ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_12_10 ;
+    ns1:id 4 ;
+    ns1:lemma "industrialista" ;
+    ns1:nextWord ns1:word_0_12_5 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_12_3 ;
+    ns1:word "industrialista" .
+
+ns1:word_0_13_22 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:depGraph ns1:word_0_13_20,
+        ns1:word_0_13_23 ;
+    ns1:edge ns1:xcomp ;
+    ns1:feat_verbform ns1:inf ;
+    ns1:head ns1:word_0_13_21 ;
+    ns1:id 22 ;
+    ns1:lemma "executar" ;
+    ns1:nextWord ns1:word_0_13_23 ;
+    ns1:pos ns1:VERB ;
+    ns1:poscoarse ns1:VERB ;
+    ns1:previousWord ns1:word_0_13_21 ;
+    ns1:word "executar" .
+
+ns1:word_0_13_24 a ns1:Word ;
+    ns1:depGraph ns1:word_0_13_25,
+        ns1:word_0_13_26 ;
+    ns1:edge ns1:appos ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_13_21 ;
+    ns1:id 24 ;
+    ns1:lemma "Series" ;
+    ns1:nextWord ns1:word_0_13_25 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_13_23 ;
+    ns1:word "Series" .
+
+ns1:word_0_13_26 a ns1:Word ;
+    ns1:depGraph ns1:word_0_13_28,
+        ns1:word_0_13_30 ;
+    ns1:edge ns1:advmod ;
+    ns1:head ns1:word_0_13_24 ;
+    ns1:id 26 ;
+    ns1:lemma "através" ;
+    ns1:nextWord ns1:word_0_13_27 ;
+    ns1:pos ns1:ADV ;
+    ns1:poscoarse ns1:ADV ;
+    ns1:previousWord ns1:word_0_13_25 ;
+    ns1:word "através" .
+
+ns1:word_0_13_30 a ns1:Word ;
+    ns1:depGraph ns1:word_0_13_29,
+        ns1:word_0_13_31 ;
+    ns1:edge ns1:obl ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_13_26 ;
+    ns1:id 30 ;
+    ns1:lemma "tempo" ;
+    ns1:nextWord ns1:word_0_13_31 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_13_29 ;
+    ns1:word "tempo" .
+
+ns1:word_0_2_10 a ns1:Word ;
+    ns1:OIE_tags "R" ;
+    ns1:depGraph ns1:word_0_2_7,
+        ns1:word_0_2_9 ;
+    ns1:edge <http://www.ieeta-bit.pt/OpenIE_s2_pt#acl:relcl> ;
+    ns1:feat_mood ns1:ind ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_person ns1:3 ;
+    ns1:feat_tense ns1:pres ;
+    ns1:feat_verbform ns1:fin ;
+    ns1:head ns1:word_0_2_5 ;
+    ns1:id 10 ;
+    ns1:lemma "completo" ;
+    ns1:nextWord ns1:word_0_2_11 ;
+    ns1:pos ns1:VERB ;
+    ns1:poscoarse ns1:VERB ;
+    ns1:previousWord ns1:word_0_2_9 ;
+    ns1:word "completa" .
+
+ns1:word_0_2_22 a ns1:Word ;
+    ns1:depGraph ns1:word_0_2_21,
+        ns1:word_0_2_24 ;
+    ns1:edge ns1:ccomp ;
+    ns1:feat_verbform ns1:inf ;
+    ns1:head ns1:word_0_2_2 ;
+    ns1:id 22 ;
+    ns1:lemma "aumentar" ;
+    ns1:nextWord ns1:word_0_2_23 ;
+    ns1:pos ns1:VERB ;
+    ns1:poscoarse ns1:VERB ;
+    ns1:previousWord ns1:word_0_2_21 ;
+    ns1:word "aumentar" .
+
+ns1:word_0_2_24 a ns1:Word ;
+    ns1:depGraph ns1:word_0_2_23,
+        ns1:word_0_2_26 ;
+    ns1:edge ns1:obj ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_2_22 ;
+    ns1:id 24 ;
+    ns1:lemma "regularidade" ;
+    ns1:nextWord ns1:word_0_2_25 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_2_23 ;
+    ns1:word "regularidade" .
+
+ns1:word_0_2_26 a ns1:Word ;
+    ns1:depGraph ns1:word_0_2_25,
+        ns1:word_0_2_27 ;
+    ns1:edge ns1:nmod ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:plur ;
+    ns1:head ns1:word_0_2_24 ;
+    ns1:id 26 ;
+    ns1:lemma "estímulo" ;
+    ns1:nextWord ns1:word_0_2_27 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_2_25 ;
+    ns1:word "estímulos" .
+
+ns1:word_0_2_5 a ns1:Word ;
+    ns1:depGraph ns1:word_0_2_10,
+        ns1:word_0_2_4 ;
+    ns1:edge ns1:nsubj ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_2_12 ;
+    ns1:id 5 ;
+    ns1:lemma "razão" ;
+    ns1:nextWord ns1:word_0_2_6 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_2_4 ;
+    ns1:word "razão" .
+
+ns1:word_0_3_13 a ns1:Word ;
+    ns1:OIE_tags "R" ;
+    ns1:depGraph ns1:word_0_3_15,
+        ns1:word_0_3_17 ;
+    ns1:edge ns1:xcomp ;
+    ns1:feat_verbform ns1:inf ;
+    ns1:head ns1:word_0_3_12 ;
+    ns1:id 13 ;
+    ns1:lemma "persuadir" ;
+    ns1:nextWord ns1:word_0_3_14 ;
+    ns1:pos ns1:VERB ;
+    ns1:poscoarse ns1:VERB ;
+    ns1:previousWord ns1:word_0_3_12 ;
+    ns1:word "persuadir" .
+
+ns1:word_0_3_20 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:depGraph ns1:word_0_3_18,
+        ns1:word_0_3_19 ;
+    ns1:edge ns1:obl ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_3_17 ;
+    ns1:id 20 ;
+    ns1:lemma "Alemanha" ;
+    ns1:nextWord ns1:word_0_3_21 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_3_19 ;
+    ns1:word "Alemanha" .
+
+ns1:word_0_3_5 a ns1:Word ;
+    ns1:depGraph ns1:word_0_3_4,
+        ns1:word_0_3_7 ;
+    ns1:edge ns1:obl ;
+    ns1:feat_numtype ns1:card ;
+    ns1:head ns1:word_0_3_2 ;
+    ns1:id 5 ;
+    ns1:lemma "1938" ;
+    ns1:nextWord ns1:word_0_3_6 ;
+    ns1:pos ns1:NUM ;
+    ns1:poscoarse ns1:NUM ;
+    ns1:previousWord ns1:word_0_3_4 ;
+    ns1:word "1938" .
+
+ns1:word_0_3_9 a ns1:Word ;
+    ns1:OIE_tags "A1" ;
+    ns1:depGraph ns1:word_0_3_10,
+        ns1:word_0_3_11 ;
+    ns1:edge ns1:nsubj ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_3_12 ;
+    ns1:id 9 ;
+    ns1:lemma "Joachim" ;
+    ns1:nextWord ns1:word_0_3_10 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_3_8 ;
+    ns1:word "Joachim" .
+
+ns1:word_0_4_11 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:depGraph ns1:word_0_4_10,
+        ns1:word_0_4_13 ;
+    ns1:edge ns1:obl ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_4_9 ;
+    ns1:id 11 ;
+    ns1:lemma "medição" ;
+    ns1:nextWord ns1:word_0_4_12 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_4_10 ;
+    ns1:word "medição" .
+
+ns1:word_0_4_13 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:depGraph ns1:word_0_4_12,
+        ns1:word_0_4_15 ;
+    ns1:edge ns1:nmod ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:plur ;
+    ns1:head ns1:word_0_4_11 ;
+    ns1:id 13 ;
+    ns1:lemma "lente" ;
+    ns1:nextWord ns1:word_0_4_14 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_4_12 ;
+    ns1:word "lentes" .
+
+ns1:word_0_4_30 a ns1:Word ;
+    ns1:depGraph ns1:word_0_4_33,
+        ns1:word_0_4_37 ;
+    ns1:edge ns1:acl ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:plur ;
+    ns1:feat_verbform ns1:part ;
+    ns1:head ns1:word_0_4_28 ;
+    ns1:id 30 ;
+    ns1:lemma "projetar" ;
+    ns1:nextWord ns1:word_0_4_31 ;
+    ns1:pos ns1:VERB ;
+    ns1:poscoarse ns1:VERB ;
+    ns1:previousWord ns1:word_0_4_29 ;
+    ns1:word "projetadas" .
+
+ns1:word_0_4_39 a ns1:Word ;
+    ns1:depGraph ns1:word_0_4_38,
+        ns1:word_0_4_41 ;
+    ns1:edge ns1:conj ;
+    ns1:feat_numtype ns1:card ;
+    ns1:head ns1:word_0_4_22 ;
+    ns1:id 39 ;
+    ns1:lemma "um" ;
+    ns1:nextWord ns1:word_0_4_40 ;
+    ns1:pos ns1:NUM ;
+    ns1:poscoarse ns1:NUM ;
+    ns1:previousWord ns1:word_0_4_38 ;
+    ns1:word "uma" .
+
+ns1:word_0_4_41 a ns1:Word ;
+    ns1:depGraph ns1:word_0_4_40,
+        ns1:word_0_4_43 ;
+    ns1:edge ns1:nmod ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:plur ;
+    ns1:head ns1:word_0_4_39 ;
+    ns1:id 41 ;
+    ns1:lemma "câmera" ;
+    ns1:nextWord ns1:word_0_4_42 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_4_40 ;
+    ns1:word "câmeras" .
+
+ns1:word_0_4_43 a ns1:Word ;
+    ns1:depGraph ns1:word_0_4_42,
+        ns1:word_0_4_45 ;
+    ns1:edge ns1:nmod ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_4_41 ;
+    ns1:id 43 ;
+    ns1:lemma "obturador" ;
+    ns1:nextWord ns1:word_0_4_44 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_4_42 ;
+    ns1:word "obturador" .
+
+ns1:word_0_4_45 a ns1:Word ;
+    ns1:depGraph ns1:word_0_4_44,
+        ns1:word_0_4_46 ;
+    ns1:edge ns1:nmod ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:plur ;
+    ns1:head ns1:word_0_4_43 ;
+    ns1:id 45 ;
+    ns1:lemma "folha" ;
+    ns1:nextWord ns1:word_0_4_46 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_4_44 ;
+    ns1:word "folhas" .
+
+ns1:word_0_4_46 a ns1:Word ;
+    ns1:depGraph ns1:word_0_4_47,
+        ns1:word_0_4_48 ;
+    ns1:edge ns1:appos ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_4_45 ;
+    ns1:id 46 ;
+    ns1:lemma "Zeiss" ;
+    ns1:nextWord ns1:word_0_4_47 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_4_45 ;
+    ns1:word "Zeiss" .
+
+ns1:word_0_4_5 a ns1:Word ;
+    ns1:OIE_tags "A1" ;
+    ns1:depGraph ns1:word_0_4_4,
+        ns1:word_0_4_7 ;
+    ns1:edge ns1:nmod ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_4_2 ;
+    ns1:id 5 ;
+    ns1:lemma "obturador" ;
+    ns1:nextWord ns1:word_0_4_6 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_4_4 ;
+    ns1:word "obturador" .
+
+ns1:word_0_5_16 a ns1:Word ;
+    ns1:OIE_tags "R" ;
+    ns1:depGraph ns1:word_0_5_15,
+        ns1:word_0_5_17 ;
+    ns1:edge ns1:advcl ;
+    ns1:feat_verbform ns1:inf ;
+    ns1:head ns1:word_0_5_8 ;
+    ns1:id 16 ;
+    ns1:lemma "mostrar" ;
+    ns1:nextWord ns1:word_0_5_17 ;
+    ns1:pos ns1:VERB ;
+    ns1:poscoarse ns1:VERB ;
+    ns1:previousWord ns1:word_0_5_15 ;
+    ns1:word "mostrar" .
+
+ns1:word_0_6_7 a ns1:Word ;
+    ns1:OIE_tags "R" ;
+    ns1:depGraph ns1:word_0_6_2,
+        ns1:word_0_6_9 ;
+    ns1:edge ns1:csubj ;
+    ns1:feat_verbform ns1:inf ;
+    ns1:head ns1:word_0_6_11 ;
+    ns1:id 7 ;
+    ns1:lemma "configurar" ;
+    ns1:nextWord ns1:word_0_6_8 ;
+    ns1:pos ns1:VERB ;
+    ns1:poscoarse ns1:VERB ;
+    ns1:previousWord ns1:word_0_6_6 ;
+    ns1:word "configurar" .
+
+ns1:word_0_7_11 a ns1:Word ;
+    ns1:depGraph ns1:word_0_7_10,
+        ns1:word_0_7_13 ;
+    ns1:edge ns1:nmod ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_7_9 ;
+    ns1:id 11 ;
+    ns1:lemma "Eslovénia" ;
+    ns1:nextWord ns1:word_0_7_12 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_7_10 ;
+    ns1:word "Eslovénia" .
+
+ns1:word_0_7_19 a ns1:Word ;
+    ns1:depGraph ns1:word_0_7_18,
+        ns1:word_0_7_20 ;
+    ns1:edge ns1:nsubj ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_7_23 ;
+    ns1:id 19 ;
+    ns1:lemma "comando" ;
+    ns1:nextWord ns1:word_0_7_20 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_7_18 ;
+    ns1:word "comando" .
+
+ns1:word_0_7_2 a ns1:Word ;
+    ns1:depGraph ns1:word_0_7_1,
+        ns1:word_0_7_4 ;
+    ns1:edge ns1:nsubj ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_7_7 ;
+    ns1:id 2 ;
+    ns1:lemma "Comandante-em-Chefe" ;
+    ns1:nextWord ns1:word_0_7_3 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_7_1 ;
+    ns1:word "Comandante-em-Chefe" .
+
+ns1:word_0_7_25 a ns1:Word ;
+    ns1:depGraph ns1:word_0_7_24,
+        ns1:word_0_7_27 ;
+    ns1:edge ns1:nmod ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_7_23 ;
+    ns1:id 25 ;
+    ns1:lemma "Chefe" ;
+    ns1:nextWord ns1:word_0_7_26 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_7_24 ;
+    ns1:word "Chefe" .
+
+ns1:word_0_7_30 a ns1:Word ;
+    ns1:depGraph ns1:word_0_7_29,
+        ns1:word_0_7_32 ;
+    ns1:edge ns1:nmod ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_7_27 ;
+    ns1:id 30 ;
+    ns1:lemma "Militares" ;
+    ns1:nextWord ns1:word_0_7_31 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_7_29 ;
+    ns1:word "Militares" .
+
+ns1:word_0_7_34 a ns1:Word ;
+    ns1:OIE_tags "A1" ;
+    ns1:depGraph ns1:word_0_7_33,
+        ns1:word_0_7_36 ;
+    ns1:edge ns1:appos ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_7_23 ;
+    ns1:id 34 ;
+    ns1:lemma "cargo" ;
+    ns1:nextWord ns1:word_0_7_35 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_7_33 ;
+    ns1:word "cargo" .
+
+ns1:word_0_7_38 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:depGraph ns1:word_0_7_37,
+        ns1:word_0_7_40 ;
+    ns1:edge ns1:obl ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_7_36 ;
+    ns1:id 38 ;
+    ns1:lemma "fevereiro" ;
+    ns1:nextWord ns1:word_0_7_39 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_7_37 ;
+    ns1:word "fevereiro" .
+
+ns1:word_0_7_42 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:depGraph ns1:word_0_7_41,
+        ns1:word_0_7_43 ;
+    ns1:edge <http://www.ieeta-bit.pt/OpenIE_s2_pt#obl:agent> ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_7_36 ;
+    ns1:id 42 ;
+    ns1:lemma "brigadeiro" ;
+    ns1:nextWord ns1:word_0_7_43 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_7_41 ;
+    ns1:word "brigadeiro" .
+
+ns1:word_0_7_9 a ns1:Word ;
+    ns1:depGraph ns1:word_0_7_11,
+        ns1:word_0_7_8 ;
+    ns1:edge ns1:nmod ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_7_7 ;
+    ns1:id 9 ;
+    ns1:lemma "República" ;
+    ns1:nextWord ns1:word_0_7_10 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_7_8 ;
+    ns1:word "República" .
+
+ns1:word_0_8_2 a ns1:Word ;
+    ns1:OIE_tags "A1" ;
+    ns1:depGraph ns1:word_0_8_1,
+        ns1:word_0_8_3 ;
+    ns1:edge ns1:obl ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:plur ;
+    ns1:head ns1:word_0_8_8 ;
+    ns1:id 2 ;
+    ns1:lemma "caso" ;
+    ns1:nextWord ns1:word_0_8_3 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_8_1 ;
+    ns1:word "casos" .
+
+ns1:word_0_9_10 a ns1:Word ;
+    ns1:OIE_tags "A1" ;
+    ns1:depGraph ns1:word_0_9_12,
+        ns1:word_0_9_9 ;
+    ns1:edge ns1:nmod ;
+    ns1:feat_numtype ns1:card ;
+    ns1:head ns1:word_0_9_3 ;
+    ns1:id 10 ;
+    ns1:lemma "9" ;
+    ns1:nextWord ns1:word_0_9_11 ;
+    ns1:pos ns1:NUM ;
+    ns1:poscoarse ns1:NUM ;
+    ns1:previousWord ns1:word_0_9_9 ;
+    ns1:word "9" .
+
+ns1:word_0_9_12 a ns1:Word ;
+    ns1:OIE_tags "A1" ;
+    ns1:depGraph ns1:word_0_9_11,
+        ns1:word_0_9_14 ;
+    ns1:edge ns1:nmod ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_9_10 ;
+    ns1:id 12 ;
+    ns1:lemma "novembro" ;
+    ns1:nextWord ns1:word_0_9_13 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_9_11 ;
+    ns1:word "novembro" .
+
+ns1:word_0_9_32 a ns1:Word ;
+    ns1:depGraph ns1:word_0_9_31,
+        ns1:word_0_9_35 ;
+    ns1:edge ns1:advcl ;
+    ns1:feat_verbform ns1:inf ;
+    ns1:head ns1:word_0_9_18 ;
+    ns1:id 32 ;
+    ns1:lemma "criar" ;
+    ns1:nextWord ns1:word_0_9_33 ;
+    ns1:pos ns1:VERB ;
+    ns1:poscoarse ns1:VERB ;
+    ns1:previousWord ns1:word_0_9_31 ;
+    ns1:word "criar" .
+
+ns1:word_0_9_6 a ns1:Word ;
+    ns1:OIE_tags "A1" ;
+    ns1:depGraph ns1:word_0_9_5,
+        ns1:word_0_9_8 ;
+    ns1:edge ns1:nmod ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_9_3 ;
+    ns1:id 6 ;
+    ns1:lemma "Muro" ;
+    ns1:nextWord ns1:word_0_9_7 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_9_5 ;
+    ns1:word "Muro" .
+
+ns1:CCONJ a ns1:pos,
+        ns1:poscoarse .
+
+<http://www.ieeta-bit.pt/OpenIE_s2_pt#aux:pass> a ns1:edge .
+
+ns1:conj a ns1:edge .
+
+ns1:word_0_10_10 a ns1:Word ;
+    ns1:depGraph ns1:word_0_10_11,
+        ns1:word_0_10_26,
+        ns1:word_0_10_9 ;
+    ns1:edge ns1:advcl ;
+    ns1:feat_verbform ns1:inf ;
+    ns1:head ns1:word_0_10_8 ;
+    ns1:id 10 ;
+    ns1:lemma "descansar" ;
+    ns1:nextWord ns1:word_0_10_11 ;
+    ns1:pos ns1:VERB ;
+    ns1:poscoarse ns1:VERB ;
+    ns1:previousWord ns1:word_0_10_9 ;
+    ns1:word "descansar" .
+
+ns1:word_0_10_26 a ns1:Word ;
+    ns1:OIE_tags "R" ;
+    ns1:depGraph ns1:word_0_10_23,
+        ns1:word_0_10_25,
+        ns1:word_0_10_29 ;
+    ns1:edge ns1:ccomp ;
+    ns1:feat_mood ns1:ind ;
+    ns1:feat_number ns1:plur ;
+    ns1:feat_person ns1:3 ;
+    ns1:feat_tense ns1:pres ;
+    ns1:feat_verbform ns1:fin ;
+    ns1:head ns1:word_0_10_10 ;
+    ns1:id 26 ;
+    ns1:lemma "concordar" ;
+    ns1:nextWord ns1:word_0_10_27 ;
+    ns1:pos ns1:VERB ;
+    ns1:poscoarse ns1:VERB ;
+    ns1:previousWord ns1:word_0_10_25 ;
+    ns1:word "concordam" .
+
+ns1:word_0_10_8 a ns1:Word ;
+    ns1:depGraph ns1:word_0_10_10,
+        ns1:word_0_10_6,
+        ns1:word_0_10_7 ;
+    ns1:edge ns1:xcomp ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_verbform ns1:part ;
+    ns1:feat_voice ns1:pass ;
+    ns1:head ns1:word_0_10_5 ;
+    ns1:id 8 ;
+    ns1:lemma "colocar" ;
+    ns1:nextWord ns1:word_0_10_9 ;
+    ns1:pos ns1:VERB ;
+    ns1:poscoarse ns1:VERB ;
+    ns1:previousWord ns1:word_0_10_7 ;
+    ns1:word "colocado" .
+
+ns1:word_0_11_16 a ns1:Word ;
+    ns1:depGraph ns1:word_0_11_15,
+        ns1:word_0_11_17,
+        ns1:word_0_11_20 ;
+    ns1:edge ns1:obl ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_11_14 ;
+    ns1:id 16 ;
+    ns1:lemma "eletricidade" ;
+    ns1:nextWord ns1:word_0_11_17 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_11_15 ;
+    ns1:word "eletricidade" .
+
+ns1:word_0_11_34 a ns1:Word ;
+    ns1:depGraph ns1:word_0_11_30,
+        ns1:word_0_11_32,
+        ns1:word_0_11_37 ;
+    ns1:edge ns1:advcl ;
+    ns1:feat_mood ns1:ind ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_person ns1:3 ;
+    ns1:feat_tense ns1:pres ;
+    ns1:feat_verbform ns1:fin ;
+    ns1:head ns1:word_0_11_2 ;
+    ns1:id 34 ;
+    ns1:lemma "cair" ;
+    ns1:nextWord ns1:word_0_11_35 ;
+    ns1:pos ns1:VERB ;
+    ns1:poscoarse ns1:VERB ;
+    ns1:previousWord ns1:word_0_11_33 ;
+    ns1:word "cai" .
+
+ns1:word_0_11_5 a ns1:Word ;
+    ns1:depGraph ns1:word_0_11_3,
+        ns1:word_0_11_4,
+        ns1:word_0_11_8 ;
+    ns1:edge <http://www.ieeta-bit.pt/OpenIE_s2_pt#obl:agent> ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:plur ;
+    ns1:head ns1:word_0_11_2 ;
+    ns1:id 5 ;
+    ns1:lemma "investigação" ;
+    ns1:nextWord ns1:word_0_11_6 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_11_4 ;
+    ns1:word "investigações" .
+
+ns1:word_0_11_53 a ns1:Word ;
+    ns1:depGraph ns1:word_0_11_52,
+        ns1:word_0_11_54,
+        ns1:word_0_11_56 ;
+    ns1:edge ns1:obj ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_11_51 ;
+    ns1:id 53 ;
+    ns1:lemma "carga" ;
+    ns1:nextWord ns1:word_0_11_54 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_11_52 ;
+    ns1:word "carga" .
+
+ns1:word_0_11_56 a ns1:Word ;
+    ns1:depGraph ns1:word_0_11_55,
+        ns1:word_0_11_58,
+        ns1:word_0_11_59 ;
+    ns1:edge ns1:acl ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_verbform ns1:part ;
+    ns1:head ns1:word_0_11_53 ;
+    ns1:id 56 ;
+    ns1:lemma "exposta" ;
+    ns1:nextWord ns1:word_0_11_57 ;
+    ns1:pos ns1:VERB ;
+    ns1:poscoarse ns1:VERB ;
+    ns1:previousWord ns1:word_0_11_55 ;
+    ns1:word "exposta" .
+
+ns1:word_0_11_66 a ns1:Word ;
+    ns1:depGraph ns1:word_0_11_64,
+        ns1:word_0_11_65,
+        ns1:word_0_11_72 ;
+    ns1:edge ns1:obl ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_11_63 ;
+    ns1:id 66 ;
+    ns1:lemma "gás" ;
+    ns1:nextWord ns1:word_0_11_67 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_11_65 ;
+    ns1:word "gás" .
+
+ns1:word_0_11_72 a ns1:Word ;
+    ns1:depGraph ns1:word_0_11_68,
+        ns1:word_0_11_70,
+        ns1:word_0_11_71 ;
+    ns1:edge <http://www.ieeta-bit.pt/OpenIE_s2_pt#acl:relcl> ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_verbform ns1:part ;
+    ns1:feat_voice ns1:pass ;
+    ns1:head ns1:word_0_11_66 ;
+    ns1:id 72 ;
+    ns1:lemma "cercar" ;
+    ns1:nextWord ns1:word_0_11_73 ;
+    ns1:pos ns1:VERB ;
+    ns1:poscoarse ns1:VERB ;
+    ns1:previousWord ns1:word_0_11_71 ;
+    ns1:word "cercado" .
+
+ns1:word_0_11_77 a ns1:Word ;
+    ns1:depGraph ns1:word_0_11_73,
+        ns1:word_0_11_75,
+        ns1:word_0_11_79 ;
+    ns1:edge ns1:conj ;
+    ns1:feat_mood ns1:ind ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_person ns1:3 ;
+    ns1:feat_tense ns1:pres ;
+    ns1:feat_verbform ns1:fin ;
+    ns1:head ns1:word_0_11_51 ;
+    ns1:id 77 ;
+    ns1:lemma "poder" ;
+    ns1:nextWord ns1:word_0_11_78 ;
+    ns1:pos ns1:VERB ;
+    ns1:poscoarse ns1:VERB ;
+    ns1:previousWord ns1:word_0_11_76 ;
+    ns1:word "pode" .
+
+ns1:word_0_11_84 a ns1:Word ;
+    ns1:depGraph ns1:word_0_11_80,
+        ns1:word_0_11_82,
+        ns1:word_0_11_86 ;
+    ns1:edge ns1:conj ;
+    ns1:feat_mood ns1:ind ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_person ns1:3 ;
+    ns1:feat_tense ns1:pres ;
+    ns1:feat_verbform ns1:fin ;
+    ns1:head ns1:word_0_11_51 ;
+    ns1:id 84 ;
+    ns1:lemma "poder" ;
+    ns1:nextWord ns1:word_0_11_85 ;
+    ns1:pos ns1:VERB ;
+    ns1:poscoarse ns1:VERB ;
+    ns1:previousWord ns1:word_0_11_83 ;
+    ns1:word "pode" .
+
+ns1:word_0_12_16 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:depGraph ns1:word_0_12_15,
+        ns1:word_0_12_18,
+        ns1:word_0_12_29 ;
+    ns1:edge ns1:obj ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_12_14 ;
+    ns1:id 16 ;
+    ns1:lemma "concerto" ;
+    ns1:nextWord ns1:word_0_12_17 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_12_15 ;
+    ns1:word "concerto" .
+
+ns1:word_0_12_29 a ns1:Word ;
+    ns1:depGraph ns1:word_0_12_27,
+        ns1:word_0_12_28,
+        ns1:word_0_12_31 ;
+    ns1:edge ns1:appos ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_12_16 ;
+    ns1:id 29 ;
+    ns1:lemma "graduado" ;
+    ns1:nextWord ns1:word_0_12_30 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_12_28 ;
+    ns1:word "graduado" .
+
+ns1:word_0_12_39 a ns1:Word ;
+    ns1:depGraph ns1:word_0_12_38,
+        ns1:word_0_12_40,
+        ns1:word_0_12_42 ;
+    ns1:edge ns1:advcl ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_12_14 ;
+    ns1:id 39 ;
+    ns1:lemma "Samuel" ;
+    ns1:nextWord ns1:word_0_12_40 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_12_38 ;
+    ns1:word "Samuel" .
+
+ns1:word_0_13_10 a ns1:Word ;
+    ns1:depGraph ns1:word_0_13_13,
+        ns1:word_0_13_16,
+        ns1:word_0_13_9 ;
+    ns1:edge ns1:conj ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_13_2 ;
+    ns1:id 10 ;
+    ns1:lemma "barramento" ;
+    ns1:nextWord ns1:word_0_13_11 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_13_9 ;
+    ns1:word "barramento" .
+
+ns1:word_0_13_13 a ns1:Word ;
+    ns1:depGraph ns1:word_0_13_11,
+        ns1:word_0_13_12,
+        ns1:word_0_13_15 ;
+    ns1:edge ns1:nmod ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:plur ;
+    ns1:head ns1:word_0_13_10 ;
+    ns1:id 13 ;
+    ns1:lemma "bit" ;
+    ns1:nextWord ns1:word_0_13_14 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_13_12 ;
+    ns1:word "bits" .
+
+ns1:word_0_13_6 a ns1:Word ;
+    ns1:depGraph ns1:word_0_13_4,
+        ns1:word_0_13_5,
+        ns1:word_0_13_7 ;
+    ns1:edge ns1:obj ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_13_2 ;
+    ns1:id 6 ;
+    ns1:lemma "núcleo" ;
+    ns1:nextWord ns1:word_0_13_7 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_13_5 ;
+    ns1:word "núcleo" .
+
+ns1:word_0_3_17 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:depGraph ns1:word_0_3_16,
+        ns1:word_0_3_20,
+        ns1:word_0_3_24 ;
+    ns1:edge ns1:xcomp ;
+    ns1:feat_case ns1:acc ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_person ns1:3 ;
+    ns1:feat_prontype ns1:prs ;
+    ns1:feat_verbform ns1:inf ;
+    ns1:head ns1:word_0_3_13 ;
+    ns1:id 17 ;
+    ns1:lemma "alinhar se" ;
+    ns1:nextWord ns1:word_0_3_18 ;
+    ns1:pos ns1:VERB ;
+    ns1:poscoarse ns1:VERB ;
+    ns1:previousWord ns1:word_0_3_16 ;
+    ns1:word "alinhar-se" .
+
+ns1:word_0_3_24 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:depGraph ns1:word_0_3_21,
+        ns1:word_0_3_22,
+        ns1:word_0_3_23 ;
+    ns1:edge ns1:obl ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_3_17 ;
+    ns1:id 24 ;
+    ns1:lemma "guerra" ;
+    ns1:nextWord ns1:word_0_3_25 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_3_23 ;
+    ns1:word "guerra" .
+
+ns1:word_0_4_2 a ns1:Word ;
+    ns1:OIE_tags "A1" ;
+    ns1:depGraph ns1:word_0_4_1,
+        ns1:word_0_4_3,
+        ns1:word_0_4_5 ;
+    ns1:edge ns1:nsubj ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:plur ;
+    ns1:head ns1:word_0_4_9 ;
+    ns1:id 2 ;
+    ns1:lemma "câmera" ;
+    ns1:nextWord ns1:word_0_4_3 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_4_1 ;
+    ns1:word "câmeras" .
+
+ns1:word_0_4_25 a ns1:Word ;
+    ns1:depGraph ns1:word_0_4_24,
+        ns1:word_0_4_26,
+        ns1:word_0_4_28 ;
+    ns1:edge ns1:nmod ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:plur ;
+    ns1:head ns1:word_0_4_22 ;
+    ns1:id 25 ;
+    ns1:lemma "lente" ;
+    ns1:nextWord ns1:word_0_4_26 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_4_24 ;
+    ns1:word "lentes" .
+
+ns1:word_0_4_28 a ns1:Word ;
+    ns1:depGraph ns1:word_0_4_27,
+        ns1:word_0_4_29,
+        ns1:word_0_4_30 ;
+    ns1:edge ns1:nmod ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_4_25 ;
+    ns1:id 28 ;
+    ns1:lemma "montagem" ;
+    ns1:nextWord ns1:word_0_4_29 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_4_27 ;
+    ns1:word "montagem" .
+
+ns1:word_0_4_33 a ns1:Word ;
+    ns1:depGraph ns1:word_0_4_31,
+        ns1:word_0_4_32,
+        ns1:word_0_4_35 ;
+    ns1:edge ns1:obl ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_4_30 ;
+    ns1:id 33 ;
+    ns1:lemma "câmera" ;
+    ns1:nextWord ns1:word_0_4_34 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_4_32 ;
+    ns1:word "câmera" .
+
+ns1:word_0_5_2 a ns1:Word ;
+    ns1:depGraph ns1:word_0_5_1,
+        ns1:word_0_5_4,
+        ns1:word_0_5_5 ;
+    ns1:edge ns1:obl ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_5_8 ;
+    ns1:id 2 ;
+    ns1:lemma "março" ;
+    ns1:nextWord ns1:word_0_5_3 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_5_1 ;
+    ns1:word "março" .
+
+ns1:word_0_6_11 a ns1:Word ;
+    ns1:depGraph ns1:word_0_6_10,
+        ns1:word_0_6_12,
+        ns1:word_0_6_7 ;
+    ns1:edge ns1:ROOT ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:fromSentence ns1:Sentence_0_6 ;
+    ns1:id 11 ;
+    ns1:lemma "suficiente" ;
+    ns1:nextWord ns1:word_0_6_12 ;
+    ns1:pos ns1:ADJ ;
+    ns1:poscoarse ns1:ADJ ;
+    ns1:previousWord ns1:word_0_6_10 ;
+    ns1:word "suficiente" .
+
+ns1:word_0_7_13 a ns1:Word ;
+    ns1:depGraph ns1:word_0_7_12,
+        ns1:word_0_7_14,
+        ns1:word_0_7_15 ;
+    ns1:edge ns1:appos ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_7_11 ;
+    ns1:id 13 ;
+    ns1:lemma "Borut" ;
+    ns1:nextWord ns1:word_0_7_14 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_7_12 ;
+    ns1:word "Borut" .
+
+ns1:word_0_7_27 a ns1:Word ;
+    ns1:depGraph ns1:word_0_7_26,
+        ns1:word_0_7_28,
+        ns1:word_0_7_30 ;
+    ns1:edge ns1:nmod ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_7_25 ;
+    ns1:id 27 ;
+    ns1:lemma "Estado-Maior" ;
+    ns1:nextWord ns1:word_0_7_28 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_7_26 ;
+    ns1:word "Estado-Maior" .
+
+ns1:word_0_7_36 a ns1:Word ;
+    ns1:OIE_tags "R" ;
+    ns1:depGraph ns1:word_0_7_35,
+        ns1:word_0_7_38,
+        ns1:word_0_7_42 ;
+    ns1:edge <http://www.ieeta-bit.pt/OpenIE_s2_pt#acl:relcl> ;
+    ns1:feat_mood ns1:ind ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_person ns1:3 ;
+    ns1:feat_tense ns1:pres ;
+    ns1:feat_verbform ns1:fin ;
+    ns1:head ns1:word_0_7_34 ;
+    ns1:id 36 ;
+    ns1:lemma "ocupar" ;
+    ns1:nextWord ns1:word_0_7_37 ;
+    ns1:pos ns1:VERB ;
+    ns1:poscoarse ns1:VERB ;
+    ns1:previousWord ns1:word_0_7_35 ;
+    ns1:word "ocupa" .
+
+ns1:word_0_8_10 a ns1:Word ;
+    ns1:depGraph ns1:word_0_8_12,
+        ns1:word_0_8_14,
+        ns1:word_0_8_9 ;
+    ns1:edge ns1:obl ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_8_8 ;
+    ns1:id 10 ;
+    ns1:lemma "perseguição" ;
+    ns1:nextWord ns1:word_0_8_11 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_8_9 ;
+    ns1:word "perseguição" .
+
+ns1:word_0_8_14 a ns1:Word ;
+    ns1:depGraph ns1:word_0_8_13,
+        ns1:word_0_8_15,
+        ns1:word_0_8_16 ;
+    ns1:edge ns1:nmod ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:plur ;
+    ns1:head ns1:word_0_8_10 ;
+    ns1:id 14 ;
+    ns1:lemma "Grandes" ;
+    ns1:nextWord ns1:word_0_8_15 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_8_13 ;
+    ns1:word "Grandes" .
+
+ns1:word_0_9_21 a ns1:Word ;
+    ns1:depGraph ns1:word_0_9_20,
+        ns1:word_0_9_23,
+        ns1:word_0_9_29 ;
+    ns1:edge ns1:nmod ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:plur ;
+    ns1:head ns1:word_0_9_19 ;
+    ns1:id 21 ;
+    ns1:lemma "local" ;
+    ns1:nextWord ns1:word_0_9_22 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_9_20 ;
+    ns1:word "locais" .
+
+ns1:word_0_9_35 a ns1:Word ;
+    ns1:depGraph ns1:word_0_9_33,
+        ns1:word_0_9_34,
+        ns1:word_0_9_37 ;
+    ns1:edge ns1:obj ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_9_32 ;
+    ns1:id 35 ;
+    ns1:lemma "fronteira" ;
+    ns1:nextWord ns1:word_0_9_36 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_9_34 ;
+    ns1:word "fronteira" .
+
+ns1:word_0_9_37 a ns1:Word ;
+    ns1:depGraph ns1:word_0_9_36,
+        ns1:word_0_9_38,
+        ns1:word_0_9_40 ;
+    ns1:edge ns1:nmod ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_9_35 ;
+    ns1:id 37 ;
+    ns1:lemma "Berlim" ;
+    ns1:nextWord ns1:word_0_9_38 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_9_36 ;
+    ns1:word "Berlim" .
+
+<http://www.ieeta-bit.pt/OpenIE_s2_pt#acl:relcl> a ns1:edge .
+
+ns1:word_0_10_29 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:depGraph ns1:word_0_10_27,
+        ns1:word_0_10_28,
+        ns1:word_0_10_30,
+        ns1:word_0_10_33 ;
+    ns1:edge ns1:obl ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_10_26 ;
+    ns1:id 29 ;
+    ns1:lemma "proibição" ;
+    ns1:nextWord ns1:word_0_10_30 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_10_28 ;
+    ns1:word "proibição" .
+
+ns1:word_0_10_5 a ns1:Word ;
+    ns1:depGraph ns1:word_0_10_2,
+        ns1:word_0_10_36,
+        ns1:word_0_10_4,
+        ns1:word_0_10_8 ;
+    ns1:edge ns1:ROOT ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_verbform ns1:part ;
+    ns1:fromSentence ns1:Sentence_0_10 ;
+    ns1:id 5 ;
+    ns1:lemma "dizer" ;
+    ns1:nextWord ns1:word_0_10_6 ;
+    ns1:pos ns1:VERB ;
+    ns1:poscoarse ns1:VERB ;
+    ns1:previousWord ns1:word_0_10_4 ;
+    ns1:word "dito" .
+
+ns1:word_0_11_14 a ns1:Word ;
+    ns1:depGraph ns1:word_0_11_13,
+        ns1:word_0_11_16,
+        ns1:word_0_11_22,
+        ns1:word_0_11_26 ;
+    ns1:edge ns1:advcl ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_verbform ns1:part ;
+    ns1:head ns1:word_0_11_2 ;
+    ns1:id 14 ;
+    ns1:lemma "carregar" ;
+    ns1:nextWord ns1:word_0_11_15 ;
+    ns1:pos ns1:VERB ;
+    ns1:poscoarse ns1:VERB ;
+    ns1:previousWord ns1:word_0_11_13 ;
+    ns1:word "carregada" .
+
+ns1:word_0_11_8 a ns1:Word ;
+    ns1:depGraph ns1:word_0_11_11,
+        ns1:word_0_11_6,
+        ns1:word_0_11_7,
+        ns1:word_0_11_9 ;
+    ns1:edge <http://www.ieeta-bit.pt/OpenIE_s2_pt#acl:relcl> ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_11_5 ;
+    ns1:id 8 ;
+    ns1:lemma "superfície" ;
+    ns1:nextWord ns1:word_0_11_9 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_11_7 ;
+    ns1:word "superfície" .
+
+ns1:word_0_12_14 a ns1:Word ;
+    ns1:OIE_tags "R" ;
+    ns1:depGraph ns1:word_0_12_13,
+        ns1:word_0_12_16,
+        ns1:word_0_12_37,
+        ns1:word_0_12_39 ;
+    ns1:edge ns1:xcomp ;
+    ns1:feat_verbform ns1:inf ;
+    ns1:head ns1:word_0_12_10 ;
+    ns1:id 14 ;
+    ns1:lemma "escrever" ;
+    ns1:nextWord ns1:word_0_12_15 ;
+    ns1:pos ns1:VERB ;
+    ns1:poscoarse ns1:VERB ;
+    ns1:previousWord ns1:word_0_12_13 ;
+    ns1:word "escrever" .
+
+ns1:word_0_12_21 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:depGraph ns1:word_0_12_19,
+        ns1:word_0_12_20,
+        ns1:word_0_12_23,
+        ns1:word_0_12_25 ;
+    ns1:edge ns1:nmod ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_12_18 ;
+    ns1:id 21 ;
+    ns1:lemma "divisão" ;
+    ns1:nextWord ns1:word_0_12_22 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_12_20 ;
+    ns1:word "divisão" .
+
+ns1:word_0_12_31 a ns1:Word ;
+    ns1:depGraph ns1:word_0_12_30,
+        ns1:word_0_12_32,
+        ns1:word_0_12_33,
+        ns1:word_0_12_34 ;
+    ns1:edge ns1:nmod ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_12_29 ;
+    ns1:id 31 ;
+    ns1:lemma "Curtis" ;
+    ns1:nextWord ns1:word_0_12_32 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_12_30 ;
+    ns1:word "Curtis" .
+
+ns1:word_0_12_6 a ns1:Word ;
+    ns1:OIE_tags "A1" ;
+    ns1:depGraph ns1:word_0_12_5,
+        ns1:word_0_12_7,
+        ns1:word_0_12_8,
+        ns1:word_0_12_9 ;
+    ns1:edge ns1:nmod ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_12_4 ;
+    ns1:id 6 ;
+    ns1:lemma "Filadélfia" ;
+    ns1:nextWord ns1:word_0_12_7 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_12_5 ;
+    ns1:word "Filadélfia" .
+
+ns1:word_0_2_17 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:depGraph ns1:word_0_2_14,
+        ns1:word_0_2_15,
+        ns1:word_0_2_16,
+        ns1:word_0_2_18 ;
+    ns1:edge <http://www.ieeta-bit.pt/OpenIE_s2_pt#acl:relcl> ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_verbform ns1:part ;
+    ns1:feat_voice ns1:pass ;
+    ns1:head ns1:word_0_2_12 ;
+    ns1:id 17 ;
+    ns1:lemma "percebir" ;
+    ns1:nextWord ns1:word_0_2_18 ;
+    ns1:pos ns1:VERB ;
+    ns1:poscoarse ns1:VERB ;
+    ns1:previousWord ns1:word_0_2_16 ;
+    ns1:word "percebida" .
+
+ns1:word_0_2_2 a ns1:Word ;
+    ns1:depGraph ns1:word_0_2_1,
+        ns1:word_0_2_12,
+        ns1:word_0_2_22,
+        ns1:word_0_2_28 ;
+    ns1:edge ns1:ROOT ;
+    ns1:feat_mood ns1:ind ;
+    ns1:feat_number ns1:plur ;
+    ns1:feat_person ns1:3 ;
+    ns1:feat_tense ns1:pres ;
+    ns1:feat_verbform ns1:fin ;
+    ns1:fromSentence ns1:Sentence_0_2 ;
+    ns1:id 2 ;
+    ns1:lemma "mostrar" ;
+    ns1:nextWord ns1:word_0_2_3 ;
+    ns1:pos ns1:VERB ;
+    ns1:poscoarse ns1:VERB ;
+    ns1:previousWord ns1:word_0_2_1 ;
+    ns1:word "mostram" .
+
+ns1:word_0_3_12 a ns1:Word ;
+    ns1:OIE_tags "R" ;
+    ns1:depGraph ns1:word_0_3_13,
+        ns1:word_0_3_2,
+        ns1:word_0_3_25,
+        ns1:word_0_3_9 ;
+    ns1:edge ns1:ROOT ;
+    ns1:feat_mood ns1:ind ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_person ns1:3 ;
+    ns1:feat_tense ns1:past ;
+    ns1:feat_verbform ns1:fin ;
+    ns1:fromSentence ns1:Sentence_0_3 ;
+    ns1:id 12 ;
+    ns1:lemma "tentar" ;
+    ns1:nextWord ns1:word_0_3_13 ;
+    ns1:pos ns1:VERB ;
+    ns1:poscoarse ns1:VERB ;
+    ns1:previousWord ns1:word_0_3_11 ;
+    ns1:word "tentou" .
+
+ns1:word_0_3_2 a ns1:Word ;
+    ns1:depGraph ns1:word_0_3_1,
+        ns1:word_0_3_3,
+        ns1:word_0_3_5,
+        ns1:word_0_3_8 ;
+    ns1:edge ns1:obl ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_numtype ns1:ord ;
+    ns1:head ns1:word_0_3_12 ;
+    ns1:id 2 ;
+    ns1:lemma "primeiro" ;
+    ns1:nextWord ns1:word_0_3_3 ;
+    ns1:pos ns1:ADJ ;
+    ns1:poscoarse ns1:ADJ ;
+    ns1:previousWord ns1:word_0_3_1 ;
+    ns1:word "primeiro" .
+
+ns1:word_0_4_20 a ns1:Word ;
+    ns1:depGraph ns1:word_0_4_16,
+        ns1:word_0_4_17,
+        ns1:word_0_4_19,
+        ns1:word_0_4_22 ;
+    ns1:edge ns1:advcl ;
+    ns1:feat_mood ns1:ind ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_person ns1:3 ;
+    ns1:feat_tense ns1:past ;
+    ns1:feat_verbform ns1:fin ;
+    ns1:head ns1:word_0_4_9 ;
+    ns1:id 20 ;
+    ns1:lemma "introduzir" ;
+    ns1:nextWord ns1:word_0_4_21 ;
+    ns1:pos ns1:VERB ;
+    ns1:poscoarse ns1:VERB ;
+    ns1:previousWord ns1:word_0_4_19 ;
+    ns1:word "introduziu" .
+
+ns1:word_0_4_22 a ns1:Word ;
+    ns1:depGraph ns1:word_0_4_21,
+        ns1:word_0_4_23,
+        ns1:word_0_4_25,
+        ns1:word_0_4_39 ;
+    ns1:edge ns1:obj ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_4_20 ;
+    ns1:id 22 ;
+    ns1:lemma "Auto" ;
+    ns1:nextWord ns1:word_0_4_23 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_4_21 ;
+    ns1:word "Auto" .
+
+ns1:word_0_5_11 a ns1:Word ;
+    ns1:OIE_tags "R" ;
+    ns1:depGraph ns1:word_0_5_10,
+        ns1:word_0_5_12,
+        ns1:word_0_5_14,
+        ns1:word_0_5_9 ;
+    ns1:edge ns1:obl ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_5_8 ;
+    ns1:id 11 ;
+    ns1:lemma "Competição" ;
+    ns1:nextWord ns1:word_0_5_12 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_5_10 ;
+    ns1:word "Competição" .
+
+ns1:word_0_6_2 a ns1:Word ;
+    ns1:OIE_tags "A1" ;
+    ns1:depGraph ns1:word_0_6_1,
+        ns1:word_0_6_3,
+        ns1:word_0_6_5,
+        ns1:word_0_6_6 ;
+    ns1:edge ns1:obl ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_6_7 ;
+    ns1:id 2 ;
+    ns1:lemma "configuração" ;
+    ns1:nextWord ns1:word_0_6_3 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_6_1 ;
+    ns1:word "configuração" .
+
+ns1:word_0_10_16 a ns1:Word ;
+    ns1:depGraph ns1:word_0_10_14,
+        ns1:word_0_10_15,
+        ns1:word_0_10_17,
+        ns1:word_0_10_19,
+        ns1:word_0_10_22 ;
+    ns1:edge <http://www.ieeta-bit.pt/OpenIE_s2_pt#acl:relcl> ;
+    ns1:feat_mood ns1:ind ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_person ns1:3 ;
+    ns1:feat_tense ns1:past ;
+    ns1:feat_verbform ns1:fin ;
+    ns1:head ns1:word_0_10_12 ;
+    ns1:id 16 ;
+    ns1:lemma "romper" ;
+    ns1:nextWord ns1:word_0_10_17 ;
+    ns1:pos ns1:VERB ;
+    ns1:poscoarse ns1:VERB ;
+    ns1:previousWord ns1:word_0_10_15 ;
+    ns1:word "rompeu" .
+
+ns1:word_0_11_44 a ns1:Word ;
+    ns1:depGraph ns1:word_0_11_39,
+        ns1:word_0_11_40,
+        ns1:word_0_11_42,
+        ns1:word_0_11_43,
+        ns1:word_0_11_46 ;
+    ns1:edge ns1:advcl ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_verbform ns1:part ;
+    ns1:feat_voice ns1:pass ;
+    ns1:head ns1:word_0_11_51 ;
+    ns1:id 44 ;
+    ns1:lemma "descarregar" ;
+    ns1:nextWord ns1:word_0_11_45 ;
+    ns1:pos ns1:VERB ;
+    ns1:poscoarse ns1:VERB ;
+    ns1:previousWord ns1:word_0_11_43 ;
+    ns1:word "descarregada" .
+
+ns1:word_0_12_10 a ns1:Word ;
+    ns1:OIE_tags "R" ;
+    ns1:depGraph ns1:word_0_12_11,
+        ns1:word_0_12_14,
+        ns1:word_0_12_2,
+        ns1:word_0_12_4,
+        ns1:word_0_12_43 ;
+    ns1:edge ns1:ROOT ;
+    ns1:feat_mood ns1:ind ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_person ns1:3 ;
+    ns1:feat_tense ns1:past ;
+    ns1:feat_verbform ns1:fin ;
+    ns1:fromSentence ns1:Sentence_0_12 ;
+    ns1:id 10 ;
+    ns1:lemma "encomendar" ;
+    ns1:nextWord ns1:word_0_12_11 ;
+    ns1:pos ns1:VERB ;
+    ns1:poscoarse ns1:VERB ;
+    ns1:previousWord ns1:word_0_12_9 ;
+    ns1:word "encomendou" .
+
+ns1:word_0_13_21 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:depGraph ns1:word_0_13_19,
+        ns1:word_0_13_2,
+        ns1:word_0_13_22,
+        ns1:word_0_13_24,
+        ns1:word_0_13_32 ;
+    ns1:edge ns1:ROOT ;
+    ns1:feat_mood ns1:cnd ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_person ns1:3 ;
+    ns1:feat_verbform ns1:fin ;
+    ns1:fromSentence ns1:Sentence_0_13 ;
+    ns1:id 21 ;
+    ns1:lemma "poder" ;
+    ns1:nextWord ns1:word_0_13_22 ;
+    ns1:pos ns1:VERB ;
+    ns1:poscoarse ns1:VERB ;
+    ns1:previousWord ns1:word_0_13_20 ;
+    ns1:word "poderia" .
+
+ns1:word_0_2_12 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:depGraph ns1:word_0_2_11,
+        ns1:word_0_2_13,
+        ns1:word_0_2_17,
+        ns1:word_0_2_3,
+        ns1:word_0_2_5 ;
+    ns1:edge ns1:ccomp ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_2_2 ;
+    ns1:id 12 ;
+    ns1:lemma "figura" ;
+    ns1:nextWord ns1:word_0_2_13 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_2_11 ;
+    ns1:word "figura" .
+
+ns1:word_0_4_9 a ns1:Word ;
+    ns1:OIE_tags "R" ;
+    ns1:depGraph ns1:word_0_4_11,
+        ns1:word_0_4_2,
+        ns1:word_0_4_20,
+        ns1:word_0_4_49,
+        ns1:word_0_4_8 ;
+    ns1:edge ns1:ROOT ;
+    ns1:feat_mood ns1:ind ;
+    ns1:feat_number ns1:plur ;
+    ns1:feat_person ns1:3 ;
+    ns1:feat_tense ns1:past ;
+    ns1:feat_verbform ns1:fin ;
+    ns1:fromSentence ns1:Sentence_0_4 ;
+    ns1:id 9 ;
+    ns1:lemma "beneficiar" ;
+    ns1:nextWord ns1:word_0_4_10 ;
+    ns1:pos ns1:VERB ;
+    ns1:poscoarse ns1:VERB ;
+    ns1:previousWord ns1:word_0_4_8 ;
+    ns1:word "beneficiaram" .
+
+ns1:word_0_5_8 a ns1:Word ;
+    ns1:OIE_tags "R" ;
+    ns1:depGraph ns1:word_0_5_11,
+        ns1:word_0_5_16,
+        ns1:word_0_5_19,
+        ns1:word_0_5_2,
+        ns1:word_0_5_6 ;
+    ns1:edge ns1:ROOT ;
+    ns1:feat_mood ns1:ind ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_person ns1:3 ;
+    ns1:feat_tense ns1:past ;
+    ns1:feat_verbform ns1:fin ;
+    ns1:fromSentence ns1:Sentence_0_5 ;
+    ns1:id 8 ;
+    ns1:lemma "participar" ;
+    ns1:nextWord ns1:word_0_5_9 ;
+    ns1:pos ns1:VERB ;
+    ns1:poscoarse ns1:VERB ;
+    ns1:previousWord ns1:word_0_5_7 ;
+    ns1:word "participou" .
+
+ns1:word_0_9_18 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:depGraph ns1:word_0_9_16,
+        ns1:word_0_9_19,
+        ns1:word_0_9_3,
+        ns1:word_0_9_32,
+        ns1:word_0_9_41 ;
+    ns1:edge ns1:ROOT ;
+    ns1:feat_case ns1:acc ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_mood ns1:ind ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_person ns1:3 ;
+    ns1:feat_prontype ns1:prs ;
+    ns1:feat_tense ns1:past ;
+    ns1:feat_verbform ns1:fin ;
+    ns1:fromSentence ns1:Sentence_0_9 ;
+    ns1:id 18 ;
+    ns1:lemma "tornar se" ;
+    ns1:nextWord ns1:word_0_9_19 ;
+    ns1:pos ns1:VERB ;
+    ns1:poscoarse ns1:VERB ;
+    ns1:previousWord ns1:word_0_9_17 ;
+    ns1:word "tornou-se" .
+
+ns1:word_0_9_29 a ns1:Word ;
+    ns1:depGraph ns1:word_0_9_24,
+        ns1:word_0_9_26,
+        ns1:word_0_9_27,
+        ns1:word_0_9_28,
+        ns1:word_0_9_30 ;
+    ns1:edge <http://www.ieeta-bit.pt/OpenIE_s2_pt#acl:relcl> ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_verbform ns1:part ;
+    ns1:head ns1:word_0_9_21 ;
+    ns1:id 29 ;
+    ns1:lemma "quebrar" ;
+    ns1:nextWord ns1:word_0_9_30 ;
+    ns1:pos ns1:VERB ;
+    ns1:poscoarse ns1:VERB ;
+    ns1:previousWord ns1:word_0_9_28 ;
+    ns1:word "quebrado" .
+
+ns1:cop a ns1:edge .
+
+ns1:past a ns1:feat_tense .
+
+ns1:word_0_13_2 a ns1:Word ;
+    ns1:depGraph ns1:word_0_13_1,
+        ns1:word_0_13_10,
+        ns1:word_0_13_17,
+        ns1:word_0_13_3,
+        ns1:word_0_13_6,
+        ns1:word_0_13_8 ;
+    ns1:edge ns1:advcl ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_verbform ns1:part ;
+    ns1:head ns1:word_0_13_21 ;
+    ns1:id 2 ;
+    ns1:lemma "avançar" ;
+    ns1:nextWord ns1:word_0_13_3 ;
+    ns1:pos ns1:VERB ;
+    ns1:poscoarse ns1:VERB ;
+    ns1:previousWord ns1:word_0_13_1 ;
+    ns1:word "avançado" .
+
+ns1:word_0_1_5 a ns1:Word ;
+    ns1:OIE_tags "A2" ;
+    ns1:depGraph ns1:word_0_1_1,
+        ns1:word_0_1_3,
+        ns1:word_0_1_4,
+        ns1:word_0_1_6,
+        ns1:word_0_1_8,
+        ns1:word_0_1_9 ;
+    ns1:edge ns1:ROOT ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:fromSentence ns1:Sentence_0_1 ;
+    ns1:id 5 ;
+    ns1:lemma "conselho" ;
+    ns1:nextWord ns1:word_0_1_6 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_1_4 ;
+    ns1:word "conselho" .
+
+ns1:word_0_7_7 a ns1:Word ;
+    ns1:depGraph ns1:word_0_7_2,
+        ns1:word_0_7_23,
+        ns1:word_0_7_45,
+        ns1:word_0_7_5,
+        ns1:word_0_7_6,
+        ns1:word_0_7_9 ;
+    ns1:edge ns1:ROOT ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:fromSentence ns1:Sentence_0_7 ;
+    ns1:id 7 ;
+    ns1:lemma "Presidente" ;
+    ns1:nextWord ns1:word_0_7_8 ;
+    ns1:pos ns1:PROPN ;
+    ns1:poscoarse ns1:PROPN ;
+    ns1:previousWord ns1:word_0_7_6 ;
+    ns1:word "Presidente" .
+
+ns1:word_0_8_8 a ns1:Word ;
+    ns1:depGraph ns1:word_0_8_10,
+        ns1:word_0_8_17,
+        ns1:word_0_8_2,
+        ns1:word_0_8_5,
+        ns1:word_0_8_6,
+        ns1:word_0_8_7 ;
+    ns1:edge ns1:ROOT ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:plur ;
+    ns1:fromSentence ns1:Sentence_0_8 ;
+    ns1:id 8 ;
+    ns1:lemma "vulnerável" ;
+    ns1:nextWord ns1:word_0_8_9 ;
+    ns1:pos ns1:ADJ ;
+    ns1:poscoarse ns1:ADJ ;
+    ns1:previousWord ns1:word_0_8_7 ;
+    ns1:word "vulneráveis" .
+
+ns1:word_0_9_3 a ns1:Word ;
+    ns1:OIE_tags "A1" ;
+    ns1:depGraph ns1:word_0_9_1,
+        ns1:word_0_9_10,
+        ns1:word_0_9_15,
+        ns1:word_0_9_2,
+        ns1:word_0_9_4,
+        ns1:word_0_9_6 ;
+    ns1:edge ns1:obl ;
+    ns1:feat_gender ns1:fem ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_9_18 ;
+    ns1:id 3 ;
+    ns1:lemma "abertura" ;
+    ns1:nextWord ns1:word_0_9_4 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_9_2 ;
+    ns1:word "abertura" .
+
+ns1:xcomp a ns1:edge .
+
+ns1:word_0_11_2 a ns1:Word ;
+    ns1:depGraph ns1:word_0_11_1,
+        ns1:word_0_11_12,
+        ns1:word_0_11_14,
+        ns1:word_0_11_28,
+        ns1:word_0_11_34,
+        ns1:word_0_11_38,
+        ns1:word_0_11_5 ;
+    ns1:edge ns1:advcl ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_verbform ns1:part ;
+    ns1:feat_voice ns1:pass ;
+    ns1:head ns1:word_0_11_51 ;
+    ns1:id 2 ;
+    ns1:lemma "provar" ;
+    ns1:nextWord ns1:word_0_11_3 ;
+    ns1:pos ns1:VERB ;
+    ns1:poscoarse ns1:VERB ;
+    ns1:previousWord ns1:word_0_11_1 ;
+    ns1:word "provado" .
+
+ns1:word_0_7_23 a ns1:Word ;
+    ns1:depGraph ns1:word_0_7_16,
+        ns1:word_0_7_17,
+        ns1:word_0_7_19,
+        ns1:word_0_7_21,
+        ns1:word_0_7_22,
+        ns1:word_0_7_25,
+        ns1:word_0_7_34 ;
+    ns1:edge ns1:nmod ;
+    ns1:feat_gender ns1:masc ;
+    ns1:feat_number ns1:sing ;
+    ns1:head ns1:word_0_7_7 ;
+    ns1:id 23 ;
+    ns1:lemma "domínio" ;
+    ns1:nextWord ns1:word_0_7_24 ;
+    ns1:pos ns1:NOUN ;
+    ns1:poscoarse ns1:NOUN ;
+    ns1:previousWord ns1:word_0_7_22 ;
+    ns1:word "domínio" .
+
+ns1:appos a ns1:edge .
+
+ns1:mark a ns1:edge .
+
+ns1:word_0_11_51 a ns1:Word ;
+    ns1:depGraph ns1:word_0_11_2,
+        ns1:word_0_11_44,
+        ns1:word_0_11_49,
+        ns1:word_0_11_53,
+        ns1:word_0_11_63,
+        ns1:word_0_11_77,
+        ns1:word_0_11_84,
+        ns1:word_0_11_87 ;
+    ns1:edge ns1:ROOT ;
+    ns1:feat_mood ns1:ind ;
+    ns1:feat_number ns1:sing ;
+    ns1:feat_person ns1:3 ;
+    ns1:feat_tense ns1:pres ;
+    ns1:feat_verbform ns1:fin ;
+    ns1:fromSentence ns1:Sentence_0_11 ;
+    ns1:id 51 ;
+    ns1:lemma "adquirir" ;
+    ns1:nextWord ns1:word_0_11_52 ;
+    ns1:pos ns1:VERB ;
+    ns1:poscoarse ns1:VERB ;
+    ns1:previousWord ns1:word_0_11_50 ;
+    ns1:word "adquire" .
+
+ns1:advcl a ns1:edge .
+
+ns1:feats rdfs:subClassOf ns1:Attributes .
+
+ns1:part a ns1:feat_verbform .
+
+ns1:ROOT a ns1:edge .
+
+ns1:Sentence a owl:Class .
+
+ns1:Text_0 a ns1:Text ;
+    ns1:containsSentence ns1:Sentence_0_1,
+        ns1:Sentence_0_10,
+        ns1:Sentence_0_11,
+        ns1:Sentence_0_12,
+        ns1:Sentence_0_13,
+        ns1:Sentence_0_2,
+        ns1:Sentence_0_3,
+        ns1:Sentence_0_4,
+        ns1:Sentence_0_5,
+        ns1:Sentence_0_6,
+        ns1:Sentence_0_7,
+        ns1:Sentence_0_8,
+        ns1:Sentence_0_9 .
+
+ns1:pos a owl:ObjectProperty ;
+    rdfs:subClassOf ns1:Attributes .
+
+ns1:poscoarse a owl:ObjectProperty ;
+    rdfs:subClassOf ns1:Attributes .
+
+ns1:PRON a ns1:pos,
+        ns1:poscoarse .
+
+ns1:inf a ns1:feat_verbform .
+
+ns1:obj a ns1:edge .
+
+ns1:card a ns1:feat_numtype .
+
+ns1:advmod a ns1:edge .
+
+ns1:pres a ns1:feat_tense .
+
+ns1:SCONJ a ns1:pos,
+        ns1:poscoarse .
+
+ns1:nsubj a ns1:edge .
+
+<http://www.ieeta-bit.pt/OpenIE_s2_pt#flat:name> a ns1:edge .
+
+ns1:amod a ns1:edge .
+
+ns1:edge a owl:ObjectProperty ;
+    rdfs:subClassOf ns1:Attributes .
+
+ns1:fin a ns1:feat_verbform .
+
+ns1:obl a ns1:edge .
+
+ns1:AUX a ns1:pos,
+        ns1:poscoarse .
+
+ns1:NUM a ns1:pos,
+        ns1:poscoarse .
+
+ns1:3 a ns1:feat_person .
+
+ns1:ADV a ns1:pos,
+        ns1:poscoarse .
+
+ns1:ind a ns1:feat_mood .
+
+ns1:punct a ns1:edge .
+
+ns1:det a ns1:edge .
+
+ns1:plur a ns1:feat_number .
+
+ns1:nmod a ns1:edge .
+
+ns1:def a ns1:feat_definite .
+
+ns1:ADJ a ns1:pos,
+        ns1:poscoarse .
+
+ns1:art a ns1:feat_prontype .
+
+ns1:case a ns1:edge .
+
+ns1:PUNCT a ns1:pos,
+        ns1:poscoarse .
+
+ns1:VERB a ns1:pos,
+        ns1:poscoarse .
+
+ns1:DET a ns1:pos,
+        ns1:poscoarse .
+
+ns1:masc a ns1:feat_gender .
+
+ns1:fem a ns1:feat_gender .
+
+ns1:PROPN a ns1:pos,
+        ns1:poscoarse .
+
+ns1:ADP a ns1:pos,
+        ns1:poscoarse .
+
+ns1:NOUN a ns1:pos,
+        ns1:poscoarse .
+
+ns1:sing a ns1:feat_number .
+
+ns1:Word a owl:Class .
+

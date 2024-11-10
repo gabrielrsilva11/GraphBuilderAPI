@@ -1,0 +1,32 @@
+connection:
+  - connection_uri: http://34.175.171.126:8890/sparql
+    graph_name: http://www.ieeta-bit.pt/CaRB#
+    base_uri: http://www.ieeta-bit.pt/CaRB#
+    graph_name_test: http://www.ieeta-bit.pt/CaRB#
+    base_uri_test: http://www.ieeta-bit.pt/CaRB#
+enable_wandb:
+  True
+nodes:
+  - name: word
+    uri: http://www.ieeta-bit.pt/CaRB#Word
+    # THESE LINES HAVE POLARITY.
+    edges_source: [word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word]
+    edges: [depGraph, head, previousWord, fromSentence, nextWord, poscoarse, pos, edge, aspect, case, conjtype, definite, degree, gender, mood, number, numtype, person, poss, prontype, punctside, puncttype, tense, verbform, polarity]
+    edges_target: [word, word, word, sentence, word, poscoarse, pos, edge, aspect, case, conjtype, definite, degree, gender, mood, number, numtype, person, poss, prontype, punctside, puncttype, tense, verbform, polarity,]
+#    edges_source: [ word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word]
+#    edges: [ depGraph, head, previousWord, fromSentence, nextWord, poscoarse, pos, edge, aspect, conjtype, definite, degree, mood, number, numtype, person, prontype, punctside, puncttype, tense, verbform]
+#    edges_target: [ word, word, word, sentence, word, poscoarse, pos, edge, aspect, conjtype, definite, degree, mood, number, numtype, person, prontype, punctside, puncttype, tense, verbform]
+    edges_uri: [http://www.ieeta-bit.pt/CaRB#depGraph, http://www.ieeta-bit.pt/CaRB#head, http://www.ieeta-bit.pt/CaRB#previousWord, http://www.ieeta-bit.pt/CaRB#fromSentence, http://www.ieeta-bit.pt/CaRB#poscoarse, http://www.ieeta-bit.pt/CaRB#pos, http://www.ieeta-bit.pt/CaRB#edge, http://www.ieeta-bit.pt/CaRB#aspect, http://www.ieeta-bit.pt/CaRB#case, http://www.ieeta-bit.pt/CaRB#conjtype, http://www.ieeta-bit.pt/CaRB#definite, http://www.ieeta-bit.pt/CaRB#degree, http://www.ieeta-bit.pt/CaRB#foreign, http://www.ieeta-bit.pt/CaRB#gender, http://www.ieeta-bit.pt/CaRB#mood, http://www.ieeta-bit.pt/CaRB#number, http://www.ieeta-bit.pt/CaRB#numtype, http://www.ieeta-bit.pt/CaRB#person, http://www.ieeta-bit.pt/CaRB#polarity, http://www.ieeta-bit.pt/CaRB#poss, http://www.ieeta-bit.pt/CaRB#prontype, http://www.ieeta-bit.pt/CaRB#punctside, http://www.ieeta-bit.pt/CaRB#puncttype, http://www.ieeta-bit.pt/CaRB#tense, http://www.ieeta-bit.pt/CaRB#verbform]
+    attributes: [lemma, word, wikidataId, uppercase, embeddings]
+  - name: sentence
+    uri: http://www.ieeta-bit.pt/CaRB#Sentence
+    edges_source: [sentence]
+    edges: [nextSentence]
+    edges_target: [sentence]
+    edges_uri: [http://www.ieeta-bit.pt/CaRB#nextSentence]
+    attributes: [senttext]
+target:
+  - node: word
+    name: [target]
+    uri: [http://www.ieeta-bit.pt/CaRB#OIE_tags]
+    balancing: False

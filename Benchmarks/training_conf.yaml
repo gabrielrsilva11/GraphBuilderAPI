@@ -1,0 +1,10 @@
+embeddings: True
+epochs: 4000
+batch_size: 32
+validation_split: 0.3
+test_split: 0.15
+data_file: data/OpenIE/S2PT_Train_Embeddings_FixedTarget.pt
+targets_file: data/OpenIE/S2PT_Train_Embeddings_FixedTarget.pkl
+model_file: models/OpenIE/S2PT_Train_Embeddings_FixedTarget.pt
+test_data_file: data/OpenIE/S2PT_Test_Embeddings_FixedTarget.pt
+test_targets_file: data/OpenIE/S2PT_Test_Embeddings_FixedTarget.pkl

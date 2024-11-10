@@ -2,8 +2,8 @@ connection:
   - connection_uri: http://hlt.ieeta.pt:8890/sparql
     graph_name: http://www.ieeta-bit.pt/Conll_Coref_train#
     base_uri: http://www.ieeta-bit.pt/Conll_Coref_train#
-    graph_name_test: http://www.ieeta-bit.pt/Conll_Coref_train#
-    base_uri_test: http://www.ieeta-bit.pt/Conll_Coref_train#
+    graph_name_test: http://www.ieeta-bit.pt/Conll_Coref_test#
+    base_uri_test: http://www.ieeta-bit.pt/Conll_Coref_test#
 enable_wandb:
   True
 nodes:
@@ -170,11 +170,11 @@ nodes:
 #    attributes: [ ]
   - name: word
     uri: http://www.ieeta-bit.pt/Conll_Coref_train#Word
-    edges_source: [word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word]
-    edges: [coReference, depGraph, head, previousWord, fromSentence, nextWord, poscoarse, pos, edge, aspect, case, conjtype, definite, degree, gender, mood, number, numtype, person, polarity, poss, prontype, punctside, puncttype, tense, verbform]
-    edges_target: [word, word, word, word, sentence, word, poscoarse, pos, edge, aspect, case, conjtype, definite, degree, gender, mood, number, numtype, person, polarity, poss, prontype, punctside, puncttype, tense, verbform]
-    edges_uri: [http://www.ieeta-bit.pt/Conll_Coref_train#coReference, http://www.ieeta-bit.pt/Conll_Coref_train#depGraph, http://www.ieeta-bit.pt/Conll_Coref_train#head, http://www.ieeta-bit.pt/Conll_Coref_train#previousWord, http://www.ieeta-bit.pt/Conll_Coref_train#fromSentence, http://www.ieeta-bit.pt/Conll_Coref_train#poscoarse, http://www.ieeta-bit.pt/Conll_Coref_train#pos, http://www.ieeta-bit.pt/Conll_Coref_train#edge, http://www.ieeta-bit.pt/Conll_Coref_train#aspect, http://www.ieeta-bit.pt/Conll_Coref_train#case, http://www.ieeta-bit.pt/Conll_Coref_train#conjtype, http://www.ieeta-bit.pt/Conll_Coref_train#definite, http://www.ieeta-bit.pt/Conll_Coref_train#degree, http://www.ieeta-bit.pt/Conll_Coref_train#foreign, http://www.ieeta-bit.pt/Conll_Coref_train#gender, http://www.ieeta-bit.pt/Conll_Coref_train#mood, http://www.ieeta-bit.pt/Conll_Coref_train#number, http://www.ieeta-bit.pt/Conll_Coref_train#numtype, http://www.ieeta-bit.pt/Conll_Coref_train#person, http://www.ieeta-bit.pt/Conll_Coref_train#polarity, http://www.ieeta-bit.pt/Conll_Coref_train#poss, http://www.ieeta-bit.pt/Conll_Coref_train#prontype, http://www.ieeta-bit.pt/Conll_Coref_train#punctside, http://www.ieeta-bit.pt/Conll_Coref_train#puncttype, http://www.ieeta-bit.pt/Conll_Coref_train#tense, http://www.ieeta-bit.pt/Conll_Coref_train#verbform]
-    attributes: [lemma, word, wikidataId, chunk_tags, pos_tags]
+    edges_source: []#[word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word]
+    edges: []#[coReference, depGraph, head, previousWord, fromSentence, nextWord, poscoarse, pos, edge, aspect, case, conjtype, definite, degree, gender, mood, number, numtype, person, polarity, poss, prontype, punctside, puncttype, tense, verbform]
+    edges_target: []#[word, word, word, word, sentence, word, poscoarse, pos, edge, aspect, case, conjtype, definite, degree, gender, mood, number, numtype, person, polarity, poss, prontype, punctside, puncttype, tense, verbform]
+    edges_uri: []#[http://www.ieeta-bit.pt/Conll_Coref_train#coReference, http://www.ieeta-bit.pt/Conll_Coref_train#depGraph, http://www.ieeta-bit.pt/Conll_Coref_train#head, http://www.ieeta-bit.pt/Conll_Coref_train#previousWord, http://www.ieeta-bit.pt/Conll_Coref_train#fromSentence, http://www.ieeta-bit.pt/Conll_Coref_train#poscoarse, http://www.ieeta-bit.pt/Conll_Coref_train#pos, http://www.ieeta-bit.pt/Conll_Coref_train#edge, http://www.ieeta-bit.pt/Conll_Coref_train#aspect, http://www.ieeta-bit.pt/Conll_Coref_train#case, http://www.ieeta-bit.pt/Conll_Coref_train#conjtype, http://www.ieeta-bit.pt/Conll_Coref_train#definite, http://www.ieeta-bit.pt/Conll_Coref_train#degree, http://www.ieeta-bit.pt/Conll_Coref_train#foreign, http://www.ieeta-bit.pt/Conll_Coref_train#gender, http://www.ieeta-bit.pt/Conll_Coref_train#mood, http://www.ieeta-bit.pt/Conll_Coref_train#number, http://www.ieeta-bit.pt/Conll_Coref_train#numtype, http://www.ieeta-bit.pt/Conll_Coref_train#person, http://www.ieeta-bit.pt/Conll_Coref_train#polarity, http://www.ieeta-bit.pt/Conll_Coref_train#poss, http://www.ieeta-bit.pt/Conll_Coref_train#prontype, http://www.ieeta-bit.pt/Conll_Coref_train#punctside, http://www.ieeta-bit.pt/Conll_Coref_train#puncttype, http://www.ieeta-bit.pt/Conll_Coref_train#tense, http://www.ieeta-bit.pt/Conll_Coref_train#verbform]
+    attributes: [embeddings] #[lemma, word, wikidataId, chunk_tags, pos_tags, embeddings]
   - name: sentence
     uri: http://www.ieeta-bit.pt/Conll_Coref_train#Sentence
 #    edges_source: [sentence, sentence]

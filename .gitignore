@@ -19,3 +19,4 @@ Data_to_process/wikimapper_data/ptwiki-latest-page.sql
 /ML_Only/wandb
 /wandb
 /wikimapper_data
+Demos/Tests.py

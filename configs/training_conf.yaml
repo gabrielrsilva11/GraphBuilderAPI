@@ -1,10 +1,10 @@
 embeddings: True
-epochs: 1500
+epochs: 4000
 batch_size: 32
 validation_split: 0.3
 test_split: 0.15
-data_file: data/OpenIE/S2_2kTrain_Embeddings_FixedTarget.pt
-targets_file: data/OpenIE/S2_5kTrain_Embeddings_FixedTarget.pkl
-model_file: models/OpenIE/S2_5kTrain_Embeddings_FixedTarget.pt
-test_data_file: data/OpenIE/S2_5kTest_Embeddings_FixedTarget.pt
-test_targets_file: data/OpenIE/S2_5kTest_Embeddings_FixedTarget.pkl
+data_file: data/Double_Training/EN_Train_Embeddings_FixedTarget.pt
+targets_file: data/Double_Training/EN_Train_Embeddings_FixedTarget.pkl
+model_file: models/Double_Training/Train_Embeddings_FixedTarget.pt
+test_data_file: data/Double_Training/EN_Test_Embeddings_FixedTarget.pt
+test_targets_file: data/Double_Training/EN_Test_Embeddings_FixedTarget.pkl

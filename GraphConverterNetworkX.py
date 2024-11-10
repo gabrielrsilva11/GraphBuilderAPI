@@ -10,11 +10,27 @@ class BuildNetworkx:
         self.conection_string = connection_string #'http://estga-fiware.ua.pt:8890/sparql'
         self.qb = QueryBuilder(self.base_uri, self.graph_name)
 
+    def fetch_word_info(self, word_id):
+        exclude = ['depGraph', 'head', 'nextWord', 'previousWord', 'type']
+        word_dict = {}
+        for query_result in perform_query(self.qb.build_query_by_word_id(word_id), self.conection_string):
+            p = query_result['p'].__str__()
+            o = query_result['o'].__str__()
+            # print(p, o)
+            p = p.split("#")[-1].split('\'')[0]
+            o = o.split("#")[-1]
+            if "Value" in o:
+                o = o.split(":")[-1].split("'")[1]
+            else:
+                o = o.split('\'')[0]
+            if p not in exclude:
+                word_dict[p] = o
+        return word_dict
+
     @dispatch(int, int)
     def fetch_graph(self, start, stop):
         g = Graph()
-        doc_id = 1
-
+        doc_id = 0
         for i in range(start, stop):
             g = build_subgraph(g, self.qb.build_query_by_sentence_id(doc_id, i), self.conection_string)
         return g

@@ -1,12 +1,12 @@
 #folder: Data_to_process/Task1/Merged
-folder: Data_to_process/OpenIE/s2_en/Merged
-uri: http://www.ieeta-bit.pt/OpenIE_s2_en#
+folder: Data_to_process/OpenIE/CaRB/Raw
+uri: http://www.ieeta-bit.pt/CaRB#
 #language: pt_core_news_sm
 language: en_core_web_sm
-graph_name: http://www.ieeta-bit.pt/OpenIE_s2_en#
+graph_name: http://www.ieeta-bit.pt/CaRB#
 connection: http://34.175.171.126:8890/sparql
 in_memory: False
-save_file: TTLs/OIE_Test
+save_file: TTLs/CaRB_Test
 extra_connections:
   #connections: [pos_tags, chunk_tags, OIE_tags]
   #connections: [wikinerGrammarFeats, wikinerEntity, entityPresent]
