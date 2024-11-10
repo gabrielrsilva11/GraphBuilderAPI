@@ -2,7 +2,7 @@ import requests
 from pprint import pprint
 
 API_URL = "https://api-inference.huggingface.co/models/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
-headers = {"Authorization": "Bearer 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"}
+headers = {"Authorization": ""}
 
 def query(payload):
     response = requests.post(API_URL, headers=headers, json=payload)
