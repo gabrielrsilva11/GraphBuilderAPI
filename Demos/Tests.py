@@ -38,7 +38,7 @@
 #
 # queries = ["Tests for linkage disequilibrium were checked by using the GenePop v. 4.0 [62] .",
 #             "We used IBM SPSS 22.0 for the quantitative analysis ."]
-# client = AsyncOpenAI(api_key="sk-547e4d33b0684d8d84443f7cf63afe61", base_url="https://api.deepseek.com")
+# client = AsyncOpenAI(api_key="", base_url="https://api.deepseek.com")
 # results = asyncio.run(query_deepseek(client, queries))
 # print(results)
 # query = ENTITY_EXTRACTION_PROMPT.format(input_text=sentence,
