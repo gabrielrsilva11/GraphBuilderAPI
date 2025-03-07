@@ -9,7 +9,8 @@ from nltk.corpus import stopwords
 # This list should be blank if there are no extra annotations and you want the default graph.
 def preprocess_sentence(sentence):
     #text_nohtml = re.sub(r'http\S+', '', sentence)
-    sentences_split = sentence.replace("\n", "").split(" ")
+    #sentences_split = sentence.replace("\n", "").split(" ")
+    sentences_split = sentence.split(" ")
     final_list = []
     for sentence_annotation in sentences_split:
         sentence_annotation = sentence_annotation.split("|")
@@ -20,14 +21,14 @@ def preprocess_sentence(sentence):
             sentence_entity = sentence_annotation[-1].split("-")
             sentence_annotation[-1] = sentence_entity[-1]
             sentence_annotation.append("Yes")
-        if "/" in sentence_annotation[0]:
-            split_words = sentence_annotation[0].split("/")
-            for word in split_words:
-                copy_annotations = copy.deepcopy(sentence_annotation)
-                copy_annotations[0] = word
-                final_list.append(copy_annotations)
-        else:
-            final_list.append(sentence_annotation)
+        # if "/" in sentence_annotation[0]:
+        #     split_words = sentence_annotation[0].split("/")
+        #     for word in split_words:
+        #         copy_annotations = copy.deepcopy(sentence_annotation)
+        #         copy_annotations[0] = word
+        #         final_list.append(copy_annotations)
+        # else:
+        final_list.append(sentence_annotation)
     return final_list
 
 

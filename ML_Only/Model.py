@@ -1,10 +1,11 @@
 from torch import Tensor
 from torch_geometric.data import HeteroData
-from torch_geometric.nn import GATConv, Linear, SAGEConv, SplineConv, to_hetero, TopKPooling
+from torch_geometric.nn import GATConv, Linear, SAGEConv, SplineConv, to_hetero, TopKPooling, aggr, HGTConv, GATv2Conv
 from torch_geometric.nn import global_mean_pool as gap, global_max_pool as gmp
 import torch
 import torch.nn.functional as F
 from torch_geometric.nn.norm.batch_norm import BatchNorm
+from torch_geometric.nn import TransformerConv
 
 
 class GAT(torch.nn.Module):
@@ -23,37 +24,71 @@ class GAT(torch.nn.Module):
 
 
 class GNN(torch.nn.Module):
-    def __init__(self, hidden_channels, out_channels):
+    def __init__(self, hidden_channels, out_channels, aggregator):
         super().__init__()
-        self.conv1 = SAGEConv((-1, -1), hidden_channels)
+        self.conv1 = SAGEConv((-1, -1), hidden_channels, aggr=aggregator)
         self.batch_norm1 = BatchNorm(hidden_channels)
         self.pool1 = TopKPooling(hidden_channels, ratio=0.8)
         self.lin1 = Linear(-1, hidden_channels)
-        self.conv2 = SAGEConv((-1, -1), int(hidden_channels/2))
+        self.conv2 = SAGEConv((-1, -1), int(hidden_channels/2), aggr=aggregator)
         self.batch_norm2 = BatchNorm(int(hidden_channels/2))
         self.lin2 = Linear(-1, int(hidden_channels/2))
-        self.conv3 = SAGEConv((-1, -1), int(hidden_channels/4))
+        self.conv3 = SAGEConv((-1, -1), int(hidden_channels/4), aggr=aggregator)
         self.batch_norm3 = BatchNorm(int(hidden_channels/4))
         self.lin3 = Linear(-1, int(hidden_channels/4))
-        self.conv4 = SAGEConv((-1, -1), out_channels)
+        self.conv4 = SAGEConv((-1, -1), out_channels, aggr=aggregator)
         self.lin4 = Linear(-1, out_channels)
 
     def forward(self, x, edge_index):
-        x = self.conv1(x, edge_index)+self.lin1(x)
+        x = self.conv1(x, edge_index) #+self.lin1(x)
         x = x.relu()
         #x = F.dropout(x, p=0.5)
-        x = self.batch_norm1(x)
+        #x = self.batch_norm1(x)
 
-        x = self.conv2(x, edge_index) + self.lin2(x)
+        x = self.conv2(x, edge_index) #+ self.lin2(x)
         x = x.relu()
-        x = self.batch_norm2(x)
+        #x = self.batch_norm2(x)
 
-        x = self.conv3(x, edge_index) + self.lin3(x)
+        x = self.conv3(x, edge_index) #+ self.lin3(x)
         x = x.relu()
-        x = self.batch_norm3(x)
+        #x = self.batch_norm3(x)
 
         x = self.conv4(x, edge_index) + self.lin4(x)
         return x
+
+class HGT(torch.nn.Module):
+    def __init__(self, hidden_channels, out_channels, meta, head_number):
+        super().__init__()
+        self.conv1 = HGTConv(in_channels = -1, out_channels = hidden_channels, metadata=meta, heads=head_number)
+        self.batch_norm1 = BatchNorm(hidden_channels)
+        self.pool1 = TopKPooling(hidden_channels, ratio=0.8)
+        self.lin1 = Linear(-1, hidden_channels)
+        self.conv2 = HGTConv(-1, int(hidden_channels), metadata=meta, heads=head_number)
+        self.batch_norm2 = BatchNorm(int(hidden_channels))
+        self.lin2 = Linear(-1, int(hidden_channels))
+        self.conv3 = HGTConv(-1, int(hidden_channels),metadata=meta, heads=head_number)
+        self.batch_norm3 = BatchNorm(int(hidden_channels))
+        self.lin3 = Linear(-1, int(hidden_channels))
+        self.conv4 = HGTConv(-1, out_channels, metadata=meta, heads=1)
+        self.lin4 = Linear(-1, out_channels)
+
+    def forward(self, x, edge_index):
+        x = self.conv1(x, edge_index) #+self.lin1(x)
+        x = x.relu()
+        #x = F.dropout(x, p=0.5)
+        #x = self.batch_norm1(x)
+
+        x = self.conv2(x, edge_index) #+ self.lin2(x)
+        x = x.relu()
+        #x = self.batch_norm2(x)
+
+        x = self.conv3(x, edge_index) #+ self.lin3(x)
+        x = x.relu()
+        #x = self.batch_norm3(x)
+
+        x = self.conv4(x, edge_index) + self.lin4(x)
+        return x
+
 
 def accuracy(pred_y, y):
     """Calculate accuracy."""
@@ -193,4 +228,139 @@ class Net(torch.nn.Module):
 
         return x
 
+class Transformer(torch.nn.Module):
+    def __init__(self, input_dim, hidden_dim, output_dim, num_layers,
+                 dropout, beta=True, heads=1):
+        """
+                Params:
+                - input_dim: The dimension of input features for each node.
+                - hidden_dim: The size of the hidden layers.
+                - output_dim: The dimension of the output features (often equal to the
+                    number of classes in a classification task).
+                - num_layers: The number of layer blocks in the model.
+                - dropout: The dropout rate for regularization. It is used to prevent
+                    overfitting, helping the learning process remains generalized.
+                - beta: A boolean parameter indicating whether to use a gated residual
+                    connection (based on equations 5 and 6 from the UniMP paper). The
+                    gated residual connection (controlled by the beta parameter) helps
+                    preventing overfitting by allowing the model to balance between new
+                    and existing node features across layers.
+                - heads: The number of heads in the multi-head attention mechanism.
+                """
+        super(Transformer, self).__init__()
+        # The list of transormer conv layers for the each layer block.
+        self.num_layers = num_layers
+        print(input_dim, hidden_dim, output_dim)
+        conv_layers = [TransformerConv(input_dim, hidden_dim // heads, heads=heads, beta=beta)]
+        conv_layers += [TransformerConv(hidden_dim, hidden_dim // heads, heads=heads, beta=beta) for _ in
+                        range(num_layers - 2)]
+        # In the last layer, we will employ averaging for multi-head output by
+        # setting concat to True.
+        conv_layers.append(TransformerConv(hidden_dim, output_dim, heads=heads, beta=beta, concat=True))
+        self.convs = torch.nn.ModuleList(conv_layers)
 
+        # The list of layerNorm for each layer block.
+        norm_layers = [torch.nn.LayerNorm(hidden_dim) for _ in range(num_layers - 1)]
+        self.norms = torch.nn.ModuleList(norm_layers)
+
+        # Probability of an element getting zeroed.
+        self.dropout = dropout
+
+    def reset_parameters(self):
+        """
+        Resets the parameters of the convolutional and normalization layers,
+        ensuring they are re-initialized when needed.
+        """
+        for conv in self.convs:
+            conv.reset_parameters()
+        for norm in self.norms:
+            norm.reset_parameters()
+
+    def forward(self, x, edge_index):
+        """
+        The input features are passed sequentially through the transformer
+        convolutional layers. After each convolutional layer (except the last),
+        the following operations are applied:
+        - Layer normalization (`LayerNorm`).
+        - ReLU activation function.
+        - Dropout for regularization.
+        The final layer is processed without layer normalization and ReLU
+        to average the multi-head results for the expected output.
+
+        Params:
+        - x: node features x
+        - edge_index: edge indices.
+
+        """
+        for i in range(self.num_layers - 1):
+          # Construct the network as shown in the model architecture.
+          x = self.convs[i](x, edge_index)
+          x = self.norms[i](x)
+          x = F.relu(x)
+          # By setting training to self.training, we will only apply dropout
+          # during model training.
+          x = F.dropout(x, p = self.dropout, training = self.training)
+
+        # Last layer, average multi-head output.
+        x = self.convs[-1](x, edge_index)
+
+        return x
+
+class GNN_v2(torch.nn.Module):
+    def __init__(self, hidden_channels, out_channels, aggregator, num_layers, dropout):
+        super(GNN_v2, self).__init__()
+        self.num_layers = num_layers
+        self.dropout = dropout
+        conv_layers = [SAGEConv((-1, -1), hidden_channels, aggr=aggregator)]
+        conv_layers += [SAGEConv((-1, -1), hidden_channels, aggr=aggregator) for _ in
+                        range(num_layers - 2)]
+        conv_layers.append(SAGEConv((-1, -1), out_channels, aggr=aggregator))
+        self.convs = torch.nn.ModuleList(conv_layers)
+
+        # The list of layerNorm for each layer block.
+        norm_layers = [torch.nn.LayerNorm(hidden_channels) for _ in range(num_layers - 1)]
+        self.norms = torch.nn.ModuleList(norm_layers)
+
+    def forward(self, x, edge_index):
+        for i in range(self.num_layers - 1):
+          # Construct the network as shown in the model architecture.
+          x = self.convs[i](x, edge_index)
+          x = self.norms[i](x)
+          x = F.relu(x)
+          # By setting training to self.training, we will only apply dropout
+          # during model training.
+          x = F.dropout(x, p = self.dropout)
+
+        # Last layer, average multi-head output.
+        x = self.convs[-1](x, edge_index)
+
+        return x
+
+class GATConv_v2(torch.nn.Module):
+    def __init__(self, hidden_channels, out_channels, num_layers, dropout):
+        super(GATConv_v2, self).__init__()
+        self.num_layers = num_layers
+        self.dropout = dropout
+        conv_layers = [GATv2Conv((-1, -1), hidden_channels, add_self_loops=False)]
+        conv_layers += [GATv2Conv((-1, -1), hidden_channels, add_self_loops=False) for _ in
+                        range(num_layers - 2)]
+        conv_layers.append(GATv2Conv((-1, -1), out_channels, add_self_loops=False))
+        self.convs = torch.nn.ModuleList(conv_layers)
+
+        # The list of layerNorm for each layer block.
+        norm_layers = [torch.nn.LayerNorm(hidden_channels) for _ in range(num_layers - 1)]
+        self.norms = torch.nn.ModuleList(norm_layers)
+
+    def forward(self, x, edge_index):
+        for i in range(self.num_layers - 1):
+          # Construct the network as shown in the model architecture.
+          x = self.convs[i](x, edge_index)
+          x = self.norms[i](x)
+          x = F.relu(x)
+          # By setting training to self.training, we will only apply dropout
+          # during model training.
+          x = F.dropout(x, p = self.dropout)
+
+        x = self.convs[-1](x, edge_index)
+
+        return x

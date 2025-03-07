@@ -1,46 +1,57 @@
-import vertexai
-from vertexai.language_models import TextGenerationModel
 import openpyxl
 import xlsxwriter as xls
 import regex as re
 import os
-from llama_index.llms.gemini import Gemini
-from google.generativeai.types import HarmCategory, HarmBlockThreshold
 from tqdm import tqdm
 import string
 import itertools
+import ollama
 
-def interview(
-    temperature: float,
-    project_id: str,
-    location: str,
-    query: str,
-) -> str:
-    """Ideation example with a Large Language Model"""
+# def interview(
+#     temperature: float,
+#     project_id: str,
+#     location: str,
+#     query: str,
+# ) -> str:
+#     """Ideation example with a Large Language Model"""
+#
+#     vertexai.init(project=project_id, location=location)
+#     # TODO developer - override these parameters as needed:
+#     parameters = {
+#         "temperature": temperature,  # Temperature controls the degree of randomness in token selection.
+#         "max_output_tokens": 256,  # Token limit determines the maximum amount of text output.
+#         "top_p": 0.8,  # Tokens are selected from most probable to least until the sum of their probabilities equals the top_p value.
+#         "top_k": 40,  # A top_k of 1 means the selected token is the most probable among all tokens.
+#     }
+#
+#     model = TextGenerationModel.from_pretrained("text-bison@002")
+#     response = model.predict(
+#         query,
+#         **parameters,
+#     )
+#     #print(f"Response from Model: {response.text}")
+#
+#     return response.text
 
-    vertexai.init(project=project_id, location=location)
-    # TODO developer - override these parameters as needed:
-    parameters = {
-        "temperature": temperature,  # Temperature controls the degree of randomness in token selection.
-        "max_output_tokens": 256,  # Token limit determines the maximum amount of text output.
-        "top_p": 0.8,  # Tokens are selected from most probable to least until the sum of their probabilities equals the top_p value.
-        "top_k": 40,  # A top_k of 1 means the selected token is the most probable among all tokens.
-    }
+# def gemini(llm, query):
+#     resp = llm.complete(query)
+#     #print(type(resp))
+#     #print(resp.text)
+#     return resp.text
 
-    model = TextGenerationModel.from_pretrained("text-bison@002")
-    response = model.predict(
-        query,
-        **parameters,
+
+def chat(message_with_context):
+    stream = ollama.chat(
+        model='llama3.2',
+        messages=message_with_context,
     )
-    #print(f"Response from Model: {response.text}")
+    return stream
 
-    return response.text
 
-def gemini(llm, query):
-    resp = llm.complete(query)
-    #print(type(resp))
-    #print(resp.text)
-    return resp.text
+def llama_query(content):
+    response = ollama.generate(model='llama3.2', prompt=content)
+    return response['response']
+
 
 def query_builder_roots(sentence, subject, predicate, object):
     # In case there was no prediction
@@ -193,23 +204,10 @@ def eliminate_empty_triples(triple_member):
     return list_to_remove
 
 
-#Gemini Related
-GOOGLE_API_KEY = ""
-os.environ["GOOGLE_API_KEY"] = GOOGLE_API_KEY
-safety_settings={
-        HarmCategory.HARM_CATEGORY_HATE_SPEECH: HarmBlockThreshold.BLOCK_NONE,
-        HarmCategory.HARM_CATEGORY_HARASSMENT: HarmBlockThreshold.BLOCK_NONE,
-        HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT: HarmBlockThreshold.BLOCK_NONE,
-        HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.BLOCK_NONE,
-    }
-llm = Gemini(model="models/gemini-pro", safety_settings=safety_settings)
-
-
 triples_extracted = 0
-
 #Ficheiro dos dados
 #wb_obj = openpyxl.load_workbook("Results/Validation/Processed_GridSearch_PT_Teste.xlsx")
-wb_obj = openpyxl.load_workbook("Benchmarks/Results/excel/Roots_Only/CaRB_Tests.xlsx")
+wb_obj = openpyxl.load_workbook("/home/grsilva/GraphBuilderAPI_v2/Benchmarks/Results/excel/Roots_Only/CaRB_Tests.xlsx")
 sheet_obj = wb_obj.active
 row = 1
 col = 1
@@ -218,7 +216,7 @@ col_results = 0
 
 #Ficheiro a criar
 #workbook = xls.Workbook('Results/Validation/Processed_LLM_TestQuery_PT_Formato.xlsx')
-workbook = xls.Workbook('Benchmarks/Results/excel/Roots_Only/CaRB_Processed_Tests2_Gemini.xlsx')
+workbook = xls.Workbook('/home/grsilva/GraphBuilderAPI_v2/Benchmarks/Results/excel/Roots_Only/CaRB_Processed_Tests2_Gemini.xlsx')
 worksheet = workbook.add_worksheet()
 worksheet.write(row_results, col_results, "Sent_ID")
 worksheet.write(row_results, col_results + 1, "Sentence")
@@ -257,7 +255,7 @@ for i in tqdm(range(0, sheet_obj.max_row, 5)): #8 para testes
 
     query = query_builder(sentence, subject, predicate, object)
     #response = interview(temperature=0.5, project_id="stellar-zoo-405011", location="europe-west4", query=query)
-    response = gemini(llm, query)
+    response = llama_query(query)
     # print(query)
     # print(response)
 

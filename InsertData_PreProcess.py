@@ -3,7 +3,7 @@ import string
 from time import sleep
 import warnings
 from SPARQLWrapper import SPARQLWrapper, POST
-#from spacy_conll import init_parser
+from spacy_conll import init_parser
 from tqdm import tqdm
 from unidecode import unidecode
 from Query_Builder import QueryBuilder
@@ -15,6 +15,8 @@ from fastcoref import spacy_component
 import spacy
 import logging
 from datasets import load_dataset
+import validators
+
 
 logging.getLogger("fastcoref").setLevel(logging.WARNING)
 class CreateGraph:
@@ -38,22 +40,27 @@ class CreateGraph:
         self.main_uri = main_uri
         self.in_memory = in_memory
         self.preprocessing = preprocessing
-        # self.nlp = init_parser(language,
-        #                        "spacy",
-        #                        ext_names={"conll_pd": "pandas"},
-        #                        #disable_sbd=True,
-        #                        #parser_opts={"use_gpu": True, "verbose": False},
-        #                        include_headers=True)
-        self.nlp = spacy.load("en_core_web_trf")
-        config = {"ext_names": {"conll_pd": "pandas"}}
-        self.nlp.add_pipe("conll_formatter", config=config, last=True)
+        self.nlp = init_parser(language,
+                               "spacy",
+                               ext_names={"conll_pd": "pandas"},
+                               is_tokenized=True,
+                               #disable_sbd=True,
+                               #parser_opts={"use_gpu": True, "verbose": False},
+                               include_headers=True)
+
+
+        # self.nlp = spacy.load("en_core_web_trf")
+        # config = {"ext_names": {"conll_pd": "pandas"}}
+        # self.nlp.add_pipe("conll_formatter", config=config, last=True)
+
+
         #self.nlp.add_pipe("fastcoref")
                      #config={'model_architecture': 'LingMessCoref', 'model_path': 'biu-nlp/lingmess-coref'})
         self.connection = connection_string
         self.sparql = SPARQLWrapper(self.connection)
+        self.sparql.setMethod(POST)
         self.mapper = WikiMapper("wikimapper_data/index_ptwiki-latest.db")
         #self.sparql.setCredentials("dba", "dbapass")
-        self.sparql.setMethod(POST)
         self.queries = QueryBuilder(self.main_uri, self.graph_name)
         self.g = Graph()
         # Document navigation -> Text, Sentence, Word classes
@@ -61,6 +68,12 @@ class CreateGraph:
         self.c_sentence_uri = self.main_uri + "Sentence"
         self.c_word_uri = self.main_uri + "Word"
         self.c_attributes_uri = self.main_uri + "Attributes"
+
+        # Sub Classes of attributes
+        self.sc_edge_uri = self.main_uri + "Edge"
+        self.sc_pos_uri = self.main_uri + "Pos"
+        self.sc_poscoarse_uri = self.main_uri + "Poscoarse"
+        self.sc_feats_uri = self.main_uri + "Feats"
 
         # General properties -> text/conll properties to be created as object properties in the graph
         self.o_depgraph_uri = self.main_uri + "depGraph"
@@ -73,10 +86,11 @@ class CreateGraph:
         self.o_contains_text = self.main_uri + "containsText"
         self.o_from_sentence_uri = self.main_uri + "fromSentence"
         self.o_coreference_uri = self.main_uri + "coReference"
-        self.o_edge_uri = self.main_uri + "edge"
-        self.o_pos_uri = self.main_uri + "pos"
-        self.o_poscoarse_uri = self.main_uri + "poscoarse"
-        self.o_feats_uri = self.main_uri + "feats"
+        self.o_edge_uri = self.main_uri + "hasEdge"
+        self.o_pos_uri = self.main_uri + "hasPos"
+        self.o_poscoarse_uri = self.main_uri + "hasPoscoarse"
+        self.o_feats_uri = self.main_uri + "hasFeats"
+
         #Extra object properties
         self.extra_object_properties = self.fetch_extra_properties(extra_connetions)
 
@@ -90,10 +104,15 @@ class CreateGraph:
         self.d_word_uri = self.main_uri + "word"
         self.d_upper_uri = self.main_uri + "uppercase"
         self.d_wikimapper_uri = self.main_uri + "wikidataId"
+        self.d_name_uri = self.main_uri + "name"
+        self.d_url_uri = self.main_uri + "url"
+        self.d_entitytype_uri = self.main_uri + "entityType"
+
         #dict to keep track of the already inserted feats
         self.d_feats_list = []
         self.feats_specific_list = []
         self.objectDict = {"edge": [], "pos": [], "poscoarse": []}
+        self.deprel_added = []
         # self.edges_list = []
         # self.pos_list = []
         # self.poscoarse_list = []
@@ -121,11 +140,10 @@ class CreateGraph:
         self.insert_data(self.c_sentence_uri, RDF.type, OWL.Class)
         self.insert_data(self.c_word_uri, RDF.type, OWL.Class)
         self.insert_data(self.c_attributes_uri, RDF.type, OWL.Class)
-
-        self.insert_data(self.o_pos_uri, RDFS.subClassOf, self.c_attributes_uri)
-        self.insert_data(self.o_poscoarse_uri, RDFS.subClassOf, self.c_attributes_uri)
-        self.insert_data(self.o_edge_uri, RDFS.subClassOf, self.c_attributes_uri)
-        self.insert_data(self.o_feats_uri, RDFS.subClassOf, self.c_attributes_uri)
+        self.insert_data(self.sc_pos_uri, RDFS.subClassOf, self.c_attributes_uri)
+        self.insert_data(self.sc_poscoarse_uri, RDFS.subClassOf, self.c_attributes_uri)
+        self.insert_data(self.sc_edge_uri, RDFS.subClassOf, self.c_attributes_uri)
+        self.insert_data(self.sc_feats_uri, RDFS.subClassOf, self.c_attributes_uri)
 
         # data properties
         self.insert_data(self.d_sentence_text, RDF.type, OWL.DatatypeProperty)
@@ -134,6 +152,9 @@ class CreateGraph:
         self.insert_data(self.d_word_uri, RDF.type, OWL.DatatypeProperty)
         self.insert_data(self.d_upper_uri, RDF.type, OWL.DatatypeProperty)
         self.insert_data(self.d_wikimapper_uri, RDF.type, OWL.DatatypeProperty)
+        self.insert_data(self.d_name_uri, RDF.type, OWL.DatatypeProperty)
+        self.insert_data(self.d_url_uri, RDF.type, OWL.DatatypeProperty)
+        self.insert_data(self.d_entitytype_uri, RDF.type, OWL.DatatypeProperty)
 
         # object properties
         self.insert_data(self.o_head_uri, RDF.type, OWL.ObjectProperty)
@@ -148,6 +169,10 @@ class CreateGraph:
         self.insert_data(self.o_previousword_uri, RDF.type, OWL.ObjectProperty)
         self.insert_data(self.o_from_sentence_uri, RDF.type, OWL.ObjectProperty)
         self.insert_data(self.o_coreference_uri, RDF.type, OWL.ObjectProperty)
+        self.insert_data(self.o_pos_uri, RDF.type, OWL.ObjectProperty)
+        self.insert_data(self.o_poscoarse_uri, RDF.type, OWL.ObjectProperty)
+        self.insert_data(self.o_edge_uri, RDF.type, OWL.ObjectProperty)
+        self.insert_data(self.o_feats_uri, RDF.type, OWL.ObjectProperty)
 
         # Insert the extras
         if self.extra_object_properties:
@@ -210,8 +235,7 @@ class CreateGraph:
                 sentence += line[0] + " "
         else:
             sentence = lines
-
-        sentence_complete = sentence.strip()
+        sentence_complete = sentence
         doc = self.nlp(sentence_complete)
         text = text+sentence_complete
         conll = doc._.pandas
@@ -225,16 +249,16 @@ class CreateGraph:
         self.insert_data(textid_uri, RDF.type, self.c_text_uri)
         indexes_used = []
         for index, row in conll.iterrows():
-            word = row['FORM'].replace("'", "APOS").replace("\"", "")
-            lemma = row['LEMMA'].replace("'", "APOS").replace("\"", "")
+            word = row['FORM'].replace("\"", "")
+            lemma = row['LEMMA'].replace("\"", "")
             word_id = row['ID']
             try:
-                upper_case = word[0].isupper()
+                upper_case = word.isupper()
             except:
                 print(word)
             sentence.append(unidecode(word))
             if row['ID'] == 1:
-                sentence_id += 1
+                #sentence_id += 1
                 sentenceid_uri = self.c_sentence_uri + "_" + str(doc_id) + "_" + str(sentence_id)
                 # if sentence_id > 0:
                 #     sentence = [sentence[-1]]
@@ -255,8 +279,8 @@ class CreateGraph:
                     first_bound = upper_bound
                     lower_bound = upper_bound
                     #Sent Text
-                    self.insert_data(self.c_sentence_uri + "_" + str(doc_id) + "_" + str(sentence_id - 1),
-                                     self.d_sentence_text, Literal(' '.join(sentence[0:-1]).strip()))
+                    # self.insert_data(self.c_sentence_uri + "_" + str(doc_id) + "_" + str(sentence_id - 1),
+                    #                  self.d_sentence_text, Literal(' '.join(sentence[0:-1]).strip()))
                     sentence = []
                     sentence.append(unidecode(word))
                     #Previous sentence
@@ -288,15 +312,21 @@ class CreateGraph:
             self.insert_data(wordid_uri, RDF.type, self.c_word_uri)
             #self.insert_data(wordid_uri, self.d_id_uri, Literal(row['ID']))
             self.insert_data(wordid_uri, self.d_word_uri, Literal(word))
+
+            if validators.url(word):
+                self.insert_data(wordid_uri, self.d_url_uri, Literal("True"))
+
             if upper_case:
                 self.insert_data(wordid_uri, self.d_upper_uri, Literal("True"))
+            else:
+                self.insert_data(wordid_uri, self.d_upper_uri, Literal("No"))
             self.process_feats(wordid_uri, row['FEATS'])
             #self.insert_data(wordid_uri, self.d_feats_uri, Literal(row['feats']))
             self.insert_data(wordid_uri, self.d_id_uri, Literal(row['ID']))
             self.insert_data(wordid_uri, self.d_lemma_uri, Literal(lemma))
-            self.process_conll_as_objects('edge', wordid_uri, self.o_edge_uri, row['DEPREL'])
-            self.process_conll_as_objects('pos', wordid_uri, self.o_pos_uri, row['UPOS'])
-            self.process_conll_as_objects('poscoarse', wordid_uri, self.o_poscoarse_uri, row['XPOS'])
+            self.process_conll_as_objects('edge', wordid_uri, self.o_edge_uri, self.sc_edge_uri, row['DEPREL'])
+            self.process_conll_as_objects('pos', wordid_uri, self.o_pos_uri, self.sc_pos_uri, row['UPOS'])
+            self.process_conll_as_objects('poscoarse', wordid_uri, self.o_poscoarse_uri, self.sc_poscoarse_uri, row['XPOS'])
             self.insert_wikimapper(wordid_uri, word)
             if self.preprocessing:
                 for o in range(0, len(processed_lines)):
@@ -318,7 +348,17 @@ class CreateGraph:
                                  self.d_word_uri + "_" + str(doc_id) +"_" + str(sentence_id) + "_" + str(row['HEAD']))
                 self.insert_data(self.d_word_uri + "_" + str(doc_id) +"_" + str(sentence_id) + "_" + str(row['HEAD']), self.o_depgraph_uri,
                                  wordid_uri)
-        self.insert_data(sentenceid_uri, self.d_sentence_text, Literal(' '.join(sentence).strip()))
+
+                if str(row['DEPREL']) in self.deprel_added:
+                    self.insert_data(wordid_uri, self.main_uri + 'has'+str(row['DEPREL']), self.d_word_uri + "_" + str(doc_id) +"_" + str(sentence_id) + "_" + str(row['HEAD']))
+                else:
+                    self.insert_data(self.main_uri + 'has'+str(row['DEPREL']), RDF.type, OWL.ObjectProperty)
+                    self.insert_data(wordid_uri, self.main_uri + 'has'+str(row['DEPREL']),
+                                     self.d_word_uri + "_" + str(doc_id) + "_" + str(sentence_id) + "_" + str(
+                                         row['HEAD']))
+                    self.deprel_added.append(row['DEPREL'])
+
+        self.insert_data(sentenceid_uri, self.d_sentence_text, Literal(repr(' '.join(sentence).strip())[1:-1]))
         self.insert_data(textid_uri, self.o_contains_sentence, sentenceid_uri)
         self.insert_data(sentenceid_uri, self.o_from_text, textid_uri)
         if coref:
@@ -333,20 +373,29 @@ class CreateGraph:
                 feat[1] = feat[1].replace(",", "_")
                 if feat[0] in self.d_feats_list:
                     if feat[1] in self.feats_specific_list:
-                        self.insert_data(wordid_uri, self.main_uri+feat[0].lower(), self.main_uri+feat[1].lower())
+                        # self.insert_data(wordid_uri, self.main_uri+feat[0].lower(), self.main_uri+feat[1].lower())
+                        self.insert_data(wordid_uri, self.o_feats_uri, self.main_uri + feat[1].lower())
                     else:
                         self.feats_specific_list.append(feat[1])
-                        self.insert_data(self.main_uri + feat[1].lower(), RDF.type, self.main_uri+ feat[0].lower())
-                        self.insert_data(wordid_uri, self.main_uri+feat[0].lower(), self.main_uri+feat[1].lower())
+                        # self.insert_data(self.main_uri + feat[1].lower(), RDF.type, self.main_uri+ feat[0].lower())
+                        # self.insert_data(wordid_uri, self.main_uri+feat[0].lower(), self.main_uri+feat[1].lower())
+                        self.insert_data(self.main_uri + feat[1].lower(), RDF.type, self.main_uri + feat[0].lower())
+                        self.insert_data(self.main_uri + feat[1].lower(), self.d_name_uri, Literal(feat[1].lower()))
+                        self.insert_data(wordid_uri, self.o_feats_uri, self.main_uri + feat[1].lower())
+
                 else:
                     self.d_feats_list.append(feat[0])
                     self.feats_specific_list.append(feat[1])
-                    self.insert_data(self.main_uri+feat[0].lower(), RDFS.subClassOf, self.o_feats_uri)
-                    self.insert_data(self.main_uri+feat[0].lower(), RDF.type, OWL.ObjectProperty)
-                    self.insert_data(self.main_uri + feat[1].lower(), RDF.type, self.main_uri+feat[0].lower())
-                    self.insert_data(wordid_uri, self.main_uri+ feat[0].lower(), self.main_uri +feat[1].lower())
+                    # self.insert_data(self.main_uri+feat[0].lower(), RDFS.subClassOf, self.o_feats_uri)
+                    # self.insert_data(self.main_uri+feat[0].lower(), RDF.type, OWL.ObjectProperty)
+                    # self.insert_data(self.main_uri + feat[1].lower(), RDF.type, self.main_uri+feat[0].lower())
+                    # self.insert_data(wordid_uri, self.main_uri+ feat[0].lower(), self.main_uri +feat[1].lower())
+                    self.insert_data(self.main_uri + feat[0].lower(), RDFS.subClassOf, self.sc_feats_uri)
+                    self.insert_data(self.main_uri + feat[1].lower(), RDF.type, self.main_uri + feat[0].lower())
+                    self.insert_data(self.main_uri + feat[1].lower(), self.d_name_uri, Literal(feat[1].lower()))
+                    self.insert_data(wordid_uri, self.o_feats_uri, self.main_uri + feat[1].lower())
 
-    def process_conll_as_objects(self, prop_type, word, uri, to_add):
+    def process_conll_as_objects(self, prop_type, word, object_uri, subclass_uri, to_add):
         if prop_type == "poscoarse":
             transformed = ''
             for character in to_add:
@@ -364,14 +413,18 @@ class CreateGraph:
         else:
             added = False
         if added:
-            self.insert_data(uri, RDF.type, OWL.ObjectProperty)
-            self.insert_data(to_add_uri, RDF.type, uri)
-        self.insert_data(word, uri, to_add_uri)
+            #self.insert_data(, RDF.type, OWL.ObjectProperty)
+            self.insert_data(to_add_uri, RDF.type, subclass_uri)
+            self.insert_data(to_add_uri, self.d_name_uri, Literal(to_add))
+
+        self.insert_data(word, object_uri, to_add_uri)
 
     def insert_wikimapper(self, word_id, word):
         wiki_id = self.mapper.title_to_id(word)
         if wiki_id:
             self.insert_data(word_id, self.d_wikimapper_uri, Literal(wiki_id))
+        else:
+            self.insert_data(word_id, self.d_wikimapper_uri, Literal("No"))
 
     def fetch_root_word(self, text):
         first_ref_process = self.nlp(text)
@@ -449,6 +502,7 @@ class CreateGraph:
         :param in_memory: Boolean which indicates whether we want to create the graph in-memory or upload to a storage.
         :param save_file: Name of the file to save the graph.
         """
+        #TODO: Ver a duplicação das palavras
         doc_id = 0
         i = 0
         lines = ''
@@ -456,19 +510,21 @@ class CreateGraph:
         self.insert_relationship_data()
         for file_name in files:
             if not file_name.startswith("."):
-                sentence_id = 0
+                sentence_id = 1
                 file_path = os.getcwd()+"/"+self.folder_name+"/"+file_name
                 print(f"--- Processing file {doc_id} : {file_name} ---")
                 with tqdm(total=os.path.getsize(file_path)) as pbar:
                     with open(file_path) as file:
                         for line in file:
-                            #print(repr(line))
+                            # print(repr(line))
                             if line != "\n":
                                 lines = lines + line + " "
                                 i += 1
-                                if i == 50:
-                                    sentence_id = self.insert_script(lines, sentence_id, doc_id, coref)
-                                    sentence_id = sentence_id + 1
+                                sentence_id = self.insert_script(line, sentence_id, doc_id, coref)
+                                sentence_id = sentence_id + 1
+                                if i == 20:
+                                    # sentence_id = self.insert_script(lines, sentence_id, doc_id, coref)
+                                    # sentence_id = sentence_id + 1
                                     pbar.update(len(lines.encode('utf-8')))
                                     # pbar.display()
                                     i = 0
@@ -496,7 +552,7 @@ class CreateGraph:
                 i += 1
                 if i == 50:
                     sentence_id = self.insert_script(data_to_send, sentence_id, doc_id, coref)
-                    sentence_id = sentence_id + 1
+                    #sentence_id = sentence_id + 1
                     i = 0
                     data_to_send = []
                 pbar.update(total)

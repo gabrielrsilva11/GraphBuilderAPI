@@ -1,7 +1,7 @@
 from tqdm import tqdm
 from GraphFetch import FetchGraph
 from rdflib.namespace import RDF
-from rdflib import URIRef, Literal
+from rdflib import URIRef, Literal, Graph
 import pandas as pd
 import torch
 from torch_geometric.data import HeteroData
@@ -9,6 +9,11 @@ from typing import List
 from vertexai.language_models import TextEmbeddingInput, TextEmbeddingModel
 from Helpers import list_conll_subgraph
 from statistics import mode
+from transformers import AutoModel
+import os
+
+
+os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 def fetch_graph(edges, nodes, indexes, ids_to_fetch, config_data, test):
     print("--- LOADING ", test.upper(), " DATASET ---")
@@ -20,27 +25,36 @@ def fetch_graph(edges, nodes, indexes, ids_to_fetch, config_data, test):
         graph_name = config_data['connection'][0]['graph_name']
 
     root_predicate = config_data['connection'][0]['root_predicate']
+    root_a1 = config_data['connection'][0]['root_a1']
     conection_string = config_data['connection'][0]['connection_uri']
     ntx = FetchGraph(base_uri, graph_name, conection_string)
     embeds = {}
+    og_graph = ntx.fetch_default_graph("Edge")
+    og_graph = ntx.fetch_default_graph("Feats", og_graph)
+    og_graph = ntx.fetch_default_graph("Pos", og_graph)
+    og_graph = ntx.fetch_default_graph("Poscoarse", og_graph)
+    first_run = True
     for i in tqdm(range(len(ids_to_fetch)), desc="Loading Dataset"):
         idx = ids_to_fetch[i]
-        graph = ntx.fetch_graph([idx])
+        if first_run:
+            graph = ntx.fetch_graph([idx], og_graph)
+            first_run = False
+        else:
+            graph = Graph()
+            graph = ntx.fetch_graph([idx], graph)
+
         # ---- CHANGE THE TARGETS TO THE FIRST IN THE CHAIN -----
         # ---- COMMENT FOR REGULAR GRAPH ----
-        if test == 'Test' or test == 'Train':
-            graph = change_targets(graph, base_uri, root_predicate)
-            # for s, p, o in graph.triples((None, URIRef(base_uri + "OIE_tags"), None)):
-            #     print(s, p, o)
+        # if test == 'Test' or test == 'Train':
+        #     graph = change_targets(graph, base_uri, root_predicate, root_a1)
 
         process = True
         if graph != None:
-            for s, p, o in graph.triples((None, URIRef(base_uri + "senttext"), None)):
-                #print(s, p, o)
-                if len(o.__str__()) < 1000:
-                    process = True
-                else:
-                    process = False
+            # for s, p, o in graph.triples((None, URIRef(base_uri + "senttext"), None)):
+                # if len(o.__str__()) < 1000:
+                #     process = True
+                # else:
+                #     process = False
             if process:
                 for layer in config_data['nodes']:
                     if layer['name'] not in indexes:
@@ -76,59 +90,52 @@ def fetch_graph(edges, nodes, indexes, ids_to_fetch, config_data, test):
                             indexes[layer['name']].append(s.__str__())
     return edges, nodes, indexes
 
-def change_targets(g, base_uri, root_predicate):
+def change_targets(g, base_uri, root_predicate, root_a1):
     senttext_uri = URIRef(base_uri + "senttext")
     depgraph_uri = URIRef(base_uri + "depGraph")
     id_uri = URIRef(base_uri + "id")
     tags = URIRef(base_uri + "OIE_tags")
-    word = URIRef(base_uri + "word")
-    tag = URIRef(base_uri + "OIE_tags")
     graph = False
     for s, p, o in g.triples((None, senttext_uri, None)):
         graph = list_conll_subgraph(graph=g, root_node=s, transverse_by=depgraph_uri, order_by=id_uri,
                                     main_uri=base_uri)
     if graph:
         if len(graph) == 3:
-            #pprint.pprint(graph)
             # Fetch the words that make up A1, R, A2
             a1 = []
             r = []
             a2 = []
             for s, p, o in g.triples((None, tags, None)):
                 if o.__str__() == "A1":
-                    for s, p , o in g.triples((s, word, None)):
-                        #a1 = a1 + o.__str__() + " "
-                        a1.append([s.__str__(), "A1"])
+                    a1.append([s.__str__(), "A1"])
                 elif o.__str__() == "A2":
-                    for s, p, o in g.triples((s, word, None)):
-                        # a2 = a2 + o.__str__() + " "
-                        a2.append([s.__str__(), "A2"])
+                    a2.append([s.__str__(), "A2"])
                 elif o.__str__() == "R":
-                    for s, p, o in g.triples((s, word, None)):
-                        #r = r + o.__str__() + " "
-                        r.append([s.__str__(), "R"])
+                    r.append([s.__str__(), "R"])
                 else:
-                    g.add((s, URIRef(tag), Literal("No")))
+                    g.add((s, URIRef(tags), Literal("No")))
                     if root_predicate:
                         g.add((s, URIRef(base_uri+"Root_Predicate"), Literal("No")))
+                    if root_a1:
+                        g.add((s, URIRef(base_uri + "Root_A1"), Literal("No")))
             if a1 and r and a2:
                 relations = find_central_relationship(relations=[a1, r, a2], graph=graph)
-                g = add_new_target_to_graph(a1, relations, "A1", tag, g, root_predicate)
-                g = add_new_target_to_graph(a2, relations, "A2", tag, g, root_predicate)
-                g = add_new_target_to_graph(r, relations, "R", tag, g, root_predicate)
+                if root_predicate or root_a1:
+                    g = add_new_target_to_graph(base_uri, a1, relations, "A1", tags, g, root_predicate, root_a1)
+                    g = add_new_target_to_graph(base_uri, a2, relations, "A2", tags, g, root_predicate, root_a1)
+                    g = add_new_target_to_graph(base_uri, r, relations, "R", tags, g, root_predicate, root_a1)
+                else:
+                    g = add_new_target_to_graph(base_uri, r, relations, "R", tags, g, root_predicate, root_a1)
             else:
                 return None
     return g
 
 def recursive_find(graph_node, word_numbers, current_max_length, list_with_index):
-    #print(graph_node)
     if len(word_numbers) == 1:
         list_with_index.append([word_numbers[0], 100])
     else:
         for i in range(0, len(graph_node)):
             if type(graph_node[i]) == list:
-                # print(graph_node[i])
-                # print(len(graph_node[i]))
                 if graph_node[i][0] in word_numbers:
                     #if current_max_length < len(graph_node[i]):
                         #current_max_length = len(graph_node[i])
@@ -170,7 +177,6 @@ def get_root_node(graph_as_list: list, w_id: int, id_list: list) -> int:
 
 
 def get_most_frequent_root(graph_as_list: list, word_ids: list) -> int:
-    #print(graph_as_list)
     return mode([get_root_node(graph_as_list, int(w_id), word_ids) for w_id in word_ids])
 
 
@@ -186,22 +192,29 @@ def find_central_relationship(relations, graph):
         first_found[triple_type] = relations[relation][word_ids.index(word_index)][0]
     return first_found
 
-def add_new_target_to_graph(past_relations, new_relations, rel_type, target_uri, graph, root_predicate = False):
-    base_uri = "http://www.ieeta-bit.pt/OpenIE_s2_en#"
+def add_new_target_to_graph(base_uri, past_relations, new_relations, rel_type, target_uri, graph, root_predicate, root_a1):
     relationship = ""
     if rel_type in new_relations:
         relationship = new_relations[rel_type]
-
     for rel_id in past_relations:
         if rel_id[0] == relationship:
             if root_predicate and rel_type == "R":
                 graph.add((URIRef(rel_id[0]), URIRef(base_uri+"Root_Predicate"), Literal(rel_id[1])))
+            elif root_predicate:
+                graph.add((URIRef(rel_id[0]), URIRef(base_uri + "Root_Predicate"), Literal("No")))
+
+            if root_a1 and rel_type == "A1":
+                graph.add((URIRef(rel_id[0]), URIRef(base_uri + "Root_A1"), Literal(rel_id[1])))
+            elif root_a1:
+                graph.add((URIRef(rel_id[0]), URIRef(base_uri + "Root_A1"), Literal("No")))
+
             graph.add((URIRef(rel_id[0]), URIRef(target_uri), Literal(rel_id[1])))
         else:
             if root_predicate:
                 graph.add((URIRef(rel_id[0]), URIRef(base_uri + "Root_Predicate"), Literal("No")))
+            if root_a1:
+                graph.add((URIRef(rel_id[0]), URIRef(base_uri + "Root_A1"), Literal("No")))
             graph.add((URIRef(rel_id[0]), URIRef(target_uri), Literal("No")))
-
     return graph
 
 def map_uri_to_index(indexes, config_data):
@@ -227,7 +240,6 @@ def embed_text(
 
 def build_node_relationships(uniqueIds, nodeList, source_name, target_name, balancing):
     original_df = pd.DataFrame(data=nodeList, columns=["source", "target"])
-    #print(original_df.to_string())
     if target_name in uniqueIds:
         source_df = pd.merge(original_df['source'], uniqueIds[source_name],
                              left_on='source', right_on='originalId', how='left')
@@ -247,7 +259,6 @@ def build_node_relationships(uniqueIds, nodeList, source_name, target_name, bala
     target_df['mappedId'] = target_df['mappedId'].astype(int)
     index_targets = target_df.index
     source_df = source_df.iloc[index_targets]
-
     source = torch.from_numpy(source_df['mappedId'].values)
     #source = source.type(torch.int64)
     target = torch.from_numpy((target_df['mappedId'].values))
@@ -263,24 +274,34 @@ def build_node_relationships(uniqueIds, nodeList, source_name, target_name, bala
     node_tensor = torch.stack([source, target], dim=0)
     return node_tensor
 
-def build_targets(nodes_df, config_data, test=False, targets_test=None, root_predicate=False):
-    nodes_df[config_data['target'][0]['name'][0]].fillna("0", inplace=True)
-    # Replace names with their first name
+def build_targets(nodes_df, config_data, test=False, targets_test=None, root_predicate=False, root_a1=False):
+    #Fill empty values with No
+    nodes_df[config_data['target'][0]['name'][0]].fillna("No", inplace=True)
+    # Replace negative entries with "No"
     nodes_df[config_data['target'][0]['name'][0]] = nodes_df[config_data['target'][0]['name'][0]].replace(
         "0", "No")
+    nodes_df[config_data['target'][0]['name'][0]] = nodes_df[config_data['target'][0]['name'][0]].replace(
+        "O", "No")
 
-    if root_predicate:
-        nodes_df[config_data['target'][0]['name'][0]] = nodes_df[config_data['target'][0]['name'][0]].replace(
-            "R", "No")
-    else:
-        nodes_df[config_data['target'][0]['name'][0]] = nodes_df[config_data['target'][0]['name'][0]].replace(
-            "A1", "No")
-        nodes_df[config_data['target'][0]['name'][0]] = nodes_df[config_data['target'][0]['name'][0]].replace(
-            "A2", "No")
+    # if root_predicate and root_a1:
+    #     nodes_df[config_data['target'][0]['name'][0]] = nodes_df[config_data['target'][0]['name'][0]].replace(
+    #         "R", "No")
+    #     nodes_df[config_data['target'][0]['name'][0]] = nodes_df[config_data['target'][0]['name'][0]].replace(
+    #         "A1", "No")
+    # elif root_predicate and not root_a1:
+    #     nodes_df[config_data['target'][0]['name'][0]] = nodes_df[config_data['target'][0]['name'][0]].replace(
+    #         "R", "No")
+    #     nodes_df[config_data['target'][0]['name'][0]] = nodes_df[config_data['target'][0]['name'][0]].replace(
+    #         "A2", "No")
+    # else:
+    #     nodes_df[config_data['target'][0]['name'][0]] = nodes_df[config_data['target'][0]['name'][0]].replace(
+    #         "A1", "No")
+    #     nodes_df[config_data['target'][0]['name'][0]] = nodes_df[config_data['target'][0]['name'][0]].replace(
+    #         "A2", "No")
 
     print(nodes_df[config_data['target'][0]['name'][0]].value_counts())
-    # print(nodes_df['Root_Predicate'])
-    #print(nodes_df[config_data['target'][0]['name'][0]])
+    # print(nodes_df['Root_Predicate'].value_counts())
+    print(nodes_df[config_data['target'][0]['name'][0]])
 
     if test == "Test":
         unique_targets_df = targets_test
@@ -292,14 +313,12 @@ def build_targets(nodes_df, config_data, test=False, targets_test=None, root_pre
         })
     targets_df = pd.merge(nodes_df[config_data['target'][0]['name'][0]], unique_targets_df,
                           left_on=config_data['target'][0]['name'][0], right_on='originalId', how='left')
+    #print(targets_df)
     targets = torch.from_numpy(targets_df['mappedId'].values)
-    if test == "Test":
-        return targets, unique_targets_df, len(nodes_df[config_data['target'][0]['name'][0]].unique())
 
     return targets, unique_targets_df, len(unique_targets_df)
 
 def build_graph(nodes, edges, mapped_ids, config_data, graph_data , test = False, test_targets=None, embedding = True):
-
     for layer in config_data['nodes']:
         column_list = []
         nodes_df = pd.DataFrame.from_records(nodes[layer['name']])
@@ -308,34 +327,35 @@ def build_graph(nodes, edges, mapped_ids, config_data, graph_data , test = False
             if attributes in nodes_df.columns:
                 column_list.append(attributes)
                 if attributes != 'embeddings':
+                    nodes_df[attributes] = nodes_df[attributes].fillna("No")
                     nodes_df[attributes] = nodes_df[attributes].astype('category').cat.codes
             else:
                 print("---- WARNING ----")
-                print(attributes, " is present in the config file but was not found in the data.")
+                print(attributes, " is present in the config file but was not found in the data")
                 print("-----------------")
         if test != 'Benchmark':
             if layer['name'] == config_data['target'][0]['node']:
                 nodes_df[config_data['target'][0]['name'][0]] = nodes_df[config_data['target'][0]['name'][0]].replace(r'\n','', regex=True)
                 if test == "Test":
-                    targets, unique_targets, size_targets = build_targets(nodes_df, config_data, test=test, targets_test = test_targets, root_predicate=config_data['connection'][0]['root_predicate'] )
+                    targets, unique_targets, size_targets = build_targets(nodes_df, config_data, test=test, targets_test = test_targets, root_predicate=config_data['connection'][0]['root_predicate'], root_a1=config_data['connection'][0]['root_a1'])
                 else:
-                    targets, unique_targets, size_targets = build_targets(nodes_df, config_data, root_predicate=config_data['connection'][0]['root_predicate'])
+                    targets, unique_targets, size_targets = build_targets(nodes_df, config_data, root_predicate=config_data['connection'][0]['root_predicate'],  root_a1=config_data['connection'][0]['root_a1'])
                 graph_data[layer['name']].y = targets
                 graph_data.num_classes = size_targets
         if layer['name'] == 'word':
             if embedding:
-                print(column_list)
                 column_list.remove('embeddings')
 
             column_list.remove('word')
             column_list.remove('lemma')
             #adicionar aqui uma coluna com o id da palavra
             nodes_appropriate = nodes_df[column_list]
+            #print(nodes_appropriate['Root_Predicate'].to_string())
             nodes_tensor = torch.from_numpy(nodes_appropriate.values).to(torch.float)
             if embedding:
                 embeds = nodes_df['embeddings'].values
                 embeds_tensor = torch.stack(embeds.tolist(), dim=0)
-                nodes_tensor = torch.cat((nodes_tensor, embeds_tensor), 1)
+                nodes_tensor = torch.cat((embeds_tensor, nodes_tensor), 1)
         else:
             nodes_appropriate = nodes_df[column_list]
             nodes_tensor = torch.from_numpy(nodes_appropriate.values).to(torch.float)
@@ -343,7 +363,9 @@ def build_graph(nodes, edges, mapped_ids, config_data, graph_data , test = False
         for edge_idx in range(0, len(layer['edges'])):
             try:
                 graph_data[layer['edges_source'][edge_idx], layer['edges'][edge_idx], layer['edges_target'][edge_idx]].edge_index = build_node_relationships(mapped_ids, edges[layer['edges'][edge_idx]], layer['edges_source'][edge_idx], layer['edges_target'][edge_idx], config_data['target'][0]['balancing'])
-            except:
+                #graph_data[layer['edges_source'][edge_idx], layer['edges'][edge_idx], layer['edges_target'][edge_idx]].edge_attr = build_node_relationships(mapped_ids, edges[layer['edges'][edge_idx]], layer['edges_source'][edge_idx], layer['edges_target'][edge_idx], config_data['target'][0]['balancing'])
+            except Exception as e:
+                print(e)
                 print("Error on: ", layer['edges_source'][edge_idx])
 
     if test == 'Benchmark':
@@ -358,7 +380,7 @@ def check_embed_dict(embeds, words_list):
             list_for_embeds.append(words_list[word_id])
     return list_for_embeds
 
-def match_embeds_to_words(nodes):
+def match_embeds_to_words(nodes, model):
     sentences = []
     sentence = []
     dict_embeds = {}
@@ -384,8 +406,9 @@ def match_embeds_to_words(nodes):
         embeds = []
         if embed_list:
             try:
-                embeds = embed_text(embed_list, "CLASSIFICATION", "text-multilingual-embedding-preview-0409")
+                #embeds = embed_text(embed_list, "CLASSIFICATION", "text-multilingual-embedding-preview-0409")
                 #embeddings.append(embeds)
+                embeds = model.encode(embed_list, task="classification")
             except:
                 print("---- EMBEDDING FAILED ----")
                 print(sentences[i])
@@ -429,7 +452,8 @@ def get_graph(list_to_get, config_data, test=False, targets_test = None, embeddi
     indexes = {}
     edges, nodes, indexes = fetch_graph(edges, nodes, indexes, list_to_get, config_data, test)
     if embedding:
-        nodes = match_embeds_to_words(nodes)
+        model = AutoModel.from_pretrained("jinaai/jina-embeddings-v3", trust_remote_code=True, device_map = 'cuda')
+        nodes = match_embeds_to_words(nodes, model)
     mapped_uris = map_uri_to_index(indexes, config_data)
     if test == 'Test':
         graph_data, unique_targets, size_targets = build_graph(nodes, edges, mapped_uris, config_data, graph_data, test=test, test_targets=targets_test, embedding=embedding)
@@ -438,8 +462,6 @@ def get_graph(list_to_get, config_data, test=False, targets_test = None, embeddi
     else: # Benchmarks
         graph_data = build_graph(nodes, edges, mapped_uris, config_data, graph_data,
                                                                test=test, embedding=embedding)
-    #print(graph_data)
-    #print("--- DATASET LOADED AND TRANSFORMED ---")
     if test == 'Benchmark':
         return graph_data, mapped_uris, indexes['word']
 

@@ -10,6 +10,7 @@ def fetch_graph(qb, sentence_id, connection_string):
     g = build_subgraph(g, qb.build_query_by_sentence_id(doc_id, int(sentence_id)), connection_string)
     return g
 
+
 def fetch_root_word_pair(g, base_uri, root_word_id, valid_paths):
     #print(root_word_id)
     for s, p, o in g.triples((URIRef(root_word_id), URIRef(base_uri+"depGraph"), None)):
@@ -302,7 +303,7 @@ def convert_results_benchmark(base_uri, graph_name, connection_string, read_path
     workbook.close()
 
 
-config_file = open('Benchmarks/Configs/GraphML_OpenIE.yaml', 'r')
+config_file = open('Benchmarks/Configs/GraphML_OpenIE_PT.yaml', 'r')
 config_data = yaml.load(config_file, Loader=yaml.FullLoader)
 
 convert_results_benchmark(base_uri=config_data['connection'][0]['base_uri'], graph_name=config_data['connection'][0]['graph_name'], connection_string=config_data['connection'][0]['connection_uri']

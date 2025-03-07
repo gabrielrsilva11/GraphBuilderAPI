@@ -1,0 +1,33 @@
+connection:
+  - connection_uri: http://hlt.ieeta.pt:8890/sparql
+    graph_name: http://www.ieeta-bit.pt/OpenIE_s2_en#
+    base_uri: http://www.ieeta-bit.pt/OpenIE_s2_en#
+    graph_name_test: http://www.ieeta-bit.pt/OpenIE_s2_en#
+    base_uri_test: http://www.ieeta-bit.pt/OpenIE_s2_en#
+    root_predicate: False
+enable_wandb:
+  True
+nodes:
+  - name: word
+    uri: http://www.ieeta-bit.pt/OpenIE_s2_en#Word
+    # THESE LINES HAVE POLARITY.
+    edges_source: [word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word]
+    edges: [depGraph, head, previousWord, fromSentence, nextWord, poscoarse, pos, edge, aspect, case, conjtype, definite, degree, gender, mood, number, numtype, person, poss, prontype, punctside, puncttype, tense, verbform, polarity]
+    edges_target: [word, word, word, sentence, word, poscoarse, pos, edge, aspect, case, conjtype, definite, degree, gender, mood, number, numtype, person, poss, prontype, punctside, puncttype, tense, verbform, polarity,]
+#    edges_source: [ word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word]
+#    edges: [ depGraph, head, previousWord, fromSentence, nextWord, poscoarse, pos, edge, aspect, conjtype, definite, degree, mood, number, numtype, person, prontype, punctside, puncttype, tense, verbform]
+#    edges_target: [ word, word, word, sentence, word, poscoarse, pos, edge, aspect, conjtype, definite, degree, mood, number, numtype, person, prontype, punctside, puncttype, tense, verbform]
+    edges_uri: [http://www.ieeta-bit.pt/OpenIE_s2_en#depGraph, http://www.ieeta-bit.pt/OpenIE_s2_en#head, http://www.ieeta-bit.pt/OpenIE_s2_en#previousWord, http://www.ieeta-bit.pt/OpenIE_s2_en#fromSentence, http://www.ieeta-bit.pt/OpenIE_s2_en#poscoarse, http://www.ieeta-bit.pt/OpenIE_s2_en#pos, http://www.ieeta-bit.pt/OpenIE_s2_en#edge, http://www.ieeta-bit.pt/OpenIE_s2_en#aspect, http://www.ieeta-bit.pt/OpenIE_s2_en#case, http://www.ieeta-bit.pt/OpenIE_s2_en#conjtype, http://www.ieeta-bit.pt/OpenIE_s2_en#definite, http://www.ieeta-bit.pt/OpenIE_s2_en#degree, http://www.ieeta-bit.pt/OpenIE_s2_en#foreign, http://www.ieeta-bit.pt/OpenIE_s2_en#gender, http://www.ieeta-bit.pt/OpenIE_s2_en#mood, http://www.ieeta-bit.pt/OpenIE_s2_en#number, http://www.ieeta-bit.pt/OpenIE_s2_en#numtype, http://www.ieeta-bit.pt/OpenIE_s2_en#person, http://www.ieeta-bit.pt/OpenIE_s2_en#polarity, http://www.ieeta-bit.pt/OpenIE_s2_en#poss, http://www.ieeta-bit.pt/OpenIE_s2_en#prontype, http://www.ieeta-bit.pt/OpenIE_s2_en#punctside, http://www.ieeta-bit.pt/OpenIE_s2_en#puncttype, http://www.ieeta-bit.pt/OpenIE_s2_en#tense, http://www.ieeta-bit.pt/OpenIE_s2_en#verbform]
+    attributes: [lemma, word, wikidataId, uppercase, embeddings, Root_Predicate]
+  - name: sentence
+    uri: http://www.ieeta-bit.pt/OpenIE_s2_en#Sentence
+    edges_source: [sentence]
+    edges: [nextSentence]
+    edges_target: [sentence]
+    edges_uri: [http://www.ieeta-bit.pt/OpenIE_s2_en#nextSentence]
+    attributes: [senttext]
+target:
+  - node: word
+    name: [OIE_tags]
+    uri: [http://www.ieeta-bit.pt/OpenIE_s2_en#OIE_tags]
+    balancing: False

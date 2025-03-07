@@ -47,29 +47,62 @@
 #             merged_file.write("{}|{} ".format(data_split[i], label_split[i]))
 #         merged_file.write("\n")
 
-def find_triples(sentence, triple_part, type):
-    triple_part_split = triple_part.split(" ")
-    triple_part = triple_part.replace("\n","")
-    new_triple_part = ""
-    for word in triple_part_split:
-        word = word.strip()
-        new_triple_part = new_triple_part+word+"|"+type+" "
-    sentence = sentence.replace(triple_part, new_triple_part)
-    return sentence.replace("  ", " ")
+# def find_triples(sentence, triple_part, type):
+#     triple_part_split = triple_part.split(" ")
+#     triple_part = triple_part.replace("\n","")
+#     new_triple_part = ""
+#     for word in triple_part_split:
+#         word = word.strip()
+#         new_triple_part = new_triple_part+word+"|"+type+" "
+#     sentence = sentence.replace(triple_part, new_triple_part)
+#     return sentence.replace("  ", " ")
+#
+#
+# file_path = "/home/grsilva/GraphBuilderAPI_v2/Data_to_process/OpenIE/CaRB/gold_dev.tsv"
+# new_file = "/home/grsilva/GraphBuilderAPI_v2/Data_to_process/OpenIE/CaRB/Processed/gold_dev.txt"
+# f = open(file_path, "r")
+# i = 0
+# with open(new_file, "w") as f_write:
+#     for line in f:
+#         split_sent = line.split("\t")
+#         sentence = split_sent[0]
+#         subject = split_sent[2]
+#         predicate = split_sent[1]
+#         object = split_sent[3]
+#         sentence = find_triples(sentence, subject, "A1")
+#         sentence = find_triples(sentence, predicate, "R")
+#         sentence = find_triples(sentence, object, "A2")
+#         f_write.write(sentence+"\n")
+
+file_path = "/home/grsilva/GraphBuilderAPI_v2/Data_to_process/SOMD2025/train_texts.txt"
+relations_path = "/home/grsilva/GraphBuilderAPI_v2/Data_to_process/SOMD2025/train_entities.txt"
+merged_file = "/home/grsilva/GraphBuilderAPI_v2/Data_to_process/SOMD2025/Merged_Train.txt"
+
+# Read the contents of train_texts.txt
+with open(file_path, 'r') as texts_file:
+    texts = texts_file.readlines()
+
+# Read the contents of train_relations.txt
+with open(relations_path, 'r') as relations_file:
+    relations = relations_file.readlines()
+
+# Ensure both files have the same number of lines
+if len(texts) != len(relations):
+    raise ValueError("The number of lines in train_texts and train_relations must be the same.")
+
+# Write the merged data to a new file
+with open(merged_file, 'w') as output_file:
+    for i in range(0, len(relations)):
+        texts_split = texts[i].split(" ")
+        relations_split = relations[i].split(" ")
+        str_builder = ""
+        for merge_i in range(0, len(texts_split)):
+            if merge_i == len(texts_split)-1:
+                str_builder += texts_split[merge_i].strip()+"|"+relations_split[merge_i]
+            else:
+                str_builder += texts_split[merge_i].strip()+"|"+relations_split[merge_i]+" "
+        output_file.write(str_builder)
 
 
-file_path = "Data_to_process/OpenIE/CaRB/gold_test.tsv"
-new_file = "Data_to_process/OpenIE/CaRB/gold_test_processed_V2.txt"
-f = open(file_path, "r")
-i = 0
-with open(new_file, "w") as f_write:
-    for line in f:
-        split_sent = line.split("\t")
-        sentence = split_sent[0]
-        subject = split_sent[2]
-        predicate = split_sent[1]
-        object = split_sent[3]
-        sentence = find_triples(sentence, subject, "S")
-        sentence = find_triples(sentence, predicate, "P")
-        sentence = find_triples(sentence, object, "O")
-        f_write.write(sentence+"\n")
+
+print("Files have been successfully merged into merged_output.txt")

@@ -1,0 +1,65 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.ieeta-bit.pt/OpenIE_s2_pt_v2#Edge> rdfs:subClassOf <http://www.ieeta-bit.pt/OpenIE_s2_pt_v2#Attributes> .
+
+<http://www.ieeta-bit.pt/OpenIE_s2_pt_v2#Feats> rdfs:subClassOf <http://www.ieeta-bit.pt/OpenIE_s2_pt_v2#Attributes> .
+
+<http://www.ieeta-bit.pt/OpenIE_s2_pt_v2#OIE_tags> a owl:DatatypeProperty .
+
+<http://www.ieeta-bit.pt/OpenIE_s2_pt_v2#Pos> rdfs:subClassOf <http://www.ieeta-bit.pt/OpenIE_s2_pt_v2#Attributes> .
+
+<http://www.ieeta-bit.pt/OpenIE_s2_pt_v2#Poscoarse> rdfs:subClassOf <http://www.ieeta-bit.pt/OpenIE_s2_pt_v2#Attributes> .
+
+<http://www.ieeta-bit.pt/OpenIE_s2_pt_v2#Sentence> a owl:Class .
+
+<http://www.ieeta-bit.pt/OpenIE_s2_pt_v2#Text> a owl:Class .
+
+<http://www.ieeta-bit.pt/OpenIE_s2_pt_v2#Word> a owl:Class .
+
+<http://www.ieeta-bit.pt/OpenIE_s2_pt_v2#coReference> a owl:ObjectProperty .
+
+<http://www.ieeta-bit.pt/OpenIE_s2_pt_v2#containsSentence> a owl:ObjectProperty .
+
+<http://www.ieeta-bit.pt/OpenIE_s2_pt_v2#containsText> a owl:ObjectProperty .
+
+<http://www.ieeta-bit.pt/OpenIE_s2_pt_v2#depGraph> a owl:ObjectProperty .
+
+<http://www.ieeta-bit.pt/OpenIE_s2_pt_v2#fromSentence> a owl:ObjectProperty .
+
+<http://www.ieeta-bit.pt/OpenIE_s2_pt_v2#fromText> a owl:ObjectProperty .
+
+<http://www.ieeta-bit.pt/OpenIE_s2_pt_v2#hasEdge> a owl:ObjectProperty .
+
+<http://www.ieeta-bit.pt/OpenIE_s2_pt_v2#hasFeats> a owl:ObjectProperty .
+
+<http://www.ieeta-bit.pt/OpenIE_s2_pt_v2#hasPos> a owl:ObjectProperty .
+
+<http://www.ieeta-bit.pt/OpenIE_s2_pt_v2#hasPoscoarse> a owl:ObjectProperty .
+
+<http://www.ieeta-bit.pt/OpenIE_s2_pt_v2#head> a owl:ObjectProperty .
+
+<http://www.ieeta-bit.pt/OpenIE_s2_pt_v2#id> a owl:DatatypeProperty .
+
+<http://www.ieeta-bit.pt/OpenIE_s2_pt_v2#lemma> a owl:DatatypeProperty .
+
+<http://www.ieeta-bit.pt/OpenIE_s2_pt_v2#name> a owl:DatatypeProperty .
+
+<http://www.ieeta-bit.pt/OpenIE_s2_pt_v2#nextSentence> a owl:ObjectProperty .
+
+<http://www.ieeta-bit.pt/OpenIE_s2_pt_v2#nextWord> a owl:ObjectProperty .
+
+<http://www.ieeta-bit.pt/OpenIE_s2_pt_v2#previousSentence> a owl:ObjectProperty .
+
+<http://www.ieeta-bit.pt/OpenIE_s2_pt_v2#previousWord> a owl:ObjectProperty .
+
+<http://www.ieeta-bit.pt/OpenIE_s2_pt_v2#senttext> a owl:DatatypeProperty .
+
+<http://www.ieeta-bit.pt/OpenIE_s2_pt_v2#uppercase> a owl:DatatypeProperty .
+
+<http://www.ieeta-bit.pt/OpenIE_s2_pt_v2#wikidataId> a owl:DatatypeProperty .
+
+<http://www.ieeta-bit.pt/OpenIE_s2_pt_v2#word> a owl:DatatypeProperty .
+
+<http://www.ieeta-bit.pt/OpenIE_s2_pt_v2#Attributes> a owl:Class .
+

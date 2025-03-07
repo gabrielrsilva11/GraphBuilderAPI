@@ -1,13 +1,10 @@
-#folder: Data_to_process/Task1/Merged
-folder: Data_to_process/OpenIE/CaRB/Raw
-uri: http://www.ieeta-bit.pt/CaRB#
+folder: Data_to_process/SOMD2025/Merged
+uri: http://www.ieeta-bit.pt/SOMD2025_v3#
 #language: pt_core_news_sm
 language: en_core_web_sm
-graph_name: http://www.ieeta-bit.pt/CaRB#
-connection: http://34.175.171.126:8890/sparql
+graph_name: http://www.ieeta-bit.pt/SOMD2025_v3#
+connection: http://hlt.ieeta.pt:8890/sparql
 in_memory: False
-save_file: TTLs/CaRB_Test
+save_file: ML_Only/TTLs/SOMD2025
 extra_connections:
-  #connections: [pos_tags, chunk_tags, OIE_tags]
-  #connections: [wikinerGrammarFeats, wikinerEntity, entityPresent]
   connections: [OIE_tags]

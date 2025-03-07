@@ -1,0 +1,24 @@
+Title: SOMD
+Description: This dataset is designed for training and testing machine learning models for named entity recognition and relation extraction. It includes three training files (texts, entities, relations) and one test file (texts only).
+
+
+File Descriptions
+Train Texts File (train_texts.txt)
+Format: TXT
+Description: Contains the texts used for training. Each line is an input sentence and is annotated with entity and relation information in separate files.
+
+Train Entities File (train_entities.txt)
+Format: TXT
+Description: Lists entities annotated in the training texts, IOB format
+Fields: entity_id, text_id, entity_type, start_pos, end_pos
+
+Train Relations File (train_relations.txt)
+Format: TXT
+Description: Details the relations between entities within the training texts.
+Fields: relation_type, entity1 token index, entity2 token index separated by '\t'. Multiple relations are separated by ';'
+
+Test Texts File (test_texts.txt)
+Format: TXT
+Description: Contains texts for testing the model. These texts do not include entity or relation annotations.
+Fields: text_content
+

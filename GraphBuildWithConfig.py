@@ -12,6 +12,8 @@ from Helpers import list_conll_subgraph
 import pprint
 from copy import deepcopy
 from statistics import mode
+from transformers import AutoModel
+
 
 def fetch_graph(edges, nodes, indexes, ids_to_fetch, config_data, test):
     print("--- LOADING DATASET ---")
@@ -214,16 +216,18 @@ def map_uri_to_index(indexes, config_data):
         unique_ids[layer['name']] = unique_ids_df
     return unique_ids
 
-def embed_text(
-    texts: List[str] = ["banana muffins? ", "banana bread? banana muffins?"],
-    task: str = "RETRIEVAL_DOCUMENT",
-    model_name: str = "textembedding-gecko@003",
-) -> List[List[float]]:
-    """Embeds texts with a pre-trained, foundational model."""
-    model = TextEmbeddingModel.from_pretrained(model_name)
-    inputs = [TextEmbeddingInput(text, task) for text in texts]
-    embeddings = model.get_embeddings(inputs)
-    return [embedding.values for embedding in embeddings]
+# def embed_text(
+#     texts: List[str] = ["banana muffins? ", "banana bread? banana muffins?"],
+#     task: str = "RETRIEVAL_DOCUMENT",
+#     model_name: str = "textembedding-gecko@003",
+# ) -> List[List[float]]:
+#     """Embeds texts with a pre-trained, foundational model."""
+#     model = TextEmbeddingModel.from_pretrained(model_name)
+#     inputs = [TextEmbeddingInput(text, task) for text in texts]
+#     embeddings = model.get_embeddings(inputs)
+#     return [embedding.values for embedding in embeddings]
+
+
 
 def build_node_relationships(uniqueIds, nodeList, source_name, target_name, balancing):
     original_df = pd.DataFrame(data=nodeList, columns=["source", "target"])
@@ -356,7 +360,7 @@ def check_embed_dict(embeds, words_list):
             list_for_embeds.append(words_list[word_id])
     return list_for_embeds
 
-def match_embeds_to_words(nodes):
+def match_embeds_to_words(nodes, model):
     sentences = []
     sentence = []
     dict_embeds = {}
@@ -382,7 +386,8 @@ def match_embeds_to_words(nodes):
         embeds = []
         if embed_list:
             try:
-                embeds = embed_text(embed_list, "CLASSIFICATION", "text-multilingual-embedding-preview-0409")
+                # embeds = embed_text(embed_list, "CLASSIFICATION", "text-multilingual-embedding-preview-0409")
+                embeds = model.encode(embed_list, task="classification")
                 #embeddings.append(embeds)
             except:
                 print("---- EMBEDDING FAILED ----")
@@ -421,13 +426,14 @@ def fetch_word_node_info(word, config_data):
     return word_dict
 
 def get_graph(list_to_get, config_data, test=False, targets_test = None, embedding = True):
+    model = AutoModel.from_pretrained("jinaai/jina-embeddings-v3", trust_remote_code=True)
     graph_data = HeteroData()
     edges = {}
     nodes = {}
     indexes = {}
     edges, nodes, indexes = fetch_graph(edges, nodes, indexes, list_to_get, config_data, test)
     if embedding:
-        nodes = match_embeds_to_words(nodes)
+        nodes = match_embeds_to_words(nodes, model)
     mapped_uris = map_uri_to_index(indexes, config_data)
     if test == 'Test':
         graph_data, unique_targets, size_targets = build_graph(nodes, edges, mapped_uris, config_data, graph_data, test=test, test_targets=targets_test, embedding=embedding)

@@ -1,0 +1,35 @@
+connection_uri: http://hlt.ieeta.pt:8890/sparql
+base_uri: http://www.ieeta-bit.pt/OpenIE_s2_en_v2#
+graph_name: http://www.ieeta-bit.pt/OpenIE_s2_en_v2#
+load_data_train: True
+load_data_test: True
+save_data_train: False
+save_data_test: False
+#Forest expansion Path
+expansion_model_path: /home/grsilva/GraphBuilderAPI_v2/ML_Only/Expansion_Dataset/BestRF.pkl
+edge_encoder: /home/grsilva/GraphBuilderAPI_v2/ML_Only/Expansion_Dataset/edge_encoder.pkl
+pos_encoder: /home/grsilva/GraphBuilderAPI_v2/ML_Only/Expansion_Dataset/pos_encoder.pkl
+poscoarse_encoder: /home/grsilva/GraphBuilderAPI_v2/ML_Only/Expansion_Dataset/poscoarse_encoder.pkl
+#Excel save file
+excel_save_path: /home/grsilva/GraphBuilderAPI_v2/ML_Only/Excel_Results/ForestMerged/S2_En_LLM_RF.xlsx
+#Predicate Data Files
+data_file_pred: /home/grsilva/GraphBuilderAPI_v2/ML_Only/Data/Train_11k_R.pt
+targets_file_pred: /home/grsilva/GraphBuilderAPI_v2/ML_Only/Data/TrainTargets_11k_R.pkl
+model_file_pred: /home/grsilva/GraphBuilderAPI_v2/ML_Only/Models/Train_11k_R.pt
+test_data_file_pred: /home/grsilva/GraphBuilderAPI_v2/ML_Only/Data/Test_3k_R.pt
+test_targets_file_pred: /home/grsilva/GraphBuilderAPI_v2/ML_Only/Data/TestTargets_3k_R.pkl
+test_indexes_file_pred: /home/grsilva/GraphBuilderAPI_v2/ML_Only/Data/TestIndexes_3k_R.pkl
+#Subj Data Files
+data_file_sub: /home/grsilva/GraphBuilderAPI_v2/ML_Only/Data/Train_11k_A1.pt
+targets_file_sub: /home/grsilva/GraphBuilderAPI_v2/ML_Only/Data/TrainTargets_11k_A1.pkl
+model_file_sub: /home/grsilva/GraphBuilderAPI_v2/ML_Only/Models/Train_11k_A1.pt
+test_data_file_sub: /home/grsilva/GraphBuilderAPI_v2/ML_Only/Data/Test_3k_A1.pt
+test_targets_file_sub: /home/grsilva/GraphBuilderAPI_v2/ML_Only/Data/TestTargets_3k_A1.pkl
+test_indexes_file_sub: /home/grsilva/GraphBuilderAPI_v2/ML_Only/Data/TestIndexes_3k_A1.pkl
+#Obj Data Files
+data_file_obj: /home/grsilva/GraphBuilderAPI_v2/ML_Only/Data/Train_11k_A2.pt
+targets_file_obj: /home/grsilva/GraphBuilderAPI_v2/ML_Only/Data/TrainTargets_11k_A2.pkl
+model_file_obj: /home/grsilva/GraphBuilderAPI_v2/ML_Only/Models/Train_11k_A2.pt
+test_data_file_obj: /home/grsilva/GraphBuilderAPI_v2/ML_Only/Data/Test_3k_A2.pt
+test_targets_file_obj: /home/grsilva/GraphBuilderAPI_v2/ML_Only/Data/TestTargets_3k_A2.pkl
+test_indexes_file_obj: /home/grsilva/GraphBuilderAPI_v2/ML_Only/Data/TestIndexes_3k_A2.pkl
