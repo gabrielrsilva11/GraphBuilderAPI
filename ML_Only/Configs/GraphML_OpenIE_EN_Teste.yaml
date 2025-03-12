@@ -4,18 +4,20 @@ connection:
 #    base_uri: http://www.ieeta-bit.pt/OpenIE_s2_en_v2#
 #    graph_name_test: http://www.ieeta-bit.pt/OpenIE_s2_en_v2#
 #    base_uri_test: http://www.ieeta-bit.pt/OpenIE_s2_en_v2#
-    graph_name: http://www.ieeta-bit.pt/SOMD2025_v2#
-    base_uri: http://www.ieeta-bit.pt/SOMD2025_v2#
-    graph_name_test: http://www.ieeta-bit.pt/SOMD2025_v2#
-    base_uri_test: http://www.ieeta-bit.pt/SOMD2025_v2#
+    graph_name: http://www.ieeta-bit.pt/SOMD2025_v3#
+    base_uri: http://www.ieeta-bit.pt/SOMD2025_v3#
+    graph_name_test: http://www.ieeta-bit.pt/SOMD2025_v3#
+    base_uri_test: http://www.ieeta-bit.pt/SOMD2025_v3#
     #False/False is to train the R model, True/False is to train the A1 model and True/True is to train the A2 Model.
     root_predicate: False
     root_a1: False
+    edge_connections: True
+    is_something: True
 enable_wandb:
   True
 nodes:
   - name: word
-    uri: http://www.ieeta-bit.pt/SOMD2025_v2#Word
+    uri: http://www.ieeta-bit.pt/SOMD2025_v3#Word
     # THESE LINES HAVE POLARITY.
     edges_source: [word, word, word, word, word, word, word, word, word, word, word, word, word , word , word , word , word , word , word , word , word , word , word , word , word , word , word , word, word]
     edges: [depGraph, head, previousWord, fromSentence, nextWord, hasPoscoarse, hasPos, hasEdge, hasFeats, hasFeats, hasFeats, hasFeats, hasFeats, hasFeats, hasFeats, hasFeats, hasFeats, hasFeats, hasFeats, hasFeats, hasFeats, hasFeats, hasFeats, hasFeats, hasFeats, hasFeats, hasFeats, hasFeats, hasFeats]
@@ -23,178 +25,178 @@ nodes:
 #    edges_source: [ word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word, word]
 #    edges: [ depGraph, head, previousWord, fromSentence, nextWord, poscoarse, pos, edge, aspect, conjtype, definite, degree, mood, number, numtype, person, prontype, punctside, puncttype, tense, verbform]
 #    edges_target: [ word, word, word, sentence, word, poscoarse, pos, edge, aspect, conjtype, definite, degree, mood, number, numtype, person, prontype, punctside, puncttype, tense, verbform]
-    edges_uri: [http://www.ieeta-bit.pt/SOMD2025_v2#depGraph, http://www.ieeta-bit.pt/SOMD2025_v2#head, http://www.ieeta-bit.pt/SOMD2025_v2#previousWord, http://www.ieeta-bit.pt/SOMD2025_v2#fromSentence, http://www.ieeta-bit.pt/SOMD2025_v2#hasPoscoarse, http://www.ieeta-bit.pt/SOMD2025_v2#hasPos, http://www.ieeta-bit.pt/SOMD2025_v2#hasEdge, http://www.ieeta-bit.pt/SOMD2025_v2#hasFeats, http://www.ieeta-bit.pt/SOMD2025_v2#hasFeats, http://www.ieeta-bit.pt/SOMD2025_v2#hasFeats, http://www.ieeta-bit.pt/SOMD2025_v2#hasFeats, http://www.ieeta-bit.pt/SOMD2025_v2#hasFeats, http://www.ieeta-bit.pt/SOMD2025_v2#hasFeats, http://www.ieeta-bit.pt/SOMD2025_v2#hasFeats, http://www.ieeta-bit.pt/SOMD2025_v2#hasFeats, http://www.ieeta-bit.pt/SOMD2025_v2#hasFeats, http://www.ieeta-bit.pt/SOMD2025_v2#hasFeats, http://www.ieeta-bit.pt/SOMD2025_v2#hasFeats, http://www.ieeta-bit.pt/SOMD2025_v2#hasFeats, http://www.ieeta-bit.pt/SOMD2025_v2#hasFeats, http://www.ieeta-bit.pt/SOMD2025_v2#hasFeats, http://www.ieeta-bit.pt/SOMD2025_v2#hasFeats, http://www.ieeta-bit.pt/SOMD2025_v2#hasFeats, http://www.ieeta-bit.pt/SOMD2025_v2#hasFeats, http://www.ieeta-bit.pt/SOMD2025_v2#hasFeats]
-    attributes: [lemma, word, wikidataId, uppercase, embeddings, Root_Predicate, url, entityType]
+    edges_uri: [http://www.ieeta-bit.pt/SOMD2025_v3#depGraph, http://www.ieeta-bit.pt/SOMD2025_v3#head, http://www.ieeta-bit.pt/SOMD2025_v3#previousWord, http://www.ieeta-bit.pt/SOMD2025_v3#fromSentence, http://www.ieeta-bit.pt/SOMD2025_v3#hasPoscoarse, http://www.ieeta-bit.pt/SOMD2025_v3#hasPos, http://www.ieeta-bit.pt/SOMD2025_v3#hasEdge, http://www.ieeta-bit.pt/SOMD2025_v3#hasFeats, http://www.ieeta-bit.pt/SOMD2025_v3#hasFeats, http://www.ieeta-bit.pt/SOMD2025_v3#hasFeats, http://www.ieeta-bit.pt/SOMD2025_v3#hasFeats, http://www.ieeta-bit.pt/SOMD2025_v3#hasFeats, http://www.ieeta-bit.pt/SOMD2025_v3#hasFeats, http://www.ieeta-bit.pt/SOMD2025_v3#hasFeats, http://www.ieeta-bit.pt/SOMD2025_v3#hasFeats, http://www.ieeta-bit.pt/SOMD2025_v3#hasFeats, http://www.ieeta-bit.pt/SOMD2025_v3#hasFeats, http://www.ieeta-bit.pt/SOMD2025_v3#hasFeats, http://www.ieeta-bit.pt/SOMD2025_v3#hasFeats, http://www.ieeta-bit.pt/SOMD2025_v3#hasFeats, http://www.ieeta-bit.pt/SOMD2025_v3#hasFeats, http://www.ieeta-bit.pt/SOMD2025_v3#hasFeats, http://www.ieeta-bit.pt/SOMD2025_v3#hasFeats, http://www.ieeta-bit.pt/SOMD2025_v3#hasFeats, http://www.ieeta-bit.pt/SOMD2025_v3#hasFeats]
+    attributes: [lemma, word, wikidataId, uppercase, embeddings, isSomething, Root_Predicate, url, entityType]
   - name: sentence
-    uri: http://www.ieeta-bit.pt/SOMD2025_v2#Sentence
-    edges_source: [sentence]
-    edges: [nextSentence]
-    edges_target: [sentence]
-    edges_uri: [http://www.ieeta-bit.pt/SOMD2025_v2#nextSentence]
+    uri: http://www.ieeta-bit.pt/SOMD2025_v3#Sentence
+    edges_source: [sentence, sentence]
+    edges: [nextSentence, previousSentence]
+    edges_target: [sentence, sentence]
+    edges_uri: [http://www.ieeta-bit.pt/SOMD2025_v3#nextSentence]
     attributes: [senttext]
   - name: Edge
-    uri: http://www.ieeta-bit.pt/SOMD2025_v2#Edge
+    uri: http://www.ieeta-bit.pt/SOMD2025_v3#Edge
     edges_source: [ ]
     edges: [ ]
     edges_target: [ ]
     edges_uri: [ ]
     attributes: [ name ]
   - name: Pos
-    uri: http://www.ieeta-bit.pt/SOMD2025_v2#Pos
+    uri: http://www.ieeta-bit.pt/SOMD2025_v3#Pos
     edges_source: [ ]
     edges: [ ]
     edges_target: [ ]
     edges_uri: [ ]
     attributes: [ name ]
   - name: Poscoarse
-    uri: http://www.ieeta-bit.pt/SOMD2025_v2#Poscoarse
+    uri: http://www.ieeta-bit.pt/SOMD2025_v3#Poscoarse
     edges_source: [ ]
     edges: [ ]
     edges_target: [ ]
     edges_uri: [ ]
     attributes: [ name ]
   - name: definite
-    uri: http://www.ieeta-bit.pt/SOMD2025_v2#definite
+    uri: http://www.ieeta-bit.pt/SOMD2025_v3#definite
     edges_source: [ ]
     edges: [ ]
     edges_target: [ ]
     edges_uri: [ ]
     attributes: [ name ]
   - name: prontype
-    uri: http://www.ieeta-bit.pt/SOMD2025_v2#prontype
+    uri: http://www.ieeta-bit.pt/SOMD2025_v3#prontype
     edges_source: [ ]
     edges: [ ]
     edges_target: [ ]
     edges_uri: [ ]
     attributes: [ name ]
   - name: number
-    uri: http://www.ieeta-bit.pt/SOMD2025_v2#number
+    uri: http://www.ieeta-bit.pt/SOMD2025_v3#number
     edges_source: [ ]
     edges: [ ]
     edges_target: [ ]
     edges_uri: [ ]
     attributes: [ name ]
   - name: degree
-    uri: http://www.ieeta-bit.pt/SOMD2025_v2#degree
+    uri: http://www.ieeta-bit.pt/SOMD2025_v3#degree
     edges_source: [ ]
     edges: [ ]
     edges_target: [ ]
     edges_uri: [ ]
     attributes: [ name ]
   - name: mood
-    uri: http://www.ieeta-bit.pt/SOMD2025_v2#mood
+    uri: http://www.ieeta-bit.pt/SOMD2025_v3#mood
     edges_source: [ ]
     edges: [ ]
     edges_target: [ ]
     edges_uri: [ ]
     attributes: [ name ]
   - name: tense
-    uri: http://www.ieeta-bit.pt/SOMD2025_v2#tense
+    uri: http://www.ieeta-bit.pt/SOMD2025_v3#tense
     edges_source: [ ]
     edges: [ ]
     edges_target: [ ]
     edges_uri: [ ]
     attributes: [ name ]
   - name: verbform
-    uri: http://www.ieeta-bit.pt/SOMD2025_v2#verbform
+    uri: http://www.ieeta-bit.pt/SOMD2025_v3#verbform
     edges_source: [ ]
     edges: [ ]
     edges_target: [ ]
     edges_uri: [ ]
     attributes: [ name ]
   - name: aspect
-    uri: http://www.ieeta-bit.pt/SOMD2025_v2#aspect
+    uri: http://www.ieeta-bit.pt/SOMD2025_v3#aspect
     edges_source: [ ]
     edges: [ ]
     edges_target: [ ]
     edges_uri: [ ]
     attributes: [ name ]
   - name: conjtype
-    uri: http://www.ieeta-bit.pt/SOMD2025_v2#conjtype
+    uri: http://www.ieeta-bit.pt/SOMD2025_v3#conjtype
     edges_source: [ ]
     edges: [ ]
     edges_target: [ ]
     edges_uri: [ ]
     attributes: [ name ]
   - name: numtype
-    uri: http://www.ieeta-bit.pt/SOMD2025_v2#numtype
+    uri: http://www.ieeta-bit.pt/SOMD2025_v3#numtype
     edges_source: [ ]
     edges: [ ]
     edges_target: [ ]
     edges_uri: [ ]
     attributes: [ name ]
   - name: puncttype
-    uri: http://www.ieeta-bit.pt/SOMD2025_v2#puncttype
+    uri: http://www.ieeta-bit.pt/SOMD2025_v3#puncttype
     edges_source: [ ]
     edges: [ ]
     edges_target: [ ]
     edges_uri: [ ]
     attributes: [ name ]
   - name: poss
-    uri: http://www.ieeta-bit.pt/SOMD2025_v2#poss
+    uri: http://www.ieeta-bit.pt/SOMD2025_v3#poss
     edges_source: [ ]
     edges: [ ]
     edges_target: [ ]
     edges_uri: [ ]
     attributes: [ name ]
   - name: case
-    uri: http://www.ieeta-bit.pt/SOMD2025_v2#case
+    uri: http://www.ieeta-bit.pt/SOMD2025_v3#case
     edges_source: [ ]
     edges: [ ]
     edges_target: [ ]
     edges_uri: [ ]
     attributes: [ name ]
   - name: punctside
-    uri: http://www.ieeta-bit.pt/SOMD2025_v2#punctside
+    uri: http://www.ieeta-bit.pt/SOMD2025_v3#punctside
     edges_source: [ ]
     edges: [ ]
     edges_target: [ ]
     edges_uri: [ ]
     attributes: [ name ]
   - name: person
-    uri: http://www.ieeta-bit.pt/SOMD2025_v2#person
+    uri: http://www.ieeta-bit.pt/SOMD2025_v3#person
     edges_source: [ ]
     edges: [ ]
     edges_target: [ ]
     edges_uri: [ ]
     attributes: [ name ]
   - name: gender
-    uri: http://www.ieeta-bit.pt/SOMD2025_v2#gender
+    uri: http://www.ieeta-bit.pt/SOMD2025_v3#gender
     edges_source: [ ]
     edges: [ ]
     edges_target: [ ]
     edges_uri: [ ]
     attributes: [ name ]
   - name: verbtype
-    uri: http://www.ieeta-bit.pt/SOMD2025_v2#verbtype
+    uri: http://www.ieeta-bit.pt/SOMD2025_v3#verbtype
     edges_source: [ ]
     edges: [ ]
     edges_target: [ ]
     edges_uri: [ ]
     attributes: [ name ]
   - name: polarity
-    uri: http://www.ieeta-bit.pt/SOMD2025_v2#polarity
+    uri: http://www.ieeta-bit.pt/SOMD2025_v3#polarity
     edges_source: [ ]
     edges: [ ]
     edges_target: [ ]
     edges_uri: [ ]
     attributes: [ name ]
   - name: foreign
-    uri: http://www.ieeta-bit.pt/SOMD2025_v2#foreign
+    uri: http://www.ieeta-bit.pt/SOMD2025_v3#foreign
     edges_source: [ ]
     edges: [ ]
     edges_target: [ ]
     edges_uri: [ ]
     attributes: [ name ]
   - name: reflex
-    uri: http://www.ieeta-bit.pt/SOMD2025_v2#reflex
+    uri: http://www.ieeta-bit.pt/SOMD2025_v3#reflex
     edges_source: [ ]
     edges: [ ]
     edges_target: [ ]
     edges_uri: [ ]
     attributes: [name]
   - name: hyph
-    uri: http://www.ieeta-bit.pt/SOMD2025_v2#hyph
+    uri: http://www.ieeta-bit.pt/SOMD2025_v3#hyph
     edges_source: [ ]
     edges: [ ]
     edges_target: [ ]
@@ -203,5 +205,8 @@ nodes:
 target:
   - node: word
     name: [OIE_tags]
-    uri: [http://www.ieeta-bit.pt/SOMD2025_v2#OIE_tags]
+    uri: [http://www.ieeta-bit.pt/SOMD2025_v3#OIE_tags]
     balancing: False
+exclude:
+  - name: [subClassOf, fromText]
+    word_name: [nextSentence, previousSentence, type, id]

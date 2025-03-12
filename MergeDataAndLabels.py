@@ -74,10 +74,11 @@
 #         sentence = find_triples(sentence, object, "A2")
 #         f_write.write(sentence+"\n")
 
-file_path = "/home/grsilva/GraphBuilderAPI_v2/Data_to_process/SOMD2025/train_texts.txt"
-relations_path = "/home/grsilva/GraphBuilderAPI_v2/Data_to_process/SOMD2025/train_entities.txt"
-merged_file = "/home/grsilva/GraphBuilderAPI_v2/Data_to_process/SOMD2025/Merged_Train.txt"
-
+file_path = "/home/grsilva/GraphBuilderApi/Data_to_process/SOMD2025/train_texts.txt"
+relations_path = "/home/grsilva/GraphBuilderApi/Data_to_process/SOMD2025/train_entities.txt"
+merged_file = "/home/grsilva/GraphBuilderApi/Data_to_process/SOMD2025/Merged_Train.txt"
+teste_file_path = "/home/grsilva/GraphBuilderApi/Data_to_process/SOMD2025/test_texts.txt"
+merged_test_file = "/home/grsilva/GraphBuilderApi/Data_to_process/SOMD2025/Merged_Test.txt"
 # Read the contents of train_texts.txt
 with open(file_path, 'r') as texts_file:
     texts = texts_file.readlines()
@@ -91,17 +92,29 @@ if len(texts) != len(relations):
     raise ValueError("The number of lines in train_texts and train_relations must be the same.")
 
 # Write the merged data to a new file
-with open(merged_file, 'w') as output_file:
-    for i in range(0, len(relations)):
-        texts_split = texts[i].split(" ")
-        relations_split = relations[i].split(" ")
+# with open(merged_file, 'w') as output_file:
+#     for i in range(0, len(relations)):
+#         texts_split = texts[i].split(" ")
+#         relations_split = relations[i].split(" ")
+#         str_builder = ""
+#         for merge_i in range(0, len(texts_split)):
+#             if merge_i == len(texts_split)-1:
+#                 str_builder += texts_split[merge_i].strip()+"|"+relations_split[merge_i]
+#             else:
+#                 str_builder += texts_split[merge_i].strip()+"|"+relations_split[merge_i]+" "
+#         output_file.write(str_builder)
+
+with open(teste_file_path, 'r') as texts_file:
+    teste_texts = texts_file.readlines()
+
+with open(merged_test_file, 'w') as output_file:
+    for sentence in teste_texts:
+        sentence = sentence.strip("\n")
+        words = sentence.split(" ")
         str_builder = ""
-        for merge_i in range(0, len(texts_split)):
-            if merge_i == len(texts_split)-1:
-                str_builder += texts_split[merge_i].strip()+"|"+relations_split[merge_i]
-            else:
-                str_builder += texts_split[merge_i].strip()+"|"+relations_split[merge_i]+" "
-        output_file.write(str_builder)
+        for word in words:
+            str_builder += word+"|O "
+        output_file.write(str_builder+"\n")
 
 
 

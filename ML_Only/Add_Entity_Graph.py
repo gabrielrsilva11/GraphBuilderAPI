@@ -68,8 +68,8 @@ def insert_data(s, p, o):
             break
 
 client = AsyncOpenAI(api_key=ds_key, base_url="https://api.deepseek.com")
-base_uri = "http://www.ieeta-bit.pt/SOMD2025_v3#"
-graph_name = "http://www.ieeta-bit.pt/SOMD2025_v3#"
+base_uri = "http://www.ieeta-bit.pt/SOMD2025_Tests#"
+graph_name = "http://www.ieeta-bit.pt/SOMD2025_Tests#"
 conection_string = "http://hlt.ieeta.pt:8890/sparql"
 sparql = SPARQLWrapper(conection_string)
 sparql.setMethod(POST)
@@ -78,7 +78,7 @@ queries = QueryBuilder(base_uri, graph_name)
 
 # ids_to_fetch = range(1, 1150)
 start = 1
-for j in tqdm(range(11, 1152, 10)):
+for j in tqdm(range(11, 204, 10)):
     ids_to_fetch = range(start, j)
     print(start, j)
     queries_list = []
@@ -104,7 +104,7 @@ for j in tqdm(range(11, 1152, 10)):
             # )
             #
             # response = response.choices[0].message.content
-
+    #TODO: CORRIGIR ISTO E METER A ADICIONAR TODOS EM CONDIÇÕES
     results = asyncio.run(query_deepseek(client, queries_list))
     for response in results:
         entities = filter_response(response)

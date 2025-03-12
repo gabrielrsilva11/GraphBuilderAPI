@@ -1,8 +1,8 @@
-folder: Data_to_process/SOMD2025/Merged
-uri: http://www.ieeta-bit.pt/SOMD2025_v3#
+folder: Data_to_process/SOMD2025/Merged_Tests
+uri: http://www.ieeta-bit.pt/SOMD2025_Tests#
 #language: pt_core_news_sm
 language: en_core_web_sm
-graph_name: http://www.ieeta-bit.pt/SOMD2025_v3#
+graph_name: http://www.ieeta-bit.pt/SOMD2025_Tests#
 connection: http://hlt.ieeta.pt:8890/sparql
 in_memory: False
 save_file: ML_Only/TTLs/SOMD2025

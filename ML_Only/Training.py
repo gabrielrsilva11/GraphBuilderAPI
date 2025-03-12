@@ -119,8 +119,11 @@ def write_to_excel(file_name, word_indexes, targets, results_percentage):
     workbook.close()
 
 
-config_file = open('/home/grsilva/GraphBuilderAPI_v2/ML_Only/Configs/GraphML_OpenIE_EN_Teste.yaml', 'r')
-training_config = open('/home/grsilva/GraphBuilderAPI_v2/ML_Only/Configs/training_conf.yaml', 'r')
+# config_file = open('/home/grsilva/GraphBuilderAPI_v2/ML_Only/Configs/GraphML_OpenIE_EN_Teste.yaml', 'r')
+# training_config = open('/home/grsilva/GraphBuilderAPI_v2/ML_Only/Configs/training_conf_v2.yaml', 'r')
+
+config_file = open('/home/grsilva/GraphBuilderApi/ML_Only/Configs/GraphML_OpenIE_EN_Teste.yaml', 'r')
+training_config = open('/home/grsilva/GraphBuilderApi/ML_Only/Configs/training_conf_v2.yaml', 'r')
 
 config_data = yaml.load(config_file, Loader=yaml.FullLoader)
 training_config = yaml.load(training_config, Loader=yaml.FullLoader)
@@ -157,10 +160,10 @@ print(f"Device: '{device}'")
 
 data = data.to(device)
 
-A = [18203, 1198, 947, 150, 648, 221, 309, 37, 175, 110, 53, 36, 71, 18, 43]
-class_weights = [sum(A)/num_samples*15 for num_samples in A]
-weights = torch.FloatTensor(class_weights)
-weights = weights.to(device)
+#A = [18203, 1198, 947, 150, 648, 221, 309, 37, 175, 110, 53, 36, 71, 18, 43]
+#class_weights = [sum(A)/num_samples*15 for num_samples in A]
+#weights = torch.FloatTensor(class_weights)
+#weights = weights.to(device)
 
 #weights = torch.FloatTensor([0.05545, 14.1463, 14.1463])
 # weights = torch.FloatTensor([0.05545, 14.1463])
@@ -185,8 +188,6 @@ hidden_channels = [30, 60, 120]
 num_layers = [5, 6, 7, 8, 9, 10]
 #(:obj:`"sum"`, :obj:`"mean"`, :obj:`"min"`, :obj:`"max"` or :obj:`"mul"`)
 
-
-#
 # learning_rate = [0.001]
 # hidden_channels = [64]
 # aggr = ['mean']
